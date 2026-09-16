@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>场景图中的骨骼动画 | Fortnite 文档中文镜像</title>
+<link rel="stylesheet" href="../assets/epic.css">
+<link rel="stylesheet" href="../assets/patch.css">
+<link rel="icon" href="../assets/logo-epic.svg">
+</head>
+<body class="theme-fortnite">
+<div class="edc-topbar"><div class="edc-topbar-inner"><img class="edc-logo" src="../assets/logo-epic.svg" alt="Epic Games"><span class="edc-brand">Epic Games <b>开发者社区</b></span><span class="edc-nav"><a href="../index.html">文档首页</a><a href="sub-index.html">子教程索引</a><a href="https://dev.epicgames.com/documentation/fortnite/skeletal-animation-in-scene-graph-in-fortnite" target="_blank" rel="noopener">英文原文</a></span></div></div>
+<div class="site-container">
+<aside class="site-nav"><div class="documents-tree"><nav><ul class="contents-table">
+<div class="tree-sec">A 最新动态</div><a class="tree-link" href="01-42-00-fortnite-ecosystem-updates-and-release-notes.html">01. 42.00 生态系统更新与发行说明</a><a class="tree-link" href="02-custom-items-and-inventory-overview-in-fortnite.html">02. 自定义物品与背包总览</a><a class="tree-link" href="03-in-island-transactions-in-fortnite.html">03. 岛内交易</a><a class="tree-link" href="04-mobile-development-in-fortnite.html">04. 移动端开发</a><a class="tree-link" href="05-inputs-in-fortnite.html">05. 输入系统</a><a class="tree-link" href="06-ability-system-in-unreal-editor-for-fortnite.html">06. 能力系统 Ability System</a><a class="tree-link" href="07-partybased-gameplay-using-the-social-synergy-api-in-fortnite.html">07. 社交协同 API 与小队玩法</a><a class="tree-link" href="08-scene-graph-in-unreal-editor-for-fortnite.html">08. 场景图 Scene Graph</a><div class="tree-sec">B 入门</div><a class="tree-link" href="09-build-your-first-island-in-fortnite.html">09. 构建你的第一个岛屿</a><a class="tree-link" href="10-onboarding-guide-to-programming-with-verse-in-unreal-editor-for-fortnite.html">10. Verse 编程入门指南</a><a class="tree-link" href="11-building-basics-in-fortnite-creative.html">11. 建造基础</a><div class="tree-sec">C 品牌合集</div><a class="tree-link" href="12-star-wars-islands-in-fortnite.html">12. 星球大战™岛屿</a><a class="tree-link" href="13-kpop-demon-hunters-islands-in-fortnite.html">13. KPop 猎魔团岛屿</a><a class="tree-link" href="14-building-lego-islands-in-fortnite.html">14. 乐高®岛屿</a><a class="tree-link" href="15-the-walking-dead-universe-islands-in-unreal-editor-for-fortnite.html">15. 行尸走肉宇宙岛屿</a><a class="tree-link" href="16-teenage-mutant-ninja-turtle-islands-in-unreal-editor-for-fortnite.html">16. 忍者神龟岛屿</a><a class="tree-link" href="17-squid-game-islands-in-fortnite.html">17. 鱿鱼游戏岛屿</a><div class="tree-sec">D 开发者成功</div><a class="tree-link" href="18-using-creator-portal-in-fortnite-creative.html">18. 使用创作者门户</a><a class="tree-link" href="19-island-moderation-and-guidelines-in-fortnite-creative.html">19. 岛屿审核与准则</a><div class="tree-sec">E 协作</div><a class="tree-link" href="20-creating-teams-in-creator-portal-in-unreal-editor-for-fortnite.html">20. 在创作者门户创建团队</a><a class="tree-link" href="21-adding-playtesters-in-fortnite-creative.html">21. 添加试玩测试员</a><a class="tree-link" href="22-playtesting-your-island-in-unreal-editor-for-fortnite.html">22. 试玩测试你的岛屿</a><a class="tree-link" href="23-collaborating-in-unreal-editor-for-fortnite.html">23. 在 UEFN 中协作</a><a class="tree-link" href="24-lore-version-control-in-unreal-editor-for-fortnite.html">24. Lore 版本控制</a><a class="tree-link" href="25-conflicts-in-lore-version-control-in-unreal-editor-for-fortnite.html">25. Lore 中的冲突</a><a class="tree-link" href="26-version-history-and-conflict-resolution-in-unreal-editor-for-fortnite.html">26. 分支历史与冲突解决</a><div class="tree-sec">F 游戏示例</div><a class="tree-link" href="27-build-a-game-in-unreal-editor-for-fortnite.html">27. 构建一款游戏</a><a class="tree-link" href="28-unreal-editor-for-fortnite-starter-templates.html">28. UEFN 新手模板</a><div class="tree-sec">G Verse</div><a class="tree-link" href="29-learn-the-basics-of-writing-code-in-verse.html">29. 从零学习 Verse 代码基础</a><div class="tree-sec">H 专注领域</div><a class="tree-link" href="30-lighting-in-unreal-editor-for-fortnite.html">30. 灯光</a><a class="tree-link active" href="31-animation-and-cinematics-in-unreal-editor-for-fortnite.html">31. 动画与过场动画</a><a class="tree-link" href="32-modeling-in-unreal-editor-for-fortnite.html">32. 建模</a><a class="tree-link" href="33-materials-in-unreal-editor-for-fortnite.html">33. 材质</a><a class="tree-link" href="34-environments-and-landscapes-in-unreal-editor-for-fortnite.html">34. 环境与地形</a><a class="tree-link" href="35-audio-in-unreal-editor-for-fortnite.html">35. 音频</a><a class="tree-link" href="36-visual-effects-in-unreal-editor-for-fortnite.html">36. 视觉特效</a>
+</ul></nav></div></aside>
+<div class="page-content"><div class="page-document has-theme-bg">
+<header class="section-page-header"><nav><ol class="breadcrumb is-shrinkable"><li class="breadcrumb-item is-root"><img src="../assets/logo-epic.svg" alt="Epic Games"><a href="../index.html">Developer</a></li><li class="breadcrumb-item"><a href="../index.html">Fortnite 文档</a></li><li class="breadcrumb-item"><a href="31-animation-and-cinematics-in-unreal-editor-for-fortnite.html">动画与过场动画</a></li><li class="breadcrumb-item active" aria-current="page"><span class="text-truncate">场景图中的骨骼动画</span></li></ol></nav><h1>场景图中的骨骼动画</h1><p class="text-secondary mb-0">学习在场景图（Scene Graph）中使用实验性的骨骼动画（Skeletal Animation）功能，需要 UEFN 41.00 或更高版本，Verse API 仍可能变更，且目前无法发布使用了该功能的岛屿。</p><p class="doc-meta">英文原标题：Skeletal Animation in Scene Graph in Fortnite · <a href="https://dev.epicgames.com/documentation/fortnite/skeletal-animation-in-scene-graph-in-fortnite" target="_blank" rel="noopener">查看英文原文</a> · 社区翻译镜像，仅供学习</p></header>
+<div class="doc-columns"><article class="doc-article">
+<div class="block-callout warn">注意：请学习使用这项实验性（Experimental）功能，但在正式发布作品时请谨慎使用。</div>
+<p>该功能需要虚幻编辑器 Fortnite 版（UEFN，Unreal Editor for Fortnite）41.00 或更高版本。在该功能处于实验阶段期间，本文涉及的 Verse API 仍可能发生变化，且目前无法发布使用了该功能的岛屿。</p>
+<h2 id="sec-1">启用场景图动画</h2>
+<p>这是一项可以在项目设置（Project Settings）中启用的实验性功能。启用后，你的项目即可编译下文的代码语法与示例。</p>
+<p>要在项目中启用场景图动画（Scene Graph Animation），请按以下步骤操作：</p>
+<ul>
+<li>在 UEFN 中打开<strong>项目设置（Project Settings）</strong>。</li>
+<li>前往<strong>实验性功能（Experimental）</strong>分区。</li>
+<li>勾选 <strong>Scene Graph Animation（场景图动画）</strong>复选框以启用它。</li>
+<li>当 UEFN 显示以下确认消息时：
+<ul><li>"Enabling Scene Graph Animation may break compatibility with your existing Verse code and cause it to fail compilation."</li></ul></li>
+<li>确认以启用该功能。</li>
+</ul>
+<p>如果你手头有正在进行中的项目，启用该功能后可能需要修复 Verse 编译错误。</p>
+<p>启用该选项会改变编辑器为项目生成的 Verse 资产摘要（asset digest）。开启后，项目中的每个动画资产都会以 <code>skeletal_animation</code> 的具体子类形式暴露给 Verse，这正是 <code>PlaySkeletalAnimation</code> 得以工作的前提。关闭时这些子类不存在，该 API 也不可用。对于仍需要 <code>animation_sequence</code> 实例才能工作的旧版 API，这些实例现在会以名称后缀 <code>_asset</code> 的形式暴露。</p>
+<h2 id="sec-2">实体的前置条件</h2>
+<p>要在实体（entity）上成功调用 <code>PlaySkeletalAnimation</code>，该实体必须满足：</p>
+<ul>
+<li>挂载了 <code>mesh_component</code>（网格体组件）。</li>
+<li>该 <code>mesh_component</code> 必须引用骨骼网格体（Skeletal Mesh）资产，而非静态网格体（Static Mesh）。</li>
+</ul>
+<p>如果实体没有 <code>mesh_component</code>，或其 <code>mesh_component</code> 对应的是静态网格体，调用将会失败。</p>
+<h2 id="sec-3">骨骼动画 API</h2>
+<p>使用以下 Verse 类、方法和结构体，在场景图（Scene Graph）中控制骨骼动画。</p>
+<h3>skeletal_animation</h3>
+<pre><code>skeletal_animation&lt;public&gt; := class(modifier(skeleton))</code></pre>
+<p><code>skeletal_animation</code> 是一种修改器（modifier）：当它被加入网格体骨架（skeleton）修改器栈时，会逐帧基于底层动画资产生成姿势。</p>
+<p>创作者无需手写 <code>skeletal_animation</code> 的子类。启用场景图动画选项后，项目中的每个动画序列资产都会自动暴露为 <code>skeletal_animation</code> 的具体子类。</p>
+<p>例如，位于 <code>Character/Animations/Idle</code> 的动画序列资产，在 Verse 中会显示为类 <code>Character.Animations.Idle</code>。要播放该动画，只需构造它的实例（例如 <code>Character.Animations.Idle{}</code>）并传给 <code>PlaySkeletalAnimation</code>。</p>
+<h3>(Entity:entity).PlaySkeletalAnimation</h3>
+<pre><code>(Entity:entity).PlaySkeletalAnimation&lt;public&gt;(Animation:skeletal_animation, ?EaseInWindow:easing_window = easing_window{}, ?EaseOutWindow:easing_window = easing_window{})&lt;decides&gt;&lt;transacts&gt; : play_skeletal_animation_result</code></pre>
+<p>在实体的骨骼网格体上添加指定动画作为修改器，并用一个过渡（easing）修改器包裹它，使其平滑地淡入、淡出。</p>
+<table><thead><tr><th>参数名</th><th>类型</th><th>默认值</th><th>说明</th></tr></thead><tbody>
+<tr><td><code>Animation</code></td><td><code>skeletal_animation</code></td><td>—</td><td><code>skeletal_animation</code> 具体子类的实例。实际使用时就是由项目中某个动画资产自动生成的类，构造后传入（例如 <code>MyAnim{}</code>）。</td></tr>
+<tr><td><code>?EaseInWindow</code></td><td><code>easing_window</code></td><td><code>easing_window{}</code></td><td>可选项，控制淡入。默认的 <code>easing_window{}</code> 为 0.3 秒的 <code>EaseInOut</code> 曲线。</td></tr>
+<tr><td><code>?EaseOutWindow</code></td><td><code>easing_window</code></td><td><code>easing_window{}</code></td><td>可选项，控制返回句柄执行淡出时的淡出效果。淡出时可通过向 <code>EaseOut(...)</code> 传入窗口来覆盖它。</td></tr>
+</tbody></table>
+<h3>play_skeletal_animation_result</h3>
+<pre><code>play_skeletal_animation_result&lt;public&gt; := struct:
+    Animation : skeletal_animation
+    Easeable : easeable</code></pre>
+<p><code>PlaySkeletalAnimation</code> 的返回值。</p>
+<table><thead><tr><th>字段</th><th>类型</th><th>说明</th></tr></thead><tbody>
+<tr><td><code>Animation</code></td><td><code>skeletal_animation</code></td><td>实际播放的动画实例（与传入 <code>PlaySkeletalAnimation</code> 的值相同）。</td></tr>
+<tr><td><code>Easeable</code></td><td><code>easeable</code></td><td>可用于淡出该动画、覆盖淡出窗口或立即取消的句柄，见下文“结束动画”。</td></tr>
+</tbody></table>
+<h2 id="sec-4">结束动画</h2>
+<p>结束正在播放的动画有三种方式，三种方式都作用于 <code>PlaySkeletalAnimation</code> 返回的 <code>play_skeletal_animation_result</code> 中的 <code>Easeable</code> 字段。</p>
+<table><thead><tr><th>写法</th><th>行为</th><th>适用场景</th></tr></thead><tbody>
+<tr><td><code>Playing.Easeable.EaseOut(false)</code></td><td>使用传给 <code>PlaySkeletalAnimation</code> 的 <code>?EaseOutWindow</code> 淡出。</td><td>最常见的情况：在播放时配好淡出，之后不再操心。</td></tr>
+<tr><td><code>Playing.Easeable.EaseOut(option{easing_window{...}})</code></td><td>使用传入的窗口淡出，覆盖调用 <code>PlaySkeletalAnimation</code> 时设置的淡出窗口。</td><td>合适的淡出取决于运行时上下文时，例如被打断的动作与自然结束需要不同的混合。</td></tr>
+<tr><td><code>Playing.Easeable.Cancel()</code></td><td>立即移除动画，等价于 <code>EaseOut(option{easing_window{Duration := 0.0}})</code>。</td><td>需要立即移除动画，或玩家看不到变化时。</td></tr>
+</tbody></table>
+<p>由于 <code>Cancel()</code> 以零时长淡出的方式移除动画，最终姿势会直接弹回到底层基础姿势。如果被取消的动画正是玩家当前看到的权重最高的修改器，这一跳变会表现为一帧的抽动。当被取消的动画不可见时（例如已被更高优先级的动作动画完全混合覆盖掉的待机排队动画），适合使用 <code>Cancel()</code>；当动画可见时，请使用带非零 <code>Duration</code> 的 <code>EaseOut</code>，让过渡呈现为混合而非跳变。</p>
+<h2 id="sec-5">示例</h2>
+<p>动画类名（例如 <code>Character.Animations.Idle</code>）来自包含对应资产的项目自动生成的摘要（digest）；在你自己的项目中，请替换为你的资产实际生成的模块名与类名。</p>
+<h3>使用默认过渡播放动画</h3>
+<p>最简单的调用，两个过渡窗口都默认为 0.3 秒的 <code>EaseInOut</code> 混合。</p>
+<pre><code>OnTrigger(Entity:entity)&lt;transacts&gt;:void =
+    # Idle 由项目中的动画序列资产自动生成，
+    # 位于与资产路径对应的模块下。
+    Entity.PlaySkeletalAnimation[Character.Animations.Idle{}] or false</code></pre>
+<h3>调整过渡窗口</h3>
+<p>传入显式的 <code>easing_window</code> 即可控制混合。第一次调用完全禁用过渡，第二次调用使用 0.5 秒的自定义三次贝塞尔曲线淡入。</p>
+<pre><code># 即时切换——无淡入也无淡出。
+Entity.PlaySkeletalAnimation[
+    Character.Animations.RunFwd{},
+    ?EaseInWindow := easing_window{Duration := 0.0},
+    ?EaseOutWindow := easing_window{Duration := 0.0}
+] or false
+# 半秒自定义曲线淡入；淡出保持默认。
+Entity.PlaySkeletalAnimation[
+    Character.Animations.RunFwd{},
+    ?EaseInWindow := easing_window{Duration := 0.5}
+] or false</code></pre>
+<p><code>easing_window</code> 还有一个 <code>Offset</code> 字段，可相对动画内部时间轴延迟过渡窗口的开始。</p>
+<h3>保留结果句柄，稍后结束动画</h3>
+<p>保存返回的 <code>play_skeletal_animation_result</code>，稍后用它的 <code>Easeable</code> 字段结束动画，下例演示了全部三种结束方式。</p>
+<pre><code>OnPlay(Entity:entity)&lt;suspends&gt;:void =
+    if:
+        Playing := Entity.PlaySkeletalAnimation[
+            Character.Animations.IdleBreak{},
+            ?EaseInWindow := easing_window{Easing := Easing.Ease, Duration := 1.0}
+        ]
+    then:
+        Sleep(3.0)
+        # (a) 使用播放时传入的窗口淡出。
+        Playing.Easeable.EaseOut(false)</code></pre>
+<h3>相关文档</h3>
+<ul>
+<li><a href="https://dev.epicgames.com/documentation/fortnite/mesh-component-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">网格体组件（Mesh Component）</a></li>
+<li><a href="convert-a-static-mesh-into-a-skeletal-mesh-in-unreal-editor-for-fortnite.html">将静态网格体转换为骨骼网格体（Convert a Static Mesh into a Skeletal Mesh）</a></li>
+</ul>
+<div class="pager"><a href="31-animation-and-cinematics-in-unreal-editor-for-fortnite.html"><small>← 返回父教程</small>动画与过场动画</a><a href="sub-index.html"><small>子教程索引 →</small>全部子教程</a></div>
+</article><nav class="doc-toc" aria-label="本页内容"><b>本页内容</b><a href="#sec-1">启用场景图动画</a><a href="#sec-2">实体的前置条件</a><a href="#sec-3">骨骼动画 API</a><a href="#sec-4">结束动画</a><a href="#sec-5">示例</a></nav></div>
+</div></div>
+</div>
+<footer class="edc-footer"><div class="inner"><img src="../assets/logo-epic.svg" alt="Epic Games"><span>Fortnite 文档中文镜像 · UE教程/ · 本地打开 index.html 阅读 · 翻译整理自 Epic 官方文档，仅供学习交流</span></div></footer>
+</body>
+</html>

@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>乐高®资产库（Fortnite 创作模式） | Fortnite 文档中文镜像</title>
+<link rel="stylesheet" href="../assets/epic.css">
+<link rel="stylesheet" href="../assets/patch.css">
+<link rel="icon" href="../assets/logo-epic.svg">
+</head>
+<body class="theme-fortnite">
+<div class="edc-topbar"><div class="edc-topbar-inner"><img class="edc-logo" src="../assets/logo-epic.svg" alt="Epic Games"><span class="edc-brand">Epic Games <b>开发者社区</b></span><span class="edc-nav"><a href="../index.html">文档首页</a><a href="sub-index.html">子教程索引</a><a href="https://dev.epicgames.com/documentation/fortnite/lego-asset-inventory-in-fortnite-creative" target="_blank" rel="noopener">英文原文</a></span></div></div>
+<div class="site-container">
+<aside class="site-nav"><div class="documents-tree"><nav><ul class="contents-table">
+<div class="tree-sec">A · 最新动态</div><a class="tree-link" href="01-42-00-fortnite-ecosystem-updates-and-release-notes.html">01. 42.00 生态系统更新与发行说明</a><a class="tree-link" href="02-custom-items-and-inventory-overview-in-fortnite.html">02. 自定义物品与背包总览</a><a class="tree-link" href="03-in-island-transactions-in-fortnite.html">03. 岛内交易</a><a class="tree-link" href="04-mobile-development-in-fortnite.html">04. 移动端开发</a><a class="tree-link" href="05-inputs-in-fortnite.html">05. 输入系统</a><a class="tree-link" href="06-ability-system-in-unreal-editor-for-fortnite.html">06. 能力系统 Ability System</a><a class="tree-link" href="07-partybased-gameplay-using-the-social-synergy-api-in-fortnite.html">07. 社交协同 API 与小队玩法</a><a class="tree-link" href="08-scene-graph-in-unreal-editor-for-fortnite.html">08. 场景图 Scene Graph</a><div class="tree-sec">B · 入门</div><a class="tree-link" href="09-build-your-first-island-in-fortnite.html">09. 构建你的第一个岛屿</a><a class="tree-link" href="10-onboarding-guide-to-programming-with-verse-in-unreal-editor-for-fortnite.html">10. Verse 编程入门指南</a><a class="tree-link" href="11-building-basics-in-fortnite-creative.html">11. 建造基础</a><div class="tree-sec">C · 品牌合集</div><a class="tree-link" href="12-star-wars-islands-in-fortnite.html">12. 星球大战™岛屿</a><a class="tree-link" href="13-kpop-demon-hunters-islands-in-fortnite.html">13. KPop 猎魔团岛屿</a><a class="tree-link active" href="14-building-lego-islands-in-fortnite.html">14. 乐高®岛屿</a><a class="tree-link" href="15-the-walking-dead-universe-islands-in-unreal-editor-for-fortnite.html">15. 行尸走肉宇宙岛屿</a><a class="tree-link" href="16-teenage-mutant-ninja-turtle-islands-in-unreal-editor-for-fortnite.html">16. 忍者神龟岛屿</a><a class="tree-link" href="17-squid-game-islands-in-fortnite.html">17. 鱿鱼游戏岛屿</a><div class="tree-sec">D · 开发者成功</div><a class="tree-link" href="18-using-creator-portal-in-fortnite-creative.html">18. 使用创作者门户</a><a class="tree-link" href="19-island-moderation-and-guidelines-in-fortnite-creative.html">19. 岛屿审核与准则</a><div class="tree-sec">E · 协作</div><a class="tree-link" href="20-creating-teams-in-creator-portal-in-unreal-editor-for-fortnite.html">20. 在创作者门户创建团队</a><a class="tree-link" href="21-adding-playtesters-in-fortnite-creative.html">21. 添加试玩测试员</a><a class="tree-link" href="22-playtesting-your-island-in-unreal-editor-for-fortnite.html">22. 试玩测试你的岛屿</a><a class="tree-link" href="23-collaborating-in-unreal-editor-for-fortnite.html">23. 在 UEFN 中协作</a><a class="tree-link" href="24-lore-version-control-in-unreal-editor-for-fortnite.html">24. Lore 版本控制</a><a class="tree-link" href="25-conflicts-in-lore-version-control-in-unreal-editor-for-fortnite.html">25. Lore 中的冲突</a><a class="tree-link" href="26-version-history-and-conflict-resolution-in-unreal-editor-for-fortnite.html">26. 分支历史与冲突解决</a><div class="tree-sec">F · 游戏示例</div><a class="tree-link" href="27-build-a-game-in-unreal-editor-for-fortnite.html">27. 构建一款游戏</a><a class="tree-link" href="28-unreal-editor-for-fortnite-starter-templates.html">28. UEFN 新手模板</a><div class="tree-sec">G · Verse</div><a class="tree-link" href="29-learn-the-basics-of-writing-code-in-verse.html">29. 从零学习 Verse 代码基础</a><div class="tree-sec">H · 专注领域</div><a class="tree-link" href="30-lighting-in-unreal-editor-for-fortnite.html">30. 灯光</a><a class="tree-link" href="31-animation-and-cinematics-in-unreal-editor-for-fortnite.html">31. 动画与过场动画</a><a class="tree-link" href="32-modeling-in-unreal-editor-for-fortnite.html">32. 建模</a><a class="tree-link" href="33-materials-in-unreal-editor-for-fortnite.html">33. 材质</a><a class="tree-link" href="34-environments-and-landscapes-in-unreal-editor-for-fortnite.html">34. 环境与地形</a><a class="tree-link" href="35-audio-in-unreal-editor-for-fortnite.html">35. 音频</a><a class="tree-link" href="36-visual-effects-in-unreal-editor-for-fortnite.html">36. 视觉特效</a>
+</ul></nav></div></aside>
+<div class="page-content"><div class="page-document has-theme-bg">
+<header class="section-page-header"><nav><ol class="breadcrumb is-shrinkable"><li class="breadcrumb-item is-root"><img src="../assets/logo-epic.svg" alt="Epic Games"><a href="../index.html">Developer</a></li><li class="breadcrumb-item"><a href="../index.html">Fortnite 文档</a></li><li class="breadcrumb-item"><a href="14-building-lego-islands-in-fortnite.html">乐高®岛屿</a></li><li class="breadcrumb-item active" aria-current="page"><span class="text-truncate">乐高®资产库（Fortnite 创作模式）</span></li></ol></nav><h1>乐高®资产库（Fortnite 创作模式）</h1><p class="text-secondary mb-0">打开乐高®资产库，就等于打开了乐高®颗粒与资产宝库的大门：预制件、画廊集、砖块模块、设备、工具、武器与物品开箱即用，可与 Fortnite 道具混搭，打造奇趣横生的体验。</p><p class="doc-meta">英文原标题：LEGO Asset Inventory in Fortnite Creative · <a href="https://dev.epicgames.com/documentation/fortnite/lego-asset-inventory-in-fortnite-creative" target="_blank" rel="noopener">查看英文原文</a> · 社区翻译镜像，仅供学习</p></header>
+<div class="doc-columns"><article class="doc-article">
+
+<p>打开乐高®资产库（LEGO® inventory），就等于打开了一扇通往乐高®颗粒（LEGO Elements）与资产世界的大门！这些独家内容任你取用，尽情享受搭建乐趣。<a href="https://dev.epicgames.com/documentation/fortnite/fortnite-glossary#lego-elements" target="_blank" rel="noopener">乐高®颗粒（LEGO Elements）</a>可以与 Fortnite 道具混搭，打造终极体验。</p>
+<p>这些乐高®资产均为预先拼搭好的成品，你再也不用担心丢失零件、砖块越垒越多，或不小心跳过某一步拼搭说明！</p>
+<p>在 Fortnite 中使用这些定制乐高®资产，发挥你意想不到的奇思妙想，用乐高®一贯的趣味与色彩打造古怪、疯狂、精彩的体验。</p>
+<p><strong>内容（Content）</strong>选项卡或内容浏览器中的某些资产，可能对特定品牌不可用。这是因为使用外部品牌创建的岛屿，应当体现该品牌的氛围、基调与理念。例如，糖豆人小豆子（Fall Guys Beans）可爱又顽皮——让它们拿起武器显然不合适，因为这与糖豆人品牌调性不符。同理，并非所有 Fortnite 资产都能用于乐高®岛屿，因为它们与小人仔（Minifigure）不兼容（毕竟小人仔的手很小）。</p>
+<p>请务必阅读每个品牌的介绍博文和配套文档，全面理解在特定品牌中哪些可以做、哪些不可以做，以及背后的原因。</p>
+<p>在创作模式的内容菜单（Content）以及 UEFN 的<strong>内容浏览器（Content Browser）</strong>中，所有乐高®动物、道具、房屋与其他资产都归类在 <strong>LEGO®</strong> 之下。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/17561672-936d-45ae-bd0e-1487e16942aa?resizing_type=fit" alt="乐高®内容菜单原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/17561672-936d-45ae-bd0e-1487e16942aa?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>要了解如何建造乐高®岛屿，请参阅<a href="working-with-lego-islands-in-fortnite-creative.html">使用乐高®岛屿（Working with LEGO® Islands）</a>。</p>
+<p>所有带有军事主题的 Fortnite 原生道具、预制件、画廊集或图标，在乐高®岛屿中均不可用。</p>
+<p>在 Fortnite 虚幻编辑器（UEFN）中，你也可以打开<strong>内容抽屉（Content Drawer）</strong>，前往<strong>全部（All）&gt; LEGO® Content</strong>，获取材质、音频文件等更多资产。</p>
+
+<h2 id="sec-1">预制件与画廊集</h2>
+<p>预制件（Prefabs）与画廊集（Galleries）是你乐高®创作的现成积木：包含精细的乐高®建筑与资产合集，可放置、可自定义、可组合，塑造你的岛屿。</p>
+<p>要了解更多信息，请参阅<a href="https://dev.epicgames.com/documentation/fortnite/using-prefabs-and-galleries-in-fortnite-creative" target="_blank" rel="noopener">使用预制件与画廊集（Using Prefabs and Galleries）</a>。</p>
+<p>大型预制件和画廊集会影响岛屿内存。要了解如何优化岛屿性能，请参阅<a href="working-with-lego-islands-in-fortnite-creative.html">使用乐高®岛屿</a>中的<a href="working-with-lego-islands-in-fortnite-creative.html">使用乐高®颗粒搭建（Building with LEGO Elements）</a>一节。</p>
+<h3>预制件</h3>
+<p>预制件是主题乐高®建筑，可帮你快速起步。它们在节省时间的同时，让你专注于创意。每个预制件都完全可编辑：可以重建、缩放，也可以把多个预制件的零件混搭，创造全新作品。</p>
+<p>把预制件当地基、地标或玩法空间使用。它们灵活多变，重在激发实验精神，而非限定某种特定的游戏或环境类型。</p>
+<p><strong>Bloom Tycoon</strong></p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/b88ac14d-f358-41ca-8ff3-1714e6e5281f?resizing_type=fit" alt="Bloom Tycoon 预制件原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/b88ac14d-f358-41ca-8ff3-1714e6e5281f?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/3daf935f-2a53-4117-889f-a85fc079271b?resizing_type=fit" alt="Bloom Tycoon 预制件原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/3daf935f-2a53-4117-889f-a85fc079271b?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/f90502b9-bfdb-43a3-a79a-2b0935760e13?resizing_type=fit" alt="Bloom Tycoon 预制件原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/f90502b9-bfdb-43a3-a79a-2b0935760e13?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/d741886e-5969-4df8-9a74-aaf6dc9ac1b0?resizing_type=fit" alt="Bloom Tycoon 预制件原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/d741886e-5969-4df8-9a74-aaf6dc9ac1b0?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/b4fa5af1-78fa-47ad-8a12-a720a1f71918?resizing_type=fit" alt="Bloom Tycoon 预制件原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/b4fa5af1-78fa-47ad-8a12-a720a1f71918?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p><strong>Animal Farm（动物农场）</strong></p>
+<p><strong>Block House（方块小屋）</strong></p>
+<p><strong>Block Landscape A（方块地貌 A）</strong></p>
+<p><strong>Chess（国际象棋）</strong></p>
+<p><strong>Block Landscape B（方块地貌 B）</strong></p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/4cac8dcd-c518-418e-a21c-066c260cee79?resizing_type=fit" alt="方块神庙与花园预制件原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/4cac8dcd-c518-418e-a21c-066c260cee79?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/b775b43e-94ca-4807-9dfa-7c06750a5a86?resizing_type=fit" alt="方块神庙与花园预制件原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/b775b43e-94ca-4807-9dfa-7c06750a5a86?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/9dfc3d39-b132-4aff-970f-79901a494852?resizing_type=fit" alt="方块神庙与花园预制件原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/9dfc3d39-b132-4aff-970f-79901a494852?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/1c6b46c8-cb7c-4247-88d1-b67f77658b22?resizing_type=fit" alt="方块神庙与花园预制件原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/1c6b46c8-cb7c-4247-88d1-b67f77658b22?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/60951133-a1ec-41d8-8da0-5a870469b657?resizing_type=fit" alt="方块神庙与花园预制件原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/60951133-a1ec-41d8-8da0-5a870469b657?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p><strong>Block Temple（方块神庙）</strong></p>
+<p><strong>Banana Garden（香蕉花园）</strong></p>
+<p><strong>Hedge Garden（树篱花园）</strong></p>
+<p><strong>Pond Garden（池塘花园）</strong></p>
+<p><strong>Stone Garden（岩石花园）</strong></p>
+<p><strong>Space（太空）</strong></p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/ec18e419-ff55-40cc-8874-6a73ff020522?resizing_type=fit" alt="太空主题预制件原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/ec18e419-ff55-40cc-8874-6a73ff020522?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/7225ab0b-78fe-41e5-b773-0013c72e7257?resizing_type=fit" alt="太空主题预制件原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/7225ab0b-78fe-41e5-b773-0013c72e7257?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/f13e2e12-1448-4d67-aabd-7335df42ddf7?resizing_type=fit" alt="太空主题预制件原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/f13e2e12-1448-4d67-aabd-7335df42ddf7?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/797e82e3-89f6-48e0-acfe-cfc117c46b48?resizing_type=fit" alt="太空主题预制件原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/797e82e3-89f6-48e0-acfe-cfc117c46b48?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/5eb4dd8f-76e4-4701-ab0b-d486c0929d7f?resizing_type=fit" alt="太空主题预制件原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/5eb4dd8f-76e4-4701-ab0b-d486c0929d7f?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p><strong>Space Connection（太空连廊）</strong></p>
+<p><strong>Space Control（太空控制室）</strong></p>
+<p><strong>Space Quarters（太空舱）</strong></p>
+<p><strong>Space Vessel（太空飞船）</strong></p>
+<p><strong>Space Production（太空工厂）</strong></p>
+<p><strong>Spring（春季）</strong></p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/9dc8502a-f683-4a71-a299-5f3c4f91e8eb?resizing_type=fit" alt="春季集市预制件原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/9dc8502a-f683-4a71-a299-5f3c4f91e8eb?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/8fa3fb5d-cc1d-4f86-8893-49e210f1dec1?resizing_type=fit" alt="春季游乐场预制件原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/8fa3fb5d-cc1d-4f86-8893-49e210f1dec1?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p><strong>Spring Market（春季集市）</strong></p>
+<p><strong>Spring Playground（春季游乐场）</strong></p>
+<p><strong>Suburban（郊区）</strong></p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/b7b530cc-37d9-41e5-b030-ed85e7bd89f7?resizing_type=fit" alt="郊区红砖房预制件原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/b7b530cc-37d9-41e5-b030-ed85e7bd89f7?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/6584f410-70a9-4925-ad79-764d8bb7c2d0?resizing_type=fit" alt="郊区蓝色小屋预制件原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/6584f410-70a9-4925-ad79-764d8bb7c2d0?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p><strong>Suburban Red Brick House（郊区红砖房）</strong></p>
+<p><strong>Suburban Blue House（郊区蓝色小屋）</strong></p>
+<p><strong>Toy Factory（玩具工厂）</strong></p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/902ab395-d3c0-47c6-adf8-53dacae5782f?resizing_type=fit" alt="玩具工厂冬季小屋预制件原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/902ab395-d3c0-47c6-adf8-53dacae5782f?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p><strong>Toy Factory Winter Lodge（玩具工厂冬季小屋）</strong></p>
+<p><strong>Other（其他）</strong></p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/61b93ba0-b15b-4aad-ada0-30366ac7ef4a?resizing_type=fit" alt="音乐会舞台预制件原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/61b93ba0-b15b-4aad-ada0-30366ac7ef4a?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/c31d4a7e-9bd4-4c7b-a95c-5afdf9f21ce7?resizing_type=fit" alt="基础几何体障碍赛预制件原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/c31d4a7e-9bd4-4c7b-a95c-5afdf9f21ce7?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p><strong>Music Concert Stage（音乐会舞台）</strong></p>
+<p><strong>Primitives Obstacle Course（基础几何体障碍赛）</strong></p>
+<h3>画廊集</h3>
+<p>画廊集提供成组的单个乐高®资产，从家具、植被到结构件和装饰应有尽有。你可以精挑细选与岛屿设计相符的元素进行组装。</p>
+<p>可以用画廊集填充细节、扩展预制件，也可以完全从零开始搭建原创建筑。</p>
+<p>你可以直接从内容浏览器（Content Browser）的 Props 文件夹中，把单个道具拖进岛屿。这样无需使用整套预制件或画廊集，就能取用其中的单个物件并单独放置、自定义。</p>
+<p><strong>Building（建筑）</strong></p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/234fd00d-ce39-43d4-b62e-ca59accf2d0f?resizing_type=fit" alt="建筑画廊集原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/234fd00d-ce39-43d4-b62e-ca59accf2d0f?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/f6733d0d-203f-4ce6-913c-fef8ef54a9f0?resizing_type=fit" alt="建筑画廊集原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/f6733d0d-203f-4ce6-913c-fef8ef54a9f0?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/0eda5f80-64a1-4336-8252-c10ec5d8c9e6?resizing_type=fit" alt="建筑画廊集原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/0eda5f80-64a1-4336-8252-c10ec5d8c9e6?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/5074bc57-52d3-4d05-9142-d789cf40a146?resizing_type=fit" alt="建筑画廊集原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/5074bc57-52d3-4d05-9142-d789cf40a146?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/417c358d-ec21-4077-b313-174f59f7c128?resizing_type=fit" alt="建筑画廊集原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/417c358d-ec21-4077-b313-174f59f7c128?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p><strong>Space City Floor &amp; Stairs Gallery A（太空城地板与楼梯画廊集 A）</strong></p>
+<p><strong>Space Roof Gallery A（太空屋顶画廊集 A）</strong></p>
+<p><strong>Space Wall Gallery A（太空墙体画廊集 A）</strong></p>
+<p><strong>Suburban Floor Gallery A（郊区地板画廊集 A）</strong></p>
+<p><strong>Suburban Roof Gallery A（郊区屋顶画廊集 A）</strong></p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/c7285899-f59c-46b0-a51b-4666529a084f?resizing_type=fit" alt="郊区楼梯画廊原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/c7285899-f59c-46b0-a51b-4666529a084f?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/27fcce43-ac08-4fa6-b19c-ff9a2c018cd6?resizing_type=fit" alt="郊区蓝色墙体画廊原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/27fcce43-ac08-4fa6-b19c-ff9a2c018cd6?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/17c07b6a-7948-4df8-a6da-a25c6a508fcf?resizing_type=fit" alt="郊区红砖墙体画廊原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/17c07b6a-7948-4df8-a6da-a25c6a508fcf?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/7b164f79-43f4-4b5d-8c50-bb423892c971?resizing_type=fit" alt="郊区黄砖墙体画廊原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/7b164f79-43f4-4b5d-8c50-bb423892c971?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/949cacef-c170-44a9-a90c-48cf3ae61348?resizing_type=fit" alt="玩具工厂冬季小屋画廊原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/949cacef-c170-44a9-a90c-48cf3ae61348?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p><strong>Suburban Stair Gallery A（郊区楼梯画廊集 A）</strong></p>
+<p><strong>Suburban Wall Gallery Blue（郊区墙体画廊集·蓝色）</strong></p>
+<p><strong>Suburban Wall Gallery Red Brick（郊区墙体画廊集·红砖）</strong></p>
+<p><strong>Suburban Wall Gallery Yellow Brick（郊区墙体画廊集·黄砖）</strong></p>
+<p><strong>Toy Factory Winter Lodge Gallery（玩具工厂冬季小屋画廊集）</strong></p>
+<p><strong>Music（音乐）</strong></p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/40689790-56ee-49f6-8331-5f248b5b6dda?resizing_type=fit" alt="音乐会道具画廊 A 原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/40689790-56ee-49f6-8331-5f248b5b6dda?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/61efbf73-ee49-4d4f-b6ea-aeff66ed476d?resizing_type=fit" alt="音乐会道具画廊 B 原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/61efbf73-ee49-4d4f-b6ea-aeff66ed476d?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p><strong>Music Concert Prop Gallery A（音乐会道具画廊集 A）</strong></p>
+<p><strong>Music Concert Prop Gallery B（音乐会道具画廊集 B）</strong></p>
+<p><strong>Nature（自然）</strong></p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/001a341b-327e-4e6d-acb4-1884d9403590?resizing_type=fit" alt="春季林地自然画廊原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/001a341b-327e-4e6d-acb4-1884d9403590?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p><strong>Spring Woodland Nature Gallery（春季林地自然画廊集）</strong></p>
+<p><strong>Props（道具）</strong></p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/d524aeb0-6214-4329-bffb-712e87d41ebe?resizing_type=fit" alt="Bloom Tycoon 动物道具画廊原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/d524aeb0-6214-4329-bffb-712e87d41ebe?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/e2c90803-af5b-49e0-9bf2-6e886306d613?resizing_type=fit" alt="Bloom Tycoon 方块道具画廊原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/e2c90803-af5b-49e0-9bf2-6e886306d613?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/e07cace4-81ba-4fc4-9eaf-953e747624a7?resizing_type=fit" alt="Bloom Tycoon 农耕道具画廊原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/e07cace4-81ba-4fc4-9eaf-953e747624a7?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/5497139f-9586-4131-822b-ddd3e8b7ffd2?resizing_type=fit" alt="Bloom Tycoon 游戏道具画廊原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/5497139f-9586-4131-822b-ddd3e8b7ffd2?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/9c859b11-8398-4c68-a2c4-c7ac306b40a9?resizing_type=fit" alt="Bloom Tycoon 花园道具画廊原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/9c859b11-8398-4c68-a2c4-c7ac306b40a9?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p><strong>Bloom Tycoon Animal Prop Gallery（Bloom Tycoon 动物道具画廊集）</strong></p>
+<p><strong>Bloom Tycoon Blocks Prop Gallery（Bloom Tycoon 方块道具画廊集）</strong></p>
+<p><strong>Bloom Tycoon Farming Prop Gallery（Bloom Tycoon 农耕道具画廊集）</strong></p>
+<p><strong>Bloom Tycoon Games Prop Gallery（Bloom Tycoon 游戏道具画廊集）</strong></p>
+<p><strong>Bloom Tycoon Garden Prop Gallery（Bloom Tycoon 花园道具画廊集）</strong></p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/794d5d6a-18b0-412c-9bab-0a243eafe500?resizing_type=fit" alt="乐高®幻影忍者道具画廊原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/794d5d6a-18b0-412c-9bab-0a243eafe500?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/97b71eda-5c77-4a32-84e2-58b0d82f2fa8?resizing_type=fit" alt="幻影忍者低语森林道具画廊原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/97b71eda-5c77-4a32-84e2-58b0d82f2fa8?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/7887cdb2-ea61-4a48-9376-305441eadb82?resizing_type=fit" alt="惊悚太空道具画廊原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/7887cdb2-ea61-4a48-9376-305441eadb82?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/eb89498a-b365-446a-b9af-25ec3f129c91?resizing_type=fit" alt="太空城道具画廊原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/eb89498a-b365-446a-b9af-25ec3f129c91?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/4916d8f6-9ec5-4f35-9973-d28f87628538?resizing_type=fit" alt="太空野外道具画廊原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/4916d8f6-9ec5-4f35-9973-d28f87628538?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p><strong>LEGO® Ninjago® Props Gallery（乐高®幻影忍者道具画廊集）</strong></p>
+<p>LEGO® Ninjago® Whispering Woods Props Gallery（乐高®幻影忍者低语森林道具画廊集）</p>
+<p>Scary Space Prop Gallery A（惊悚太空道具画廊集 A）</p>
+<p>Space City Prop Gallery A（太空城道具画廊集 A）</p>
+<p>Space Exterior Prop Gallery A（太空野外道具画廊集 A）</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/a22a4a7c-ecb1-4601-bbc2-7957825d14ee?resizing_type=fit" alt="太空伙伴道具画廊原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/a22a4a7c-ecb1-4601-bbc2-7957825d14ee?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/edcf2857-11fc-4ac7-aaf1-542c0dc8811c?resizing_type=fit" alt="太空植物道具画廊原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/edcf2857-11fc-4ac7-aaf1-542c0dc8811c?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/df585c67-4151-4b0e-9171-f67177a6c23b?resizing_type=fit" alt="春季庆典道具画廊原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/df585c67-4151-4b0e-9171-f67177a6c23b?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/b95604e5-2737-4caa-a5e5-88e7457cf503?resizing_type=fit" alt="郊区道具画廊原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/b95604e5-2737-4caa-a5e5-88e7457cf503?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/6b9cb382-1cac-4c8c-8e2f-ae2e7da29023?resizing_type=fit" alt="玩具工厂角色道具画廊原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/6b9cb382-1cac-4c8c-8e2f-ae2e7da29023?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>Space Friends Prop Gallery A（太空伙伴道具画廊集 A）</p>
+<p>Space Plants Prop Gallery A（太空植物道具画廊集 A）</p>
+<p>Spring Celebration Prop Gallery（春季庆典道具画廊集）</p>
+<p>Suburban Prop Gallery（郊区道具画廊集）</p>
+<p>Toy Factory Character Prop Gallery（玩具工厂角色道具画廊集）</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/b87619f7-5505-4ca0-88e1-5056732dcc70?resizing_type=fit" alt="玩具工厂室内道具画廊原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/b87619f7-5505-4ca0-88e1-5056732dcc70?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/160f0b1c-2e4d-4f1a-80d3-0c62ff367cc2?resizing_type=fit" alt="玩具工厂室外道具画廊原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/160f0b1c-2e4d-4f1a-80d3-0c62ff367cc2?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/df630bdb-79c6-492c-b88d-75780b787022?resizing_type=fit" alt="玩具工厂冬季小屋道具画廊原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/df630bdb-79c6-492c-b88d-75780b787022?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>Toy Factory Indoor Prop Gallery（玩具工厂室内道具画廊集）</p>
+<p>Toy Factory Outdoor Prop Gallery（玩具工厂室外道具画廊集）</p>
+<p><strong>Toy Factory Winter Lodge Prop Gallery（玩具工厂冬季小屋道具画廊集）</strong></p>
+<p><strong>Shape（几何体）</strong></p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/73092b0c-c0b3-443d-abc0-f335736e1dbb?resizing_type=fit" alt="基础几何体道具画廊原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/73092b0c-c0b3-443d-abc0-f335736e1dbb?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p><strong>Primitives Prop Gallery（基础几何体道具画廊集）</strong></p>
+<h3>砖块模块</h3>
+<p>砖块模块（Brick modules）是预先拼好的砖块造型件，类似于画廊集资产。你可以把这些零件组合起来，搭建环境设计。这些模块化零件不可再拆回单颗砖块。</p>
+<p>对于 UEFN 项目，你可以将砖块模块作为已放置元素使用，并用砖块编辑器（Brick Editor）创作更多设计。用砖块编辑器逐砖搭建全新结构，与放置好的模块相辅相成。</p>
+<p>要了解更多信息，请参阅<a href="working-with-the-lego-brick-editor-in-fortnite.html">使用乐高®砖块编辑器（Working with the LEGO® Brick Editor）</a>。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/2e12cdce-1d33-4db7-ac08-59b0b14d055a?resizing_type=fit" alt="幻影忍者寺院砖块模块原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/2e12cdce-1d33-4db7-ac08-59b0b14d055a?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/f310a76f-984c-47ee-b94b-fd1920a2aee4?resizing_type=fit" alt="幻影忍者低语森林寺院砖块模块原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/f310a76f-984c-47ee-b94b-fd1920a2aee4?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/6b3c2d6c-ee27-4238-a5ab-cac49befd219?resizing_type=fit" alt="幻影忍者低语森林村庄砖块模块原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/6b3c2d6c-ee27-4238-a5ab-cac49befd219?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p><strong>Ninjago Monastery（幻影忍者寺院）</strong></p>
+<p><strong>Ninjago Whispering Woods Monastery（幻影忍者低语森林寺院）</strong></p>
+<p><strong>Ninjago Whispering Woods Village（幻影忍者低语森林村庄）</strong></p>
+
+<h2 id="sec-2">设备</h2>
+<p>乐高®岛屿有近 100 种 Fortnite 设备可用。所有这些设备都<a href="https://dev.epicgames.com/documentation/fortnite/fortnite-glossary" target="_blank" rel="noopener">兼容小人仔（Minifigure-compatible）</a>，选项与 Fortnite 中完全相同。不过，并非所有设备都能在乐高®岛屿上使用。</p>
+<p>Patchwork 设备采用 Fortnite 的常规比例，这意味着小人仔不用戴眼镜也能看清所有旋钮标签！</p>
+<p>有些设备专为乐高®玩法与玩家交互而设计，包括：</p>
+<ul>
+<li><a href="using-lego-assembly-devices-in-fortnite-creative.html">组装设备（Assembly Devices）</a>：乐高®岛屿专属的组装设备（Assembly），一键即可拼搭或拆解道具。</li>
+<li><a href="using-lego-collectible-devices-in-fortnite-creative.html">收藏品设备（Collectible Devices）</a>：可添加玩家能够拾取的乐高®颗粒，作为岛屿玩法的一部分。可自定义这些设备，以支持不同类型的目标或游戏风格。</li>
+</ul>
+<p>某些设备会由 Fortnite 与乐高®审核团队审查其支持的功能，以确保岛屿符合<a href="lego-brand-rules-in-fortnite.html">乐高®品牌规则（LEGO® Brand Rules）</a>，包括：</p>
+<ul>
+<li>支持文本输入的设备。</li>
+<li>生成器及提供给玩家的生成物品。</li>
+</ul>
+<h3>不可用设备列表</h3>
+<p>下表列出了在乐高®岛屿的设备（Devices）选项卡下不可选的设备。</p>
+<table><thead><tr><th>设备名称</th><th>缺席原因</th></tr></thead><tbody>
+<tr><td><strong>Armored Battlebus Spawner（装甲巴士生成器）</strong></td><td>小人仔够不到踏板。</td></tr>
+<tr><td><strong>ATK Spawner（ATK 生成器）</strong></td><td>小人仔够不到踏板。</td></tr>
+<tr><td><strong>Baller Spawner（悠悠球生成器）</strong></td><td>小人仔不喜欢：用这个生成器刷出的道具没法一起运动。</td></tr>
+<tr><td><strong>Barrier Plate（屏障踏板）</strong></td><td>小人仔体重太轻，踩不动踏板。</td></tr>
+<tr><td><strong>Big Rig Spawner（大卡车生成器）</strong></td><td>小人仔够不到踏板。</td></tr>
+<tr><td><strong>Biplane Spawner（双翼机生成器）</strong></td><td>小人仔够不到双翼机的方向盘。</td></tr>
+<tr><td><strong>Boat Spawner（小船生成器）</strong></td><td>小人仔够不到船舵。</td></tr>
+<tr><td><strong>Cannon Spawner（火炮生成器）</strong></td><td>乐高®岛屿不能使用军事元素。</td></tr>
+<tr><td><strong>Chiller（冷冻陷阱）</strong></td><td>小人仔不喜欢被冻住。</td></tr>
+<tr><td><strong>Creature Manager（生物管理器）</strong></td><td>这些生物对小人仔来说太吓人了。</td></tr>
+<tr><td><strong>Creature Placer（生物放置器）</strong></td><td>这些生物对小人仔来说太吓人了。</td></tr>
+<tr><td><strong>Creature Spawner（生物生成器）</strong></td><td>这些生物对小人仔来说太吓人了。</td></tr>
+<tr><td><strong>Crowd Volume（人群音量）</strong></td><td>一切都很棒，除了人群音量。</td></tr>
+<tr><td><strong>Damage Amplifier Power-Up（伤害放大道具）</strong></td><td>小人仔不会受到伤害。</td></tr>
+<tr><td><strong>Dirt Bike Spawner（越野摩托生成器）</strong></td><td>小人仔的视线越不过车把。</td></tr>
+<tr><td><strong>Driftboard Spawner（悬浮滑板生成器）</strong></td><td>小人仔踩着悬浮滑板很难做出 Laser Flip（激光翻转）。</td></tr>
+<tr><td><strong>Fang Spawner（尖牙车生成器）</strong></td><td>小人仔够不到踏板。</td></tr>
+<tr><td><strong>Guard Spawner（守卫生成器）</strong></td><td>高总裁（Lord Business）的守卫已经够多了。</td></tr>
+<tr><td><strong>Heavy Turret（重型炮塔）</strong></td><td>乐高®岛屿不能使用军事元素。</td></tr>
+<tr><td><strong>Helicopter Spawner（直升机生成器）</strong></td><td>小人仔够不到直升机的方向盘。</td></tr>
+<tr><td><strong>Melee Designer（近战设计器）</strong></td><td>小人仔在近战中会被搞糊涂。</td></tr>
+<tr><td><strong>Mounted Turret（固定炮塔）</strong></td><td>乐高®岛屿不能使用军事元素。</td></tr>
+<tr><td><strong>Nitro Drift Sedan Spawner（氮气漂移轿车生成器）</strong></td><td>小人仔够不到踏板。</td></tr>
+<tr><td><strong>Octane Spawner（Octane 生成器）</strong></td><td>现有载具还不够快，配不上 Clutch Powers。</td></tr>
+<tr><td><strong>Pickup Truck Spawner（皮卡生成器）</strong></td><td>小人仔够不到踏板。</td></tr>
+<tr><td><strong>Poison Dart Trap（毒镖陷阱）</strong></td><td>飞镖会被小人仔弹开。</td></tr>
+<tr><td><strong>Quadcrasher Spawner（四轮粉碎车生成器）</strong></td><td>小人仔够不到踏板。</td></tr>
+<tr><td><strong>Rocket Boost（火箭加速）</strong></td><td>Clutch 飙车不需要帮忙。</td></tr>
+<tr><td><strong>Rocket Racing Vehicle Spawner（火箭竞速载具生成器）</strong></td><td>小人仔够不到踏板。</td></tr>
+<tr><td><strong>Scoreboard（记分牌）</strong></td><td>小人仔够不到上面换数字。</td></tr>
+<tr><td><strong>Sedan Spawner（轿车生成器）</strong></td><td>小人仔够不到踏板。</td></tr>
+<tr><td><strong>Shooting Range Gallery（射击场画廊集）</strong></td><td>坏警察（Bad Cop）不需要再练打靶了。</td></tr>
+<tr><td><strong>Shopping Cart Spawner（购物车生成器）</strong></td><td>小人仔够不到购物车的把手。</td></tr>
+<tr><td><strong>Siege Cannon（攻城炮）</strong></td><td>乐高®岛屿不能使用军事元素。</td></tr>
+<tr><td><strong>Signal Remote Manager（信号遥控管理器）</strong></td><td>遥控器按钮对小人仔来说太难按了。</td></tr>
+<tr><td><strong>Speaker（扬声器）</strong></td><td>又大声又突然的音乐会吓到乐高®骆驼。</td></tr>
+<tr><td><strong>Spike Trap（尖刺陷阱）</strong></td><td>小人仔不喜欢尖刺。</td></tr>
+<tr><td><strong>Sportbike Spawner（跑车摩托生成器）</strong></td><td>小人仔的视线越不过车把。</td></tr>
+<tr><td><strong>Sports Car Spawner（跑车生成器）</strong></td><td>小人仔够不到踏板。</td></tr>
+<tr><td><strong>Surfboard Spawner（冲浪板生成器）</strong></td><td>小人仔踩冲浪板做不出 Bottom Turn（底转）。</td></tr>
+<tr><td><strong>SUV Spawner（SUV 生成器）</strong></td><td>小人仔够不到踏板。</td></tr>
+<tr><td><strong>Tank Spawner（坦克生成器）</strong></td><td>乐高®岛屿不能使用军事元素。</td></tr>
+<tr><td><strong>Taxi Spawner（出租车生成器）</strong></td><td>小人仔更喜欢走路。</td></tr>
+<tr><td><strong>UFO Spawner（UFO 生成器）</strong></td><td>小人仔害怕 UFO。</td></tr>
+<tr><td><strong>Video Player（视频播放器）</strong></td><td>这个设备连不上乐高®电视。</td></tr>
+</tbody></table>
+<p>以下<strong>环境陷阱（Environmental Traps）</strong>同样不可用：</p>
+<ul>
+<li>火焰（天花板、地板、墙面）</li>
+<li>毒镖（天花板、地板、墙面）</li>
+<li>尖刺（天花板、地板、墙面）</li>
+</ul>
+<h3>乐高®风格</h3>
+<p>你可以用 <strong>NPC 生成器（NPC Spawner）</strong>设备把乐高®小人仔扩展为岛上的 NPC。通过该设备，你可以从 500 多种<a href="https://dev.epicgames.com/documentation/fortnite/fortnite-glossary#lego-styles" target="_blank" rel="noopener">乐高®风格（LEGO Styles）</a>中挑选和管理。你可以更换乐高®风格来贴合体验主题、丰富视觉多样性，或区分不同角色阵营。要了解更多信息，请参阅<a href="https://dev.epicgames.com/documentation/fortnite/using-npc-spawner-devices-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">NPC 生成器设备（NPC Spawner Devices）</a>。</p>
+<p>在 Fortnite 虚幻编辑器（UEFN）中，乐高®风格通过<a href="https://dev.epicgames.com/documentation/fortnite/using-npc-character-definitions-in-unreal-editor-for-fortnite#npc-character-modifiers" target="_blank" rel="noopener">NPC 角色修饰器（NPC Character Modifiers）</a>控制。要在 <strong>NPC 生成器</strong>设备中使用乐高®风格，请新建 <strong>NPC 角色定义（NPC Character Definition）</strong>，并使用 <strong>角色外观 NPC 修饰器（Character Cosmetic NPC Modifier）</strong>。</p>
+<p>要了解如何更新 NPC 的风格、资产或行为，请参阅<a href="https://dev.epicgames.com/documentation/fortnite/using-npc-character-definitions-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">NPC 角色定义（NPC Character Definitions）</a>页面。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/a0e9eb17-7bb4-4921-a458-dee8201b0dfa?resizing_type=fit" alt="乐高®风格 NPC 原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/a0e9eb17-7bb4-4921-a458-dee8201b0dfa?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+
+<h2 id="sec-3">工具与武器</h2>
+<p>乐高®岛屿可以包含<a href="https://dev.epicgames.com/documentation/fortnite/fortnite-glossary#minifigure-compatible" target="_blank" rel="noopener">兼容小人仔（Minifigure-compatible）</a>的工具和武器。这些经典 Fortnite 工具和武器已经过重新设计，可供小人仔使用。你可以把它们放在乐高®体验中、放进宝箱，或通过设备配置，以支持目标、成长线与玩家交互。</p>
+<p>你可以在 Fortnite 虚幻编辑器（UEFN）中找到工具、武器和弹药。打开<strong>内容抽屉（Content Drawer）</strong>，前往<strong>全部（All）&gt; LEGO® Content &gt; Weapons</strong>。</p>
+<h3>工具</h3>
+<p>工具（Tools）是小人仔可以携带和使用的实用物件。你可以把工具作为世界拾取物放置、加入宝箱，或通过设备发放，以支持任务、制造循环或其他成长机制。</p>
+<p>工具</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/c809ba81-51d4-4886-aff0-e14fe5a4e323?resizing_type=fit" alt="抓钩工具原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/c809ba81-51d4-4886-aff0-e14fe5a4e323?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/bef85e5c-4de8-4525-a237-f9150eefa3d5?resizing_type=fit" alt="Patchwork 工具原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/bef85e5c-4de8-4525-a237-f9150eefa3d5?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/6a09fe30-bb94-4849-a45e-906d174e700b?resizing_type=fit" alt="Prop-o-Matic 工具原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/6a09fe30-bb94-4849-a45e-906d174e700b?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p><strong>Grappler（抓钩）</strong></p>
+<p><strong>Patchwork Tool（Patchwork 工具）</strong></p>
+<p><strong>Prop-o-Matic</strong></p>
+<h3>武器</h3>
+<p>武器（Weapons）是 Fortnite 风格的乐高®版本。你可以在玩法中使用这些武器，包括 <a href="https://dev.epicgames.com/documentation/fortnite/fortnite-glossary#pvp" target="_blank" rel="noopener">PvP</a> 或 <a href="https://dev.epicgames.com/documentation/fortnite/fortnite-glossary#pve" target="_blank" rel="noopener">PvE</a> 体验。</p>
+<p>你可以把武器作为世界拾取物放置、加入容器、作为奖励发放，或用于战斗目标。它们可以支撑挑战、冒险玩法或奖励系统。</p>
+<p>部分武器有不同稀有度。高稀有度版本通常属性更强，例如耐久或威力更高。</p>
+<p>武器</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/4de6a21c-0edd-4620-9cd5-699eab96eda1?resizing_type=fit" alt="斧头武器原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/4de6a21c-0edd-4620-9cd5-699eab96eda1?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/866d7fa9-9a95-408f-8f51-819b6e6a7726?resizing_type=fit" alt="突发的脉冲步枪武器原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/866d7fa9-9a95-408f-8f51-819b6e6a7726?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/02d8e9a9-33d5-4b5b-b227-9c1a8c078114?resizing_type=fit" alt="十字弩武器原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/02d8e9a9-33d5-4b5b-b227-9c1a8c078114?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/aeefb713-7c48-4863-9987-b94da3e04ad8?resizing_type=fit" alt="CX 突发激光武器原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/aeefb713-7c48-4863-9987-b94da3e04ad8?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/56655534-19d4-4dcc-864e-d299b8b62192?resizing_type=fit" alt="CX 脉冲激光武器原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/56655534-19d4-4dcc-864e-d299b8b62192?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/2130f48d-444f-47fa-8d70-d81242930b71?resizing_type=fit" alt="双飞碟武器原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/2130f48d-444f-47fa-8d70-d81242930b71?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p><strong>Axe（斧头）</strong></p>
+<p><strong>Burst Pulse Rifle（突发脉冲步枪）</strong></p>
+<p><strong>Crossbow（十字弩）</strong></p>
+<p><strong>CX Burst Laser Mk.（CX 突发激光 Mk.）</strong></p>
+<p><strong>CX Pulse Laser Mk.（CX 脉冲激光 Mk.）</strong></p>
+<p><strong>Double Saucer（双飞碟）</strong></p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/d0b11093-b9e5-4263-bbf3-ef8cab43d220?resizing_type=fit" alt="爆炸黏液枪武器原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/d0b11093-b9e5-4263-bbf3-ef8cab43d220?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/215ccaae-c1fc-4306-a9be-e70e742394f8?resizing_type=fit" alt="老伙计武器原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/215ccaae-c1fc-4306-a9be-e70e742394f8?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/5392e98d-779e-4295-9846-ca49637031cc?resizing_type=fit" alt="武士刀武器原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/5392e98d-779e-4295-9846-ca49637031cc?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/0b5e48f5-3ea1-4160-8602-e319b90b701e?resizing_type=fit" alt="动能之刃武器原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/0b5e48f5-3ea1-4160-8602-e319b90b701e?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/405bca5a-ad5e-424c-8618-b9a153fa2b27?resizing_type=fit" alt="Kymera 射线枪武器原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/405bca5a-ad5e-424c-8618-b9a153fa2b27?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/e6b5a1be-64e1-4165-866a-d67fe6d412c4?resizing_type=fit" alt="双节棍武器原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/e6b5a1be-64e1-4165-866a-d67fe6d412c4?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p><strong>Explosive Goo Gun（爆炸黏液枪）</strong></p>
+<p><strong>Good Ol' Trusty（老伙计）</strong></p>
+<p><strong>Katana（武士刀）</strong></p>
+<p><strong>Kinetic Blade（动能之刃）</strong></p>
+<p><strong>Kymera Ray Gun（Kymera 射线枪）</strong></p>
+<p><strong>Nunchucks（双节棍）</strong></p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/51beaaf6-eced-4829-865c-ff17c18534ee?resizing_type=fit" alt="超频 CX 突发激光武器原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/51beaaf6-eced-4829-865c-ff17c18534ee?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/fba7de53-b747-4a97-b00e-4e6cc463e0c0?resizing_type=fit" alt="超频 CX 脉冲激光武器原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/fba7de53-b747-4a97-b00e-4e6cc463e0c0?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/877cd217-2600-492b-901a-9dbcde397dbb?resizing_type=fit" alt="Protype Pulserifle X2 武器原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/877cd217-2600-492b-901a-9dbcde397dbb?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/6e3961d3-96cd-4365-ad18-17bca2e3a2d5?resizing_type=fit" alt="Pulserifle X2 Mk. 武器原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/6e3961d3-96cd-4365-ad18-17bca2e3a2d5?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/ab836c79-3e1a-47c1-a29c-bd9bdcc5d069?resizing_type=fit" alt="皇家毒刺爆能枪武器原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/ab836c79-3e1a-47c1-a29c-bd9bdcc5d069?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/c84fa93f-7e83-4e22-8ea1-82df3ba18197?resizing_type=fit" alt="镰刀武器原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/c84fa93f-7e83-4e22-8ea1-82df3ba18197?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p><strong>Overclocked CX Burst Laser（超频 CX 突发激光）</strong></p>
+<p><strong>Overclocked CX Pulse Laser（超频 CX 脉冲激光）</strong></p>
+<p><strong>Protype Pulserifle X2</strong></p>
+<p><strong>Pulserifle X2 Mk.</strong></p>
+<p><strong>Royal Sting Blaster（皇家毒刺爆能枪）</strong></p>
+<p><strong>Scythe（镰刀）</strong></p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/10f29155-197a-45d3-beb8-abc09f844faa?resizing_type=fit" alt="手里剑武器原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/10f29155-197a-45d3-beb8-abc09f844faa?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/a1d4785f-4418-48c5-9951-04d2010e34db?resizing_type=fit" alt="雪球发射器武器原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/a1d4785f-4418-48c5-9951-04d2010e34db?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/7c8ec3da-998f-4216-82d2-74a3f836902d?resizing_type=fit" alt="毒刺爆能枪武器原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/7c8ec3da-998f-4216-82d2-74a3f836902d?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/8d95b8ae-dc0b-4c5b-8fc0-29fb105aee8b?resizing_type=fit" alt="超级飞碟武器原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/8d95b8ae-dc0b-4c5b-8fc0-29fb105aee8b?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/f33b5c3d-7cac-4474-8093-457821c94a07?resizing_type=fit" alt="剑武器原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/f33b5c3d-7cac-4474-8093-457821c94a07?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p><strong>Shuriken（手里剑）</strong></p>
+<p><strong>Snowball Launcher（雪球发射器）</strong></p>
+<p>Sting Blaster（毒刺爆能枪）</p>
+<p><strong>Super Saucer（超级飞碟）</strong></p>
+<p><strong>Sword（剑）</strong></p>
+<h3>弹药</h3>
+<p>某些乐高®武器需要特定资源才能运作，弹药（Ammo）的作用正在于此。每种弹药都有独特造型，玩家一眼就能认出自己捡到了什么。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/ad9b5fb0-10f1-4bd1-9463-27c686a9db65?resizing_type=fit" alt="箭矢弹药原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/ad9b5fb0-10f1-4bd1-9463-27c686a9db65?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/dd85b892-0cf1-4961-9a03-032dd095d9ff?resizing_type=fit" alt="能量弹药原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/dd85b892-0cf1-4961-9a03-032dd095d9ff?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/9acd8513-4957-4acc-864e-607883316a36?resizing_type=fit" alt="重型弹药原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/9acd8513-4957-4acc-864e-607883316a36?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/be39c8a5-f83b-4bb9-9147-00b67794d8b9?resizing_type=fit" alt="轻型弹药原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/be39c8a5-f83b-4bb9-9147-00b67794d8b9?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/1d35c822-5255-44ee-a7d0-571c4ed3665d?resizing_type=fit" alt="中型弹药原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/1d35c822-5255-44ee-a7d0-571c4ed3665d?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/df3b1903-e6cf-43d3-8c8a-689043d41edf?resizing_type=fit" alt="火箭弹药原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/df3b1903-e6cf-43d3-8c8a-689043d41edf?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/61dd6b48-560c-4979-be28-2cdd307e079d?resizing_type=fit" alt="霰弹弹药原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/61dd6b48-560c-4979-be28-2cdd307e079d?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p><strong>Arrow（箭矢）</strong></p>
+<p><strong>Energy（能量）</strong></p>
+<p><strong>Heavy（重型）</strong></p>
+<p><strong>Light（轻型）</strong></p>
+<p><strong>Medium（中型）</strong></p>
+<p><strong>Rocket（火箭）</strong></p>
+<p><strong>Shell（霰弹）</strong></p>
+
+<h2 id="sec-4">物品</h2>
+<p>物品（Items）是乐高®岛屿中可收集或可消耗的物件，玩家可以拾取、使用或消耗。它们可以支撑成长线、资源系统或奖励，具体是否使用取决于你的岛屿设计。你可以直接把物品放在世界中、通过设备发放，或用作任务、目标的一部分。</p>
+<p>你可以在 Fortnite 虚幻编辑器（UEFN）中找到物品。打开<strong>内容抽屉（Content Drawer）</strong>，前往<strong>全部（All）&gt; LEGO® Content &gt; Items</strong>。</p>
+<h3>收藏品</h3>
+<p>收藏品（Collectibles）是玩家可以拾取并留待日后使用的物品。它们常作为岛上的资源、任务物品或货币。</p>
+<p>你可以用收藏品支撑成长系统或交易机制。可以把它们作为世界拾取物放置，或加入<a href="#sec-5">容器</a>。</p>
+<p>收藏品</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/79a9eba7-a9a1-4e55-b85c-ae49e0faa73c?resizing_type=fit" alt="时空钢碎片收藏品原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/79a9eba7-a9a1-4e55-b85c-ae49e0faa73c?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/8ca4fdb0-ad1e-4a05-9516-9d8a74414092?resizing_type=fit" alt="钻石收藏品原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/8ca4fdb0-ad1e-4a05-9516-9d8a74414092?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/1821b0d3-8166-44d5-855a-b6033276e88c?resizing_type=fit" alt="机械齿轮收藏品原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/1821b0d3-8166-44d5-855a-b6033276e88c?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/90bdbdef-a4ef-4ef7-a4e1-a6f8c7e1732c?resizing_type=fit" alt="怪兽碎片收藏品原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/90bdbdef-a4ef-4ef7-a4e1-a6f8c7e1732c?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/a7ce7567-df3b-478f-9fef-b3d1c3c504a3?resizing_type=fit" alt="南瓜收藏品原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/a7ce7567-df3b-478f-9fef-b3d1c3c504a3?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p><strong>Chronosteel Shard（时空钢碎片）</strong></p>
+<p><strong>Diamond（钻石）</strong></p>
+<p><strong>Mechanical Gear（机械齿轮）</strong></p>
+<p><strong>Monster Shard（怪兽碎片）</strong></p>
+<p><strong>Pumpkin（南瓜）</strong></p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/ce133992-cc4e-4ae8-b103-57b8936d10a2?resizing_type=fit" alt="红蘑菇收藏品原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/ce133992-cc4e-4ae8-b103-57b8936d10a2?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/57f1fb1a-1c25-4a23-a363-6ca40959b3e8?resizing_type=fit" alt="旋转术收藏品原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/57f1fb1a-1c25-4a23-a363-6ca40959b3e8?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/dcacde52-989c-4838-9e52-8df51e74dc78?resizing_type=fit" alt="吸血鬼之牙收藏品原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/dcacde52-989c-4838-9e52-8df51e74dc78?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p><strong>Red Mushroom（红蘑菇）</strong></p>
+<p><strong>Spinjitsu（旋转术）</strong></p>
+<p><strong>Vampire Teeth（吸血鬼之牙）</strong></p>
+<p><strong>Spinjitzu（幻影旋转术）</strong>在该物品位于玩家资产栏时，使用闪避输入（Dodge，默认为 <strong>Ctrl</strong>）激活。只要玩家还有体力，该能力就会一直生效。</p>
+<h3>消耗品</h3>
+<p>消耗品（Consumables）是使用后立即生效的物品，可恢复生命或提供护盾。</p>
+<p>消耗品适合生存体验、战斗向岛屿，或希望玩家在挑战前恢复、准备的时刻。你可以把它们放在世界中、加入战利品系统，或作为任务、活动的奖励发放。</p>
+<p>食物</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/caf681c8-09b4-4087-8a53-d129aff5a346?resizing_type=fit" alt="苹果食物原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/caf681c8-09b4-4087-8a53-d129aff5a346?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/c354bc91-b3d3-43fe-b51a-177b6e006748?resizing_type=fit" alt="香蕉食物原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/c354bc91-b3d3-43fe-b51a-177b6e006748?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/8dff2694-3b66-4515-a985-6f756d61bc62?resizing_type=fit" alt="椰子食物原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/8dff2694-3b66-4515-a985-6f756d61bc62?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/204036e3-4474-4bbb-9ea0-595e0bb7bc72?resizing_type=fit" alt="玉米食物原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/204036e3-4474-4bbb-9ea0-595e0bb7bc72?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/f8b7ecc4-0b4c-48ac-818c-6309b6d27734?resizing_type=fit" alt="鸡蛋食物原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/f8b7ecc4-0b4c-48ac-818c-6309b6d27734?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p><strong>Apple（苹果）</strong></p>
+<p><strong>Banana（香蕉）</strong></p>
+<p><strong>Coconut（椰子）</strong></p>
+<p><strong>Corn（玉米）</strong></p>
+<p><strong>Egg（鸡蛋）</strong></p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/ec7438c0-85ed-43ae-810f-ca469b2ebe63?resizing_type=fit" alt="肉类食物原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/ec7438c0-85ed-43ae-810f-ca469b2ebe63?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/8e461ca4-c4f2-46e6-bbfe-ceb8b7eee5c6?resizing_type=fit" alt="披萨食物原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/8e461ca4-c4f2-46e6-bbfe-ceb8b7eee5c6?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/70525638-ed82-4d6c-bf73-ef6cbd76e0ab?resizing_type=fit" alt="Slapberry 食物原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/70525638-ed82-4d6c-bf73-ef6cbd76e0ab?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/de25313b-a0e6-4bc5-8398-aab99f06c5c0?resizing_type=fit" alt="Slap Juice 饮料原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/de25313b-a0e6-4bc5-8398-aab99f06c5c0?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/1d2c2749-6402-4368-84c0-c81c29ef6df5?resizing_type=fit" alt="Slurp Juice 饮料原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/1d2c2749-6402-4368-84c0-c81c29ef6df5?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p><strong>Meat（肉）</strong></p>
+<p><strong>Pizza（披萨）</strong></p>
+<p><strong>Slapberry</strong></p>
+<p><strong>Slap Juice</strong></p>
+<p><strong>Slurp Juice</strong></p>
+
+<h2 id="sec-5">容器</h2>
+<p>啊吼吼，伙计！把这些乐高®宝箱或骆驼塞满工具、物品，或玩家需要的任何东西。宝箱的配置方式与经典 Fortnite 宝箱相同，只是这些宝箱由砖块拼成，与其他乐高®资产浑然一体。</p>
+<p>你可以在 Fortnite 虚幻编辑器（UEFN）中找到容器。打开<strong>内容抽屉（Content Drawer）</strong>，前往<strong>全部（All）&gt; LEGO® Content &gt; Containers &gt; SetupAssets &gt; Blueprints</strong>。</p>
+<p>不同尺寸的宝箱容量不同。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/c7011322-69c3-4707-bb4d-9f134f3c9dc1?resizing_type=fit" alt="分级宝箱容器原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/c7011322-69c3-4707-bb4d-9f134f3c9dc1?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/f6e80e8f-9a59-416a-a621-5b5bcd5a5b2f?resizing_type=fit" alt="空投容器原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/f6e80e8f-9a59-416a-a621-5b5bcd5a5b2f?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p><strong>Tiered Chest（分级宝箱）</strong></p>
+<p><strong>Spawn Drop（空投）</strong></p>
+
+<h2 id="sec-6">相关文档</h2>
+<ul>
+<li><a href="https://dev.epicgames.com/documentation/fortnite/accessing-brand-content-in-fortnite" target="_blank" rel="noopener">访问品牌内容（Accessing Brand Content）</a></li>
+<li><a href="lego-templates-in-fortnite.html">乐高®模板（LEGO® Templates）</a></li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/6db0387a-4e88-46f4-9550-cd18b8c64b28?resizing_type=fit&width=160&height=92" alt="访问品牌内容示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/6db0387a-4e88-46f4-9550-cd18b8c64b28?resizing_type=fit&width=160&height=92" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/d6970853-47c2-4129-b6a8-2bd8351d7495?resizing_type=fit&width=160&height=92" alt="乐高®模板示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/d6970853-47c2-4129-b6a8-2bd8351d7495?resizing_type=fit&width=160&height=92" target="_blank" rel="noopener">查看原图</a></div></figure>
+
+<div class="pager"><a href="14-building-lego-islands-in-fortnite.html"><small>← 返回父教程</small>乐高®岛屿</a><a href="sub-index.html"><small>子教程索引 →</small>全部子教程</a></div>
+</article><nav class="doc-toc" aria-label="本页内容"><b>本页内容</b><a href="#sec-1">预制件与画廊集</a><a href="#sec-2">设备</a><a href="#sec-3">工具与武器</a><a href="#sec-4">物品</a><a href="#sec-5">容器</a><a href="#sec-6">相关文档</a></nav></div>
+</div></div>
+</div>
+<footer class="edc-footer"><div class="inner"><img src="../assets/logo-epic.svg" alt="Epic Games"><span>Fortnite 文档中文镜像 · UE教程/ · 本地打开 index.html 阅读 · 翻译整理自 Epic 官方文档，仅供学习交流</span></div></footer>
+</body>
+</html>

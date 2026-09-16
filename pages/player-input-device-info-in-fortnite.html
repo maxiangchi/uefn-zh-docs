@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>玩家输入设备信息（Player Input Device Info） | Fortnite 文档中文镜像</title>
+<link rel="stylesheet" href="../assets/epic.css">
+<link rel="stylesheet" href="../assets/patch.css">
+<link rel="icon" href="../assets/logo-epic.svg">
+</head>
+<body class="theme-fortnite">
+<div class="edc-topbar"><div class="edc-topbar-inner"><img class="edc-logo" src="../assets/logo-epic.svg" alt="Epic Games"><span class="edc-brand">Epic Games <b>开发者社区</b></span><span class="edc-nav"><a href="../index.html">文档首页</a><a href="sub-index.html">子教程索引</a><a href="https://dev.epicgames.com/documentation/fortnite/player-input-device-info-in-fortnite" target="_blank" rel="noopener">英文原文</a></span></div></div>
+<div class="site-container">
+<aside class="site-nav"><div class="documents-tree"><nav><ul class="contents-table">
+<div class="tree-sec">最新动态</div>
+<a class="tree-link active" href="01-42-00-fortnite-ecosystem-updates-and-release-notes.html">01. 42.00 生态系统更新与发行说明</a>
+<a class="tree-link" href="02-custom-items-and-inventory-overview-in-fortnite.html">02. 自定义物品与背包总览</a>
+<a class="tree-link" href="03-in-island-transactions-in-fortnite.html">03. 岛内交易</a>
+<a class="tree-link" href="04-mobile-development-in-fortnite.html">04. 移动端开发</a>
+<a class="tree-link" href="05-inputs-in-fortnite.html">05. 输入系统</a>
+<a class="tree-link" href="06-ability-system-in-unreal-editor-for-fortnite.html">06. 能力系统 Ability System</a>
+<a class="tree-link" href="07-partybased-gameplay-using-the-social-synergy-api-in-fortnite.html">07. 社交协同 API 与小队玩法</a>
+<a class="tree-link" href="08-scene-graph-in-unreal-editor-for-fortnite.html">08. 场景图 Scene Graph</a><div class="tree-sec">入门</div>
+<a class="tree-link" href="09-build-your-first-island-in-fortnite.html">09. 构建你的第一个岛屿</a>
+<a class="tree-link" href="10-onboarding-guide-to-programming-with-verse-in-unreal-editor-for-fortnite.html">10. Verse 编程入门指南</a>
+<a class="tree-link" href="11-building-basics-in-fortnite-creative.html">11. 建造基础</a><div class="tree-sec">品牌合集</div>
+<a class="tree-link" href="12-star-wars-islands-in-fortnite.html">12. 星球大战™岛屿</a>
+<a class="tree-link" href="13-kpop-demon-hunters-islands-in-fortnite.html">13. KPop 猎魔团岛屿</a>
+<a class="tree-link" href="14-building-lego-islands-in-fortnite.html">14. 乐高®岛屿</a>
+<a class="tree-link" href="15-the-walking-dead-universe-islands-in-unreal-editor-for-fortnite.html">15. 行尸走肉宇宙岛屿</a>
+<a class="tree-link" href="16-teenage-mutant-ninja-turtle-islands-in-unreal-editor-for-fortnite.html">16. 忍者神龟岛屿</a>
+<a class="tree-link" href="17-squid-game-islands-in-fortnite.html">17. 鱿鱼游戏岛屿</a><div class="tree-sec">开发者成功</div>
+<a class="tree-link" href="18-using-creator-portal-in-fortnite-creative.html">18. 使用创作者门户</a>
+<a class="tree-link" href="19-island-moderation-and-guidelines-in-fortnite-creative.html">19. 岛屿审核与准则</a><div class="tree-sec">协作</div>
+<a class="tree-link" href="20-creating-teams-in-creator-portal-in-unreal-editor-for-fortnite.html">20. 在创作者门户创建团队</a>
+<a class="tree-link" href="21-adding-playtesters-in-fortnite-creative.html">21. 添加试玩测试员</a>
+<a class="tree-link" href="22-playtesting-your-island-in-unreal-editor-for-fortnite.html">22. 试玩测试你的岛屿</a>
+<a class="tree-link" href="23-collaborating-in-unreal-editor-for-fortnite.html">23. 在 UEFN 中协作</a>
+<a class="tree-link" href="24-lore-version-control-in-unreal-editor-for-fortnite.html">24. Lore 版本控制</a>
+<a class="tree-link" href="25-conflicts-in-lore-version-control-in-unreal-editor-for-fortnite.html">25. Lore 中的冲突</a>
+<a class="tree-link" href="26-version-history-and-conflict-resolution-in-unreal-editor-for-fortnite.html">26. 分支历史与冲突解决</a><div class="tree-sec">游戏示例</div>
+<a class="tree-link" href="27-build-a-game-in-unreal-editor-for-fortnite.html">27. 构建一款游戏</a>
+<a class="tree-link" href="28-unreal-editor-for-fortnite-starter-templates.html">28. UEFN 新手模板</a><div class="tree-sec">Verse</div>
+<a class="tree-link" href="29-learn-the-basics-of-writing-code-in-verse.html">29. 从零学习 Verse 代码基础</a><div class="tree-sec">专注领域</div>
+<a class="tree-link" href="30-lighting-in-unreal-editor-for-fortnite.html">30. 灯光</a>
+<a class="tree-link" href="31-animation-and-cinematics-in-unreal-editor-for-fortnite.html">31. 动画与过场动画</a>
+<a class="tree-link" href="32-modeling-in-unreal-editor-for-fortnite.html">32. 建模</a>
+<a class="tree-link" href="33-materials-in-unreal-editor-for-fortnite.html">33. 材质</a>
+<a class="tree-link" href="34-environments-and-landscapes-in-unreal-editor-for-fortnite.html">34. 环境与地形</a>
+<a class="tree-link" href="35-audio-in-unreal-editor-for-fortnite.html">35. 音频</a>
+<a class="tree-link" href="36-visual-effects-in-unreal-editor-for-fortnite.html">36. 视觉特效</a>
+</ul></nav></div></aside>
+<div class="page-content"><div class="page-document has-theme-bg">
+<header class="section-page-header"><nav><ol class="breadcrumb is-shrinkable"><li class="breadcrumb-item is-root"><img src="../assets/logo-epic.svg" alt="Epic Games"><a href="../index.html">Developer</a></li><li class="breadcrumb-item"><a href="../index.html">Fortnite 文档</a></li><li class="breadcrumb-item"><a href="01-42-00-fortnite-ecosystem-updates-and-release-notes.html">42.00 生态系统更新与发行说明</a></li><li class="breadcrumb-item active" aria-current="page"><span class="text-truncate">玩家输入设备信息（Player Input Device Info）</span></li></ol></nav><h1>玩家输入设备信息（Player Input Device Info）</h1><p class="text-secondary mb-0">通过读取每位玩家设备的输入能力与上下文，打造自适应的玩法与界面：玩家输入设备信息 API（Player Input Device Info API）扩展了 player_input 类，新增两个属性，让你不仅知道存在哪些输入，还能了解玩家正以何种方式实际操作游戏。</p><p class="doc-meta">英文原标题：Player Input Device Info in Fortnite · <a href="https://dev.epicgames.com/documentation/fortnite/player-input-device-info-in-fortnite" target="_blank" rel="noopener">查看英文原文</a> · 社区翻译镜像，仅供学习</p></header>
+<div class="doc-columns"><article class="doc-article">
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/f6f2cb5d-f994-44c4-a815-1ba1a860c2a6?resizing_type=fill&width=1920&height=335" alt="玩家输入设备信息题图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/f6f2cb5d-f994-44c4-a815-1ba1a860c2a6?resizing_type=fill&width=1920&height=335" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>通过读取每位玩家设备的输入能力与上下文，构建自适应的玩法与界面。玩家输入设备信息 API（Player Input Device Info API）扩展了 <code>player_input</code> 类，新增了两个属性，让你不仅能了解存在哪些输入，还能了解玩家正以何种方式实际与游戏交互。</p>
+<p>许多设备支持同时使用多种输入类型。例如，Nintendo Switch 可同时支持手柄（gamepad）与触控（touch）。<code>AvailableInputDevices</code> 为你呈现完整的硬件情况，而 <code>PreferredInputMethod</code> 则给出一个高层级的单一分类，方便你做出诸如显示触控优先还是手柄优先界面之类的决策。</p>
+<h2 id="sec-1">关于可用输入设备与输入方式</h2>
+<p>可用输入设备（Available input devices）描述玩家设备上当前启用的硬件能力。每种能力都是 <code>available_input_devices</code> 结构体上的一个逻辑（logic）字段。由于多个能力可以同时为真，该结构体为你呈现硬件支持能力的完整情况。</p>
+<p>输入方式（input method）是一个高层级分类，表示玩家与游戏交互的主要方式。即使设备同时支持多种输入类型，<code>PreferredInputMethod</code> 也只会解析为单一值，便于你的代码做出直接的分支决策。</p>
+<h2 id="sec-2">玩家输入设备信息 API 的功能</h2>
+<ul>
+<li>通过 <code>AvailableInputDevices</code> 报告处于活动状态的完整输入硬件集合。</li>
+<li>通过 <code>PreferredInputMethod</code> 识别玩家首选的输入类别。</li>
+</ul>
+<h2 id="sec-3">你可以用它做什么</h2>
+<p>你可以使用玩家输入设备信息 API（Player Input Device Info API）实现以下效果：</p>
+<ul>
+<li>根据玩家的实际游玩方式显示正确的按钮提示（手柄图标、触控图标或键盘快捷键）。</li>
+<li>构建随玩家设备形态自适应的界面布局，例如紧凑的移动端布局、大字体的电视端布局等。</li>
+<li>支持同时使用多种输入类型的平台：查询所有可用设备，而不是依赖对单一输入的假设。</li>
+</ul>
+<h2 id="sec-4">可用输入设备</h2>
+<p><code>available_input_devices</code> 结构体描述玩家可用的硬件输入能力。每个字段都是一个逻辑（logic）值，表示是否存在该能力。导入方式如下：</p>
+<pre><code>using { /Verse.org/Input }</code></pre>
+<table>
+<thead><tr><th>字段</th><th>值类型</th><th>说明</th></tr></thead>
+<tbody>
+<tr><td>Gamepad</td><td>logic</td><td>是否连接了手柄（gamepad）。</td></tr>
+<tr><td>Keyboard</td><td>logic</td><td>是否连接了键盘（keyboard）。</td></tr>
+<tr><td>Mouse</td><td>logic</td><td>是否连接了鼠标（mouse）。</td></tr>
+<tr><td>Touch</td><td>logic</td><td>是否可用触控输入（touch）。</td></tr>
+</tbody>
+</table>
+<h2 id="sec-5">输入方式</h2>
+<p><code>input_method</code> 枚举是对玩家主要交互方式的高层级分类。导入方式如下：</p>
+<pre><code>using { /Verse.org/Input }</code></pre>
+<table>
+<thead><tr><th>值</th><th>说明</th></tr></thead>
+<tbody>
+<tr><td>KeyboardAndMouse</td><td>玩家主要使用键盘与鼠标（keyboard and mouse）。</td></tr>
+<tr><td>Gamepad</td><td>玩家主要使用手柄（gamepad）。</td></tr>
+<tr><td>Touch</td><td>玩家主要使用触控输入（touch）。</td></tr>
+</tbody>
+</table>
+<h2 id="sec-6">在 Verse 中使用玩家输入设备信息</h2>
+<p>以下步骤将演示如何导入模块、获取玩家的输入数据，并根据其首选输入方式或可用硬件进行逻辑分支。</p>
+<h3>导入模块</h3>
+<pre><code>using { /Verse.org/Input }
+using { /Verse.org/Simulation }
+using { /Fortnite.com/Devices }</code></pre>
+<h3>获取玩家输入并读取属性</h3>
+<p><code>GetPlayerInput</code> 是一个可失败（failable）函数，必须在失败上下文（failure context）中调用。拿到 <code>player_input</code> 实例后，即可直接读取设备信息属性：</p>
+<pre><code>if (PlayerInput := GetPlayerInput[Player]):
+    Devices := PlayerInput.AvailableInputDevices
+    Method := PlayerInput.PreferredInputMethod</code></pre>
+<h3>按首选输入方式分支</h3>
+<p>使用 <code>PreferredInputMethod</code> 决定呈现哪种界面风格：</p>
+<pre><code>if (PlayerInput := GetPlayerInput[Player]):
+    case (PlayerInput.PreferredInputMethod):
+        input_method.Gamepad =&gt; ShowGamepadUI()
+        input_method.Touch =&gt; ShowTouchUI()
+        input_method.KeyboardAndMouse =&gt; ShowKeyboardMouseUI()
+        _ =&gt;</code></pre>
+<h3>检查特定硬件</h3>
+<p>当你需要在启用某功能前确认存在特定硬件时，请使用 <code>AvailableInputDevices</code>：</p>
+<pre><code>if (PlayerInput := GetPlayerInput[Player]):
+    if (PlayerInput.AvailableInputDevices.Touch?):
+        EnableTouchAiming()
+    if (PlayerInput.AvailableInputDevices.Mouse?):
+        EnableMouseTargeting()</code></pre>
+<h2 id="sec-7">完整示例</h2>
+<p>以下示例演示了一个设备：在玩家加入时读取每位玩家的输入设备信息，并相应地调整界面与功能。</p>
+<pre><code>using { /Fortnite.com/Devices }
+using { /Verse.org/Input }
+using { /Verse.org/Simulation }
+using { /UnrealEngine.com/Temporary/Diagnostics }
+
+input_device_info_example := class(creative_device):
+    OnBegin&lt;override&gt;()&lt;suspends&gt; : void =
+        for (Player : GetPlayspace().GetPlayers()):
+            AdaptToPlayer(Player)</code></pre>
+<h2 id="sec-8">使用玩家输入设备信息的技巧</h2>
+<p>以下技巧可帮助你高效地使用玩家输入设备信息 API（Player Input Device Info API）：</p>
+<ul>
+<li>大多数界面决策请使用 <code>PreferredInputMethod</code>。即使在同时支持多种输入类型的平台上，它也只解析为单一值，分支逻辑更简洁。</li>
+<li>当某功能需要特定硬件时，请使用 <code>AvailableInputDevices</code>，以防在缺少该硬件的设备上出现意外行为。</li>
+<li>在玩家加入时读取设备信息属性；若玩家设备上下文可能发生变化（例如玩家从键盘鼠标切换到手柄），请再次读取。</li>
+</ul>
+<p>标签：<a href="https://dev.epicgames.com/community/search?query=verse" target="_blank" rel="noopener">verse</a> · <a href="https://dev.epicgames.com/community/search?query=input" target="_blank" rel="noopener">input</a> · <a href="https://dev.epicgames.com/community/search?query=fortnite" target="_blank" rel="noopener">fortnite</a></p>
+<p>欢迎在<a href="https://forums.unrealengine.com/categories?tag=fortnite" target="_blank" rel="noopener">开发者论坛（Developer Forums）</a>提问并帮助同行，或在<a href="https://dev.epicgames.com/community/fortnite/learning" target="_blank" rel="noopener">学习库（Learning Library）</a>撰写、阅读教程。</p>
+<div class="pager"><a href="01-42-00-fortnite-ecosystem-updates-and-release-notes.html"><small>← 返回父教程</small>42.00 生态系统更新与发行说明</a><a href="sub-index.html"><small>子教程索引 →</small>全部子教程</a></div>
+</article><nav class="doc-toc" aria-label="本页内容"><b>本页内容</b><a href="#sec-1">关于可用输入设备与输入方式</a>
+<a href="#sec-2">玩家输入设备信息 API 的功能</a>
+<a href="#sec-3">你可以用它做什么</a>
+<a href="#sec-4">可用输入设备</a>
+<a href="#sec-5">输入方式</a>
+<a href="#sec-6">在 Verse 中使用玩家输入设备信息</a>
+<a href="#sec-7">完整示例</a>
+<a href="#sec-8">使用玩家输入设备信息的技巧</a></nav></div>
+</div></div>
+</div>
+<footer class="edc-footer"><div class="inner"><img src="../assets/logo-epic.svg" alt="Epic Games"><span>Fortnite 文档中文镜像 · UE教程/ · 本地打开 index.html 阅读 · 翻译整理自 Epic 官方文档，仅供学习交流</span></div></footer>
+</body>
+</html>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>使用忍者神龟（TMNT）岛屿 | Fortnite 文档中文镜像</title>
+<link rel="stylesheet" href="../assets/epic.css">
+<link rel="stylesheet" href="../assets/patch.css">
+<link rel="icon" href="../assets/logo-epic.svg">
+</head>
+<body class="theme-fortnite">
+<div class="edc-topbar"><div class="edc-topbar-inner"><img class="edc-logo" src="../assets/logo-epic.svg" alt="Epic Games"><span class="edc-brand">Epic Games <b>开发者社区</b></span><span class="edc-nav"><a href="../index.html">文档首页</a><a href="sub-index.html">子教程索引</a><a href="https://dev.epicgames.com/documentation/fortnite/working-with-tmnt-islands-in-fortnite" target="_blank" rel="noopener">英文原文</a></span></div></div>
+<div class="site-container">
+<aside class="site-nav"><div class="documents-tree"><nav><ul class="contents-table">
+<div class="tree-sec">A 最新动态</div>
+<a class="tree-link" href="01-42-00-fortnite-ecosystem-updates-and-release-notes.html">01. 42.00 生态系统更新与发行说明</a>
+<a class="tree-link" href="02-custom-items-and-inventory-overview-in-fortnite.html">02. 自定义物品与背包总览</a>
+<a class="tree-link" href="03-in-island-transactions-in-fortnite.html">03. 岛内交易</a>
+<a class="tree-link" href="04-mobile-development-in-fortnite.html">04. 移动端开发</a>
+<a class="tree-link" href="05-inputs-in-fortnite.html">05. 输入系统</a>
+<a class="tree-link" href="06-ability-system-in-unreal-editor-for-fortnite.html">06. 能力系统 Ability System</a>
+<a class="tree-link" href="07-partybased-gameplay-using-the-social-synergy-api-in-fortnite.html">07. 社交协同 API 与小队玩法</a>
+<a class="tree-link" href="08-scene-graph-in-unreal-editor-for-fortnite.html">08. 场景图 Scene Graph</a>
+<div class="tree-sec">B 入门</div>
+<a class="tree-link" href="09-build-your-first-island-in-fortnite.html">09. 构建你的第一个岛屿</a>
+<a class="tree-link" href="10-onboarding-guide-to-programming-with-verse-in-unreal-editor-for-fortnite.html">10. Verse 编程入门指南</a>
+<a class="tree-link" href="11-building-basics-in-fortnite-creative.html">11. 建造基础</a>
+<div class="tree-sec">C 品牌合集</div>
+<a class="tree-link" href="12-star-wars-islands-in-fortnite.html">12. 星球大战™岛屿</a>
+<a class="tree-link" href="13-kpop-demon-hunters-islands-in-fortnite.html">13. KPop 猎魔团岛屿</a>
+<a class="tree-link" href="14-building-lego-islands-in-fortnite.html">14. 乐高®岛屿</a>
+<a class="tree-link" href="15-the-walking-dead-universe-islands-in-unreal-editor-for-fortnite.html">15. 行尸走肉宇宙岛屿</a>
+<a class="tree-link active" href="16-teenage-mutant-ninja-turtle-islands-in-unreal-editor-for-fortnite.html">16. 忍者神龟岛屿</a>
+<a class="tree-link" href="17-squid-game-islands-in-fortnite.html">17. 鱿鱼游戏岛屿</a>
+<div class="tree-sec">D 开发者成功</div>
+<a class="tree-link" href="18-using-creator-portal-in-fortnite-creative.html">18. 使用创作者门户</a>
+<a class="tree-link" href="19-island-moderation-and-guidelines-in-fortnite-creative.html">19. 岛屿审核与准则</a>
+<div class="tree-sec">E 协作</div>
+<a class="tree-link" href="20-creating-teams-in-creator-portal-in-unreal-editor-for-fortnite.html">20. 在创作者门户创建团队</a>
+<a class="tree-link" href="21-adding-playtesters-in-fortnite-creative.html">21. 添加试玩测试员</a>
+<a class="tree-link" href="22-playtesting-your-island-in-unreal-editor-for-fortnite.html">22. 试玩测试你的岛屿</a>
+<a class="tree-link" href="23-collaborating-in-unreal-editor-for-fortnite.html">23. 在 UEFN 中协作</a>
+<a class="tree-link" href="24-lore-version-control-in-unreal-editor-for-fortnite.html">24. Lore 版本控制</a>
+<a class="tree-link" href="25-conflicts-in-lore-version-control-in-unreal-editor-for-fortnite.html">25. Lore 中的冲突</a>
+<a class="tree-link" href="26-version-history-and-conflict-resolution-in-unreal-editor-for-fortnite.html">26. 分支历史与冲突解决</a>
+<div class="tree-sec">F 游戏示例</div>
+<a class="tree-link" href="27-build-a-game-in-unreal-editor-for-fortnite.html">27. 构建一款游戏</a>
+<a class="tree-link" href="28-unreal-editor-for-fortnite-starter-templates.html">28. UEFN 新手模板</a>
+<div class="tree-sec">G Verse</div>
+<a class="tree-link" href="29-learn-the-basics-of-writing-code-in-verse.html">29. 从零学习 Verse 代码基础</a>
+<div class="tree-sec">H 专注领域</div>
+<a class="tree-link" href="30-lighting-in-unreal-editor-for-fortnite.html">30. 灯光</a>
+<a class="tree-link" href="31-animation-and-cinematics-in-unreal-editor-for-fortnite.html">31. 动画与过场动画</a>
+<a class="tree-link" href="32-modeling-in-unreal-editor-for-fortnite.html">32. 建模</a>
+<a class="tree-link" href="33-materials-in-unreal-editor-for-fortnite.html">33. 材质</a>
+<a class="tree-link" href="34-environments-and-landscapes-in-unreal-editor-for-fortnite.html">34. 环境与地形</a>
+<a class="tree-link" href="35-audio-in-unreal-editor-for-fortnite.html">35. 音频</a>
+<a class="tree-link" href="36-visual-effects-in-unreal-editor-for-fortnite.html">36. 视觉特效</a>
+</ul></nav></div></aside>
+<div class="page-content"><div class="page-document has-theme-bg">
+<header class="section-page-header"><nav><ol class="breadcrumb is-shrinkable"><li class="breadcrumb-item is-root"><img src="../assets/logo-epic.svg" alt="Epic Games"><a href="../index.html">Developer</a></li><li class="breadcrumb-item"><a href="../index.html">Fortnite 文档</a></li><li class="breadcrumb-item"><a href="16-teenage-mutant-ninja-turtle-islands-in-unreal-editor-for-fortnite.html">忍者神龟岛屿</a></li><li class="breadcrumb-item active" aria-current="page"><span class="text-truncate">使用忍者神龟（TMNT）岛屿</span></li></ol></nav><h1>使用忍者神龟（TMNT）岛屿</h1><p class="text-secondary mb-0">坏蛋们小心了，忍者神龟在 UEFN 与 Fortnite 创意模式中登场！借助全新的 TMNT 资产，打造包含喜爱的角色、环境与道具的动作体验。</p><p class="doc-meta">英文原标题：Working With TMNT Islands In Fortnite · <a href="https://dev.epicgames.com/documentation/fortnite/working-with-tmnt-islands-in-fortnite" target="_blank" rel="noopener">查看英文原文</a> · 社区翻译镜像，仅供学习</p></header>
+<div class="doc-columns"><article class="doc-article">
+<div class="block-callout">前置主题：要理解和使用本页内容，请先熟悉以下主题：<a href="https://dev.epicgames.com/documentation/fortnite/accessing-brand-content-in-fortnite" target="_blank" rel="noopener">访问品牌内容（Accessing Brand Content）</a>。</div>
+<p>坏蛋们小心了，忍者神龟（Teenage Mutant Ninja Turtles）在 Unreal Editor for Fortnite（UEFN，Fortnite 虚幻编辑器）与 Fortnite 创意模式中登场！借助全新的 TMNT 资产，你可以打造包含喜爱的角色、环境与 TMNT 世界道具的动作体验。无论是在纽约街头打造史诗大战，还是在下水道设计终极训练道场，UEFN 都能让你借助有史以来最知名的 IP 之一制作游戏。</p>
+<p>使用<strong>品牌（Brands）</strong> &gt; <strong>TMNT</strong> 下的基础地图创建项目，即可获得三个定制模板、完整的 TMNT 角色阵容，以及丰富的 TMNT 主题预制件与图库（prefabs and galleries）。每项资产都为无缝融入 Fortnite 生态而设计，为你的项目带来标志性的 TMNT 风味。</p>
+<p>你可以在 UEFN 内容浏览器的 TMNT 文件夹和游戏内创意物品库中访问这些资产。</p>
+<p>创建、试玩测试并打磨好岛屿后，就可以向世界分享你的创意了！发布前请确保岛屿符合<a href="teenage-mutant-ninja-turtles-brand-rules-in-fortnite.html">忍者神龟品牌规则（Teenage Mutant Ninja Turtles Brand Rules）</a>。</p>
+<h2 id="sec-1">TMNT 岛屿模板</h2>
+<p>让你的体验更上一层楼！探索<strong>街机（Arcade）</strong>、<strong>次元 X 起始（Dimension X Starter）</strong>与<strong>城市起始（City Starter）</strong>模板。每个模板都经过精心设计，点燃你的想象，让你忍不住大喊"Cowabunga!"。</p>
+<p><strong>次元 X 起始（Dimension X Starter）</strong>岛屿提供异世界风貌的地貌，是打造多维 TMNT 冒险的完美起点。在外太空旋转的天空下<a href="landscape-mode-in-unreal-editor-for-fortnite.html">雕琢荒芜的地貌（Sculpt the barren landscape）</a>，布设黏液（ooze）池。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/e1abcee6-0dae-4601-8f54-438eb66ddd5a?resizing_type=fit" alt="次元 X 起始岛（Dimension X Starter Island）" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/e1abcee6-0dae-4601-8f54-438eb66ddd5a?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>次元 X 起始岛（Dimension X Starter Island）</p>
+<p><a href="tmnt-arcade-template-in-unreal-editor-for-fortnite.html">街机模板（Arcade template）</a>展示了一款复古街机横版卷轴游戏，包含经典 TMNT 敌人、环境障碍与自定义玩家界面（user interfaces）。<strong>街机（Arcade）</strong>教程会带你逐步搭建玩法的每个元素，为玩家带来妙趣横生的体验。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/7f2f8d1c-6b08-40e2-b479-a2ace6cd9483?resizing_type=fit" alt="街机模板（Arcade Template）" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/7f2f8d1c-6b08-40e2-b479-a2ace6cd9483?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>街机模板（Arcade Template）</p>
+<p><a href="tmnt-city-starter-visual-styles-in-unreal-editor-for-fortnite.html">城市起始模板（City Starter template）</a>运用多种视觉手法，将 TMNT 世界的卡通魅力展现得淋漓尽致。教程教你运用关卡设计、后期处理与自定义灯光等游戏设计元素，让体验在视觉上更上一层楼。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/b34c4a95-2246-4227-a160-8767c9c18db9?resizing_type=fit" alt="城市起始模板（City Starter Template）" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/b34c4a95-2246-4227-a160-8767c9c18db9?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>城市起始模板（City Starter Template）</p>
+<h2 id="sec-2">IARC 受众限制</h2>
+<p>你创建的任何 TMNT 岛屿都需要有符合年龄的分级。TMNT 岛屿模板与创作者门户会在此流程中引导你。一般原则是：创建岛屿时兼顾所有受众。</p>
+<p>下表列出各分级机构、地区，以及 TMNT 岛屿的适龄分级。</p>
+<table>
+<thead><tr><th>分级机构</th><th>地区</th><th>最高年龄分级类别</th></tr></thead>
+<tbody>
+<tr><td><a href="https://www.esrb.org/ratings-guide/" target="_blank" rel="noopener">ESRB</a></td><td>北美</td><td>T</td></tr>
+<tr><td><a href="https://pegi.info/what-do-the-labels-mean" target="_blank" rel="noopener">PEGI</a></td><td>欧洲与英国</td><td>12</td></tr>
+<tr><td><a href="https://www.classification.gov.au/classification-ratings/what-do-ratings-mean" target="_blank" rel="noopener">ACB</a></td><td>澳大利亚</td><td>M</td></tr>
+<tr><td><a href="https://www.gov.br/mj/pt-br/assuntos/seus-direitos/classificacao-1" target="_blank" rel="noopener">ClassInd</a></td><td>巴西</td><td>12</td></tr>
+<tr><td><a href="https://usk.de/die-usk-alterskennzeichen/" target="_blank" rel="noopener">USK</a></td><td>德国</td><td>16</td></tr>
+<tr><td><a href="https://www.grac.or.kr/english/" target="_blank" rel="noopener">GRAC</a></td><td>韩国</td><td>12</td></tr>
+<tr><td>俄罗斯（Russia）</td><td>俄罗斯</td><td>12</td></tr>
+<tr><td><a href="https://www.globalratings.com/ratings-guide.aspx" target="_blank" rel="noopener">IARC 通用（IARC General）</a></td><td>世界其他地区</td><td>12</td></tr>
+</tbody>
+</table>
+<h2 id="sec-3">发布 TMNT 岛屿</h2>
+<p>发布 TMNT 岛屿与通过创作者门户发布其他 Fortnite 创意岛屿流程相同。要了解从 UEFN 发布的流程，请参阅<a href="publishing-projects-in-unreal-editor-for-fortnite.html">发布项目（Publishing Projects）</a>。</p>
+<h2 id="sec-4">在 UEFN 与创意模式中使用 TMNT 角色</h2>
+<p>在 UEFN 与创意模式中，凡是能使用角色外观（character outfits）的地方，都可以生成所有可用的 TMNT 角色，包括四位标志性的神龟、盟友与可怕的反派。在 UEFN 与创意模式中使用以下设备，即可开始创作玩法、制作过场动画，借助全套 TMNT 角色打造全新玩法体验。</p>
+<ul>
+<li><a href="https://dev.epicgames.com/documentation/fortnite/using-guard-spawner-devices-in-fortnite-creative" target="_blank" rel="noopener">守卫生成器（Guard Spawner）</a></li>
+<li><a href="https://dev.epicgames.com/documentation/fortnite/using-character-devices-in-fortnite-creative" target="_blank" rel="noopener">角色设备（Character Device）</a></li>
+<li><a href="https://dev.epicgames.com/documentation/fortnite/using-npc-spawner-devices-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">NPC 生成器（NPC Spawner）</a></li>
+</ul>
+<p>要在角色设备（Character Device）或守卫生成器（Guard Spawner）设备中使用 TMNT 角色，前往<strong>细节（Details）</strong>面板，使用<strong>角色外观（Character Cosmetic）</strong>下拉菜单。</p>
+<p>要在 NPC 生成器中使用，先创建新的<strong>NPC 角色定义（NPC Character Definition）</strong>，再使用<strong>角色外观 NPC 修改器（Character Cosmetic NPC Modifier）</strong>。</p>
+<h2 id="sec-5">TMNT 角色生成器</h2>
+<p>使用 TMNT 角色生成器（TMNT Character Spawner）设备，用主题 NPC（非玩家角色）拓展你的岛屿。该设备在 Unreal Editor for Fortnite（UEFN）与创意模式中均可用。选择 TMNT 角色与玩家并肩作战或与玩家对抗，他们会使用标志性武器进行近战攻击。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/a65d7cd6-6909-485f-aef3-67b170bfdd54?resizing_type=fit" alt="米开朗基罗（Michelangelo）" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/a65d7cd6-6909-485f-aef3-67b170bfdd54?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/99edc693-97b6-4356-95d7-f650469a2372?resizing_type=fit" alt="拉斐尔（Raphael）" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/99edc693-97b6-4356-95d7-f650469a2372?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/9af7fcd5-1794-4e0c-8805-e9f737be2e0a?resizing_type=fit" alt="多纳泰罗（Donatello）" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/9af7fcd5-1794-4e0c-8805-e9f737be2e0a?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/24faf804-b8d4-460f-af81-eb5687ff7ec8?resizing_type=fit" alt="李奥纳多（Leonardo）" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/24faf804-b8d4-460f-af81-eb5687ff7ec8?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>米开朗基罗（Michelangelo）</p>
+<p>拉斐尔（Raphael）</p>
+<p>多纳泰罗（Donatello）</p>
+<p>李奥纳多（Leonardo）</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/b3648d58-d9b6-4a76-bf5e-34a822ec08ba?resizing_type=fit" alt="斯普林特（Splinter）" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/b3648d58-d9b6-4a76-bf5e-34a822ec08ba?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/e9f7ebaf-48e3-434e-9046-5ad45c78ed56?resizing_type=fit" alt="爱普莉尔·奥尼尔（April O'Neil）" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/e9f7ebaf-48e3-434e-9046-5ad45c78ed56?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/b166f3e9-15bc-409b-a91d-8cbf0781dc4f?resizing_type=fit" alt="大脚精英（Foot Elite）" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/b166f3e9-15bc-409b-a91d-8cbf0781dc4f?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/c0588236-5507-45b8-a892-b1e34d7f54c6?resizing_type=fit" alt="施莱德（Shredder）" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/c0588236-5507-45b8-a892-b1e34d7f54c6?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/61e32054-6ed8-465c-8b13-5b1a377a4e89?resizing_type=fit" alt="超级施莱德（Super Shredder）" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/61e32054-6ed8-465c-8b13-5b1a377a4e89?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>斯普林特（Splinter）</p>
+<p>爱普莉尔·奥尼尔（April O'Neil）</p>
+<p>大脚精英（Foot Elite）</p>
+<p>施莱德（Shredder）</p>
+<p>超级施莱德（Super Shredder）</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/c096dd9a-2846-4f3d-80d7-641ca7bddbf3?resizing_type=fit" alt="凯西·琼斯（Casey Jones）" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/c096dd9a-2846-4f3d-80d7-641ca7bddbf3?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/af42d3fb-f14d-4a29-82da-f344e9d24583?resizing_type=fit" alt="比博（Bebop）" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/af42d3fb-f14d-4a29-82da-f344e9d24583?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/6db13dfa-fe4b-4c79-8080-7e60a2d44298?resizing_type=fit" alt="洛克史迪（Rocksteady）" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/6db13dfa-fe4b-4c79-8080-7e60a2d44298?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/367ef7eb-384d-4246-93d8-67cee845f8aa?resizing_type=fit" alt="克朗机器人（Krang's Android）" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/367ef7eb-384d-4246-93d8-67cee845f8aa?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>凯西·琼斯（Casey Jones）</p>
+<p>比博（Bebop）</p>
+<p>洛克史迪（Rocksteady）</p>
+<p>克朗机器人（Krang's Android）</p>
+<h4>设备选项</h4>
+<p>以下是 TMNT 角色生成器的常规设置。该设备基于守卫生成器（Guard Spawner）设备。要了解雇佣角色等设置，请参阅<a href="https://dev.epicgames.com/documentation/fortnite/using-guard-spawner-devices-in-fortnite-creative" target="_blank" rel="noopener">守卫生成器设备（Guard Spawner Devices）</a>。</p>
+<table>
+<thead><tr><th>选项</th><th>值</th></tr></thead>
+<tbody>
+<tr><td><strong>生成数量（Spawn Count）</strong></td><td>1-20</td></tr>
+<tr><td><strong>穿墙生成（Spawn Through Walls）</strong></td><td>启用（Enabled）、禁用（Disabled）</td></tr>
+<tr><td><strong>游戏开始时启用（Enabled at Game Start）</strong></td><td>启用（Enabled）、禁用（Disabled）</td></tr>
+<tr><td><strong>TMNT 角色（TMNT Character）</strong></td><td>米开朗基罗（Michelangelo）、拉斐尔（Raphael）、多纳泰罗（Donatello）、李奥纳多（Leonardo）、施莱德（Shredder）、超级施莱德（Super Shredder）、斯普林特（Splinter）、爱普莉尔·奥尼尔（April O'Neil）、大脚精英（Foot Elite）、凯西·琼斯（Casey Jones）、比博（Bebop）、洛克史迪（Rocksteady）、克朗机器人（Krang's Android）</td></tr>
+<tr><td><strong>大脚精英武器类型（Foot Elite Weapon Type）</strong></td><td>刀（Sword）、武士刀（Katana）、随机（Random）</td></tr>
+<tr><td><strong>守卫队伍选项（Guard Team Option）</strong></td><td>队伍序号（Team Index）、野生动物与生物队伍（Team Wildlife &amp; Creatures）、中立队伍（Team Neutral）</td></tr>
+<tr><td><strong>守卫队伍序号（Guard Team Index）</strong></td><td>队伍 1（Team 1）、选择队伍（Pick a team）</td></tr>
+<tr><td><strong>生成计时器（Spawn Timer）</strong></td><td>无（None）、立即（Instant）、1 - 300 秒</td></tr>
+<tr><td><strong>生成半径（Spawn Radius）</strong></td><td>10 米、2.5 米 - 50 米</td></tr>
+<tr><td><strong>初始生命值（Starting Health）</strong></td><td>100、10 - 10000、无敌（Invulnerable）</td></tr>
+<tr><td><strong>最大生命值（Max Health）</strong></td><td>100、10 - 10000、无敌（Invulnerable）</td></tr>
+<tr><td><strong>初始护盾（Starting Shield）</strong></td><td>无护盾（No Shield）、10、50、100、200、500、1000</td></tr>
+<tr><td><strong>最大护盾（Max Shield）</strong></td><td>无护盾（No Shield）、10、50、100、200、500、1000</td></tr>
+</tbody>
+</table>
+<h2 id="sec-6">鼠怪（Mouser）NPC</h2>
+<p>与 TMNT 角色阵容一同推出的还有<strong>鼠怪（Mouser）</strong>。这种敌方 NPC 拥有独特的动画、玩法与音频，专为 TMNT 主题体验打造。鼠怪属于 NPC 生成器（NPC Spawner）设备的一部分，该设备仅在 UEFN 中可用。</p>
+<p>按以下步骤将鼠怪添加到场景，先创建 NPC 角色定义（NPC Character Definition）：</p>
+<ul>
+<li>在<strong>内容抽屉（Content Drawer）</strong>中，导航到你的项目文件夹。</li>
+<li>右键点击文件夹空白处，选择<strong>人工智能（Artificial Intelligence） &gt; NPC 角色定义（NPC Character Definition）</strong>。</li>
+<li>为角色定义命名，然后双击缩略图编辑 NPC 属性。</li>
+<li>在角色类型下拉菜单中选择<strong>鼠怪（Mouser）</strong>。</li>
+</ul>
+<p>你可以使用 NPC 角色定义（NPC Character Definition）资产或 NPC 生成器（NPC Spawner）设备将鼠怪放入场景。</p>
+<ul>
+<li>将角色定义拖入地图。</li>
+<li>将 NPC 生成器设备拖入地图，然后在细节面板中添加你的角色定义。</li>
+</ul>
+<p>要了解该设备与角色定义的更多信息，请参阅<a href="https://dev.epicgames.com/documentation/fortnite/using-npc-spawner-devices-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">NPC 生成器设备（NPC Spawner Devices）</a>与<a href="https://dev.epicgames.com/documentation/fortnite/using-npc-character-definitions-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">NPC 角色定义（NPC Character Definitions）</a>。</p>
+<h2 id="sec-7">TMNT 设备</h2>
+<p>除 TMNT 角色生成器外，还可以使用以下 TMNT 专属设备。这些设备基于已有的 Fortnite 设备重新设计，贴合 TMNT 品牌风格。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/265d61e8-7821-4f99-8acb-1169a8434373?resizing_type=fit" alt="TMNT 滑板生成器（TMNT Driftboard Spawner）" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/265d61e8-7821-4f99-8acb-1169a8434373?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/4af13d3c-32c4-49b3-aa46-3c42d8031d3d?resizing_type=fit" alt="TMNT 空投生成器（TMNT Supply Drop Spawner）" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/4af13d3c-32c4-49b3-aa46-3c42d8031d3d?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/9cf8d45f-791c-491d-8f54-a37aef3c483d?resizing_type=fit" alt="TMNT 下水道隧道（TMNT Sewer Tunnel）" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/9cf8d45f-791c-491d-8f54-a37aef3c483d?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/4ce746e4-0588-4b06-ad32-fdb92d2dfd48?resizing_type=fit" alt="TMNT 战利品箱（TMNT Loot Crate）" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/4ce746e4-0588-4b06-ad32-fdb92d2dfd48?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>TMNT 滑板生成器（TMNT Driftboard Spawner）</p>
+<p>TMNT 空投生成器（TMNT Supply Drop Spawner）</p>
+<p>TMNT 下水道隧道（TMNT Sewer Tunnel）</p>
+<p>TMNT 战利品箱（TMNT Loot Crate）</p>
+<p>基础设备：<a href="https://dev.epicgames.com/documentation/fortnite/using-driftboard-spawner-devices-in-fortnite-creative" target="_blank" rel="noopener">滑板生成器（Driftboard Spawner）</a></p>
+<p>基础设备：<a href="https://dev.epicgames.com/documentation/fortnite/using-supply-drop-spawner-devices-in-fortnite-creative" target="_blank" rel="noopener">空投生成器（Supply Drop Spawner）</a></p>
+<p>基础设备：<a href="https://dev.epicgames.com/documentation/fortnite/using-hiding-prop-gallery-devices-in-fortnite-creative" target="_blank" rel="noopener">躲藏道具图库（Hiding Prop Gallery）</a></p>
+<p>基础设备：<a href="https://dev.epicgames.com/documentation/fortnite/using-chest-and-ammo-gallery-devices-in-fortnite-creative" target="_blank" rel="noopener">宝箱与弹药图库（Chest and Ammo）</a></p>
+<p>要了解设备的更多信息，请参阅<a href="using-devices-in-fortnite.html">使用设备（Using Devices）</a>。</p>
+<h2 id="sec-8">武器与物品</h2>
+<p>以下武器为 TMNT 专属。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/74d1c1b4-b6cb-4942-86b1-3c27b18d0ff0?resizing_type=fit" alt="李奥纳多的双刀（Leonardo's Katanas）" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/74d1c1b4-b6cb-4942-86b1-3c27b18d0ff0?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/f472df1c-7ac9-41fd-a2e7-6395f813a6cd?resizing_type=fit" alt="米开朗基罗的双节棍（Michelangelo's Nunchaku）" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/f472df1c-7ac9-41fd-a2e7-6395f813a6cd?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/7903da0c-1b70-4544-ab23-28ef59f17a56?resizing_type=fit" alt="拉斐尔的铁尺（Raphael's Sai）" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/7903da0c-1b70-4544-ab23-28ef59f17a56?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/d82e0cd0-259f-4aaa-8ed5-96896477ff20?resizing_type=fit" alt="多纳泰罗的长棍（Donatello's Staff）" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/d82e0cd0-259f-4aaa-8ed5-96896477ff20?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>李奥纳多的双刀（Leonardo's Katanas）</p>
+<p>米开朗基罗的双节棍（Michelangelo's Nunchaku）</p>
+<p>拉斐尔的铁尺（Raphael's Sai）</p>
+<p>多纳泰罗的长棍（Donatello's Staff）</p>
+<p>可通过多种方式为岛屿添加武器，如<a href="https://dev.epicgames.com/documentation/fortnite/using-item-spawner-devices-in-fortnite-creative" target="_blank" rel="noopener">物品生成器（Item Spawner）设备</a>。要自动将英雄武器加入玩家物品栏，请使用<a href="https://dev.epicgames.com/documentation/fortnite/using-item-granter-devices-in-fortnite-creative" target="_blank" rel="noopener">物品授予器（Item Granter）设备</a>。</p>
+<p>专属套装还包括 TMNT 品牌披萨派对（Pizza Party）物品。吃一块切片即可恢复生命值。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/af4ce7ed-c637-4f36-a5b7-0da2e9a4e705?resizing_type=fit" alt="TMNT 披萨派对（Pizza Party）物品" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/af4ce7ed-c637-4f36-a5b7-0da2e9a4e705?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h2 id="sec-9">预制件与图库</h2>
+<p>有了这些超酷的预制件与图库，打造专属 TMNT 岛屿更加轻松。</p>
+<h3>纽约（NYC）</h3>
+<p>用主题内容打造你自己的纽约城，包含 TMNT 粉丝一眼即识的致敬元素。NYC 套装包含 6 个预制件与 9 个图库，约 93 个独特道具资产！</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/6e3612cd-83f7-4bd7-a230-ba7f47e0d3b5?resizing_type=fit" alt="六号频道新闻大厦（Channel 6 News Tower）" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/6e3612cd-83f7-4bd7-a230-ba7f47e0d3b5?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/36159847-3db1-49c5-8e54-5d3ea94db629?resizing_type=fit" alt="现金健身房（Slash for Cash Gym）" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/36159847-3db1-49c5-8e54-5d3ea94db629?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/77576678-549a-415d-b9df-e2ff958c97ac?resizing_type=fit" alt="巴克斯特实验室（Baxter's Lab）" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/77576678-549a-415d-b9df-e2ff958c97ac?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>六号频道新闻大厦（Channel 6 News Tower）</p>
+<p>现金健身房（Slash for Cash Gym）</p>
+<p>巴克斯特实验室（Baxter's Lab）</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/0b98af7e-375b-43ce-adca-a94d4cc32124?resizing_type=fit" alt="小丑时代街机厅（Clowntime Arcade）" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/0b98af7e-375b-43ce-adca-a94d4cc32124?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/94f8f534-dbf9-4ce5-8455-1033b029ef05?resizing_type=fit" alt="兔窝（Rabbit Hutch）" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/94f8f534-dbf9-4ce5-8455-1033b029ef05?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/4a8bb38e-1b04-4679-be72-ea7b7d086c0a?resizing_type=fit" alt="施莱德藏身处（Shredder's Hideout）" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/4a8bb38e-1b04-4679-be72-ea7b7d086c0a?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>小丑时代街机厅（Clowntime Arcade）</p>
+<p>兔窝（Rabbit Hutch）</p>
+<p>施莱德藏身处（Shredder's Hideout）</p>
+<p>用更多 NYC 图库资产设计你自己的城市街道。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/1ebe4673-61c3-4bb5-932d-16f4c143c043?resizing_type=fit" alt="TMNT 六号频道建筑道具图库" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/1ebe4673-61c3-4bb5-932d-16f4c143c043?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/b027410b-4324-41f7-aca5-baa0ae7cb427?resizing_type=fit" alt="TMNT NYC 地板与楼梯图库" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/b027410b-4324-41f7-aca5-baa0ae7cb427?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/8be2ad1f-1b1b-42e6-a61f-a3f1da1350b4?resizing_type=fit" alt="TMNT NYC 道具图库" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/8be2ad1f-1b1b-42e6-a61f-a3f1da1350b4?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>TMNT 六号频道建筑道具图库（TMNT Channel 6 Building Prop Gallery）</p>
+<p>TMNT NYC 地板与楼梯图库（TMNT NYC Floor &amp; Stair Gallery）</p>
+<p>TMNT NYC 道具图库（TMNT NYC Prop Gallery）</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/57474d37-9f92-4fa8-a940-6c8092e63b8c?resizing_type=fit" alt="TMNT NYC 涂鸦墙图库" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/57474d37-9f92-4fa8-a940-6c8092e63b8c?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/c8006fe7-56ad-4e49-937e-e09ff5ef40b8?resizing_type=fit" alt="TMNT NYC 墙体图库 A" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/c8006fe7-56ad-4e49-937e-e09ff5ef40b8?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/ff289084-076d-4d50-8551-85bca7b60efd?resizing_type=fit" alt="TMNT NYC 墙体图库 B" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/ff289084-076d-4d50-8551-85bca7b60efd?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>TMNT NYC 涂鸦墙图库（TMNT NYC Graffiti Wall Gallery）</p>
+<p>TMNT NYC 墙体图库 A（TMNT NYC Wall Gallery A）</p>
+<p>TMNT NYC 墙体图库 B（TMNT NYC Wall Gallery B）</p>
+<p>涂鸦墙图库的纹理在 UEFN 中也可作为纹理使用，可配合<a href="https://dev.epicgames.com/documentation/fortnite/decal-device-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">贴花（Decal）设备</a>用在任何合适的表面上，为现有 Fortnite 预制件增添 TMNT 风情！</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/92e7b23d-fdf8-4bb4-b4d8-2b00f91083d1?resizing_type=fit" alt="TMNT NYC 墙体图库 C" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/92e7b23d-fdf8-4bb4-b4d8-2b00f91083d1?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/7a758e4f-ef84-4017-b28d-2a97fa3f5d52?resizing_type=fit" alt="TMNT NYC 墙体图库 D" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/7a758e4f-ef84-4017-b28d-2a97fa3f5d52?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/952733a3-ef81-4484-962a-060960f743ac?resizing_type=fit" alt="TMNT NYC 墙体图库 E" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/952733a3-ef81-4484-962a-060960f743ac?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>TMNT NYC 墙体图库 C（TMNT NYC Wall Gallery C）</p>
+<p>TMNT NYC 墙体图库 D（TMNT NYC Wall Gallery D）</p>
+<p>TMNT NYC 墙体图库 E（TMNT NYC Wall Gallery E）</p>
+<h3>下水道（Sewer）</h3>
+<p>用斯普林特道场（Splinter's Dojo）与神龟巢穴（Turtle Lair）预制件，在岛屿上重现标志性的 TMNT 下水道系统。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/01d6baef-06c4-44c6-ac4d-3c752c42c890?resizing_type=fit" alt="斯普林特道场（Splinter's Dojo）" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/01d6baef-06c4-44c6-ac4d-3c752c42c890?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>斯普林特道场（Splinter's Dojo）</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/a9b463a1-45d5-4d86-a772-d4e38c653d8f?resizing_type=fit" alt="神龟巢穴（Turtle Lair）" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/a9b463a1-45d5-4d86-a772-d4e38c653d8f?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>神龟巢穴（Turtle Lair）</p>
+<p>用这些 TMNT 下水道主题图库打造你自己的秘密巢穴。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/c2ed514a-2abe-4210-adcd-1ea5b33d5f02?resizing_type=fit" alt="TMNT 下水道图库" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/c2ed514a-2abe-4210-adcd-1ea5b33d5f02?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/d5e5f930-7db7-4e35-a309-9e81a13cda29?resizing_type=fit" alt="TMNT 下水道道具图库" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/d5e5f930-7db7-4e35-a309-9e81a13cda29?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>TMNT 下水道图库（TMNT Sewer Gallery）</p>
+<p>TMNT 下水道道具图库（TMNT Sewer Prop Gallery）</p>
+<h3>铁甲威龙（Technodrome）</h3>
+<p>铁甲威龙（Technodrome）开进 Fortnite！用这座多层设施打造引人入胜的体验。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/6f587e27-39db-4709-aa06-b0ff1e3f58f1?resizing_type=fit" alt="原文示意图1：铁甲威龙外观" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/6f587e27-39db-4709-aa06-b0ff1e3f58f1?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/e5e10b5c-1349-4033-8626-7cbe2993add9?resizing_type=fit" alt="铁甲威龙（Technodrome）" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/e5e10b5c-1349-4033-8626-7cbe2993add9?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>铁甲威龙（Technodrome）</p>
+<p>看看科技风图库，设计独特的地貌。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/f09c12bd-4b66-4aaa-b45f-ad33a1ba729d?resizing_type=fit" alt="TMNT 铁甲威龙图库" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/f09c12bd-4b66-4aaa-b45f-ad33a1ba729d?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/bc94649c-ba3e-4b35-b170-16fb3b4c31c8?resizing_type=fit" alt="TMNT 铁甲威龙道具图库 A" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/bc94649c-ba3e-4b35-b170-16fb3b4c31c8?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/47287058-38d3-4f8a-af57-53965d9892a5?resizing_type=fit" alt="TMNT 铁甲威龙道具图库 B" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/47287058-38d3-4f8a-af57-53965d9892a5?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>TMNT 铁甲威龙图库（TMNT Technodrome Gallery）</p>
+<p>TMNT 铁甲威龙道具图库 A（TMNT Technodrome Prop Gallery A）</p>
+<p>TMNT 铁甲威龙道具图库 B（TMNT Technodrome Prop Gallery B）</p>
+<div class="pager"><a href="16-teenage-mutant-ninja-turtle-islands-in-unreal-editor-for-fortnite.html"><small>← 返回父教程</small>忍者神龟岛屿</a><a href="sub-index.html"><small>子教程索引 →</small>全部子教程</a></div>
+</article><nav class="doc-toc" aria-label="本页内容"><b>本页内容</b><a href="#sec-1">TMNT 岛屿模板</a><a href="#sec-2">IARC 受众限制</a><a href="#sec-3">发布 TMNT 岛屿</a><a href="#sec-4">在 UEFN 与创意模式中使用 TMNT 角色</a><a href="#sec-5">TMNT 角色生成器</a><a href="#sec-6">鼠怪（Mouser）NPC</a><a href="#sec-7">TMNT 设备</a><a href="#sec-8">武器与物品</a><a href="#sec-9">预制件与图库</a></nav></div>
+</div></div>
+</div>
+<footer class="edc-footer"><div class="inner"><img src="../assets/logo-epic.svg" alt="Epic Games"><span>Fortnite 文档中文镜像 · UE教程/ · 本地打开 index.html 阅读 · 翻译整理自 Epic 官方文档，仅供学习交流</span></div></footer>
+</body>
+</html>

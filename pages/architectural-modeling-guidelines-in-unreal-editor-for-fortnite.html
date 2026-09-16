@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UEFN 建筑建模规范 | Fortnite 文档中文镜像</title>
+<link rel="stylesheet" href="../assets/epic.css">
+<link rel="stylesheet" href="../assets/patch.css">
+<link rel="icon" href="../assets/logo-epic.svg">
+</head>
+<body class="theme-fortnite">
+<div class="edc-topbar"><div class="edc-topbar-inner"><img class="edc-logo" src="../assets/logo-epic.svg" alt="Epic Games"><span class="edc-brand">Epic Games <b>开发者社区</b></span><span class="edc-nav"><a href="../index.html">文档首页</a><a href="sub-index.html">子教程索引</a><a href="https://dev.epicgames.com/documentation/fortnite/architectural-modeling-guidelines-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">英文原文</a></span></div></div>
+<div class="site-container">
+<aside class="site-nav"><div class="documents-tree"><nav><ul class="contents-table">
+<div class="tree-sec">A · 最新动态</div><a class="tree-link" href="01-42-00-fortnite-ecosystem-updates-and-release-notes.html">01. 42.00 生态系统更新与发行说明</a><a class="tree-link" href="02-custom-items-and-inventory-overview-in-fortnite.html">02. 自定义物品与背包总览</a><a class="tree-link" href="03-in-island-transactions-in-fortnite.html">03. 岛内交易</a><a class="tree-link" href="04-mobile-development-in-fortnite.html">04. 移动端开发</a><a class="tree-link" href="05-inputs-in-fortnite.html">05. 输入系统</a><a class="tree-link" href="06-ability-system-in-unreal-editor-for-fortnite.html">06. 能力系统 Ability System</a><a class="tree-link" href="07-partybased-gameplay-using-the-social-synergy-api-in-fortnite.html">07. 社交协同 API 与小队玩法</a><a class="tree-link" href="08-scene-graph-in-unreal-editor-for-fortnite.html">08. 场景图 Scene Graph</a><div class="tree-sec">B · 入门</div><a class="tree-link" href="09-build-your-first-island-in-fortnite.html">09. 构建你的第一个岛屿</a><a class="tree-link" href="10-onboarding-guide-to-programming-with-verse-in-unreal-editor-for-fortnite.html">10. Verse 编程入门指南</a><a class="tree-link" href="11-building-basics-in-fortnite-creative.html">11. 建造基础</a><div class="tree-sec">C · 品牌合集</div><a class="tree-link" href="12-star-wars-islands-in-fortnite.html">12. 星球大战™岛屿</a><a class="tree-link" href="13-kpop-demon-hunters-islands-in-fortnite.html">13. KPop 猎魔团岛屿</a><a class="tree-link" href="14-building-lego-islands-in-fortnite.html">14. 乐高®岛屿</a><a class="tree-link" href="15-the-walking-dead-universe-islands-in-unreal-editor-for-fortnite.html">15. 行尸走肉宇宙岛屿</a><a class="tree-link" href="16-teenage-mutant-ninja-turtle-islands-in-unreal-editor-for-fortnite.html">16. 忍者神龟岛屿</a><a class="tree-link" href="17-squid-game-islands-in-fortnite.html">17. 鱿鱼游戏岛屿</a><div class="tree-sec">D · 开发者成功</div><a class="tree-link" href="18-using-creator-portal-in-fortnite-creative.html">18. 使用创作者门户</a><a class="tree-link" href="19-island-moderation-and-guidelines-in-fortnite-creative.html">19. 岛屿审核与准则</a><div class="tree-sec">E · 协作</div><a class="tree-link" href="20-creating-teams-in-creator-portal-in-unreal-editor-for-fortnite.html">20. 在创作者门户创建团队</a><a class="tree-link" href="21-adding-playtesters-in-fortnite-creative.html">21. 添加试玩测试员</a><a class="tree-link" href="22-playtesting-your-island-in-unreal-editor-for-fortnite.html">22. 试玩测试你的岛屿</a><a class="tree-link" href="23-collaborating-in-unreal-editor-for-fortnite.html">23. 在 UEFN 中协作</a><a class="tree-link" href="24-lore-version-control-in-unreal-editor-for-fortnite.html">24. Lore 版本控制</a><a class="tree-link" href="25-conflicts-in-lore-version-control-in-unreal-editor-for-fortnite.html">25. Lore 中的冲突</a><a class="tree-link" href="26-version-history-and-conflict-resolution-in-unreal-editor-for-fortnite.html">26. 分支历史与冲突解决</a><div class="tree-sec">F · 游戏示例</div><a class="tree-link" href="27-build-a-game-in-unreal-editor-for-fortnite.html">27. 构建一款游戏</a><a class="tree-link" href="28-unreal-editor-for-fortnite-starter-templates.html">28. UEFN 新手模板</a><div class="tree-sec">G · Verse</div><a class="tree-link" href="29-learn-the-basics-of-writing-code-in-verse.html">29. 从零学习 Verse 代码基础</a><div class="tree-sec">H · 专注领域</div><a class="tree-link" href="30-lighting-in-unreal-editor-for-fortnite.html">30. 灯光</a><a class="tree-link" href="31-animation-and-cinematics-in-unreal-editor-for-fortnite.html">31. 动画与过场动画</a><a class="tree-link active" href="32-modeling-in-unreal-editor-for-fortnite.html">32. 建模</a><a class="tree-link" href="33-materials-in-unreal-editor-for-fortnite.html">33. 材质</a><a class="tree-link" href="34-environments-and-landscapes-in-unreal-editor-for-fortnite.html">34. 环境与地形</a><a class="tree-link" href="35-audio-in-unreal-editor-for-fortnite.html">35. 音频</a><a class="tree-link" href="36-visual-effects-in-unreal-editor-for-fortnite.html">36. 视觉特效</a>
+</ul></nav></div></aside>
+<div class="page-content"><div class="page-document has-theme-bg">
+<header class="section-page-header"><nav><ol class="breadcrumb is-shrinkable"><li class="breadcrumb-item is-root"><img src="../assets/logo-epic.svg" alt="Epic Games"><a href="../index.html">Developer</a></li><li class="breadcrumb-item"><a href="../index.html">Fortnite 文档</a></li><li class="breadcrumb-item"><a href="32-modeling-in-unreal-editor-for-fortnite.html">建模</a></li><li class="breadcrumb-item active" aria-current="page"><span class="text-truncate">UEFN 建筑建模规范</span></li></ol></nav><h1>UEFN 建筑建模规范</h1><p class="text-secondary mb-0">按这份规范为 Fortnite 虚幻编辑器（UEFN）制作建筑：每节给出在 UEFN 中运行流畅的尺寸与顶点数，涵盖楼梯、楼板、屋顶、阳台、墙体、门，以及模块化部件的网格、轴心与厚度要求。</p><p class="doc-meta">英文原标题：Architectural Modeling Guidelines in Unreal Editor for Fortnite · <a href="https://dev.epicgames.com/documentation/fortnite/architectural-modeling-guidelines-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">查看英文原文</a> · 社区翻译镜像，仅供学习</p></header>
+<div class="doc-columns"><article class="doc-article">
+
+<p>按这份规范，你将学会专为 <strong>Fortnite 虚幻编辑器（UEFN）</strong>制作建筑。下面每节都给出在 UEFN 中运行流畅的尺寸与<a href="https://dev.epicgames.com/documentation/fortnite/fortnite-glossary#vertex" target="_blank" rel="noopener">顶点（vertex）</a>数。</p>
+
+<h2 id="sec-1">建筑预算</h2>
+<p>建筑预算（Architectural budget）指单个建筑资产的数据总量。这些预算对 UEFN <a href="https://dev.epicgames.com/documentation/fortnite/fortnite-glossary#project" target="_blank" rel="noopener">项目（projects）</a>很重要，因为有些<a href="https://dev.epicgames.com/documentation/fortnite/fortnite-glossary#asset" target="_blank" rel="noopener">资产（assets）</a>（如岩石、招牌）会在岛上放很多次。同一个<a href="https://dev.epicgames.com/documentation/fortnite/fortnite-glossary#object" target="_blank" rel="noopener">物件（object）</a>放多个实例时，项目只承担首次放置那份资产的数据量，复制体不再重复计算。</p>
+<p>项目预算包含岛上所放各类资产的数据总和。</p>
+<p>UEFN 项目有最大预算上限，涵盖项目内的一切：<a href="https://dev.epicgames.com/documentation/fortnite/fortnite-glossary#device" target="_blank" rel="noopener">设备（devices）</a>、地形、灯光——组成完整岛屿体验的所有东西。</p>
+<p>下面是布景、楼板、屋顶等基础建筑预算示例。</p>
+
+<h2 id="sec-2">布景件</h2>
+<p>布景件（Set pieces，如楼梯）预算可大可小：结构复杂、材质精细的预算大；造型简单、材质朴素的预算小。</p>
+<h3>楼梯</h3>
+<p>楼梯的建议预算如下。</p>
+<table><thead><tr><th></th><th>LOD3 顶点数</th><th>LOD0 最大顶点数</th></tr></thead><tbody>
+<tr><td>复杂（Complex）</td><td>150</td><td>7,000</td></tr>
+<tr><td>中等（Medium）</td><td>120</td><td>3,900</td></tr>
+<tr><td>简单（Simple）</td><td>100</td><td>1,700</td></tr>
+</tbody></table>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/9d8496da-860d-42b3-ad4c-99af819a6686?resizing_type=fit" alt="楼梯预算原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/9d8496da-860d-42b3-ad4c-99af819a6686?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h3>楼板与天花板</h3>
+<p>楼板和天花板通常是一整块。楼板的建议预算如下。</p>
+<table><thead><tr><th></th><th>LOD3 顶点数</th><th>LOD0 最大顶点数</th></tr></thead><tbody>
+<tr><td>复杂（Complex）</td><td>100</td><td>1,300</td></tr>
+<tr><td>中等（Medium）</td><td>75</td><td>600</td></tr>
+<tr><td>简单（Simple）</td><td>50</td><td>300</td></tr>
+</tbody></table>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/e39615ca-70e6-4ade-a638-56dbc3c7d21c?resizing_type=fit" alt="楼板预算原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/e39615ca-70e6-4ade-a638-56dbc3c7d21c?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h3>屋顶件</h3>
+<p>屋顶件风格多样。屋顶的建议预算如下。</p>
+<table><thead><tr><th></th><th>LOD3 顶点数</th><th>LOD0 最大顶点数</th></tr></thead><tbody>
+<tr><td>复杂（Complex）</td><td>150</td><td>4,300</td></tr>
+<tr><td>中等（Medium）</td><td>120</td><td>2,253</td></tr>
+<tr><td>简单（Simple）</td><td>100</td><td>400</td></tr>
+</tbody></table>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/6a305a21-8ee8-4d0c-8003-e123c91ecd36?resizing_type=fit" alt="屋顶预算原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/6a305a21-8ee8-4d0c-8003-e123c91ecd36?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h3>阳台件</h3>
+<p>阳台件风格多样。阳台的建议预算如下。</p>
+<table><thead><tr><th></th><th>LOD3 顶点数</th><th>LOD0 最大顶点数</th></tr></thead><tbody>
+<tr><td>复杂（Complex）</td><td>120</td><td>1,800</td></tr>
+<tr><td>中等（Medium）</td><td>100</td><td>1,500</td></tr>
+<tr><td>简单（Simple）</td><td>50</td><td>1,200</td></tr>
+</tbody></table>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/0e9529b0-55f1-4c87-bee4-2a0152daee7d?resizing_type=fit" alt="阳台预算原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/0e9529b0-55f1-4c87-bee4-2a0152daee7d?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h3>墙体</h3>
+<p>墙体是双面建筑资产，有室内面和室外面。墙体的建议预算如下。</p>
+<table><thead><tr><th></th><th>LOD3 顶点数</th><th>LOD0 最大顶点数</th></tr></thead><tbody>
+<tr><td>复杂（Complex）</td><td>120</td><td>2,000</td></tr>
+<tr><td>中等（Medium）</td><td>100</td><td>1,400</td></tr>
+<tr><td>简单（Simple）</td><td>50</td><td>700</td></tr>
+</tbody></table>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/24312a24-875d-4474-b642-4fd0886ebc87?resizing_type=fit" alt="墙体预算原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/24312a24-875d-4474-b642-4fd0886ebc87?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h3>门</h3>
+<p>门风格多样。门的建议预算如下。</p>
+<table><thead><tr><th></th><th>LOD3 顶点数</th><th>LOD0 最大顶点数</th></tr></thead><tbody>
+<tr><td>复杂（Complex）</td><td>-</td><td>1,500</td></tr>
+<tr><td>中等（Medium）</td><td>-</td><td>900</td></tr>
+<tr><td>简单（Simple）</td><td>-</td><td>400</td></tr>
+</tbody></table>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/a2249531-0904-4f6e-beba-0604aa8790c9?resizing_type=fit" alt="门预算原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/a2249531-0904-4f6e-beba-0604aa8790c9?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+
+<h2 id="sec-3">创建模块化部件</h2>
+<p>你可以创建利用世界网格吸附拼接的资产，再打包成模块化部件。UEFN 画廊文件夹里的所有建筑（门、墙、屋顶、楼梯等）都是模块化部件拼的。</p>
+<p>模块化部件可按主题、类型或美术风格分组。<a href="https://dev.epicgames.com/documentation/fortnite/import-from-fab-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">Fab</a> 商城也有含模块化部件的套包。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/98711ec8-2476-465e-8972-351f78ef8c6f?resizing_type=fit" alt="模块化部件原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/98711ec8-2476-465e-8972-351f78ef8c6f?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h3>模块化规范</h3>
+<p>以下是在 UEFN 中创建模块化部件的规范列表。</p>
+<ul>
+<li>使用 UEFN 现有建筑度量和边界搭建。</li>
+<li>确保轴心点位置正确，能接入现有建筑系统。</li>
+<li>使用平铺纹理和世界对齐材质，避免接缝。</li>
+<li>给模块化部件多加嵌板、包边和细节，可以减少布景所需的额外独立物件数量。</li>
+<li>按主题成套制作可混搭的模块化物件。例如模块化墙体：先做一面素墙，再做带内置包边的素墙，再做带窗户的。</li>
+</ul>
+<p>下表中的主体数值已考虑该建筑件可装陷阱的情形。如果下面建筑件的厚度对你的设计来说太薄，做厚一点也可以，不必死守规范。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/84d2e08e-6418-4f27-b5ea-a675e36a8926?resizing_type=fit" alt="建筑件厚度原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/84d2e08e-6418-4f27-b5ea-a675e36a8926?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p><em>点击图片放大。</em></p>
+<h3>墙体</h3>
+<p>UEFN 内容浏览器中的建筑画廊包含：</p>
+<ul>
+<li>素墙</li>
+<li>带窗户的墙</li>
+<li>带门的墙</li>
+<li>带门洞的墙</li>
+<li>建筑转角</li>
+<li>屋顶端盖</li>
+<li>带屋顶的四分之一墙（可弯曲）</li>
+<li>栏杆</li>
+<li>压条件（半墙与四分之一墙）</li>
+<li>屋脊盖</li>
+<li>凸窗屋顶</li>
+<li>转角屋顶件（内弯与外弯）</li>
+<li>屋檐</li>
+<li>太阳能板</li>
+<li>拱门</li>
+<li>以及更多</li>
+</ul>
+<p>陷阱只能放在素墙上。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/e18cf732-f340-43ab-88dc-c84b35f39377?resizing_type=fit" alt="墙体画廊原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/e18cf732-f340-43ab-88dc-c84b35f39377?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>墙体的基本尺寸：</p>
+<table><thead><tr><th>建筑 Actor 尺寸</th><th>度量</th></tr></thead><tbody>
+<tr><td>宽（X 轴）</td><td>512 cm</td></tr>
+<tr><td>高（Z 轴）</td><td>384 cm</td></tr>
+<tr><td>厚（Y 轴）</td><td>24 cm（+Y 方向 12 cm，-Y 方向 12 cm）</td></tr>
+</tbody></table>
+<p>带窗户、门等装饰的墙体，厚度可向 Y 轴正负方向延伸。半墙高 192 cm、宽 512 cm；四分之一墙高 96 cm、宽 512 cm。</p>
+<p>做墙体的首要目标，是保证墙体主体厚度维持在总计 24 cm。如果想在墙上加一体式配件、超出网格，那也可以接受。比如在窗户件里设计一台空调，就有理由超过 24 cm。</p>
+<p>制作建筑件时请用内容浏览器中的灰盒（graybox）套装，里面的尺寸与形状都符合网格规范。在内容浏览器文件夹中选择 <strong>Fortnite &gt; Graybox</strong> 即可找到灰盒套装。</p>
+<h3>楼板与天花板</h3>
+<p>楼板与天花板 Actor 是混合体：顶面是地板纹理、底面是天花板纹理，放在玩家头顶或脚下都成立，不用旋转部件。</p>
+<p>楼板或天花板件上可以放陷阱，所以别把楼板天花板做太厚，否则陷阱会穿插进资产。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/4711e237-3df3-4b30-bd63-cdecba35d3cc?resizing_type=fit" alt="楼板天花板原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/4711e237-3df3-4b30-bd63-cdecba35d3cc?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<table><thead><tr><th>建筑 Actor 尺寸</th><th>度量</th></tr></thead><tbody>
+<tr><td>长（X 轴）</td><td>512 cm</td></tr>
+<tr><td>宽（Z 轴）</td><td>512 cm</td></tr>
+<tr><td>厚（Y 轴）</td><td>24 cm（+Z 方向 12 cm，-Z 方向 12 cm）</td></tr>
+</tbody></table>
+<p>楼板网格也可以带天窗、带栏杆的转角或半圆形砖。这类建筑 Actor 上不能放陷阱。</p>
+<h3>楼梯</h3>
+<p>楼梯有四种：</p>
+<ul>
+<li>常规楼梯</li>
+<li>半层楼梯</li>
+<li>右转楼梯</li>
+<li>双折楼梯</li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/63faa6f7-3066-4d3e-8d59-9f83c3e6f315?resizing_type=fit" alt="楼梯类型原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/63faa6f7-3066-4d3e-8d59-9f83c3e6f315?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<table><thead><tr><th>建筑 Actor 尺寸</th><th>度量</th></tr></thead><tbody>
+<tr><td>长（X 轴）</td><td>512 cm</td></tr>
+<tr><td>宽（Y 轴）</td><td>512 cm</td></tr>
+<tr><td>高（Z 轴）</td><td>384 cm</td></tr>
+<tr><td>厚</td><td>24 cm</td></tr>
+</tbody></table>
+<p>做楼梯时别超出上述网格空间，否则楼梯顶端接不上墙顶，会悬空或下沉。栏杆可以超出网格边界。</p>
+<h3>屋顶</h3>
+<p>屋顶的建模限制比较宽松。屋顶有两种，下图这种不是典型屋顶件，而是屋脊。典型屋顶是一块与一个网格件相交的斜坡。</p>
+<p>典型“斜坡”式屋顶的规范支持你做双倍、三倍高的屋顶，或用多个网格件从墙过渡到屋顶再到平顶。</p>
+<p>某些情形下屋顶超出下面尺寸做屋檐、雨水槽等也可以，但这些装饰会大大降低模型的通用性。</p>
+<table><thead><tr><th>建筑 Actor 尺寸</th><th>度量</th></tr></thead><tbody>
+<tr><td>长（X 轴）</td><td>512 cm</td></tr>
+<tr><td>宽（Y 轴）</td><td>512 cm</td></tr>
+<tr><td>高（Z 轴）</td><td>384 cm</td></tr>
+<tr><td>厚</td><td>24 cm（+Y 方向 12 cm，-Y 方向 12 cm）</td></tr>
+</tbody></table>
+<p>做屋顶时别超出网格空间。下面是屋顶网格加了屋檐的例子，屋檐元素用黄色圈出。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/e948d9ba-9ec4-468a-abdc-a25a7146d4e7?resizing_type=fit" alt="屋顶屋檐原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/e948d9ba-9ec4-468a-abdc-a25a7146d4e7?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>一个好办法是把屋檐做成独立模型，像配屋顶套装的压条套装。这样会增加绘制调用，但屋顶网格与墙体建筑 Actor 的平铺更好保证。</p>
+<p>你也可以做独立部件，在斜坡式屋顶顶部加装饰性屋脊盖。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/2adfd8c6-762e-4a30-8af3-fdd26d33a3b6?resizing_type=fit" alt="屋脊盖原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/2adfd8c6-762e-4a30-8af3-fdd26d33a3b6?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h3>压条</h3>
+<p>建筑压条让建筑更逼真。压条绝不能超出下面的尺寸。压条类型风格多样，如下图所示。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/1bbad731-d594-4559-9e75-207d61763f13?resizing_type=fit" alt="建筑压条原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/1bbad731-d594-4559-9e75-207d61763f13?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<table><thead><tr><th>建筑 Actor 尺寸</th><th>度量</th></tr></thead><tbody>
+<tr><td>宽（X 轴）</td><td>512 cm</td></tr>
+<tr><td>高（Z 轴）</td><td>964 cm</td></tr>
+<tr><td>厚（Y 轴）</td><td>70 cm</td></tr>
+</tbody></table>
+
+<div class="pager"><a href="32-modeling-in-unreal-editor-for-fortnite.html"><small>← 返回父教程</small>建模</a><a href="sub-index.html"><small>子教程索引 →</small>全部子教程</a></div>
+</article><nav class="doc-toc" aria-label="本页内容"><b>本页内容</b><a href="#sec-1">建筑预算</a><a href="#sec-2">布景件</a><a href="#sec-3">创建模块化部件</a></nav></div>
+</div></div>
+</div>
+<footer class="edc-footer"><div class="inner"><img src="../assets/logo-epic.svg" alt="Epic Games"><span>Fortnite 文档中文镜像 · UE教程/ · 本地打开 index.html 阅读 · 翻译整理自 Epic 官方文档，仅供学习交流</span></div></footer>
+</body>
+</html>

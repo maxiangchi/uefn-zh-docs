@@ -1,0 +1,317 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>社交协同 API 与小队玩法 | Fortnite 文档中文镜像</title><link rel="stylesheet" href="../assets/epic.css"><link rel="stylesheet" href="../assets/patch.css"><link rel="icon" href="../assets/logo-epic.svg"></head><body class="theme-fortnite"><div class="edc-topbar"><div class="edc-topbar-inner"><img class="edc-logo" src="../assets/logo-epic.svg" alt="Epic Games"><span class="edc-brand">Epic Games <b>开发者社区</b></span><span class="edc-nav"><a href="../index.html">文档首页</a><a href="sub-index.html">子教程索引</a><a href="https://dev.epicgames.com/documentation/fortnite/partybased-gameplay-using-the-social-synergy-api-in-fortnite" target="_blank" rel="noopener">英文原文</a></span></div></div><div class="site-container"><aside class="site-nav"><div class="documents-tree"><nav><ul class="contents-table"><div class="tree-sec">A · 最新动态</div><a class="tree-link" href="01-42-00-fortnite-ecosystem-updates-and-release-notes.html">01. 42.00 生态系统更新与发行说明</a><a class="tree-link" href="02-custom-items-and-inventory-overview-in-fortnite.html">02. 自定义物品与背包总览</a><a class="tree-link" href="03-in-island-transactions-in-fortnite.html">03. 岛内交易</a><a class="tree-link" href="04-mobile-development-in-fortnite.html">04. 移动端开发</a><a class="tree-link" href="05-inputs-in-fortnite.html">05. 输入系统</a><a class="tree-link" href="06-ability-system-in-unreal-editor-for-fortnite.html">06. 能力系统 Ability System</a><a class="tree-link active" href="07-partybased-gameplay-using-the-social-synergy-api-in-fortnite.html">07. 社交协同 API 与小队玩法</a><a class="tree-link" href="08-scene-graph-in-unreal-editor-for-fortnite.html">08. 场景图 Scene Graph</a><div class="tree-sec">B · 入门</div><a class="tree-link" href="09-build-your-first-island-in-fortnite.html">09. 构建你的第一个岛屿</a><a class="tree-link" href="10-onboarding-guide-to-programming-with-verse-in-unreal-editor-for-fortnite.html">10. Verse 编程入门指南</a><a class="tree-link" href="11-building-basics-in-fortnite-creative.html">11. 建造基础</a><div class="tree-sec">C · 品牌合集</div><a class="tree-link" href="12-star-wars-islands-in-fortnite.html">12. 星球大战™岛屿</a><a class="tree-link" href="13-kpop-demon-hunters-islands-in-fortnite.html">13. KPop 猎魔团岛屿</a><a class="tree-link" href="14-building-lego-islands-in-fortnite.html">14. 乐高®岛屿</a><a class="tree-link" href="15-the-walking-dead-universe-islands-in-unreal-editor-for-fortnite.html">15. 行尸走肉宇宙岛屿</a><a class="tree-link" href="16-teenage-mutant-ninja-turtle-islands-in-unreal-editor-for-fortnite.html">16. 忍者神龟岛屿</a><a class="tree-link" href="17-squid-game-islands-in-fortnite.html">17. 鱿鱼游戏岛屿</a><div class="tree-sec">D · 开发者成功</div><a class="tree-link" href="18-using-creator-portal-in-fortnite-creative.html">18. 使用创作者门户</a><a class="tree-link" href="19-island-moderation-and-guidelines-in-fortnite-creative.html">19. 岛屿审核与准则</a><div class="tree-sec">E · 协作</div><a class="tree-link" href="20-creating-teams-in-creator-portal-in-unreal-editor-for-fortnite.html">20. 在创作者门户创建团队</a><a class="tree-link" href="21-adding-playtesters-in-fortnite-creative.html">21. 添加试玩测试员</a><a class="tree-link" href="22-playtesting-your-island-in-unreal-editor-for-fortnite.html">22. 试玩测试你的岛屿</a><a class="tree-link" href="23-collaborating-in-unreal-editor-for-fortnite.html">23. 在 UEFN 中协作</a><a class="tree-link" href="24-lore-version-control-in-unreal-editor-for-fortnite.html">24. Lore 版本控制</a><a class="tree-link" href="25-conflicts-in-lore-version-control-in-unreal-editor-for-fortnite.html">25. Lore 中的冲突</a><a class="tree-link" href="26-version-history-and-conflict-resolution-in-unreal-editor-for-fortnite.html">26. 分支历史与冲突解决</a><div class="tree-sec">F · 游戏示例</div><a class="tree-link" href="27-build-a-game-in-unreal-editor-for-fortnite.html">27. 构建一款游戏</a><a class="tree-link" href="28-unreal-editor-for-fortnite-starter-templates.html">28. UEFN 新手模板</a><div class="tree-sec">G · Verse</div><a class="tree-link" href="29-learn-the-basics-of-writing-code-in-verse.html">29. 从零学习 Verse 代码基础</a><div class="tree-sec">H · 专注领域</div><a class="tree-link" href="30-lighting-in-unreal-editor-for-fortnite.html">30. 灯光</a><a class="tree-link" href="31-animation-and-cinematics-in-unreal-editor-for-fortnite.html">31. 动画与过场动画</a><a class="tree-link" href="32-modeling-in-unreal-editor-for-fortnite.html">32. 建模</a><a class="tree-link" href="33-materials-in-unreal-editor-for-fortnite.html">33. 材质</a><a class="tree-link" href="34-environments-and-landscapes-in-unreal-editor-for-fortnite.html">34. 环境与地形</a><a class="tree-link" href="35-audio-in-unreal-editor-for-fortnite.html">35. 音频</a><a class="tree-link" href="36-visual-effects-in-unreal-editor-for-fortnite.html">36. 视觉特效</a></ul></nav></div></aside><div class="page-content"><div class="page-document has-theme-bg"><header class="section-page-header"><nav><ol class="breadcrumb is-shrinkable"><li class="breadcrumb-item is-root"><img src="../assets/logo-epic.svg" alt="Epic Games"><a href="../index.html">Developer</a></li><li class="breadcrumb-item"><a href="../index.html">Fortnite 文档</a></li><li class="breadcrumb-item active" aria-current="page"><span class="text-truncate">社交协同 API 与小队玩法</span></li></ol></nav><h1>社交协同 API 与小队玩法</h1><p class="text-secondary mb-0">用 Verse Social Synergy API 读取玩家小队（Party）成员，构建小队加成、专属区域、友伤减免与动态播报等社交玩法。</p><p class="doc-meta">英文原标题：Party-Based Gameplay Using the Social Synergy API in Fortnite · <a href="https://dev.epicgames.com/documentation/fortnite/partybased-gameplay-using-the-social-synergy-api-in-fortnite" target="_blank" rel="noopener">查看英文原文</a> · 社区翻译镜像，仅供学习</p></header><div class="doc-columns"><article class="doc-article"><p class="doc-lead">Verse <strong>Social Synergy API（社交协同 API）</strong>会上报玩家的小队（Party）成员关系，让你能够基于“玩家带了谁一起来”构建响应式玩法。小队（Party）是指玩家在 Epic 生态（Fortnite、Epic Games 启动器与 Epic 移动应用）中组建的同行分组；它不是队伍（Team），也不是由匹配（matchmaking）生成的分组。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/854193eb-58e9-4230-ad66-f817d8e5d86e?resizing_type=fill&amp;width=1920&amp;height=335" alt="使用 Social Synergy API 的小队玩法横幅" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><figcaption>使用 Social Synergy API 的小队玩法横幅</figcaption><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/854193eb-58e9-4230-ad66-f817d8e5d86e?resizing_type=fill&width=1920&height=335" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>本指南概述该 API 中的类与函数，并给出构建社交机制的示例代码片段，包括：</p>
+<ul>
+<li>小队计分加成（Score bonuses for parties）</li>
+<li>仅限小队进入的区域（Party-only access to an area）</li>
+<li>随小队规模缩放的难度（Difficulty that scales to party size）</li>
+<li>小队成员之间的友伤减免（Reduced friendly fire between party members）</li>
+<li>动态解说与 UI（Dynamic commentary and UI）</li>
+<li>基于小队的装饰性视觉特效（Party-based cosmetic visual effects，VFX）</li>
+</ul>
+<h2 id="sec-before">开始之前</h2>
+<p>为更好地理解本页内容：</p>
+<ul>
+<li>先查阅 <a href="https://dev.epicgames.com/documentation/fortnite/verse-api/unrealenginedotcom/social" target="_blank" rel="noopener">Social 模块参考（Social module reference）</a>。</li>
+<li>对 Verse 有基本了解。学习请见 <a href="10-onboarding-guide-to-programming-with-verse-in-unreal-editor-for-fortnite.html">Verse 编程入门指南</a>。</li>
+<li>本页每个示例都使用一个 Verse 设备（Verse device）。创建方法请见 <a href="create-your-own-device-using-verse-in-unreal-editor-for-fortnite.html">在 UEFN 中使用 Verse 创建你自己的设备</a>。</li>
+</ul>
+<div class="block-callout warn"><p>基于小队的玩法受 <a href="https://legal.epicgames.com/fortnite/developer-rules" target="_blank" rel="noopener">Fortnite 开发者规则（Fortnite Developer Rules）</a>约束，发布前请先查阅相关规则。</p></div>
+<h2 id="sec-how-it-works">Social Synergy API 的工作原理</h2>
+<p>该 API 包含定义在玩家（player）上的函数 <code>GetLocalParty()</code>。它返回一个持有小队成员与小队事件的分组对象（group object）。也就是说，你是在某个玩家身上调用它，而不是把玩家传给它。</p>
+<p>该分组是单个值（single value），不是列表，也不是计数。</p>
+<pre><code># 扩展函数是在玩家身上调用，而不是把玩家传进去
+Party := SomePlayer.GetLocalParty()</code></pre>
+<p>要使用该 API，请在 using 块中引入 <strong>Social</strong> 与 <strong>Agent Group</strong> 模块：</p>
+<pre><code>using { /UnrealEngine.com/Social }
+using { /Verse.org/AgentGroup }
+using { /Verse.org/Simulation }</code></pre>
+<p>该分组只包含当前会话（session）中在场的小队成员。玩家的小队可能超出你的岛屿范围，不在岛上的成员不在该分组内。玩家始终处于至少有一名成员的小队中，因此该分组始终至少包含一名成员；小队规模为 <strong>1</strong> 即表示单排玩家（solo player）。</p>
+<p>该分组支持以下操作：</p>
+<ul>
+<li><strong>读取成员。</strong><code>GetMemberMap()</code> 返回成员表，既能得到小队规模，也能逐个成员执行逻辑。</li>
+<li><strong>在分组变化时响应。</strong>该分组会发出事件信号（signals events），订阅后，每当有成员加入或离开，你的代码就会运行。</li>
+<li><strong>比较玩家的从属关系。</strong>同一小队中的两名玩家会拿到相同的分组对象，因此比较两次调用结果即可判断两名玩家是否在同一小队。</li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/77f0b5bc-a55a-4d4e-b4a5-6770d99fd77b?resizing_type=fit" alt="Verse Social Synergy API 小队成员关系流程图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><figcaption>Verse Social Synergy API 小队成员关系流程图</figcaption><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/77f0b5bc-a55a-4d4e-b4a5-6770d99fd77b?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>完整签名与说明符请见 Social 模块参考中的 <a href="https://dev.epicgames.com/documentation/fortnite/verse-api/unrealenginedotcom/social/getlocalparty" target="_blank" rel="noopener">GetLocalParty 页面</a>。</p>
+<h2 id="sec-gate-area">读取玩家小队以控制区域准入</h2>
+<p><code>GetMemberMap()</code> 返回一张映射表，将每名小队成员的 <code>agent</code> 与其 <code>party_member_info</code> 配对。<code>party_member_info</code> 目前不携带字段，因此你要读取的是成员本身：读 <code>Length</code> 得到小队规模，或遍历该表逐个成员执行逻辑。</p>
+<p>下面的示例读取小队规模来控制一道屏障（Barrier）：当玩家与按钮交互时，Verse 设备检查该玩家是否有小队成员在场，并把该玩家加入 Barrier 设备的忽略列表，从而为其放行。</p>
+<p>搭建小队屏障的步骤：</p>
+<ul>
+<li>在岛屿上放置一个 <a href="using-hud-message-devices-in-fortnite-creative.html">HUD 消息（HUD Message）</a>设备、一个 <a href="using-barrier-devices-in-fortnite-creative.html">屏障（Barrier）</a>设备和一个 <a href="using-button-devices-in-fortnite-creative.html">按钮（Button）</a>设备。把按钮放在屏障旁边，并保持屏障启用，使该区域初始为锁定状态。</li>
+<li>创建一个名为 <strong>party_area_device</strong> 的 Verse 设备，为上述三个设备分别添加可编辑属性（editable properties）。</li>
+</ul>
+<pre><code>using { /Fortnite.com/Devices }
+using { /Fortnite.com/FortPlayerUtilities }
+using { /UnrealEngine.com/Social }
+using { /Verse.org/AgentGroup }
+using { /Verse.org/Simulation }
+
+# 挡住该区域的屏障设备，在 Details 面板中指派
+party_area_device := class(creative_device):
+    @editable
+    Barrier : barrier_device = barrier_device{}
+    @editable
+    BarrierButton : button_device = button_device{}
+    @editable
+    DenialHUD : hud_message_device = hud_message_device{}</code></pre>
+<ul>
+<li>为拒绝提示文案及其显示时长添加可编辑属性，并一并添加 StringToMessage 辅助函数，因为 HUD 设备接收的是 message 而非 string，而该辅助函数不在标准库中。</li>
+</ul>
+<pre><code># 区域锁定时显示的提示文案
+    @editable
+    NoPartyMessage : string = "You need a party member on the island to unlock this area."
+    # 拒绝消息在屏幕上的停留时长（秒）
+    @editable
+    MessageDisplayTime : float = 3.0
+    # 把运行时字符串转为 HUD 设备所需的本地化消息类型，
+    # 声明在类内部，供本设备上的所有逻辑使用
+    StringToMessage(S : string) : message = "{S}"</code></pre>
+<p>同一文件夹下的每个 Verse 文件属于同一模块、共享同一命名空间，因此你可以在某个 Verse 文件的文件作用域声明一次 StringToMessage；也可以在共享文件中添加 module 块，并在需要时导入该模块。详见《Verse 之书（Book of Verse）》中的 <a href="https://verselang.github.io/book/16_modules/" target="_blank" rel="noopener">Modules and Paths</a>。</p>
+<ul>
+<li>在 <code>OnBegin()</code> 中订阅按钮的交互事件。<code>OnBegin()</code> 每个设备只运行一次，因此只会注册一次处理函数。</li>
+</ul>
+<pre><code>OnBegin&lt;override&gt;()&lt;suspends&gt;:void =
+        # 在会重复运行的位置订阅会产生重复处理函数，
+        # 之后区域逻辑会按重复次数反复执行
+        BarrierButton.InteractedWithEvent.Subscribe(OnBarrierButtonPressed)</code></pre>
+<ul>
+<li>添加处理函数。<code>InteractedWithEvent</code> 传入的是 agent，而 <code>GetLocalParty()</code> 定义在 player 上，因此处理函数先做类型转换再读取小队。</li>
+</ul>
+<pre><code>OnBarrierButtonPressed(InAgent : agent) : void =
+        # 已离开会话的玩家转换失败，if 直接跳过正文
+        if (Player := player[InAgent]):
+            # 长度判断用大于等于 2，而不是 &gt; 0：
+            # 独自一人的玩家本身就是规模为 1 的小队，&gt; 0 会对所有人放行
+            if (Player.GetLocalParty().GetMemberMap().Length &gt;= 2):
+                # 禁用屏障即放行。屏障设备启用时阻挡，
+                # 因此这里调用的是 Disable() 而不是 Enable()
+                Barrier.Disable()
+                # TODO: 把 Player 加入忽略列表 / 记录已放行
+            else:
+                # 显示拒绝提示
+                DenialHUD.Show(Player, StringToMessage(NoPartyMessage))</code></pre>
+<ul>
+<li>编译 Verse 代码，把 Verse 设备拖入岛屿，在 <strong>Details 面板</strong>中把 <strong>Barrier</strong>、<strong>Button</strong> 与 <strong>HUD Message</strong> 设备指派到对应的可编辑属性。</li>
+<li>用同属一个小队的两个账号测试，确认区域放行；再用单个账号测试，确认改为显示提示消息。</li>
+</ul>
+<div class="block-callout tip"><p>请为单人玩家保留一条绕过屏障的路线，例如第二个入口、延时自动解锁的计时器，或等价资源。没有单人通路的小队门禁可能让岛屿的一部分对部分玩家完全不可达。</p></div>
+<pre><code># 完整 using 块（含 Diagnostics，便于调试打印）
+using { /Fortnite.com/Devices }
+using { /Fortnite.com/FortPlayerUtilities }
+using { /UnrealEngine.com/Social }
+using { /Verse.org/AgentGroup }
+using { /Verse.org/Simulation }
+using { /UnrealEngine.com/Temporary/Diagnostics }
+# Verse 设备的创建方法见 https://dev.epicgames.com/documentation/en-us/uefn/create-your-own-device-in-verse
+party_area_device := class(creative_device):</code></pre>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/16249054-e8c5-4edd-8f8e-dc57a701d8b1?resizing_type=fit&amp;width=160&amp;height=92" alt="使用设备" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><figcaption>使用设备</figcaption><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/16249054-e8c5-4edd-8f8e-dc57a701d8b1?resizing_type=fit&width=160&height=92" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h2 id="sec-party-events">小队成员加入或离开时响应</h2>
+<p>该分组会发出以下事件，每个事件都传递一个持有变化成员及其信息的 <code>tuple(agent, party_member_info)</code>：</p>
+<ul>
+<li><code>AddMemberEvent</code>：当小队成员加入分组时触发。</li>
+<li><code>RemoveMemberEvent</code>：当小队成员离开分组时触发。</li>
+<li><code>MemberInfoChangeEvent</code>：当某成员的 <code>party_member_info</code> 被重新实例化时触发。由于 party_member_info 为空，请订阅 <code>AddMemberEvent</code> 与 <code>RemoveMemberEvent</code> 即可。</li>
+</ul>
+<p>下面的示例订阅 <code>AddMemberEvent</code> 与 <code>RemoveMemberEvent</code>，并向受影响的玩家显示抬头显示（<a href="https://dev.epicgames.com/documentation/fortnite/fortnite-glossary#hud" target="_blank" rel="noopener">HUD</a>）消息。</p>
+<p>搭建通知设备的步骤：</p>
+<ul>
+<li>在岛屿上放置一个 <a href="using-hud-message-devices-in-fortnite-creative.html">HUD 消息</a>设备。</li>
+<li>创建一个名为 <code>party_notification_device</code> 的 Verse 设备，并在设备类上方添加一个 <code>party_listener</code> 类，用于持有要通知的玩家以及每条通知所需的值。</li>
+</ul>
+<pre><code>using { /Fortnite.com/Devices }
+using { /Fortnite.com/Characters }
+using { /Fortnite.com/Game }
+using { /UnrealEngine.com/Social }
+using { /Verse.org/AgentGroup }
+using { /Verse.org/Simulation }
+
+party_listener := class:
+    TargetPlayer : player
+    HUD : hud_message_device
+    JoinText : string
+    LeftText : string
+    ShowTime : float</code></pre>
+<p>该监听器是通用模式，而非通知专用。每当回调需要知道自己在为哪名玩家工作，一个持有玩家并自行订阅的小类就能提供该上下文，因为 Verse 没有闭包（closures）可在订阅点捕获它。<code>party_listener</code> 是普通类而非设备，因此不会出现在 Details 面板，也不需要在关卡中放置。</p>
+<ul>
+<li>为监听器添加 <code>StartListening()</code>。监听器订阅自身，因此两个回调都是对其自身方法的引用。</li>
+</ul>
+<pre><code>StartListening() : void =
+        # 一次调用、两次订阅：两个事件位于同一分组对象上
+        Party := TargetPlayer.GetLocalParty()
+        Party.AddMemberEvent.Subscribe(OnMemberAdded)
+        Party.RemoveMemberEvent.Subscribe(OnMemberRemoved)</code></pre>
+<ul>
+<li>添加两个处理函数，每个函数接收一个持有变化成员的元组。</li>
+</ul>
+<pre><code>OnMemberAdded(MemberInfo : tuple(agent, party_member_info)) : void =
+        # 元素 0 是发生变化的 agent，
+        # 元素 1 是其 party_member_info（为空）
+        JoinedAgent := MemberInfo(0)
+        HUD.Show(TargetPlayer, StringToMessage(JoinText))
+
+    # 与 OnMemberAdded 对称，元素 0 是离开的 agent
+    OnMemberRemoved(MemberInfo : tuple(agent, party_member_info)) : void =
+        LeftAgent := MemberInfo(0)
+        HUD.Show(TargetPlayer, StringToMessage(LeftText))</code></pre>
+<ul>
+<li>添加设备类，为 HUD 消息设备与两条消息字符串添加可编辑属性。</li>
+</ul>
+<pre><code>party_notification_device := class(creative_device):
+    # 显示通知的 HUD 消息设备，在 Details 面板中指派
+    @editable
+    NotificationDevice : hud_message_device = hud_message_device{}
+    # 有小队成员加入会话时显示的消息
+    @editable
+    JoinedMessage : string = "A party member joined the island!"
+    # 有小队成员离开会话时显示的消息
+    @editable
+    LeftMessage : string = "A party member left the island!"
+    @editable
+    MessageDisplayTime : float = 3.0</code></pre>
+<ul>
+<li>在 <code>OnBegin()</code> 中先覆盖会话中已有的每名玩家，再订阅 <code>PlayerAddedEvent()</code>。已在场的玩家与稍后加入的玩家是两种情形，要分别处理。</li>
+</ul>
+<pre><code>OnBegin&lt;override&gt;()&lt;suspends&gt;:void =
+        # 覆盖设备启动时已在场的所有人
+        for (Player : GetPlayspace().GetPlayers()):
+            SubscribeToPartyEvents(Player)
+        # 覆盖会话开始后加入的所有人
+        GetPlayspace().PlayerAddedEvent().Subscribe(OnPlayerJoined)
+
+    OnPlayerJoined(InPlayer : player) : void =
+        SubscribeToPartyEvents(InPlayer)</code></pre>
+<ul>
+<li>添加 <code>SubscribeToPartyEvents()</code>，为每名玩家各构建一个监听器并启动。只在初始化时调用它，因为在事件处理函数内订阅会使该事件每次触发都叠加一次订阅。</li>
+</ul>
+<pre><code>SubscribeToPartyEvents(InPlayer : player) : void =
+        # 同一小队的两名玩家共享同一个分组对象，
+        # 因此两次订阅落在同一个对象上。各自携带自己的监听器触发，
+        # 每名玩家各收到一条消息
+        Listener := party_listener:
+            TargetPlayer := InPlayer
+            HUD := NotificationDevice
+            JoinText := JoinedMessage
+            LeftText := LeftMessage
+            ShowTime := MessageDisplayTime
+        Listener.StartListening()</code></pre>
+<ul>
+<li>编译 Verse 代码，把设备放入岛屿，在 <strong>Details 面板</strong>把 <strong>HUD 消息</strong>设备指派到 <strong>NotificationDevice</strong> 选项。</li>
+<li>用同属一个小队的两个账号测试：让第二个账号加入再离开会话，确认每次变化各出现一条消息。</li>
+</ul>
+<p>HUD 消息不只是宣告变化，还可以告诉玩家现在解锁了什么。例如，早前被小队区域拒之门外的玩家，可以在条件满足时收到“现在可以打开了”的提示，省去折返确认；同一条消息也可以用来 gating 任务、载具，或任何需要第二名玩家在场的其他内容。</p>
+<pre><code>using { /Fortnite.com/Devices }
+using { /Fortnite.com/Characters }
+using { /Fortnite.com/Game }
+using { /UnrealEngine.com/Social }
+using { /Verse.org/AgentGroup }
+using { /Verse.org/Simulation }
+using { /UnrealEngine.com/Temporary/Diagnostics }</code></pre>
+<h2 id="sec-friendly-fire">比较两名玩家以降低友伤</h2>
+<p>对同一小队中的两名玩家调用 <code>GetLocalParty()</code> 会返回同一个分组对象。因此用 <code>=</code> 比较两次结果，即可测试两名玩家是否在同一小队；比较的是对象标识（object identity），而不是成员列表。</p>
+<p>下面的示例按双方关系缩放伤害：同一小队的成员相互伤害降低，其他人之间保持全额伤害。它只用一个 Verse 设备，返回一个倍率，再由你自己的伤害代码应用该倍率，例如带有自定义 Scene Graph（场景图）武器的项目。</p>
+<p>该修正适用于玩家之间可以互相伤害的岛屿：<strong>自由混战（Free For All）</strong>，或通过 <a href="island-settings-in-uefn-and-fortnite-creative.html">岛屿设置（Island Settings）</a>、<a href="using-team-settings-and-inventory-devices-in-fortnite-creative.html">队伍设置与备品（Team Settings and Inventory）</a>设备启用 <strong>友伤（Friendly Fire）</strong> 的岛屿。</p>
+<p>搭建伤害修正的步骤：</p>
+<ul>
+<li>创建一个名为 <strong>party_friendly_fire_device</strong> 的 Verse 设备，为两种情形分别添加可编辑倍率。小队倍率设为 0.0 即完全关闭小队成员之间的友伤。</li>
+</ul>
+<pre><code>using { /Fortnite.com/Devices }
+using { /UnrealEngine.com/Social }
+using { /Verse.org/AgentGroup }
+using { /Verse.org/Simulation }
+
+party_friendly_fire_device := class(creative_device):
+    # 攻击者与目标在同一小队时应用，0.0 表示小队成员之间完全无友伤
+    @editable
+    DamageMultiplierForPartyMembers : float = 0.25
+    @editable
+    DamageMultiplierForNonParty : float = 1.0</code></pre>
+<ul>
+<li>添加比较逻辑。这里测试对象标识，因此直接比较两个分组对象，忽略其成员列表。</li>
+</ul>
+<pre><code># &lt;public&gt; 表示项目中的其他 Verse 设备也可以调用它
+    CalculateDamageMultiplier&lt;public&gt;(Attacker : player, Target : player)&lt;transacts&gt;:float =
+        # 同一小队的两名玩家拿到同一个分组对象，
+        # 因此 = 成功；不同小队的两名玩家拿到不同对象，因此失败。
+        # 比较忽略成员列表，可以安全地在每次伤害事件中运行
+        if (Attacker.GetLocalParty() = Target.GetLocalParty()):
+            DamageMultiplierForPartyMembers
+        else:
+            DamageMultiplierForNonParty</code></pre>
+<ul>
+<li>编译 Verse 代码，把设备放入岛屿，在 <strong>Details 面板</strong>中设置两个倍率。</li>
+<li>在真正结算伤害的代码中调用 <code>CalculateDamageMultiplier()</code>，并把基础伤害乘以返回值。某些伤害路径会把玩家与自身比较；玩家始终处于至少规模为 1 的小队，因此单人玩家的分组与自身比较相等。</li>
+<li>把函数接入伤害代码后测试：用同属一个小队的两个账号确认相互伤害降低，再用分属不同小队的两个账号确认保持全额倍率。</li>
+</ul>
+<p>如果还没有自己的伤害系统，也可以通过响应伤害达到类似效果：订阅角色的 <code>DamagedEvent</code>，它会发送持有 <code>Target</code>、<code>Instigator</code> 与 <code>Amount</code> 的 <code>damage_result</code>；比较两名玩家的从属关系，若目标与煽动者在同一小队，再把目标治疗回来。</p>
+<pre><code>using { /Fortnite.com/Devices }
+using { /Verse.org/Simulation }
+using { /Verse.org/AgentGroup }
+using { /Fortnite.com/Game }
+using { /UnrealEngine.com/Social }
+using { /UnrealEngine.com/Temporary/Diagnostics }
+# Verse 设备的创建方法见 https://dev.epicgames.com/documentation/en-us/uefn/create-your-own-device-in-verse
+# 可放置在关卡中的 Verse 自制 creative_device</code></pre>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/d4d6d40f-7feb-4a95-912f-b5d48a23d768?resizing_type=fit&amp;width=160&amp;height=92" alt="场景图 Scene Graph" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><figcaption>场景图 Scene Graph</figcaption><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/d4d6d40f-7feb-4a95-912f-b5d48a23d768?resizing_type=fit&width=160&height=92" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h2 id="sec-more-examples">更多示例</h2>
+<p>以下是按规模（size）、事件（event）与标识（identity）操作划分的更多示例。</p>
+<h3>为小队游玩与单人游玩分别发放奖励</h3>
+<p>规模为 1 即表示单人玩家，因此一次检查即可控制两个分支：有小队成员在场的玩家获得更高生命上限，独自一人的玩家改为获得道具。</p>
+<pre><code>using { /Fortnite.com/Characters }
+using { /Fortnite.com/Devices }
+using { /Fortnite.com/Game }
+using { /UnrealEngine.com/Social }
+using { /UnrealEngine.com/Temporary/Diagnostics }
+using { /Verse.org/AgentGroup }
+using { /Verse.org/Simulation }
+# 按小队规模为每名玩家应用一次奖励：
+# 有小队成员在场则提高生命上限，独自一人则发放道具</code></pre>
+<p>该设备在玩家加入会话时应用奖励。到达之后才组队的玩家，保留到达时获得的奖励。要响应这种情况，请按<a href="#sec-party-events">小队成员加入或离开时响应</a>一节订阅小队事件。</p>
+<h3>按小队规模缩放竞技场</h3>
+<p>本示例不读长度，而是遍历成员表：把整支小队传送进竞技场，再按实际到达的成员数缩放遭遇战强度。</p>
+<pre><code>using { /Fortnite.com/Devices }
+using { /Fortnite.com/Game }
+using { /UnrealEngine.com/Social }
+using { /UnrealEngine.com/Temporary/Diagnostics }
+using { /Verse.org/AgentGroup }
+using { /Verse.org/Simulation }
+# 按下按钮时把玩家的小队传送进竞技场，
+# 再按实际到达的成员数成比例启用刷怪器
+party_battle_arena_device := class(creative_device):</code></pre>
+<p>不使用传送器（Teleporter）设备也能传送：对每名成员的 <code>fort_character</code> 调用 <code>TeleportTo()</code>，以本设备自身的 <code>GetTransform()</code> 为目的地，或引用其他对象（如道具）的位置。</p>
+<h3>把小队成员分到同一队伍</h3>
+<p>本示例用标识比较让小队保持在一起：当玩家加入时，设备寻找同一小队中的另一名玩家，并把新到达者移到该玩家所在的队伍。</p>
+<p>该片段假设岛屿已配置固定队伍：在 <strong>岛屿设置（Island Settings）</strong>中把 <strong>队伍（Teams）</strong>设为具体数字而非 <strong>自由混战（Free For All）</strong>，并提供至少与预期小队数量相当的队伍数。</p>
+<pre><code>using { /Fortnite.com/Devices }
+using { /Fortnite.com/Game }
+using { /Fortnite.com/Teams }
+using { /UnrealEngine.com/Social }
+using { /UnrealEngine.com/Temporary/Diagnostics }
+using { /Verse.org/AgentGroup }
+using { /Verse.org/Simulation }
+# 把加入的玩家移到其小队成员已在的队伍
+party_team_assigner_device := class(creative_device):</code></pre>
+<p>该设备在玩家加入会话时激活，因此分开到达、之后才组队的两名玩家保留各自原队伍。要处理这种情形，请订阅 <code>AddMemberEvent</code>。</p>
+<h2 id="sec-on-your-own">自行拓展</h2>
+<p>可以这样延伸上述技巧：</p>
+<ul>
+<li><strong>按小队规模缩放奖励。</strong>用源自 <code>GetMemberMap().Length</code> 的系数乘以分数或经验奖励，并设置上限，避免大队伍远超小队伍或单人玩家。</li>
+<li><strong>第二名成员到达时显示提示。</strong>在密室逃脱中，当第二名小队成员中途加入谜题时激活提示系统，让所有玩家看到同一条提示。</li>
+<li><strong>让合作 Boss 战保持可赢。</strong>用 <code>RemoveMemberEvent</code> 在小队成员掉线时降低 Boss 血量，使剩余玩家仍能打赢按更大规模调校的战斗。</li>
+<li><strong>把迟到者送到小队身边。</strong>用 <code>AddMemberEvent</code> 把中途加入会话的玩家送到已在岛上的小队成员出生点。</li>
+<li><strong>按小队分组结算界面。</strong>在结算界面按每名玩家的小队分组展示，而非纯按分数排序，方便好友之间比较成绩。</li>
+<li><strong>塑造视觉标识。</strong>运行小队检查，为小队成员应用装饰性 VFX，增强沉浸感。</li>
+</ul>
+<p>你的岛屿今天奖励了哪些社交机制？其中哪些可以改为读取小队成员关系，而不是靠猜测？</p>
+<p>继续用<a href="27-build-a-game-in-unreal-editor-for-fortnite.html">玩法教程</a>与<a href="learn-game-mechanics-in-unreal-editor-for-fortnite.html">游戏机制</a>示例打磨设计。发布前，请对照 <a href="https://legal.epicgames.com/fortnite/developer-rules" target="_blank" rel="noopener">Fortnite 开发者规则</a>检查你的岛屿。</p>
+<p class="doc-tags">标签：<a href="https://dev.epicgames.com/community/search?query=verse" target="_blank" rel="noopener">verse</a> · <a href="https://dev.epicgames.com/community/search?query=social" target="_blank" rel="noopener">social</a> · <a href="https://dev.epicgames.com/community/search?query=events" target="_blank" rel="noopener">events</a> · <a href="https://dev.epicgames.com/community/search?query=multiplayer" target="_blank" rel="noopener">multiplayer</a> · <a href="https://dev.epicgames.com/community/search?query=game%20mechanics" target="_blank" rel="noopener">game mechanics</a> · <a href="https://dev.epicgames.com/community/search?query=party" target="_blank" rel="noopener">party</a></p>
+<div class="block-callout"><p>需要帮助？在 <a href="https://forums.unrealengine.com/categories?tag=fortnite" target="_blank" rel="noopener">开发者论坛（Developer Forums）</a>提问并帮助同伴；也可以在 <a href="https://dev.epicgames.com/community/fortnite/learning" target="_blank" rel="noopener">学习库（Learning Library）</a>撰写自己的教程或阅读他人的教程。</p></div>
+<h3>相关文档</h3>
+<ul>
+<li><a href="using-devices-in-fortnite.html">使用设备（Using Devices）</a></li>
+<li><a href="08-scene-graph-in-unreal-editor-for-fortnite.html">场景图 Scene Graph</a></li>
+<li><a href="https://dev.epicgames.com/documentation/fortnite/verse-language-book-of-verse-reference" target="_blank" rel="noopener">Verse 语言参考：Verse 之书（Book of Verse）</a></li>
+</ul>
+<h2 id="sec-sub">本页包含的子教程</h2><div class="child-grid"><a class="doc-card" href="create-your-own-device-using-verse-in-unreal-editor-for-fortnite.html"><span class="doc-card-thumb"><img src="https://dev.epicgames.com/community/api/documentation/image/7f861346-1b65-420a-b5f1-d3a8a88a4505?resizing_type=fill&amp;width=1920&amp;height=335" alt="在 UEFN 中使用 Verse 创建你自己的设备" loading="lazy"></span><span class="doc-card-body"><b>在 UEFN 中使用 Verse 创建你自己的设备</b><i>学会 Verse 代码基础后，接下来在 UEFN 中创建 Verse 自制设备，把它添加到关卡并运行起来。</i></span></a><a class="doc-card" href="island-settings-in-uefn-and-fortnite-creative.html"><span class="doc-card-thumb"><img src="https://dev.epicgames.com/community/api/documentation/image/76f8e05b-c306-4cb9-9f9c-6cdcc59b9b05?resizing_type=fill&amp;width=1920&amp;height=335" alt="UEFN 与 Fortnite 创意模式中的岛屿设置" loading="lazy"></span><span class="doc-card-body"><b>UEFN 与 Fortnite 创意模式中的岛屿设置</b><i>岛屿设置（Island Settings）是用于控制当前所在岛屿的各项设置。你在岛屿设置中配置参数的方式，将同时决定游戏…</i></span></a><a class="doc-card" href="learn-game-mechanics-in-unreal-editor-for-fortnite.html"><span class="doc-card-thumb"><img src="https://dev.epicgames.com/community/api/documentation/image/e0b293af-2c34-4fbf-a7ba-3b1c021fe517?resizing_type=fill&amp;width=1920&amp;height=335" alt="学习游戏机制" loading="lazy"></span><span class="doc-card-body"><b>学习游戏机制</b><i>想学习如何在 Verse 中操控平台？或者创建逻辑解谜？下面汇总了多种游戏机制与交互，可直接加入你自己的项目。</i></span></a><a class="doc-card" href="using-barrier-devices-in-fortnite-creative.html"><span class="doc-card-thumb"><img src="https://dev.epicgames.com/community/api/documentation/image/24dc0edd-e524-4065-984f-b69b3afbb833?resizing_type=fill&amp;width=1920&amp;height=335" alt="在 Fortnite 创意模式中使用屏障设备" loading="lazy"></span><span class="doc-card-body"><b>在 Fortnite 创意模式中使用屏障设备</b><i>屏障（Barrier）设备可创建自定义区域，阻挡玩家移动与武器火力，还能呈现多种视觉风格，装饰环境中的各个关卡。</i></span></a><a class="doc-card" href="using-button-devices-in-fortnite-creative.html"><span class="doc-card-thumb"><img src="https://dev.epicgames.com/community/api/documentation/image/fafbb150-fa21-43ea-99b4-0010f744f356?resizing_type=fill&amp;width=1920&amp;height=335" alt="使用按钮设备" loading="lazy"></span><span class="doc-card-body"><b>使用按钮设备</b><i>你可以使用按钮设备(Button Device)激活其他设备。默认状态下按钮不执行任何操作，但只要配置得当，玩家与其交互…</i></span></a><a class="doc-card" href="using-devices-in-fortnite.html"><span class="doc-card-thumb"><img src="https://dev.epicgames.com/community/api/documentation/image/08050497-7144-45a7-869e-ed59785f682a?resizing_type=fill&amp;width=1920&amp;height=335" alt="在 Fortnite 中使用设备" loading="lazy"></span><span class="doc-card-body"><b>在 Fortnite 中使用设备</b><i>设备是你在岛屿上搭建互动体验的重要工具集；通过自定义设备并相互组合，即可构建特定的玩法机制，还能用 Verse 让设备更…</i></span></a><a class="doc-card" href="using-hud-message-devices-in-fortnite-creative.html"><span class="doc-card-thumb"><img src="https://dev.epicgames.com/community/api/documentation/image/9d5f0a2e-276f-4361-9804-320f6244c62f?resizing_type=fill&amp;width=1920&amp;height=335" alt="在 Fortnite 创意模式中使用 HUD 消息设备" loading="lazy"></span><span class="doc-card-body"><b>在 Fortnite 创意模式中使用 HUD 消息设备</b><i>HUD 消息设备可通过其他设备触发或回合开始计时器，向所有玩家或特定玩家显示消息，支持样式、位置、图层与动画的完整配置。</i></span></a><a class="doc-card" href="using-team-settings-and-inventory-devices-in-fortnite-creative.html"><span class="doc-card-thumb"><img src="https://dev.epicgames.com/community/api/documentation/image/7751fc96-ffe6-4edc-b9db-9b677e6a6dc9?resizing_type=fill&amp;width=1920&amp;height=335" alt="在 Fortnite 创意模式中使用队伍设置与备品设备" loading="lazy"></span><span class="doc-card-body"><b>在 Fortnite 创意模式中使用队伍设置与备品设备</b><i>队伍设置与备品设备是大多数组队游戏的关键，可提供超出岛屿设置的队伍与备品配置，并支持按设备自定义与差异化队伍设置。</i></span></a></div><div class="pager"><a class="prev" href="06-ability-system-in-unreal-editor-for-fortnite.html">← 上：06. 能力系统 Ability System</a><a class="next" href="08-scene-graph-in-unreal-editor-for-fortnite.html">下：08. 场景图 Scene Graph →</a></div></article><nav class="doc-toc" aria-label="本页内容"><b>本页内容</b><ul><li><a href="#sec-before">开始之前</a></li><li><a href="#sec-how-it-works">Social Synergy API 的工作原理</a></li><li><a href="#sec-gate-area">读取玩家小队以控制区域准入</a></li><li><a href="#sec-party-events">小队成员加入或离开时响应</a></li><li><a href="#sec-friendly-fire">比较两名玩家以降低友伤</a></li><li><a href="#sec-more-examples">更多示例</a></li><li><a href="#sec-on-your-own">自行拓展</a></li><li><a href="#sec-sub">本页包含的子教程</a></li></ul></nav></div></div></div></div><footer class="edc-footer"><div class="inner"><img src="../assets/logo-epic.svg" alt="Epic Games"><span>Fortnite 文档中文镜像 · UE教程/ · 本地打开 index.html 阅读 · 翻译整理自 Epic 官方文档，仅供学习交流</span></div></footer></body></html>

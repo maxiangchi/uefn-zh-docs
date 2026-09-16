@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Talisman 环境模板 | Fortnite 文档中文镜像</title>
+<link rel="stylesheet" href="../assets/epic.css">
+<link rel="stylesheet" href="../assets/patch.css">
+<link rel="icon" href="../assets/logo-epic.svg">
+</head>
+<body class="theme-fortnite">
+<div class="edc-topbar"><div class="edc-topbar-inner"><img class="edc-logo" src="../assets/logo-epic.svg" alt="Epic Games"><span class="edc-brand">Epic Games <b>开发者社区</b></span><span class="edc-nav"><a href="../index.html">文档首页</a><a href="sub-index.html">子教程索引</a><a href="https://dev.epicgames.com/documentation/fortnite/talisman-environment-template-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">英文原文</a></span></div></div>
+<div class="site-container">
+<aside class="site-nav"><div class="documents-tree"><nav><ul class="contents-table">
+<li class="toc-group"><span class="toc-group-title">A · 最新动态</span><ul><li><a href="01-42-00-fortnite-ecosystem-updates-and-release-notes.html">01. 42.00 生态系统更新与发行说明</a></li><li><a href="02-custom-items-and-inventory-overview-in-fortnite.html">02. 自定义物品与背包总览</a></li><li><a href="03-in-island-transactions-in-fortnite.html">03. 岛内交易</a></li><li><a href="04-mobile-development-in-fortnite.html">04. 移动端开发</a></li><li><a href="05-inputs-in-fortnite.html">05. 输入系统</a></li><li><a href="06-ability-system-in-unreal-editor-for-fortnite.html">06. 能力系统 Ability System</a></li><li><a href="07-partybased-gameplay-using-the-social-synergy-api-in-fortnite.html">07. 社交协同 API 与小队玩法</a></li><li><a href="08-scene-graph-in-unreal-editor-for-fortnite.html">08. 场景图 Scene Graph</a></li></ul></li>
+<li class="toc-group"><span class="toc-group-title">B · 入门指南</span><ul><li><a href="09-build-your-first-island-in-fortnite.html">09. 构建你的第一个岛屿</a></li><li><a href="10-onboarding-guide-to-programming-with-verse-in-unreal-editor-for-fortnite.html">10. Verse 编程入门指南</a></li><li><a href="11-building-basics-in-fortnite-creative.html">11. 建造基础</a></li></ul></li>
+<li class="toc-group"><span class="toc-group-title">C · 品牌合集</span><ul><li><a href="12-star-wars-islands-in-fortnite.html">12. 星球大战™岛屿</a></li><li><a href="13-kpop-demon-hunters-islands-in-fortnite.html">13. KPop 猎魔团岛屿</a></li><li><a href="14-building-lego-islands-in-fortnite.html">14. 乐高®岛屿</a></li><li><a href="15-the-walking-dead-universe-islands-in-unreal-editor-for-fortnite.html">15. 行尸走肉宇宙岛屿</a></li><li><a href="16-teenage-mutant-ninja-turtle-islands-in-unreal-editor-for-fortnite.html">16. 忍者神龟岛屿</a></li><li><a href="17-squid-game-islands-in-fortnite.html">17. 鱿鱼游戏岛屿</a></li></ul></li>
+<li class="toc-group"><span class="toc-group-title">D · 开发者成功</span><ul><li><a href="18-using-creator-portal-in-fortnite-creative.html">18. 使用创作者门户</a></li><li><a href="19-island-moderation-and-guidelines-in-fortnite-creative.html">19. 岛屿审核与准则</a></li></ul></li>
+<li class="toc-group"><span class="toc-group-title">E · 协作与版本控制</span><ul><li><a href="20-creating-teams-in-creator-portal-in-unreal-editor-for-fortnite.html">20. 在创作者门户创建团队</a></li><li><a href="21-adding-playtesters-in-fortnite-creative.html">21. 添加试玩测试员</a></li><li><a href="22-playtesting-your-island-in-unreal-editor-for-fortnite.html">22. 试玩测试你的岛屿</a></li><li><a href="23-collaborating-in-unreal-editor-for-fortnite.html">23. 在 UEFN 中协作</a></li><li><a href="24-lore-version-control-in-unreal-editor-for-fortnite.html">24. Lore 版本控制</a></li><li><a href="25-conflicts-in-lore-version-control-in-unreal-editor-for-fortnite.html">25. Lore 中的冲突</a></li><li><a href="26-version-history-and-conflict-resolution-in-unreal-editor-for-fortnite.html">26. 分支历史与冲突解决</a></li></ul></li>
+<li class="toc-group"><span class="toc-group-title">F · 游戏示例</span><ul><li><a href="27-build-a-game-in-unreal-editor-for-fortnite.html">27. 构建一款游戏</a></li><li><a href="28-unreal-editor-for-fortnite-starter-templates.html" class="active">28. UEFN 新手模板</a></li></ul></li>
+<li class="toc-group"><span class="toc-group-title">G · Verse编程</span><ul><li><a href="29-learn-the-basics-of-writing-code-in-verse.html">29. 从零学习 Verse 代码基础</a></li></ul></li>
+<li class="toc-group"><span class="toc-group-title">H · 专注领域</span><ul><li><a href="30-lighting-in-unreal-editor-for-fortnite.html">30. 灯光</a></li><li><a href="31-animation-and-cinematics-in-unreal-editor-for-fortnite.html">31. 动画与过场动画</a></li><li><a href="32-modeling-in-unreal-editor-for-fortnite.html">32. 建模</a></li><li><a href="33-materials-in-unreal-editor-for-fortnite.html">33. 材质</a></li><li><a href="34-environments-and-landscapes-in-unreal-editor-for-fortnite.html">34. 环境与地形</a></li><li><a href="35-audio-in-unreal-editor-for-fortnite.html">35. 音频</a></li><li><a href="36-visual-effects-in-unreal-editor-for-fortnite.html">36. 视觉特效</a></li></ul></li>
+</ul></nav></div></aside>
+<div class="page-content"><div class="page-document has-theme-bg">
+<header class="section-page-header"><nav><ol class="breadcrumb is-shrinkable"><li class="breadcrumb-item is-root"><img src="../assets/logo-epic.svg" alt="Epic Games"><a href="../index.html">Developer</a></li><li class="breadcrumb-item"><a href="../index.html">Fortnite 文档</a></li><li class="breadcrumb-item"><a href="28-unreal-editor-for-fortnite-starter-templates.html">UEFN 新手模板</a></li><li class="breadcrumb-item active" aria-current="page"><span class="text-truncate">Talisman 环境模板</span></li></ol></nav><h1>Talisman 环境模板</h1><p class="text-secondary mb-0">Talisman: Environment 模板展示了在 UEFN 中创建高度精细、逼真环境的最佳实践。本页介绍其在模块化构建、内存优化、光照与材质等方面用到的关键技术。</p><p class="doc-meta">英文原标题：Talisman Environment Template In Unreal Editor For Fortnite · <a href="https://dev.epicgames.com/documentation/fortnite/talisman-environment-template-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">查看英文原文</a> · 社区翻译镜像，仅供学习</p></header>
+<div class="doc-columns"><article class="doc-article">
+<p>本页面是 <strong>Talisman: Environment</strong> 模板的配套文档，该模板展示了创建高度精细、逼真环境的最佳实践。Talisman 使用模块化构建与优化最佳实践，在 Unreal Editor for Fortnite（UEFN）（Fortnite 虚幻编辑器）中创建。</p>
+<p>你可以在项目浏览器（Project Browser）的<strong>功能示例（Feature Examples）</strong>分区中找到该模板。</p>
+<p>在 Fortnite 中输入岛屿代码（Island Code）<strong>7100-3544-3074</strong>，即可游玩曾在 2024 年游戏开发者大会（Game Developers Conference）上展示的 Talisman 体验。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/f2a90e56-bd96-40ff-91fc-e897f55af2f7?resizing_type=fit" alt="项目浏览器（Project Browser）中 Talisman: Environment 模板的位置。" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><figcaption>项目浏览器（Project Browser）中 Talisman: Environment 模板的位置。</figcaption><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/f2a90e56-bd96-40ff-91fc-e897f55af2f7?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>本概览将带你了解 Talisman 项目在创建过程中遇到的优化挑战，以及每个挑战是如何被解决的：</p>
+<ul>
+<li><a href="#sec-2">管理项目与运行时内存限制</a></li>
+<li><a href="#sec-3">使用自定义 UI 元素</a></li>
+<li><a href="#sec-4">照亮大空间</a></li>
+<li><a href="#sec-5">网格体设计与构建</a></li>
+<li><a href="#sec-6">使用动态材质控制设计材质</a></li>
+<li><a href="#sec-7">使用环绕摄像机设备</a></li>
+</ul>
+<p>由于该模板需要运行在所有可用平台上，Talisman 的资产与美术风格必须符合<a href="https://dev.epicgames.com/documentation/fortnite/memory-and-optimization-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">UEFN 的内存与项目大小限制要求</a>。对于采用更精细美术风格的项目，这会带来以下几项挑战：</p>
+<ul>
+<li>项目大小：游戏中的高精度资产可能体积很大，而 UEFN 有 400 MB 的项目大小限制。</li>
+<li>运行时内存限制：UEFN 有 100,000 内存单位的流送内存限制，同一时间显示在屏幕上的资产、自定义地形与设备数量都会受到限制。</li>
+<li>所有受支持平台的质量：这些限制确保你的 UEFN 体验能面向所有 Fortnite 支持平台的全部玩家开放。</li>
+</ul>
+<p>UEFN 支持多种技术来满足这些要求，包括<a href="https://dev.epicgames.com/documentation/fortnite/level-of-detail-lod-best-practices-in-fortnite" target="_blank" rel="noopener">细节级别（Levels of Detail，LOD）</a>、<a href="https://dev.epicgames.com/documentation/fortnite/streaming-and-hlods-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">分层细节级别（Hierarchical Levels of Detail，HLOD）</a>、<a href="https://dev.epicgames.com/documentation/fortnite/world-partition" target="_blank" rel="noopener">世界分区（World Partition）</a>、<a href="https://dev.epicgames.com/documentation/unreal-engine/level-instancing-in-unreal-engine" target="_blank" rel="noopener">关卡实例化（Level Instancing）</a>和<a href="https://dev.epicgames.com/documentation/uefn/streaming-and-hlods-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">数据层（Data Layer）</a>。</p>
+<h2 id="sec-1">应用最佳实践</h2>
+<p>Talisman: Environment 模板旨在展示多种最佳实践与流程，把 3A 级的真实感带入 Unreal Editor for Fortnite。该模板使用以下最佳实践来管理项目与流送内存、优化性能：</p>
+<ul>
+<li>创建模块化、轻量的自定义内容。</li>
+<li>使用面加权法线改善硬表面几何体的外观。</li>
+<li>使用网格体贴花为网格体添加细节。</li>
+<li>以配置最低的目标平台为基准构建体验，再从此出发添加功能。</li>
+<li>最小化非 Nanite 网格体的绘制调用。</li>
+</ul>
+<h3>创建模块化、轻量的自定义内容</h3>
+<p>Talisman 环境使用套件拼装（kitbashing）构建，这是一种模块化建模技术：复用模块化环境中已有的网格体，对其重新利用以创建新资产。通过复用资产，美术师减少了一次性网格体的数量，从而缩小了项目体积。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/6c0296dd-62e9-430b-82ac-9935d47d69c2?resizing_type=fit" alt="该资产由六个不同的静态网格体组成。" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><figcaption>该资产由六个不同的静态网格体组成。</figcaption><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/6c0296dd-62e9-430b-82ac-9935d47d69c2?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>传统做法是：把高细节、高面数的网格体烘焙映射到低面数网格体上，用独特的烘焙<a href="https://en.wikipedia.org/wiki/Normal_mapping" target="_blank" rel="noopener">法线贴图（normal map）</a>在两者之间保留细节。这种方法需要额外的纹理贴图，会增大项目体积、运行时开销大，而且在套件拼装流程中扩展性不好。</p>
+<p>项目改用带面加权法线的中面数网格体来节省内存，并使用<a href="https://www.youtube.com/watch?v=Aihha0sAOJI" target="_blank" rel="noopener">网格体贴花（Mesh Decal）</a>添加小细节。</p>
+<p>更多信息请参阅<a href="#sec-5">网格体设计与构建</a>。</p>
+<h3>为所有目标平台构建体验</h3>
+<p>Fortnite 需要运行在多种平台上。为确保你的内容在每种设备上都给玩家带来最佳体验，重要的是在开发时兼顾所有平台，再针对高端平台叠加额外功能。</p>
+<p>例如，<a href="https://dev.epicgames.com/documentation/en-us/unreal-engine/nanite-virtualized-geometry-in-unreal-engine" target="_blank" rel="noopener">Nanite 虚拟化几何体（Nanite virtualized geometry）</a>能帮助各平台渲染高细节网格体并提升性能，但它只适用于运行 DirectX 12 的 PC 等部分高端设备。因此，优化内容、让它在所有平台上都流畅运行仍然很重要。</p>
+<p>下图展示了 Epic、High、Medium、Low 四档设置下的网格体 LOD：</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/37146992-b72f-4938-af25-663df3d0da92?resizing_type=fit" alt="Epic 设置下的网格体 LOD。" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><figcaption>Epic 设置下的网格体 LOD。</figcaption><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/37146992-b72f-4938-af25-663df3d0da92?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/166cdfb7-e4bd-4767-95b7-de4bcf83358f?resizing_type=fit" alt="High 设置下的网格体 LOD。" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><figcaption>High 设置下的网格体 LOD。</figcaption><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/166cdfb7-e4bd-4767-95b7-de4bcf83358f?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/121a4bd4-8012-43c4-91ec-2e215deeb808?resizing_type=fit" alt="Medium 设置下的网格体 LOD。" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><figcaption>Medium 设置下的网格体 LOD。</figcaption><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/121a4bd4-8012-43c4-91ec-2e215deeb808?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/50ea32bf-6211-4b66-b337-099e30dc6728?resizing_type=fit" alt="Low 设置下的网格体 LOD。" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><figcaption>Low 设置下的网格体 LOD。</figcaption><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/50ea32bf-6211-4b66-b337-099e30dc6728?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>关于为 UEFN 创建自定义资产的更多信息，请参阅<a href="#sec-5">网格体设计与构建</a>。</p>
+<h3>在使用非 Nanite 网格体时最小化绘制调用</h3>
+<p><a href="https://dev.epicgames.com/documentation/fortnite/fortnite-glossary#draw-call" target="_blank" rel="noopener">绘制调用（draw call）</a>是指在每一帧告诉图形 API 要绘制什么、如何绘制的过程。Nanite 会按需把几何体流送进场景，从而绕过标准的绘制调用。对于非 Nanite 网格体，场景中的以下每一项都会引发一次绘制调用：</p>
+<ul>
+<li>每个单独的网格体。</li>
+<li>网格体上的每种材质。</li>
+<li>每盏灯光。</li>
+<li>每个投射的阴影。</li>
+</ul>
+<p>Talisman: Environment 模板同时使用了 <a href="https://dev.epicgames.com/documentation/unreal-engine/nanite-virtualized-geometry-in-unreal-engine" target="_blank" rel="noopener">Nanite</a>网格体和非 Nanite 网格体。为在使用非 Nanite 网格体的同时优化性能，场景中的绘制调用数量通过以下方式被降到最低：</p>
+<ul>
+<li>移除非关键网格体。</li>
+<li>移除非关键网格体贴花。</li>
+<li>移除投射阴影的灯光，改用<a href="https://dev.epicgames.com/documentation/en-us/unreal-engine/using-light-functions-in-unreal-engine?application_version=5.4" target="_blank" rel="noopener">光照函数（light function）</a>补光。</li>
+</ul>
+<h2 id="sec-2">管理项目与运行时内存限制</h2>
+<p>运行时<a href="https://dev.epicgames.com/documentation/fortnite/memory-management-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">内存管理（memory management）</a>与项目大小管理是在 UEFN 中制作任何项目的关键环节。Talisman: Environment 通过以下方式应对这些挑战：</p>
+<ul>
+<li>收窄项目范围。</li>
+<li>复用自定义资产。</li>
+<li>管理运行时内存。</li>
+</ul>
+<h3>收窄项目范围</h3>
+<p>为满足 400 MB 项目大小限制，MetaHuman 角色已被移到 Talisman: MetaHuman 模板中。你可以在<strong>项目浏览器（Project Browser）</strong>的<strong>功能示例（Feature Examples）</strong>分区找到该模板。要了解 UEFN 中的 MetaHuman，请参阅<a href="talisman-metahuman-template-in-unreal-editor-for-fortnite.html">Talisman: MetaHuman 模板（Talisman: MetaHuman template）</a>。</p>
+<h3>细节级别</h3>
+<p>构建 Talisman 的每个网格体都使用了三种<a href="https://dev.epicgames.com/documentation/fortnite/level-of-detail-lod-best-practices-in-fortnite" target="_blank" rel="noopener">细节级别（Levels of Detail，LOD）</a>，以把项目控制在 100,000 流送内存单位预算之内。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/ad5949b9-5c0f-4bce-a1d3-545e9e2f2c59?resizing_type=fit" alt="自动 LOD 设置位于静态网格体浏览器（Static Mesh browser）中。" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><figcaption>自动 LOD 设置位于静态网格体浏览器（Static Mesh browser）中。</figcaption><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/ad5949b9-5c0f-4bce-a1d3-545e9e2f2c59?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>LOD 网格体使用 UEFN 的自动 LOD 工具自动生成，并分配给特定的画质等级。关于在 UEFN 中使用细节级别的更多信息，请参阅<a href="https://dev.epicgames.com/documentation/fortnite/level-of-detail-lod-best-practices-in-fortnite" target="_blank" rel="noopener">设置细节级别（Setting the Level of Detail）</a>。</p>
+<h3>运行时内存管理</h3>
+<p>Talisman: Environment 模板使用一套自定义流送方案，该方案用<a href="https://dev.epicgames.com/documentation/unreal-engine/world-partition---data-layers-in-unreal-engine" target="_blank" rel="noopener">数据层（Data Layer）</a>和<a href="https://dev.epicgames.com/documentation/unreal-engine/unreal-engine-sequencer-movie-tool-overview" target="_blank" rel="noopener">Sequencer</a>把关卡控制在 100,000 内存单位流送预算之内。货舱区等区域的垂直高度以及走廊的长度，意味着飞船装不进<a href="https://dev.epicgames.com/documentation/fortnite/world-partition" target="_blank" rel="noopener">世界分区（World Partition）</a>流送网格。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/2804af30-ff88-49cd-9cb8-36d79473e6a5?resizing_type=fit" alt="每个数据层（Data Layer）对应 Talisman 上不同的房间。" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><figcaption>每个数据层（Data Layer）对应 Talisman 上不同的房间。</figcaption><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/2804af30-ff88-49cd-9cb8-36d79473e6a5?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>为克服这一限制，项目把数据层（Data Layer）与 Sequencer 结合，根据玩家位置加载、卸载飞船区域。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/82567229-d318-492a-9e95-f0e31409255d?resizing_type=fit" alt="变异区（Mutator Zone）设备在关卡序列（Level Sequence）中触发加载事件。" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><figcaption>变异区（Mutator Zone）设备在关卡序列（Level Sequence）中触发加载事件。</figcaption><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/82567229-d318-492a-9e95-f0e31409255d?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>每个房间都有各自对应的数据层，飞船各处分布着<a href="https://dev.epicgames.com/documentation/fortnite-creative/using-mutator-zone-devices-in-fortnite-creative" target="_blank" rel="noopener">变异区（Mutator Zone）</a>设备，它们会在关卡序列（Level Sequence）中触发事件。玩家穿过关卡时，这些事件会加载、卸载飞船的不同部分。变异区（Mutator Zone）被策略性地布置在飞船各处，以免被玩家察觉。</p>
+<p>该方案与多人游戏体验不兼容。数据层（Data Layer）与关卡序列（Level Sequence）已包含在模板中，但变异区（Mutator Zone）已被移除，使模板适配多人游戏。</p>
+<h2 id="sec-3">使用自定义 UI 元素</h2>
+<p>该模板使用 Verse 显示自定义任务图标挂件，并在玩家与起始房间的控制台交互时播放音频。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/cf3d3ede-6449-4edf-8076-70c45e392224?resizing_type=fit" alt="自定义任务横幅由 Verse 脚本触发。" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><figcaption>自定义任务横幅由 Verse 脚本触发。</figcaption><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/cf3d3ede-6449-4edf-8076-70c45e392224?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>当玩家使用乘员舱语音按钮（Crew Quarters VO Button）设备时，starting_sequence_device.verse 脚本文件会执行以下操作：</p>
+<pre><code>using { /Fortnite.com/Devices } using { /Verse.org/Simulation } using { /Fortnite.com/Characters } using { /UnrealEngine.com/Temporary/UI } using { /UnrealEngine.com/Temporary/Diagnostics }</code></pre>
+<ul>
+<li>如果欢迎音频仍在播放，则取消欢迎音频。</li>
+<li>启用飞船小地图，帮助玩家探索 Talisman。</li>
+<li>显示自定义 <strong>quest_icon_widget</strong> UI 挂件蓝图。</li>
+<li>播放一段声音片段。</li>
+</ul>
+<p>关于使用 Verse 自定义 UEFN 项目的更多信息，请参阅<a href="10-onboarding-guide-to-programming-with-verse-in-unreal-editor-for-fortnite.html">Verse 编程入门指南（Verse Programming Onboarding Guide）</a>。</p>
+<h2 id="sec-4">照亮大空间</h2>
+<p>Talisman 使用<a href="https://dev.epicgames.com/documentation/unreal-engine/lumen-global-illumination-and-reflections-in-unreal-engine" target="_blank" rel="noopener">Lumen 全局光照（Lumen global illumination）</a>照亮环境，为玩家提供遍布飞船的阴影与准确的间接光照。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/bf7ec06e-4ade-4d23-a377-b3e8d8b8c8d7?resizing_type=fit" alt="这条走廊展示了本文介绍的所有技术。" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><figcaption>这条走廊展示了本文介绍的所有技术。</figcaption><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/bf7ec06e-4ade-4d23-a377-b3e8d8b8c8d7?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>Lumen 为不受直接光照的物体提供环境光遮蔽与全局光照。Lumen 虽然是创建光照方案的强大工具，但为最大化性能，优化环境仍然很重要。<strong>Talisman: Environment</strong> 模板在使用 Lumen 的同时做了多项优化。</p>
+<p>关卡中所有间接受光静态网格体的投射阴影都被关闭。这些网格体的阴影由 Lumen 出色地提供，因此关闭<strong>投射阴影（Cast Shadows）</strong>属性在不损失画质的前提下提升了性能。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/e7cf6363-4449-4e68-8f0c-ba6c600bb47d?resizing_type=fit" alt="模板中的大多数灯光都关闭了投射阴影（Cast Shadows）。" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><figcaption>模板中的大多数灯光都关闭了投射阴影（Cast Shadows）。</figcaption><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/e7cf6363-4449-4e68-8f0c-ba6c600bb47d?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>投射阴影还通过光照函数与部分顶灯的条纹纹理来补充。</p>
+<p>自发光灯板的 Lumen 噪点与灯光闪烁，通过为每块灯板搭配一盏不投射阴影的聚光灯来降低。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/241c9edb-3b6d-4978-adb3-713d1ecea23e?resizing_type=fit" alt="这盏聚光灯增强了灯板的光照。" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><figcaption>这盏聚光灯增强了灯板的光照。</figcaption><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/241c9edb-3b6d-4978-adb3-713d1ecea23e?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>每块灯板的自发光值被调低，并用一盏不投射阴影的聚光灯补光。每盏聚光灯的作用半径都很小，在提供额外光照的同时，看起来光仍然来自灯板。</p>
+<p>环境光照还通过让每盏灯都使用尽可能小的最大绘制距离进一步优化。该设置会在无需渲染时把灯光从视野中剔除。</p>
+<p>在照亮 Talisman 的全过程中还使用了<a href="https://dev.epicgames.com/documentation/unreal-engine/viewport-modes-in-unreal-engine?application_version=5.4" target="_blank" rel="noopener">光照复杂度（Lighting Complexity）</a>可视化工具。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/34ac57b7-dad5-4708-9605-cc96325c225d?resizing_type=fit" alt="可使用 Alt+7 切换光照复杂度（Lighting Complexity）可视化。" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><figcaption>可使用 Alt+7 切换光照复杂度（Lighting Complexity）可视化。</figcaption><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/34ac57b7-dad5-4708-9605-cc96325c225d?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>该视口视图模式以颜色着色显示关卡中影响几何体的非静态光源数量，有助于跟踪光照的性能开销。该可视化工具对最小化关卡中的灯光重叠、控制性能开销很有帮助。</p>
+<h2 id="sec-5">网格体设计与构建</h2>
+<p>Talisman 精细的室内环境使用套件拼装（kitbashing）与中面数自定义网格体创建。套件拼装是一种强大的技术，它在最小化项目所需资产数量的同时，仍能复用、组合网格体来创建新几何体。</p>
+<p>项目中的每个网格体都运用了多种不同技术，在不增加额外几何体的情况下改善资产外观。</p>
+<p>面加权法线（face weighted normal）是一种把模型顶点法线与较大的平面对齐的技术，可以在不降低性能的情况下改善着色。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/89e7a1ab-1eab-4d80-8a1e-ebef5ba1badb?resizing_type=fit" alt="顶点法线（绿线）与较大的平面对齐以改善着色。" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><figcaption>顶点法线（绿线）与较大的平面对齐以改善着色。</figcaption><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/89e7a1ab-1eab-4d80-8a1e-ebef5ba1badb?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>螺栓、品牌标识、破损等细节使用<a href="https://dev.epicgames.com/documentation/unreal-engine/using-mesh-decals-in-unreal-engine" target="_blank" rel="noopener">网格体贴花（Mesh Decal）</a>添加。这些贴花使用自定义 UV 把复杂几何体投影到表面上，能够包裹拐角或沿样条拉伸，同时保持外观不变。</p><figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/e3e0ee37-4ca2-46b4-a44e-8cba768b514e?resizing_type=fit&width=1920&height=1080" alt="门板基础网格。" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/e3e0ee37-4ca2-46b4-a44e-8cba768b514e?resizing_type=fit&width=1920&height=1080" target="_blank" rel="noopener">查看原图</a></div></figure><figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/d7baa2ed-0c1b-4483-8512-ae2631a465e6?resizing_type=fit&width=1920&height=1080" alt="带网格体贴花的门板基础网格。" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/d7baa2ed-0c1b-4483-8512-ae2631a465e6?resizing_type=fit&width=1920&height=1080" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h2 id="sec-6">使用动态材质控制设计材质</h2>
+<p>纹理与材质往往是任何 UEFN 项目中体积最大的部分。为进一步缩小项目体积，模板对纹理与材质采用动态方案，避免使用独特的纹理贴图。最终成果采用程序化工作流：用顶点色（Vertex Color）把环境光遮蔽、曲率与遮罩数据存到网格体上，再用存储的数据应用、混合材质。</p>
+<h3>顶点色数据</h3>
+<p>最好避免为每个资产使用独特的纹理贴图，改为用<a href="https://dev.epicgames.com/documentation/unreal-engine/vertex-color-materials-in-unreal-engine" target="_blank" rel="noopener">顶点色（Vertex Color）</a>把环境光遮蔽、曲率与纹理遮罩数据打包进每个网格体。Talisman 的网格体在设计时配有支撑几何体与足够的网格体密度（每平方英寸多边形数），以在顶点色之间提供平滑渐变，从而在材质之间形成干净的过渡。</p>
+<p>数据按以下方式存储：</p>
+<table><tr><th>图（Map）</th><th>颜色通道（Color Channel）</th></tr><tr><td><strong>环境光遮蔽（Ambient Occlusion）</strong></td><td>红色</td></tr><tr><td><strong>曲率（Curvature）</strong></td><td>绿色</td></tr><tr><td><strong>材质 ID 遮罩（Material ID Mask）</strong></td><td>蓝色</td></tr></table>
+<p>关于顶点色绘制的更多信息，请参阅<a href="https://dev.epicgames.com/documentation/unreal-engine/vertex-color-materials-in-unreal-engine" target="_blank" rel="noopener">顶点色材质（Vertex Color Material）</a>。</p>
+<p>每个网格体上的材质槽再用来定义网格体的哪部分接受特定材质。关于材质槽的更多信息，请参阅<a href="https://dev.epicgames.com/documentation/unreal-engine/fbx-material-pipeline-in-unreal-engine?application_version=5.4" target="_blank" rel="noopener">FBX 材质管线（FBX Material Pipeline）</a>。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/21a387c7-29f3-48ac-ac53-b0e91873cb8d?resizing_type=fit" alt="这把椅子有金属和橡胶的材质槽。" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><figcaption>这把椅子有金属和橡胶的材质槽。</figcaption><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/21a387c7-29f3-48ac-ac53-b0e91873cb8d?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h3>动态材质控制</h3>
+<p>Talisman 的网格体组合使用了五种主要材质类型：</p>
+<ul>
+<li>金属</li>
+<li>涂装金属</li>
+<li>塑料</li>
+<li>橡胶</li>
+<li>织物</li>
+</ul>
+<p>每种材质都依赖同一个主材质，该主材质使用世界对齐平铺纹理与用户定义参数生成结果。这样美术师可以在全船复用相同材质，把材质的总体内存开销控制在很低水平。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/66ba4a9a-aac5-471e-97a0-543f53bec7ca?resizing_type=fit" alt="Talisman: Environment 主材质的一部分。" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><figcaption>Talisman: Environment 主材质的一部分。</figcaption><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/66ba4a9a-aac5-471e-97a0-543f53bec7ca?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>灰尘、划痕与其他磨损痕迹也包含在主材质中，并使用参数驱动遮罩应用到网格体上。这些参数使用自定义图元数据存放在网格体上。</p>
+<h2 id="sec-7">使用环绕摄像机设备</h2>
+<p><a href="https://dev.epicgames.com/documentation/fortnite-creative/using-orbit-camera-devices-in-fortnite-creative" target="_blank" rel="noopener">环绕摄像机（Orbit Camera）设备</a>提供跟随玩家角色、但玩家可自由旋转观察的视角。模板使用该设备，让玩家能在第三人称视角与模拟第一人称视角之间切换。</p>
+<p><em>玩家可以使用环绕摄像机（Orbit Camera）设备在三种不同视角之间切换。</em></p>
+<p>这是通过 camera_switch_mode_device Verse 脚本实现的。</p>
+<pre><code># This file handles swapping between different cameras when an input is pressed. using { /Fortnite.com/Devices } using { /Verse.org/Simulation } using { /Fortnite.com/Characters } using { /UnrealEngine.com/Temporary/Diagnostics }</code></pre>
+<p>Verse 代码监听玩家触发<a href="https://dev.epicgames.com/documentation/fortnite-creative/using-input-trigger-devices-in-fortnite-creative" target="_blank" rel="noopener">目标创意输入（Target Creative Input）动作</a>（默认映射为鼠标右键或手柄左扳机），然后执行以下操作：</p>
+<ul>
+<li>从摄像机堆栈中移除当前摄像机。</li>
+<li>获取 Cameras 数组中的下一台摄像机。</li>
+<li>把新摄像机添加到代理（agent）。</li>
+<li>如有需要，隐藏玩家角色。</li>
+<li>如有需要，取消隐藏玩家角色。</li>
+</ul>
+<div class="pager"><a href="28-unreal-editor-for-fortnite-starter-templates.html"><small>← 返回父教程</small>UEFN 新手模板</a><a href="sub-index.html"><small>子教程索引 →</small>全部子教程</a></div>
+</article><nav class="doc-toc" aria-label="本页内容"><b>本页内容</b><a href="#sec-1">应用最佳实践</a>
+<a href="#sec-2">管理项目与运行时内存限制</a>
+<a href="#sec-3">使用自定义 UI 元素</a>
+<a href="#sec-4">照亮大空间</a>
+<a href="#sec-5">网格体设计与构建</a>
+<a href="#sec-6">使用动态材质控制设计材质</a>
+<a href="#sec-7">使用环绕摄像机设备</a></nav></div>
+</div></div>
+</div>
+<footer class="edc-footer"><div class="inner"><img src="../assets/logo-epic.svg" alt="Epic Games"><span>Fortnite 文档中文镜像 · UE教程/ · 本地打开 index.html 阅读 · 翻译整理自 Epic 官方文档，仅供学习交流</span></div></footer>
+</body>
+</html>

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>灯光新手岛屿模板 | Fortnite 文档中文镜像</title>
+<link rel="stylesheet" href="../assets/epic.css">
+<link rel="stylesheet" href="../assets/patch.css">
+<link rel="icon" href="../assets/logo-epic.svg">
+</head>
+<body class="theme-fortnite">
+<div class="edc-topbar"><div class="edc-topbar-inner"><img class="edc-logo" src="../assets/logo-epic.svg" alt="Epic Games"><span class="edc-brand">Epic Games <b>开发者社区</b></span><span class="edc-nav"><a href="../index.html">文档首页</a><a href="sub-index.html">子教程索引</a><a href="https://dev.epicgames.com/documentation/fortnite/lighting-starter-island-template-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">英文原文</a></span></div></div>
+<div class="site-container">
+<aside class="site-nav"><div class="documents-tree"><nav><ul class="contents-table">
+<div class="tree-sec">A · 最新动态</div>
+<a class="tree-link" href="01-42-00-fortnite-ecosystem-updates-and-release-notes.html">01. 42.00 生态系统更新与发行说明</a>
+<a class="tree-link" href="02-custom-items-and-inventory-overview-in-fortnite.html">02. 自定义物品与背包总览</a>
+<a class="tree-link" href="03-in-island-transactions-in-fortnite.html">03. 岛内交易</a>
+<a class="tree-link" href="04-mobile-development-in-fortnite.html">04. 移动端开发</a>
+<a class="tree-link" href="05-inputs-in-fortnite.html">05. 输入系统</a>
+<a class="tree-link" href="06-ability-system-in-unreal-editor-for-fortnite.html">06. 能力系统 Ability System</a>
+<a class="tree-link" href="07-partybased-gameplay-using-the-social-synergy-api-in-fortnite.html">07. 社交协同 API 与小队玩法</a>
+<a class="tree-link" href="08-scene-graph-in-unreal-editor-for-fortnite.html">08. 场景图 Scene Graph</a>
+<div class="tree-sec">B · 入门</div>
+<a class="tree-link" href="09-build-your-first-island-in-fortnite.html">09. 构建你的第一个岛屿</a>
+<a class="tree-link" href="10-onboarding-guide-to-programming-with-verse-in-unreal-editor-for-fortnite.html">10. Verse 编程入门指南</a>
+<a class="tree-link" href="11-building-basics-in-fortnite-creative.html">11. 建造基础</a>
+<div class="tree-sec">C · 品牌合集</div>
+<a class="tree-link" href="12-star-wars-islands-in-fortnite.html">12. 星球大战™岛屿</a>
+<a class="tree-link" href="13-kpop-demon-hunters-islands-in-fortnite.html">13. KPop 猎魔团岛屿</a>
+<a class="tree-link" href="14-building-lego-islands-in-fortnite.html">14. 乐高®岛屿</a>
+<a class="tree-link" href="15-the-walking-dead-universe-islands-in-unreal-editor-for-fortnite.html">15. 行尸走肉宇宙岛屿</a>
+<a class="tree-link" href="16-teenage-mutant-ninja-turtle-islands-in-unreal-editor-for-fortnite.html">16. 忍者神龟岛屿</a>
+<a class="tree-link" href="17-squid-game-islands-in-fortnite.html">17. 鱿鱼游戏岛屿</a>
+<div class="tree-sec">D · 开发者成功</div>
+<a class="tree-link" href="18-using-creator-portal-in-fortnite-creative.html">18. 使用创作者门户</a>
+<a class="tree-link" href="19-island-moderation-and-guidelines-in-fortnite-creative.html">19. 岛屿审核与准则</a>
+<div class="tree-sec">E · 协作</div>
+<a class="tree-link" href="20-creating-teams-in-creator-portal-in-unreal-editor-for-fortnite.html">20. 在创作者门户创建团队</a>
+<a class="tree-link" href="21-adding-playtesters-in-fortnite-creative.html">21. 添加试玩测试员</a>
+<a class="tree-link" href="22-playtesting-your-island-in-unreal-editor-for-fortnite.html">22. 试玩测试你的岛屿</a>
+<a class="tree-link" href="23-collaborating-in-unreal-editor-for-fortnite.html">23. 在 UEFN 中协作</a>
+<a class="tree-link" href="24-lore-version-control-in-unreal-editor-for-fortnite.html">24. Lore 版本控制</a>
+<a class="tree-link" href="25-conflicts-in-lore-version-control-in-unreal-editor-for-fortnite.html">25. Lore 中的冲突</a>
+<a class="tree-link" href="26-version-history-and-conflict-resolution-in-unreal-editor-for-fortnite.html">26. 分支历史与冲突解决</a>
+<div class="tree-sec">F · 游戏示例</div>
+<a class="tree-link" href="27-build-a-game-in-unreal-editor-for-fortnite.html">27. 构建一款游戏</a>
+<a class="tree-link active" href="28-unreal-editor-for-fortnite-starter-templates.html">28. UEFN 新手模板</a>
+<div class="tree-sec">G · Verse</div>
+<a class="tree-link" href="29-learn-the-basics-of-writing-code-in-verse.html">29. 从零学习 Verse 代码基础</a>
+<div class="tree-sec">H · 专注领域</div>
+<a class="tree-link" href="30-lighting-in-unreal-editor-for-fortnite.html">30. 灯光</a>
+<a class="tree-link" href="31-animation-and-cinematics-in-unreal-editor-for-fortnite.html">31. 动画与过场动画</a>
+<a class="tree-link" href="32-modeling-in-unreal-editor-for-fortnite.html">32. 建模</a>
+<a class="tree-link" href="33-materials-in-unreal-editor-for-fortnite.html">33. 材质</a>
+<a class="tree-link" href="34-environments-and-landscapes-in-unreal-editor-for-fortnite.html">34. 环境与地形</a>
+<a class="tree-link" href="35-audio-in-unreal-editor-for-fortnite.html">35. 音频</a>
+<a class="tree-link" href="36-visual-effects-in-unreal-editor-for-fortnite.html">36. 视觉特效</a>
+</ul></nav></div></aside>
+<div class="page-content"><div class="page-document has-theme-bg">
+<header class="section-page-header"><nav><ol class="breadcrumb is-shrinkable"><li class="breadcrumb-item is-root"><img src="../assets/logo-epic.svg" alt="Epic Games"><a href="../index.html">Developer</a></li><li class="breadcrumb-item"><a href="../index.html">Fortnite 文档</a></li><li class="breadcrumb-item"><a href="28-unreal-editor-for-fortnite-starter-templates.html">UEFN 新手模板</a></li><li class="breadcrumb-item active" aria-current="page"><span class="text-truncate">灯光新手岛屿模板</span></li></ol></nav><h1>灯光新手岛屿模板</h1><p class="text-secondary mb-0">灯光新手岛屿模板展示了如何在关卡设计中使用室内与室外灯光，打造与经典 Fortnite 迥异的外观与氛围。</p><p class="doc-meta">英文原标题：Lighting Starter Island Template In Unreal Editor For Fortnite · <a href="https://dev.epicgames.com/documentation/fortnite/lighting-starter-island-template-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">查看英文原文</a> · 社区翻译镜像，仅供学习</p></header>
+<div class="doc-columns"><article class="doc-article">
+<p><strong>灯光新手岛屿（Lighting Starter Island）</strong>模板展示了如何在关卡设计中使用室内与室外灯光，打造与经典 Fortnite 迥异的外观与氛围。</p>
+<p>这篇配套教程旨在帮你熟悉 <strong>Fortnite 虚幻编辑器（UEFN）</strong>中可用的各种灯光 Actor 与设备，以及通用的灯光概念。该模板中的所有灯光技术都考虑了如何为多平台设计灯光。</p>
+<p>低端平台的灯光能力有所不同，渲染时不使用 <a href="https://dev.epicgames.com/documentation/fortnite/fortnite-glossary#lumen" target="_blank" rel="noopener">流明（Lumen）</a>。</p>
+<p>所有灯光都收纳在<a href="https://dev.epicgames.com/documentation/fortnite/fortnite-glossary#outliner-panel" target="_blank" rel="noopener">大纲视图（Outliner）</a>中，方便你按房间号搜索和筛选灯光与<a href="https://dev.epicgames.com/documentation/fortnite/fortnite-glossary#geometry" target="_blank" rel="noopener">几何体（Geometry）</a>元素。每个房间都有一个配套文件夹，里面放着布置该房间的灯光、几何体和其他设备。</p>
+<p>先走一遍模板建筑，看看 UEFN 中最基础的灯光元素，再通过几个基础示例学习如何使用与布置灯光，这些示例展示了随着项目推进，如何逐步提升灯光的复杂度。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/378969ac-25e1-4ecc-8153-d57fce90735d?resizing_type=fit" alt="灯光新手岛屿模板建筑外观示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/378969ac-25e1-4ecc-8153-d57fce90735d?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>你可以在<strong>项目浏览器（Project Browser）</strong>的<strong>功能示例（Feature Examples）</strong>下的<strong>项目模板（Project Templates）</strong>分区中找到该模板。</p>
+<p>每个房间都设置了书签，方便你查看各房间对应的学习内容。按以下按键在岛屿模板中移动：</p>
+<ul>
+<li><strong>1</strong>：房间 1</li>
+<li><strong>2</strong>：房间 2</li>
+<li><strong>3</strong>：房间 3</li>
+<li><strong>4</strong>：房间 4</li>
+<li><strong>5</strong>：房间 5</li>
+<li><strong>6</strong>：房间 5</li>
+<li><strong>7</strong>：房间 5</li>
+</ul>
+<p>先按 <strong>1</strong> 键前往房间 1，从不同的灯光 Actor 及其用途开始学起。</p>
+<h2 id="sec-1">房间 1：基础</h2>
+<p><strong>房间 1</strong>首先聚焦你的<a href="https://dev.epicgames.com/documentation/fortnite/fortnite-glossary#key-light" target="_blank" rel="noopener">主光（Key Light）</a>。主光是关卡或单个场景的主要光源，也就是说你要么从室内灯光起步，要么从室外灯光起步，没有标准答案，只看个人偏好。</p>
+<p><strong>室内灯光：</strong></p>
+<ul><li>如果存在暗部空间，比如室内房间或夜景，就从人造灯光起步，把它当作你的主光。</li></ul>
+<p><strong>室外灯光：</strong></p>
+<ul><li>如果你做的是室外，或是有大窗户会被日光和天空照亮的室内空间，就以自然光作为主光，再按需用人造灯光打造次级灯光。</li></ul>
+<p>房间 1 使用了三种基础灯光 Actor——<a href="https://dev.epicgames.com/documentation/fortnite/fortnite-glossary#point-light" target="_blank" rel="noopener">点光源（Point Light）</a>、聚光灯（Spot Light）和<a href="https://dev.epicgames.com/documentation/fortnite/fortnite-glossary#rectangle-light" target="_blank" rel="noopener">矩形光（RectLight）</a>，并演示了它们的部分用法。</p>
+<p>本房间的灯光通过聚焦以下方面来建立基准规模（Base Scale）：</p>
+<ul>
+<li>灯光 Actor（聚光灯、矩形光、点光源）</li>
+<li>强度（Intensity）</li>
+<li>温度 / 颜色（Temperature / Color）</li>
+<li>覆盖范围（Reach，即该灯光影响场景的距离）</li>
+</ul>
+<h3>灯光 Actor：矩形光</h3>
+<p><strong>矩形光（Rectangular Light，RectLight）</strong>可以均匀照亮大面积区域，并根据其覆盖面积生成<a href="https://dev.epicgames.com/documentation/fortnite/fortnite-glossary#diffuse-shadows" target="_blank" rel="noopener">漫射阴影（Diffuse Shadow）</a>。矩形光非常适合模拟荧光吊顶灯，也适合影棚布光。</p>
+<p>选中该灯光，点击细节（Details）面板的设置（齿轮图标），勾选<strong>仅显示已修改属性（Show Only Modified Properties）</strong>，查看被修改过的设置。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/f6565aac-0526-4da0-a0e1-ff4aa5895f84?resizing_type=fit" alt="矩形光细节面板已修改属性示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/f6565aac-0526-4da0-a0e1-ff4aa5895f84?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p><em>点击图片可放大。</em></p>
+<p>注意实际调整的设置并不多。目标是在全黑房间里设定基础灯光强度，调整了以下设置：</p>
+<ul>
+<li><strong>强度（Intensity）</strong>：0.5。</li>
+<li><strong>光源（Source）</strong>：宽度与高度（灯光尺寸决定阴影锐利还是柔和）。记住，该设置还会影响<a href="https://dev.epicgames.com/documentation/fortnite/fortnite-glossary#specular" target="_blank" rel="noopener">镜面反射（Specular）</a>与高光，如下图所示。</li>
+<li><strong>遮光板角度与长度（Barn Door Angle / Length）</strong>：如果你想像使用影棚灯那样限制灯光的照射方向，遮光板功能会很有用。</li>
+<li><strong>温度（Temperature）</strong>：控制灯光的<a href="https://dev.epicgames.com/documentation/fortnite/fortnite-glossary#color-temperature" target="_blank" rel="noopener">颜色（Color Temperature）</a>。</li>
+</ul>
+<p>试着把温度改为 <strong>3000</strong>K，注意它会变得更暖（更黄）；再改为 <strong>8000</strong>K，注意它会变得更冷（更蓝）。</p>
+<ul><li><strong>体积阴影（Volumetric Shadow）</strong>已启用，可防止光体积效果泄漏到房间之外、穿墙照射，同时让投射阴影的物体能够遮挡体积光效果。</li></ul>
+<h3>灯光 Actor：聚光灯</h3>
+<p>聚光灯（Spotlight）把光线聚焦到特定区域或光斑上。本房间中有两盏聚光灯，一盏照向几个彩色静态球体，另一盏照向一个旋转网格体，方便你观察阴影与灯光 Actor 的互动。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/9e4068cf-0eb4-4958-a1a8-4871522ec3e1?resizing_type=fit" alt="聚光灯照射彩色球体示例场景" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/9e4068cf-0eb4-4958-a1a8-4871522ec3e1?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>选中彩色球体上方的聚光灯，在细节面板勾选<strong>仅显示已修改属性</strong>，只查看被调整过的设置。</p>
+<ul>
+<li><strong>强度（Intensity）</strong>：注意这些灯光比面光源（矩形光）需要更高的强度，这与灯光尺寸有关。因为这是更小的光源，需要更高强度才能照亮场景。</li>
+<li><strong>内锥角与外锥角（Inner / Outer Cone Angle）</strong>：决定被照亮区域的宽窄与聚焦程度。先调外锥角，再调内锥角。</li>
+</ul>
+<p>先把外锥角设为 <strong>60</strong>、内锥角设为 <strong>30</strong>，再尝试不同的锥角，观察灯光的变化。</p>
+<ul>
+<li><strong>光源半径（Source Radius）</strong>：即光源尺寸。半径越大阴影越柔，但镜面反射也越大。尺寸要与作为光源的网格体保持一致，就像矩形光区域那样。</li>
+<li><strong>温度（Temperature）</strong>：该灯光比矩形光更暖，为 <strong>3800</strong>K。</li>
+<li><strong>体积阴影（Volumetric Shadows）</strong>：已启用，为房间增添一点氛围感。</li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/1db8967b-e931-4637-acfd-083cd5fbde14?resizing_type=fit" alt="SpotLight6 体积散射效果示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/1db8967b-e931-4637-acfd-083cd5fbde14?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>选中 <strong>SpotLight6</strong>。注意其<strong>温度</strong>设为 <strong>5500</strong>，看起来偏白；同时雾气明显更多，因为<strong>体积散射强度（Volumetric Scattering Intensity）</strong>从默认值 <strong>1</strong> 提高到了 <strong>4</strong>。</p>
+<h3>灯光 Actor：点光源</h3>
+<p><a href="https://dev.epicgames.com/documentation/fortnite/fortnite-glossary#point-light" target="_blank" rel="noopener">点光源（Point Light）</a>从单个点向所有方向发光，就像灯泡一样。在这里，点光源充当了带灯罩台灯的光源，灯光像大灯具中的灯泡一样从内部发光。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/1d598498-426d-47e3-92b1-395a7583fe9f?resizing_type=fit" alt="点光源台灯示例" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/1d598498-426d-47e3-92b1-395a7583fe9f?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>选中这些灯光，试着调整被修改过的设置。</p>
+<ul>
+<li><strong>强度（Intensity）</strong>：与聚光灯的设置相同，我们让两者保持一致，以确立基础灯光强度。</li>
+<li><strong>衰减（Attenuation）</strong>：限制灯光向各个方向的覆盖距离。虽然不符合物理精确性，但对实现特定观感非常有用。</li>
+</ul>
+<p>聚光灯和点光源都有一个默认启用的<strong>平方反比（Inverse Square）</strong>设置，意味着灯光会像现实中一样随距离衰减。先从默认的平方反比起步，再调整衰减，观察灯光的变化。</p>
+<ul><li><strong>光源半径（Source Radius）</strong>：决定光源的实际尺寸，尺寸越大阴影越柔，反之亦然。保持该设置与你制作的灯具尺寸相对应。</li></ul>
+<p>记住该灯光会出现在镜面反射中，所以如果半径设得过大，反射会显得奇怪，因为灯具与灯光本身之间会出现不匹配。</p>
+<p>最后一个示例是带自发光球体的点光源。在高端硬件上这略显多余，但在低端平台上，你需要光源加球体一起来伪造球体的辉光。此外，仅靠自发光材质配合 Lumen，并不会生成锐利的阴影（如果你想要那种观感的话）。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/ff950fad-d1ad-4310-b2dc-efeb2e27aaa9?resizing_type=fit" alt="高端平台自发光球体的暖色辉光与深邃阴影" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/ff950fad-d1ad-4310-b2dc-efeb2e27aaa9?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p><em>该球体适用于高端平台，注意它产生暖色辉光与深邃阴影。</em></p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/4d6d30df-8172-4ae2-bdab-9a800c218ba2?resizing_type=fit" alt="低端平台自发光球体的冷色辉光与柔和阴影" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/4d6d30df-8172-4ae2-bdab-9a800c218ba2?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p><em>该球体适用于低端平台，注意它产生冷色辉光与更柔和的阴影。</em></p>
+<p>选中 <strong>PointLight</strong> 并将其隐藏，观察阴影与灯光效果的变化。如果你计划跨多平台布置灯光，这一点对灯光的成功至关重要。</p>
+<p>如果灯具既需要发光又需要投射光影，那么两个元素缺一不可：带自发光材质的灯具，以及灯光本身。</p>
+<p>请消化这三个示例中的全部内容，以免当地图灯光变得更复杂后踩坑。</p>
+<p>记住，目标是用一组可复用的简单设置组合，为基础灯光建立起点，随着场景变复杂不断复用。修改的设置越少，日后调整就越轻松。</p>
+<p>遵循这一思路，这个小房间里的一切——从几何体、材质到灯光——都在后续房间中被复用和扩展。小步增量是成功的关键。</p>
+<p>按 <strong>2</strong> 键前往房间 2，学习如何布置这些灯光 Actor。</p>
+<h2 id="sec-2">房间 2：基础应用</h2>
+<p>现在你应该已经理解，如何用三种灯光 Actor（聚光灯、点光源、矩形光）搭建基础灯光，为每种灯光确立强度、温度与覆盖范围的基准。</p>
+<p>在第二个房间中，房间 1 学到的所有经验都被应用到一条长走廊场景的布光中。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/8be42694-ac9b-44d6-8ae9-71c85b7bfb76?resizing_type=fit" alt="走廊场景灯光总览" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/8be42694-ac9b-44d6-8ae9-71c85b7bfb76?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>为走廊布光的目标，是打造看起来源于真实生活的灯光情境。为此，你将运用房间 1 学到的知识，并加入：</p>
+<ul>
+<li>层次（Hierarchy）</li>
+<li>韵律（Rhythm）</li>
+<li>光影（Light and Shadow）</li>
+</ul>
+<p>在房间 2 中，大多数交互都由关卡序列触发，控制灯光、可见性、设备和两段简单的关键帧动画。</p>
+<p>找到名为 <strong>Sequences</strong> 的文件夹，选择 <strong>LS_OpenDoor</strong>。</p>
+<h3>走廊</h3>
+<p>把镜头放到门前并播放该序列。</p>
+<p>走廊复用了房间 1 的灯光与布光原则，在一条<a href="architectural-modeling-guidelines-in-unreal-editor-for-fortnite.html">自定义建模走廊</a>中实现更写实的外观。灯光为环境增添了一层真实感，用灯光为场景加入层次、韵律与光影。</p>
+<h3>层次</h3>
+<p>聚光灯是这里的<a href="https://dev.epicgames.com/documentation/fortnite/fortnite-glossary#key-light" target="_blank" rel="noopener">主光（Key Light）</a>。在这个场景中，聚光灯强度最强，用于照亮走过走廊的角色。</p>
+<p><a href="https://dev.epicgames.com/documentation/fortnite/fortnite-glossary#rectangle-light" target="_blank" rel="noopener">矩形光（RectLight）</a>是次级灯光，只起<a href="https://dev.epicgames.com/documentation/fortnite/fortnite-glossary#fill-light" target="_blank" rel="noopener">补光（Fill）</a>作用，也就是通过柔化聚光灯产生的阴影来辅助聚光灯。注意矩形光的温度比聚光灯更冷（这是艺术选择），但这一区分很重要。</p>
+<p><a href="https://dev.epicgames.com/documentation/fortnite/fortnite-glossary#point-light" target="_blank" rel="noopener">点光源（Point Light）</a>是第三级，用作点缀光，用绿色彩光把你的视线引向走廊尽头的门。</p>
+<p>注意层次也被用于建筑资产的材质分配。较浅的墙面材质平衡了较重的深色地面材质。</p>
+<p>材质还考虑了所有灯光都朝下照射：天花的灯槽照明与灯具增加了房间上部的几何复杂度和灯具布置，与整体取得平衡。</p>
+<h3>韵律</h3>
+<p>由于建筑资产的面板划分与尺度，走廊本身已经具备一定的尺度感与韵律。</p>
+<p>看看聚光灯在墙面上形成的<a href="https://dev.epicgames.com/documentation/fortnite/fortnite-glossary#scalloping" target="_blank" rel="noopener">扇贝形光斑（Scalloping）</a>，如何为原本简单扁平的材质增添了额外的维度。给墙面加一点反射，你就拥有了一个看起来更“完成”的空间，而实际上每块墙板都只是带倒角边的盒体加基础材质。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/a54718c5-2474-4b35-89ac-3d783ad0a1e1?resizing_type=fit" alt="聚光灯在墙面形成的扇贝形光斑" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/a54718c5-2474-4b35-89ac-3d783ad0a1e1?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h3>光影</h3>
+<p>项目中一定要同时有光和影。没有阴影，场景会显得扁平。先确保场景只用主光也能成立，这样其余灯光就只是为场景增添维度的点缀。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/a5d909a7-1ae6-4cbd-a5e9-ccd6f72f25b9?resizing_type=fit" alt="仅主光与添加辅助光的对比" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/a5d909a7-1ae6-4cbd-a5e9-ccd6f72f25b9?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>在下面的对比图中，左侧只用聚光灯照亮场景，右侧用矩形光加入了点缀光。差别虽小，但很有效。</p><figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/eae62654-c4e1-4247-b65f-44995880e96e?resizing_type=fit&width=1920&height=1080" alt="仅聚光灯开启效果示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/eae62654-c4e1-4247-b65f-44995880e96e?resizing_type=fit&width=1920&height=1080" target="_blank" rel="noopener">查看原图</a></div></figure><figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/282dc9fa-f2e0-4395-98ea-72ccf42d3fc7?resizing_type=fit&width=1920&height=1080" alt="矩形光开启用作点缀光效果示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/282dc9fa-f2e0-4395-98ea-72ccf42d3fc7?resizing_type=fit&width=1920&height=1080" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>不要试图用光把场景填满，那样会让场景失去深度、显得扁平，角色也会跟着扁平。</p>
+<p>房间 2 的所有几何体都使用 UEFN 中的<a href="modeling-mode-in-unreal-editor-for-fortnite.html">建模工具</a>生成，所有<a href="material-library-in-unreal-editor-for-fortnite.html">材质</a>都是一些基础 Fortnite 材质的材质实例，你可以自定义。</p>
+<p>在开始为游戏打造灯光时，请记住层次、韵律、光影这些基础布光原则。在下一个房间中，你将进一步了解 UEFN 中的可定制灯光设备，以及如何在项目中使用它。</p>
+<p>按 <strong>3</strong> 键前往房间 3，学习如何使用可定制灯光设备。</p>
+<h2 id="sec-3">房间 3：可定制灯光设备</h2>
+<p><a href="https://dev.epicgames.com/documentation/en-us/fortnite-creative/using-customizable-light-devices-in-fortnite-creative" target="_blank" rel="noopener"><strong>可定制灯光（Customizable Light）</strong>设备</a>是一种可通过玩家交互或设备信号开关的光源。你可以把它用作点光源或聚光灯。可定制灯光没有代表光源的关联道具（比如路灯或顶灯）。</p>
+<p>本房间将道具灯与可定制灯光设备并排摆放，展示两种选项。在这里，灯光设备演示了它的一项能力：颜色切换。选中房间 3 中的任意可定制灯光，试试调整过的设置。</p>
+<p>你会注意到，调整该设备意味着你可以把它用作<strong>点光源</strong>或<strong>聚光灯</strong>。两种灯光类型拥有相同的能力与功能，唯一区别是灯光对场景的影响效果。</p>
+<p>由于该设备没有灯具，你必须自制灯具，或使用没有附加灯光 Actor 的 Fortnite 道具之一。</p>
+<p>Fortnite 道具画廊中的部分灯具有附加的灯光 Actor，另一些则没有。下图中，<strong>备用灯具道具画廊（Alternate Lights Prop Gallery）</strong>中的灯具展示了同一系列带与不带灯光 Actor 的样子。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/33469b0f-66a8-4816-b2c0-48004a03a4e0?resizing_type=fit" alt="带与不带灯光 Actor 的灯具道具对比" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/33469b0f-66a8-4816-b2c0-48004a03a4e0?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>可定制灯光的细节面板与传统灯光 Actor 不同，因为设备经过专门设计与优化，可直接配合<a href="https://dev.epicgames.com/documentation/fortnite/direct-event-binding-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">直接事件绑定（Direct Event Binding）系统</a>，与游戏中的其他设备互动。</p>
+<p>强度、颜色、衰减和光源半径的表现与房间 1、2 中的灯光 Actor 相同。</p>
+<p>本例演示的反射强度是灯光设备的诸多优势之一。这些设备简化了灯光控制及其与游戏的互动。在本例中，注意灯光反射即<a href="https://dev.epicgames.com/documentation/fortnite/fortnite-glossary#specular" target="_blank" rel="noopener">镜面反射（Specular）</a>可以多么轻松地调节。</p>
+<p>在房间 1 中，我们建议让灯光区域尺寸与实际灯具相对，因为灯光尺寸会出现在反射与镜面高光中。而在这里，如果你想用灯具表现反射，可以完全关闭反射设置，只用灯光实现照明效果。</p>
+<p>在高级面板中，你会找到灯光行为的预设。三盏用作点光源的可定制灯光初始状态为<strong>启用</strong>，可以通过标有各灯光类型的按钮调亮或调暗。</p>
+<p>两盏用作聚光灯的可定制灯光分别处于<strong>派对（Party）</strong>和<strong>闪烁（Flicker）</strong>模式，连接到一个简单的开关<strong>按钮（Button）</strong>设备。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/8637f185-88a3-4110-a957-8261c909015a?resizing_type=fit" alt="派对与闪烁模式的聚光灯设备" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/8637f185-88a3-4110-a957-8261c909015a?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>至此，你应该已经熟悉可定制灯光设备、灯光层次，以及如何建立基础灯光。房间 1 与 2 解决的是室内人造灯光，下一节你将学习如何混入自然光，使用<a href="environment-light-rig-device-in-unreal-editor-for-fortnite.html">环境光源装置（Environment Light Rig）</a>。</p>
+<p>按 <strong>4</strong> 键进入下一个房间。了解如何有效使用环境光源装置设备打造室内外灯光，以及如何用灯光 Actor 营造环境光。</p>
+<h2 id="sec-4">房间 4：环境光源装置</h2>
+<p><a href="environment-light-rig-device-in-unreal-editor-for-fortnite.html">环境光源装置（Environment Light Rig）</a>是一款高度可定制的强大设备。</p>
+<p>该设备用于设计室外灯光。与所有 Fortnite 设备一样，环境光源装置把多个独立组件与<a href="https://dev.epicgames.com/documentation/fortnite/direct-event-binding-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">直接事件绑定</a>选项整合在一起，让设备在你的项目中开箱即用。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/81f1cb5a-0ceb-4f4e-af2d-7f5f9382abff?resizing_type=fit" alt="环境光源装置总览" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/81f1cb5a-0ceb-4f4e-af2d-7f5f9382abff?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>选中环境光源装置，你会看到它包含以下选项：</p>
+<ul>
+<li><strong>平行光（Directional Light）</strong>（太阳光 SunLight）</li>
+<li><strong>天光（Skylight）</strong>（SkyLight）</li>
+<li><strong>天空大气（SkyAtmosphere）</strong>（实际渲染出的天空）</li>
+<li><strong>指数高度雾（Exponential Height Fog）</strong>（雾 Fog）</li>
+<li><strong>Lumen 与非 Lumen 的后期处理</strong></li>
+<li><strong>色彩分级（Color Grading）</strong></li>
+</ul>
+<p>要调整该设备，只需旋转 Gizmo，看房间中的灯光如何变化。</p>
+<h3>平行光（太阳光 SunLight）</h3>
+<p>通过这些设置，你可以像控制大多数灯光一样控制颜色、强度、阴影柔和度与温度。在本模板中，大多数设置保持默认值，因为默认设置本身已经很高效。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/7ecb5e96-49ab-4c1a-b909-191f66875d2b?resizing_type=fit" alt="平行光（太阳光）设置" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/7ecb5e96-49ab-4c1a-b909-191f66875d2b?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h3>天光（SkyLight）</h3>
+<p>你可以把天光看作环境中的<a href="https://dev.epicgames.com/documentation/fortnite/fortnite-glossary#fill-light" target="_blank" rel="noopener">补光（Fill Light）</a>。对于高端 PC 或主机，环境光源装置可以启用<strong>实时捕捉（Real Time Capture）</strong>，因为这些机器渲染环境光照毫无压力。在低端主机上，建议使用<a href="https://dev.epicgames.com/documentation/fortnite/fortnite-glossary#cubemap" target="_blank" rel="noopener">立方体贴图（Cubemap）</a>，因为实时捕捉比较耗资源。</p>
+<p>如果在细节面板启用<strong>仅显示已修改属性</strong>，你会看到天空强度从默认值（1）降低到了 <strong>0.2</strong>。这为该场景取得了不错的中间值，在这个强度下同时适用于 Lumen 与非 Lumen 设备。</p>
+<p>关掉<strong>仅显示已修改属性</strong>，你会看到即使启用了实时捕捉，也加载了立方体贴图。必须加载立方体贴图，环境光源装置才能在低端设备上自动切换过去。</p>
+<p>你可以用<strong>引擎可扩展性设置（Engine Scalability Settings）</strong>进一步跨平台定制天光强度。用可扩展性设置预览场景在低端设备上的样子，这样就能按需进一步调整立方体贴图的强度或颜色，优化环境光。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/bab5928d-18da-4829-bdb4-d66a0181eb9c?resizing_type=fit" alt="天光立方体贴图设置" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/bab5928d-18da-4829-bdb4-d66a0181eb9c?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>如果不使用立方体贴图，室内会显得更暗，天花板会发黑。</p>
+<p>对于该场景，艺术上的选择是取一个恰当的中间值，充分展示环境光源装置的天光能力——在高端与低端硬件上都表现良好。</p>
+<h3>天空大气（实际渲染出的天空）</h3>
+<p>天空大气的许多设置用于修改一天中的时间，从而影响场景观感，但要注意主机可扩展性之间的差异会更大。</p>
+<p>该组件的颜色由多种因素驱动，基于大气对直射光与天光的反应。因此，虽然你可以为美术方向调整这些设置，但要记住调整的设置越多，跨设备的灯光就越复杂。</p>
+<p>熟悉该设置的工具后，就可以尝试不同的设置了。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/51f0cb4e-fd33-4b64-9580-f2efe558a642?resizing_type=fit" alt="天空大气设置" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/51f0cb4e-fd33-4b64-9580-f2efe558a642?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h3>指数高度雾（雾 Fog）</h3>
+<p>唯一被修改的设置是<strong>强度（Intensity）</strong>，从默认的 <strong>0.01</strong> 略微调高到 <strong>0.03</strong>。这一微调让你能在场景中看到更多的环境雾与氛围。</p>
+<p>同样，该组件上还有许多设置会极大改变场景观感，比如<strong>雾内散射颜色（Fog Inscattering Color）</strong>、<strong>天空大气环境颜色（Sky Atmosphere Ambient Color）</strong>和<strong>不透明度（Opacity）</strong>。</p>
+<p>先用灯光颜色与温度，以最少的变量和设置实现你想要的观感。只有必要时才把设置推得更远。</p>
+<p>调整得越少，日后排查场景观感问题就越轻松。</p>
+<h3>后期处理体</h3>
+<p>环境光源装置的组件列表中有三个后期处理体，它们对低端可扩展性设备或主机的观感至关重要。</p>
+<p><strong>色彩分级（Color Grading）</strong>：在任何可扩展性模式下都会影响场景，你可以用它统一色彩分级或观感，比如色差、暗角、锐度与对比度等在不同可扩展性下共享的效果都适合放在这里。</p>
+<p><strong>Lumen 曝光（LumenExposure）</strong>：在<strong>高（High）</strong>与<strong>史诗（Epic）</strong>可扩展性下自动生效。</p>
+<p><strong>基础曝光（BasicExposure）</strong>：在<strong>低（Low）</strong>与<strong>中（Medium）</strong>可扩展性下自动生效。</p>
+<p>在本房间中，Lumen 曝光与基础曝光设置用于控制低端与中端可扩展性的<a href="https://dev.epicgames.com/documentation/fortnite/fortnite-glossary#white-balance" target="_blank" rel="noopener">白平衡（White Balance）</a>，以达到相似的整体效果。因为低端与中端没有 Lumen 全局光照，光线不会在场景中反弹，即使设置相同观感也不同。</p>
+<p>参见下方基于可扩展性的白平衡示例。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/27c8ba22-a8c5-431b-832d-6d7f2c9d8686?resizing_type=fit" alt="中等可扩展性默认白平衡" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/27c8ba22-a8c5-431b-832d-6d7f2c9d8686?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p><em>中等可扩展性默认白平衡</em></p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/dc54514e-b657-4363-a7ca-ef70ea1c9011?resizing_type=fit" alt="高等可扩展性默认白平衡" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/dc54514e-b657-4363-a7ca-ef70ea1c9011?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p><em>高等可扩展性默认白平衡</em></p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/ef1063e4-96b1-42e7-8b40-63954d2fa1f8?resizing_type=fit" alt="高等可扩展性调整后白平衡" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/ef1063e4-96b1-42e7-8b40-63954d2fa1f8?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p><em>高等可扩展性调整后白平衡</em></p>
+<p>在为场景打磨灯光时，你可以用环境光源装置内的这三个后期处理体，补偿低端与高端设备之间的不一致。</p>
+<p>记住从小处着手。先抓通用设置，只有当观感发生剧烈变化时再按需继续调整。</p>
+<p>按 <strong>5</strong> 键前往房间 5。在最后一个房间中，你将学习如何把环境光源装置的知识与可定制灯光设备结合，打造独特的室外灯光。</p>
+<h2 id="sec-5">房间 5：室外可定制灯光设备</h2>
+<p>在这片室外区域，均衡后的灯光 Actor 作为点缀光打入场景，同时引入自然光与氛围。在下面的动图中，自然光透过上方的格架洒落进来。</p>
+<p>对比所有这些灯光元素在更开阔空间中的观感。本房间的最后两个空间是带反射面的半开阔空间，以及一个更大尺度的开阔空间。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/7288ea32-2254-4f20-bedf-319316f71c82?resizing_type=fit" alt="室外格架透光与灯笼场景" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/7288ea32-2254-4f20-bedf-319316f71c82?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>选中一盏在风中摆动的可定制灯光设备。正如你在<a href="lighting-starter-island-template-in-unreal-editor-for-fortnite.html">房间 3</a>中学到的，这些灯光有丰富的选项，能直接为你的项目提供固定的起点。</p>
+<p>其中一个选项是<strong>风摆（Windy）</strong>，但这只是一个没有网格体的灯光设备，所以试玩关卡时，你只会看到灯光在动，却看不到光源。</p>
+<p>使用 UEFN 的<a href="modeling-mode-in-unreal-editor-for-fortnite.html">建模工具</a>，先创建一个圆柱体，再围绕基础形状建模更多细节，做了一盏简易灯笼。之后为灯笼应用了贯穿所有房间的两种材质。</p>
+<p>最后使用 UVW 映射工具，调整用于伪造灯笼边缘亮度渐变的渐变贴图。这里用的原理与房间 1 的球体相同，只是灯笼增加了更多复杂度和细节。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/4973dcb1-c798-432d-898a-e10d92363edb?resizing_type=fit" alt="自定义灯笼与可定制灯光设备" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/4973dcb1-c798-432d-898a-e10d92363edb?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>做好自定义灯具后，把它作为组件加入可定制灯光设备的层级，这样它就能和灯光一样，以风摆模式同步运动。</p>
+<h2 id="sec-6">室外：灯光可扩展性管理器</h2>
+<p><strong>灯光可扩展性管理器（Lighting Scalability Manager）</strong>是本教程的最后一步。你将学习如何用灯光可扩展性管理器，为无法渲染环境光源装置全部天空效果的低端硬件生成自定义天球。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/0d46765d-fbba-42a1-9502-e835ef96ef5d?resizing_type=fit" alt="灯光可扩展性管理器" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/0d46765d-fbba-42a1-9502-e835ef96ef5d?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>专门制作了一个材质，用于在太阳移动时捕捉天空颜色。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/40f45d2a-db87-4309-a244-00aa193fdbef?resizing_type=fit" alt="捕捉天空颜色的特殊材质" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/40f45d2a-db87-4309-a244-00aa193fdbef?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>灯光可扩展性管理器用于启用或禁用在低端平台上生效的特定几何体、灯光或材质。如果你想为低端平台准备一整套独立的灯光来照亮场景，它会特别有用。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/75b40725-3b86-4a55-849e-f996d6b70b1d?resizing_type=fit" alt="低端平台启用的几何体与灯光" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/75b40725-3b86-4a55-849e-f996d6b70b1d?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h2 id="sec-7">需要牢记的事项</h2>
+<ul>
+<li>先想光影。问问自己直射光来自哪里。</li>
+<li>再想颜色与温度。字面意义上思考室外与室内场景的温度应该是怎样的体感：寒冷、温暖、炎热还是潮湿，这能帮你决定用哪些颜色。</li>
+<li>考虑场景需要的配套环境细节，比如雾、云和天空。</li>
+<li>可以用色差、暗角、辉光等微妙的后期效果，有效为灯光与场景增添深度与维度。</li>
+<li>密切关注环境光源装置设备、后期处理体、Lumen 曝光管理器后期处理体的重要优先级。</li>
+<li>始终在所有可扩展性下检查项目观感，确保没有与高端观感偏离太多。</li>
+<li>改动要大胆，如果总是以微小的线性增量设计项目，你察觉不到设置之间的差异，最终很可能得到一个扁平的场景，还不知道从何修起。大幅改动能帮你找到极限，再找回适合项目的中间值。用这种方法以最少的设置改动更快出效果。</li>
+</ul>
+<p>相关主题：<a href="https://dev.epicgames.com/community/search?query=performance" target="_blank" rel="noopener">性能（Performance）</a> · <a href="https://dev.epicgames.com/community/search?query=lighting" target="_blank" rel="noopener">灯光（Lighting）</a> · <a href="https://dev.epicgames.com/community/search?query=education" target="_blank" rel="noopener">教学（Education）</a> · <a href="https://dev.epicgames.com/community/search?query=level%20design" target="_blank" rel="noopener">关卡设计（Level Design）</a> · <a href="https://dev.epicgames.com/community/search?query=tech%20arts" target="_blank" rel="noopener">技术美术（Tech Arts）</a></p>
+<p>有问题可前往 <a href="https://forums.unrealengine.com/categories?tag=fortnite" target="_blank" rel="noopener">开发者论坛（Developer Forums）</a>提问并帮助同行；也可以前往<a href="https://dev.epicgames.com/community/fortnite/learning" target="_blank" rel="noopener">学习库（Learning Library）</a>编写或阅读教程。</p>
+<div class="pager"><a href="28-unreal-editor-for-fortnite-starter-templates.html"><small>← 返回父教程</small>UEFN 新手模板</a><a href="sub-index.html"><small>子教程索引 →</small>全部子教程</a></div>
+</article><nav class="doc-toc" aria-label="本页内容"><b>本页内容</b><a href="#sec-1">房间 1：基础</a><a href="#sec-2">房间 2：基础应用</a><a href="#sec-3">房间 3：可定制灯光设备</a><a href="#sec-4">房间 4：环境光源装置</a><a href="#sec-5">房间 5：室外可定制灯光设备</a><a href="#sec-6">室外：灯光可扩展性管理器</a><a href="#sec-7">需要牢记的事项</a></nav></div>
+</div></div>
+</div>
+<footer class="edc-footer"><div class="inner"><img src="../assets/logo-epic.svg" alt="Epic Games"><span>Fortnite 文档中文镜像 · UE教程/ · 本地打开 index.html 阅读 · 翻译整理自 Epic 官方文档，仅供学习交流</span></div></footer>
+</body>
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>在 Fortnite 创作模式中用相机与操控做设计 | Fortnite 文档中文镜像</title>
+<link rel="stylesheet" href="../assets/epic.css">
+<link rel="stylesheet" href="../assets/patch.css">
+<link rel="icon" href="../assets/logo-epic.svg">
+</head>
+<body class="theme-fortnite">
+<div class="edc-topbar"><div class="edc-topbar-inner"><img class="edc-logo" src="../assets/logo-epic.svg" alt="Epic Games"><span class="edc-brand">Epic Games <b>开发者社区</b></span><span class="edc-nav"><a href="../index.html">文档首页</a><a href="sub-index.html">子教程索引</a><a href="https://dev.epicgames.com/documentation/fortnite/designing-with-cameras-and-controls-in-fortnite-creative" target="_blank" rel="noopener">英文原文</a></span></div></div>
+<div class="site-container">
+<aside class="site-nav"><div class="documents-tree"><nav><ul class="contents-table">
+<div class="tree-sec">A · 最新动态</div><a class="tree-link" href="01-42-00-fortnite-ecosystem-updates-and-release-notes.html">01. 42.00 生态系统更新与发行说明</a><a class="tree-link" href="02-custom-items-and-inventory-overview-in-fortnite.html">02. 自定义物品与背包总览</a><a class="tree-link" href="03-in-island-transactions-in-fortnite.html">03. 岛内交易</a><a class="tree-link" href="04-mobile-development-in-fortnite.html">04. 移动端开发</a><a class="tree-link" href="05-inputs-in-fortnite.html">05. 输入系统</a><a class="tree-link" href="06-ability-system-in-unreal-editor-for-fortnite.html">06. 能力系统 Ability System</a><a class="tree-link" href="07-partybased-gameplay-using-the-social-synergy-api-in-fortnite.html">07. 社交协同 API 与小队玩法</a><a class="tree-link" href="08-scene-graph-in-unreal-editor-for-fortnite.html">08. 场景图 Scene Graph</a><div class="tree-sec">B · 入门</div><a class="tree-link" href="09-build-your-first-island-in-fortnite.html">09. 构建你的第一个岛屿</a><a class="tree-link" href="10-onboarding-guide-to-programming-with-verse-in-unreal-editor-for-fortnite.html">10. Verse 编程入门指南</a><a class="tree-link active" href="11-building-basics-in-fortnite-creative.html">11. 建造基础</a><div class="tree-sec">C · 品牌合集</div><a class="tree-link" href="12-star-wars-islands-in-fortnite.html">12. 星球大战™岛屿</a><a class="tree-link" href="13-kpop-demon-hunters-islands-in-fortnite.html">13. KPop 猎魔团岛屿</a><a class="tree-link" href="14-building-lego-islands-in-fortnite.html">14. 乐高®岛屿</a><a class="tree-link" href="15-the-walking-dead-universe-islands-in-unreal-editor-for-fortnite.html">15. 行尸走肉宇宙岛屿</a><a class="tree-link" href="16-teenage-mutant-ninja-turtle-islands-in-unreal-editor-for-fortnite.html">16. 忍者神龟岛屿</a><a class="tree-link" href="17-squid-game-islands-in-fortnite.html">17. 鱿鱼游戏岛屿</a><div class="tree-sec">D · 开发者成功</div><a class="tree-link" href="18-using-creator-portal-in-fortnite-creative.html">18. 使用创作者门户</a><a class="tree-link" href="19-island-moderation-and-guidelines-in-fortnite-creative.html">19. 岛屿审核与准则</a><div class="tree-sec">E · 协作</div><a class="tree-link" href="20-creating-teams-in-creator-portal-in-unreal-editor-for-fortnite.html">20. 在创作者门户创建团队</a><a class="tree-link" href="21-adding-playtesters-in-fortnite-creative.html">21. 添加试玩测试员</a><a class="tree-link" href="22-playtesting-your-island-in-unreal-editor-for-fortnite.html">22. 试玩测试你的岛屿</a><a class="tree-link" href="23-collaborating-in-unreal-editor-for-fortnite.html">23. 在 UEFN 中协作</a><a class="tree-link" href="24-lore-version-control-in-unreal-editor-for-fortnite.html">24. Lore 版本控制</a><a class="tree-link" href="25-conflicts-in-lore-version-control-in-unreal-editor-for-fortnite.html">25. Lore 中的冲突</a><a class="tree-link" href="26-version-history-and-conflict-resolution-in-unreal-editor-for-fortnite.html">26. 分支历史与冲突解决</a><div class="tree-sec">F · 游戏示例</div><a class="tree-link" href="27-build-a-game-in-unreal-editor-for-fortnite.html">27. 构建一款游戏</a><a class="tree-link" href="28-unreal-editor-for-fortnite-starter-templates.html">28. UEFN 新手模板</a><div class="tree-sec">G · Verse</div><a class="tree-link" href="29-learn-the-basics-of-writing-code-in-verse.html">29. 从零学习 Verse 代码基础</a><div class="tree-sec">H · 专注领域</div><a class="tree-link" href="30-lighting-in-unreal-editor-for-fortnite.html">30. 灯光</a><a class="tree-link" href="31-animation-and-cinematics-in-unreal-editor-for-fortnite.html">31. 动画与过场动画</a><a class="tree-link" href="32-modeling-in-unreal-editor-for-fortnite.html">32. 建模</a><a class="tree-link" href="33-materials-in-unreal-editor-for-fortnite.html">33. 材质</a><a class="tree-link" href="34-environments-and-landscapes-in-unreal-editor-for-fortnite.html">34. 环境与地形</a><a class="tree-link" href="35-audio-in-unreal-editor-for-fortnite.html">35. 音频</a><a class="tree-link" href="36-visual-effects-in-unreal-editor-for-fortnite.html">36. 视觉特效</a>
+</ul></nav></div></aside>
+<div class="page-content"><div class="page-document has-theme-bg">
+<header class="section-page-header"><nav><ol class="breadcrumb is-shrinkable"><li class="breadcrumb-item is-root"><img src="../assets/logo-epic.svg" alt="Epic Games"><a href="../index.html">Developer</a></li><li class="breadcrumb-item"><a href="../index.html">Fortnite 文档</a></li><li class="breadcrumb-item"><a href="11-building-basics-in-fortnite-creative.html">建造基础</a></li><li class="breadcrumb-item active" aria-current="page"><span class="text-truncate">在 Fortnite 创作模式中用相机与操控做设计</span></li></ol></nav><h1>在 Fortnite 创作模式中用相机与操控做设计</h1><p class="text-secondary mb-0">玩家视角能改变游戏的一切：动态相机让动作感更刺激，固定视角能营造悬念与恐怖。本页介绍每种相机的用法，以及如何为你想要的玩法调校操控。</p><p class="doc-meta">英文原标题：Designing with Cameras and Controls in Fortnite Creative · <a href="https://dev.epicgames.com/documentation/fortnite/designing-with-cameras-and-controls-in-fortnite-creative" target="_blank" rel="noopener">查看英文原文</a> · 社区翻译镜像，仅供学习</p></header>
+<div class="doc-columns"><article class="doc-article">
+
+<div class="block-callout warn">注意：欢迎学习这个 <strong>Beta</strong> 功能，但在正式发布作品时请谨慎使用。</div>
+<p>玩家视角能改变游戏的一切：动态相机可以强化动作感，让紧张时刻更刺激；固定视点则能营造悬念与恐怖。在相机之间切换可以激化情绪，也能加深玩家与游戏角色的羁绊。精心选择不同的相机视角，能显著塑造玩家的投入度、情感共鸣与整体游玩乐趣。</p>
+<p>在这一页，你将学到每种相机的用法，以及如何为你想要的玩法调校操控。</p>
+<p>文中涉及设备的更多信息，请参阅：</p>
+<ul>
+<li><a href="https://dev.epicgames.com/documentation/fortnite/using-fixed-point-camera-devices-in-fortnite-creative" target="_blank" rel="noopener">定点相机设备（Fixed Point Camera device）</a></li>
+<li><a href="https://dev.epicgames.com/documentation/fortnite/using-fixed-angle-camera-devices-in-fortnite-creative" target="_blank" rel="noopener">定角相机设备（Fixed Angle Camera device）</a></li>
+<li><a href="https://dev.epicgames.com/documentation/fortnite/using-third-person-controls-devices-in-fortnite-creative" target="_blank" rel="noopener">第三人称操控设备（Third Person Controls device）</a></li>
+<li><a href="https://dev.epicgames.com/documentation/fortnite/using-first-person-camera-devices-in-fortnite-creative" target="_blank" rel="noopener">第一人称模式操控设备（First Person Mode Controls device）</a></li>
+</ul>
+<p>请注意，切换相机时，必须使用<strong>第三人称操控（Third Person Controls）</strong>设备才能保持对玩家角色的控制。详见<a href="#sec-6">操控适配（Adapting Controls）</a>一节。</p>
+
+<h2 id="sec-1">定点相机</h2>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/eb64fd63-4590-4883-aaa2-777f4d07df8e?resizing_type=fit" alt="定点相机原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/eb64fd63-4590-4883-aaa2-777f4d07df8e?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>定点相机（Fixed point cameras）在整个玩法过程或特定区域内保持预设的位置与角度，并会随玩家动作动态调整。</p>
+<p>定点相机适用于多种情形，下面逐一展开。</p>
+<h3>用静态相机做小游戏</h3>
+<p>静态相机完全静止，捕捉游戏环境的固定画面。它们视角稳定，常用来打造精彩的小游戏。</p>
+<p>在下面的例子中，定点相机设备用于一场派对游戏：玩家要尽量长时间待在平台上，同时把其他玩家挤下去，还要躲避炮弹。</p>
+<p>注意看，玩家在浮空平台上移动时，相机会微微跟随。</p>
+<p>本例中定点相机修改了以下设置：</p>
+<table><thead><tr><th>选项</th><th>值</th><th>说明</th></tr></thead><tbody>
+<tr><td><strong>Field of View（视场）</strong></td><td>50.0</td><td>相机在垂直方向上能看到的角度（度）。</td></tr>
+<tr><td><strong>Look at Offset Distance（注视偏移距离）</strong></td><td>1.2</td><td>相机略向前移，偏移观察<a href="https://dev.epicgames.com/documentation/fortnite/fortnite-glossary#target" target="_blank" rel="noopener">目标（target）</a>。</td></tr>
+<tr><td><strong>Look at Offset Horizontal（注视水平偏移）</strong></td><td>0.24</td><td>相机向左 / 右移，偏移观察目标。</td></tr>
+<tr><td><strong>Look at Offset Vertical（注视垂直偏移）</strong></td><td>0.24</td><td>相机向上 / 下移，偏移观察目标。</td></tr>
+<tr><td><strong>Yaw Accelerations（偏航加速度）</strong></td><td>0.24</td><td>相机向左 / 右转向目标的加速快慢，0 为瞬时跟上。</td></tr>
+<tr><td><strong>Pitch Acceleration（俯仰加速度）</strong></td><td>0.24</td><td>相机向上 / 下转向目标的加速快慢，0 为瞬时跟上。</td></tr>
+</tbody></table>
+<p>为了让玩家能瞄准武器、让角色转向，关卡中还按默认设置放置了一个<strong>玩家控制器（Player Controller）</strong>设备。</p>
+<h3>用多台定点相机加悬念</h3>
+<p>在任何想堆紧张感的游戏中，都可以在关卡各处策略性地布置多台定点相机。本例中，玩家推进时相机视角不断切换，展现环境的不同侧面。玩家永远不知道下一个拐角后藏着什么，悬念自然拉满！</p>
+<p>当玩家进入<strong>突变区（Mutator Zone）</strong>设备，与该区域关联的定点相机就会添加到该玩家。</p>
+<p>如果你在 UEFN 中工作，放置相机时用变换 gizmo 的<strong>世界（World）</strong>设置会很顺手，可以保证相机与地面保持水平。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/15563187-5896-4168-a995-07b549dc2126?resizing_type=fit" alt="多定点相机布置原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/15563187-5896-4168-a995-07b549dc2126?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>玩家从一个突变区走到另一个突变区，相机会随位置添加与移除。因为地下室是只有一个出口的封闭空间，那里改用地板上的<strong>触发器（Trigger）</strong>设备而非突变区。</p>
+<p>本例中定点相机设备修改了以下设置：</p>
+<table><thead><tr><th>选项</th><th>值</th><th>说明</th></tr></thead><tbody>
+<tr><td><strong>Add to Players on Start（开局时添加到玩家）</strong></td><td>False</td><td>相机通过玩家与设备的交互来添加。</td></tr>
+<tr><td><strong>Transition In Time（切入时长）</strong></td><td>0.0</td><td>相机之间瞬时切换，戏剧效果更强。</td></tr>
+<tr><td><strong>Transition Out Time（切出时长）</strong></td><td>0.0</td><td>相机之间瞬时切换，戏剧效果更强。</td></tr>
+</tbody></table>
+<p>突变区关闭了<strong>启用特效（Enable VFX）</strong>设置，以保持沉浸感。</p>
+<p>触发器设备修改了以下设置：</p>
+<table><thead><tr><th>选项</th><th>值</th><th>说明</th></tr></thead><tbody>
+<tr><td><strong>Visible In Game（游戏中可见）</strong></td><td>False</td><td>不能让玩家知道自己踩到了触发器。</td></tr>
+<tr><td><strong>Trigger VFX（触发特效）</strong></td><td>False</td><td>不能让玩家知道自己踩到了触发器。</td></tr>
+<tr><td><strong>Trigger SFX（触发音效）</strong></td><td>False</td><td>不能让玩家知道自己踩到了触发器。</td></tr>
+</tbody></table>
+<p><strong>直接事件绑定（Direct Event Binding）</strong></p>
+<p>相机与设备的关联方式如下：</p>
+<table><thead><tr><th>设备</th><th>功能</th><th>设备</th><th>事件</th></tr></thead><tbody>
+<tr><td><strong>Fixed Point Camera（定点相机）</strong></td><td>Add to Player（添加到玩家）</td><td>Mutator Zone（突变区）</td><td>On Player Entering Zone（玩家进入区域时）</td></tr>
+<tr><td><strong>Fixed Point Camera（定点相机）</strong></td><td>Remove from Player（从玩家移除）</td><td>Mutator Zone（突变区）</td><td>On Player Exiting Zone（玩家离开区域时）</td></tr>
+<tr><td><strong>Fixed Point Camera（定点相机）</strong></td><td>Add to Player（添加到玩家）</td><td>Trigger（触发器）</td><td>On Triggered（触发时）</td></tr>
+</tbody></table>
+<h3>定点相机的优势</h3>
+<p>定点相机优势多多：</p>
+<ul>
+<li><strong>电影化呈现（Cinematic Presentation）</strong>：用精心挑选的角度呈现场景，制造电影时刻，增强叙事与沉浸感。</li>
+<li><strong>可控视点（Controlled Viewpoints）</strong>：设计师掌控玩家所见，确保关键元素或惊喜在特定时刻揭晓。</li>
+<li><strong>艺术指导（Artistic Direction）</strong>：定点相机能展示游戏的美术风格、建筑或环境细节。</li>
+<li><strong>玩法挑战（Gameplay Challenges）</strong>：限制视野可以考验玩家、增加难度，还能做出依赖隐藏信息的解谜。</li>
+</ul>
+<h3>定点相机的局限</h3>
+<p>稍不留神，定点相机会伤害玩家体验。做游戏时请记住这几点。</p>
+<ul>
+<li><strong>玩家掌控感有限（Limited Player Control）</strong>：不能自由操控相机时，玩家会觉得受束缚、找不着北，影响整体体验。</li>
+<li><strong>可能带来挫败（Potential for Frustration）</strong>：某些情形下定点相机会妨碍玩法，遮住重要信息或拖慢进度，让人恼火。</li>
+</ul>
+<p>作为岛屿创作者和游戏设计师，你必须权衡定点相机的利弊，让它为游戏体验加分，而不是给玩家添堵。</p>
+
+<h2 id="sec-2">定角相机</h2>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/4389e77c-1886-4875-84db-517c53acaabb?resizing_type=fit" alt="定角相机原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/4389e77c-1886-4875-84db-517c53acaabb?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>定角相机（Fixed angle cameras）跟随玩家移动，始终锁定同一角度，视角稳定。可以提供俯视、横版卷轴、等距等多种视点，玩家穿行游戏时始终有统一的视觉参照。这类相机在许多经典游戏中都很常见。</p>
+<h3>用定角相机做僵尸生存游戏</h3>
+<p>本例用定角相机设备还原经典俯视射击的感觉：玩家必须消灭尸潮来升级、获取更好的武器。</p>
+<p>可以看到两台定角相机之间有<a href="https://dev.epicgames.com/documentation/fortnite/fortnite-glossary#camera-transition" target="_blank" rel="noopener">过渡（transitions）</a>。玩家买武器时启用第一台，离开商店迎战尸潮时过渡到第二台。</p>
+<p>本例中第一台<strong>定角相机</strong>设备修改了以下设置：</p>
+<table><thead><tr><th>选项</th><th>值</th><th>说明</th></tr></thead><tbody>
+<tr><td><strong>Add to Players on Start（开局时添加到玩家）</strong></td><td>False</td><td>开局时不把这台相机添加到玩家。</td></tr>
+<tr><td><strong>Transition in Priority（切入优先级）</strong></td><td>10</td><td>相机过渡看优先级高低：比较当前相机的切出优先级与目标相机的切入优先级。</td></tr>
+<tr><td><strong>Transition in Type（切入方式）</strong></td><td>Linear（线性）</td><td>激活时的相机行为。</td></tr>
+<tr><td><strong>Transition in Time（切入时长）</strong></td><td>0</td><td>瞬时过渡。</td></tr>
+<tr><td><strong>Transition Out Type（切出方式）</strong></td><td>Linear（线性）</td><td>决定过渡风格。</td></tr>
+<tr><td><strong>Transition Out Time（切出时长）</strong></td><td>0</td><td>瞬时过渡。</td></tr>
+</tbody></table>
+<p>本例中第二台<strong>定角相机</strong>设备修改了以下设置：</p>
+<table><thead><tr><th>选项</th><th>值</th><th>说明</th></tr></thead><tbody>
+<tr><td><strong>Transition in Type（切入方式）</strong></td><td>Linear（线性）</td><td>激活时的相机行为。</td></tr>
+<tr><td><strong>Transition in Time（切入时长）</strong></td><td>0</td><td>瞬时过渡。</td></tr>
+<tr><td><strong>Transition Out Priority（切出优先级）</strong></td><td>2</td><td>相机过渡看优先级高低：比较当前相机的切出优先级与目标相机的切入优先级。</td></tr>
+<tr><td><strong>Transition Out Type（切出方式）</strong></td><td>Linear（线性）</td><td>决定过渡风格。</td></tr>
+<tr><td><strong>Transition Out Time（切出时长）</strong></td><td>0</td><td>瞬时过渡。</td></tr>
+<tr><td><strong>Collision Type（碰撞类型）</strong></td><td>Transparency（透明）</td><td>视线被挡时，把遮挡目标的物件变透明。</td></tr>
+</tbody></table>
+<p>本例中<strong>第三人称操控（Third Person Controls）</strong>设备修改了以下设置：</p>
+<table><thead><tr><th>选项</th><th>值</th><th>说明</th></tr></thead><tbody>
+<tr><td><strong>Interact Distance（交互距离）</strong></td><td>50</td><td>执行交互所需的玩家距离。</td></tr>
+<tr><td><strong>Rotation Rate（转向速率）</strong></td><td>600</td><td>玩家转向速率，单位为度 / 秒。</td></tr>
+<tr><td><strong>Shooting Locomotion Movement Speed（射击移动速度）</strong></td><td>400</td><td>射击时的移动速度，单位为米 / 秒。</td></tr>
+<tr><td><strong>Shooting Locomotion Rotation Rate（射击转向速率）</strong></td><td>600</td><td>射击时的玩家转向速率，单位为度 / 秒。</td></tr>
+<tr><td><strong>Aiming Locomotion Movement Speed（瞄准移动速度）</strong></td><td>400</td><td>瞄准时的移动速度，单位为米 / 秒。</td></tr>
+<tr><td><strong>Aiming Rotation Rate（瞄准转向速率）</strong></td><td>600</td><td>瞄准时的玩家转向速率，单位为度 / 秒。</td></tr>
+<tr><td><strong>Scale Weight by Angle（按角度缩放权重）</strong></td><td>0.7</td><td>影响目标优先级：目标离你越近，瞄准它的优先级越高。</td></tr>
+<tr><td><strong>Ranged Targeting Angle（远程索敌角度）</strong></td><td>180</td><td>按玩家朝向，有效目标所在的角度范围（度）。</td></tr>
+<tr><td><strong>Aim Targeting Angle（瞄准索敌角度）</strong></td><td>180</td><td>按玩家朝向，有效目标所在的角度范围（度）。</td></tr>
+</tbody></table>
+<h3>定角相机的优势</h3>
+<ul>
+<li><strong>艺术化呈现（Artistic Presentation）</strong>：精心构图，从特定角度展示游戏的视觉元素与艺术设计。</li>
+<li><strong>可控叙事（Controlled Narrative）</strong>：把相机架在关键位置，引导玩家注意关键剧情或风景。</li>
+<li><strong>稳定一致（Consistency）</strong>：视角稳定，玩家推进过程中始终有熟悉可靠的视点。</li>
+<li><strong>优化设计（Optimized Design）</strong>：关卡设计与玩法机制更简单，因为开发者能预判玩家在固定角度下看到什么，更容易做出聚焦的体验。</li>
+</ul>
+<h3>定角相机的局限</h3>
+<ul>
+<li><strong>探索受限（Limited Exploration）</strong>：不能自由转相机，玩家会觉得束手束脚，还可能错过细节。</li>
+<li><strong>视线遮挡（Obstructed Views）</strong>：固定角度有时会藏住关键信息、挡住视线，让人沮丧或困惑。</li>
+</ul>
+<p>忠于自己的创意愿景永远是第一位的，所以别为了“更好看的相机”牺牲玩法！</p>
+
+<h2 id="sec-3">环绕相机</h2>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/a73b37b1-787b-48ae-877c-0d5be5cba5d1?resizing_type=fit" alt="环绕相机原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/a73b37b1-787b-48ae-877c-0d5be5cba5d1?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>用<a href="https://dev.epicgames.com/documentation/fortnite/using-orbit-camera-devices-in-fortnite-creative" target="_blank" rel="noopener">环绕相机（orbit camera）</a>就像当自己动作大片的导演：可以绕中心点或角色旋转，从不同视角看环境。这类相机常见于开放世界游戏和 3D 平台跳跃游戏，让玩家更自由地掌控虚拟世界的视野，沉浸感更强。</p>
+<p>欢迎查看<a href="https://dev.epicgames.com/documentation/fortnite/orbit-camera-device-design-example-in-fortnite-creative" target="_blank" rel="noopener">环绕相机设备设计示例（Orbit Camera Device Design Example）</a>页面，了解在项目中使用环绕相机的趣味玩法！</p>
+
+<h2 id="sec-4">第一人称模式相机</h2>
+<p>用玩法模式“第一人称模式（Gameplay Mode: First Person Mode）”设备，把玩家放进第一人称视角。</p>
+<p>你可以用这个设备打造独特的第一人称射击，让玩家完全沉浸在你的玩法体验中。</p>
+<h3>第一人称模式相机的局限</h3>
+<p>使用第一人称模式设备有以下局限。</p>
+<ul>
+<li>除双持（Akimbo）与弹道盾牌（Ballistic Shield）外，大多数远程武器可用，但并非所有可用武器都有定制换弹动画。</li>
+<li>第一人称下部分玩家动作不可用。玩家做某些动作（如游泳、滑翔、跳伞）时会自动切回默认第三人称相机；还有些动作可能导致玩家的手或武器被隐藏。</li>
+<li>第一人称下没有阴影，某些情形可能出现裁剪或其他渲染问题。</li>
+<li>当前版本的设备不支持近战武器与载具。</li>
+</ul>
+
+<h2 id="sec-5">优先级系统</h2>
+<p>对相机设备来说，<strong>优先级（Priority）</strong>决定多个设备同时激活时谁说了算。</p>
+<p>放置设备时默认优先级为 <strong>0</strong>，即最低。优先级数字更高（1 及以上）的设备会覆盖优先级更低的设备。</p>
+<h3>可视化优先级</h3>
+<p>本例中，三台定角相机连着开 / 关。第一台设为<strong>优先级 0</strong>，右边两台都设为<strong>优先级 1</strong>。</p>
+<p>玩家永远看到优先级最高的激活相机。优先级相同时，玩家看到的是最近添加的那台。</p>
+<p>两台优先级 1 的相机没关掉之前，重新激活优先级 0 的相机是不会生效的。低优先级相机永远盖不过高优先级相机。</p>
+<h3>如何用优先级</h3>
+<p>用对了，优先级系统能极大简化工作流！</p>
+<p>不用写复杂的触发器逻辑：玩家进楼自动给TA加上高优先级相机，出去再移除即可。</p>
+<p>试着自己设计些场景吧！</p>
+
+<h2 id="sec-6">操控适配</h2>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/1c431012-d552-482d-a213-04f0c5c5ff56?resizing_type=fit" alt="操控适配对比原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/1c431012-d552-482d-a213-04f0c5c5ff56?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>只在关卡里放一台相机设备，玩家角色会永远朝着相机方向。第三人称操控设备会揣摩玩家意图，让角色朝向目标或移动方向。</p>
+<p>想做什么类型的游戏，就得把索敌逻辑校准到对应的手感。</p>
+<p>左边是设备默认设置：僵尸靠得很近才会被索敌，玩家要频繁调整才能把它们套进准星。</p>
+<p>右边大幅调高了自动索敌，玩家几乎只需按开火键，就能消灭屏幕上出现的每一只僵尸！</p>
+<p>右边例子的修改设置如下：</p>
+<ul>
+<li>Rotation Rate（转向速率）：800</li>
+<li>Rotate Toward Target（朝向目标旋转）：True</li>
+<li>Shooting Locomotion Rotation Rate（射击转向速率）：800</li>
+<li>Aiming Rotation Rate（瞄准转向速率）：800</li>
+<li>Scale Weight by Angle（按角度缩放权重）：1.0</li>
+<li>Ranged Targeting Angle（远程索敌角度）：180</li>
+<li>Aim Targeting Angle（瞄准索敌角度）：180</li>
+</ul>
+<p>想知道什么手感适合你的岛屿，最好的办法就是多试玩：自己测，也请别人测。</p>
+
+<h2 id="sec-7">边界与死区</h2>
+<p><a href="https://dev.epicgames.com/documentation/fortnite/fortnite-glossary#deadzone" target="_blank" rel="noopener">死区（deadzone）</a>指一块既定区域：玩家角色在里面移动时相机不动，走到死区边缘时相机才开始跟随目标。</p>
+<p>在下面的例子中，注意看玩家在死区里跑时相机静止，走出死区后相机才动起来。</p>
+<p>死区帮你管住玩家在特定区域的所见所做。</p>
+<p>死区也能玩艺术！把相机活动范围框在预设区域里，制造如画的风景或电影化构图，给游戏的视觉叙事加分。</p>
+<p><strong>边界（Boundaries）</strong>是相机不会越过的预设点位。</p>
+<p>注意看下面例子中相机在体块内跟随玩家，玩家走出体块后相机就停住。这就是相机边界定义的移动。</p>
+<p>横版卷轴游戏常把边界放在屏幕边缘。玩家走到这些区域时相机不再推进，直到玩家继续前进；一旦玩家越过某点，相机的边界可能不让TA回头，把人推着按关卡设计往前走。</p>
+
+<h2 id="sec-8">用 UEFN 让设计更上一层楼</h2>
+<p>相机与操控设备在 Fortnite 创作模式中可以直接用，但用 Fortnite 虚幻编辑器（UEFN）能把设计工作带到新高度。</p>
+<p>要了解 UEFN 中的相机用法，请参阅：</p>
+<ul>
+<li><a href="https://dev.epicgames.com/documentation/en-us/uefn/gameplay-camera-and-control-devices-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">玩法相机与操控设备（Gameplay Camera and Control Devices）</a></li>
+<li><a href="https://dev.epicgames.com/documentation/en-us/uefn/making-a-title-sequence-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">标题序列制作（Making a Title Sequence）</a>玩法示例</li>
+</ul>
+
+<div class="pager"><a href="11-building-basics-in-fortnite-creative.html"><small>← 返回父教程</small>建造基础</a><a href="sub-index.html"><small>子教程索引 →</small>全部子教程</a></div>
+</article><nav class="doc-toc" aria-label="本页内容"><b>本页内容</b><a href="#sec-1">定点相机</a><a href="#sec-2">定角相机</a><a href="#sec-3">环绕相机</a><a href="#sec-4">第一人称模式相机</a><a href="#sec-5">优先级系统</a><a href="#sec-6">操控适配</a><a href="#sec-7">边界与死区</a><a href="#sec-8">用 UEFN 让设计更上一层楼</a></nav></div>
+</div></div>
+</div>
+<footer class="edc-footer"><div class="inner"><img src="../assets/logo-epic.svg" alt="Epic Games"><span>Fortnite 文档中文镜像 · UE教程/ · 本地打开 index.html 阅读 · 翻译整理自 Epic 官方文档，仅供学习交流</span></div></footer>
+</body>
+</html>

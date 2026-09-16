@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>场景图组件（Components） | Fortnite 文档中文镜像</title>
+<link rel="stylesheet" href="../assets/epic.css">
+<link rel="stylesheet" href="../assets/patch.css">
+<link rel="icon" href="../assets/logo-epic.svg">
+</head>
+<body class="theme-fortnite">
+<div class="edc-topbar"><div class="edc-topbar-inner"><img class="edc-logo" src="../assets/logo-epic.svg" alt="Epic Games"><span class="edc-brand">Epic Games <b>开发者社区</b></span><span class="edc-nav"><a href="../index.html">文档首页</a><a href="sub-index.html">子教程索引</a><a href="https://dev.epicgames.com/documentation/fortnite/components-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">英文原文</a></span></div></div>
+<div class="site-container">
+<aside class="site-nav"><div class="documents-tree"><nav><ul class="contents-table">
+<div class="tree-sec">A最新动态</div>
+<a class="tree-link" href="01-42-00-fortnite-ecosystem-updates-and-release-notes.html">01. 42.00 生态系统更新与发行说明</a>
+<a class="tree-link" href="02-custom-items-and-inventory-overview-in-fortnite.html">02. 自定义物品与背包总览</a>
+<a class="tree-link" href="03-in-island-transactions-in-fortnite.html">03. 岛内交易</a>
+<a class="tree-link" href="04-mobile-development-in-fortnite.html">04. 移动端开发</a>
+<a class="tree-link" href="05-inputs-in-fortnite.html">05. 输入系统</a>
+<a class="tree-link" href="06-ability-system-in-unreal-editor-for-fortnite.html">06. 能力系统 Ability System</a>
+<a class="tree-link" href="07-partybased-gameplay-using-the-social-synergy-api-in-fortnite.html">07. 社交协同 API 与小队玩法</a>
+<a class="tree-link active" href="08-scene-graph-in-unreal-editor-for-fortnite.html">08. 场景图 Scene Graph</a>
+<div class="tree-sec">B入门</div>
+<a class="tree-link" href="09-build-your-first-island-in-fortnite.html">09. 构建你的第一个岛屿</a>
+<a class="tree-link" href="10-onboarding-guide-to-programming-with-verse-in-unreal-editor-for-fortnite.html">10. Verse 编程入门指南</a>
+<a class="tree-link" href="11-building-basics-in-fortnite-creative.html">11. 建造基础</a>
+<div class="tree-sec">C品牌合集</div>
+<a class="tree-link" href="12-star-wars-islands-in-fortnite.html">12. 星球大战™岛屿</a>
+<a class="tree-link" href="13-kpop-demon-hunters-islands-in-fortnite.html">13. KPop 猎魔团岛屿</a>
+<a class="tree-link" href="14-building-lego-islands-in-fortnite.html">14. 乐高®岛屿</a>
+<a class="tree-link" href="15-the-walking-dead-universe-islands-in-unreal-editor-for-fortnite.html">15. 行尸走肉宇宙岛屿</a>
+<a class="tree-link" href="16-teenage-mutant-ninja-turtle-islands-in-unreal-editor-for-fortnite.html">16. 忍者神龟岛屿</a>
+<a class="tree-link" href="17-squid-game-islands-in-fortnite.html">17. 鱿鱼游戏岛屿</a>
+<div class="tree-sec">D开发者成功</div>
+<a class="tree-link" href="18-using-creator-portal-in-fortnite-creative.html">18. 使用创作者门户</a>
+<a class="tree-link" href="19-island-moderation-and-guidelines-in-fortnite-creative.html">19. 岛屿审核与准则</a>
+<div class="tree-sec">E协作</div>
+<a class="tree-link" href="20-creating-teams-in-creator-portal-in-unreal-editor-for-fortnite.html">20. 在创作者门户创建团队</a>
+<a class="tree-link" href="21-adding-playtesters-in-fortnite-creative.html">21. 添加试玩测试员</a>
+<a class="tree-link" href="22-playtesting-your-island-in-unreal-editor-for-fortnite.html">22. 试玩测试你的岛屿</a>
+<a class="tree-link" href="23-collaborating-in-unreal-editor-for-fortnite.html">23. 在 UEFN 中协作</a>
+<a class="tree-link" href="24-lore-version-control-in-unreal-editor-for-fortnite.html">24. Lore 版本控制</a>
+<a class="tree-link" href="25-conflicts-in-lore-version-control-in-unreal-editor-for-fortnite.html">25. Lore 中的冲突</a>
+<a class="tree-link" href="26-version-history-and-conflict-resolution-in-unreal-editor-for-fortnite.html">26. 分支历史与冲突解决</a>
+<div class="tree-sec">F游戏示例</div>
+<a class="tree-link" href="27-build-a-game-in-unreal-editor-for-fortnite.html">27. 构建一款游戏</a>
+<a class="tree-link" href="28-unreal-editor-for-fortnite-starter-templates.html">28. UEFN 新手模板</a>
+<div class="tree-sec">G Verse</div>
+<a class="tree-link" href="29-learn-the-basics-of-writing-code-in-verse.html">29. 从零学习 Verse 代码基础</a>
+<div class="tree-sec">H专注领域</div>
+<a class="tree-link" href="30-lighting-in-unreal-editor-for-fortnite.html">30. 灯光</a>
+<a class="tree-link" href="31-animation-and-cinematics-in-unreal-editor-for-fortnite.html">31. 动画与过场动画</a>
+<a class="tree-link" href="32-modeling-in-unreal-editor-for-fortnite.html">32. 建模</a>
+<a class="tree-link" href="33-materials-in-unreal-editor-for-fortnite.html">33. 材质</a>
+<a class="tree-link" href="34-environments-and-landscapes-in-unreal-editor-for-fortnite.html">34. 环境与地形</a>
+<a class="tree-link" href="35-audio-in-unreal-editor-for-fortnite.html">35. 音频</a>
+<a class="tree-link" href="36-visual-effects-in-unreal-editor-for-fortnite.html">36. 视觉特效</a>
+</ul></nav></div></aside>
+<div class="page-content"><div class="page-document has-theme-bg">
+<header class="section-page-header"><nav><ol class="breadcrumb is-shrinkable"><li class="breadcrumb-item is-root"><img src="../assets/logo-epic.svg" alt="Epic Games"><a href="../index.html">Developer</a></li><li class="breadcrumb-item"><a href="../index.html">Fortnite 文档</a></li><li class="breadcrumb-item"><a href="08-scene-graph-in-unreal-editor-for-fortnite.html">场景图 Scene Graph</a></li><li class="breadcrumb-item active" aria-current="page"><span class="text-truncate">场景图组件（Components）</span></li></ol></nav><h1>场景图组件（Components）</h1><p class="text-secondary mb-0">组件为场景图中的实体提供数据与行为，定义实体在场景中应做的事情。默认情况下，所有实体都带有变换组件，用于确定实体在世界中的位置。</p><p class="doc-meta">英文原标题：Components in Unreal Editor for Fortnite · <a href="https://dev.epicgames.com/documentation/fortnite/components-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">查看英文原文</a> · 社区翻译镜像，仅供学习</p></header>
+<div class="doc-columns"><article class="doc-article">
+<div class="block-callout warn">注意：请学习使用这一 Beta 功能，但在正式发行项目时请谨慎使用。</div>
+<p>组件（Component）为场景图（Scene Graph）中的实体提供数据与行为。组件定义实体在场景中应做的事情。</p>
+<p>在场景图（Scene Graph）中，组件是聚焦的，即每个组件只对应一种行为或特性。将组件添加到实体后，实体与所分配的组件行为之间便建立了关联。</p>
+<p>组件具有可编辑属性，可以是物理属性（如静态网格体与粒子系统），也可以是逻辑属性（如游戏标签，或定义平台移动的自定义 Verse（Verse）代码）。默认情况下，所有实体都有变换（Transform）组件，用于指定实体在世界中的位置。</p>
+<p>以下是在 UEFN 中属于场景图（Scene Graph）的完整组件列表：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://dev.epicgames.com/documentation/fortnite/interactable-components"><strong>可交互组件</strong></a>——使用场景图（Scene Graph）实现交互的组件。</li>
+<li><a target="_blank" rel="noopener" href="https://dev.epicgames.com/documentation/fortnite/keyframed-movement-component-in-unreal-editor-for-fortnite"><strong>关键帧移动组件</strong></a>——关键帧移动（Keyframed Movement）组件支持你在 Unreal Editor for Fortnite 中通过添加关键帧来制作实体动画。</li>
+<li><a target="_blank" rel="noopener" href="https://dev.epicgames.com/documentation/fortnite/light-components-in-unreal-editor-for-fortnite"><strong>灯光组件</strong></a>——使用不同类型的灯光组件为项目添加灯光。</li>
+<li><a target="_blank" rel="noopener" href="https://dev.epicgames.com/documentation/fortnite/mesh-component-in-unreal-editor-for-fortnite"><strong>网格体组件</strong></a>——网格体（Mesh）组件为实体添加网格体，赋予其形态。</li>
+<li><a target="_blank" rel="noopener" href="https://dev.epicgames.com/documentation/fortnite/particle-system-component-in-unreal-editor-for-fortnite"><strong>粒子系统组件</strong></a>——使用粒子系统组件为项目添加 Niagara 特效。</li>
+<li><a target="_blank" rel="noopener" href="https://dev.epicgames.com/documentation/fortnite/sound-component-in-unreal-editor-for-fortnite"><strong>声音组件</strong></a>——使用声音组件为项目添加声音。</li>
+<li><a target="_blank" rel="noopener" href="https://dev.epicgames.com/documentation/fortnite/inventory-component-in-fortnite"><strong>背包组件</strong></a>——背包（Inventory）组件提供创建自定义背包的途径。</li>
+<li><a target="_blank" rel="noopener" href="https://dev.epicgames.com/documentation/fortnite/fort-inventory-component-in-fortnite"><strong>Fort 背包组件</strong></a>——使用 fort_inventory_component 为你的岛屿设计自定义 Fortnite 背包。</li>
+<li><a href="item-component-in-fortnite.html"><strong>物品组件</strong></a>——物品（Item）组件提供创建具有自定义属性的自定义物品的途径。</li>
+<li><a target="_blank" rel="noopener" href="https://dev.epicgames.com/documentation/fortnite/icon-component-in-fortnite"><strong>图标组件</strong></a>——图标（Icon）组件支持为你创建的物品添加自定义图标。</li>
+<li><a target="_blank" rel="noopener" href="https://dev.epicgames.com/documentation/fortnite/description-component-in-fortnite"><strong>描述组件</strong></a>——了解如何使用描述（Description）组件，为自定义物品与背包系统中的物品添加文本数据。</li>
+<li><a target="_blank" rel="noopener" href="https://dev.epicgames.com/documentation/fortnite/stackable-component-in-fortnite"><strong>可堆叠组件</strong></a>——可堆叠（Stackable）组件使实体可以形成堆叠。</li>
+<li><a target="_blank" rel="noopener" href="https://dev.epicgames.com/documentation/fortnite/fort-item-pickup-interactable-component-in-fortnite"><strong>Fort 物品拾取可交互组件</strong></a>——fort_item_pickup_interactable_component 支持 UEFN 角色将物品拾取到背包中。</li>
+</ul>
+<p>没有找到你需要的组件？试着自己动手做一个吧！查看如何<a target="_blank" rel="noopener" href="https://dev.epicgames.com/documentation/en-us/uefn/creating-your-own-component-using-verse-in-unreal-editor-for-fortnite">在 Verse（Verse）中创建你自己的组件</a>。</p>
+<p class="doc-tags">标签：<a href="https://dev.epicgames.com/community/search?query=verse" target="_blank" rel="noopener">verse</a></p>
+<p><strong>欢迎提问并帮助你的同行：</strong><a href="https://forums.unrealengine.com/categories?tag=fortnite" target="_blank" rel="noopener">开发者论坛（Developer Forums）</a></p>
+<p><strong>编写你自己的教程，或阅读他人的教程：</strong><a href="https://dev.epicgames.com/community/fortnite/learning" target="_blank" rel="noopener">学习库（Learning Library）</a></p>
+<div class="pager"><a href="08-scene-graph-in-unreal-editor-for-fortnite.html"><small>← 返回父教程</small>场景图 Scene Graph</a><a href="sub-index.html"><small>子教程索引 →</small>全部子教程</a></div>
+</article><nav class="doc-toc" aria-label="本页内容"><b>本页内容</b></nav></div>
+</div></div>
+</div>
+<footer class="edc-footer"><div class="inner"><img src="../assets/logo-epic.svg" alt="Epic Games"><span>Fortnite 文档中文镜像 · UE教程/ · 本地打开 index.html 阅读 · 翻译整理自 Epic 官方文档，仅供学习交流</span></div></footer>
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>在 UEFN 中使用 LiveLink Hub | Fortnite 文档中文镜像</title>
+<link rel="stylesheet" href="../assets/epic.css">
+<link rel="stylesheet" href="../assets/patch.css">
+<link rel="icon" href="../assets/logo-epic.svg">
+</head>
+<body class="theme-fortnite">
+<div class="edc-topbar"><div class="edc-topbar-inner"><img class="edc-logo" src="../assets/logo-epic.svg" alt="Epic Games"><span class="edc-brand">Epic Games <b>开发者社区</b></span><span class="edc-nav"><a href="../index.html">文档首页</a><a href="sub-index.html">子教程索引</a><a href="https://dev.epicgames.com/documentation/fortnite/using-livelink-hub-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">英文原文</a></span></div></div>
+<div class="site-container">
+<aside class="site-nav"><div class="documents-tree"><nav><ul class="contents-table">
+<div class="tree-sec">A最新动态</div><a class="tree-link" href="01-42-00-fortnite-ecosystem-updates-and-release-notes.html">01. 42.00 生态系统更新与发行说明</a><a class="tree-link" href="02-custom-items-and-inventory-overview-in-fortnite.html">02. 自定义物品与背包总览</a><a class="tree-link" href="03-in-island-transactions-in-fortnite.html">03. 岛内交易</a><a class="tree-link" href="04-mobile-development-in-fortnite.html">04. 移动端开发</a><a class="tree-link" href="05-inputs-in-fortnite.html">05. 输入系统</a><a class="tree-link" href="06-ability-system-in-unreal-editor-for-fortnite.html">06. 能力系统 Ability System</a><a class="tree-link" href="07-partybased-gameplay-using-the-social-synergy-api-in-fortnite.html">07. 社交协同 API 与小队玩法</a><a class="tree-link" href="08-scene-graph-in-unreal-editor-for-fortnite.html">08. 场景图 Scene Graph</a><div class="tree-sec">B入门</div><a class="tree-link" href="09-build-your-first-island-in-fortnite.html">09. 构建你的第一个岛屿</a><a class="tree-link" href="10-onboarding-guide-to-programming-with-verse-in-unreal-editor-for-fortnite.html">10. Verse 编程入门指南</a><a class="tree-link" href="11-building-basics-in-fortnite-creative.html">11. 建造基础</a><div class="tree-sec">C品牌合集</div><a class="tree-link" href="12-star-wars-islands-in-fortnite.html">12. 星球大战™岛屿</a><a class="tree-link" href="13-kpop-demon-hunters-islands-in-fortnite.html">13. KPop 猎魔团岛屿</a><a class="tree-link" href="14-building-lego-islands-in-fortnite.html">14. 乐高®岛屿</a><a class="tree-link" href="15-the-walking-dead-universe-islands-in-unreal-editor-for-fortnite.html">15. 行尸走肉宇宙岛屿</a><a class="tree-link" href="16-teenage-mutant-ninja-turtle-islands-in-unreal-editor-for-fortnite.html">16. 忍者神龟岛屿</a><a class="tree-link" href="17-squid-game-islands-in-fortnite.html">17. 鱿鱼游戏岛屿</a><div class="tree-sec">D开发者成功</div><a class="tree-link" href="18-using-creator-portal-in-fortnite-creative.html">18. 使用创作者门户</a><a class="tree-link" href="19-island-moderation-and-guidelines-in-fortnite-creative.html">19. 岛屿审核与准则</a><div class="tree-sec">E协作</div><a class="tree-link" href="20-creating-teams-in-creator-portal-in-unreal-editor-for-fortnite.html">20. 在创作者门户创建团队</a><a class="tree-link" href="21-adding-playtesters-in-fortnite-creative.html">21. 添加试玩测试员</a><a class="tree-link" href="22-playtesting-your-island-in-unreal-editor-for-fortnite.html">22. 试玩测试你的岛屿</a><a class="tree-link" href="23-collaborating-in-unreal-editor-for-fortnite.html">23. 在 UEFN 中协作</a><a class="tree-link" href="24-lore-version-control-in-unreal-editor-for-fortnite.html">24. Lore 版本控制</a><a class="tree-link" href="25-conflicts-in-lore-version-control-in-unreal-editor-for-fortnite.html">25. Lore 中的冲突</a><a class="tree-link" href="26-version-history-and-conflict-resolution-in-unreal-editor-for-fortnite.html">26. 分支历史与冲突解决</a><div class="tree-sec">F游戏示例</div><a class="tree-link" href="27-build-a-game-in-unreal-editor-for-fortnite.html">27. 构建一款游戏</a><a class="tree-link" href="28-unreal-editor-for-fortnite-starter-templates.html">28. UEFN 新手模板</a><div class="tree-sec">G Verse</div><a class="tree-link" href="29-learn-the-basics-of-writing-code-in-verse.html">29. 从零学习 Verse 代码基础</a><div class="tree-sec">H专注领域</div><a class="tree-link" href="30-lighting-in-unreal-editor-for-fortnite.html">30. 灯光</a><a class="tree-link active" href="31-animation-and-cinematics-in-unreal-editor-for-fortnite.html">31. 动画与过场动画</a><a class="tree-link" href="32-modeling-in-unreal-editor-for-fortnite.html">32. 建模</a><a class="tree-link" href="33-materials-in-unreal-editor-for-fortnite.html">33. 材质</a><a class="tree-link" href="34-environments-and-landscapes-in-unreal-editor-for-fortnite.html">34. 环境与地形</a><a class="tree-link" href="35-audio-in-unreal-editor-for-fortnite.html">35. 音频</a><a class="tree-link" href="36-visual-effects-in-unreal-editor-for-fortnite.html">36. 视觉特效</a>
+</ul></nav></div></aside>
+<div class="page-content"><div class="page-document has-theme-bg">
+<header class="section-page-header"><nav><ol class="breadcrumb is-shrinkable"><li class="breadcrumb-item is-root"><img src="../assets/logo-epic.svg" alt="Epic Games"><a href="../index.html">Developer</a></li><li class="breadcrumb-item"><a href="../index.html">Fortnite 文档</a></li><li class="breadcrumb-item"><a href="31-animation-and-cinematics-in-unreal-editor-for-fortnite.html">动画与过场动画</a></li><li class="breadcrumb-item active" aria-current="page"><span class="text-truncate">在 UEFN 中使用 LiveLink Hub</span></li></ol></nav><h1>在 UEFN 中使用 LiveLink Hub</h1><p class="text-secondary mb-0">LiveLink Hub（LiveLink Hub）是独立可执行程序，以单独进程在工作站上运行，可将动捕录制系统的数据流式传输到 UEFN。本教程介绍其面板与工具，并演示为 FN 骨架创建 IK 装配、流式传输、同步时间码与录制动画的完整步骤。</p><p class="doc-meta">英文原标题：Using LiveLink Hub in Unreal Editor for Fortnite · <a href="https://dev.epicgames.com/documentation/fortnite/using-livelink-hub-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">查看英文原文</a> · 社区翻译镜像，仅供学习</p></header>
+<div class="doc-columns"><article class="doc-article">
+
+<p><strong>LiveLink Hub</strong> 是独立可执行程序，以单独进程在你的工作站上启动。通过 LiveLink Hub，你可以将动捕录制系统的数据流式传输到 UEFN。</p>
+<p>使用 <strong>LiveLink Hub</strong> 从动捕录制系统采集数据，用作 FN 骨架角色的动画，再用这些动画创造符合 NPC 个性与主题的动作。</p>
+<p>然后你可以使用<strong><a href="https://dev.epicgames.com/documentation/unreal-engine/BlueprintAPI/VirtualCamera/TakeRecorder?application_version=5.5" target="_blank" rel="noopener">镜头录制器（Take Recorder）</a></strong>录制在 LiveLink Hub 中捕捉到的实时动画。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/d9df66c8-e5da-4e92-92a0-0220df635381?resizing_type=fit" alt="LiveLink Hub 总览原文示意图1" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/d9df66c8-e5da-4e92-92a0-0220df635381?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>要启动 LiveLink Hub，前往<strong>工具（Tools）&gt; LiveLink Hub</strong>。</p>
+<p>按照 <a href="#sec-1">LiveLink Hub 教程</a>逐步学习该工具的用法。</p>
+<h2 id="sec-1">使用 LiveLink Hub</h2>
+<p>下面介绍 LiveLink Hub 的功能与工具。LiveLink Hub 顶部有录制动画的任务栏，以及三个面板，下文按对应编号拆解说明。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/298332ae-3415-41b5-8258-23d19757cc1f?resizing_type=fit" alt="LiveLink Hub 面板分布原文示意图2" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/298332ae-3415-41b5-8258-23d19757cc1f?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ul>
+<li><a href="#sec-1">录制按钮（Record Button）</a></li>
+<li><a href="#sec-1">时间码栏（Timecode Bar）</a></li>
+<li><a href="#sec-1">源面板（Sources Panel）</a></li>
+<li><a href="#sec-1">主体面板（Subjects Panel）</a></li>
+<li><a href="#sec-1">客户端面板（Clients Panel）</a></li>
+</ul>
+<h3>录制按钮</h3>
+<p>使用该按钮录制并保存实时动画。点击<strong>录制（Record）</strong>开始录制动画，再次点击保存。</p>
+<h3>时间码栏</h3>
+<p>该栏显示从动捕录制系统采集数据的时间码。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/3afab1c4-6aa7-4022-a9fd-8401d694c8ed?resizing_type=fit" alt="时间码栏原文示意图3" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/3afab1c4-6aa7-4022-a9fd-8401d694c8ed?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>选择下拉框可将系统时间切换为 24、30 或 60 fps。</p>
+<h3>源面板</h3>
+<p>该面板显示电脑或网络上将向 UEFN 流式传输动画的设备，你可以查看动捕系统的源类型、源机器与状态。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/1b3a230a-c6c5-4cfd-abf7-01b19b1082d9?resizing_type=fit" alt="源面板原文示意图4" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/1b3a230a-c6c5-4cfd-abf7-01b19b1082d9?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>在<strong>源（Sources）</strong>面板中点击<strong>添加源（Add Source）</strong>，可选择以下 LiveLink 源：</p>
+<ul>
+<li>Apple ARKit Source</li>
+<li>LiveLinkInputDevice Source</li>
+<li>Message Bus Source</li>
+<li>Mocopi LiveLink</li>
+<li>Pose AI App</li>
+<li>Rokoko Studio Source</li>
+<li>1Vicon Data Stream Source</li>
+</ul>
+<h3>主体面板</h3>
+<p>该面板保存动画主体，即正在流式传输的单个角色或物体。</p>
+<h3>客户端面板</h3>
+<p>该面板显示电脑上已打开或网络上可访问的 UE/UEFN 会话。默认情况下，<strong>LiveLink Hub</strong> 会自动连接你的 UEFN 会话并开始流式传输动画数据。</p>
+<p>本教程将带你搭建项目，在 FN 骨架角色上捕捉并录制动画，这些动画可用于<strong><a href="https://dev.epicgames.com/documentation/en-us/fortnite-creative/using-character-devices-in-fortnite-creative" target="_blank" rel="noopener">角色（Character）</a></strong>设备的 Fortnite 角色。</p>
+<p>你将首先为导入的 FN 骨架骨骼网格体资产创建<strong><a href="https://dev.epicgames.com/documentation/en-us/unreal-engine/unreal-engine-ik-rig?application_version=5.4" target="_blank" rel="noopener">反向动力学（IK，Inverse Kinematics）装配</a></strong>。IK 装配用于操作骨骼网格体上的区域以创建动画。</p>
+<p>然后将动捕数据流式传输到 <strong>LiveLink Hub</strong>并录制，用于 gameplay 与过场动画。<strong>LiveLink Hub</strong>是向 UEFN 流式传输动画数据的统一接口工具。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/5b7a190a-6c17-4cf9-a5c4-9b3f7c2994d7?resizing_type=fit" alt="动捕数据流式传输原文示意图5" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/5b7a190a-6c17-4cf9-a5c4-9b3f7c2994d7?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>开始本教程前，请从<strong>项目浏览器</strong>的<strong>功能示例</strong>部分基于<strong>动画（Animation）</strong>模板创建项目。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/8f01fb0a-2276-47a7-8439-fec11e458e9d?resizing_type=fit" alt="动画模板原文示意图6" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/8f01fb0a-2276-47a7-8439-fec11e458e9d?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h2 id="sec-2">创建 IK 装配</h2>
+<p>按以下步骤从导入的骨骼网格体资产创建 IK 装配。</p>
+<ul>
+<li>在项目<strong>内容浏览器</strong>中前往你的项目文件夹。</li>
+<li>右键点击项目文件夹，选择<strong>新建文件夹（New Folder）</strong>，将 mocopi 导入命名为“Mocopi”。</li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/c8f416aa-4072-436a-961d-393b98d37da4?resizing_type=fit" alt="新建 Mocopi 文件夹原文示意图7" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/c8f416aa-4072-436a-961d-393b98d37da4?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ul><li>访问 <a href="https://epicgames.ent.box.com/s/znq8n2bpfc09zcp96sln9wn1cw8wzrq3" target="_blank" rel="noopener">Epic Games Box 站点</a>下载 mocopi 骨骼网格体资产。</li>
+<li>下载完成后，从<strong>内容浏览器</strong>工具栏选择<strong>导入（Import）</strong>，选择下载的 mocopi 资产。</li></ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/ce4e4a2d-0dc7-46dc-9aee-a6a002067550?resizing_type=fit" alt="导入 mocopi 资产原文示意图8" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/ce4e4a2d-0dc7-46dc-9aee-a6a002067550?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ul><li>导入 .fbx 文件时确保<strong>骨骼（Skeleton）</strong>字段为空，然后选择<strong>全部导入（Import All）</strong>。</li></ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/ecbd3710-82c5-440d-a946-a3e0fa473c64?resizing_type=fit" alt="导入设置原文示意图9" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/ecbd3710-82c5-440d-a946-a3e0fa473c64?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ul><li>记下创建的资产。</li></ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/7010a00f-d79a-4619-800a-4a6fc36547d3?resizing_type=fit" alt="导入生成的资产原文示意图10" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/7010a00f-d79a-4619-800a-4a6fc36547d3?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ul><li>在<strong>内容浏览器</strong>中找到 Mocopi 资产，右键点击“MocopiMannequin”骨骼网格体，前往<strong>创建（Create）&gt; IK 装配（IK Rig）</strong>。</li></ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/0cf04040-185d-43e3-957d-09bc0e548b96?resizing_type=fit" alt="创建 IK 装配原文示意图11" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/0cf04040-185d-43e3-957d-09bc0e548b96?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ul><li>双击新的 IK 装配资产“IK_Mocopi Mannequin”打开资产窗口。</li></ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/0d89c085-10ec-4266-8616-0e9c08661e54?resizing_type=fit" alt="打开 IK 装配资产原文示意图12" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/0d89c085-10ec-4266-8616-0e9c08661e54?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ul><li>在新窗口中点击<strong>自动创建重定向链（Auto Create Retarget Chains）</strong>，再点击<strong>自动创建 IK（Auto Create IK）</strong>，保存资产。</li></ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/ca4486da-9519-4be4-aa5a-105921034b52?resizing_type=fit" alt="自动创建重定向链与 IK 原文示意图13" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/ca4486da-9519-4be4-aa5a-105921034b52?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>Mocopi 骨骼将是 UEFN 识别的唯一资产。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/1cdc0bb2-294d-4f2c-9f7f-f095da6a40c6?resizing_type=fit" alt="Mocopi 骨骼原文示意图14" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/1cdc0bb2-294d-4f2c-9f7f-f095da6a40c6?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>这两个操作将创建全身解算所需的 FK 链与 IK 效应器。</p>
+<ul><li>接下来在<strong>内容浏览器</strong>中右键点击新的 IK 装配资产“IK_Mocopi Mannequin”，选择<strong>创建 IK 重定向器（Create IK Retargeter）</strong>。</li></ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/2be44a73-479f-4a83-a98f-397372fefb7d?resizing_type=fit" alt="创建 IK 重定向器原文示意图15" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/2be44a73-479f-4a83-a98f-397372fefb7d?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ul><li>双击刚创建的 IK 重定向器资产。</li></ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/895154c9-c0bb-4502-917a-8dcf3adab11c?resizing_type=fit" alt="打开 IK 重定向器原文示意图16" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/895154c9-c0bb-4502-917a-8dcf3adab11c?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ul><li>在新窗口的<strong>细节</strong>面板中打开<strong>目标 IK 装配资产（Target IKRig Asset）</strong>下拉菜单，选择“IK_FN_Mannequin”。</li></ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/4ba6c73f-ee9a-4bf4-812d-2eaf346831d0?resizing_type=fit" alt="选择目标 IK 装配原文示意图17" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/4ba6c73f-ee9a-4bf4-812d-2eaf346831d0?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ul>
+<li>在<strong>视口</strong>工具栏点击<strong>运行重定向（Running Retarget）</strong>，将重定向资产切换为<strong>编辑重定向姿势（Edit Retarget Pose）</strong>。</li>
+<li>前往<strong>自动对齐（Auto Align）</strong>下拉菜单，选择<strong>对齐所有骨骼（Align All Bones）</strong>。</li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/7a6d152c-3349-44bf-ad5d-fcd055772138?resizing_type=fit" alt="自动对齐骨骼原文示意图18" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/7a6d152c-3349-44bf-ad5d-fcd055772138?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ul><li>保存你的资产。</li></ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/dd4afd0f-6ad2-4aa4-9fe4-83254b42445a?resizing_type=fit" alt="保存资产原文示意图19" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/dd4afd0f-6ad2-4aa4-9fe4-83254b42445a?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>现在你应该看到两套骨骼相互对齐。你还可以进一步<a href="https://dev.epicgames.com/documentation/en-us/unreal-engine/ik-rig-animation-retargeting-in-unreal-engine?application_version=5.3" target="_blank" rel="noopener">重定向（retargeting）</a>源与目标骨骼的基础旋转。</p>
+<p>接下来通过 LiveLink Hub 将实时动画数据引入 UEFN。</p>
+<h2 id="sec-3">流式传输到 LiveLink Hub</h2>
+<p>按以下步骤将你的资产作为动画导入。本例使用 Sony mocopi 动捕系统。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/0022448a-cf61-4178-b9bd-051dec49170f?resizing_type=fit" alt="mocopi 系统原文示意图20" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/0022448a-cf61-4178-b9bd-051dec49170f?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ul>
+<li>前往<strong>工具（Tools）&gt; LiveLink Hub</strong> 打开 LiveLink Hub。</li>
+<li>选择<strong>添加源（Add Source）</strong> &lt; <strong>Mocopi LiveLink</strong> &lt; <strong>创建 Mocopi 源（Create Mocopi Source）</strong>，将 mocopi 源加入 LiveLink Hub。</li>
+<li>添加 mocopi 源后，你会在<strong>主体（Subjects）</strong>面板看到新增的主体。主体旁绿色图标表示健康，黄色图标表示数据过期、当前未激活。</li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/60abb3af-1792-4fa2-a652-5b4869e9f36a?resizing_type=fit" alt="主体面板状态原文示意图21" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/60abb3af-1792-4fa2-a652-5b4869e9f36a?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ul>
+<li>在 UEFN 会话中将 MocopiMannequin 骨骼网格体拖入关卡。</li>
+<li>注意 UEFN 底部工具栏的 LiveLink Hub 已连接提示。</li>
+<li>接下来将 FN_Mannequin 加入关卡。</li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/1c8c6a6f-61f2-40b9-9a8d-39edbdb591bd?resizing_type=fit" alt="关卡中的骨架原文示意图22" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/1c8c6a6f-61f2-40b9-9a8d-39edbdb591bd?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ul>
+<li>在<strong>大纲</strong>或<strong>视口</strong>中选中 MocopiMannequin。</li>
+<li>在<strong>细节</strong>面板点击<strong>添加（Add）</strong>，输入“Performer Component”。</li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/93f3611e-866a-4516-b59d-d9880581d67e?resizing_type=fit" alt="添加表演者组件原文示意图23" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/93f3611e-866a-4516-b59d-d9880581d67e?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ul><li>选中新的表演者组件，在<strong>主体名称（Subject Name）</strong>字段选择你的 MocopiSkeleton 主体。</li></ul>
+<p>此时在<strong>视口</strong>中可以看到动捕已应用到 MocopiMannequin。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/4717adf0-26cb-4d51-a67c-3a03f92559ef?resizing_type=fit" alt="动捕应用效果原文示意图24" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/4717adf0-26cb-4d51-a67c-3a03f92559ef?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ul>
+<li>接下来在<strong>视口</strong>或<strong>大纲</strong>中选中 FN_Mannequin。</li>
+<li>在<strong>细节</strong>面板点击<strong>添加（Add）</strong>，输入“Retarget Component”。</li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/2c90beff-6d64-491e-9df2-19463543a5a1?resizing_type=fit" alt="添加重定向组件原文示意图25" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/2c90beff-6d64-491e-9df2-19463543a5a1?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ul><li>选中新的重定向组件，打开重定向资产下拉菜单，选择之前创建的 RTG_MocopiMannequin。</li></ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/01038cdf-c5aa-4fa6-b065-cbb137148a46?resizing_type=fit" alt="选择重定向资产原文示意图26" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/01038cdf-c5aa-4fa6-b065-cbb137148a46?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ul><li>在<strong>细节</strong>面板打开源骨骼网格体组件，从下拉菜单选择 MocopiMannequin 下的骨骼网格体（SkeletalMesh）。</li></ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/b3e943fe-c89a-43aa-8247-4439534f3bcf?resizing_type=fit" alt="选择源骨骼网格体原文示意图27" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/b3e943fe-c89a-43aa-8247-4439534f3bcf?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ul><li>此时在<strong>视口</strong>中可以看到 MocopiMannequin 与 FN_Mannequin 网格体都有动画。</li></ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/0a2d5286-26e8-4795-9f29-dfbfc528fc7a?resizing_type=fit" alt="双骨架动画原文示意图28" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/0a2d5286-26e8-4795-9f29-dfbfc528fc7a?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h2 id="sec-4">同步时间码</h2>
+<p>按以下步骤从 LiveLink Hub 设置 UEFN 时间码速率，确保动画以正确的帧率录制。</p>
+<ul>
+<li>在 LiveLink Hub 中点击时间码下拉菜单。</li>
+<li>勾选<strong>启用时间码源（Enable Timecode Source）</strong>，将时间码提供程序设为 SystemTime 到 30fps。</li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/2aff254c-11b1-4235-9a64-bf95115db557?resizing_type=fit" alt="启用时间码源原文示意图29" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/2aff254c-11b1-4235-9a64-bf95115db557?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/1d05a218-1efd-4fda-a165-52cafce9828d?resizing_type=fit" alt="时间码 30fps 原文示意图30" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/1d05a218-1efd-4fda-a165-52cafce9828d?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>LiveLink 将显示时间码为 30fps、时间以及绿色图标，表示时间码正在发送到 UEFN。</p>
+<h2 id="sec-5">录制动画</h2>
+<p>按以下步骤在 FN 骨架角色上捕捉动画序列，以应用于<strong>角色（Character）</strong>设备的 Fortnite 角色。</p>
+<ul><li>在 UEFN 工具栏前往<strong>窗口（Window）&gt; 过场动画（Cinematics）&gt; <a href="https://dev.epicgames.com/documentation/en-us/unreal-engine/recording-animation-using-take-recorder-in-unreal-engine?application_version=5.3" target="_blank" rel="noopener">镜头录制器（Take Recorder）</a></strong>。</li></ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/60f0adb7-61f4-421b-a994-efb57044d23d?resizing_type=fit" alt="打开镜头录制器原文示意图31" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/60f0adb7-61f4-421b-a994-efb57044d23d?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ul><li>从<strong>大纲</strong>将 FN 骨架拖入<strong>镜头录制器（Take Recorder）</strong>。</li></ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/b3cfe1a4-77f1-4734-9871-172ee05cb33a?resizing_type=fit" alt="拖入 FN 骨架原文示意图32" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/b3cfe1a4-77f1-4734-9871-172ee05cb33a?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ul><li>按下录制图标开始录制动画。</li></ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/a30477aa-e366-465c-adac-a276e8464d1a?resizing_type=fit" alt="开始录制原文示意图33" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/a30477aa-e366-465c-adac-a276e8464d1a?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ul><li>接下来按下胶片图标查看上次录制。</li></ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/f36103d3-1550-4138-8e6e-2a34ed8c0bd9?resizing_type=fit" alt="查看录制原文示意图34" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/f36103d3-1550-4138-8e6e-2a34ed8c0bd9?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ul><li>再次按下录制图标结束录制。</li></ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/1167287d-7e70-485f-affe-ad6993c82e54?resizing_type=fit" alt="结束录制原文示意图35" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/1167287d-7e70-485f-affe-ad6993c82e54?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ul><li>选择图标查看上次录制以观看你的动画。</li></ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/38a88629-5288-40d8-8811-dcd68beed97f?resizing_type=fit" alt="回看动画原文示意图36" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/38a88629-5288-40d8-8811-dcd68beed97f?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>你录制的关卡序列现在将加载供你查看。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/542aca41-6905-4184-8ab7-774e0cb78f10?resizing_type=fit" alt="录制的关卡序列原文示意图37" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/542aca41-6905-4184-8ab7-774e0cb78f10?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>你的角色会像未被录制一样继续播放动画。最终成果是 Fortnite 骨架角色上的动画序列，可将其应用于角色设备。</p>
+<p>标签：animation、camera</p>
+<div class="block-callout">在<a href="https://forums.unrealengine.com/categories?tag=fortnite" target="_blank" rel="noopener">开发者论坛（Developer Forums）</a>提问并帮助同行。在<a href="https://dev.epicgames.com/community/fortnite/learning" target="_blank" rel="noopener">学习库（Learning Library）</a>编写自己的教程或阅读他人的教程。</div>
+
+<div class="pager"><a href="31-animation-and-cinematics-in-unreal-editor-for-fortnite.html"><small>← 返回父教程</small>动画与过场动画</a><a href="sub-index.html"><small>子教程索引 →</small>全部子教程</a></div>
+</article><nav class="doc-toc" aria-label="本页内容"><b>本页内容</b><a href="#sec-1">使用 LiveLink Hub</a><a href="#sec-2">创建 IK 装配</a><a href="#sec-3">流式传输到 LiveLink Hub</a><a href="#sec-4">同步时间码</a><a href="#sec-5">录制动画</a></nav></div>
+</div></div>
+</div>
+<footer class="edc-footer"><div class="inner"><img src="../assets/logo-epic.svg" alt="Epic Games"><span>Fortnite 文档中文镜像 · UE教程/ · 本地打开 index.html 阅读 · 翻译整理自 Epic 官方文档，仅供学习交流</span></div></footer>
+</body>
+</html>

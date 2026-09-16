@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>场景图（Scene Graph）最佳实践 | Fortnite 文档中文镜像</title>
+<link rel="stylesheet" href="../assets/epic.css">
+<link rel="stylesheet" href="../assets/patch.css">
+<link rel="icon" href="../assets/logo-epic.svg">
+</head>
+<body class="theme-fortnite">
+<div class="edc-topbar"><div class="edc-topbar-inner"><img class="edc-logo" src="../assets/logo-epic.svg" alt="Epic Games"><span class="edc-brand">Epic Games <b>开发者社区</b></span><span class="edc-nav"><a href="../index.html">文档首页</a><a href="sub-index.html">子教程索引</a><a href="https://dev.epicgames.com/documentation/fortnite/scene-graph-best-practices-in-fortnite" target="_blank" rel="noopener">英文原文</a></span></div></div>
+<div class="site-container">
+<aside class="site-nav"><div class="documents-tree"><nav><ul class="contents-table">
+<div class="tree-sec">A 最新动态</div><a class="tree-link" href="01-42-00-fortnite-ecosystem-updates-and-release-notes.html">01. 42.00 生态系统更新与发行说明</a><a class="tree-link" href="02-custom-items-and-inventory-overview-in-fortnite.html">02. 自定义物品与背包总览</a><a class="tree-link" href="03-in-island-transactions-in-fortnite.html">03. 岛内交易</a><a class="tree-link" href="04-mobile-development-in-fortnite.html">04. 移动端开发</a><a class="tree-link" href="05-inputs-in-fortnite.html">05. 输入系统</a><a class="tree-link" href="06-ability-system-in-unreal-editor-for-fortnite.html">06. 能力系统 Ability System</a><a class="tree-link" href="07-partybased-gameplay-using-the-social-synergy-api-in-fortnite.html">07. 社交协同 API 与小队玩法</a><a class="tree-link active" href="08-scene-graph-in-unreal-editor-for-fortnite.html">08. 场景图 Scene Graph</a><div class="tree-sec">B 入门</div><a class="tree-link" href="09-build-your-first-island-in-fortnite.html">09. 构建你的第一个岛屿</a><a class="tree-link" href="10-onboarding-guide-to-programming-with-verse-in-unreal-editor-for-fortnite.html">10. Verse 编程入门指南</a><a class="tree-link" href="11-building-basics-in-fortnite-creative.html">11. 建造基础</a><div class="tree-sec">C 品牌合集</div><a class="tree-link" href="12-star-wars-islands-in-fortnite.html">12. 星球大战™岛屿</a><a class="tree-link" href="13-kpop-demon-hunters-islands-in-fortnite.html">13. KPop 猎魔团岛屿</a><a class="tree-link" href="14-building-lego-islands-in-fortnite.html">14. 乐高®岛屿</a><a class="tree-link" href="15-the-walking-dead-universe-islands-in-unreal-editor-for-fortnite.html">15. 行尸走肉宇宙岛屿</a><a class="tree-link" href="16-teenage-mutant-ninja-turtle-islands-in-unreal-editor-for-fortnite.html">16. 忍者神龟岛屿</a><a class="tree-link" href="17-squid-game-islands-in-fortnite.html">17. 鱿鱼游戏岛屿</a><div class="tree-sec">D 开发者成功</div><a class="tree-link" href="18-using-creator-portal-in-fortnite-creative.html">18. 使用创作者门户</a><a class="tree-link" href="19-island-moderation-and-guidelines-in-fortnite-creative.html">19. 岛屿审核与准则</a><div class="tree-sec">E 协作</div><a class="tree-link" href="20-creating-teams-in-creator-portal-in-unreal-editor-for-fortnite.html">20. 在创作者门户创建团队</a><a class="tree-link" href="21-adding-playtesters-in-fortnite-creative.html">21. 添加试玩测试员</a><a class="tree-link" href="22-playtesting-your-island-in-unreal-editor-for-fortnite.html">22. 试玩测试你的岛屿</a><a class="tree-link" href="23-collaborating-in-unreal-editor-for-fortnite.html">23. 在 UEFN 中协作</a><a class="tree-link" href="24-lore-version-control-in-unreal-editor-for-fortnite.html">24. Lore 版本控制</a><a class="tree-link" href="25-conflicts-in-lore-version-control-in-unreal-editor-for-fortnite.html">25. Lore 中的冲突</a><a class="tree-link" href="26-version-history-and-conflict-resolution-in-unreal-editor-for-fortnite.html">26. 分支历史与冲突解决</a><div class="tree-sec">F 游戏示例</div><a class="tree-link" href="27-build-a-game-in-unreal-editor-for-fortnite.html">27. 构建一款游戏</a><a class="tree-link" href="28-unreal-editor-for-fortnite-starter-templates.html">28. UEFN 新手模板</a><div class="tree-sec">G Verse</div><a class="tree-link" href="29-learn-the-basics-of-writing-code-in-verse.html">29. 从零学习 Verse 代码基础</a><div class="tree-sec">H 专注领域</div><a class="tree-link" href="30-lighting-in-unreal-editor-for-fortnite.html">30. 灯光</a><a class="tree-link" href="31-animation-and-cinematics-in-unreal-editor-for-fortnite.html">31. 动画与过场动画</a><a class="tree-link" href="32-modeling-in-unreal-editor-for-fortnite.html">32. 建模</a><a class="tree-link" href="33-materials-in-unreal-editor-for-fortnite.html">33. 材质</a><a class="tree-link" href="34-environments-and-landscapes-in-unreal-editor-for-fortnite.html">34. 环境与地形</a><a class="tree-link" href="35-audio-in-unreal-editor-for-fortnite.html">35. 音频</a><a class="tree-link" href="36-visual-effects-in-unreal-editor-for-fortnite.html">36. 视觉特效</a>
+</ul></nav></div></aside>
+<div class="page-content"><div class="page-document has-theme-bg">
+<header class="section-page-header"><nav><ol class="breadcrumb is-shrinkable"><li class="breadcrumb-item is-root"><img src="../assets/logo-epic.svg" alt="Epic Games"><a href="../index.html">Developer</a></li><li class="breadcrumb-item"><a href="../index.html">Fortnite 文档</a></li><li class="breadcrumb-item"><a href="08-scene-graph-in-unreal-editor-for-fortnite.html">场景图 Scene Graph</a></li><li class="breadcrumb-item active" aria-current="page"><span class="text-truncate">场景图（Scene Graph）最佳实践</span></li></ol></nav><h1>场景图（Scene Graph）最佳实践</h1><p class="text-secondary mb-0">场景图（Scene Graph）文档全面概述了其基本原理与核心概念，本页通过实例讲解你在开发项目时应遵循的最佳实践。</p><p class="doc-meta">英文原标题：Scene Graph Best Practices in Fortnite · <a href="https://dev.epicgames.com/documentation/fortnite/scene-graph-best-practices-in-fortnite" target="_blank" rel="noopener">查看英文原文</a> · 社区翻译镜像，仅供学习</p></header>
+<div class="doc-columns"><article class="doc-article">
+<div class="block-callout warn">注意：请学习使用这一 Beta（测试版）功能，但在正式发行（Shipping）包含该功能的项目时请谨慎。</div>
+<p><a href="08-scene-graph-in-unreal-editor-for-fortnite.html">场景图（Scene Graph）</a>文档全面概述了场景图（Scene Graph）的基本原理与核心概念。本页的信息与示例有助于巩固这些概念，并为你在开发项目时应遵循的最佳实践（Best Practices）提供指导。</p>
+<h2 id="sec-1">使用场景图（Scene Graph）的示例项目</h2>
+<p>以下项目提供了使用场景图（Scene Graph）的实用示例，你可以下载并参考。在创建新项目时，从<b>项目浏览器（Project Browser）</b>的<b>功能示例（Feature Examples）</b>分区中选择这些示例，即可基于它们创建项目。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/a271707c-283c-4d9b-bfb7-786c160efdda?resizing_type=fit" alt="UEFN 项目浏览器中的功能示例（Feature Examples）" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/a271707c-283c-4d9b-bfb7-786c160efdda?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ul>
+<li><a href="https://dev.epicgames.com/documentation/fortnite/scene-graph-sample-tutorial-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">场景图（Scene Graph）示例教程（Scene Graph Sample Tutorial）</a></li>
+<li><b>Alpha Tycoon</b></li>
+</ul>
+<h2 id="sec-2">使用场景图（Scene Graph）</h2>
+<h3>模拟实体（Simulation Entity）</h3>
+<p><b>模拟实体（Simulation Entity）</b>充当场景图（Scene Graph）的根实体（Root Entity）。它对导航至关重要，也是向世界中生成新预制件（Prefab）的入口。</p>
+<pre><code># Get the Simulation Entity and Spawn a prefab
+if:
+    SimulationEntity := Entity.GetSimulationEntity[]
+then:
+    SpawnedPrefab:entity = LightPost.P_LightPost{}
+    SimulationEntity.AddEntities(array{SpawnedPrefab})
+# Set the transform for the Spawned Prefab
+SpawnTransform:transform = transform:
+    Translation := vector3:
+        Left := -9084.0</code></pre>
+<h3>浏览层级结构</h3>
+<p>Verse 提供了多种遍历场景图（Scene Graph）层级结构的标准方法。这些方法可用于在树中定位当前节点上方与下方的实体（Entity）。</p>
+<pre><code>(InEntity:entity).FindDescendantEntities&lt;native&gt;&lt;public&gt;(entity_type:castable_subtype(entity))&lt;transacts&gt;:generator(entity_type)
+(InEntity:entity).FindAncestorEntities&lt;native&gt;&lt;public&gt;(entity_type:castable_subtype(entity))&lt;transacts&gt;:generator(entity_type)
+(InEntity:entity).FindDescendantEntitiesWithComponent&lt;native&gt;&lt;public&gt;(component_type:castable_subtype(component))&lt;transacts&gt;:generator(entity)
+(InEntity:entity).FindAncestorEntitiesWithComponent&lt;native&gt;&lt;public&gt;(component_type:castable_subtype(component))&lt;transacts&gt;:generator(entity)</code></pre>
+<p>你也可以用类似如下的方法，在树中向上、向下查找组件（Component）：</p>
+<pre><code>(InEntity:entity).FindDescendantComponents&lt;native&gt;&lt;public&gt;(component_type:castable_subtype(component))&lt;transacts&gt;:generator(component_type)
+(InEntity:entity).FindAncestorComponents&lt;native&gt;&lt;public&gt;(component_type:castable_subtype(component))&lt;transacts&gt;:generator(component_type)</code></pre>
+<p>在实际 gameplay 进行期间，应避免重复执行大范围的层级结构扫描。正确做法是：用层级结构搜索 API 来发现对象间的关系，但不要在每次 gameplay 状态变化时都重复执行全树查询。更好的做法是在初始化时缓存重要引用、订阅事件，或利用预制件（Prefab）结构与标签（Tags）缩小搜索范围。</p>
+<p>一个良好的模式如下所示：</p>
+<ul>
+<li>在模拟开始（Begin Simulation）时，一次性查找到所需的子组件（Component）。</li>
+<li>保存这些引用，或订阅它们的事件。</li>
+<li>之后响应事件，而不是每次都重新搜索整个图。</li>
+</ul>
+<h2 id="sec-3">预制件（Prefab）组合</h2>
+<p><b>场景图（Scene Graph）</b>示例项目中的 <code>P_LightPost</code> 预制件（Prefab）是展示预制件（Prefab）组合的绝佳范例。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/f6153fdb-3ac5-413e-abda-5284351876d8?resizing_type=fit" alt="场景图示例教程项目中的路灯预制件（Light Post Prefab），可在项目浏览器的功能示例下找到" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/f6153fdb-3ac5-413e-abda-5284351876d8?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>在 <code>P_LightPost</code> 预制件（Prefab）的顶层，有一个封装了全部核心逻辑的 Verse 组件（Verse Component）。该组件负责编排路灯的行为。</p>
+<p>Verse 组件（Verse Component）订阅了子实体（Entity）上可交互组件（interactable_component）暴露的交互事件（InteractedWithEvent）。当玩家与路灯交互时，该事件会触发顶层 Verse 组件（Verse Component）中的逻辑。</p>
+<p>交互发生后，Verse 组件（Verse Component）会“向下调用（Call Down）”容纳特定功能组件（例如粒子系统、声音与灯光）的子实体（Entity），以执行路灯逻辑，例如：</p>
+<ul>
+<li>切换灯光的可见性。</li>
+<li>播放音效。</li>
+<li>激活或停用粒子系统特效。</li>
+<li>设置材质参数。</li>
+</ul>
+<p>这种模式体现了清晰的关注点分离：父级 Verse 组件（Verse Component）管理高层状态与交互，而子实体（Entity）提供具体的视觉与听觉效果。</p>
+<p>这种做法实现了明确的职责划分：父级 Verse 组件（Verse Component）处理整体状态与交互逻辑，具体的视觉与听觉效果则交给子实体（Entity）。</p>
+<h3>灯笼交互组件（Lantern Interaction Component）</h3>
+<p>以下代码展示了顶层 Verse 组件（Verse Component）如何“向下调用（Call Down）”子实体（Entity）中的功能组件（Component），以控制路灯行为。</p>
+<pre><code>using { /Verse.org }
+using { /Verse.org/Native }
+using { /Verse.org/SceneGraph }
+using { /Verse.org/Simulation }
+
+LightPost := module:
+    Materials&lt;public&gt; := module:
+        lantern_interaction_component&lt;public&gt; := class&lt;final_super&gt;(component):</code></pre>
+<h3>场景事件（Scene Events）与作用域</h3>
+<p><b>场景事件（Scene Events）</b>是专为在实体（Entity）层级结构中传递事件而设计的强大事件系统。但与查询场景图（Scene Graph）层级结构一样，如果不加节制地在图的大范围中广播事件，开销也会很大。</p>
+<p>沿祖先或后代链大范围传播的事件，可能会触发许多本无需响应的实体（Entity）上的逻辑。在大型层级结构中，这会导致不必要的事件处理并增加运行时开销。</p>
+<p>为避免这一问题，请尽量把事件发送范围缩到最小。不要从层级结构的高层广播事件，而是从与该交互最相关的实体（Entity）或子系统发出。在可能的情况下，组织预制件（Prefab）结构，使事件在场景图（Scene Graph）的局部范围内处理，而不必遍历整个层级结构。</p>
+<p>一般来说，场景事件（Scene Events）应遵循与层级结构查询相同的可扩展性准则：</p>
+<ul>
+<li>当局部化方案可行时，避免让事件穿过场景图（Scene Graph）的大范围区域。</li>
+<li>当事件范围已知时，优先使用直接引用或局部订阅。</li>
+<li>组织预制件（Prefab）结构，使大多数交互发生在其局部层级结构内。</li>
+</ul>
+<p>有针对性地使用场景事件（Scene Events），有助于保持行为可预测，并确保场景图（Scene Graph）系统在项目复杂度增长时依然高效。</p>
+<p>关于使用场景事件（Scene Events）的更多信息与细节，请参阅<a href="scene-events-in-unreal-editor-for-fortnite.html">场景事件（Scene Events）</a>。</p>
+<h3>Fortnite 回合管理器（Fort Round Manager）</h3>
+<p>场景图（Scene Graph）组件会在编辑模式（Edit Mode）下执行代码，这与仅在游戏模式（Game Mode）下执行的创意模式设备（Creative Devices）不同。如果你希望场景图（Scene Graph）组件代码在 Fortnite 回合开始时执行，可以订阅 <b>fort_round_manager</b> 的 <b>RoundStarted</b> 事件。</p>
+<pre><code>OnBeginSimulation&lt;override&gt;():void =
+    (super:)OnBeginSimulation()
+    if:
+        FortRoundManager := Entity.GetFortRoundManager[]
+    then:
+        FortRoundManager.SubscribeRoundStarted(OnRoundStarted)
+
+OnRoundStarted():void = ...</code></pre>
+<h3>实体进入（Entity Entered）</h3>
+<p>场景图（Scene Graph）中的实体（Entity）能够检测与其他实体（Entity）的重叠（Overlap）。这通过 <b>mesh_component</b> 上的 <b>EntityEntered</b> 事件处理。</p>
+<pre><code>OnRoundStarted():void =
+    if:
+        Mesh := Entity.GetComponent[mesh_component]
+    then:
+        Mesh.EntityEnteredEvent.Subscribe(OnEntityEntered)
+
+OnEntityEntered(OtherEntity:entity):void =
+    Print("Entity Entered")</code></pre>
+<h3>扫描（Sweep）与射线检测（Raycast）</h3>
+<p>Verse 支持扫描（Sweep）与射线投射（Ray Cast）等空间查询（Spatial Query），用于检测世界中的碰撞（Collision）。扫描（Sweep）允许你让一个形状在空间中移动，并检测它沿途碰撞到的对象。</p>
+<h4>射线检测（Raycast / Line Trace）</h4>
+<p>一个常见的困惑点是如何执行线性追踪（Line Trace）。在 Verse 中，这通过 <b>collision_point</b> 实现。</p>
+<pre><code>Displacement:vector3 = vector3{Left := 0.0, Up := 0.0, Forward := 300.0}
+CollisionPoint := collision_point{}
+# Line Trace Forward 300 units starting from the entity transform
+for:
+    Hit : Entity.FindSweepHits(Displacement, Entity.GetGlobalTransform(), CollisionPoint)
+do:
+    # Handle hit...</code></pre>
+<h3>重叠查询（Overlap Queries）</h3>
+<p>重叠查询（Overlap Query）允许你检测指定位置给定形状内的全部实体（Entity）。与射线检测或扫描不同，重叠查询不会追踪穿过空间，而是检查已有体积相交的对象。</p>
+<pre><code># Overlap using a custom collision volume at a specific transform
+OverlapWithVolume():void =
+    CollisionCapsule := collision_capsule{Radius := 36.0, Length := 328.0}
+    QueryTransform := Entity.GetGlobalTransform()
+    for:
+        Hit : Entity.FindOverlapHits(QueryTransform, CollisionCapsule)
+    do:
+        # Cast the hit target to a specific component type
+        if (MyMesh := my_mesh_component[Hit.TargetComponent]):
+            Print("Hit mesh at: {Hit.SourceGlobalTransform.Translation}")</code></pre>
+<h3>实体移动（Entity Movement）</h3>
+<p><code>keyframed_movement_component</code> 目前是移动实体（Entity）最高效的方式，因为它会在客户端（Client-Side）更新。</p>
+<h3>拖放偏好设置</h3>
+<p>你可以启用一项编辑器偏好设置（Editor Preference），改变拖放（Drag and Drop）行为，使其在可行时优先放置实体（Entity）与组件（Component），而非 Actor。</p>
+<p>要启用它，请从<b>编辑（Edit）</b>菜单打开编辑器偏好设置（Editor Preferences）。前往 <b>Unreal Editor for Fortnite &gt; Settings &gt; Workflows</b> &gt; <b>Drag and Drop</b>，取消勾选 <b>Prefer Actor Placement</b>。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/d4a7c5d8-5eec-46b6-8049-a4a1ca487fe8?resizing_type=fit" alt="原文示意图3" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/d4a7c5d8-5eec-46b6-8049-a4a1ca487fe8?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h3>标签（Tags）</h3>
+<p>场景图（Scene Graph）中的实体（Entity）可以分配 Verse 标签（Verse Tags）。无论目标在场景图（Scene Graph）层级结构的上方还是下方，这些标签都能帮你定位并引用实体（Entity）。</p>
+<p>你可以在细节（Details）面板中为实体（Entity）添加与移除标签（Tags）：</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/b3d583c7-9ead-4a8c-809e-92776757eb2c?resizing_type=fit" alt="原文示意图4" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/b3d583c7-9ead-4a8c-809e-92776757eb2c?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<pre><code>@experimental
+# Finds all descendant entities including InEntity with Tag present in their tag_component.
+# When querying from the simulation entity, the simulation entity itself is not included in the results.
+# The order of the returned entities is unspecified and subject to change.
+(InEntity:entity).FindDescendantEntitiesWithTag&lt;native&gt;&lt;public&gt;(tag_type:castable_subtype(tag))&lt;transacts&gt;:generator(entity)
+
+@experimental
+# Finds all ancestor entities to InEntity with Tag present in their tag_component.
+# The order of the returned entities is unspecified and subject to change.
+(InEntity:entity).FindAncestorEntitiesWithTag&lt;native&gt;&lt;public&gt;(tag_type:castable_subtype(tag))&lt;transacts&gt;:generator(entity)</code></pre>
+<div class="pager"><a href="08-scene-graph-in-unreal-editor-for-fortnite.html"><small>← 返回父教程</small>场景图 Scene Graph</a><a href="sub-index.html"><small>子教程索引 →</small>全部子教程</a></div>
+</article><nav class="doc-toc" aria-label="本页内容"><b>本页内容</b><a href="#sec-1">使用场景图（Scene Graph）的示例项目</a><a href="#sec-2">使用场景图（Scene Graph）</a><a href="#sec-3">预制件（Prefab）组合</a></nav></div>
+</div></div>
+</div>
+<footer class="edc-footer"><div class="inner"><img src="../assets/logo-epic.svg" alt="Epic Games"><span>Fortnite 文档中文镜像 · UE教程/ · 本地打开 index.html 阅读 · 翻译整理自 Epic 官方文档，仅供学习交流</span></div></footer>
+</body>
+</html>

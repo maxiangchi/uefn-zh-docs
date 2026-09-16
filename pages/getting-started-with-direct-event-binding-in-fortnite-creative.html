@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>直接事件绑定入门 | Fortnite 文档中文镜像</title>
+<link rel="stylesheet" href="../assets/epic.css">
+<link rel="stylesheet" href="../assets/patch.css">
+<link rel="icon" href="../assets/logo-epic.svg">
+</head>
+<body class="theme-fortnite">
+<div class="edc-topbar"><div class="edc-topbar-inner"><img class="edc-logo" src="../assets/logo-epic.svg" alt="Epic Games"><span class="edc-brand">Epic Games <b>开发者社区</b></span><span class="edc-nav"><a href="../index.html">文档首页</a><a href="sub-index.html">子教程索引</a><a href="https://dev.epicgames.com/documentation/fortnite/getting-started-with-direct-event-binding-in-fortnite-creative" target="_blank" rel="noopener">英文原文</a></span></div></div>
+<div class="site-container">
+<aside class="site-nav"><div class="documents-tree"><nav><ul class="contents-table">
+<div class="tree-sec">最新动态</div>
+<a class="tree-link" href="01-42-00-fortnite-ecosystem-updates-and-release-notes.html">01. 42.00 生态系统更新与发行说明</a>
+<a class="tree-link" href="02-custom-items-and-inventory-overview-in-fortnite.html">02. 自定义物品与背包总览</a>
+<a class="tree-link" href="03-in-island-transactions-in-fortnite.html">03. 岛内交易</a>
+<a class="tree-link" href="04-mobile-development-in-fortnite.html">04. 移动端开发</a>
+<a class="tree-link" href="05-inputs-in-fortnite.html">05. 输入系统</a>
+<a class="tree-link" href="06-ability-system-in-unreal-editor-for-fortnite.html">06. 能力系统 Ability System</a>
+<a class="tree-link" href="07-partybased-gameplay-using-the-social-synergy-api-in-fortnite.html">07. 社交协同 API 与小队玩法</a>
+<a class="tree-link" href="08-scene-graph-in-unreal-editor-for-fortnite.html">08. 场景图 Scene Graph</a><div class="tree-sec">入门</div>
+<a class="tree-link" href="09-build-your-first-island-in-fortnite.html">09. 构建你的第一个岛屿</a>
+<a class="tree-link" href="10-onboarding-guide-to-programming-with-verse-in-unreal-editor-for-fortnite.html">10. Verse 编程入门指南</a>
+<a class="tree-link active" href="11-building-basics-in-fortnite-creative.html">11. 建造基础</a><div class="tree-sec">品牌合集</div>
+<a class="tree-link" href="12-star-wars-islands-in-fortnite.html">12. 星球大战™岛屿</a>
+<a class="tree-link" href="13-kpop-demon-hunters-islands-in-fortnite.html">13. KPop 猎魔团岛屿</a>
+<a class="tree-link" href="14-building-lego-islands-in-fortnite.html">14. 乐高®岛屿</a>
+<a class="tree-link" href="15-the-walking-dead-universe-islands-in-unreal-editor-for-fortnite.html">15. 行尸走肉宇宙岛屿</a>
+<a class="tree-link" href="16-teenage-mutant-ninja-turtle-islands-in-unreal-editor-for-fortnite.html">16. 忍者神龟岛屿</a>
+<a class="tree-link" href="17-squid-game-islands-in-fortnite.html">17. 鱿鱼游戏岛屿</a><div class="tree-sec">开发者成功</div>
+<a class="tree-link" href="18-using-creator-portal-in-fortnite-creative.html">18. 使用创作者门户</a>
+<a class="tree-link" href="19-island-moderation-and-guidelines-in-fortnite-creative.html">19. 岛屿审核与准则</a><div class="tree-sec">协作</div>
+<a class="tree-link" href="20-creating-teams-in-creator-portal-in-unreal-editor-for-fortnite.html">20. 在创作者门户创建团队</a>
+<a class="tree-link" href="21-adding-playtesters-in-fortnite-creative.html">21. 添加试玩测试员</a>
+<a class="tree-link" href="22-playtesting-your-island-in-unreal-editor-for-fortnite.html">22. 试玩测试你的岛屿</a>
+<a class="tree-link" href="23-collaborating-in-unreal-editor-for-fortnite.html">23. 在 UEFN 中协作</a>
+<a class="tree-link" href="24-lore-version-control-in-unreal-editor-for-fortnite.html">24. Lore 版本控制</a>
+<a class="tree-link" href="25-conflicts-in-lore-version-control-in-unreal-editor-for-fortnite.html">25. Lore 中的冲突</a>
+<a class="tree-link" href="26-version-history-and-conflict-resolution-in-unreal-editor-for-fortnite.html">26. 分支历史与冲突解决</a><div class="tree-sec">游戏示例</div>
+<a class="tree-link" href="27-build-a-game-in-unreal-editor-for-fortnite.html">27. 构建一款游戏</a>
+<a class="tree-link" href="28-unreal-editor-for-fortnite-starter-templates.html">28. UEFN 新手模板</a><div class="tree-sec">Verse</div>
+<a class="tree-link" href="29-learn-the-basics-of-writing-code-in-verse.html">29. 从零学习 Verse 代码基础</a><div class="tree-sec">专注领域</div>
+<a class="tree-link" href="30-lighting-in-unreal-editor-for-fortnite.html">30. 灯光</a>
+<a class="tree-link" href="31-animation-and-cinematics-in-unreal-editor-for-fortnite.html">31. 动画与过场动画</a>
+<a class="tree-link" href="32-modeling-in-unreal-editor-for-fortnite.html">32. 建模</a>
+<a class="tree-link" href="33-materials-in-unreal-editor-for-fortnite.html">33. 材质</a>
+<a class="tree-link" href="34-environments-and-landscapes-in-unreal-editor-for-fortnite.html">34. 环境与地形</a>
+<a class="tree-link" href="35-audio-in-unreal-editor-for-fortnite.html">35. 音频</a>
+<a class="tree-link" href="36-visual-effects-in-unreal-editor-for-fortnite.html">36. 视觉特效</a>
+</ul></nav></div></aside>
+<div class="page-content"><div class="page-document has-theme-bg">
+<header class="section-page-header"><nav><ol class="breadcrumb is-shrinkable"><li class="breadcrumb-item is-root"><img src="../assets/logo-epic.svg" alt="Epic Games"><a href="../index.html">Developer</a></li><li class="breadcrumb-item"><a href="../index.html">Fortnite 文档</a></li><li class="breadcrumb-item"><a href="11-building-basics-in-fortnite-creative.html">建造基础</a></li><li class="breadcrumb-item active" aria-current="page"><span class="text-truncate">直接事件绑定入门</span></li></ol></nav><h1>直接事件绑定入门</h1><p class="text-secondary mb-0">直接事件绑定（direct event binding）让设备之间可以直接通信：用事件（event）与函数（function）替代频道（channel），工作流更直观，复杂多样的游戏机制得以实现。</p><p class="doc-meta">英文原标题：Getting Started with Direct Event Binding in Fortnite Creative · <a href="https://dev.epicgames.com/documentation/fortnite/getting-started-with-direct-event-binding-in-fortnite-creative" target="_blank" rel="noopener">查看英文原文</a> · 社区翻译镜像，仅供学习</p></header>
+<div class="doc-columns"><article class="doc-article">
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/43b2987b-081f-498e-9f0a-9d6e368c5524?resizing_type=fill&width=1920&height=335" alt="直接事件绑定入门题图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/43b2987b-081f-498e-9f0a-9d6e368c5524?resizing_type=fill&width=1920&height=335" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>直接事件绑定（direct event binding）将扩展你在创意模式（Creative）中能实现的效果。有了直接事件绑定，设备之间可以直接通信，工作流更加直观，你可以更自由地追逐自己的设计想法。切换到这套系统，是创造更复杂、更多样游戏机制的下一步。</p>
+<h2 id="sec-1">为什么设备通信方式正在改变</h2>
+<p>直接事件绑定系统消除了频道（channel）通信系统固有的限制。你再也不用担心达到频道数量上限。由于设备通过事件绑定直接通信，在设计岛屿时无需提前规划频道分配。当你复制粘贴设备时，也无需编辑它们来更改频道分配——原来设置的事件与函数会原样带到副本上。</p>
+<h2 id="sec-2">事件与函数介绍</h2>
+<p>设备不再发送与接收信号，而是使用<strong>事件（event）</strong>与<strong>函数（function）</strong>。当设备被激活，或玩家执行某个动作时，就是一个<strong>事件</strong>的例子。事件会触发其他设备执行特定动作或设定特定条件，而这个动作或条件就是<strong>函数</strong>。你需要把一个设备上的事件绑定到另一个设备上的函数。在大多数情况下，原来的发送端（transmitter）选项如今对应事件，原来的接收端（receiver）选项如今对应函数。</p>
+<h2 id="sec-3">直接事件绑定如何工作</h2>
+<p>直接事件绑定不再分配频道，而是使用设备名称来指定多个设备之间发生的事件与函数。设备会自动获得唯一标识符，但那只是一串字母与数字的组合，因此，为设备起一个有意义、具描述性的名称非常重要。</p>
+<p>下方插图对比了频道系统与直接事件绑定系统，可帮助你理解它们的异同。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/0165cedf-1d2b-4b01-bf87-85f021bc800e?resizing_type=fit" alt="频道系统与直接事件绑定系统对比示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/0165cedf-1d2b-4b01-bf87-85f021bc800e?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h2 id="sec-4">转换现有岛屿</h2>
+<p>直接事件绑定目前是可选加入（opt-in）系统，但最终会成为默认系统。当你想把现有岛屿转换到新系统时，建议先复制一份岛屿，在副本上测试转换效果。</p>
+<p>一旦把岛屿从频道系统转换到直接事件绑定系统，就无法再切回频道系统！重置岛屿也不会把它切回频道系统。</p>
+<p>要把现有岛屿切换到新系统，打开<strong>我的岛屿（My Island）</strong>并点击<strong>工具（Tools）</strong>选项卡，找到<strong>事件系统（Event System）</strong>设置并点击<strong>转换（Convert）</strong>。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/20acf6f7-8c40-4920-a1d7-d210a693c2b5?resizing_type=fit" alt="在“我的岛屿 &gt; 工具”中将事件系统转换为直接事件绑定的示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/20acf6f7-8c40-4920-a1d7-d210a693c2b5?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>这次自动转换会为所有未命名的设备分配唯一 ID（一串随机的字母与数字）。在频道系统中相连的设备，会在转换过程中自动以事件与函数的形式连接起来。</p>
+<p>当你打开设备的<strong>自定义（Customize）</strong>面板查看选项时，会看到<strong>事件（Events）</strong>选项卡和<strong>函数（Functions）</strong>选项卡，取代原来的<strong>频道（Channels）</strong>选项卡，岛屿上设备之间的连接就在这里查看。</p>
+<h2 id="sec-5">直接事件绑定的更多优势</h2>
+<p>直接事件绑定系统极大地加快了你搭建岛屿的工作流，还能帮你一次性完成重要修改。</p>
+<p>举个例子：假设你设置了一个按钮（Button）设备，当玩家与按钮交互时打开一盏可自定义灯光（Customizable Light）。在事件（Events）选项卡中，你选择了事件<strong>交互时发送事件（On Interact Send Event To）</strong>；在该事件下方，你选择了<strong>可自定义灯光（Customizable Light）</strong>设备，并在设备旁选择了<strong>打开（Turn On）</strong>作为函数。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/f9aa95bf-98ed-4f75-a13b-8b23dd05af3c?resizing_type=fit" alt="按钮事件绑定到可自定义灯光打开函数的示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/f9aa95bf-98ed-4f75-a13b-8b23dd05af3c?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>如果你想再加一个按钮来关灯，只需复制粘贴第一个按钮设备，然后前往<strong>事件（Events）</strong>选项卡，点击<strong>打开（Turn On）</strong>打开菜单，从列表中选择<strong>关闭（Turn Off）</strong>即可！随后你可以把两个按钮设备重命名为 <strong>开灯（Light On）</strong>和<strong>关灯（Light Off）</strong>，一目了然。</p>
+<p>使用频道系统时，你也可以复制粘贴设备——但必须逐个编辑，改成不同的频道配对。如果游戏机制高度复杂、涉及多个设备，这会耗费大量时间；一旦搞混，修复起来还要花更多时间。</p>
+<p>而使用直接事件绑定，需要改动的地方更少，工作速度更快；创建大型互连设备组也容易得多，你的游戏得以用上更精妙的游戏机制。没有了频道，也就没有频道数量上限需要时刻记挂与绕开。无论复制粘贴单个设备还是一整组，都不必担心频道限制。</p>
+<h2 id="sec-6">接下来做什么</h2>
+<p>欢迎查看 <a href="https://www.epicgames.com/fortnite/en-US/news/introducing-direct-event-binding-for-creating-fortnite-islands" target="_blank" rel="noopener">Fortnite 官方博客（official Fortnite blog）</a>中的直接事件绑定常见问题解答。也欢迎在推特（Twitter）上 @<a href="https://twitter.com/FNCreate" target="_blank" rel="noopener">FNCreate</a> 向我们分享你的作品！</p>
+<p>标签：<a href="https://dev.epicgames.com/community/search?query=devices" target="_blank" rel="noopener">devices</a></p>
+<p>欢迎在<a href="https://forums.unrealengine.com/categories?tag=fortnite" target="_blank" rel="noopener">开发者论坛（Developer Forums）</a>提问并帮助同行，或在<a href="https://dev.epicgames.com/community/fortnite/learning" target="_blank" rel="noopener">学习库（Learning Library）</a>撰写、阅读教程。</p>
+<div class="pager"><a href="11-building-basics-in-fortnite-creative.html"><small>← 返回父教程</small>建造基础</a><a href="sub-index.html"><small>子教程索引 →</small>全部子教程</a></div>
+</article><nav class="doc-toc" aria-label="本页内容"><b>本页内容</b><a href="#sec-1">为什么设备通信方式正在改变</a>
+<a href="#sec-2">事件与函数介绍</a>
+<a href="#sec-3">直接事件绑定如何工作</a>
+<a href="#sec-4">转换现有岛屿</a>
+<a href="#sec-5">直接事件绑定的更多优势</a>
+<a href="#sec-6">接下来做什么</a></nav></div>
+</div></div>
+</div>
+<footer class="edc-footer"><div class="inner"><img src="../assets/logo-epic.svg" alt="Epic Games"><span>Fortnite 文档中文镜像 · UE教程/ · 本地打开 index.html 阅读 · 翻译整理自 Epic 官方文档，仅供学习交流</span></div></footer>
+</body>
+</html>

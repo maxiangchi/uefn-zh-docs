@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>探索（Discover）的工作原理 | Fortnite 文档中文镜像</title>
+<link rel="stylesheet" href="../assets/epic.css">
+<link rel="stylesheet" href="../assets/patch.css">
+<link rel="icon" href="../assets/logo-epic.svg">
+</head>
+<body class="theme-fortnite">
+<div class="edc-topbar"><div class="edc-topbar-inner"><img class="edc-logo" src="../assets/logo-epic.svg" alt="Epic Games"><span class="edc-brand">Epic Games <b>开发者社区</b></span><span class="edc-nav"><a href="../index.html">文档首页</a><a href="sub-index.html">子教程索引</a><a href="https://dev.epicgames.com/documentation/fortnite/how-discover-works-in-fortnite" target="_blank" rel="noopener">英文原文</a></span></div></div>
+<div class="site-container">
+<aside class="site-nav"><div class="documents-tree"><nav><ul class="contents-table">
+<div class="tree-sec">A · 最新动态</div>
+<a class="tree-link" href="01-42-00-fortnite-ecosystem-updates-and-release-notes.html">01. 42.00 生态系统更新与发行说明</a>
+<a class="tree-link" href="02-custom-items-and-inventory-overview-in-fortnite.html">02. 自定义物品与背包总览</a>
+<a class="tree-link" href="03-in-island-transactions-in-fortnite.html">03. 岛内交易</a>
+<a class="tree-link" href="04-mobile-development-in-fortnite.html">04. 移动端开发</a>
+<a class="tree-link" href="05-inputs-in-fortnite.html">05. 输入系统</a>
+<a class="tree-link" href="06-ability-system-in-unreal-editor-for-fortnite.html">06. 能力系统 Ability System</a>
+<a class="tree-link" href="07-partybased-gameplay-using-the-social-synergy-api-in-fortnite.html">07. 社交协同 API 与小队玩法</a>
+<a class="tree-link" href="08-scene-graph-in-unreal-editor-for-fortnite.html">08. 场景图 Scene Graph</a>
+<div class="tree-sec">B · 入门指南</div>
+<a class="tree-link" href="09-build-your-first-island-in-fortnite.html">09. 构建你的第一个岛屿</a>
+<a class="tree-link" href="10-onboarding-guide-to-programming-with-verse-in-unreal-editor-for-fortnite.html">10. Verse 编程入门指南</a>
+<a class="tree-link" href="11-building-basics-in-fortnite-creative.html">11. 建造基础</a>
+<div class="tree-sec">C · 品牌合集</div>
+<a class="tree-link" href="12-star-wars-islands-in-fortnite.html">12. 星球大战™岛屿</a>
+<a class="tree-link" href="13-kpop-demon-hunters-islands-in-fortnite.html">13. KPop 猎魔团岛屿</a>
+<a class="tree-link" href="14-building-lego-islands-in-fortnite.html">14. 乐高®岛屿</a>
+<a class="tree-link" href="15-the-walking-dead-universe-islands-in-unreal-editor-for-fortnite.html">15. 行尸走肉宇宙岛屿</a>
+<a class="tree-link" href="16-teenage-mutant-ninja-turtle-islands-in-unreal-editor-for-fortnite.html">16. 忍者神龟岛屿</a>
+<a class="tree-link" href="17-squid-game-islands-in-fortnite.html">17. 鱿鱼游戏岛屿</a>
+<div class="tree-sec">D · 开发者成功</div>
+<a class="tree-link active" href="18-using-creator-portal-in-fortnite-creative.html">18. 使用创作者门户</a>
+<a class="tree-link" href="19-island-moderation-and-guidelines-in-fortnite-creative.html">19. 岛屿审核与准则</a>
+<div class="tree-sec">E · 协作与版本控制</div>
+<a class="tree-link" href="20-creating-teams-in-creator-portal-in-unreal-editor-for-fortnite.html">20. 在创作者门户创建团队</a>
+<a class="tree-link" href="21-adding-playtesters-in-fortnite-creative.html">21. 添加试玩测试员</a>
+<a class="tree-link" href="22-playtesting-your-island-in-unreal-editor-for-fortnite.html">22. 试玩测试你的岛屿</a>
+<a class="tree-link" href="23-collaborating-in-unreal-editor-for-fortnite.html">23. 在 UEFN 中协作</a>
+<a class="tree-link" href="24-lore-version-control-in-unreal-editor-for-fortnite.html">24. Lore 版本控制</a>
+<a class="tree-link" href="25-conflicts-in-lore-version-control-in-unreal-editor-for-fortnite.html">25. Lore 中的冲突</a>
+<a class="tree-link" href="26-version-history-and-conflict-resolution-in-unreal-editor-for-fortnite.html">26. 分支历史与冲突解决</a>
+<div class="tree-sec">F · 游戏示例</div>
+<a class="tree-link" href="27-build-a-game-in-unreal-editor-for-fortnite.html">27. 构建一款游戏</a>
+<a class="tree-link" href="28-unreal-editor-for-fortnite-starter-templates.html">28. UEFN 新手模板</a>
+<div class="tree-sec">G · Verse 编程</div>
+<a class="tree-link" href="29-learn-the-basics-of-writing-code-in-verse.html">29. 从零学习 Verse 代码基础</a>
+<div class="tree-sec">H · 专注领域</div>
+<a class="tree-link" href="30-lighting-in-unreal-editor-for-fortnite.html">30. 灯光</a>
+<a class="tree-link" href="31-animation-and-cinematics-in-unreal-editor-for-fortnite.html">31. 动画与过场动画</a>
+<a class="tree-link" href="32-modeling-in-unreal-editor-for-fortnite.html">32. 建模</a>
+<a class="tree-link" href="33-materials-in-unreal-editor-for-fortnite.html">33. 材质</a>
+<a class="tree-link" href="34-environments-and-landscapes-in-unreal-editor-for-fortnite.html">34. 环境与地形</a>
+<a class="tree-link" href="35-audio-in-unreal-editor-for-fortnite.html">35. 音频</a>
+<a class="tree-link" href="36-visual-effects-in-unreal-editor-for-fortnite.html">36. 视觉特效</a>
+</ul></nav></div></aside>
+<div class="page-content"><div class="page-document has-theme-bg">
+<header class="section-page-header"><nav><ol class="breadcrumb is-shrinkable"><li class="breadcrumb-item is-root"><img src="../assets/logo-epic.svg" alt="Epic Games"><a href="../index.html">Developer</a></li><li class="breadcrumb-item"><a href="../index.html">Fortnite 文档</a></li><li class="breadcrumb-item"><a href="18-using-creator-portal-in-fortnite-creative.html">使用创作者门户</a></li><li class="breadcrumb-item active" aria-current="page"><span class="text-truncate">探索（Discover）的工作原理</span></li></ol></nav><h1>探索（Discover）的工作原理</h1><p class="text-secondary mb-0">Fortnite 探索（Discover）将玩家与引人入胜的岛屿连接起来，并为开发者提供寻找和扩大受众的机会，本文全面介绍其推荐机制、评估流程与曝光信号。</p><p class="doc-meta">英文原标题：How Discover Works In Fortnite · <a href="https://dev.epicgames.com/documentation/fortnite/how-discover-works-in-fortnite" target="_blank" rel="noopener">查看英文原文</a> · 社区翻译镜像，仅供学习</p></header>
+<div class="doc-columns"><article class="doc-article">
+<p>Fortnite 探索（Discover）将玩家与引人入胜的岛屿连接起来，并为开发者提供寻找和扩大受众的机会。</p>
+<p>本文档为希望最大化岛屿在探索（Discover）中的曝光与成功的开发者提供全面概述。</p>
+<p>本文档涵盖：</p>
+<ul>
+<li><strong><a href="how-discover-works-in-fortnite.html#discover-overview">探索的工作原理（How Discover works）</a></strong>：从端到端了解玩家如何发现你的岛屿并参与其中。</li>
+<li><strong><a href="how-discover-works-in-fortnite.html#how-we-evaluate-islands-for-discover">我们如何评估岛屿以进入探索（How we evaluate islands for Discover）</a></strong>：我们如何在探索（Discover）中测试岛屿、打分与排名。</li>
+<li><strong><a href="how-discover-works-in-fortnite.html#metrics">指标（Metrics）</a></strong>：影响岛屿曝光的信号。</li>
+<li><strong><a href="how-discover-works-in-fortnite.html#thumbnail-best-practices">缩略图最佳实践（Thumbnail best practices）</a></strong>：缩略图的最佳实践，以及应避免的误区。</li>
+<li><strong><a href="how-discover-works-in-fortnite.html#helpful-links">技巧（Tips）</a></strong>：可用于提升岛屿互动的工具。</li>
+<li><strong><a href="how-discover-works-in-fortnite.html#where-your-island-can-appear">岛屿可以展示的位置（Where your island can appear）</a></strong>：构成探索（Discover）的行与展示面，包括“为你推荐（For You）”。</li>
+<li><strong><a href="how-discover-works-in-fortnite.html#search">搜索（Search）</a></strong>：玩家如何使用搜索（Search）查找特定岛屿。</li>
+<li><strong><a href="how-discover-works-in-fortnite.html#common-reasons-islands-may-not-be-featured-in-discover">岛屿可能无法出现在探索中的常见原因（Common reasons your island may not appear in discover）</a></strong>：人工审核员判定某个岛屿不应进入探索（Discover）的原因概述。</li>
+</ul>
+<span id="discover-overview" class="anchor"></span>
+<h2 id="sec-1">探索概览</h2>
+<p>探索（Discover）展示个性化推荐、类型推荐、Epic 编辑精选、新内容与更新内容、最近游玩内容以及赞助行（Sponsored Row）。</p>
+<p>阅读本指南时，请牢记以下三点：</p>
+<ul>
+<li><strong>探索（Discover）是动态变化的</strong>。行、排序及其背后的算法会持续接受测试与优化。</li>
+<li><strong>互动决定分发</strong>。玩家与岛屿的互动方式，是我们决定其展示位置所使用的主要信号。</li>
+<li><strong>质量很重要</strong>。多个核心信号——平均游玩时长、留存率、优质通关率（Quality play-through rate，QPTR）——均按单玩家维度评估，因此深度互动甚至可以超越庞大受众带来的效果。</li>
+</ul>
+<span id="how-we-evaluate-islands-for-discover" class="anchor"></span>
+<h2 id="sec-2">我们如何评估岛屿以进入探索</h2>
+<p>每个新发布的岛屿在获得探索（Discover）广泛分发之前，都会经过评估流程。评估流程旨在寻找玩家真正喜欢、具有新颖性、并能让玩家回流的岛屿。随着新的玩家数据不断到来，岛屿会持续接受评估。任何单一指标的高表现，都不一定能确保在某一行中获得高排位。评估基于多个指标综合进行。</p>
+<span id="pre-checks-before-publishing" class="anchor"></span>
+<h3>发布前检查</h3>
+<p>发布前检查会在发行流程中运行。如果岛屿的元数据与现有体验高度相似，你会在创作者门户（Creator Portal）中收到警告，并有机会在提交内容审核之前进行修改。</p>
+<p>与现有体验高度相似的岛屿（包括其元数据），无论是由你还是由其他开发者发布的，在探索（Discover）中的展示频率都会降低。</p>
+<p>特定标题或缩略图的原创开发者按以下标准判定：</p>
+<ul>
+<li><strong>缩略图</strong>：在 Fortnite 生态中最先发布该缩略图的开发者或团队。</li>
+<li><strong>标题</strong>：发布过满足以下任一条件的岛屿的开发者或团队：在过去 96 小时内拥有 100 名独立用户，或在过去 30 天内在该项目上累计至少 150 分钟的编辑时长。</li>
+</ul>
+<p>更多信息，请参阅<strong><a href="thumbnail-image-policies.html">缩略图图片政策（Thumbnail Image Policies）</a></strong>和<strong><a href="reporting-unoriginal-promotional-assets-in-fortnite-creative.html">举报非原创宣传素材（Reporting Unoriginal Promotional Assets）</a></strong>。</p>
+<p>复用已有岛屿的 Verse 代码、设备与系统是标准且可接受的开发实践，不会触发仿冒检测。</p>
+<p>如果你或你的团队是某个标题或缩略图的原创开发者，这些素材在同一时间最多只能在一座正式上线（live）的岛屿上不受限制地使用。</p>
+<span id="the-testing-window-for-new-islands" class="anchor"></span>
+<h3>新岛屿的测试窗口</h3>
+<p>当你发布一座新岛屿时，探索（Discover）会对你的内容进行最长 2 周的测试。测试窗口的存在，是为了在岛屿获得探索（Discover）更广泛分发之前，收集足够的真实数据以评估新岛屿的质量。在此窗口期间：</p>
+<ul>
+<li>岛屿可以在不同的探索（Discover）行中展示。</li>
+<li>新岛屿从第一天起就有资格进入类型行和个性化展示面，并且随着展示与互动信号的积累，出现的可能性会越来越高。</li>
+<li>我们在评分中会纳入历史上下文，因此不会仅凭某一天表现不佳就对你的岛屿下结论。</li>
+</ul>
+<span id="continuous-evaluation" class="anchor"></span>
+<h3>持续评估</h3>
+<p>表现良好的岛屿会从测试流程中毕业，并继续在各类型行与个性化展示面中获得分发。表现不佳的岛屿会获得较少的算法分发，但仍可通过直接输入岛屿代码、资料库、收藏和个人主页页面被完整搜索与访问，并会继续接受重新评估。</p>
+<p>主要有两套机制在起作用：</p>
+<ul>
+<li><strong>自动化系统（Automated systems）</strong>会持续依据互动、留存、社交与相似度信号为岛屿打分。随着新的玩家数据到来，这些系统会重新打分。
+<ul>
+<li>探索（Discover）算法会持续重新评估你的岛屿。</li>
+<li>玩家互动信号——包括游玩时长、跳出率和优质通关率——会与其他岛屿的历史表现分布进行权衡比较。</li>
+<li>对岛屿的更新如果提升了质量，可能会增加你在探索（Discover）各展示面的曝光。</li>
+</ul>
+</li>
+<li><strong>人工审核（Human review）</strong>会在所有行中对本文档概述的最佳实践做二次检查。如果你的岛屿被移出探索（Discover）推荐，你会通过创作者门户（Creator Portal）通知获知。如需了解人工审核导致岛屿被移除的更多原因，请参阅<strong><a href="how-discover-works-in-fortnite.html#common-reasons-islands-may-not-be-featured-in-discover">岛屿可能无法在探索中推荐的常见原因</a></strong>。</li>
+</ul>
+<span id="metrics" class="anchor"></span>
+<h2 id="sec-3">指标</h2>
+<p>以下是影响岛屿在探索（Discover）中曝光的一些最重要的指标。这些指标会持续接受测试与优化。</p>
+<table>
+<thead><tr><th>指标</th><th>说明</th></tr></thead>
+<tbody>
+<tr><td><strong>平均游玩时长（Average Playtime）</strong></td><td>一段时间内的单次会话平均游玩分钟数。对于该指标，我们按单次会话上限 120 分钟计算，以防止异常会话扭曲我们收集的游玩时长分析数据。</td></tr>
+<tr><td><strong>同时在线用户数（Concurrent Users，CCU）</strong></td><td>同一时间在一座岛屿上游玩的玩家数量。</td></tr>
+<tr><td><strong>跳出率（Bounce Rate）</strong></td><td>玩家停留时间低于某行特定阈值（通常为 5 分钟）的会话所占比例。</td></tr>
+<tr><td><strong>玩家留存率（Player Retention）</strong></td><td>在一段时间内回访你岛屿的玩家百分比。</td></tr>
+<tr><td><strong>社交游玩（Social Play）</strong></td><td>多项社交指标会持续接受评估，包括玩家邀请他人一起游玩该岛屿的频率、玩家组队回访该岛屿的情况，以及该岛屿被组队游玩的时间占比。此类指标即将登陆<a href="https://dev.epicgames.com/documentation/fortnite/project-analytics-for-fortnite-games" target="_blank" rel="noopener">项目分析（Project Analytics）</a>。</td></tr>
+<tr><td><strong>优质通关率（Qualified Play-Through Rate，QPTR）</strong></td><td>考虑游玩时长的互动加权版通关率。在你的岛屿中深入游玩的玩家，比勉强越过阈值的玩家权重更高。</td></tr>
+<tr><td><strong>独立用户数（Unique Users）</strong></td><td>过去 7 天内在该岛屿上游玩过的玩家数量。</td></tr>
+</tbody>
+</table>
+<span id="thumbnail-best-practices" class="anchor"></span>
+<h2 id="sec-4">缩略图最佳实践</h2>
+<p>缩略图对岛屿的成功非常重要。请记住，所有缩略图都必须遵守<strong><a href="https://legal.epicgames.com/fortnite/developer-rules" target="_blank" rel="noopener">Fortnite 开发者规则（Fortnite Developer Rules）</a></strong>，以避免受到审核处置。</p>
+<p>遵循以下最佳实践，可提高岛屿出现在探索（Discover）中的机会。</p>
+<table>
+<thead><tr><th>最佳实践</th><th>说明</th><th>示例</th></tr></thead>
+<tbody>
+<tr><td>准确呈现你的岛屿</td><td>使用能准确呈现岛屿及其玩法的图片。</td><td><figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/ac204cc3-e4e0-4802-81b8-d96887ac3d7d?resizing_type=fit" alt="原文示意图1" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/ac204cc3-e4e0-4802-81b8-d96887ac3d7d?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure><figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/45a380fc-568e-4957-8b4b-f7a8addc26c9?resizing_type=fit" alt="原文示意图2" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/45a380fc-568e-4957-8b4b-f7a8addc26c9?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></td></tr>
+<tr><td>让缩略图独具特色</td><td>考虑使用一张经过精心构图的图片作为基础，搭配文字、角色美术或风格化处理，传达岛屿的独特之处。</td><td><figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/a5683963-4fc1-4540-be72-098d8d1369a7?resizing_type=fit" alt="原文示意图3" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/a5683963-4fc1-4540-be72-098d8d1369a7?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></td></tr>
+<tr><td>展示武器在玩法中的使用方式</td><td>如果你决定展示武器，请将它们自然地融入缩略图，呈现其在实战中的样子。</td><td><figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/1392dc5f-d958-4364-af00-d8a314600a05?resizing_type=fit" alt="原文示意图4" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/1392dc5f-d958-4364-af00-d8a314600a05?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></td></tr>
+<tr><td>让背景构图有意义</td><td>使用能反映玩家在体验中实际看到的画面的背景，即使是简化或风格化处理过的版本。</td><td><figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/859ce603-ad1c-4b0f-9319-d21af035313f?resizing_type=fit" alt="原文示意图5" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/859ce603-ad1c-4b0f-9319-d21af035313f?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></td></tr>
+</tbody>
+</table>
+<span id="thumbnail-practices-to-avoid" class="anchor"></span>
+<h3>应避免的缩略图做法</h3>
+<p>为提高岛屿出现在探索（Discover）中的机会，请避免以下做法。</p>
+<table>
+<thead><tr><th>应避免的做法</th><th>说明</th><th>示例</th></tr></thead>
+<tbody>
+<tr><td>纯色背景</td><td>避免将漂浮素材或纯文字放在空白背景、渐变、通用或单色背景之上。</td><td><figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/c6049dcd-84c1-4f31-8e90-6b678f0b5949?resizing_type=fit" alt="原文示意图6" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/c6049dcd-84c1-4f31-8e90-6b678f0b5949?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure><figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/b7d98a92-5507-42a3-a133-a77e26e853dc?resizing_type=fit" alt="原文示意图7" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/b7d98a92-5507-42a3-a133-a77e26e853dc?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></td></tr>
+<tr><td>原始截图</td><td>避免使用未经编辑或仅做最轻微编辑的游戏内截图。</td><td><figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/783bed8d-d29f-45e4-ac04-dccd0089bae4?resizing_type=fit" alt="原文示意图8" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/783bed8d-d29f-45e4-ac04-dccd0089bae4?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></td></tr>
+<tr><td>脱离玩法语境的漂浮武器</td><td>避免将 3D 武器、物品和拾取图标叠加到缩略图上。</td><td><figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/9b6f6b9d-9232-4a26-a290-069b75dc8a13?resizing_type=fit" alt="原文示意图9" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/9b6f6b9d-9232-4a26-a290-069b75dc8a13?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure><figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/12e3fb17-f07b-4748-bb7d-4a8beea87e53?resizing_type=fit" alt="原文示意图10" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/12e3fb17-f07b-4748-bb7d-4a8beea87e53?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></td></tr>
+</tbody>
+</table>
+<span id="where-your-island-can-appear" class="anchor"></span>
+<h2 id="sec-5">岛屿可以展示的位置</h2>
+<p>玩家在探索（Discover）中看到的行，以及这些行的排列顺序，可能会因玩家群体（年龄分级、平台、地区、个性化授权）而异。探索（Discover）会频繁试验新的行与排序，以了解它们对玩家整体互动的影响。各行的名称也可能有所不同。</p>
+<span id="editorial-rows" class="anchor"></span>
+<h3>🧑‍🎨 编辑精选行</h3>
+<p>这些行展示由 Epic 制作的岛屿以及由 Epic 员工挑选的岛屿。</p>
+<table>
+<thead><tr><th>行</th><th>说明</th></tr></thead>
+<tbody>
+<tr><td><strong>By Epic</strong></td><td>该行展示由 Epic Games 开发或发行的岛屿。内容为编辑精选，不受玩家指标影响，不包含任何第三方内容。</td></tr>
+<tr><td><strong>Epic’s Picks（Epic 精选）</strong></td><td>该行展示由 Epic 编辑团队挑选的新颖性高、富有创意的岛屿。这些精选内容突出出色的玩法或对机制的创造性运用。该行中的岛屿为人工精选，在推荐前需经过质量审核。更多信息，请参阅<strong><a href="epics-picks-in-fortnite.html">Epic 精选（Epic's Picks）</a></strong>。</td></tr>
+</tbody>
+</table>
+<span id="lifecycle-and-personalization-rows" class="anchor"></span>
+<h3>⏱ 生命周期与个性化行</h3>
+<p>生命周期与个性化行会根据岛屿所处的发行阶段、玩家最近游玩的内容，以及我们认为玩家接下来最想看到的内容来展示岛屿。</p>
+<table>
+<thead><tr><th>行</th><th>说明</th></tr></thead>
+<tbody>
+<tr><td><strong>最近游玩（Recently Played）</strong></td><td>该行显示玩家最近游玩过的岛屿。包含所有岛屿类型，不做排名或过滤，除非岛屿已变为私密或下架。该列表会根据玩家的会话历史动态更新。最近游玩（Recently Played）中的岛屿会在 90 天后不再被视为“最近”。</td></tr>
+<tr><td><strong>新品（New）</strong></td><td>该行显示进入探索（Discover）的新发布岛屿。</td></tr>
+<tr><td><strong>更新（Updated）</strong></td><td>该行显示过去 7 天内更新过的岛屿。</td></tr>
+<tr><td><strong>为你推荐（For You）</strong></td><td>“为你推荐（For You）”行是动态个性化行，根据特定玩家历史上的互动情况，展示我们认为该玩家接下来最可能想玩的岛屿。</td></tr>
+<tr><td><strong><a href="https://dev.epicgames.com/documentation/fortnite/campaigns-in-fortnite" target="_blank" rel="noopener">赞助（Sponsored）</a></strong></td><td>该行让开发者可以选择付费，以获得更高的岛屿曝光。</td></tr>
+</tbody>
+</table>
+<span id="genre-play-style-rows" class="anchor"></span>
+<h3>🎮 类型 / 游玩风格行</h3>
+<p>探索（Discover）按类型对岛屿分类。发布岛屿时，你需要选择以下类型之一。你选择的类型决定岛屿有资格进入哪一行。与所选类型不符的岛屿体验不会出现在相应的类型或游玩风格行中。请参阅<strong><a href="how-discover-works-in-fortnite.html#common-reasons-islands-may-not-be-featured-in-discover">岛屿可能无法在探索中推荐的常见原因</a></strong>。一座岛屿一次只能在一行类型行中推荐，你可以通过重新发布岛屿并选择新类型来更改岛屿的类型。</p>
+<p>类型行的顺序，以及你的岛屿在类型行中的位置，会因玩家的游玩历史和信号而异。经常游玩模拟与大亨类（Simulation &amp; Tycoon）的玩家会最先看到该类型行，并且在该行中排在前面的会是他们最可能参与的岛屿。你可以使用我们的公开 API，了解你的岛屿在探索（Discover）中的展示位置与展示频率。</p>
+<p>选择游戏标签与选择类型并不相同——游戏标签用于为玩家和 Epic 提供关于岛屿的更多信息，但不决定行的参选资格。</p>
+<table>
+<thead><tr><th>类型</th><th>说明</th></tr></thead>
+<tbody>
+<tr><td><strong>冒险与角色扮演（Adventure &amp; RPG）</strong></td><td>以世界驱动的岛屿，玩家沉浸于探索、叙事与发现之中。玩法围绕角色成长、属性与升级展开。玩家通过自己的选择决定角色的技能。</td></tr>
+<tr><td><strong>大逃杀（Battle Royale）</strong></td><td>最后一人或最后一队获胜的体验，玩家在不断缩小的游玩空间中竞争。淘汰与区域压迫是决定性机制。例如：区域战争，以及 Fortnite 大逃杀。</td></tr>
+<tr><td><strong>死亡跑酷与平台跳跃（Deathrun &amp; Platformer）</strong></td><td>以移动和障碍为核心的岛屿，从起点到终点穿越赛道本身就是全部挑战。此类玩法强调时机、精准度，以及通过跳跃、攀爬、穿越崎岖地形或陷阱来克服障碍。</td></tr>
+<tr><td><strong>恐怖（Horror）</strong></td><td>主要围绕恐惧、惊悚与氛围设计的体验。此类岛屿依赖跳跃式惊吓与心理元素。</td></tr>
+<tr><td><strong>音乐与节奏（Music &amp; Rhythm）</strong></td><td>围绕音乐创作、表演或节奏玩法展开的岛屿。玩家以反应、表演或通过音乐互动的方式驱动核心循环。这与“只是配乐好听”的地图有本质区别。</td></tr>
+<tr><td><strong>派对与迷你游戏（Party &amp; Mini Games）</strong></td><td>为轻松的短时多人欢乐设计的岛屿，带重置循环。一局结束，有人获胜，大家再来一局。</td></tr>
+<tr><td><strong>Roguelike</strong></td><td>围绕单局轮回玩法构建的岛屿，玩家面对一系列关卡或挑战，被击败后从头开始。难度递增、永久淘汰，以及轮回之间延续的成长构成核心循环。</td></tr>
+<tr><td><strong>角色扮演与社交（Roleplaying &amp; Social）</strong></td><td>围绕玩家驱动的叙事、社交互动与创意表达构建的岛屿，而非结构化竞技玩法。玩家在共享世界与空间中扮演某个角色或身份。</td></tr>
+<tr><td><strong>射击（Shooter）</strong></td><td>以枪战为主要机制的战斗体验，但赛制不是大逃杀。目标是积累淘汰数而非生存，例如自由混战、竞技场与训练图。</td></tr>
+<tr><td><strong>模拟与大亨（Simulation &amp; Tycoon）</strong></td><td>玩家随时间建造、管理、发展或优化系统的岛屿。成长来自跨会话的积累与决策。</td></tr>
+<tr><td><strong>体育与竞速（Sport &amp; Racing）</strong></td><td>围绕现实体育赛制或载具竞速构建的岛屿。规则、获胜条件与玩家角色对应现实中可识别的体育或竞速惯例。在既定赛制中的表现与技巧决定结果。</td></tr>
+<tr><td><strong>策略（Strategy）</strong></td><td>规划、站位与决策比反应更能决定结果的岛屿。例如塔防或基地建设游戏。</td></tr>
+<tr><td><strong>生存（Survival）</strong></td><td>玩家在持续会话中管理资源与应对威胁以求生存的岛屿。例如僵尸来袭或波次防御游戏。</td></tr>
+</tbody>
+</table>
+<span id="category-genre-grouping-rows" class="anchor"></span>
+<h3>🧩 合集行</h3>
+<p>游戏合集（Game Collection）行展示使用乐高®（LEGO®）与糖豆人（Fall Guys）等合作内容构建的岛屿。</p>
+<span id="search" class="anchor"></span>
+<h2 id="sec-6">搜索</h2>
+<p><strong>搜索（Search）</strong>是玩家在 Fortnite 中查找特定岛屿与类型的重要方式。它采用混合方法，结合两种算法：关键词匹配与语义搜索。<strong>关键词匹配（Keyword matching）</strong>返回包含与用户查询完全一致文本的岛屿。<strong>语义搜索（Semantic search）</strong>返回与用户查询“语义相似”的岛屿。</p>
+<p>这种混合方法让玩家既能用通用词汇找到内容，也支持非常具体的搜索。例如：</p>
+<table>
+<thead><tr><th>搜索算法类型</th><th>搜索词</th><th>结果</th></tr></thead>
+<tbody>
+<tr><td><strong>语义（Semantic）</strong></td><td>space</td><td>设在月球上的岛屿</td></tr>
+<tr><td><strong>语义（Semantic）</strong></td><td>scary tycoons</td><td>恐怖主题大亨岛屿、僵尸大亨</td></tr>
+<tr><td><strong>关键词（Keyword）</strong></td><td>ffa</td><td>自由混战岛屿</td></tr>
+<tr><td><strong>关键词（Keyword）</strong></td><td>Reload</td><td>Reload</td></tr>
+</tbody>
+</table>
+<p>从搜索汇总结果后，会基于以下特征进行算法排序：</p>
+<ul>
+<li>与所用搜索词的语义相似度</li>
+<li>关键词匹配（如有）</li>
+<li>当时的同时在线用户数（CCU），并结合其他变量</li>
+<li>已确认的近期搜索次数</li>
+</ul>
+<p>随着玩家的查询与选择模式不断反馈给算法，搜索排名会持续改进。</p>
+<span id="common-reasons-islands-may-not-be-featured-in-discover" class="anchor"></span>
+<h2 id="sec-7">岛屿可能无法在探索中推荐的常见原因</h2>
+<p>岛屿可能无法在探索（Discover）中推荐，或被从中移除，原因有多种。本节概述人工审核员判定某个岛屿不应进入探索（Discover）的原因，以及每种问题的处理方法。</p>
+<p>即使你的岛屿未在探索（Discover）中推荐，任何拥有岛屿代码的人仍然可以搜索并游玩它。</p>
+<span id="genre-misclassification" class="anchor"></span>
+<h3>类型错配</h3>
+<p>你的岛屿已从探索（Discover）类型行中移除，因为其类型选择与实际提供的体验不符。类型行的设计目标是帮助玩家准确找到想要的内容。当岛屿出现在错误的类型中，会给玩家带来糟糕的体验，并随时间影响岛屿的排名。</p>
+<p><strong>你可以采取的措施</strong>：将岛屿的类型更新为能准确反映体验的类型。一旦岛屿以合适的类型重新发布，就有资格再次出现在探索（Discover）中。关于选择合适类型与提升岛屿曝光的技巧，请查看<strong><a href="how-discover-works-in-fortnite.html#genre-play-style-rows">类型 / 游玩风格行</a></strong>一节。</p>
+<span id="duplicative-content" class="anchor"></span>
+<h3>重复内容</h3>
+<p>你的岛屿已从探索（Discover）中移除，因为它与你已发布的岛屿，或与其他开发者发布的岛屿高度相似。探索（Discover）旨在呈现多样化的体验。近乎相同的岛屿会降低玩家的选择多样性，还可能挤占其他开发者的作品。</p>
+<p><strong>你可以采取的措施</strong>：将精力集中在一个版本的体验上，投入使其独特且高质量。用真正带来差异化的有意义改进来更新岛屿，然后重新发布。原创内容扎实的岛屿会在探索（Discover）中随时间获得更好表现。</p>
+<span id="minimal-gameplay" class="anchor"></span>
+<h3>玩法不足与缩略图标准</h3>
+<p>你的岛屿已从探索（Discover）中移除，因为它目前没有提供足够的玩法或玩家互动，未达到推荐曝光的标准，或未遵守我们的<a href="how-discover-works-in-fortnite.html#thumbnail-best-practices">缩略图最佳实践</a>。探索（Discover）旨在将玩家与他们真正喜欢的体验连接起来。不能提供有意义玩法，或缩略图与玩法映射不清晰的岛屿，会损害玩家对平台的信任，并影响外界对所有开发者的看法。</p>
+<p><strong>你可以采取的措施</strong>：用真实的游戏机制、目标与玩家互动来充实你的体验。愿意停留并参与的玩家，是岛屿属于探索（Discover）的最强信号。当岛屿准备就绪后，发布更新版本，它将有资格再次展示。</p>
+<span id="helpful-links" class="anchor"></span>
+<h2 id="sec-8">有用链接</h2>
+<ul>
+<li><a href="https://dev.epicgames.com/documentation/fortnite/project-analytics-for-fortnite-games" target="_blank" rel="noopener">关于项目分析（About Project Analytics）</a></li>
+<li><a href="https://dev.epicgames.com/documentation/fortnite/creating-and-editing-campaigns-in-fortnite" target="_blank" rel="noopener">如何创建赞助推广活动（How to create a Sponsored campaign）</a></li>
+<li><a href="https://dev.epicgames.com/documentation/fortnite/ab-thumbnail-testing-in-fortnite-creative" target="_blank" rel="noopener">如何使用缩略图 A/B 测试（How to use A/B Thumbnail Testing）</a></li>
+<li><a href="https://www.fortnite.com/developer/developer-marketing-playbook" target="_blank" rel="noopener">Fortnite 开发者营销手册（Fortnite Developer Marketing Playbook）</a></li>
+<li><a href="https://dev.epicgames.com/community/search?query=discover" target="_blank" rel="noopener">discover</a></li>
+<li><a href="https://dev.epicgames.com/community/search?query=metrics" target="_blank" rel="noopener">metrics</a></li>
+<li><a href="https://dev.epicgames.com/community/search?query=visibility" target="_blank" rel="noopener">visibility</a></li>
+</ul>
+<hr>
+<p><strong>提问并帮助同行：<a href="https://forums.unrealengine.com/categories?tag=fortnite" target="_blank" rel="noopener">开发者论坛（Developer Forums）</a></strong></p>
+<p><strong>撰写你自己的教程，或阅读他人的教程：<a href="https://dev.epicgames.com/community/fortnite/learning" target="_blank" rel="noopener">学习库（Learning Library）</a></strong></p>
+<ul>
+<li><a href="#discover-overview">探索概览（Discover Overview）</a></li>
+<li><a href="#how-we-evaluate-islands-for-discover">我们如何评估岛屿以进入探索（How We Evaluate Islands for Discover）</a></li>
+<li><a href="#pre-checks-before-publishing">发布前检查（Pre-Checks Before Publishing）</a></li>
+<li><a href="#the-testing-window-for-new-islands">新岛屿的测试窗口（The Testing Window for New Islands）</a></li>
+<li><a href="#continuous-evaluation">持续评估（Continuous Evaluation）</a></li>
+<li><a href="#metrics">指标（Metrics）</a></li>
+<li><a href="#thumbnail-best-practices">缩略图最佳实践（Thumbnail Best Practices）</a></li>
+<li><a href="#thumbnail-practices-to-avoid">应避免的缩略图做法（Thumbnail Practices to Avoid）</a></li>
+<li><a href="#where-your-island-can-appear">岛屿可以展示的位置（Where Your Island Can Appear）</a></li>
+<li><a href="#editorial-rows">🧑‍🎨 编辑精选行（Editorial Rows）</a></li>
+<li><a href="#lifecycle-and-personalization-rows">⏱ 生命周期与个性化行（Lifecycle and Personalized Rows）</a></li>
+<li><a href="#genre-play-style-rows">🎮 类型 / 游玩风格行（Genre / Play Style Rows）</a></li>
+<li><a href="#category-genre-grouping-rows">🧩 合集行（Collections Row）</a></li>
+<li><a href="#search">搜索（Search）</a></li>
+<li><a href="#common-reasons-islands-may-not-be-featured-in-discover">岛屿可能无法在探索中推荐的常见原因（Common Reasons Islands May Not be Featured in Discover）</a></li>
+<li><a href="#genre-misclassification">类型错配（Genre Misclassification）</a></li>
+<li><a href="#duplicative-content">重复内容（Duplicative Content）</a></li>
+<li><a href="#minimal-gameplay">玩法不足与缩略图标准（Minimal Gameplay &amp; Thumbnail Standards）</a></li>
+<li><a href="#helpful-links">有用链接（Helpful Links）</a></li>
+</ul>
+<div class="pager"><a href="18-using-creator-portal-in-fortnite-creative.html"><small>← 返回父教程</small>使用创作者门户</a><a href="sub-index.html"><small>子教程索引 →</small>全部子教程</a></div>
+</article><nav class="doc-toc" aria-label="本页内容"><b>本页内容</b><a href="#sec-1">探索概览</a><a href="#sec-2">我们如何评估岛屿以进入探索</a><a href="#sec-3">指标</a><a href="#sec-4">缩略图最佳实践</a><a href="#sec-5">岛屿可以展示的位置</a><a href="#sec-6">搜索</a><a href="#sec-7">岛屿可能无法在探索中推荐的常见原因</a><a href="#sec-8">有用链接</a></nav></div>
+</div></div>
+</div>
+<footer class="edc-footer"><div class="inner"><img src="../assets/logo-epic.svg" alt="Epic Games"><span>Fortnite 文档中文镜像 · UE教程/ · 本地打开 index.html 阅读 · 翻译整理自 Epic 官方文档，仅供学习交流</span></div></footer>
+</body>
+</html>

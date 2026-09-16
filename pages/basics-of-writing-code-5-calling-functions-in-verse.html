@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>编写代码基础 5：在 Verse 中调用函数 | Fortnite 文档中文镜像</title>
+<link rel="stylesheet" href="../assets/epic.css">
+<link rel="stylesheet" href="../assets/patch.css">
+<link rel="icon" href="../assets/logo-epic.svg">
+</head>
+<body class="theme-fortnite">
+<div class="edc-topbar"><div class="edc-topbar-inner"><img class="edc-logo" src="../assets/logo-epic.svg" alt="Epic Games"><span class="edc-brand">Epic Games <b>开发者社区</b></span><span class="edc-nav"><a href="../index.html">文档首页</a><a href="sub-index.html">子教程索引</a><a href="https://dev.epicgames.com/documentation/fortnite/basics-of-writing-code-5-calling-functions-in-verse" target="_blank" rel="noopener">英文原文</a></span></div></div>
+<div class="site-container">
+<aside class="site-nav"><div class="documents-tree"><nav><ul class="contents-table">
+<div class="tree-sec">A · 最新动态</div><a class="tree-link" href="01-42-00-fortnite-ecosystem-updates-and-release-notes.html">01. 42.00 生态系统更新与发行说明</a><a class="tree-link" href="02-custom-items-and-inventory-overview-in-fortnite.html">02. 自定义物品与背包总览</a><a class="tree-link" href="03-in-island-transactions-in-fortnite.html">03. 岛内交易</a><a class="tree-link" href="04-mobile-development-in-fortnite.html">04. 移动端开发</a><a class="tree-link" href="05-inputs-in-fortnite.html">05. 输入系统</a><a class="tree-link" href="06-ability-system-in-unreal-editor-for-fortnite.html">06. 能力系统 Ability System</a><a class="tree-link" href="07-partybased-gameplay-using-the-social-synergy-api-in-fortnite.html">07. 社交协同 API 与小队玩法</a><a class="tree-link" href="08-scene-graph-in-unreal-editor-for-fortnite.html">08. 场景图 Scene Graph</a><div class="tree-sec">B · 入门指南</div><a class="tree-link" href="09-build-your-first-island-in-fortnite.html">09. 构建你的第一个岛屿</a><a class="tree-link" href="10-onboarding-guide-to-programming-with-verse-in-unreal-editor-for-fortnite.html">10. Verse 编程入门指南</a><a class="tree-link" href="11-building-basics-in-fortnite-creative.html">11. 建造基础</a><div class="tree-sec">C · 品牌合集</div><a class="tree-link" href="12-star-wars-islands-in-fortnite.html">12. 星球大战™岛屿</a><a class="tree-link" href="13-kpop-demon-hunters-islands-in-fortnite.html">13. KPop 猎魔团岛屿</a><a class="tree-link" href="14-building-lego-islands-in-fortnite.html">14. 乐高®岛屿</a><a class="tree-link" href="15-the-walking-dead-universe-islands-in-unreal-editor-for-fortnite.html">15. 行尸走肉宇宙岛屿</a><a class="tree-link" href="16-teenage-mutant-ninja-turtle-islands-in-unreal-editor-for-fortnite.html">16. 忍者神龟岛屿</a><a class="tree-link" href="17-squid-game-islands-in-fortnite.html">17. 鱿鱼游戏岛屿</a><div class="tree-sec">D · 开发者成功</div><a class="tree-link" href="18-using-creator-portal-in-fortnite-creative.html">18. 使用创作者门户</a><a class="tree-link" href="19-island-moderation-and-guidelines-in-fortnite-creative.html">19. 岛屿审核与准则</a><div class="tree-sec">E · 协作与版本控制</div><a class="tree-link" href="20-creating-teams-in-creator-portal-in-unreal-editor-for-fortnite.html">20. 在创作者门户创建团队</a><a class="tree-link" href="21-adding-playtesters-in-fortnite-creative.html">21. 添加试玩测试员</a><a class="tree-link" href="22-playtesting-your-island-in-unreal-editor-for-fortnite.html">22. 试玩测试你的岛屿</a><a class="tree-link" href="23-collaborating-in-unreal-editor-for-fortnite.html">23. 在 UEFN 中协作</a><a class="tree-link" href="24-lore-version-control-in-unreal-editor-for-fortnite.html">24. Lore 版本控制</a><a class="tree-link" href="25-conflicts-in-lore-version-control-in-unreal-editor-for-fortnite.html">25. Lore 中的冲突</a><a class="tree-link" href="26-version-history-and-conflict-resolution-in-unreal-editor-for-fortnite.html">26. 分支历史与冲突解决</a><div class="tree-sec">F · 游戏示例</div><a class="tree-link" href="27-build-a-game-in-unreal-editor-for-fortnite.html">27. 构建一款游戏</a><a class="tree-link" href="28-unreal-editor-for-fortnite-starter-templates.html">28. UEFN 新手模板</a><div class="tree-sec">G · Verse 编程</div><a class="tree-link active" href="29-learn-the-basics-of-writing-code-in-verse.html">29. 从零学习 Verse 代码基础</a><div class="tree-sec">H · 专注领域</div><a class="tree-link" href="30-lighting-in-unreal-editor-for-fortnite.html">30. 灯光</a><a class="tree-link" href="31-animation-and-cinematics-in-unreal-editor-for-fortnite.html">31. 动画与过场动画</a><a class="tree-link" href="32-modeling-in-unreal-editor-for-fortnite.html">32. 建模</a><a class="tree-link" href="33-materials-in-unreal-editor-for-fortnite.html">33. 材质</a><a class="tree-link" href="34-environments-and-landscapes-in-unreal-editor-for-fortnite.html">34. 环境与地形</a><a class="tree-link" href="35-audio-in-unreal-editor-for-fortnite.html">35. 音频</a><a class="tree-link" href="36-visual-effects-in-unreal-editor-for-fortnite.html">36. 视觉特效</a>
+</ul></nav></div></aside>
+<div class="page-content"><div class="page-document has-theme-bg">
+<header class="section-page-header"><nav><ol class="breadcrumb is-shrinkable"><li class="breadcrumb-item is-root"><img src="../assets/logo-epic.svg" alt="Epic Games"><a href="../index.html">Developer</a></li><li class="breadcrumb-item"><a href="../index.html">Fortnite 文档</a></li><li class="breadcrumb-item"><a href="29-learn-the-basics-of-writing-code-in-verse.html">从零学习 Verse 代码基础</a></li><li class="breadcrumb-item active" aria-current="page"><span class="text-truncate">编写代码基础 5：在 Verse 中调用函数</span></li></ol></nav><h1>编写代码基础 5：在 Verse 中调用函数</h1><p class="text-secondary mb-0">本课学习用表达式组合出可复用的函数、函数调用的写法，以及方法与类的入门概念。</p><p class="doc-meta">英文原标题：Basics Of Writing Code 5 Calling Functions In Verse · <a href="https://dev.epicgames.com/documentation/fortnite/basics-of-writing-code-5-calling-functions-in-verse" target="_blank" rel="noopener">查看英文原文</a> · 社区翻译镜像，仅供学习</p></header>
+<div class="doc-columns"><article class="doc-article">
+<div class="block-callout"><b>前置主题</b>：要理解和使用本页内容，请确保你已熟悉以下主题：<ul><li><a href="basics-of-writing-code-4-writing-simple-code-in-verse.html">第 4 课：编写简单代码</a></li></ul></div>
+<p>到目前为止，你已经学会创建常量和变量来存储和使用值，也学会了用 <code>if</code> 表达式以及 <code>and</code>、<code>or</code> 等决策运算符在代码中做决策。</p>
+<p>现在是时候学习如何编写可以在程序中轻松复用的代码了。</p>
+<p>还记得<a href="basics-of-writing-code-2-basic-programming-concepts-in-verse.html#expressions">第 2 课</a>里讲过：<strong>表达式</strong>是能产生结果的最小代码单元吗？还记得当表达式<strong>执行</strong>并输出一个值时，输出的那个值就是<strong>结果</strong>吗？</p>
+<p>你可以利用这一点让代码更高效。</p>
+<p>表达式可以和其他表达式组合成<strong>函数（function）</strong>，函数可以在代码中反复使用，而不用每次都重写它的逻辑。</p>
+<h2 id="sec-1">在函数中使用表达式</h2>
+<p><strong>函数（function）</strong>（也叫<strong>例程（routine）</strong>）是可复用的代码，用于说明如何执行某个动作，或如何根据输入产生输出。</p>
+<p>函数由组合起来的<strong>表达式</strong>构成。</p>
+<p>要定义一个函数，你需要：</p>
+<ul><li>一个唯一的名字，即<strong>标识符（identifier）</strong>。</li><li>将产生的<strong>信息类型（type）</strong>。</li><li>函数被<strong>调用时要做什么</strong>。</li></ul>
+<p>函数的基本语法如下：</p>
+<pre><code>name() : type = codeblock</code></pre>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/abd4ae28-bf69-41f2-9365-ecebb40a45e1?resizing_type=fit" alt="函数基本语法示意图1" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/abd4ae28-bf69-41f2-9365-ecebb40a45e1?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>下一课会详细介绍代码块（code block），现在你只需要知道：代码块就是用来放组成函数的那些表达式的地方。</p>
+<h2 id="sec-2">函数与函数调用</h2>
+<p><strong>函数</strong>本质上就是你起了名字的一<strong>系列表达式</strong>。</p>
+<p>程序通过<strong>调用（calling）</strong>函数的名字来使用函数。调用会<strong>唤起（invoke）</strong>（激活）该函数，这就是<strong>函数调用（function call）</strong>。</p>
+<p>这意味着：你不用一遍遍重复写函数里的所有表达式，而是把它们打包成一个有名字的函数；之后每次在程序中调用它，计算机都会回头找到这个函数并执行其中的表达式。</p>
+<p>举个例子：与其让 <code>CoinsPerMousetrap</code> 永远等于 <code>100</code>，不如写一段代码，每次运行时随机选一个值来改变它。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/16643a48-7fa7-4a73-bf61-84d563dd8852?resizing_type=fit" alt="随机改变捕鼠器价格的代码示意图2" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/16643a48-7fa7-4a73-bf61-84d563dd8852?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>在下面的例子中，该表达式被设为用 <code>GetRandomInt(1, 10)</code> 生成一个 1 到 10 的随机数。</p>
+<p>分解如下：</p>
+<p><code>GetRandomInt()</code></p>
+<p>这是 Verse（Verse）中的内置函数，顾名思义——生成一个随机整数。</p>
+<p><code>1, 10</code></p>
+<p>表示它能生成的数字范围。如果你写 <code>20, 50</code>，就会生成 20 到 50 的数字。注意范围要写在 <code>()</code> 里，而 <code>()</code> 是这个表达式名字的一部分。</p>
+<p>这是<strong>函数调用</strong>，因为它告诉计算机去调用那个函数，按你设定的 1 到 10 范围取一个随机整数。</p>
+<p>当你想在代码中使用<strong>函数</strong>时，可以按<strong>名字</strong>调用它。每次调用 <code>GetRandomInt()</code> 都会生成一个新的随机数。</p>
+<p>你可以用它随机改变捕鼠器的价格：</p>
+<pre><code>using { /Fortnite.com/Devices }
+using { /Verse.org/Simulation }
+using { /UnrealEngine.com/Temporary/Diagnostics }
+using { /Verse.org/Random }
+OnBegin&lt;override&gt;()&lt;suspends&gt; : void =
+    # Initialize Coins to 500. Because it is a var, you can change it later.
+    var Coins : int = 500
+    # Initialize CoinsPerMousetrap with a random integer between 1 and 100</code></pre>
+<p>注意上面示例几乎每行代码都有注释，解释这行代码做了什么。无论是你过段时间回头看，还是其他程序员想补充或修改你的代码，这都很有帮助。</p>
+<h3>方法</h3>
+<p>还记得<a href="basics-of-writing-code-2-basic-programming-concepts-in-verse.html#types-and-values">第 2 课</a>讲过类型决定了存放在变量或常量里的值可以执行哪些运算吗？类型还有其他作用。</p>
+<p>类型有属于自己的运算，也有属于自己的函数。这些函数叫<strong>方法（method）</strong>，必须用特殊方式调用。</p>
+<p>普通函数直接写名字调用即可（比如 <code>Print()</code> 或 <code>GetRandomInt()</code>），而<strong>方法调用（method call）</strong>必须以变量（或常量）名开头，后跟一个 <code>.</code>，再写方法名。例如，在变量 <code>Cat</code> 上调用方法 <code>Pounce()</code> 要写成：</p>
+<pre><code>Cat.Pounce()</code></pre>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/2ad9bfe1-578f-441d-9134-cec54307bb1e?resizing_type=fit" alt="方法调用示意图3" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/2ad9bfe1-578f-441d-9134-cec54307bb1e?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h3>类</h3>
+<p><strong>类（class）</strong>是用来创建具有相似行为和属性的事物的模板。类是<strong>复合（composite）</strong>类型，意味着它由来自其他类型的一组数据打包而成。</p>
+<p>定义类之后，该类的数据可以被任何<strong>子类（subclass）</strong><strong>继承（inherit）</strong>。</p>
+<p>而方法就是依附在类上的函数。正因如此，不是每个方法都适用于每种类型：方法必须在该类型的类定义中声明，或在该类型继承的类中声明。如果现在还没完全理解，别担心——这只是快速入门，后面还会深入讲类。</p>
+<h2 id="sec-3">总结</h2>
+<ul><li><strong>函数</strong>是起了名字的表达式序列，可以<strong>复用</strong>。</li><li>函数也叫<strong>例程</strong>。</li><li>函数能省时间、减少错误，因为你不必反复输入（或维护）多行相同的代码。</li><li>当你在一行代码中复用函数时，用的就是<strong>函数调用</strong>。</li><li><strong>方法</strong>是属于某种类型的函数，必须在该类型的变量或常量上调用。</li><li><strong>类</strong>是<strong>复合</strong>类型，可以把来自其他类型的数据组合起来，再把行为和属性共享给<strong>子类</strong>。</li></ul>
+<h2 id="sec-4">练习时间！</h2>
+<ul><li><a href="basics-of-writing-code-5-practice-time-in-verse.html">第 5 课：练习时间！准备好调用一些函数了吗？开始吧！</a></li></ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/2bdb697c-07e8-40e3-a869-4a6289edadac?resizing_type=fit&width=640&height=640" alt="第 5 课：练习时间示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/2bdb697c-07e8-40e3-a869-4a6289edadac?resizing_type=fit&width=640&height=640" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>标签：<a href="https://dev.epicgames.com/community/search?query=verse" target="_blank" rel="noopener">verse</a> · <a href="https://dev.epicgames.com/community/search?query=functions" target="_blank" rel="noopener">functions</a> · <a href="https://dev.epicgames.com/community/search?query=iterations" target="_blank" rel="noopener">iterations</a> · <a href="https://dev.epicgames.com/community/search?query=conditionals" target="_blank" rel="noopener">conditionals</a> · <a href="https://dev.epicgames.com/community/search?query=language" target="_blank" rel="noopener">language</a> · <a href="https://dev.epicgames.com/community/search?query=expressions" target="_blank" rel="noopener">expressions</a> · <a href="https://dev.epicgames.com/community/search?query=function%20call" target="_blank" rel="noopener">function call</a></p>
+<div class="doc-more"><p><strong>提问并帮助你的同伴：</strong><a href="https://forums.unrealengine.com/categories?tag=fortnite" target="_blank" rel="noopener">开发者论坛（Developer Forums）</a></p><p><strong>编写你自己的教程或阅读他人的教程：</strong><a href="https://dev.epicgames.com/community/fortnite/learning" target="_blank" rel="noopener">学习库（Learning Library）</a></p></div>
+<div class="pager"><a href="29-learn-the-basics-of-writing-code-in-verse.html"><small>← 返回父教程</small>从零学习 Verse 代码基础</a><a href="sub-index.html"><small>子教程索引 →</small>全部子教程</a></div>
+</article><nav class="doc-toc" aria-label="本页内容"><b>本页内容</b><a href="#sec-1">在函数中使用表达式</a><a href="#sec-2">函数与函数调用</a><a href="#sec-3">总结</a><a href="#sec-4">练习时间！</a></nav></div>
+</div></div>
+</div>
+<footer class="edc-footer"><div class="inner"><img src="../assets/logo-epic.svg" alt="Epic Games"><span>Fortnite 文档中文镜像 · UE教程/ · 本地打开 index.html 阅读 · 翻译整理自 Epic 官方文档，仅供学习交流</span></div></footer>
+</body>
+</html>

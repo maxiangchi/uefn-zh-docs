@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>编写代码基础 4：在 Verse 中编写简单代码 | Fortnite 文档中文镜像</title>
+<link rel="stylesheet" href="../assets/epic.css">
+<link rel="stylesheet" href="../assets/patch.css">
+<link rel="icon" href="../assets/logo-epic.svg">
+</head>
+<body class="theme-fortnite">
+<div class="edc-topbar"><div class="edc-topbar-inner"><img class="edc-logo" src="../assets/logo-epic.svg" alt="Epic Games"><span class="edc-brand">Epic Games <b>开发者社区</b></span><span class="edc-nav"><a href="../index.html">文档首页</a><a href="sub-index.html">子教程索引</a><a href="https://dev.epicgames.com/documentation/fortnite/basics-of-writing-code-4-writing-simple-code-in-verse" target="_blank" rel="noopener">英文原文</a></span></div></div>
+<div class="site-container">
+<aside class="site-nav"><div class="documents-tree"><nav><ul class="contents-table">
+<div class="tree-sec">A · 最新动态</div><a class="tree-link" href="01-42-00-fortnite-ecosystem-updates-and-release-notes.html">01. 42.00 生态系统更新与发行说明</a><a class="tree-link" href="02-custom-items-and-inventory-overview-in-fortnite.html">02. 自定义物品与背包总览</a><a class="tree-link" href="03-in-island-transactions-in-fortnite.html">03. 岛内交易</a><a class="tree-link" href="04-mobile-development-in-fortnite.html">04. 移动端开发</a><a class="tree-link" href="05-inputs-in-fortnite.html">05. 输入系统</a><a class="tree-link" href="06-ability-system-in-unreal-editor-for-fortnite.html">06. 能力系统 Ability System</a><a class="tree-link" href="07-partybased-gameplay-using-the-social-synergy-api-in-fortnite.html">07. 社交协同 API 与小队玩法</a><a class="tree-link" href="08-scene-graph-in-unreal-editor-for-fortnite.html">08. 场景图 Scene Graph</a><div class="tree-sec">B · 入门指南</div><a class="tree-link" href="09-build-your-first-island-in-fortnite.html">09. 构建你的第一个岛屿</a><a class="tree-link" href="10-onboarding-guide-to-programming-with-verse-in-unreal-editor-for-fortnite.html">10. Verse 编程入门指南</a><a class="tree-link" href="11-building-basics-in-fortnite-creative.html">11. 建造基础</a><div class="tree-sec">C · 品牌合集</div><a class="tree-link" href="12-star-wars-islands-in-fortnite.html">12. 星球大战™岛屿</a><a class="tree-link" href="13-kpop-demon-hunters-islands-in-fortnite.html">13. KPop 猎魔团岛屿</a><a class="tree-link" href="14-building-lego-islands-in-fortnite.html">14. 乐高®岛屿</a><a class="tree-link" href="15-the-walking-dead-universe-islands-in-unreal-editor-for-fortnite.html">15. 行尸走肉宇宙岛屿</a><a class="tree-link" href="16-teenage-mutant-ninja-turtle-islands-in-unreal-editor-for-fortnite.html">16. 忍者神龟岛屿</a><a class="tree-link" href="17-squid-game-islands-in-fortnite.html">17. 鱿鱼游戏岛屿</a><div class="tree-sec">D · 开发者成功</div><a class="tree-link" href="18-using-creator-portal-in-fortnite-creative.html">18. 使用创作者门户</a><a class="tree-link" href="19-island-moderation-and-guidelines-in-fortnite-creative.html">19. 岛屿审核与准则</a><div class="tree-sec">E · 协作与版本控制</div><a class="tree-link" href="20-creating-teams-in-creator-portal-in-unreal-editor-for-fortnite.html">20. 在创作者门户创建团队</a><a class="tree-link" href="21-adding-playtesters-in-fortnite-creative.html">21. 添加试玩测试员</a><a class="tree-link" href="22-playtesting-your-island-in-unreal-editor-for-fortnite.html">22. 试玩测试你的岛屿</a><a class="tree-link" href="23-collaborating-in-unreal-editor-for-fortnite.html">23. 在 UEFN 中协作</a><a class="tree-link" href="24-lore-version-control-in-unreal-editor-for-fortnite.html">24. Lore 版本控制</a><a class="tree-link" href="25-conflicts-in-lore-version-control-in-unreal-editor-for-fortnite.html">25. Lore 中的冲突</a><a class="tree-link" href="26-version-history-and-conflict-resolution-in-unreal-editor-for-fortnite.html">26. 分支历史与冲突解决</a><div class="tree-sec">F · 游戏示例</div><a class="tree-link" href="27-build-a-game-in-unreal-editor-for-fortnite.html">27. 构建一款游戏</a><a class="tree-link" href="28-unreal-editor-for-fortnite-starter-templates.html">28. UEFN 新手模板</a><div class="tree-sec">G · Verse 编程</div><a class="tree-link active" href="29-learn-the-basics-of-writing-code-in-verse.html">29. 从零学习 Verse 代码基础</a><div class="tree-sec">H · 专注领域</div><a class="tree-link" href="30-lighting-in-unreal-editor-for-fortnite.html">30. 灯光</a><a class="tree-link" href="31-animation-and-cinematics-in-unreal-editor-for-fortnite.html">31. 动画与过场动画</a><a class="tree-link" href="32-modeling-in-unreal-editor-for-fortnite.html">32. 建模</a><a class="tree-link" href="33-materials-in-unreal-editor-for-fortnite.html">33. 材质</a><a class="tree-link" href="34-environments-and-landscapes-in-unreal-editor-for-fortnite.html">34. 环境与地形</a><a class="tree-link" href="35-audio-in-unreal-editor-for-fortnite.html">35. 音频</a><a class="tree-link" href="36-visual-effects-in-unreal-editor-for-fortnite.html">36. 视觉特效</a>
+</ul></nav></div></aside>
+<div class="page-content"><div class="page-document has-theme-bg">
+<header class="section-page-header"><nav><ol class="breadcrumb is-shrinkable"><li class="breadcrumb-item is-root"><img src="../assets/logo-epic.svg" alt="Epic Games"><a href="../index.html">Developer</a></li><li class="breadcrumb-item"><a href="../index.html">Fortnite 文档</a></li><li class="breadcrumb-item"><a href="29-learn-the-basics-of-writing-code-in-verse.html">从零学习 Verse 代码基础</a></li><li class="breadcrumb-item active" aria-current="page"><span class="text-truncate">编写代码基础 4：在 Verse 中编写简单代码</span></li></ol></nav><h1>编写代码基础 4：在 Verse 中编写简单代码</h1><p class="text-secondary mb-0">本课将学习代码注释、条件表达式与多条件判断，并真正开始编写简单的 Verse 代码。</p><p class="doc-meta">英文原标题：Basics Of Writing Code 4 Writing Simple Code In Verse · <a href="https://dev.epicgames.com/documentation/fortnite/basics-of-writing-code-4-writing-simple-code-in-verse" target="_blank" rel="noopener">查看英文原文</a> · 社区翻译镜像，仅供学习</p></header>
+<div class="doc-columns"><article class="doc-article">
+<div class="block-callout"><b>前置主题</b>：要理解和使用本页内容，请确保你已熟悉以下主题：<ul><li><a href="basics-of-writing-code-3-storing-and-using-information-in-verse.html">第 3 课：在 Verse 中存储和使用信息</a></li></ul></div>
+<p>在本课结束时，你将有机会真正开始编写简单的代码——而不只是修改已经写好的内容！</p>
+<p>但首先，先补充一点背景知识。</p>
+<h2 id="sec-1">优秀程序员的做法（而不是死记硬背）</h2>
+<p>经验丰富的程序员会在代码中留下一些备注，这些备注并不是程序本身的一部分，而是关于自己做了什么、为什么这样做的<strong>注释（comment）</strong>。程序运行时，这些注释会被忽略，但这些名为<strong>代码注释（code comment）</strong>（简称注释）的笔记会一直保留在代码中。</p>
+<h3>代码注释</h3>
+<p>编写代码注释总体上是良好的编程习惯，尤其当你刚开始编程、还在边学边摸索时特别有用。当你试图理解<strong>为什么</strong>你（或其他人）要这样写时，这些注释会非常有帮助。</p>
+<p>写代码注释最简单的方法是在注释前加一个 <code>#</code>，不过还有其他写法：</p>
+<pre><code>1+2 # Hello</code></pre>
+<p><strong>单行注释（single-line comment）：</strong><code>#</code> 之后到行尾之间的所有内容都属于代码注释。</p>
+<pre><code>1&lt;# inline comment #&gt;+2</code></pre>
+<p><strong>行内块注释（inline block comment）：</strong><code>&lt;#</code> 和 <code>#&gt;</code> 之间的所有内容都属于代码注释。行内块注释可以写在同一行表达式之间，不会改变表达式的含义。</p>
+<pre><code>DoThis() &lt;# And they can run multiple long lines #&gt; DoThat()</code></pre>
+<p><strong>多行块注释（multi-line block comment）：</strong><code>&lt;#</code> 和 <code>#&gt;</code> 之间的所有内容都属于代码注释。多行块注释可以横跨多行。</p>
+<pre><code>&lt;# Block comments nest &lt;# like this #&gt; #&gt;</code></pre>
+<p><strong>嵌套块注释（nested block comment）：</strong><code>&lt;#</code> 和 <code>#&gt;</code> 之间的所有内容都属于代码注释，并且它们可以嵌套。当你想在测试和调试时注释掉一行中的某些表达式、又不想破坏已有的代码注释时，这种写法很有用。</p>
+<pre><code>&lt;#&gt; Here is a long description spanning multiple lines. DoThis() # This expression is not part of the indented comment</code></pre>
+<p><strong>缩进注释（indented comment）：</strong><code>&lt;#&gt;</code> 之后新起一行、并且缩进四个空格的所有内容都属于代码注释。第一个没有缩进四个空格的行不属于代码注释，同时也标志着该代码注释的结束。</p>
+<h2 id="sec-2">使用条件语句在代码中做决策</h2>
+<p>还记得你在<a href="https://dev.epicgames.com/documentation/fortnite/learn-code-basics-2-basic-programming-components-in-verse#partsofanexpression" target="_blank" rel="noopener">第 2 课</a>中见过的 <code>if .. else</code> 表达式吗？它们被称为<strong>条件表达式（conditional expression）</strong>。</p>
+<p>条件表达式（简称<strong>条件语句（conditional）</strong>）就是告诉程序如何做决策的方式。</p>
+<p><code>if</code> 表达式用于判断某件事是<strong>成功（succeed）</strong>还是<strong>失败（fail）</strong>。如果成功，就运行某段代码；如果失败，则运行另一段代码。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/dc0dc75e-20a5-4b6f-a759-09cca04ec473?resizing_type=fit" alt="条件表达式做决策的示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/dc0dc75e-20a5-4b6f-a759-09cca04ec473?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>你可以把它理解为向程序提一个只能回答<strong>是</strong>或<strong>否</strong>的问题。</p>
+<p>在现实生活中，你一直在根据是非问题的答案做决策。比如，你困了吗？如果答案是“是”，你就去睡觉；如果答案是“否”（else），你就熬夜看动画片。</p>
+<p>如果把这种行为写成程序，大概是这样：</p>
+<pre><code>var Tired: logic = false
+var WhatToWatch: string = &quot;nothing&quot;
+if (Tired?):
+    set WhatToWatch = &quot;your eyelids&quot;
+else:
+    set WhatToWatch = &quot;cartoons&quot;
+Print(&quot;You should watch {WhatToWatch}&quot;)</code></pre>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/d4dbf9ea-2f1e-4234-a605-8cf5d32d31ab?resizing_type=fit" alt="是否疲倦的条件判断代码示例图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/d4dbf9ea-2f1e-4234-a605-8cf5d32d31ab?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>注意到 <code>if</code> 表达式里的问号 <code>?</code> 了吗？这就是 Verse（Verse）程序检查 <code>logic</code> 类型是 <code>true</code> 还是 <code>false</code> 的方式。</p>
+<h3>嵌套</h3>
+<p>当代码<strong>嵌套（nested）</strong>时，意味着它被缩进写在 <code>if</code> 或 <code>else</code> 等关键字表达式之下。这些表达式会创建新的作用域。</p>
+<p>作用域（scope）指的是一段代码块，在其中可以使用某些名称及其关联的值。作用域包含在一段缩进的代码块之内。</p>
+<p>例如：</p>
+<pre><code>if (Tired?):
+    set WhatToWatch = &quot;your eyelids&quot;
+else:
+    set WhatToWatch = &quot;cartoons&quot;</code></pre>
+<p><code>set WhatToWatch = "your eyelids"</code> 这一行缩进在 <code>if (Tired?):</code> 之下。<code>else:</code> 之下的一行也是同样的模式。</p>
+<p>你可以嵌套<strong>单行</strong>代码，也可以嵌套<strong>代码块（block）</strong>（多行）代码。</p>
+<p>这意味着，当代码运行时，被嵌套的代码只会在它所从属的代码上下文中执行。</p>
+<h3>使用多个条件</h3>
+<p>有时你需要先问不止一个问题才能做决策。在 Verse（Verse）中，这要用到<strong>运算符</strong> <code>and</code> 和 <code>or</code>，它们被称为<strong>决策运算符（decision operator）</strong>。</p>
+<p>使用 <code>and</code> 时，运算符两侧的条件必须都为真（或都成功），整个表达式才算成功。</p>
+<p>使用 <code>or</code> 时，只需要其中一个条件为真（或成功），整个表达式就算成功。</p>
+<table><thead><tr><th>第一个条件</th><th>运算符</th><th>第二个条件</th><th>整个表达式</th></tr></thead><tbody><tr><td>成功</td><td>and</td><td>成功</td><td>成功</td></tr><tr><td>成功</td><td>and</td><td>失败</td><td>失败</td></tr><tr><td>失败</td><td>and</td><td>失败</td><td>失败</td></tr><tr><td>成功</td><td>or</td><td>成功</td><td>成功</td></tr><tr><td>成功</td><td>or</td><td>失败</td><td>成功</td></tr><tr><td>失败</td><td>or</td><td>失败</td><td>失败</td></tr></tbody></table>
+<p>来看一个实际例子。即使你不困，如果明天要上学，早点睡可能也是个好主意。我们创建一个名为 <code>SchoolTomorrow</code> 的变量，并用 <code>or</code> 同时检查两个 <code>logic</code> 变量。</p>
+<pre><code>var Tired: logic = false
+var SchoolTomorrow: logic = true
+var WhatToWatch: string = &quot;nothing&quot;
+if (Tired? or SchoolTomorrow?):
+    set WhatToWatch = &quot;your eyelids&quot;
+else:
+    set WhatToWatch = &quot;cartoons&quot;
+Print(&quot;You should watch {WhatToWatch}&quot;)</code></pre>
+<p><code>Tired</code> 仍然是 <code>false</code>，但因为 <code>SchoolTomorrow</code> 是 <code>true</code>，整个表达式成功，<code>WhatToWatch</code> 会被设为 <code>"your eyelids"</code>。</p>
+<p><strong>还有另一种检查多个条件的方法。</strong></p>
+<p>使用 <code>if</code> … <code>else if</code> … <code>else</code> 可以把要检查的内容排成序列。也就是说，只有当前一个条件失败时，才需要检查下一个条件。</p>
+<p>如果明天不用上学、你也不困呢？也许你想和朋友去看电影。我们再改一次代码，看看这是怎么工作的。</p>
+<p>更新 <code>SchoolTomorrow</code> 变量的值，并声明一个新变量 <code>FriendsAvailable</code>。</p>
+<pre><code>var FriendsAvailable : logic = true
+set SchoolTomorrow = false</code></pre>
+<p>接下来，你要更新代码——只有在“不困、明天也不上学”的情况下，才去检查朋友是否有空。</p>
+<pre><code>if (Tired? or SchoolTomorrow?):
+    set WhatToWatch = &quot;your eyelids&quot;
+else if (FriendsAvailable?):
+    set WhatToWatch = &quot;a movie with your friends&quot;
+else:
+    set WhatToWatch = &quot;cartoons&quot;</code></pre>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/c17ced5a-b81b-40be-9c15-9e8cc6a31704?resizing_type=fit" alt="多条件判断代码示例图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/c17ced5a-b81b-40be-9c15-9e8cc6a31704?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>太棒了！现在只有在你困了、或者明天要上学时才会睡觉。如果这两个问题的答案都是否定的，那你不是和朋友去看电影（如果朋友有空），就是待在家里看动画片（如果朋友没空）。</p>
+<p>多亏了 Verse（Verse），规划你的夜晚生活一下子变得容易多了。</p>
+<h2 id="sec-3">故障排除</h2>
+<p>还记得在<a href="basics-of-writing-code-1-basic-programming-terms-in-verse.html">第 1 课</a>中学过的<strong>编译器错误（compiler error）</strong>吗？</p>
+<p>写代码时你还会遇到另一种东西：<strong>错误（bug）</strong>。</p>
+<h3>错误</h3>
+<p>错误（bug）指计算机程序中导致其产生不正确或意外结果的差错。错误的影响可大可小：小到消息文字颜色变了，大到文字消息在错误的时机显示在屏幕上，甚至导致程序崩溃。</p>
+<p>这个术语因计算机科学先驱格蕾丝·霍珀（Grace Hopper）而流行：她在一台计算机里发现了一只飞蛾，并把它贴进手写的故障排除日志，旁边写着“发现的第一例真正的 bug”。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/1171b3ec-f13c-400e-a6c1-970ef50f48db?resizing_type=fit" alt="霍珀日志中飞蛾错误的历史示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/1171b3ec-f13c-400e-a6c1-970ef50f48db?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>编译器错误会阻止程序编译，而错误要等到程序运行时才会暴露出来。</p>
+<p>识别并清除错误的过程叫<strong>调试（debugging）</strong>，帮助查找错误的工具叫<strong>调试器（debugger）</strong>。</p>
+<h2 id="sec-4">总结</h2>
+<ul><li>用<strong>代码注释</strong>记住你为什么要这样写代码，也帮助其他程序员理解你做了什么、为什么这样做。</li><li>对在整个程序中应保持不变的值使用<strong>常量</strong>。</li><li>对需要根据输入变化的值使用<strong>变量</strong>。</li><li><strong>错误</strong>和<strong>编译错误</strong>都是由代码中的差错引起的。</li></ul>
+<h2 id="sec-5">练习时间！</h2>
+<ul><li><a href="basics-of-writing-code-4-practice-time-in-verse.html">第 4 课：练习时间！在这个动手练习中，你将亲自写一些代码，并在它没有按预期工作时进行调试！</a></li></ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/dfbb7a0c-61ed-4bee-91ba-166e2f4320df?resizing_type=fit&width=640&height=640" alt="第 4 课：练习时间示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/dfbb7a0c-61ed-4bee-91ba-166e2f4320df?resizing_type=fit&width=640&height=640" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>标签：<a href="https://dev.epicgames.com/community/search?query=verse" target="_blank" rel="noopener">verse</a> · <a href="https://dev.epicgames.com/community/search?query=conditionals" target="_blank" rel="noopener">conditionals</a> · <a href="https://dev.epicgames.com/community/search?query=language" target="_blank" rel="noopener">language</a> · <a href="https://dev.epicgames.com/community/search?query=troubleshooting" target="_blank" rel="noopener">troubleshooting</a> · <a href="https://dev.epicgames.com/community/search?query=code%20comments" target="_blank" rel="noopener">code comments</a> · <a href="https://dev.epicgames.com/community/search?query=bugs" target="_blank" rel="noopener">bugs</a></p>
+<div class="doc-more"><p><strong>提问并帮助你的同伴：</strong><a href="https://forums.unrealengine.com/categories?tag=fortnite" target="_blank" rel="noopener">开发者论坛（Developer Forums）</a></p><p><strong>编写你自己的教程或阅读他人的教程：</strong><a href="https://dev.epicgames.com/community/fortnite/learning" target="_blank" rel="noopener">学习库（Learning Library）</a></p></div>
+<div class="pager"><a href="29-learn-the-basics-of-writing-code-in-verse.html"><small>← 返回父教程</small>从零学习 Verse 代码基础</a><a href="sub-index.html"><small>子教程索引 →</small>全部子教程</a></div>
+</article><nav class="doc-toc" aria-label="本页内容"><b>本页内容</b><a href="#sec-1">优秀程序员的做法（而不是死记硬背）</a><a href="#sec-2">使用条件语句在代码中做决策</a><a href="#sec-3">故障排除</a><a href="#sec-4">总结</a><a href="#sec-5">练习时间！</a></nav></div>
+</div></div>
+</div>
+<footer class="edc-footer"><div class="inner"><img src="../assets/logo-epic.svg" alt="Epic Games"><span>Fortnite 文档中文镜像 · UE教程/ · 本地打开 index.html 阅读 · 翻译整理自 Epic 官方文档，仅供学习交流</span></div></footer>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>将静态网格体转换为骨骼网格体 | Fortnite 文档中文镜像</title>
+<link rel="stylesheet" href="../assets/epic.css">
+<link rel="stylesheet" href="../assets/patch.css">
+<link rel="icon" href="../assets/logo-epic.svg">
+</head>
+<body class="theme-fortnite">
+<div class="edc-topbar"><div class="edc-topbar-inner"><img class="edc-logo" src="../assets/logo-epic.svg" alt="Epic Games"><span class="edc-brand">Epic Games <b>开发者社区</b></span><span class="edc-nav"><a href="../index.html">文档首页</a><a href="sub-index.html">子教程索引</a><a href="https://dev.epicgames.com/documentation/fortnite/convert-a-static-mesh-into-a-skeletal-mesh-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">英文原文</a></span></div></div>
+<div class="site-container">
+<aside class="site-nav"><div class="documents-tree"><nav><ul class="contents-table">
+<div class="tree-sec">A 最新动态</div><a class="tree-link" href="01-42-00-fortnite-ecosystem-updates-and-release-notes.html">01. 42.00 生态系统更新与发行说明</a><a class="tree-link" href="02-custom-items-and-inventory-overview-in-fortnite.html">02. 自定义物品与背包总览</a><a class="tree-link" href="03-in-island-transactions-in-fortnite.html">03. 岛内交易</a><a class="tree-link" href="04-mobile-development-in-fortnite.html">04. 移动端开发</a><a class="tree-link" href="05-inputs-in-fortnite.html">05. 输入系统</a><a class="tree-link" href="06-ability-system-in-unreal-editor-for-fortnite.html">06. 能力系统 Ability System</a><a class="tree-link" href="07-partybased-gameplay-using-the-social-synergy-api-in-fortnite.html">07. 社交协同 API 与小队玩法</a><a class="tree-link" href="08-scene-graph-in-unreal-editor-for-fortnite.html">08. 场景图 Scene Graph</a><div class="tree-sec">B 入门</div><a class="tree-link" href="09-build-your-first-island-in-fortnite.html">09. 构建你的第一个岛屿</a><a class="tree-link" href="10-onboarding-guide-to-programming-with-verse-in-unreal-editor-for-fortnite.html">10. Verse 编程入门指南</a><a class="tree-link" href="11-building-basics-in-fortnite-creative.html">11. 建造基础</a><div class="tree-sec">C 品牌合集</div><a class="tree-link" href="12-star-wars-islands-in-fortnite.html">12. 星球大战™岛屿</a><a class="tree-link" href="13-kpop-demon-hunters-islands-in-fortnite.html">13. KPop 猎魔团岛屿</a><a class="tree-link" href="14-building-lego-islands-in-fortnite.html">14. 乐高®岛屿</a><a class="tree-link" href="15-the-walking-dead-universe-islands-in-unreal-editor-for-fortnite.html">15. 行尸走肉宇宙岛屿</a><a class="tree-link" href="16-teenage-mutant-ninja-turtle-islands-in-unreal-editor-for-fortnite.html">16. 忍者神龟岛屿</a><a class="tree-link" href="17-squid-game-islands-in-fortnite.html">17. 鱿鱼游戏岛屿</a><div class="tree-sec">D 开发者成功</div><a class="tree-link" href="18-using-creator-portal-in-fortnite-creative.html">18. 使用创作者门户</a><a class="tree-link" href="19-island-moderation-and-guidelines-in-fortnite-creative.html">19. 岛屿审核与准则</a><div class="tree-sec">E 协作</div><a class="tree-link" href="20-creating-teams-in-creator-portal-in-unreal-editor-for-fortnite.html">20. 在创作者门户创建团队</a><a class="tree-link" href="21-adding-playtesters-in-fortnite-creative.html">21. 添加试玩测试员</a><a class="tree-link" href="22-playtesting-your-island-in-unreal-editor-for-fortnite.html">22. 试玩测试你的岛屿</a><a class="tree-link" href="23-collaborating-in-unreal-editor-for-fortnite.html">23. 在 UEFN 中协作</a><a class="tree-link" href="24-lore-version-control-in-unreal-editor-for-fortnite.html">24. Lore 版本控制</a><a class="tree-link" href="25-conflicts-in-lore-version-control-in-unreal-editor-for-fortnite.html">25. Lore 中的冲突</a><a class="tree-link" href="26-version-history-and-conflict-resolution-in-unreal-editor-for-fortnite.html">26. 分支历史与冲突解决</a><div class="tree-sec">F 游戏示例</div><a class="tree-link" href="27-build-a-game-in-unreal-editor-for-fortnite.html">27. 构建一款游戏</a><a class="tree-link" href="28-unreal-editor-for-fortnite-starter-templates.html">28. UEFN 新手模板</a><div class="tree-sec">G Verse</div><a class="tree-link" href="29-learn-the-basics-of-writing-code-in-verse.html">29. 从零学习 Verse 代码基础</a><div class="tree-sec">H 专注领域</div><a class="tree-link" href="30-lighting-in-unreal-editor-for-fortnite.html">30. 灯光</a><a class="tree-link active" href="31-animation-and-cinematics-in-unreal-editor-for-fortnite.html">31. 动画与过场动画</a><a class="tree-link" href="32-modeling-in-unreal-editor-for-fortnite.html">32. 建模</a><a class="tree-link" href="33-materials-in-unreal-editor-for-fortnite.html">33. 材质</a><a class="tree-link" href="34-environments-and-landscapes-in-unreal-editor-for-fortnite.html">34. 环境与地形</a><a class="tree-link" href="35-audio-in-unreal-editor-for-fortnite.html">35. 音频</a><a class="tree-link" href="36-visual-effects-in-unreal-editor-for-fortnite.html">36. 视觉特效</a>
+</ul></nav></div></aside>
+<div class="page-content"><div class="page-document has-theme-bg">
+<header class="section-page-header"><nav><ol class="breadcrumb is-shrinkable"><li class="breadcrumb-item is-root"><img src="../assets/logo-epic.svg" alt="Epic Games"><a href="../index.html">Developer</a></li><li class="breadcrumb-item"><a href="../index.html">Fortnite 文档</a></li><li class="breadcrumb-item"><a href="31-animation-and-cinematics-in-unreal-editor-for-fortnite.html">动画与过场动画</a></li><li class="breadcrumb-item active" aria-current="page"><span class="text-truncate">将静态网格体转换为骨骼网格体</span></li></ol></nav><h1>将静态网格体转换为骨骼网格体</h1><p class="text-secondary mb-0">使用骨架编辑器（Skeleton Editor）与骨骼网格体编辑器（Skeletal Mesh Editor），将静态网格体转换为可动画的骨骼网格体，并创建骨骼层级、调整权重或修复错位骨骼。</p><p class="doc-meta">英文原标题：Convert A Static Mesh Into A Skeletal Mesh In Unreal Editor For Fortnite · <a href="https://dev.epicgames.com/documentation/fortnite/convert-a-static-mesh-into-a-skeletal-mesh-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">查看英文原文</a> · 社区翻译镜像，仅供学习</p></header>
+<div class="doc-columns"><article class="doc-article">
+<p>你可以将静态网格体（Static Mesh）制作成独特且完全可用的骨骼网格体（Skeletal Mesh）。UEFN（Unreal Editor for Fortnite）有两个原生编辑器可用于创建骨骼网格体并为其制作动画：骨架编辑器（Skeleton Editor）与骨骼网格体编辑器（Skeletal Mesh Editor）。</p>
+<p>如果你导入的骨骼网格体存在骨骼错位，甚至可以用这些工作流来修复。</p>
+<p>下面的工作流将带你完成以下流程：</p>
+<ul><li>创建骨骼网格体</li><li>创建骨骼层级</li><li>修复骨骼网格体</li></ul>
+<h2 id="sec-1">创建骨骼网格体</h2>
+<p>要创建骨骼网格体，你可以在 UEFN 中创建或<a href="https://dev.epicgames.com/documentation/fortnite/importing-assets-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">导入（import）</a>一个静态网格体，然后将其转换为骨骼网格体。</p>
+<p>要将静态网格体转换为骨骼网格体，请执行以下操作：</p>
+<ol><li>在<strong>内容浏览器（Content Browser）</strong>中右键点击<strong>静态网格体缩略图</strong>，在右键菜单中打开静态网格体选项。</li><li>选择<strong>转换为骨骼网格体（Convert to Skeletal Mesh）</strong>，打开<strong>骨骼网格体转换选项（Skeletal Mesh Conversion Options）</strong>窗口。</li></ol>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/96351f28-31b5-48e7-b844-a9675e889452?resizing_type=fit" alt="转换选项窗口示意图1" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/96351f28-31b5-48e7-b844-a9675e889452?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ol><li>在 <strong>目标路径（Destination Path）</strong>字段中为新资产选择保存位置。</li></ol>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/f89a1d8d-5f2d-4042-85bc-196f45e06ddf?resizing_type=fit" alt="选择目标路径示意图2" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/f89a1d8d-5f2d-4042-85bc-196f45e06ddf?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ol><li>在骨骼网格体内选择根骨骼（Root Bone）的位置，可从以下选项中选择：底部中心（Bottom Center）、中心（Center）、原点（Origin）。</li></ol>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/d226ff9e-c0bf-42b5-9576-677100ac76f6?resizing_type=fit" alt="根骨骼位置选项示意图3" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/d226ff9e-c0bf-42b5-9576-677100ac76f6?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ol><li>为你的骨骼网格体与骨架输入<strong>后缀（Suffix）</strong>名称。</li></ol>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/2cfbc10c-c6b0-41cd-85e5-16e3d6c1482a?resizing_type=fit" alt="输入后缀名称示意图4" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/2cfbc10c-c6b0-41cd-85e5-16e3d6c1482a?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>建议在命名规范中加入 <strong>Converted</strong> 一词，以便轻松区分原始文件与转换后的文件。例如 MyAsset_Converted。</p>
+<ol><li>点击窗口底部的<strong>转换（Convert）</strong>按钮，完成骨骼网格体与骨架资产的创建。</li></ol>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/ede498b3-cf4e-41aa-91a3-a17b8e09c249?resizing_type=fit" alt="点击转换按钮示意图5" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/ede498b3-cf4e-41aa-91a3-a17b8e09c249?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>内容浏览器中会出现两个新缩略图——骨骼网格体缩略图与骨架缩略图。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/2acbdaed-30d2-4471-846c-ce0932811586?resizing_type=fit" alt="新生成的缩略图示意图6" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/2acbdaed-30d2-4471-846c-ce0932811586?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>接下来，你需要在骨骼网格体编辑器中添加动画所需的骨骼层级。</p>
+<h2 id="sec-2">创建骨骼层级</h2>
+<p>角色的骨架资产由一系列呈层级结构的骨骼（或关节）链组成。骨骼链由至少两根以父子关系连接的骨骼组成。父骨骼在链中的位置更高，子骨骼位置更低。父骨骼可以影响与其相连的所有下级骨骼的位置与旋转，而子骨骼无法影响任何上级骨骼的位置与旋转。</p>
+<p>没有骨骼层级，骨骼网格体就和静态网格体一样，资产无法运动。骨骼层级让网格体能够利用关节与骨骼来制作动画、产生运动。骨骼网格体的骨骼与关节越多，运动幅度越大、动作越流畅。</p>
+<p>根骨骼是骨架层级中最高的骨骼，但它与角色的身体结构不直接相连。根骨骼决定骨架在世界中的位置，并移动角色基座——进而移动整个骨架。</p>
+<p>根骨骼的位置很重要，因为它是骨骼网格体的重心。双足角色（如人类）的根骨骼通常位于双脚之间，落在角色重心的地面位置。</p>
+<p>对于其他类型的骨架结构，也有各自的标准，但根骨骼仍位于地面附近、生物重心处。</p>
+<p>例如，当骨架中的一根骨骼运动时，会带动骨骼所附着的网格体肢体一起运动。因此，移动骨架的手臂骨骼，就会移动骨骼网格体的手臂。</p>
+<p>在 UEFN 中，根骨骼用于确定骨架的位置，进而确定角色网格体相对于胶囊体的位置。胶囊体代表游戏对象在关卡或游戏世界中的位置与物理存在。</p>
+<p>某些动画包含根运动（root motion），会移动根骨骼的位置来实现角色在 3D 空间中的位移。如果角色骨架移出胶囊体，项目中就可能出现问题，例如穿墙，因为游戏认为角色仍在胶囊体内，而网格体实际已处于不同位置。</p>
+<p>有关根运动的更多信息，请参阅 <strong><a href="https://www.google.com/url?q=https://dev.epicgames.com/documentation/en-us/unreal-engine/root-motion-in-unreal-engine?application_version%3D5.4&sa=D&source=docs&ust=1719439375356630&usg=AOvVaw1Mg8ReksIB2pziH5OGY4MQ" target="_blank" rel="noopener">Root Motion</a></strong> 文档。</p>
+<h3>在编辑器中创建骨架</h3>
+<p>要创建骨架，必须先在骨骼网格体编辑器中创建骨骼层级。</p>
+<p>创建骨骼层级的步骤：</p>
+<ol><li>在<strong>内容浏览器（Content Browser）</strong>中双击<strong>骨骼网格体缩略图</strong>，打开<strong>骨骼网格体编辑器（Skeletal Mesh Editor）</strong>。</li><li>在<strong>骨架工具（Skeleton Tools）</strong>中选择<strong>骨架（Skeleton）</strong> &gt; <strong>编辑骨架（Edit Skeleton）</strong> &gt; <strong>添加（Add）</strong>。</li></ol>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/79cc751f-3c08-45ca-a3ef-370f9b643a2d?resizing_type=fit" alt="添加骨架操作示意图7" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/79cc751f-3c08-45ca-a3ef-370f9b643a2d?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ol><li>在<strong>骨架树（Skeleton Tree）</strong>中选中<strong>根骨骼（Root Bone）</strong>使其高亮，点击<strong>添加（Add）</strong>按钮（绿色加号），从选项中选择<strong>新建骨骼（New Bone）</strong>。也可以右键点击骨架树中的根骨骼，从右键菜单中选择新建骨骼。骨架树中根骨骼下方会出现一根<strong>关节（Joint）</strong>骨骼，视口中的骨架上也会出现该骨骼。</li></ol>
+<p>如果你是从静态网格体创建的骨架，它应该是层级中列出的唯一骨骼；否则，它是骨架树中列出的第一根骨骼。</p>
+<p>你可以在骨架树中高亮该骨骼后右键选择<strong>重命名（Rename）</strong>，更改根骨骼的名称。</p>
+<ol><li>在视口中切换到<strong>变换（Transform）</strong>工具，将该骨骼从根骨骼向右侧移出。</li></ol>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/f18df22d-087a-4065-b8bc-fe14be6eeb12?resizing_type=fit" alt="移动骨骼位置示意图8" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/f18df22d-087a-4065-b8bc-fe14be6eeb12?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ol><li>要为插槽末端新建骨骼，先在骨架树中选择一根骨骼作为父级，然后按上述步骤 2–4 操作，使用旋转工具将骨骼移动到父骨骼上正确的插槽位置。</li><li>在<strong>骨架树（Skeleton Tree）</strong>中右键点击 <strong>Joint</strong> 并选择<strong>重命名骨骼（Rename Bone）</strong>，按其在骨骼网格体中的位置命名。上图中的骨骼被重命名为 <strong>Left_Shoulder</strong>。</li><li>点击 <strong>接受（Accept）</strong>按钮固定骨骼位置。</li><li>重复步骤 <strong>2–7</strong>，创建骨骼网格体所需的其他骨骼。</li></ol>
+<p>先完成骨架一侧的骨骼层级。完成后，选择 <strong>Skeleton</strong> &gt; <strong>Edit Skeleton</strong> &gt; <strong>Mirror</strong>，为对侧镜像生成骨骼。</p>
+<p>确保勾选 <strong>自动定向（Auto Orient）</strong>，使镜像骨骼与原始骨骼层级保持相同的朝向。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/647a0ea6-e5b0-47f6-baf3-31320b5121f9?resizing_type=fit" alt="镜像骨骼设置示意图9" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/647a0ea6-e5b0-47f6-baf3-31320b5121f9?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>骨架完成后，需要在网格体中测试骨骼。</p>
+<h2 id="sec-3">测试骨骼网格体</h2>
+<p>在骨架上尝试动画之前，应确认骨骼摆放对网格体而言是否合理。你可以通过选择 <strong>蒙皮（Skin）</strong> &gt; <strong>绑定蒙皮（Bind Skin）</strong>工具，预览骨架影响网格体的哪些部位。</p>
+<p>之后，使用<strong>骨架树（Skeleton Tree）</strong>浏览骨骼层级，查看骨骼结构的不同部位影响网格体的哪些部分。</p>
+<p>要查看运动如何影响网格体，可以进入 <strong>骨架编辑器（Skeleton Editor）</strong>并在视口中移动骨骼。如果网格体没有按预期运动，可以回到骨骼网格体编辑器添加更多骨骼。</p>
+<p>可以用人体模型的骨架作为添加骨骼的参考。注意人体模型的层级中有不止一根脊柱骨骼，这让网格体运动更灵活。</p>
+<h2 id="sec-4">编辑网格体权重</h2>
+<p>如果网格体运动已接近完美，但发现某部位运动时网格体有牵拉，或网格体运动不符合预期，可以移除或添加网格体权重。</p>
+<p>移除或添加网格体权重可以更精细地控制网格体的各个区域，让四肢按你想要的方式运动。</p>
+<p>移除权重：</p>
+<ol><li>在<strong>骨骼网格体编辑器（Skeletal Mesh Editor）</strong>中选择 <strong>蒙皮（Skin）</strong> &gt; <strong>编辑权重（Edit Weight）</strong>，网格体表面变为蓝色，内部网格体变为黑色。</li><li>在<strong>权重编辑模式（Weight Editing Mode）</strong>部分选择<strong>笔刷（Brush）</strong>（若尚未选中）。笔刷是一个绿色圆形，可用于定位网格体顶点，以添加或移除权重。</li></ol>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/04865510-9330-4ab5-b598-1b5072d2a8f7?resizing_type=fit" alt="权重笔刷示意图10" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/04865510-9330-4ab5-b598-1b5072d2a8f7?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ol><li>在<strong>骨架树（Skeleton Tree）</strong>中选择要编辑的骨骼，然后在视口中选中要移除权重的网格体区域，按住 <strong>Control</strong> 并移动鼠标，从网格体上移除权重。</li></ol>
+<p>添加权重：</p>
+<ol><li>在<strong>骨骼网格体编辑器（Skeletal Mesh Editor）</strong>中选择 <strong>蒙皮（Skin）</strong> &gt; <strong>编辑权重（Edit Weight）</strong>，网格体表面变为蓝色，内部网格体变为黑色。</li><li>在<strong>权重编辑模式（Weight Editing Mode）</strong>部分选择<strong>笔刷（Brush）</strong>（若尚未选中）。笔刷是一个绿色圆形，可用于定位网格体顶点，以添加或移除权重。</li><li>在<strong>笔刷（Brush）</strong>部分选择<strong>添加（Add）</strong>（若尚未选中）。</li></ol>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/538e1fc7-16f1-4ad5-ba6d-c786f32492ae?resizing_type=fit" alt="添加权重操作示意图11" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/538e1fc7-16f1-4ad5-ba6d-c786f32492ae?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ol><li><strong>左键点击</strong>并在网格体上移动绿色圆圈以添加权重。</li></ol>
+<p>添加或移除权重时，请在<strong>骨架编辑器（Skeleton Editor）</strong>中测试网格体，确保其按预期运动。</p>
+<h2 id="sec-5">修复骨骼网格体</h2>
+<p>如果你导入的骨骼网格体存在骨骼错位，可以使用骨架编辑器修复问题，并用动画测试所做更改。</p>
+<p>开始步骤：</p>
+<ol><li>在<strong>内容浏览器（Content Browser）</strong>中双击<strong>骨骼网格体缩略图</strong>，在<em>骨骼网格体编辑器（Skeletal Mesh Editor）</em>中打开骨架。</li><li>在<strong>骨架树（Skeleton Tree）</strong>中浏览骨骼层级，找到错位的骨骼。</li></ol>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/c0bcd277-464a-4af8-ab5c-de701457a448?resizing_type=fit" alt="查找错位骨骼示意图12" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/c0bcd277-464a-4af8-ab5c-de701457a448?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>使用搜索栏按名称查找骨骼以便快速编辑。</p>
+<ol><li>在骨骼网格体编辑器中选择<strong>编辑工具（Editing Tools）</strong> &gt; <strong>骨架（Skeleton）</strong> &gt; <strong>编辑骨架（Edit Skeleton）</strong> &gt; <strong>编辑（Edit）</strong> &gt; <strong>选择顶点（Select Vertices）</strong>，网格体表面会布满多边形高亮。</li></ol>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/79519661-51f0-47a9-9d85-fce84e8d662e?resizing_type=fit" alt="选择顶点操作示意图13" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/79519661-51f0-47a9-9d85-fce84e8d662e?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ol><li>在<strong>骨架树（Skeleton Tree）</strong>中选中需要编辑的骨骼，在<strong>编辑选项（Edit Options）</strong>选项卡中使用<strong>变换（Transform）</strong> &gt; <strong>位置（Location）</strong>工具按插槽移动骨骼。</li><li>在视口中点击<strong>接受（Accept）</strong>。</li></ol>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/e3dd5069-191e-465c-864c-2e7d35ecf8b6?resizing_type=fit" alt="确认骨骼调整示意图14" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/e3dd5069-191e-465c-864c-2e7d35ecf8b6?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ol><li>在工具栏中选择<strong>预览动画（Preview Animation）</strong>，再选择一个动画来测试骨骼网格体。</li></ol>
+<p>动画在骨骼网格体上必须看起来自然正常。如不符合，需要重复步骤 3 与 4，直到动画效果正确。</p>
+<ol><li>在工具栏中点击<strong>保存（Save）</strong>保留更改。</li></ol>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/66186902-3464-4949-90b6-cf44e77fa4fa?resizing_type=fit" alt="保存更改示意图15" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/66186902-3464-4949-90b6-cf44e77fa4fa?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>对所有未对齐的骨骼重复此流程。</p>
+<h2 id="sec-6">深入了解骨架与动画</h2>
+<p>有关骨架、骨骼网格体及 UEFN 可用编辑器的深入信息，请参阅虚幻引擎中的以下文档：</p>
+<ul><li><strong><a href="https://dev.epicgames.com/documentation/en-us/unreal-engine/skeletons-in-unreal-engine" target="_blank" rel="noopener">Skeleton Assets</a></strong></li><li><strong><a href="https://dev.epicgames.com/documentation/en-us/unreal-engine/skeletal-mesh-assets-in-unreal-engine?application_version=5.4" target="_blank" rel="noopener">Skeletal Mesh Assets</a></strong></li><li><strong><a href="https://dev.epicgames.com/documentation/en-us/unreal-engine/skeleton-editor-in-unreal-engine" target="_blank" rel="noopener">Skeleton Editor</a></strong></li><li><strong><a href="https://dev.epicgames.com/documentation/en-us/unreal-engine/skeletal-mesh-editor-in-unreal-engine" target="_blank" rel="noopener">Skeletal Mesh Editor</a></strong></li><li><strong><a href="https://dev.epicgames.com/documentation/en-us/unreal-engine/skeleton-editing-in-unreal-engine" target="_blank" rel="noopener">Skeleton Editing</a></strong></li></ul>
+<p>有关 UEFN 中动画与动画编辑器的深入信息，请参阅虚幻引擎中的以下文档：</p>
+<ul><li><strong><a href="https://dev.epicgames.com/documentation/en-us/unreal-engine/animation-sequences-in-unreal-engine" target="_blank" rel="noopener">Animation Sequences</a></strong></li><li><strong><a href="https://dev.epicgames.com/documentation/en-us/unreal-engine/animation-editors-in-unreal-engine" target="_blank" rel="noopener">Animation Editors</a></strong></li></ul>
+<p><a href="https://sketchfab.com/3d-models/penguin-5d5ddab9a9bf4933a7615bb2d5ed0f9d" target="_blank" rel="noopener">Penguin</a> 作者 <a href="https://sketchfab.com/patrakeevasveta" target="_blank" rel="noopener">patrakeevasveta</a>，基于 <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a> 许可。</p>
+<p><a href="https://sketchfab.com/3d-models/werewolf-animated-9b012f106fec4ff48563b8f08a89c699" target="_blank" rel="noopener">Werewolf Animated</a> 作者 <a href="https://sketchfab.com/boydmaster" target="_blank" rel="noopener">Boydmonster</a>，基于 <a href="https://sketchfab.com/licenses#licensed-material" target="_blank" rel="noopener">CC BY-ND 4.0</a> 标准许可。</p>
+<p>从 Sketchfab 购买并下载的 Werewolf Animated 资产本身无需调整。为演示骨骼网格体编辑器中的可用工具，本文档特意将其骨骼移出原位再移回原位。</p>
+<div class="pager"><a href="31-animation-and-cinematics-in-unreal-editor-for-fortnite.html"><small>← 返回父教程</small>动画与过场动画</a><a href="sub-index.html"><small>子教程索引 →</small>全部子教程</a></div>
+</article><nav class="doc-toc" aria-label="本页内容"><b>本页内容</b><a href="#sec-1">创建骨骼网格体</a><a href="#sec-2">创建骨骼层级</a><a href="#sec-3">测试骨骼网格体</a><a href="#sec-4">编辑网格体权重</a><a href="#sec-5">修复骨骼网格体</a><a href="#sec-6">深入了解骨架与动画</a></nav></div>
+</div></div>
+</div>
+<footer class="edc-footer"><div class="inner"><img src="../assets/logo-epic.svg" alt="Epic Games"><span>Fortnite 文档中文镜像 · UE教程/ · 本地打开 index.html 阅读 · 翻译整理自 Epic 官方文档，仅供学习交流</span></div></footer>
+</body>
+</html>

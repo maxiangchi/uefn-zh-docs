@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>编辑地形材质 | Fortnite 文档中文镜像</title>
+<link rel="stylesheet" href="../assets/epic.css">
+<link rel="stylesheet" href="../assets/patch.css">
+<link rel="icon" href="../assets/logo-epic.svg">
+</head>
+<body class="theme-fortnite">
+<div class="edc-topbar"><div class="edc-topbar-inner"><img class="edc-logo" src="../assets/logo-epic.svg" alt="Epic Games"><span class="edc-brand">Epic Games <b>开发者社区</b></span><span class="edc-nav"><a href="../index.html">文档首页</a><a href="sub-index.html">子教程索引</a><a href="https://dev.epicgames.com/documentation/fortnite/editing-landscape-material-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">英文原文</a></span></div></div>
+<div class="site-container">
+<aside class="site-nav"><div class="documents-tree"><nav><ul class="contents-table">
+<li class="toc-group"><span class="toc-group-title">A · 最新动态</span><ul><li><a href="01-42-00-fortnite-ecosystem-updates-and-release-notes.html">01. 42.00 生态系统更新与发行说明</a></li><li><a href="02-custom-items-and-inventory-overview-in-fortnite.html">02. 自定义物品与背包总览</a></li><li><a href="03-in-island-transactions-in-fortnite.html">03. 岛内交易</a></li><li><a href="04-mobile-development-in-fortnite.html">04. 移动端开发</a></li><li><a href="05-inputs-in-fortnite.html">05. 输入系统</a></li><li><a href="06-ability-system-in-unreal-editor-for-fortnite.html">06. 能力系统 Ability System</a></li><li><a href="07-partybased-gameplay-using-the-social-synergy-api-in-fortnite.html">07. 社交协同 API 与小队玩法</a></li><li><a href="08-scene-graph-in-unreal-editor-for-fortnite.html">08. 场景图 Scene Graph</a></li></ul></li>
+<li class="toc-group"><span class="toc-group-title">B · 入门指南</span><ul><li><a href="09-build-your-first-island-in-fortnite.html">09. 构建你的第一个岛屿</a></li><li><a href="10-onboarding-guide-to-programming-with-verse-in-unreal-editor-for-fortnite.html">10. Verse 编程入门指南</a></li><li><a href="11-building-basics-in-fortnite-creative.html">11. 建造基础</a></li></ul></li>
+<li class="toc-group"><span class="toc-group-title">C · 品牌合集</span><ul><li><a href="12-star-wars-islands-in-fortnite.html">12. 星球大战™岛屿</a></li><li><a href="13-kpop-demon-hunters-islands-in-fortnite.html">13. KPop 猎魔团岛屿</a></li><li><a href="14-building-lego-islands-in-fortnite.html">14. 乐高®岛屿</a></li><li><a href="15-the-walking-dead-universe-islands-in-unreal-editor-for-fortnite.html">15. 行尸走肉宇宙岛屿</a></li><li><a href="16-teenage-mutant-ninja-turtle-islands-in-unreal-editor-for-fortnite.html">16. 忍者神龟岛屿</a></li><li><a href="17-squid-game-islands-in-fortnite.html">17. 鱿鱼游戏岛屿</a></li></ul></li>
+<li class="toc-group"><span class="toc-group-title">D · 开发者成功</span><ul><li><a href="18-using-creator-portal-in-fortnite-creative.html">18. 使用创作者门户</a></li><li><a href="19-island-moderation-and-guidelines-in-fortnite-creative.html">19. 岛屿审核与准则</a></li></ul></li>
+<li class="toc-group"><span class="toc-group-title">E · 协作与版本控制</span><ul><li><a href="20-creating-teams-in-creator-portal-in-unreal-editor-for-fortnite.html">20. 在创作者门户创建团队</a></li><li><a href="21-adding-playtesters-in-fortnite-creative.html">21. 添加试玩测试员</a></li><li><a href="22-playtesting-your-island-in-unreal-editor-for-fortnite.html">22. 试玩测试你的岛屿</a></li><li><a href="23-collaborating-in-unreal-editor-for-fortnite.html">23. 在 UEFN 中协作</a></li><li><a href="24-lore-version-control-in-unreal-editor-for-fortnite.html">24. Lore 版本控制</a></li><li><a href="25-conflicts-in-lore-version-control-in-unreal-editor-for-fortnite.html">25. Lore 中的冲突</a></li><li><a href="26-version-history-and-conflict-resolution-in-unreal-editor-for-fortnite.html">26. 分支历史与冲突解决</a></li></ul></li>
+<li class="toc-group"><span class="toc-group-title">F · 游戏示例</span><ul><li><a href="27-build-a-game-in-unreal-editor-for-fortnite.html">27. 构建一款游戏</a></li><li><a href="28-unreal-editor-for-fortnite-starter-templates.html">28. UEFN 新手模板</a></li></ul></li>
+<li class="toc-group"><span class="toc-group-title">G · Verse编程</span><ul><li><a href="29-learn-the-basics-of-writing-code-in-verse.html">29. 从零学习 Verse 代码基础</a></li></ul></li>
+<li class="toc-group"><span class="toc-group-title">H · 专注领域</span><ul><li><a href="30-lighting-in-unreal-editor-for-fortnite.html">30. 灯光</a></li><li><a href="31-animation-and-cinematics-in-unreal-editor-for-fortnite.html">31. 动画与过场动画</a></li><li><a href="32-modeling-in-unreal-editor-for-fortnite.html">32. 建模</a></li><li><a href="33-materials-in-unreal-editor-for-fortnite.html">33. 材质</a></li><li><a href="34-environments-and-landscapes-in-unreal-editor-for-fortnite.html" class="active">34. 环境与地形</a></li><li><a href="35-audio-in-unreal-editor-for-fortnite.html">35. 音频</a></li><li><a href="36-visual-effects-in-unreal-editor-for-fortnite.html">36. 视觉特效</a></li></ul></li>
+</ul></nav></div></aside>
+<div class="page-content"><div class="page-document has-theme-bg">
+<header class="section-page-header"><nav><ol class="breadcrumb is-shrinkable"><li class="breadcrumb-item is-root"><img src="../assets/logo-epic.svg" alt="Epic Games"><a href="../index.html">Developer</a></li><li class="breadcrumb-item"><a href="../index.html">Fortnite 文档</a></li><li class="breadcrumb-item"><a href="34-environments-and-landscapes-in-unreal-editor-for-fortnite.html">环境与地形</a></li><li class="breadcrumb-item active" aria-current="page"><span class="text-truncate">编辑地形材质</span></li></ol></nav><h1>编辑地形材质</h1><p class="text-secondary mb-0">UEFN 为自定义地形提供多种材质实例，可用 Landscape Mode 的 Paint 工具编辑地形表层。本页介绍选择材质实例、绘制地形，以及从零创建自定义地形材质的完整流程。</p><p class="doc-meta">英文原标题：Editing Landscape Material In Unreal Editor For Fortnite · <a href="https://dev.epicgames.com/documentation/fortnite/editing-landscape-material-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">查看英文原文</a> · 社区翻译镜像，仅供学习</p></header>
+<div class="doc-columns"><article class="doc-article">
+<p><strong>Unreal Editor for Fortnite（UEFN）</strong>（Fortnite 虚幻编辑器）为自定义地形提供多种不同的材质实例，你可以用<a href="landscape-mode-in-unreal-editor-for-fortnite.html">地形模式（Landscape Mode）</a>创建自定义地形。<strong>地形模式（Landscape Mode）</strong>中的<strong>绘制（Paint）</strong>工具提供编辑地形表层的方法。请从以下材质实例中为你的地形选择：</p>
+<ul>
+<li>MI_Landscape_Chpt2（Apollo）</li>
+<li>MI_Landscape_Chpt4（Asteria）</li>
+<li>MI_Fortnite_Customizable_01</li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/74b27f5f-d0ba-48cb-8f5c-2d92e413cd3c?resizing_type=fit" alt="从左到右依次为 Chapter 2、Chapter 4 和 Customizable 材质。" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><figcaption>从左到右依次为 Chapter 2、Chapter 4 和 Customizable 材质。</figcaption><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/74b27f5f-d0ba-48cb-8f5c-2d92e413cd3c?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>Chapter 2 材质实例是经典 Fortnite 大逃杀地形<a href="https://dev.epicgames.com/documentation/fortnite/unreal-editor-for-fortnite-glossary#material" target="_blank" rel="noopener">材质（material）</a>。Chapter 4 地形材质来自 Fortnite 大逃杀第四章。</p>
+<p>两款大逃杀材质实例都会创建带花草的草原，并模拟风吹过草地的效果。除这些特性外，Chapter 4 材质实例会自动生成小灌木，并用 Niagara 模拟风中飘动的树叶与飞舞的蝴蝶。</p>
+<p>Customizable 材质实例是扁平材质。对该材质使用地形模式（Landscape Mode）中的绘制（Paint）工具，可以创建湿草地、泥土斑块等效果。</p>
+<h2 id="sec-1">选择 Customizable 材质实例</h2>
+<p>使用地形模式（Landscape Mode）为你的岛屿创建自定义地形。创建地形的<strong>管理（Manage）</strong>阶段决定自定义地形的大小，并指定地形材质。</p>
+<p>从<strong>材质（Material）</strong>下拉菜单选择材质实例，上文提到的材质实例与许多其他地形材质类型都可以在这个下拉菜单中找到。</p>
+<p>要为地形材质创建自定义外观，请从下拉菜单选择 <strong>MI_Fortnite_Customizable_01</strong>。这会把可自定义材质设为地形网格体的材质，再用绘制（Paint）阶段工具为每一层打开材质实例编辑器。通过编辑图层信息，可以改变图层外观。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/ed8eaebf-1477-4544-8c8f-e8a605f1a7ae?resizing_type=fit" alt="原文示意图2" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><figcaption>原文示意图2</figcaption><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/ed8eaebf-1477-4544-8c8f-e8a605f1a7ae?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>关于创建自定义地形的更多信息，请参阅<a href="create-a-custom-landscape-in-unreal-editor-for-fortnite.html">创建自定义地形（Create a Custom Landscape）</a>教程。</p>
+<h2 id="sec-2">绘制地形材质</h2>
+<ul>
+<li>使用三种主要材质实例之一创建新地形。</li>
+<li>选择各个地形流送代理，用你创建的自定义地形材质更换其材质。</li>
+<li>点击地形模式（Landscape Mode）各阶段中的<strong>绘制（Paint）</strong>。</li>
+<li>向下滚动到<strong>图层（Layers）</strong>。</li>
+<li>从列表选择任意图层，绘制到地形上。</li>
+<li>从图层列表选择 <strong>Layer7</strong>，这会在内容浏览器中打开所有图层材质实例。</li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/02edef34-45b8-4ec7-9681-efc54834fa91?resizing_type=fit" alt="原文示意图3" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><figcaption>原文示意图3</figcaption><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/02edef34-45b8-4ec7-9681-efc54834fa91?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>绘制（Paint）工具中有些图层被锁定，专供样条使用。当你用样条创建路径或道路时，这些材质会用于样条网格体。</p>
+<h2 id="sec-3">创建自定义地形材质</h2>
+<p>创建带多个图层的自定义地形材质，配合绘制（Paint）工具编辑地形。你将创建包含三个图层（泥土、岩石、砾石）的材质。先创建文件夹存放材质，在新文件夹内右键创建材质缩略图。</p>
+<h3>基础层</h3>
+<p>双击材质缩略图打开材质图表。图表打开后，添加以下材质节点：</p>
+<ul>
+<li>Constant 3Vector 节点</li>
+<li>Constant 节点</li>
+<li>SetMaterialAttributes 节点</li>
+<li>Texture Sample 节点</li>
+</ul>
+<p>选择 Constant 3 Vector 材质节点并添加颜色。现在可以创建你的<a href="https://dev.epicgames.com/documentation/fortnite/unreal-editor-for-fortnite-glossary#node" target="_blank" rel="noopener">节点网络（node network）</a>了：</p>
+<ul>
+<li>在材质图表中选择第一个 <strong>SetMaterialAttributes</strong> 节点。</li>
+<li>点击细节（Details）面板<strong>数组（Array）字段</strong>中的 <strong>+</strong> 图标，创建基础颜色（Base Color）数组槽。</li>
+<li>重复第 2 步三次，再创建三个数组槽。在细节（Details）面板添加数组槽的同时，SetMaterialAttributes 节点上会增加相同的数组输入。</li>
+<li>编辑数组槽，选中以下数组：
+<ul>
+<li><strong>Base Color</strong></li>
+<li><strong>Specular</strong></li>
+<li><strong>Roughness</strong></li>
+<li><strong>Normal</strong></li>
+</ul></li>
+<li>把 Constant 节点的值改为 <strong>0.5</strong>。</li>
+<li>从 Constant 节点拖出连线，接到 SetMaterialAttributes 节点的<strong>高光（Specular）输入</strong>。</li>
+<li>再次从 Constant 节点拖出连线，接到 SetMaterialAttributes 节点的<strong>粗糙度（Roughness）输入</strong>。</li>
+<li>从 Constant 3Vector 节点的<strong>白色引脚</strong>拖出连线，接到 SetMaterialAttributes 节点的<strong>基础（Base）输入</strong>。</li>
+<li>选择 <strong>Texture Sample</strong> 节点。</li>
+<li>在 Material Expression Texture Base 字段的 Texture 槽添加 <strong>T_Asteria_Mud_01_N</strong> 法线纹理。</li>
+<li>从 Texture Sample 节点的 <strong>RGB 输出引脚</strong>拖出连线，接到 SetMaterialAttributes 节点的<strong>法线（Normal）输入</strong>。</li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/7e8a4188-2339-490f-b73a-fcce5d89ce54?resizing_type=fit" alt="原文示意图4" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><figcaption>原文示意图4</figcaption><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/7e8a4188-2339-490f-b73a-fcce5d89ce54?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>这就是未绘制任何图层时显示在地形上的基础（Base）材质。</p>
+<h3>图层一</h3>
+<p>下一个节点网络是地形材质图层，位于地形基础材质层之下的<a href="landscape-mode-in-unreal-editor-for-fortnite.html">目标图层（Target Layer）</a>中。该网络使用优化节点——地形图层切换（landscape layer switch），让未绘制该图层的地形组件少承担数据开销。</p>
+<p>添加以下材质节点：</p>
+<ul>
+<li>Constant 3Vector 节点</li>
+<li>Constant 节点</li>
+<li>SetMaterialAttributes 节点</li>
+<li>Texture Sample 节点</li>
+<li>Landscape Layer Switch 节点</li>
+<li>Blend MaterialAttributes 节点</li>
+<li>Landscape Layer Sample 节点，并命名为 <strong>Layer 1</strong></li>
+</ul>
+<p>选择 Constant 3 Vector 材质节点并添加颜色。现在可以创建你的节点网络了：</p>
+<ul>
+<li>在材质图表中选择第一个 <strong>SetMaterialAttributes</strong> 节点。</li>
+<li>点击细节（Details）面板<strong>数组（Array）字段</strong>中的 <strong>+</strong> 图标，创建基础颜色（Base Color）数组槽。</li>
+<li>重复第 2 步三次，再创建三个数组槽。在细节（Details）面板添加数组槽的同时，SetMaterialAttributes 节点上会增加相同的数组输入。</li>
+<li>编辑数组槽，选中以下数组：
+<ul>
+<li><strong>Base Color</strong></li>
+<li><strong>Specular</strong></li>
+<li><strong>Roughness</strong></li>
+<li><strong>Normal</strong></li>
+</ul></li>
+<li>把 Constant 节点的值改为 <strong>0.5</strong>。</li>
+<li>从 Constant 节点拖出连线，接到 SetMaterialAttributes 节点的<strong>高光（Specular）输入</strong>。</li>
+<li>再次从 Constant 节点拖出连线，接到 SetMaterialAttributes 节点的<strong>粗糙度（Roughness）输入</strong>。</li>
+<li>从 Constant 3Vector 节点的<strong>白色引脚</strong>拖出连线，接到 SetMaterialAttributes 节点的<strong>基础（Base）输入</strong>。</li>
+<li>选择 <strong>Texture Sample</strong> 节点。</li>
+<li>在 Material Expression Texture Base 字段的 Texture 槽添加 <strong>T_Asteria_RockCliff_03_N</strong> 法线纹理。</li>
+<li>从 Texture Sample 节点的 <strong>RGB 输出引脚</strong>拖出连线，接到 SetMaterialAttributes 节点的<strong>法线（Normal）输入</strong>。</li>
+<li>从 SetMaterialAttributes 节点拖出连线，接到 BlendMaterialAttributes 节点的 <strong>B 输入</strong>。</li>
+<li>从 Landscape Layer Sample 节点拖出连线，接到 BlendMaterialAttributes 节点的 <strong>Alpha 输入</strong>。</li>
+</ul>
+<p><em>Landscape Layer Sample 节点为地形工具中可绘制的目标图层命名。</em></p>
+<p><em>该材质节点必须是地形材质的一部分，才会显示在绘制（Paint）工具的图层下。</em></p>
+<p><em>该节点自动采样同名的地形图层遮罩纹理及其对应通道。</em></p>
+<p>新建地形 LayerInfo 资产时，该材质技术要求在使用绘制（Paint）工具时把图层设为地形模式（Landscape Mode）中的<strong>非权重混合图层（Non Weight-Blended Layer）</strong>。</p>
+<ul>
+<li>从基础层的第一个 SetMaterialAttributes 节点拖出连线，接到 BlendMaterialAttributes 节点的 <strong>A 输入</strong>。</li>
+<li>从基础层的第一个 SetMaterialAttributes 节点拖出连线，接到 Landscape Layer Switch 节点的 <strong>LayerNotUsed 输入</strong>。</li>
+<li>选择 <strong>Landscape Layer Switch</strong>，在细节（Details）面板把参数名（Paramter Name）改为 <strong>Layer 1</strong>。</li>
+<li>从 BlendMaterialAttributes 节点拖出连线，接到 Landscape Layer Switch 节点的 <strong>Layer Used 输入</strong>。</li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/b3b400da-c322-43a3-b8a6-14844b193e49?resizing_type=fit" alt="原文示意图5" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><figcaption>原文示意图5</figcaption><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/b3b400da-c322-43a3-b8a6-14844b193e49?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>上图使用转接（reroute）节点保持材质图表整洁。转接节点不是完成本教程必需的。关于节点连接的更多知识，请参阅虚幻引擎文档中的<a href="https://docs.unrealengine.com/connecting-nodes-in-unreal-engine/" target="_blank" rel="noopener"><strong>连接节点（Connecting Nodes）</strong></a>。</p>
+<h3>图层二</h3>
+<p>下一个节点网络位于图层一之下的图层。该网络同样使用 Landscape Layer Switch，让未绘制该图层的地形组件少承担数据开销。</p>
+<p>添加以下材质节点：</p>
+<ul>
+<li>Constant 3Vector 节点</li>
+<li>Constant 节点</li>
+<li>SetMaterialAttributes 节点</li>
+<li>Texture Sample 节点</li>
+<li>Landscape Layer Switch 节点</li>
+<li>Blend MaterialAttributes 节点</li>
+<li>Landscape Layer Sample 节点，并命名为 <strong>Layer 2</strong></li>
+</ul>
+<p>选择 Constant 3 Vector 材质节点并添加颜色。现在可以创建你的节点网络了：</p>
+<ul>
+<li>在材质图表中选择第一个 <strong>SetMaterialAttributes</strong> 节点。</li>
+<li>点击细节（Details）面板<strong>数组（Array）字段</strong>中的 <strong>+</strong> 图标，创建基础颜色（Base Color）数组槽。</li>
+<li>重复第 2 步三次，再创建三个数组槽。在细节（Details）面板添加数组槽的同时，SetMaterialAttributes 节点上会增加相同的数组输入。</li>
+<li>编辑数组槽，选中以下数组：
+<ul>
+<li><strong>Base Color</strong></li>
+<li><strong>Specular</strong></li>
+<li><strong>Roughness</strong></li>
+<li><strong>Normal</strong></li>
+</ul></li>
+<li>把 Constant 节点的值改为 <strong>0.5</strong>。</li>
+<li>从 Constant 节点拖出连线，接到 SetMaterialAttributes 节点的<strong>高光（Specular）输入</strong>。</li>
+<li>再次从 Constant 节点拖出连线，接到 SetMaterialAttributes 节点的<strong>粗糙度（Roughness）输入</strong>。</li>
+<li>从 Constant 3Vector 节点的<strong>白色引脚</strong>拖出连线，接到 SetMaterialAttributes 节点的<strong>基础颜色（Base Color）输入</strong>。</li>
+<li>选择 <strong>Texture Sample</strong> 节点。</li>
+<li>在 Material Expression Texture Base 字段的 Texture 槽添加 <strong>T_Asteria_FrozenGravel_01_N</strong> 法线纹理。</li>
+<li>从 Texture Sample 节点的 <strong>RGB 引脚</strong>拖出连线，接到 SetMaterialAttributes 节点的<strong>法线（Normal）输入</strong>。</li>
+<li>从 SetMaterialAttributes 节点拖出连线，接到 BlendMaterialAttributes 节点的 <strong>B 输入</strong>。</li>
+<li>从 Landscape Layer Sample 节点拖出连线，接到 BlendMaterialAttributes 节点的 <strong>Alpha 输入</strong>。</li>
+<li>选择 <strong>Landscape Layer Switch</strong>，在细节（Details）面板把参数名（Paramter Name）改为 <strong>Layer 2</strong>。</li>
+<li>从 BlendMaterialAttributes 节点拖出连线，接到 Landscape Layer Switch 节点的 <strong>Layer Used 输入</strong>。</li>
+<li>从第一个 Landscape Layer Switch 节点拖出连线，接到第二个 BlendMaterialAttributes 节点的 <strong>A 输入</strong>。</li>
+<li>从第一个 Landscape Layer Switch 节点拖出连线，接到第二个 Landscape Layer Switch 节点的 <strong>LayerNotUsed 输入</strong>。</li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/eeee207c-6625-4744-9574-d1a8b31e6715?resizing_type=fit" alt="原文示意图6" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><figcaption>原文示意图6</figcaption><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/eeee207c-6625-4744-9574-d1a8b31e6715?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>由于图层二在这里与图层一之后混合，图层二会绘制在图层一之上。使用无权重混合图层（No-Weight Blend Layer）时，绘制（Paint）工具中<strong>目标图层（Target Layer）</strong>的排列顺序无关紧要。</p>
+<p>要完成材质，请选择主材质节点，在细节（Details）面板打开<strong>使用材质属性（Use Material Attributes）</strong>。</p>
+<p>再从 <strong>Layer 2 Landscape Layer Switch</strong> 拖出连线，接到<strong>主材质节点（Main Material Node）</strong>，即完成自定义地形材质。</p>
+<p>主材质节点采用你为材质指定的名称。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/4ef3690a-bf6f-429e-af5d-e9d723034ca3?resizing_type=fit" alt="原文示意图7" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><figcaption>原文示意图7</figcaption><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/4ef3690a-bf6f-429e-af5d-e9d723034ca3?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h2 id="sec-4">使用自定义地形材质</h2>
+<p>现在可以用自定义材质在已创建的地形上绘制现有地形。在大纲（Outliner）面板选择 <strong>Landscape Streaming Proxy</strong>。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/b6f9d0f3-b641-441a-a69a-d71a85aef2b7?resizing_type=fit" alt="原文示意图8" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><figcaption>原文示意图8</figcaption><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/b6f9d0f3-b641-441a-a69a-d71a85aef2b7?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>在细节（Details）面板把自定义材质赋给<strong>地形材质（Landscape Material）槽</strong>。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/68f5cf75-a7c2-49ee-8b06-31fbd6bf8515?resizing_type=fit" alt="原文示意图9" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><figcaption>原文示意图9</figcaption><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/68f5cf75-a7c2-49ee-8b06-31fbd6bf8515?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>从选择（Selection）下拉菜单切换到<strong>地形模式（Landscape Mode）</strong>，在地形各阶段中选择<strong>绘制（Paint）</strong>。在这里，你的新材质及其所有图层会与其他地形材质一起显示在<strong>目标图层（Target Layers）</strong>菜单中。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/5b8edcde-7043-4c91-81d6-ce7fdd14e7c5?resizing_type=fit" alt="原文示意图10" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><figcaption>原文示意图10</figcaption><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/5b8edcde-7043-4c91-81d6-ce7fdd14e7c5?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>使用自定义材质前，必须把每个自定义图层都转为非权重混合图层：选择 <strong>+ 图标</strong> &gt; <strong>非权重混合图层（Non Weight-Blend Layer）</strong> &gt; <strong>保存（Save）</strong>，对自定义材质的每一层重复此步骤。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/c031f16e-cb33-46e8-937e-f2184d7b6823?resizing_type=fit" alt="原文示意图11" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><figcaption>原文示意图11</figcaption><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/c031f16e-cb33-46e8-937e-f2184d7b6823?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>现在选择自定义材质即可绘制地形。</p>
+<h2 id="sec-5">结果</h2>
+<p>至此，自定义地形材质已经创建完成并可用于绘制，你的地形可以呈现泥土、岩石、砾石多层混合的自定义外观。</p>
+<div class="pager"><a href="34-environments-and-landscapes-in-unreal-editor-for-fortnite.html"><small>← 返回父教程</small>环境与地形</a><a href="sub-index.html"><small>子教程索引 →</small>全部子教程</a></div>
+</article><nav class="doc-toc" aria-label="本页内容"><b>本页内容</b><a href="#sec-1">选择 Customizable 材质实例</a>
+<a href="#sec-2">绘制地形材质</a>
+<a href="#sec-3">创建自定义地形材质</a>
+<a href="#sec-4">使用自定义地形材质</a>
+<a href="#sec-5">结果</a></nav></div>
+</div></div>
+</div>
+<footer class="edc-footer"><div class="inner"><img src="../assets/logo-epic.svg" alt="Epic Games"><span>Fortnite 文档中文镜像 · UE教程/ · 本地打开 index.html 阅读 · 翻译整理自 Epic 官方文档，仅供学习交流</span></div></footer>
+</body>
+</html>

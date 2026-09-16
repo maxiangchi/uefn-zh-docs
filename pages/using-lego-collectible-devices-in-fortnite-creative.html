@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>在 Fortnite 创意模式中使用乐高®收藏品设备 | Fortnite 文档中文镜像</title>
+<link rel="stylesheet" href="../assets/epic.css">
+<link rel="stylesheet" href="../assets/patch.css">
+<link rel="icon" href="../assets/logo-epic.svg">
+</head>
+<body class="theme-fortnite">
+<div class="edc-topbar"><div class="edc-topbar-inner"><img class="edc-logo" src="../assets/logo-epic.svg" alt="Epic Games"><span class="edc-brand">Epic Games <b>开发者社区</b></span><span class="edc-nav"><a href="../index.html">文档首页</a><a href="sub-index.html">子教程索引</a><a href="https://dev.epicgames.com/documentation/fortnite/using-lego-collectible-devices-in-fortnite-creative" target="_blank" rel="noopener">英文原文</a></span></div></div>
+<div class="site-container">
+<aside class="site-nav"><div class="documents-tree"><nav><ul class="contents-table">
+<div class="tree-sec">最新动态</div>
+<a class="tree-link" href="01-42-00-fortnite-ecosystem-updates-and-release-notes.html">01. 42.00 生态系统更新与发行说明</a>
+<a class="tree-link" href="02-custom-items-and-inventory-overview-in-fortnite.html">02. 自定义物品与背包总览</a>
+<a class="tree-link" href="03-in-island-transactions-in-fortnite.html">03. 岛内交易</a>
+<a class="tree-link" href="04-mobile-development-in-fortnite.html">04. 移动端开发</a>
+<a class="tree-link" href="05-inputs-in-fortnite.html">05. 输入系统</a>
+<a class="tree-link" href="06-ability-system-in-unreal-editor-for-fortnite.html">06. 能力系统 Ability System</a>
+<a class="tree-link" href="07-partybased-gameplay-using-the-social-synergy-api-in-fortnite.html">07. 社交协同 API 与小队玩法</a>
+<a class="tree-link" href="08-scene-graph-in-unreal-editor-for-fortnite.html">08. 场景图 Scene Graph</a><div class="tree-sec">入门</div>
+<a class="tree-link" href="09-build-your-first-island-in-fortnite.html">09. 构建你的第一个岛屿</a>
+<a class="tree-link" href="10-onboarding-guide-to-programming-with-verse-in-unreal-editor-for-fortnite.html">10. Verse 编程入门指南</a>
+<a class="tree-link" href="11-building-basics-in-fortnite-creative.html">11. 建造基础</a><div class="tree-sec">品牌合集</div>
+<a class="tree-link" href="12-star-wars-islands-in-fortnite.html">12. 星球大战™岛屿</a>
+<a class="tree-link" href="13-kpop-demon-hunters-islands-in-fortnite.html">13. KPop 猎魔团岛屿</a>
+<a class="tree-link active" href="14-building-lego-islands-in-fortnite.html">14. 乐高®岛屿</a>
+<a class="tree-link" href="15-the-walking-dead-universe-islands-in-unreal-editor-for-fortnite.html">15. 行尸走肉宇宙岛屿</a>
+<a class="tree-link" href="16-teenage-mutant-ninja-turtle-islands-in-unreal-editor-for-fortnite.html">16. 忍者神龟岛屿</a>
+<a class="tree-link" href="17-squid-game-islands-in-fortnite.html">17. 鱿鱼游戏岛屿</a><div class="tree-sec">开发者成功</div>
+<a class="tree-link" href="18-using-creator-portal-in-fortnite-creative.html">18. 使用创作者门户</a>
+<a class="tree-link" href="19-island-moderation-and-guidelines-in-fortnite-creative.html">19. 岛屿审核与准则</a><div class="tree-sec">协作</div>
+<a class="tree-link" href="20-creating-teams-in-creator-portal-in-unreal-editor-for-fortnite.html">20. 在创作者门户创建团队</a>
+<a class="tree-link" href="21-adding-playtesters-in-fortnite-creative.html">21. 添加试玩测试员</a>
+<a class="tree-link" href="22-playtesting-your-island-in-unreal-editor-for-fortnite.html">22. 试玩测试你的岛屿</a>
+<a class="tree-link" href="23-collaborating-in-unreal-editor-for-fortnite.html">23. 在 UEFN 中协作</a>
+<a class="tree-link" href="24-lore-version-control-in-unreal-editor-for-fortnite.html">24. Lore 版本控制</a>
+<a class="tree-link" href="25-conflicts-in-lore-version-control-in-unreal-editor-for-fortnite.html">25. Lore 中的冲突</a>
+<a class="tree-link" href="26-version-history-and-conflict-resolution-in-unreal-editor-for-fortnite.html">26. 分支历史与冲突解决</a><div class="tree-sec">游戏示例</div>
+<a class="tree-link" href="27-build-a-game-in-unreal-editor-for-fortnite.html">27. 构建一款游戏</a>
+<a class="tree-link" href="28-unreal-editor-for-fortnite-starter-templates.html">28. UEFN 新手模板</a><div class="tree-sec">Verse</div>
+<a class="tree-link" href="29-learn-the-basics-of-writing-code-in-verse.html">29. 从零学习 Verse 代码基础</a><div class="tree-sec">专注领域</div>
+<a class="tree-link" href="30-lighting-in-unreal-editor-for-fortnite.html">30. 灯光</a>
+<a class="tree-link" href="31-animation-and-cinematics-in-unreal-editor-for-fortnite.html">31. 动画与过场动画</a>
+<a class="tree-link" href="32-modeling-in-unreal-editor-for-fortnite.html">32. 建模</a>
+<a class="tree-link" href="33-materials-in-unreal-editor-for-fortnite.html">33. 材质</a>
+<a class="tree-link" href="34-environments-and-landscapes-in-unreal-editor-for-fortnite.html">34. 环境与地形</a>
+<a class="tree-link" href="35-audio-in-unreal-editor-for-fortnite.html">35. 音频</a>
+<a class="tree-link" href="36-visual-effects-in-unreal-editor-for-fortnite.html">36. 视觉特效</a>
+</ul></nav></div></aside>
+<div class="page-content"><div class="page-document has-theme-bg">
+<header class="section-page-header"><nav><ol class="breadcrumb is-shrinkable"><li class="breadcrumb-item is-root"><img src="../assets/logo-epic.svg" alt="Epic Games"><a href="../index.html">Developer</a></li><li class="breadcrumb-item"><a href="../index.html">Fortnite 文档</a></li><li class="breadcrumb-item"><a href="14-building-lego-islands-in-fortnite.html">乐高®岛屿</a></li><li class="breadcrumb-item active" aria-current="page"><span class="text-truncate">在 Fortnite 创意模式中使用乐高®收藏品设备</span></li></ol></nav><h1>在 Fortnite 创意模式中使用乐高®收藏品设备</h1><p class="text-secondary mb-0">用乐高®收藏品金币（studs）拼出你的岛屿体验：玩家拾取后可在 HUD 上展示并计分，进而满足设备或分数要求，打造更有奖励感的玩法。</p><p class="doc-meta">英文原标题：Using LEGO Collectible Devices in Fortnite Creative · <a href="https://dev.epicgames.com/documentation/fortnite/using-lego-collectible-devices-in-fortnite-creative" target="_blank" rel="noopener">查看英文原文</a> · 社区翻译镜像，仅供学习</p></header>
+<div class="doc-columns"><article class="doc-article">
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/c114420d-69a1-480e-bc09-3ad4a0b2283f?resizing_type=fill&width=1920&height=335" alt="乐高®收藏品设备题图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/c114420d-69a1-480e-bc09-3ad4a0b2283f?resizing_type=fill&width=1920&height=335" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>用乐高®收藏品金币（LEGO® Collectible studs）奖励玩家，把岛屿体验的各个部分拼接起来。</p>
+<p>这些是可以拾取的收藏品金币，拾取后会显示在 HUD 上。玩家随后可以用这些收藏品来满足设备或分数要求。</p>
+<p>可以查看 <a href="https://dev.epicgames.com/documentation/fortnite/lego-action-adventure-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">LEGO® 动作冒险模板（LEGO® Action Adventure template）</a>，了解如何使用该设备打造有奖励感的玩法体验。在该模板中，金币会在游戏全程中发放，用于解锁区域、组装道具和满足任务要求。</p>
+<p>你可以在以下位置找到该设备：</p>
+<ul>
+<li><strong>创意模式（Creative）</strong>：<strong>创意模式菜单（Creative Menu）</strong> &gt; <strong>内容（Content）</strong> &gt; <strong>乐高®内容（LEGO® Content）</strong> &gt; <strong>设备（Devices）</strong> &gt; <strong>乐高®收藏品（LEGO® Collectible）</strong></li>
+<li><strong>UEFN</strong>：<strong>内容抽屉（Content Drawer）</strong> &gt; <strong>乐高®内容（LEGO® Content）</strong> &gt; <strong>设备（Devices）</strong> &gt; <strong>乐高®收藏品（LEGO® Collectible）</strong></li>
+</ul>
+<p>要学习访问、放置设备并调整其设置的基础知识，请参阅<a href="using-devices-in-fortnite.html">使用设备（Using Devices）</a>。</p>
+<p>如果在岛屿上放置了同一设备的多个副本，为它们重命名会很有帮助。选择与设备用途相关的名称，便于记住每个设备的作用；当使用<strong>事件浏览器（Event Browser）</strong>查找特定设备时也更容易找到，详见<a href="https://dev.epicgames.com/documentation/fortnite/event-browser-in-fortnite-creative" target="_blank" rel="noopener">事件浏览器（Event Browser）</a>。</p>
+<h2 id="sec-1">上下文筛选</h2>
+<p>部分设备会受到<strong>上下文筛选（contextual filtering）</strong>功能的影响。该功能会根据某些相关选项所选的值，隐藏或显示部分选项，从而减少<strong>自定义（Customize）</strong>面板中的杂乱内容，让选项更易于管理与浏览。为便于识别，触发上下文筛选的值以斜体显示。</p>
+<p>下方列出了所有选项，包括受上下文筛选影响的选项；如果某个选项会根据特定选项的值而隐藏或显示，其<strong>说明（Description）</strong>字段中会有相应注释。</p>
+<h2 id="sec-2">设备选项</h2>
+<p>默认情况下，每个收藏品金币对所有玩家可见。当玩家触碰它时，可获得 1 分，金币随即消失。收藏品金币仅对已拾取它的玩家隐藏，其他玩家仍能看到并拾取。</p>
+<p>你可以通过以下选项配置该设备。</p>
+<p>默认值以<strong>粗体</strong>显示，触发上下文筛选的值以<em>斜体</em>显示。</p>
+<table>
+<thead><tr><th>选项</th><th>值</th><th>说明</th></tr></thead>
+<tbody>
+<tr><td><strong>收藏品对象（Collectible Object）</strong></td><td><strong>金色金币（Gold Stud）</strong>、蓝色金币（Blue Stud）、紫色金币（Purple Stud）、银色金币（Silver Stud）</td><td>决定收藏品对象的视觉元素。</td></tr>
+<tr><td><strong>分数（Score）</strong></td><td><strong>1</strong>、输入数量</td><td>设置拾取该对象时奖励的分数。</td></tr>
+<tr><td><strong>环境音效（Ambient Audio）</strong></td><td><strong>开（True）</strong>、关（False）</td><td>决定玩家靠近时该对象是否播放环境音效。</td></tr>
+<tr><td><strong>被谁拾取后消耗（Consume if Collected By）</strong></td><td><strong>自己（Self）</strong>、任何人（Anyone）、队伍（Team）</td><td>决定该对象何时从世界中移除。</td></tr>
+<tr><td><strong>可拾取队伍（Collecting Team）</strong></td><td>队伍编号（Team Index）、<strong>全部（All）</strong></td><td>设置哪支队伍可以拾取该对象。</td></tr>
+<tr><td><strong>允许的职业（Allowed Class）</strong></td><td>职业槽位（Class Slot）、无职业（No Class）、<strong>任意（Any）</strong></td><td>决定哪个职业可以拾取该对象。</td></tr>
+<tr><td><strong>对敌对玩家可见（Visible to Opposing Players）</strong></td><td><strong>从不（Never）</strong>、总是（Always）、拾取前可见（Until Collected）</td><td>决定无法拾取该对象的玩家是否能看到它。</td></tr>
+<tr><td><strong>游戏开始时可见（Visible on Game Start）</strong></td><td><strong>开（True）</strong>、关（False）</td><td>决定游戏开始时该对象是否可见。</td></tr>
+<tr><td><strong>显示拾取特效（Show Pickup Effects）</strong></td><td>关闭（Off）、仅音效（Only Audio）、仅视觉（Only Visuals）、<strong>开启（On）</strong></td><td>决定玩家拾取物品时播放哪些特效。</td></tr>
+<tr><td><strong>在 HUD 上显示分数更新（Display Score Update on HUD）</strong></td><td><em>开（True）</em>、<strong>关（False）</strong></td><td>决定是否在 HUD 上显示玩家得分事件。</td></tr>
+<tr><td><strong>重置 HUD 消息分数（Reset HUD Message Score）</strong></td><td>开（True）、<strong>关（False）</strong></td><td>设置该设备是否在 HUD 上显示计分消息。</td></tr>
+<tr><td><strong>HUD 消息（HUD Message）</strong></td><td><strong>输入文本（Enter text）</strong></td><td>设置随分数显示在 HUD 上的消息。</td></tr>
+<tr><td><strong>HUD 消息分数颜色（HUD Message Score Color）</strong></td><td><strong>#BFEBFFFF</strong>、自选颜色</td><td>设置 HUD 上显示的分数文本颜色。</td></tr>
+<tr><td><strong>HUD 消息颜色（HUD Message Color）</strong></td><td><strong>#00BAFFFF</strong>、自选颜色</td><td>决定 HUD 上显示的消息文本颜色。</td></tr>
+<tr><td><strong>自定义网格体（Custom Mesh）</strong></td><td><em>开（True）</em>、<strong>关（False）</strong></td><td>决定是否使用自定义网格体替代收藏品对象定义的收藏品。自定义网格体不会有视觉浮动效果。</td></tr>
+<tr><td><strong>手动设置碰撞体（Manually Set Collider）</strong></td><td>开（True）、<strong>关（False）</strong></td><td>更改该设备的碰撞属性。</td></tr>
+<tr><td><strong>播放环境视觉特效（Play Ambient VFX）</strong></td><td><strong>开（True）</strong>、关（False）</td><td>决定收藏品上环境辉光特效的可见性。</td></tr>
+<tr><td><strong>拾取时自定义特效（Custom on Collected VFX）</strong></td><td>开（True）、<strong>关（False）</strong></td><td>定义要使用的自定义粒子特效。</td></tr>
+</tbody>
+</table>
+<h2 id="sec-3">直接事件绑定</h2>
+<p>以下是该设备的<a href="https://dev.epicgames.com/documentation/fortnite/fortnite-glossary#direct-event-binding" target="_blank" rel="noopener">直接事件绑定（direct event binding）</a>选项。</p>
+<h3>函数</h3>
+<p><a href="https://dev.epicgames.com/documentation/fortnite/fortnite-glossary#function" target="_blank" rel="noopener">函数（function）</a>会监听设备上的事件，然后执行某个动作。</p>
+<ol>
+<li>对于任意函数，点击相关选项，然后点击<strong>选择设备（Select Device）</strong>，从<strong>设备（Device）</strong>下拉菜单中访问并选择。</li>
+<li>选定设备后，点击<strong>选择事件（Select Event）</strong>，将该设备绑定到会触发本设备函数的事件。</li>
+<li>若有多个设备或事件触发同一函数，点击<strong>添加（Add）</strong>按钮新增一行并重复上述步骤。</li>
+</ol>
+<table>
+<thead><tr><th>选项</th><th>说明</th></tr></thead>
+<tbody>
+<tr><td><strong>开启可见性（Turn Visibility On）</strong></td><td>当事件发生时使该对象可见。</td></tr>
+<tr><td><strong>关闭可见性（Turn Visibility Off）</strong></td><td>当事件发生时使该对象不可见。</td></tr>
+<tr><td><strong>重生（Respawn）</strong></td><td>当事件发生时，立即为触发玩家重生该对象。会受到“被谁拾取后消耗（Consume if Collected By）”的影响。</td></tr>
+<tr><td><strong>为所有人重生（Respawn for All）</strong></td><td>当事件发生时，立即为所有玩家重生该对象。</td></tr>
+</tbody>
+</table>
+<h3>事件</h3>
+<p><a href="https://dev.epicgames.com/documentation/fortnite/fortnite-glossary#event" target="_blank" rel="noopener">事件（event）</a>会通知其他设备何时执行函数。</p>
+<ol>
+<li>对于任意函数，点击相关选项，然后点击<strong>选择设备（Select Device）</strong>，从<strong>设备（Device）</strong>下拉菜单中访问并选择。</li>
+<li>选定设备后，点击<strong>选择函数（Select Function）</strong>，将本事件绑定到该设备的函数。</li>
+<li>若同一事件触发多个函数，点击<strong>添加（Add）</strong>按钮新增一行并重复上述步骤。</li>
+</ol>
+<table>
+<thead><tr><th>选项</th><th>说明</th></tr></thead>
+<tbody>
+<tr><td><strong>被拾取时（On Collected）</strong></td><td>当对象被玩家拾取时发送事件。</td></tr>
+</tbody>
+</table>
+<p>标签：<a href="https://dev.epicgames.com/community/search?query=collectible" target="_blank" rel="noopener">collectible</a> · <a href="https://dev.epicgames.com/community/search?query=lego" target="_blank" rel="noopener">lego</a></p>
+<p>欢迎在<a href="https://forums.unrealengine.com/categories?tag=fortnite" target="_blank" rel="noopener">开发者论坛（Developer Forums）</a>提问并帮助同行，或在<a href="https://dev.epicgames.com/community/fortnite/learning" target="_blank" rel="noopener">学习库（Learning Library）</a>撰写、阅读教程。</p>
+<div class="pager"><a href="14-building-lego-islands-in-fortnite.html"><small>← 返回父教程</small>乐高®岛屿</a><a href="sub-index.html"><small>子教程索引 →</small>全部子教程</a></div>
+</article><nav class="doc-toc" aria-label="本页内容"><b>本页内容</b><a href="#sec-1">上下文筛选</a>
+<a href="#sec-2">设备选项</a>
+<a href="#sec-3">直接事件绑定</a></nav></div>
+</div></div>
+</div>
+<footer class="edc-footer"><div class="inner"><img src="../assets/logo-epic.svg" alt="Epic Games"><span>Fortnite 文档中文镜像 · UE教程/ · 本地打开 index.html 阅读 · 翻译整理自 Epic 官方文档，仅供学习交流</span></div></footer>
+</body>
+</html>

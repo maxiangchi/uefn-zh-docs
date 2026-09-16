@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Verse 代码基础 3：存储与使用信息 | Fortnite 文档中文镜像</title>
+<link rel="stylesheet" href="../assets/epic.css">
+<link rel="stylesheet" href="../assets/patch.css">
+<link rel="icon" href="../assets/logo-epic.svg">
+</head>
+<body class="theme-fortnite">
+<div class="edc-topbar"><div class="edc-topbar-inner"><img class="edc-logo" src="../assets/logo-epic.svg" alt="Epic Games"><span class="edc-brand">Epic Games <b>开发者社区</b></span><span class="edc-nav"><a href="../index.html">文档首页</a><a href="sub-index.html">子教程索引</a><a href="https://dev.epicgames.com/documentation/fortnite/basics-of-writing-code-3-storing-and-using-information-in-verse" target="_blank" rel="noopener">英文原文</a></span></div></div>
+<div class="site-container">
+<aside class="site-nav"><div class="documents-tree"><nav><ul class="contents-table">
+<div class="tree-sec">A · 最新动态</div>
+<a class="tree-link" href="01-42-00-fortnite-ecosystem-updates-and-release-notes.html">01. 42.00 生态系统更新与发行说明</a>
+<a class="tree-link" href="02-custom-items-and-inventory-overview-in-fortnite.html">02. 自定义物品与背包总览</a>
+<a class="tree-link" href="03-in-island-transactions-in-fortnite.html">03. 岛内交易</a>
+<a class="tree-link" href="04-mobile-development-in-fortnite.html">04. 移动端开发</a>
+<a class="tree-link" href="05-inputs-in-fortnite.html">05. 输入系统</a>
+<a class="tree-link" href="06-ability-system-in-unreal-editor-for-fortnite.html">06. 能力系统 Ability System</a>
+<a class="tree-link" href="07-partybased-gameplay-using-the-social-synergy-api-in-fortnite.html">07. 社交协同 API 与小队玩法</a>
+<a class="tree-link" href="08-scene-graph-in-unreal-editor-for-fortnite.html">08. 场景图 Scene Graph</a>
+<div class="tree-sec">B · 入门指南</div>
+<a class="tree-link" href="09-build-your-first-island-in-fortnite.html">09. 构建你的第一个岛屿</a>
+<a class="tree-link" href="10-onboarding-guide-to-programming-with-verse-in-unreal-editor-for-fortnite.html">10. Verse 编程入门指南</a>
+<a class="tree-link" href="11-building-basics-in-fortnite-creative.html">11. 建造基础</a>
+<div class="tree-sec">C · 品牌合集</div>
+<a class="tree-link" href="12-star-wars-islands-in-fortnite.html">12. 星球大战™岛屿</a>
+<a class="tree-link" href="13-kpop-demon-hunters-islands-in-fortnite.html">13. KPop 猎魔团岛屿</a>
+<a class="tree-link" href="14-building-lego-islands-in-fortnite.html">14. 乐高®岛屿</a>
+<a class="tree-link" href="15-the-walking-dead-universe-islands-in-unreal-editor-for-fortnite.html">15. 行尸走肉宇宙岛屿</a>
+<a class="tree-link" href="16-teenage-mutant-ninja-turtle-islands-in-unreal-editor-for-fortnite.html">16. 忍者神龟岛屿</a>
+<a class="tree-link" href="17-squid-game-islands-in-fortnite.html">17. 鱿鱼游戏岛屿</a>
+<div class="tree-sec">D · 开发者成功</div>
+<a class="tree-link" href="18-using-creator-portal-in-fortnite-creative.html">18. 使用创作者门户</a>
+<a class="tree-link" href="19-island-moderation-and-guidelines-in-fortnite-creative.html">19. 岛屿审核与准则</a>
+<div class="tree-sec">E · 协作与版本控制</div>
+<a class="tree-link" href="20-creating-teams-in-creator-portal-in-unreal-editor-for-fortnite.html">20. 在创作者门户创建团队</a>
+<a class="tree-link" href="21-adding-playtesters-in-fortnite-creative.html">21. 添加试玩测试员</a>
+<a class="tree-link" href="22-playtesting-your-island-in-unreal-editor-for-fortnite.html">22. 试玩测试你的岛屿</a>
+<a class="tree-link" href="23-collaborating-in-unreal-editor-for-fortnite.html">23. 在 UEFN 中协作</a>
+<a class="tree-link" href="24-lore-version-control-in-unreal-editor-for-fortnite.html">24. Lore 版本控制</a>
+<a class="tree-link" href="25-conflicts-in-lore-version-control-in-unreal-editor-for-fortnite.html">25. Lore 中的冲突</a>
+<a class="tree-link" href="26-version-history-and-conflict-resolution-in-unreal-editor-for-fortnite.html">26. 分支历史与冲突解决</a>
+<div class="tree-sec">F · 游戏示例</div>
+<a class="tree-link" href="27-build-a-game-in-unreal-editor-for-fortnite.html">27. 构建一款游戏</a>
+<a class="tree-link" href="28-unreal-editor-for-fortnite-starter-templates.html">28. UEFN 新手模板</a>
+<div class="tree-sec">G · Verse 编程</div>
+<a class="tree-link active" href="29-learn-the-basics-of-writing-code-in-verse.html">29. 从零学习 Verse 代码基础</a>
+<div class="tree-sec">H · 专注领域</div>
+<a class="tree-link" href="30-lighting-in-unreal-editor-for-fortnite.html">30. 灯光</a>
+<a class="tree-link" href="31-animation-and-cinematics-in-unreal-editor-for-fortnite.html">31. 动画与过场动画</a>
+<a class="tree-link" href="32-modeling-in-unreal-editor-for-fortnite.html">32. 建模</a>
+<a class="tree-link" href="33-materials-in-unreal-editor-for-fortnite.html">33. 材质</a>
+<a class="tree-link" href="34-environments-and-landscapes-in-unreal-editor-for-fortnite.html">34. 环境与地形</a>
+<a class="tree-link" href="35-audio-in-unreal-editor-for-fortnite.html">35. 音频</a>
+<a class="tree-link" href="36-visual-effects-in-unreal-editor-for-fortnite.html">36. 视觉特效</a>
+</ul></nav></div></aside>
+<div class="page-content"><div class="page-document has-theme-bg">
+<header class="section-page-header"><nav><ol class="breadcrumb is-shrinkable"><li class="breadcrumb-item is-root"><img src="../assets/logo-epic.svg" alt="Epic Games"><a href="../index.html">Developer</a></li><li class="breadcrumb-item"><a href="../index.html">Fortnite 文档</a></li><li class="breadcrumb-item"><a href="29-learn-the-basics-of-writing-code-in-verse.html">从零学习 Verse 代码基础</a></li><li class="breadcrumb-item active" aria-current="page"><span class="text-truncate">Verse 代码基础 3：存储与使用信息</span></li></ol></nav><h1>Verse 代码基础 3：存储与使用信息</h1><p class="text-secondary mb-0">在第 2 课认识常见类型与运算的基础上，本课学习如何在 Verse 代码中使用这些类型与值：用变量（variable）与常量（constant）存储信息（information）/数据（data），并理解可变（mutable）与不可变（immutable）的区别。</p><p class="doc-meta">英文原标题：Basics Of Writing Code 3 Storing And Using Information In Verse · <a href="https://dev.epicgames.com/documentation/fortnite/basics-of-writing-code-3-storing-and-using-information-in-verse" target="_blank" rel="noopener">查看英文原文</a> · 社区翻译镜像，仅供学习</p></header>
+<div class="doc-columns"><article class="doc-article">
+<div class="block-callout">前置主题：要理解和使用本页内容，请确保你已熟悉以下主题：<ul><li><a href="basics-of-writing-code-2-basic-programming-concepts-in-verse.html">第 2 课：基本编程组件（Lesson 2: Basic Programming Components）</a></li></ul></div>
+<p>在第 2 课中，你已经见识了一些更常见的<strong>类型（type）</strong>，以及与之相关的<strong>运算（operation）</strong>和<strong>值（value）</strong>。现在，是时候开始学习如何在代码中使用这些类型和值了。</p>
+<p><strong>表达式（expression）</strong>所使用的<strong>值（value）</strong>有时也被称为<strong>信息（information）</strong>或<strong>数据（data）</strong>。程序需要数据才能知道该做什么，而存储数据（即值）有不同的方法。</p>
+<p>数据也有不同的种类。</p>
+<h2 id="sec-1">可变与不可变</h2>
+<p><strong>可变（mutable）</strong>表示能够改变。可以想一想变种人（mutant）——就是 DNA 代码发生了改变（即突变，mutated）的人。</p>
+<p>海岸边的波浪就是可变的，时刻都在变化。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/ddea64cb-fdc8-414f-a9a9-399b833d75e6?resizing_type=fit" alt="原文示意图1：不断变化的海浪，示意可变" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/ddea64cb-fdc8-414f-a9a9-399b833d75e6?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>当某样东西<strong>不可变（immutable）</strong>时，它就不能被改变。如果你不考虑地震、海啸、爆炸或侵蚀，那么俯瞰海滩的悬崖就是不可变的。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/b8c3a8fc-5b7e-40ea-a54e-74f838972cca?resizing_type=fit" alt="原文示意图2：俯瞰海滩的悬崖，示意不可变" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/b8c3a8fc-5b7e-40ea-a54e-74f838972cca?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>但这和代码有什么关系呢？</p>
+<p>当某个值在程序运行时不能被改变，它就是<strong>不可变的（immutable）</strong>。如果某个值在程序运行时会根据来自其他地方的输入而改变，那么这个值就是<strong>可变的（mutable）</strong>。</p>
+<p>Verse（Verse）自带<strong>内置（built-in）类型</strong>，支持大多数程序运行所需的基本运算。这些内置类型是你在 Verse（Verse）中使用<strong>变量（variable）</strong>和<strong>常量（constant）</strong>的基础。</p>
+<h2 id="sec-2">变量与常量</h2>
+<p>在编程中，你使用<strong>变量（variable）</strong>和<strong>常量（constant）</strong>来存储程序要使用的值。</p>
+<p>当程序需要数据来决定接下来发生什么时，计算机的计算和决策都基于代码中变量和常量里存储的值。</p>
+<p>虽然<strong>变量（variable）</strong>一词有时被泛指为同时包含变量和常量，但两者有一个重要区别：<strong>变量在程序运行时可以改变它的值</strong>，而<strong>常量在程序运行时不能改变它的值</strong>。换句话说，<strong>变量的值是可变的（mutable）</strong>，而<strong>常量的值是不可变的（immutable）</strong>。</p>
+<h3>变量与常量的语法</h3>
+<p><strong>变量（variable）</strong>的语法如下：</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/e1cd385f-a0b7-4bd9-a67a-f114527ac370?resizing_type=fit" alt="原文示意图3：变量声明语法图解" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/e1cd385f-a0b7-4bd9-a67a-f114527ac370?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>行首的 <code>var</code> 表明这是一个变量。</p>
+<p><strong>常量（constant）</strong>的基本语法如下：</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/ab554251-adde-441f-8849-0ac283ec79b2?resizing_type=fit" alt="原文示意图4：常量声明语法图解" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/ab554251-adde-441f-8849-0ac283ec79b2?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>注意，变量和常量的语法<strong>唯一</strong>区别在于：常量去掉了 <code>var</code>，而变量则包含 <code>var</code>。</p>
+<p>现在来拆解一下这段语法到底在说什么：</p>
+<p><code>name</code></p>
+<p><code>name</code> 是程序员赋予这个变量或常量的<strong>唯一名称</strong>。</p>
+<p>请记住，<code>var</code> 不是名称的一部分，它只表示这是一个变量，而不是常量。当你想在程序中引用这个变量时，用的就是这个<strong>名称（name）</strong>。</p>
+<p><code>type</code></p>
+<p><strong>类型（type）</strong>说明了这个变量中的值可以执行哪些操作。</p>
+<p>注意，名称和类型之间用冒号 <code>:</code> 分隔。</p>
+<p><code>value</code></p>
+<p>对于常量，这个值将保持不变——顾名思义就是恒定的。对于变量，这是变量的起始值，虽然在程序执行过程中它可以改变（变化）。这就是<strong>初始值（initial value）</strong>。</p>
+<p>注意，类型和值之间用 <code>=</code> 分隔。</p>
+<p>为变量设置初始值是可选的，但这是值得养成的好习惯。</p>
+<p>而为常量设置值是必需的。</p>
+<h3>标识符</h3>
+<p><strong>标识符（identifier）</strong>是程序员赋予某个表达式的<strong>唯一名称</strong>。</p>
+<p><strong>标识符（identifier）</strong>和<strong>名称（name）</strong>是同义词。</p>
+<h3>命名规则与约定</h3>
+<p>在 Verse（Verse）中命名是有规则的。创建变量和常量时，请牢记以下命名规则：</p>
+<ul>
+<li>尽可能给变量（以及其他表达式）起一个能<strong>表明其作用</strong>的名字。</li>
+<li>用一致的方式为变量命名是一种好习惯，这样别人读你的代码会更容易（你自己回忆起来也更容易！）。</li>
+<li>标识符的第一个字符必须是字母或下划线（_）字符。</li>
+<li>第一个字符之后的字符必须是字母、数字或下划线字符。名称中可以有多个下划线，甚至可以有两个或更多下划线连在一起。</li>
+<li>变量和常量的标识符都不能包含空格。</li>
+<li><strong>Verse（Verse）区分大小写</strong>，因此大小写保持一致非常重要。如果不一致，代码就会报错。</li>
+</ul>
+<p>关于 Verse（Verse）命名约定的完整指南，请参阅 <a href="https://dev.epicgames.com/documentation/fortnite/verse-code-style-guide-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">Verse 代码风格指南（Verse Code Style Guide）</a>。</p>
+<h3>声明变量</h3>
+<p>每个变量或常量都有三个基本组成部分：<strong>标识符（identifier）</strong>（即名称）、它能存储的值的<strong>类型（type）</strong>，以及<strong>值（value）</strong>本身。</p>
+<pre><code>var name : type = value</code></pre>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/fb578d76-634f-49ce-8bb5-97c5672073a3?resizing_type=fit" alt="原文示意图5：声明变量各组成部分图解" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/fb578d76-634f-49ce-8bb5-97c5672073a3?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>在 Verse（Verse）中，你通过<strong>声明（declare）</strong>来创建变量。要声明变量，变量必须具备全部三个部分：标识符、类型和值。</p>
+<h3>初始化</h3>
+<p>给常量（或任何其他表达式）设置<strong>初始值（initial value）</strong>称为<strong>初始化（initialization）</strong>。<strong>声明（declare）</strong>变量或常量时必须进行初始化。</p>
+<p>使用 <code>:</code> <code>=</code> <strong>运算符（operator）</strong>，你可以初始化常量或变量中的值。</p>
+<p>注意，使用这个运算符时，<strong>名称（name）</strong>写在 <code>:</code> 之前，<strong>类型（type）</strong>写在 <code>:</code> 和 <code>=</code> 之间，<strong>值（value）</strong>写在 <code>=</code> 之后。</p>
+<pre><code>var Coins : int = 500</code></pre>
+<h3>有效使用常量</h3>
+<p>当某个值在代码多个地方出现、并且永远不变时，用常量来保存它是很明智的做法。</p>
+<p>还记得<a href="https://dev.epicgames.com/documentation/fortnite/learn-code-basics-2-basic-programming-components-in-verse#literals" target="_blank" rel="noopener">第 2 课（Lesson 2）</a>中的字面量吗？<strong>字面量（literal）就是永远不变的值</strong>。理想情况下，你应该尽量少用字面量。</p>
+<p>例如，如果你的游戏允许玩家用一百枚金币购买一个捕鼠夹，你可以在程序中每次从 <code>Coins</code> 扣款时都直接写入<strong>字面量（不变的）</strong>值 100——<strong>或者</strong>（这样要好得多！）你可以声明并使用一个常量，比如 <code>CoinsPerMousetrap</code>，让它保存值 <strong>100</strong>。</p>
+<pre><code>CoinsPerMousetrap : int = 100</code></pre>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/0028dc26-945d-44e2-88e0-0a77a1ab606b?resizing_type=fit" alt="原文示意图6：用常量保存捕鼠夹价格示例" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/0028dc26-945d-44e2-88e0-0a77a1ab606b?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>这样使用常量，会让你的代码对你和队友都更容易阅读，万一有人以后回来修改一段很久没动过的代码，也能更快看懂。</p>
+<p>当你使用<strong>命名良好的常量</strong>而不是含义不明的字面量值时，其他程序员也更容易理解你的代码。</p>
+<p>这样使用常量的另一个好处是：如果你决定修改某个值，比如捕鼠夹的价格，你只需要更新这一处常量，而不必逐个修改使用该值的每一处代码。</p>
+<p>请尽可能给常量起清晰的名字。上例中的 <code>CoinsPerMousetrap</code> 就清楚地表示：这是玩家购买一个捕鼠夹要花费的金币数量常量。</p>
+<p><strong>当某个值不会改变时，就用常量来存储它。</strong></p>
+<h3>为变量赋值</h3>
+<p>与常量不同，变量的值可以在程序运行时改变。</p>
+<p>常量让你免于一遍遍输入同一个值，那么使用变量有什么好处呢？</p>
+<p>嗯，有时候你希望某个值能根据其他输入而改变。</p>
+<p>例如，当玩家购买捕鼠夹时，你可以用下面这行代码，从玩家拥有的金币总数中减去购买捕鼠夹花费的金币数：</p>
+<pre><code>set Coins = Coins - CoinsPerMousetrap</code></pre>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/810f6fff-5a2a-4448-ab97-ef27e8be6a99?resizing_type=fit" alt="原文示意图7：用 set 更新变量值示例" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/810f6fff-5a2a-4448-ab97-ef27e8be6a99?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>我们来逐段拆解这行代码：</p>
+<p>第一部分 <code>set</code> 是 Verse（Verse）内置的<strong>关键字（keyword）</strong>。<code>set</code> 关键字可以用来改变变量的值，所以这行代码的意思是：把 <code>Coins</code> 改为 <code>Coins</code> 减去 <code>CoinsPerMousetrap</code> 之后的值。</p>
+<p>这种用 <code>set</code> 改变值的操作只能用于变量，不能用于常量。</p>
+<p>这里的 <code>Coins</code> 和 <code>CoinsPerMousetrap</code> 都是程序中已存在的<strong>表达式（expression）</strong>的<strong>标识符（identifier）</strong>。</p>
+<h2 id="sec-3">小结</h2>
+<ul>
+<li><strong>变量（variable）</strong>和<strong>常量（constant）</strong>都用于<strong>存储值</strong>。</li>
+<li>两者的主要区别在于：常量的值在程序运行时不能改变，而变量的值可以改变。</li>
+<li>变量和常量都是表达式，在<strong>求值（evaluate）</strong>时会<strong>产生结果</strong>。</li>
+<li>变量和常量需要在 Verse（Verse）中<strong>声明（declare）</strong>：为该表达式指定唯一名称即<strong>标识符（identifier）</strong>、<strong>类型（type）</strong>和<strong>值（value）</strong>。</li>
+<li>给表达式设置初始值时，称为<strong>初始化（initialization）</strong>。</li>
+</ul>
+<h2 id="sec-4">练习时间！</h2>
+<ul>
+<li><a href="basics-of-writing-code-3-practice-time-in-verse.html">第 3 课：练习时间！（Lesson 3: Practice Time!）练习使用常量和变量。</a></li>
+<li><a href="https://dev.epicgames.com/community/search?query=verse" target="_blank" rel="noopener">verse</a></li>
+<li><a href="https://dev.epicgames.com/community/search?query=variables" target="_blank" rel="noopener">variables</a></li>
+<li><a href="https://dev.epicgames.com/community/search?query=constants" target="_blank" rel="noopener">constants</a></li>
+<li><a href="https://dev.epicgames.com/community/search?query=language" target="_blank" rel="noopener">language</a></li>
+<li><a href="https://dev.epicgames.com/community/search?query=type" target="_blank" rel="noopener">type</a></li>
+<li><a href="https://dev.epicgames.com/community/search?query=mutable" target="_blank" rel="noopener">mutable</a></li>
+<li><a href="https://dev.epicgames.com/community/search?query=immutable" target="_blank" rel="noopener">immutable</a></li>
+<li><a href="https://dev.epicgames.com/community/search?query=value" target="_blank" rel="noopener">value</a></li>
+<li><a href="https://dev.epicgames.com/community/search?query=syntax" target="_blank" rel="noopener">syntax</a></li>
+<li><a href="https://dev.epicgames.com/community/search?query=identifier" target="_blank" rel="noopener">identifier</a></li>
+<li><a href="https://dev.epicgames.com/community/search?query=declaring" target="_blank" rel="noopener">declaring</a></li>
+<li><a href="https://dev.epicgames.com/community/search?query=initialization" target="_blank" rel="noopener">initialization</a></li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/15eba8e2-7ca7-47f8-941a-0c6e0f17b5f4?resizing_type=fit&width=640&height=640" alt="第 3 课：练习时间示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/15eba8e2-7ca7-47f8-941a-0c6e0f17b5f4?resizing_type=fit&width=640&height=640" target="_blank" rel="noopener">查看原图</a></div></figure>
+<hr>
+<p><strong>提问并帮助同伴：<a href="https://forums.unrealengine.com/categories?tag=fortnite" target="_blank" rel="noopener">开发者论坛（Developer Forums）</a></strong></p>
+<p><strong>编写你自己的教程或阅读他人的教程：<a href="https://dev.epicgames.com/community/fortnite/learning" target="_blank" rel="noopener">学习资料库（Learning Library）</a></strong></p>
+<div class="pager"><a href="29-learn-the-basics-of-writing-code-in-verse.html"><small>← 返回父教程</small>从零学习 Verse 代码基础</a><a href="sub-index.html"><small>子教程索引 →</small>全部子教程</a></div>
+</article><nav class="doc-toc" aria-label="本页内容"><b>本页内容</b><a href="#sec-1">可变与不可变</a><a href="#sec-2">变量与常量</a><a href="#sec-3">小结</a><a href="#sec-4">练习时间！</a></nav></div>
+</div></div>
+</div>
+<footer class="edc-footer"><div class="inner"><img src="../assets/logo-epic.svg" alt="Epic Games"><span>Fortnite 文档中文镜像 · UE教程/ · 本地打开 index.html 阅读 · 翻译整理自 Epic 官方文档，仅供学习交流</span></div></footer>
+</body>
+</html>

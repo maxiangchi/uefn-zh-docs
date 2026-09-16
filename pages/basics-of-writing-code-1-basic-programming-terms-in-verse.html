@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>写代码基础 1：Verse 基本编程术语 | Fortnite 文档中文镜像</title>
+<link rel="stylesheet" href="../assets/epic.css">
+<link rel="stylesheet" href="../assets/patch.css">
+<link rel="icon" href="../assets/logo-epic.svg">
+</head>
+<body class="theme-fortnite">
+<div class="edc-topbar"><div class="edc-topbar-inner"><img class="edc-logo" src="../assets/logo-epic.svg" alt="Epic Games"><span class="edc-brand">Epic Games <b>开发者社区</b></span><span class="edc-nav"><a href="../index.html">文档首页</a><a href="sub-index.html">子教程索引</a><a href="https://dev.epicgames.com/documentation/fortnite/basics-of-writing-code-1-basic-programming-terms-in-verse" target="_blank" rel="noopener">英文原文</a></span></div></div>
+<div class="site-container">
+<aside class="site-nav"><div class="documents-tree"><nav><ul class="contents-table">
+<div class="tree-sec">A最新动态</div><a class="tree-link" href="01-42-00-fortnite-ecosystem-updates-and-release-notes.html">01. 42.00 生态系统更新与发行说明</a><a class="tree-link" href="02-custom-items-and-inventory-overview-in-fortnite.html">02. 自定义物品与背包总览</a><a class="tree-link" href="03-in-island-transactions-in-fortnite.html">03. 岛内交易</a><a class="tree-link" href="04-mobile-development-in-fortnite.html">04. 移动端开发</a><a class="tree-link" href="05-inputs-in-fortnite.html">05. 输入系统</a><a class="tree-link" href="06-ability-system-in-unreal-editor-for-fortnite.html">06. 能力系统 Ability System</a><a class="tree-link" href="07-partybased-gameplay-using-the-social-synergy-api-in-fortnite.html">07. 社交协同 API 与小队玩法</a><a class="tree-link" href="08-scene-graph-in-unreal-editor-for-fortnite.html">08. 场景图 Scene Graph</a><div class="tree-sec">B入门</div><a class="tree-link" href="09-build-your-first-island-in-fortnite.html">09. 构建你的第一个岛屿</a><a class="tree-link" href="10-onboarding-guide-to-programming-with-verse-in-unreal-editor-for-fortnite.html">10. Verse 编程入门指南</a><a class="tree-link" href="11-building-basics-in-fortnite-creative.html">11. 建造基础</a><div class="tree-sec">C品牌合集</div><a class="tree-link" href="12-star-wars-islands-in-fortnite.html">12. 星球大战™岛屿</a><a class="tree-link" href="13-kpop-demon-hunters-islands-in-fortnite.html">13. KPop 猎魔团岛屿</a><a class="tree-link" href="14-building-lego-islands-in-fortnite.html">14. 乐高®岛屿</a><a class="tree-link" href="15-the-walking-dead-universe-islands-in-unreal-editor-for-fortnite.html">15. 行尸走肉宇宙岛屿</a><a class="tree-link" href="16-teenage-mutant-ninja-turtle-islands-in-unreal-editor-for-fortnite.html">16. 忍者神龟岛屿</a><a class="tree-link" href="17-squid-game-islands-in-fortnite.html">17. 鱿鱼游戏岛屿</a><div class="tree-sec">D开发者成功</div><a class="tree-link" href="18-using-creator-portal-in-fortnite-creative.html">18. 使用创作者门户</a><a class="tree-link" href="19-island-moderation-and-guidelines-in-fortnite-creative.html">19. 岛屿审核与准则</a><div class="tree-sec">E协作</div><a class="tree-link" href="20-creating-teams-in-creator-portal-in-unreal-editor-for-fortnite.html">20. 在创作者门户创建团队</a><a class="tree-link" href="21-adding-playtesters-in-fortnite-creative.html">21. 添加试玩测试员</a><a class="tree-link" href="22-playtesting-your-island-in-unreal-editor-for-fortnite.html">22. 试玩测试你的岛屿</a><a class="tree-link" href="23-collaborating-in-unreal-editor-for-fortnite.html">23. 在 UEFN 中协作</a><a class="tree-link" href="24-lore-version-control-in-unreal-editor-for-fortnite.html">24. Lore 版本控制</a><a class="tree-link" href="25-conflicts-in-lore-version-control-in-unreal-editor-for-fortnite.html">25. Lore 中的冲突</a><a class="tree-link" href="26-version-history-and-conflict-resolution-in-unreal-editor-for-fortnite.html">26. 分支历史与冲突解决</a><div class="tree-sec">F游戏示例</div><a class="tree-link" href="27-build-a-game-in-unreal-editor-for-fortnite.html">27. 构建一款游戏</a><a class="tree-link" href="28-unreal-editor-for-fortnite-starter-templates.html">28. UEFN 新手模板</a><div class="tree-sec">G Verse</div><a class="tree-link active" href="29-learn-the-basics-of-writing-code-in-verse.html">29. 从零学习 Verse 代码基础</a><div class="tree-sec">H专注领域</div><a class="tree-link" href="30-lighting-in-unreal-editor-for-fortnite.html">30. 灯光</a><a class="tree-link" href="31-animation-and-cinematics-in-unreal-editor-for-fortnite.html">31. 动画与过场动画</a><a class="tree-link" href="32-modeling-in-unreal-editor-for-fortnite.html">32. 建模</a><a class="tree-link" href="33-materials-in-unreal-editor-for-fortnite.html">33. 材质</a><a class="tree-link" href="34-environments-and-landscapes-in-unreal-editor-for-fortnite.html">34. 环境与地形</a><a class="tree-link" href="35-audio-in-unreal-editor-for-fortnite.html">35. 音频</a><a class="tree-link" href="36-visual-effects-in-unreal-editor-for-fortnite.html">36. 视觉特效</a>
+</ul></nav></div></aside>
+<div class="page-content"><div class="page-document has-theme-bg">
+<header class="section-page-header"><nav><ol class="breadcrumb is-shrinkable"><li class="breadcrumb-item is-root"><img src="../assets/logo-epic.svg" alt="Epic Games"><a href="../index.html">Developer</a></li><li class="breadcrumb-item"><a href="../index.html">Fortnite 文档</a></li><li class="breadcrumb-item"><a href="29-learn-the-basics-of-writing-code-in-verse.html">从零学习 Verse 代码基础</a></li><li class="breadcrumb-item active" aria-current="page"><span class="text-truncate">写代码基础 1：Verse 基本编程术语</span></li></ol></nav><h1>写代码基础 1：Verse 基本编程术语</h1><p class="text-secondary mb-0">学会用 UEFN 进入 Verse 之后，下一步是掌握基本编程术语。本课从最基础的概念讲起：程序、Verse、编译、算法、源代码与机器代码、错误与 Bug，帮你为后续课程打好语境与连贯基础。</p><p class="doc-meta">英文原标题：Basics of Writing Code 1 Basic Programming Terms in Verse · <a href="https://dev.epicgames.com/documentation/fortnite/basics-of-writing-code-1-basic-programming-terms-in-verse" target="_blank" rel="noopener">查看英文原文</a> · 社区翻译镜像，仅供学习</p></header>
+<div class="doc-columns"><article class="doc-article">
+
+<h3>前置主题</h3>
+<p>要理解并使用本页内容，请确保熟悉以下主题：</p>
+<ul><li><a href="modify-and-run-your-first-verse-program-in-unreal-editor-for-fortnite.html">修改并运行你的第一个 Verse 程序（Modify and Run Your First Verse Program）</a></li></ul>
+<p>既然你已经知道如何用 UEFN 进入 Verse，下一步是确保你对基本编程术语有良好的理解。</p>
+<p>本课从非常基础的内容讲起。即使你已经知道这些术语，也请花一分钟在这里复习。有时后面的课程会引用前面的内容，因此保持课程之间的语境与连贯性是好事。</p>
+<h2 id="sec-1">什么是程序</h2>
+<p><strong>程序（program）</strong>是一组指令，告诉计算机如何做事。程序告诉计算机如何<strong>接收输入（receive input）</strong>（进入的信息）与<strong>返回输出（return output）</strong>（出去的信息）。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/27309cd8-c751-401e-8747-bdbdda51ad70?resizing_type=fit" alt="程序输入与输出原文示意图1" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/27309cd8-c751-401e-8747-bdbdda51ad70?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h3>Verse</h3>
+<p><strong>Verse</strong> 是一种为电子游戏与模拟而设计的编程语言，非常适合游戏专属需求。</p>
+<h3>Verse 程序做什么</h3>
+<p><strong>Verse 程序解决问题</strong>。</p>
+<p>但计算机非常较真，就像与灯神签契约，你得到的东西与你要求的分毫不差，<strong>分毫不差</strong>。</p>
+<p>当程序员<strong>想当然</strong>地假设会发生什么，而没有给出精确指令时，就会出错。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/e0e76ab0-4675-4a07-ac9e-93c72e6f02de?resizing_type=fit" alt="精确指令原文示意图2" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/e0e76ab0-4675-4a07-ac9e-93c72e6f02de?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h3>编译</h3>
+<p>程序写出来是为了让<strong>人类理解</strong>，但计算机需要把程序翻译成<strong>计算机理解</strong>的东西。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/9bc20ad2-1c2f-483c-a992-30a8e0724c05?resizing_type=fit" alt="编译概念原文示意图3" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/9bc20ad2-1c2f-483c-a992-30a8e0724c05?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>这由<strong>编译器（compiler）</strong>完成，它将程序从<strong>人类可读语言</strong>转换（<strong>编译（compiles）</strong>）为<strong>机器语言</strong>。</p>
+<h3>算法</h3>
+<p><strong>算法（algorithm）</strong>是为解决问题或完成任务而编写的一组指令，可以把它看作程序应如何工作的模型。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/4dba02c2-d2a9-46c7-bb3b-664a45fe6d38?resizing_type=fit" alt="算法概念原文示意图4" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/4dba02c2-d2a9-46c7-bb3b-664a45fe6d38?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>到喂猫时间了？喂猫算法可能是：</p>
+<ul>
+<li>从架子上拿一罐猫粮。</li>
+<li>拿起猫碗放在台面上。</li>
+<li>在碗旁放一把勺子。</li>
+<li>打开猫粮罐头。</li>
+<li>用勺子盛到猫碗里。</li>
+<li>把碗放到猫够得着的地方。</li>
+<li>等待 12 小时，然后重复。</li>
+</ul>
+<p>这些步骤若顺序错乱，可能导致猫吃不上饭。按顺序执行，就能得到一只开心吃饱的猫。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/213ae0d4-342b-4947-abfa-6d55398c456b?resizing_type=fit" alt="猫吃上饭了原文示意图5" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/213ae0d4-342b-4947-abfa-6d55398c456b?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p><em>猫吃上饭了！</em></p>
+<p>当算法重复执行时，就称为<strong>循环（loop）</strong>。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/c0a1f8ea-a1b7-4fc8-a547-d4e18073a754?resizing_type=fit" alt="循环概念原文示意图6" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/c0a1f8ea-a1b7-4fc8-a547-d4e18073a754?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>猫每天喂两次，天天如此。这个过程处于循环中，会一直运行直到被打断。（如果过程失败，猫会提交一份报告——一份大声的口头报告。）</p>
+<p>在 Fortnite 创意模式中，当你用设备搭建游戏机制时，就是在搭建算法。玩家如何达成游戏目标？哪个设备推进 gameplay？哪个设备阻挡？如果用错设备或顺序用错会怎样？</p>
+<p>Verse 编程是将算法转换为计算机能理解的指令、创建游戏机制的好方法。一旦你“学会歌词”，曲调就会又快又有趣——你还有机会创造 Fortnite 创意模式中没有的机制！</p>
+<h3>测试算法</h3>
+<p>渴了吗？看看算法在现实生活中如何运作。</p>
+<ul>
+<li>为泡一杯好茶或咖啡写出算法。</li>
+<li>严格按你的算法冲泡这杯饮品。</li>
+<li>茶泡好尝过之后，好喝吗？</li>
+<li>如果好喝，你的算法就完成了。</li>
+<li>如果不好喝，你需要调试步骤，找出遗漏或做错的步骤，然后</li>
+<li><strong>迭代（Iterate）</strong>（带着一处或多处设计改动重复）一次又一次，直到得到完美的一杯。</li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/93a40ffd-c39f-48fd-90aa-918f8c63181f?resizing_type=fit" alt="测试算法原文示意图7" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/93a40ffd-c39f-48fd-90aa-918f8c63181f?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h2 id="sec-2">源代码与机器代码</h2>
+<p><strong>源代码（Source code）</strong>（简称<strong>代码（code）</strong>）是程序员编写的程序。之所以叫<strong>源代码</strong>，是因为它是程序被编写时的版本——是程序的<strong>源头</strong>。<strong>机器代码（Machine code）</strong>是程序被<strong>编译</strong>为计算机能理解的东西之后的结果。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/062ee5a4-9bc4-436a-9b1c-818b9235b393?resizing_type=fit" alt="源代码与机器代码原文示意图8" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/062ee5a4-9bc4-436a-9b1c-818b9235b393?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p><strong>代码</strong>与<strong>程序</strong>可互换使用，<strong>程序员</strong>有时也被称为<strong>码农（coders）</strong>。</p>
+<h3>执行</h3>
+<p>当计算机执行程序中的步骤时，就是在<strong>运行（runs）</strong>或<strong>执行（executes）</strong>该程序。代码未按预期执行，或编译失败，说明代码中有<strong>错误（errors）</strong>。</p>
+<h2 id="sec-3">代码中的错误</h2>
+<p>代码中的错误有两种表现方式：</p>
+<ul>
+<li><strong>编译器错误（Compiler errors）</strong>——代码无法编译为计算机能理解的语言。</li>
+<li><strong>Bug</strong>——代码编译成功，但程序运行不符合预期。</li>
+</ul>
+<h3>编译器错误</h3>
+<p><strong>编译器错误</strong>最常见的原因是不正确的<strong>语法（syntax）</strong>。（我们稍后会谈 <strong>Bug</strong>。）每种编程语言都遵循一套精确的规则，称为<strong>语法</strong>。（这些规则因程序而异，但本系列课程聚焦 Verse 语法。）</p>
+<p><strong>语法是词语与符号的组合方式</strong>，让编译器能理解并编译程序员的指令。</p>
+<p>语法涵盖代码中可用的词语与符号，以及它们必须如何排列，编译器才能成功编译。</p>
+<p>在英语中，<strong>主语（名词）| 谓语</strong>是标准语法，主语在前、谓语在后。句子 <strong>"Kitty sleeps"</strong> 符合这些语法规则。但如果你说 <strong>"Sleeps kitty"</strong>，别人可能会疑惑你在说什么。在编程中更是如此，还记得本课开头的灯神契约吗？</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/2898feef-b079-443e-b70a-370a27627522?resizing_type=fit" alt="灯神契约原文示意图9" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/2898feef-b079-443e-b70a-370a27627522?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p><em>还记得灯神契约吗？</em></p>
+<p><strong>Verse 代码区分大小写。</strong>意思是该大写而没有大写，或不该大写却大写了，Verse 都会将其视为语法错误，代码无法编译。空格的用法也必须与语法所示一致，这一点同样重要。</p>
+<table><thead><tr><th>语法正确的表达式</th><th>语法错误的同一表达式</th></tr></thead><tbody>
+<tr><td><code>Print("Hello, world!")</code></td><td><code>Print("Hello, World!"</code></td></tr>
+</tbody></table>
+<p>第二个示例中有编译器错误，因为缺少右括号 <code>)</code>。</p>
+<p>语法错误属于<strong>编译器错误</strong>，因为它们阻止代码成功编译。</p>
+<h3>Bug</h3>
+<p>Bug 是程序能执行，但做了奇怪或意外的事。</p>
+<p>语法关乎词语与符号及其排列方式，而<strong>语义（semantics）</strong>关乎这些代码行实际<strong>意味着</strong>什么。</p>
+<p>例如在英语中，基本句子由主语与谓语构成，主语是<strong>谁或什么</strong>，谓语是主语（名词）在<strong>做什么或是什么状态</strong>。</p>
+<p><strong>主语（名词）| 谓语</strong>（语法）并没有传达 <strong>Kitty sleeps</strong>（语义）的含义。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/93c1729d-751b-40e5-a67b-baa6c6402d98?resizing_type=fit" alt="语义概念原文示意图10" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/93c1729d-751b-40e5-a67b-baa6c6402d98?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>代码<strong>含义</strong>上的错误会产生 <strong>Bug</strong>。</p>
+<table><thead><tr><th>正确的表达式</th><th>有 Bug 的同一表达式</th></tr></thead><tbody>
+<tr><td><code># If at least one mouse is caught, you win if (MiceCaught &gt; 0): Print("Win!") else: Print("Lose!")</code></td><td><code># If at least one mouse is caught, you win if (MiceCaught &gt; 1): Print("Win!") else: Print("Lose!")</code></td></tr>
+</tbody></table>
+<p>第二个示例中有 Bug，因为 <code>MiceCaught</code> 必须大于 <code>1</code> 才会执行 <code>Print("Win!")</code> 表达式。</p>
+<p>另一种理解方式是看程序执行时发生了什么，结果符合预期吗？还是出问题了？</p>
+<p>在上面右侧的示例中，玩家抓住一只老鼠却不能获胜，因为代码要求抓住大于一只老鼠才能获胜。如果只有一只老鼠可抓，就永远达不成胜利条件。因此程序能正常编译，结果却不是你（或玩家）想要的。</p>
+<h2 id="sec-4">总结</h2>
+<ul>
+<li><strong>程序</strong>通过确定如何<strong>输入</strong>与<strong>输出</strong>信息，告诉计算机如何做事。</li>
+<li>计算机非常<strong>较真</strong>，你告诉它做什么它就精确执行——即使你告诉错了。</li>
+<li>程序必须从人类语言<strong>编译</strong>为计算机语言。</li>
+<li><strong>算法</strong>是一种模型，展示程序应如何工作。</li>
+<li><strong>源代码</strong>是人类可读写的东西，<strong>机器代码</strong>是计算机能理解并<strong>执行</strong>的东西。</li>
+<li><strong>语义</strong>是代码的含义。</li>
+<li><strong>语法</strong>是编写代码的规则集。</li>
+<li><strong>编译器错误</strong>是阻止程序编译的错误。</li>
+<li><strong>Bug</strong>是代码编译成功，但程序运行不符合预期的情况。</li>
+</ul>
+<h2 id="sec-5">练习时间！</h2>
+<ul>
+<li><a href="basics-of-writing-code-1-practice-time-in-verse.html">第 1 课：练习时间！练习编写算法，直到熟练掌握其运作方式。</a></li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/c06998da-abd6-436c-aa93-21e70e2a26fe?resizing_type=fit&width=640&height=640" alt="第 1 课：练习时间！" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/c06998da-abd6-436c-aa93-21e70e2a26fe?resizing_type=fit&width=640&height=640" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>标签：verse、conditionals、language、program、algorithm、compiler、execution</p>
+<div class="block-callout">在<a href="https://forums.unrealengine.com/categories?tag=fortnite" target="_blank" rel="noopener">开发者论坛（Developer Forums）</a>提问并帮助同行。在<a href="https://dev.epicgames.com/community/fortnite/learning" target="_blank" rel="noopener">学习库（Learning Library）</a>编写自己的教程或阅读他人的教程。</div>
+
+<div class="pager"><a href="29-learn-the-basics-of-writing-code-in-verse.html"><small>← 返回父教程</small>从零学习 Verse 代码基础</a><a href="sub-index.html"><small>子教程索引 →</small>全部子教程</a></div>
+</article><nav class="doc-toc" aria-label="本页内容"><b>本页内容</b><a href="#sec-1">什么是程序</a><a href="#sec-2">源代码与机器代码</a><a href="#sec-3">代码中的错误</a><a href="#sec-4">总结</a><a href="#sec-5">练习时间！</a></nav></div>
+</div></div>
+</div>
+<footer class="edc-footer"><div class="inner"><img src="../assets/logo-epic.svg" alt="Epic Games"><span>Fortnite 文档中文镜像 · UE教程/ · 本地打开 index.html 阅读 · 翻译整理自 Epic 官方文档，仅供学习交流</span></div></footer>
+</body>
+</html>

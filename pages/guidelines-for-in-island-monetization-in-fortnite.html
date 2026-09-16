@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>岛内变现指南 | Fortnite 文档中文镜像</title>
+<link rel="stylesheet" href="../assets/epic.css">
+<link rel="stylesheet" href="../assets/patch.css">
+<link rel="icon" href="../assets/logo-epic.svg">
+</head>
+<body class="theme-fortnite">
+<div class="edc-topbar"><div class="edc-topbar-inner"><img class="edc-logo" src="../assets/logo-epic.svg" alt="Epic Games"><span class="edc-brand">Epic Games <b>开发者社区</b></span><span class="edc-nav"><a href="../index.html">文档首页</a><a href="sub-index.html">子教程索引</a><a href="https://dev.epicgames.com/documentation/fortnite/guidelines-for-in-island-monetization-in-fortnite" target="_blank" rel="noopener">英文原文</a></span></div></div>
+<div class="site-container">
+<aside class="site-nav"><div class="documents-tree"><nav><ul class="contents-table">
+<div class="tree-sec">A · 最新动态</div>
+<a class="tree-link" href="01-42-00-fortnite-ecosystem-updates-and-release-notes.html">01. 42.00 生态系统更新与发行说明</a>
+<a class="tree-link" href="02-custom-items-and-inventory-overview-in-fortnite.html">02. 自定义物品与背包总览</a>
+<a class="tree-link active" href="03-in-island-transactions-in-fortnite.html">03. 岛内交易</a>
+<a class="tree-link" href="04-mobile-development-in-fortnite.html">04. 移动端开发</a>
+<a class="tree-link" href="05-inputs-in-fortnite.html">05. 输入系统</a>
+<a class="tree-link" href="06-ability-system-in-unreal-editor-for-fortnite.html">06. 能力系统 Ability System</a>
+<a class="tree-link" href="07-partybased-gameplay-using-the-social-synergy-api-in-fortnite.html">07. 社交协同 API 与小队玩法</a>
+<a class="tree-link" href="08-scene-graph-in-unreal-editor-for-fortnite.html">08. 场景图 Scene Graph</a>
+<div class="tree-sec">B · 入门</div>
+<a class="tree-link" href="09-build-your-first-island-in-fortnite.html">09. 构建你的第一个岛屿</a>
+<a class="tree-link" href="10-onboarding-guide-to-programming-with-verse-in-unreal-editor-for-fortnite.html">10. Verse 编程入门指南</a>
+<a class="tree-link" href="11-building-basics-in-fortnite-creative.html">11. 建造基础</a>
+<div class="tree-sec">C · 品牌合集</div>
+<a class="tree-link" href="12-star-wars-islands-in-fortnite.html">12. 星球大战™岛屿</a>
+<a class="tree-link" href="13-kpop-demon-hunters-islands-in-fortnite.html">13. KPop 猎魔团岛屿</a>
+<a class="tree-link" href="14-building-lego-islands-in-fortnite.html">14. 乐高®岛屿</a>
+<a class="tree-link" href="15-the-walking-dead-universe-islands-in-unreal-editor-for-fortnite.html">15. 行尸走肉宇宙岛屿</a>
+<a class="tree-link" href="16-teenage-mutant-ninja-turtle-islands-in-unreal-editor-for-fortnite.html">16. 忍者神龟岛屿</a>
+<a class="tree-link" href="17-squid-game-islands-in-fortnite.html">17. 鱿鱼游戏岛屿</a>
+<div class="tree-sec">D · 开发者成功</div>
+<a class="tree-link" href="18-using-creator-portal-in-fortnite-creative.html">18. 使用创作者门户</a>
+<a class="tree-link" href="19-island-moderation-and-guidelines-in-fortnite-creative.html">19. 岛屿审核与准则</a>
+<div class="tree-sec">E · 协作</div>
+<a class="tree-link" href="20-creating-teams-in-creator-portal-in-unreal-editor-for-fortnite.html">20. 在创作者门户创建团队</a>
+<a class="tree-link" href="21-adding-playtesters-in-fortnite-creative.html">21. 添加试玩测试员</a>
+<a class="tree-link" href="22-playtesting-your-island-in-unreal-editor-for-fortnite.html">22. 试玩测试你的岛屿</a>
+<a class="tree-link" href="23-collaborating-in-unreal-editor-for-fortnite.html">23. 在 UEFN 中协作</a>
+<a class="tree-link" href="24-lore-version-control-in-unreal-editor-for-fortnite.html">24. Lore 版本控制</a>
+<a class="tree-link" href="25-conflicts-in-lore-version-control-in-unreal-editor-for-fortnite.html">25. Lore 中的冲突</a>
+<a class="tree-link" href="26-version-history-and-conflict-resolution-in-unreal-editor-for-fortnite.html">26. 分支历史与冲突解决</a>
+<div class="tree-sec">F · 游戏示例</div>
+<a class="tree-link" href="27-build-a-game-in-unreal-editor-for-fortnite.html">27. 构建一款游戏</a>
+<a class="tree-link" href="28-unreal-editor-for-fortnite-starter-templates.html">28. UEFN 新手模板</a>
+<div class="tree-sec">G · Verse</div>
+<a class="tree-link" href="29-learn-the-basics-of-writing-code-in-verse.html">29. 从零学习 Verse 代码基础</a>
+<div class="tree-sec">H · 专注领域</div>
+<a class="tree-link" href="30-lighting-in-unreal-editor-for-fortnite.html">30. 灯光</a>
+<a class="tree-link" href="31-animation-and-cinematics-in-unreal-editor-for-fortnite.html">31. 动画与过场动画</a>
+<a class="tree-link" href="32-modeling-in-unreal-editor-for-fortnite.html">32. 建模</a>
+<a class="tree-link" href="33-materials-in-unreal-editor-for-fortnite.html">33. 材质</a>
+<a class="tree-link" href="34-environments-and-landscapes-in-unreal-editor-for-fortnite.html">34. 环境与地形</a>
+<a class="tree-link" href="35-audio-in-unreal-editor-for-fortnite.html">35. 音频</a>
+<a class="tree-link" href="36-visual-effects-in-unreal-editor-for-fortnite.html">36. 视觉特效</a>
+</ul></nav></div></aside>
+<div class="page-content"><div class="page-document has-theme-bg">
+<header class="section-page-header"><nav><ol class="breadcrumb is-shrinkable"><li class="breadcrumb-item is-root"><img src="../assets/logo-epic.svg" alt="Epic Games"><a href="../index.html">Developer</a></li><li class="breadcrumb-item"><a href="../index.html">Fortnite 文档</a></li><li class="breadcrumb-item"><a href="03-in-island-transactions-in-fortnite.html">岛内交易</a></li><li class="breadcrumb-item active" aria-current="page"><span class="text-truncate">岛内变现指南</span></li></ol></nav><h1>岛内变现指南</h1><p class="text-secondary mb-0">本页包含与《Fortnite 开发者规则》政策相关的内容。在提交岛屿之前，请务必花时间阅读相关规则与指南，以免在审核中被驳回。</p><p class="doc-meta">英文原标题：Guidelines for In-Island Monetization in Fortnite · <a href="https://dev.epicgames.com/documentation/fortnite/guidelines-for-in-island-monetization-in-fortnite" target="_blank" rel="noopener">查看英文原文</a> · 社区翻译镜像，仅供学习</p></header>
+<div class="doc-columns"><article class="doc-article">
+<p>本页包含与<a href="https://legal.epicgames.com/fortnite/developer-rules" target="_blank" rel="noopener">《Fortnite 开发者规则》(Fortnite Developer Rules)</a>政策相关的内容。在提交岛屿之前，请务必花时间阅读相关规则与指南。如果在审核中发现违反这些规则，你的岛屿将被驳回。</p>
+<h2 id="sec-1">允许与禁止事项</h2>
+<p>玩家期望某些类别的物品在整个 Fortnite 中通用，以下指南正是为了维护这一预期。</p>
+<h3>服装(Outfits)</h3>
+<h4>❌ 不得提供角色服装。</h4>
+<p>不得以 V-Bucks，或以 V-Bucks 购买的权益为代价，提供服装，或提供单独或组合起来改变角色整体外观、达到服装效果的物品。</p>
+<h3>表情动作(Emotes)</h3>
+<h4>❌ 不得提供表情动作。</h4>
+<p>不得以 V-Bucks，或以 V-Bucks 购买的权益为代价，提供由玩家触发的角色动画或舞蹈。</p>
+<h3>载具(Vehicles)</h3>
+<h4>❌ 不得提供汽车、卡车或巴士。</h4>
+<p>不得以 V-Bucks，或以 V-Bucks 购买的权益为代价，提供汽车、卡车或巴士。</p>
+<h2 id="sec-2">其他物品</h2>
+<h4>✅ 在 Fortnite 物品商店所售类别（上文所述服装、表情动作、汽车、卡车、巴士除外）的相似类别中，只要具有玩法价值且非纯装饰，你可以提供相应物品。</h4>
+<p>必须在商品描述中准确描述玩法价值，并将这些商品的<code>ConsequentialToGameplay</code>字段设为 true。</p>
+<p>无论是以 V-Bucks 兑换，还是以 V-Bucks 购买的权益兑换，均适用本条。</p>
+<p>以下是合规示例（须在商品描述中描述玩法价值，并将<code>ConsequentialToGameplay</code>字段设为 true）：</p>
+<ul>
+<li>可越野行驶的轮胎。</li>
+<li>可飞行的喷气背包。</li>
+<li>落地免摔伤的弹簧靴。</li>
+<li>射中一切皆成冰的“寒霜枪”。</li>
+<li>伤害高 25% 的龙形枪。</li>
+<li>为此前未获得泵动霰弹枪的玩家解锁该武器。</li>
+</ul>
+<h4>✅ 你可以提供 Fortnite 物品商店未售类别的装饰性物品。</h4>
+<p>你可以提供商店中没有的全新类型物品，例如：</p>
+<ul>
+<li>帽子或围巾</li>
+<li>房屋装饰</li>
+<li>飞机</li>
+<li>玩家可在岛上展示的“支持者徽章”。</li>
+</ul>
+<h4>❌ 不得提供无任何回报的岛内交易。</h4>
+<p>以下是不允许的示例：</p>
+<ul>
+<li>索取 V-Bucks 小费而不给玩家任何回报。</li>
+</ul>
+<h4>❌ 不得提供直接或间接影响奖品转盘的岛内交易。</h4>
+<p>以下示例均不允许：</p>
+<ul>
+<li>可改善奖品转盘结果的幸运加成。</li>
+<li>可用于购买转盘机会的游戏内内容。</li>
+<li>转盘的任何转动机会，如单次转动、额外转动或转动捆绑包。</li>
+</ul>
+<h3>正确设置权益</h3>
+<h4>✅ 请正确标记能让玩家在岛屿中获得实质优势的权益。</h4>
+<p>如果你出售的物品能让玩家在岛屿中获得有意义的优势，必须将<code>ConsequentialToGameplay</code>字段设为<code>true</code>。更多信息请参阅<a href="creating-items-and-offers-in-fortnite.html#consequential-to-gameplay">对玩法有实质影响</a>一节。</p>
+<p>以下示例应标记为<code>ConsequentialToGameplay</code>：</p>
+<ul>
+<li>花卉生长速度翻倍的肥料。</li>
+<li>付费墙后区域的访问权，其中武器伤害更高。</li>
+</ul>
+<h4>✅ 请正确标记可使用或消耗的权益。</h4>
+<p>如果权益可被玩家使用或消耗，必须将<code>Consumable</code>字段设为<code>true</code>。更多信息请参阅<a href="creating-items-and-offers-in-fortnite.html#creating-a-consumable-entitlement-in-verse">创建消耗型权益</a>一节。</p>
+<p>示例如下：</p>
+<ul>
+<li>为玩家回血的药水。</li>
+<li>可种出玉米植株的种子。</li>
+<li>活动体验门票。</li>
+</ul>
+<p>如果你有消耗型物品，必须调用<code>ConsumeEntitlement</code>使其被消耗，以确保 Epic 系统留有正确记录，便于玩家寻求客服支持。</p>
+<h4>✅ 请正确标记授予付费墙后区域访问权的权益。</h4>
+<p>对于授予区域或玩法访问权的权益，必须将<code>PaidArea</code>字段设为<code>true</code>。</p>
+<p>付费区域示例包括：</p>
+<ul>
+<li>永久解锁重型机械棚的生锈钥匙。</li>
+<li>单次使用的维修覆写卡，可解锁地下维修通道。</li>
+<li>无限制进入码头珍贵货舱的海豹大师徽章。</li>
+</ul>
+<h4>✅ 请正确标记授予随机物品的权益。</h4>
+<p>如果你提供付费随机物品，必须使用相应 API，确保仅向符合条件的玩家提供。更多信息请参阅<a href="creating-items-and-offers-in-fortnite.html#paid-random-items-nbsp">付费随机物品</a>一节。</p>
+<p>示例如下：</p>
+<ul>
+<li>如果你以 V-Bucks 出售“神秘物品箱”，必须将该权益的<code>PaidRandomItem</code>字段设为<code>true</code>，并在购买前披露每种可能物品的准确数字概率。</li>
+<li>如果你以 V-Bucks 出售“幸运加成”，可提高玩家在玩法中获得随机物品的概率，必须将该权益的<code>PaidRandomItem</code>字段设为<code>true</code>，并在购买前披露每种可能物品的准确数字概率。</li>
+<li>如果你以 V-Bucks 出售只能用于开启“神秘物品箱”的钥匙，必须将该钥匙权益的<code>PaidRandomItem</code>字段设为 true，并在购买前披露神秘物品箱中每种可能物品的准确数字概率。</li>
+<li>如果你以 V-Bucks 出售可兑换多种物品（含开启“神秘物品箱”）的钥匙，必须使用<code>RestrictPaidRandomItems</code>函数，防止无付费随机物品权限的玩家使用该钥匙开启“神秘物品箱”。</li>
+</ul>
+<h4>✅ 请披露付费随机物品的准确数字概率。</h4>
+<p>如果你提供付费随机物品，必须确保玩家在购买前看到每种付费随机物品的准确数字概率。</p>
+<p>无论是以 V-Bucks 兑换随机物品，还是以 V-Bucks 购买的权益兑换，均适用本条。</p>
+<p>正确披露付费随机物品概率的方法如下：</p>
+<ul>
+<li>直接在商品描述中包含概率，或</li>
+<li>在商品描述中说明概率查看位置，并确保玩家在购买前能看到概率，或</li>
+<li>如果你出售的可兑换多种物品（含随机奖励）的内容，请在玩家获得随机奖励之前，在体验内的其他位置披露概率。</li>
+</ul>
+<h4>✅ 若商品具有限时权益，请明确披露。</h4>
+<p>你可以向玩家提供限时福利，但必须在商品中明确福利持续时间。</p>
+<p>例如：</p>
+<ul>
+<li>30 天涡轮加成（+25% 速度提升，持续 30 天）</li>
+<li>10 天机器超频许可证（10 天内机器生产效率 +100%）</li>
+</ul>
+<h3>条款与命名</h3>
+<h4>❌ 不得使用 Fortnite 物品商店术语。</h4>
+<p>玩家绝不能混淆：他们购买的装饰物品是全 Fortnite 通用，还是仅限你的岛屿使用。你提供的所有权益仅限你的岛屿使用。</p>
+<p>以下术语绝不能出现在岛内交易中：</p>
+<ul>
+<li>Aura</li>
+<li>Backbling</li>
+<li>Contrail</li>
+<li>Drift Trail</li>
+<li>Emoticon</li>
+<li>Glider</li>
+<li>Harvesting Tool</li>
+<li>Pickaxe</li>
+<li>Jam Track</li>
+<li>Kicks</li>
+<li>Sidekick</li>
+<li>Spray</li>
+<li>Wrap</li>
+<li>Outfit</li>
+<li>Emote</li>
+</ul>
+<h4>❌ 不得使用“XP”、“Experience”或“Battle Pass”。</h4>
+<p>你绝不能明示或暗示，岛屿上的购买能为玩家带来计入通行证或任务进度的全 Fortnite 通用 XP，使其在整个 Fortnite 的通行证进度更快。</p>
+<p>无论是以 V-Bucks 兑换，还是以 V-Bucks 购买的权益兑换，均适用本条。</p>
+<p>以下示例不合规：</p>
+<ul>
+<li>“Buy 5000 XP for 50 V-Bucks.”（花 50 V-Bucks 购买 5000 XP。）</li>
+<li>“Buy the [Island Name] Battle Pass.”（购买[岛屿名]战斗通行证。）</li>
+<li>“Buy this Farm Pass to progress your Battle Pass faster!”（购买农场通行证，加速你的战斗通行证进度！）</li>
+</ul>
+<h4>✅ 请使用岛屿专属的进度术语。</h4>
+<p>你可以提供自定义通行证与进度系统，但必须明确进度仅适用于提供它的岛屿。</p>
+<p>以下是清晰的进度术语示例：</p>
+<ul>
+<li>“Buy the [Island Name] Farm Pass to gain X Seed Points!”（购买[岛屿名]农场通行证，获得 X 种子点数！）</li>
+<li>“Increase your Farm Prestige by two levels!”（将你的农场声望提升两级！）</li>
+<li>将你的农场岛屿自定义进度命名为“Harvest Skill”。</li>
+</ul>
+<p class="doc-tags">标签：<a href="https://dev.epicgames.com/community/search?query=device" target="_blank" rel="noopener">设备(device)</a> · <a href="https://dev.epicgames.com/community/search?query=monetization" target="_blank" rel="noopener">变现(monetization)</a> · <a href="https://dev.epicgames.com/community/search?query=transactions" target="_blank" rel="noopener">交易(transactions)</a> · <a href="https://dev.epicgames.com/community/search?query=rules" target="_blank" rel="noopener">规则(rules)</a> · <a href="https://dev.epicgames.com/community/search?query=guidelines" target="_blank" rel="noopener">指南(guidelines)</a></p>
+<hr>
+<p><b>在开发者论坛(Developer Forums)提问并帮助同伴：</b><a href="https://forums.unrealengine.com/categories?tag=fortnite" target="_blank" rel="noopener">开发者论坛</a></p>
+<p><b>编写你自己的教程或阅读他人的教程：</b><a href="https://dev.epicgames.com/community/fortnite/learning" target="_blank" rel="noopener">学习库(Learning Library)</a></p>
+<nav class="doc-endnav"><p><b>本文小节</b></p><ul>
+<li><a href="guidelines-for-in-island-monetization-in-fortnite.html#what-is-and-is-not-allowed">允许与禁止事项</a></li>
+<li><a href="guidelines-for-in-island-monetization-in-fortnite.html#outfits">服装</a></li>
+<li><a href="guidelines-for-in-island-monetization-in-fortnite.html#%E2%9D%8Cdonotoffercharacteroutfits">❌ 不得提供角色服装</a></li>
+<li><a href="guidelines-for-in-island-monetization-in-fortnite.html#emotes">表情动作</a></li>
+<li><a href="guidelines-for-in-island-monetization-in-fortnite.html#%E2%9D%8Cdonotofferemotes">❌ 不得提供表情动作</a></li>
+<li><a href="guidelines-for-in-island-monetization-in-fortnite.html#vehicles">载具</a></li>
+<li><a href="guidelines-for-in-island-monetization-in-fortnite.html#%E2%9D%8Cdonotoffercars,trucksorbuses">❌ 不得提供汽车、卡车或巴士</a></li>
+<li><a href="guidelines-for-in-island-monetization-in-fortnite.html#other-items">其他物品</a></li>
+<li><a href="guidelines-for-in-island-monetization-in-fortnite.html#correctly-set-up-entitlements">正确设置权益</a></li>
+<li><a href="guidelines-for-in-island-monetization-in-fortnite.html#terms-and-naming">条款与命名</a></li>
+</ul></nav>
+<div class="pager"><a href="03-in-island-transactions-in-fortnite.html"><small>← 返回父教程</small>岛内交易</a><a href="sub-index.html"><small>子教程索引 →</small>全部子教程</a></div>
+</article><nav class="doc-toc" aria-label="本页内容"><b>本页内容</b><a href="#sec-1">允许与禁止事项</a><a href="#sec-2">其他物品</a></nav></div>
+</div></div>
+</div>
+<footer class="edc-footer"><div class="inner"><img src="../assets/logo-epic.svg" alt="Epic Games"><span>Fortnite 文档中文镜像 · UE教程/ · 本地打开 index.html 阅读 · 翻译整理自 Epic 官方文档，仅供学习交流</span></div></footer>
+</body>
+</html>

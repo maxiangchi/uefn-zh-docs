@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UEFN 中的建模模式（Modeling Mode） | Fortnite 文档中文镜像</title>
+<link rel="stylesheet" href="../assets/epic.css">
+<link rel="stylesheet" href="../assets/patch.css">
+<link rel="icon" href="../assets/logo-epic.svg">
+</head>
+<body class="theme-fortnite">
+<div class="edc-topbar"><div class="edc-topbar-inner"><img class="edc-logo" src="../assets/logo-epic.svg" alt="Epic Games"><span class="edc-brand">Epic Games <b>开发者社区</b></span><span class="edc-nav"><a href="../index.html">文档首页</a><a href="sub-index.html">子教程索引</a><a href="https://dev.epicgames.com/documentation/fortnite/modeling-mode-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">英文原文</a></span></div></div>
+<div class="site-container">
+<aside class="site-nav"><div class="documents-tree"><nav><ul class="contents-table">
+<div class="tree-sec">最新动态</div><a class="tree-link" href="01-42-00-fortnite-ecosystem-updates-and-release-notes.html">01. 42.00 生态系统更新与发行说明</a><a class="tree-link" href="02-custom-items-and-inventory-overview-in-fortnite.html">02. 自定义物品与背包总览</a><a class="tree-link" href="03-in-island-transactions-in-fortnite.html">03. 岛内交易</a><a class="tree-link" href="04-mobile-development-in-fortnite.html">04. 移动端开发</a><a class="tree-link" href="05-inputs-in-fortnite.html">05. 输入系统</a><a class="tree-link" href="06-ability-system-in-unreal-editor-for-fortnite.html">06. 能力系统 Ability System</a><a class="tree-link" href="07-partybased-gameplay-using-the-social-synergy-api-in-fortnite.html">07. 社交协同 API 与小队玩法</a><a class="tree-link" href="08-scene-graph-in-unreal-editor-for-fortnite.html">08. 场景图 Scene Graph</a><div class="tree-sec">入门</div><a class="tree-link" href="09-build-your-first-island-in-fortnite.html">09. 构建你的第一个岛屿</a><a class="tree-link" href="10-onboarding-guide-to-programming-with-verse-in-unreal-editor-for-fortnite.html">10. Verse 编程入门指南</a><a class="tree-link" href="11-building-basics-in-fortnite-creative.html">11. 建造基础</a><div class="tree-sec">品牌合集</div><a class="tree-link" href="12-star-wars-islands-in-fortnite.html">12. 星球大战™岛屿</a><a class="tree-link" href="13-kpop-demon-hunters-islands-in-fortnite.html">13. KPop 猎魔团岛屿</a><a class="tree-link" href="14-building-lego-islands-in-fortnite.html">14. 乐高®岛屿</a><a class="tree-link" href="15-the-walking-dead-universe-islands-in-unreal-editor-for-fortnite.html">15. 行尸走肉宇宙岛屿</a><a class="tree-link" href="16-teenage-mutant-ninja-turtle-islands-in-unreal-editor-for-fortnite.html">16. 忍者神龟岛屿</a><a class="tree-link" href="17-squid-game-islands-in-fortnite.html">17. 鱿鱼游戏岛屿</a><div class="tree-sec">开发者成功</div><a class="tree-link" href="18-using-creator-portal-in-fortnite-creative.html">18. 使用创作者门户</a><a class="tree-link" href="19-island-moderation-and-guidelines-in-fortnite-creative.html">19. 岛屿审核与准则</a><div class="tree-sec">协作</div><a class="tree-link" href="20-creating-teams-in-creator-portal-in-unreal-editor-for-fortnite.html">20. 在创作者门户创建团队</a><a class="tree-link" href="21-adding-playtesters-in-fortnite-creative.html">21. 添加试玩测试员</a><a class="tree-link" href="22-playtesting-your-island-in-unreal-editor-for-fortnite.html">22. 试玩测试你的岛屿</a><a class="tree-link" href="23-collaborating-in-unreal-editor-for-fortnite.html">23. 在 UEFN 中协作</a><a class="tree-link" href="24-lore-version-control-in-unreal-editor-for-fortnite.html">24. Lore 版本控制</a><a class="tree-link" href="25-conflicts-in-lore-version-control-in-unreal-editor-for-fortnite.html">25. Lore 中的冲突</a><a class="tree-link" href="26-version-history-and-conflict-resolution-in-unreal-editor-for-fortnite.html">26. 分支历史与冲突解决</a><div class="tree-sec">游戏示例</div><a class="tree-link" href="27-build-a-game-in-unreal-editor-for-fortnite.html">27. 构建一款游戏</a><a class="tree-link" href="28-unreal-editor-for-fortnite-starter-templates.html">28. UEFN 新手模板</a><div class="tree-sec">Verse</div><a class="tree-link" href="29-learn-the-basics-of-writing-code-in-verse.html">29. 从零学习 Verse 代码基础</a><div class="tree-sec">专注领域</div><a class="tree-link" href="30-lighting-in-unreal-editor-for-fortnite.html">30. 灯光</a><a class="tree-link" href="31-animation-and-cinematics-in-unreal-editor-for-fortnite.html">31. 动画与过场动画</a><a class="tree-link active" href="32-modeling-in-unreal-editor-for-fortnite.html">32. 建模</a><a class="tree-link" href="33-materials-in-unreal-editor-for-fortnite.html">33. 材质</a><a class="tree-link" href="34-environments-and-landscapes-in-unreal-editor-for-fortnite.html">34. 环境与地形</a><a class="tree-link" href="35-audio-in-unreal-editor-for-fortnite.html">35. 音频</a><a class="tree-link" href="36-visual-effects-in-unreal-editor-for-fortnite.html">36. 视觉特效</a>
+</ul></nav></div></aside>
+<div class="page-content"><div class="page-document has-theme-bg">
+<header class="section-page-header"><nav><ol class="breadcrumb is-shrinkable"><li class="breadcrumb-item is-root"><img src="../assets/logo-epic.svg" alt="Epic Games"><a href="../index.html">Developer</a></li><li class="breadcrumb-item"><a href="../index.html">Fortnite 文档</a></li><li class="breadcrumb-item"><a href="32-modeling-in-unreal-editor-for-fortnite.html">建模</a></li><li class="breadcrumb-item active" aria-current="page"><span class="text-truncate">UEFN 中的建模模式（Modeling Mode）</span></li></ol></nav><h1>UEFN 中的建模模式（Modeling Mode）</h1><p class="text-secondary mb-0">建模模式（Modeling Mode）是 UEFN 中用于创建与雕刻自定义网格体的编辑模式，你可以用它制作可在项目间共享的自定义装饰道具。</p><p class="doc-meta">英文原标题：Modeling Mode in Unreal Editor for Fortnite · <a href="https://dev.epicgames.com/documentation/fortnite/modeling-mode-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">查看英文原文</a> · 社区翻译镜像，仅供学习</p></header>
+<div class="doc-columns"><article class="doc-article">
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/f0d4b530-07df-4ca2-ab31-f263df32c21e?resizing_type=fill&width=1920&height=335" alt="建模模式题图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/f0d4b530-07df-4ca2-ab31-f263df32c21e?resizing_type=fill&width=1920&height=335" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>UEFN 包含一个用于<a href="https://dev.epicgames.com/documentation/fortnite/unreal-editor-for-fortnite-glossary#mesh" target="_blank" rel="noopener">网格体（meshes）</a>的编辑模式，称为<strong>建模模式（Modeling Mode）</strong>。你可以用它创建并雕刻自定义网格体，再使用建模编辑工具为项目创建自定义装饰道具，还可以将这些道具分享给其他开发者。</p>
+<p>无论是创建新的<a href="https://dev.epicgames.com/documentation/fortnite/unreal-editor-for-fortnite-glossary#mesh" target="_blank" rel="noopener">网格体（mesh）</a>，还是编辑下载的网格体，都可以使用建模模式编辑网格体的形状、属性、<a href="https://dev.epicgames.com/documentation/fortnite/unreal-editor-for-fortnite-glossary#volume" target="_blank" rel="noopener">体积（volume）</a>、<a href="https://dev.epicgames.com/documentation/fortnite/unreal-editor-for-fortnite-glossary#voxel" target="_blank" rel="noopener">体素（voxels）</a>、<a href="https://dev.epicgames.com/documentation/fortnite/unreal-editor-for-fortnite-glossary#lod" target="_blank" rel="noopener">细节级别（LODs）</a>和 <a href="https://dev.epicgames.com/documentation/fortnite/unreal-editor-for-fortnite-glossary#uv-mapping" target="_blank" rel="noopener">UV</a>。编辑完网格体后，决定如何<a href="https://dev.epicgames.com/documentation/fortnite/unreal-editor-for-fortnite-glossary#bake" target="_blank" rel="noopener">烘焙（bake）</a>最终成品，然后在项目中使用你的网格体。</p>
+<p>要进一步了解建模模式，请参阅 <a href="https://docs.unrealengine.com/modeling-mode-overview/" target="_blank" rel="noopener">UE5 建模模式概述文档（UE5 Modeling Mode Overview）</a>。</p>
+<h2 id="sec-1">工作原理</h2>
+<p>打开建模模式时，视口中会打开一个面板，提供创建或编辑网格体的选项。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/ed0eaa4d-c184-4055-9938-09bdd99b2077?resizing_type=fit" alt="建模模式面板原文示意图1" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/ed0eaa4d-c184-4055-9938-09bdd99b2077?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>要创建自己的网格体，可从以下选项中选择：</p>
+<p>选项图标 — 建模选项 — 说明</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/567b70b4-537e-4b0a-a260-343ca9bf0415?resizing_type=fit" alt="收藏夹工具原文示意图2" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/567b70b4-537e-4b0a-a260-343ca9bf0415?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p><strong>收藏夹（Favorites）</strong></p>
+<p>你收藏的所有工具都会显示在收藏夹下。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/2f464f61-6d74-4f70-82e4-43887a82ef9f?resizing_type=fit" alt="形状工具原文示意图3" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/2f464f61-6d74-4f70-82e4-43887a82ef9f?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p><strong><a href="#sec-2">形状（Shapes）</a></strong></p>
+<p>提供可添加到视口并进一步编辑的不同形状。所有形状网格体都会显示在<strong>大纲（Outliner）</strong>面板中，并可在<strong>细节（Details）</strong>面板中编辑。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/fc0b1f59-b16a-46a2-81a0-79d35bc8c4c4?resizing_type=fit" alt="创建工具原文示意图4" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/fc0b1f59-b16a-46a2-81a0-79d35bc8c4c4?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p><strong><a href="#sec-3">创建（Create）</a></strong></p>
+<p>一系列用于创建网格体的工具。用线条绘制<a href="https://dev.epicgames.com/documentation/fortnite/unreal-editor-for-fortnite-glossary#polygon" target="_blank" rel="noopener">多边形（polygons）</a>以创建路径或对象。使用这些工具复制、合并或旋转你创建的网格体。</p>
+<p>要编辑现有网格体，可从以下选项中选择：</p>
+<p>选项图标 — 建模选项 — 说明</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/0d3363de-1684-4f75-821f-e5648c0dd3ac?resizing_type=fit" alt="多边形编辑工具原文示意图5" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/0d3363de-1684-4f75-821f-e5648c0dd3ac?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p><strong><a href="#sec-6">多边形编辑（PolyEdit）</a></strong></p>
+<p>编辑网格体和 PolyGroup。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/bed720ea-106f-40d0-97ac-a3cf77e2c606?resizing_type=fit" alt="三角面工具原文示意图6" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/bed720ea-106f-40d0-97ac-a3cf77e2c606?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p><strong><a href="#sec-7">三角面工具（TriTools）</a></strong></p>
+<p>通过三角面对网格体进行编辑。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/d0db9d66-5c98-4a9f-bdd6-c1d84c31fbb0?resizing_type=fit" alt="变形工具原文示意图7" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/d0db9d66-5c98-4a9f-bdd6-c1d84c31fbb0?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p><strong><a href="#sec-5">变形（Deform）</a></strong></p>
+<p>使选中的网格体变形。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/3d475f5c-2da6-4d12-87a0-60f3302f3cde?resizing_type=fit" alt="变换工具原文示意图8" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/3d475f5c-2da6-4d12-87a0-60f3302f3cde?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p><strong><a href="#sec-4">变换（Transform）</a></strong></p>
+<p>更改并变换网格体。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/20dbaab0-6860-4275-adf4-6a72ca86cd6c?resizing_type=fit" alt="网格体操作工具原文示意图9" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/20dbaab0-6860-4275-adf4-6a72ca86cd6c?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p><strong><a href="#sec-8">网格体操作（MeshOps）</a></strong></p>
+<p>执行复杂的网格体操作。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/202e8e5f-e447-42ec-bc5a-1fa12b447953?resizing_type=fit" alt="体素操作工具原文示意图10" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/202e8e5f-e447-42ec-bc5a-1fa12b447953?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p><strong><a href="#sec-9">体素操作（VoxOps）</a></strong></p>
+<p>编辑网格体的三维立方体。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/0e7a1c7f-2c56-4c2c-9235-63e3339d9c6f?resizing_type=fit" alt="属性工具原文示意图11" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/0e7a1c7f-2c56-4c2c-9235-63e3339d9c6f?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p><strong><a href="#sec-12">属性（Attribute）</a></strong></p>
+<p>编辑网格体或其三角面的属性。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/25f97853-e080-42e1-8737-3068e12d372b?resizing_type=fit" alt="UV 工具原文示意图12" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/25f97853-e080-42e1-8737-3068e12d372b?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p><strong><a href="#sec-11">UV</a></strong></p>
+<p>用于编辑和调整网格体 UV 的工具。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/01cbe5a9-bcf4-49c3-9157-8587db5936cb?resizing_type=fit" alt="烘焙工具原文示意图13" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/01cbe5a9-bcf4-49c3-9157-8587db5936cb?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p><strong><a href="#sec-10">烘焙（Baking）</a></strong></p>
+<p>为网格体提供三种不同的烘焙选项。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/678b3ef3-80ed-4fb9-89e3-7ed4693557f2?resizing_type=fit" alt="体积工具原文示意图14" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/678b3ef3-80ed-4fb9-89e3-7ed4693557f2?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p><strong><a href="#sec-13">体积（Volumes）</a></strong></p>
+<p>编辑网格体上的体积，以定义碰撞和网格体的物理空间。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/c5db0a62-6799-45fb-ac17-e8fc5b3bdb83?resizing_type=fit" alt="细节级别工具原文示意图15" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/c5db0a62-6799-45fb-ac17-e8fc5b3bdb83?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p><strong><a href="#sec-14">细节级别（LODs）</a></strong></p>
+<p>定义并编辑网格体的细节级别（LOD）。</p>
+<p>你可以将网格体数据保存为内容浏览器中的文件，然后与其他开发者分享该文件，或在其他项目中使用。</p>
+<p>在导入和导出网格体时，传输过程中可能会丢失网格体数据（权重贴图、PolyGroup 和顶点色）。</p>
+<h2 id="sec-2">形状（Shape）</h2>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/cc2ab50f-fdb0-47cf-8018-cee7937f1109?resizing_type=fit" alt="形状工具集原文示意图16" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/cc2ab50f-fdb0-47cf-8018-cee7937f1109?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>首先向<a href="https://dev.epicgames.com/documentation/fortnite/unreal-editor-for-fortnite-glossary#viewport" target="_blank" rel="noopener">视口（viewport）</a>添加形状来开始创建网格体，你可以用材质实例、LOD、碰撞等编辑和定义这些形状。你甚至可以将这些形状与其他建模工具结合，用于灰盒关卡设计。要进一步了解<a href="greyboxing-in-unreal-editor-for-fortnite.html">灰盒（greyboxing）</a>，请滚动到本文档末尾。</p>
+<p>在弹出窗口中单击形状，然后在视口中单击，将形状添加到项目中。在单击<strong>接受（Accept）</strong>之前，可以使用 <strong>形状（Shape）</strong>工具集编辑网格体的参数。单击<strong>接受（Accept）</strong>后，可以在细节面板中编辑网格体。</p>
+<p>在<a href="creating-a-column-with-modeling-mode-in-unreal-editor-for-fortnite.html">基础教程：创建柱子（Basic Tutorial: Creating a Column）</a>中学习如何使用基本形状和模型编辑工具创建柱子。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/851c306f-f87d-4000-8898-9666b20551e7?resizing_type=fit" alt="各形状通用工具原文示意图17" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/851c306f-f87d-4000-8898-9666b20551e7?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p><em>这些工具适用于每种形状。</em></p>
+<p>形状 — 图片</p>
+<p><strong>方块（Box）</strong></p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/8a0bd6da-8c30-4842-93a0-75e2ad81f312?resizing_type=fit" alt="方块形状原文示意图18" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/8a0bd6da-8c30-4842-93a0-75e2ad81f312?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p><strong>球体（Sphere）</strong></p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/f7c28458-7fb8-4fe4-99db-2bc1256e2224?resizing_type=fit" alt="球体形状原文示意图19" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/f7c28458-7fb8-4fe4-99db-2bc1256e2224?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p><strong>圆柱体（Cylinder）</strong></p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/56ef3585-d7c1-4b25-acb0-e40e86840d2f?resizing_type=fit" alt="圆柱体形状原文示意图20" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/56ef3585-d7c1-4b25-acb0-e40e86840d2f?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p><strong>圆锥体（Cone）</strong></p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/aeb6fab2-ef96-409a-9f70-225b418e3b97?resizing_type=fit" alt="圆锥体形状原文示意图21" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/aeb6fab2-ef96-409a-9f70-225b418e3b97?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p><strong>圆环体（Torus）</strong></p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/8f766b33-a46d-4312-8e30-766eadb10744?resizing_type=fit" alt="圆环体形状原文示意图22" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/8f766b33-a46d-4312-8e30-766eadb10744?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p><strong>箭头（Arrow）</strong></p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/aedc5dc2-25f6-46ff-856b-a3ed8a818ee2?resizing_type=fit" alt="箭头形状原文示意图23" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/aedc5dc2-25f6-46ff-856b-a3ed8a818ee2?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p><strong>矩形（Rectangle）</strong></p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/6794cc6e-24ac-4c6e-a98a-4ca7dedba0fa?resizing_type=fit" alt="矩形形状原文示意图24" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/6794cc6e-24ac-4c6e-a98a-4ca7dedba0fa?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p><strong>圆盘（Disc）</strong></p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/e1a133ca-b443-4b37-9da9-edfe8d6ace48?resizing_type=fit" alt="圆盘形状原文示意图25" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/e1a133ca-b443-4b37-9da9-edfe8d6ace48?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p><strong>楼梯（Stairs）</strong></p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/4319314f-9c63-4e4f-9bc7-11bc349ba52e?resizing_type=fit" alt="楼梯形状原文示意图26" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/4319314f-9c63-4e4f-9bc7-11bc349ba52e?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h2 id="sec-3">创建（Create）</h2>
+<p>使用可挤出你创建的形状和路径的工具创建自己的自定义网格体。必须在视口中选中网格体，编辑才会生效。每种工具都会在建模模式（Model Mode）面板中打开特定的操作工具。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/54d16809-c165-4d15-8388-bd5823a6001b?resizing_type=fit" alt="创建工具集原文示意图27" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/54d16809-c165-4d15-8388-bd5823a6001b?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>工具 — 操作 — 演示</p>
+<p><strong>挤出多边形（Extrude Polygon）</strong></p>
+<p>绘制并挤出多边形以创建新对象。打开编辑多边形属性的工具集。</p>
+<p><strong>挤出路径（Extrude Path）</strong></p>
+<p>绘制并挤出多段路径以创建新对象。打开编辑路径属性的工具集。</p>
+<p><strong>旋转路径（Revolve Path）</strong></p>
+<p>绘制并旋转路径以创建新对象。打开编辑路径和网格体旋转的工具集。</p>
+<p><strong>边界旋转（Boundary Revolve）</strong></p>
+<p>旋转网格体边界循环以创建新对象。打开决定网格体边界和旋转的工具集。</p>
+<p><strong>合并（Merge）</strong></p>
+<p>合并多个网格体以创建新对象。打开决定合并属性的工具集。</p>
+<p><strong>复制（Duplicate）</strong></p>
+<p>复制单个网格体以创建新对象。打开决定复制网格体属性的工具集。</p>
+<p><strong>图案（Pattern）</strong></p>
+<p>使用选中的网格体创建图案。图案也有形状：</p>
+<ul>
+<li>直线（Line）</li>
+<li>网格（Grid）</li>
+<li>圆形（Circle）</li>
+</ul>
+<h2 id="sec-4">变换（Transform）</h2>
+<p>使用以下工具变换网格体或其子组件，并更改轴心点。每种工具都会在建模模式面板中打开特定的操作工具。</p>
+<p>执行多种操作，以控制网格体的移动，或在编辑和移动网格体部件或整个网格体后捕获网格体数据。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/188c6055-edcd-4563-94b6-7991ca52bb6c?resizing_type=fit" alt="变换工具集原文示意图28" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/188c6055-edcd-4563-94b6-7991ca52bb6c?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>工具 — 操作 — 动图演示</p>
+<p><strong>变换（Transform）</strong></p>
+<p>打开变换选中网格体不同方面的工具集。</p>
+<p><strong>对齐（Align）</strong></p>
+<p>打开根据相互关系对齐选中网格体的工具集。</p>
+<p><strong>编辑轴心点（Edit Pivot）</strong></p>
+<p>打开在选中网格体上编辑轴心点位置的工具。</p>
+<p><strong>轴心点 Actor（Pivot Actor）</strong></p>
+<p>向选中网格体添加 Actor 对象作为子组件的轴心点，并打开编辑轴心点和 Actor 对象的工具。</p>
+<p><strong>烘焙变换（Bake Transform）</strong></p>
+<p>将实例化网格体的缩放和旋转值烘焙到父静态网格体资产中。</p>
+<p><strong>传递（Transfer）</strong></p>
+<p>将一个网格体的数据传递到目标网格体或目标网格体使用的特定 LOD。</p>
+<p><strong>转换（Convert）</strong></p>
+<p>网格体主体被转换为实体或表面主体，并显示在画布和浏览器中。打开编辑网格体主体表面的工具集。</p>
+<p><strong>拆分（Split）</strong></p>
+<p>将具有不连通几何体的网格体拆分为单独的网格体资产。</p>
+<h2 id="sec-5">变形（Deform）</h2>
+<p>通过选择网格体的部分并对网格体应用效果，或直接雕刻选中区域，以不同方式使网格体变形。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/6a14b0a6-e638-4c48-bbe4-d644082a4978?resizing_type=fit" alt="变形工具集原文示意图29" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/6a14b0a6-e638-4c48-bbe4-d644082a4978?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>工具 — 操作 — 动图演示</p>
+<p><strong>顶点雕刻（Vertex Sculpt）</strong></p>
+<p>通过多种不同的雕刻笔刷在目标网格体上启用雕刻。</p>
+<p><strong>动态雕刻（Dynamic Sculpt）</strong></p>
+<p>通过多种不同的雕刻笔刷在目标网格体上启用雕刻，并通过重建网格动态向网格体添加新几何体。</p>
+<p><strong>平滑（Smooth）</strong></p>
+<p>展平网格体表面，并打开决定应用于网格体的平滑程度的工具集。</p>
+<p><strong>偏移（Offset）</strong></p>
+<p>偏移选中网格体的表面。</p>
+<p><strong>弯曲（Warp）</strong></p>
+<p>对目标网格体的整体轮廓应用某种弯曲或喇叭形效果，并打开决定包裹量和弯曲方式的工具集。</p>
+<p><strong>晶格（Lattice）</strong></p>
+<p>向选中网格体的表面添加晶格效果，并打开决定晶格效果应用位置和方式的工具。</p>
+<p><strong>置换（Displace）</strong></p>
+<p>向选中网格体的表面添加波浪效果，并打开决定如何添加效果以及向网格体表面添加变形程度的工具。</p>
+<h2 id="sec-6">多边形编辑（PolyEdit）</h2>
+<p>编辑网格体的多边形，为项目创建新资产，或变换下载的对象。多边形建模工具通过选择多边形组来工作。根据使用的 PolyModel 工具和所做的编辑，直接影响组中所有选中的多边形。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/dab3b189-dc57-469a-82af-38adccc9026d?resizing_type=fit" alt="多边形编辑工具集原文示意图30" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/dab3b189-dc57-469a-82af-38adccc9026d?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>工具 — 操作 — 动图演示</p>
+<p><strong>PolyGroup 编辑（PolyGroup Edit）</strong></p>
+<p>打开通过 PolyGroup 编辑网格体的工具。</p>
+<p><strong>变形 PolyGroup（Deform PolyGroups）</strong></p>
+<p>打开通过 PolyGroup 使网格体变形的工具。</p>
+<p><strong>立方体网格（CubeGrid）</strong></p>
+<p>打开使用可重新定位的网格创建白盒网格体的工具。</p>
+<p><strong>布尔运算（Boolean）</strong></p>
+<p>打开对网格体对应用布尔运算的工具。</p>
+<p><strong>网格体切割（Mesh Cut）</strong></p>
+<p>使用第二个网格体将一个网格体切割成多个部分。打开决定如何拆分网格体的工具集。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/21ef240e-2ac2-4b0b-9dd7-aff62f143d34?resizing_type=fit" alt="网格体切割原文示意图31" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/21ef240e-2ac2-4b0b-9dd7-aff62f143d34?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p><strong>细分（Subdivide）</strong></p>
+<p>按 PolyGroup 或三角面细分网格体。打开决定如何细分网格体的工具集。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/be33b6f1-9e56-48f5-b31b-1ca38b519ddf?resizing_type=fit" alt="细分原文示意图32" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/be33b6f1-9e56-48f5-b31b-1ca38b519ddf?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h2 id="sec-7">三角面工具（TriTools）</h2>
+<p>编辑网格体的三角面，为项目创建新对象。三角面建模工具通过选择和编辑三角面组，或在选中网格体上创建三角面组来工作。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/e4088e2a-e4fe-4c54-a76b-6e5b3261df3d?resizing_type=fit" alt="三角面工具集原文示意图33" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/e4088e2a-e4fe-4c54-a76b-6e5b3261df3d?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>工具 — 操作 — 动图演示</p>
+<p><strong>三角面选择（Tri Select）</strong></p>
+<p>使用决定笔刷大小和半径以及三角面容差和多边形组层的工具选择和编辑网格体三角面。</p>
+<p><strong>三角面编辑（Triangle Edit）</strong></p>
+<p>打开通过三角面编辑网格体的工具。</p>
+<p><strong>填充孔洞（Fill Holes）</strong></p>
+<p>填充网格体中的所有孔洞。</p>
+<p><strong>平面切割（Plane Cut）</strong></p>
+<p>在平面上切割选中的网格体。打开决定切割范围的工具。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/c35dd530-2f4f-4e3b-8022-980f0a4887d6?resizing_type=fit" alt="平面切割原文示意图34" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/c35dd530-2f4f-4e3b-8022-980f0a4887d6?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p><strong>镜像（Mirror）</strong></p>
+<p>用挤出多边形创建镜像，并打开定义新网格体的工具集。</p>
+<p><strong>多边形切割（PolyCut）</strong></p>
+<p>用挤出多边形切割选中的网格体，并打开定义新网格体的工具。</p>
+<p><strong>裁剪（Trim）</strong></p>
+<p>用第二个网格体裁剪或切割选中的网格体。使用工具决定如何裁剪第二个网格体。</p>
+<h2 id="sec-8">网格体操作（MeshOps）</h2>
+<p>使用 MeshOps 中的工具编辑网格体的多边形和三角面。每种工具都会在建模模式面板中打开特定的操作工具。这些工具针对三角面组，通过增减三角面来改变网格体的结构完整性。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/3b85ebed-4457-465e-9204-603506860b2f?resizing_type=fit" alt="网格体操作工具集原文示意图35" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/3b85ebed-4457-465e-9204-603506860b2f?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>工具 — 操作 — 动图演示</p>
+<p><strong>简化（Simplify）</strong></p>
+<p>尝试降低选中网格体的三角面密度，并打开编辑网格体多边形和三角面不同方面的工具集。</p>
+<p><strong>重建网格（Remesh）</strong></p>
+<p>打开一组工具，对选中网格体重新三角化并提高三角面密度。</p>
+<p><strong>焊接（Weld）</strong></p>
+<p>在给定容差内自动焊接选中网格体的断开边，并打开编辑焊接设置的工具集。</p>
+<p><strong>外壳（Jacket）</strong></p>
+<p>打开从选中网格体移除隐藏三角面的工具集。</p>
+<p><strong>合并（Union）</strong></p>
+<p>对选中网格体使用布尔并集解析自相交（包括自合并）。</p>
+<p><strong>投影（Project）</strong></p>
+<p>打开将一个网格体映射或重建网格到目标网格体（第二个选中的网格体）上的工具集。</p>
+<h2 id="sec-9">体素操作（VoxOps）</h2>
+<p>添加和编辑与网格体关联的<a href="https://dev.epicgames.com/documentation/fortnite/unreal-editor-for-fortnite-glossary#voxel" target="_blank" rel="noopener">体素（voxels）</a>。每种工具都会在模型模式（Model Mode）面板中打开特定的操作工具，根据所选设置增减或编辑网格体的三维数据。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/c7e7116d-60ed-4b02-b1a3-d82aecbb0b2d?resizing_type=fit" alt="体素操作工具集原文示意图36" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/c7e7116d-60ed-4b02-b1a3-d82aecbb0b2d?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>工具 — 操作 — 动图演示</p>
+<p><strong>体素包裹（Vox Wrap）</strong></p>
+<p>打开使用体素包裹选中网格体的工具集。（基于体素）</p>
+<p><strong>体素混合（Vox Blend）</strong></p>
+<p>打开使用体素混合选中网格体的工具集。（基于体素）</p>
+<p><strong>体素偏移（Vox Offset）</strong></p>
+<p>打开可使用体素偏移或内嵌选中网格体的工具集。（基于体素）</p>
+<p><strong>体素布尔运算（Vox Boolean）</strong></p>
+<p>打开对选中网格体执行布尔运算、再用体素包裹结果的工具集。（基于体素）</p>
+<p><strong>体素合并（Vox Merge）</strong></p>
+<p>打开合并选中网格体、再将结果体素化的工具集。（基于体素）</p>
+<h2 id="sec-10">烘焙（Baking）</h2>
+<p>使用烘焙工具按你设定的规格烘焙自定义网格体。烘焙是保存和编辑选中网格体纹理信息的过程。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/aadd372c-b1e2-4850-aac1-35d86c3bd237?resizing_type=fit" alt="烘焙工具集原文示意图37" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/aadd372c-b1e2-4850-aac1-35d86c3bd237?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>工具 — 操作 — 动图演示</p>
+<p><strong>烘焙纹理（Bake Textures）</strong></p>
+<p>打开为单个网格体烘焙纹理的工具集。</p>
+<p><strong>烘焙全部（Bake All）</strong></p>
+<p>打开从多个源网格体为单个网格体烘焙纹理的工具集。</p>
+<p><strong>烘焙顶点色（Bake Vertex Colors）</strong></p>
+<p>打开为单个网格体烘焙顶点色的工具集。</p>
+<h2 id="sec-11">UV</h2>
+<p>编辑网格体的 <a href="https://docs.unrealengine.com/uvs-category-in-unreal-engine/" target="_blank" rel="noopener">UV</a> 坐标，改变纹理映射到表面的方式。UV 工具决定网格体的材质是否在网格体上均匀显示。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/1c9ae0fd-8fa8-4a04-97e1-76b586ffd6c5?resizing_type=fit" alt="UV 工具集原文示意图38" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/1c9ae0fd-8fa8-4a04-97e1-76b586ffd6c5?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>工具 — 操作 — 动图演示</p>
+<p><strong>自动 UV（AutoUV）</strong></p>
+<p>为选中的网格体自动展开并打包 UV。</p>
+<p><strong>UV 展开（UV Unwrap）</strong></p>
+<p>为现有 UV 岛或 PolyGroup 重新计算 UV，帮助最小化拉伸和挤压区域。</p>
+<p><strong>投影 UV（Project UVs）</strong></p>
+<p>通过将预定义形状或点投射到目标网格体上来创建 UV。</p>
+<p><strong>编辑 UV 接缝（Edit UV Seams）</strong></p>
+<p>在视口中以交互方式分离边以创建接缝。</p>
+<p><strong>变换 UV（Transform UVs）</strong></p>
+<p>在视口中以交互方式缩放、旋转和平移 UV 岛。</p>
+<p><strong>排布 UV（Layout UVs）</strong></p>
+<p>变换、堆叠或重新打包现有 UV。</p>
+<p><strong>UV 编辑器（UVEditor）</strong></p>
+<p>启动专用的<a href="https://docs.unrealengine.com/uv-editor-in-unreal-engine/" target="_blank" rel="noopener">编辑器（Editor）</a>以创建和编辑 UV。</p>
+<p>有关如何在静态网格体上添加着色的更多信息，请参阅<a href="https://docs.unrealengine.com/shading-models-in-unreal-engine/" target="_blank" rel="noopener">虚幻引擎中的着色模型（Shading Models in Unreal Engine）</a>。</p>
+<h2 id="sec-12">属性（Attributes）</h2>
+<p>更新、编辑并向项目中的网格体添加属性。每种工具都会打开特定的操作工具，用于编辑创建 UV 和向 UV 分配数据所需的网格体拓扑数据。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/ce56ed25-c28a-47e3-8c7e-5cc1b52d8537?resizing_type=fit" alt="属性工具集原文示意图39" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/ce56ed25-c28a-47e3-8c7e-5cc1b52d8537?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>工具 — 操作 — 动图演示</p>
+<p><strong>检查（Inspect）</strong></p>
+<p>向网格体添加一层高亮多边形并显示网格体数据统计。通过开关选项编辑网格体。</p>
+<p><strong>法线（Normals）</strong></p>
+<p>重新计算<a href="https://dev.epicgames.com/documentation/fortnite/unreal-editor-for-fortnite-glossary#normal" target="_blank" rel="noopener">法线（normals）</a>，并打开通过开关选项设置法线计算、设置法线拓扑的工具。</p>
+<p><strong>切线（Tangents）</strong></p>
+<p>打开编辑网格体线条和切线的工具集。</p>
+<p><strong>编辑属性（Edit Attributes）</strong></p>
+<p>打开编辑网格体不同属性、UV 并添加新属性的工具集。</p>
+<p><strong>生成 PolyGroup（Generate PolyGroups）</strong></p>
+<p>为网格体覆盖明亮的多边形组皮肤，并打开编辑选中网格体 PolyGroup 的工具。</p>
+<p><strong>绘制 PolyGroup（Paint PolyGroups）</strong></p>
+<p>允许用户使用笔触在网格体上绘制 PolyGroup。</p>
+<p><strong>绘制贴图（Paint Maps）</strong></p>
+<p>允许用户在特定权重贴图层上绘制，这些层需要先用属性编辑器生成。</p>
+<p><strong>编辑材质（Edit Materials）</strong></p>
+<p>允许用户通过笔触为选中的三角面分配材质和新材质元素。</p>
+<h2 id="sec-13">体积（Volumes）</h2>
+<p>使用体积工具集编辑和创建网格体的体积，设置碰撞等。体积工具集为你设置网格体碰撞、编辑网格体的物理和几何体提供了途径。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/ccaa302f-01d2-4fd9-824c-449bfc8ea69c?resizing_type=fit" alt="体积工具集原文示意图40" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/ccaa302f-01d2-4fd9-824c-449bfc8ea69c?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>工具 — 操作 — 动图演示</p>
+<p><strong>体积转网格体（Volume to Mesh）</strong></p>
+<p>打开定义体积并将其转换为新网格体资产的工具。</p>
+<p><strong>网格体转体积（Mesh To Volume）</strong></p>
+<p>打开定义网格体到新体积对象转换的工具集。</p>
+<p><strong>检查碰撞（Inspect Collision）</strong></p>
+<p>打开检查选中网格体物理几何体的工具集。</p>
+<p><strong>网格体转碰撞（Mesh To Collision）</strong></p>
+<p>将选中的网格体转换为最后一个选中网格体的<strong>简单碰撞（Simple Collision）</strong>几何体。打开定义和编辑网格体<a href="https://dev.epicgames.com/documentation/fortnite/unreal-editor-for-fortnite-glossary#collision" target="_blank" rel="noopener">碰撞（collision）</a>设置的工具集。</p>
+<p><strong>碰撞转网格体（Collision To Mesh）</strong></p>
+<p>打开定义<strong>简单碰撞（Simple Collision）</strong>几何体到网格体转换的工具集。</p>
+<h2 id="sec-14">细节级别（LODs）</h2>
+<p>为新网格体或编辑过的网格体编辑、定义和创建 LOD。这些工具根据玩家与网格体的距离以及在游戏中与网格体交互的平台，决定网格体生成的视觉信息。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/7ddf7a87-f4dc-464c-8cd6-2a8edcfbb6b4?resizing_type=fit" alt="LOD 工具集原文示意图41" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/7ddf7a87-f4dc-464c-8cd6-2a8edcfbb6b4?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>工具 — 操作 — 动图演示</p>
+<p><strong>LOD 管理器（LOD Manager）</strong></p>
+<p>打开 LOD 管理器，为选中的静态网格体资产定义和创建 LOD。</p>
+<p><strong>自动 LOD（AutoLOD）</strong></p>
+<p>打开生成和定义静态网格体 LOD 资产的工具集。</p>
+<p>标签：<a href="https://dev.epicgames.com/community/search?query=static%20mesh" target="_blank" rel="noopener">static mesh</a> · <a href="https://dev.epicgames.com/community/search?query=modeling" target="_blank" rel="noopener">modeling</a> · <a href="https://dev.epicgames.com/community/search?query=geometry" target="_blank" rel="noopener">geometry</a> · <a href="https://dev.epicgames.com/community/search?query=lod" target="_blank" rel="noopener">lod</a></p>
+<p><strong>提问并帮助同伴：<a href="https://forums.unrealengine.com/categories?tag=fortnite" target="_blank" rel="noopener">开发者论坛（Developer Forums）</a></strong></p>
+<p><strong>编写自己的教程或阅读他人的教程：<a href="https://dev.epicgames.com/community/fortnite/learning" target="_blank" rel="noopener">学习库（Learning Library）</a></strong></p>
+<div class="pager"><a href="32-modeling-in-unreal-editor-for-fortnite.html"><small>← 返回父教程</small>建模</a><a href="sub-index.html"><small>子教程索引 →</small>全部子教程</a></div>
+</article><nav class="doc-toc" aria-label="本页内容"><b>本页内容</b><a href="#sec-1">工作原理</a>
+<a href="#sec-2">形状</a>
+<a href="#sec-3">创建</a>
+<a href="#sec-4">变换</a>
+<a href="#sec-5">变形</a>
+<a href="#sec-6">多边形编辑</a>
+<a href="#sec-7">三角面工具</a>
+<a href="#sec-8">网格体操作</a>
+<a href="#sec-9">体素操作</a>
+<a href="#sec-10">烘焙</a>
+<a href="#sec-11">UV</a>
+<a href="#sec-12">属性</a>
+<a href="#sec-13">体积</a>
+<a href="#sec-14">细节级别</a></nav></div>
+</div></div>
+</div>
+<footer class="edc-footer"><div class="inner"><img src="../assets/logo-epic.svg" alt="Epic Games"><span>Fortnite 文档中文镜像 · UE教程/ · 本地打开 index.html 阅读 · 翻译整理自 Epic 官方文档，仅供学习交流</span></div></footer>
+</body>
+</html>

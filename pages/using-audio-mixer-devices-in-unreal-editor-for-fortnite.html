@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>在 UEFN 中使用调音台（Audio Mixer）设备 | Fortnite 文档中文镜像</title>
+<link rel="stylesheet" href="../assets/epic.css">
+<link rel="stylesheet" href="../assets/patch.css">
+<link rel="icon" href="../assets/logo-epic.svg">
+</head>
+<body class="theme-fortnite">
+<div class="edc-topbar"><div class="edc-topbar-inner"><img class="edc-logo" src="../assets/logo-epic.svg" alt="Epic Games"><span class="edc-brand">Epic Games <b>开发者社区</b></span><span class="edc-nav"><a href="../index.html">文档首页</a><a href="sub-index.html">子教程索引</a><a href="https://dev.epicgames.com/documentation/fortnite/using-audio-mixer-devices-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">英文原文</a></span></div></div>
+<div class="site-container">
+<aside class="site-nav"><div class="documents-tree"><nav><ul class="contents-table">
+<div class="tree-sec">A 最新动态</div><a class="tree-link" href="01-42-00-fortnite-ecosystem-updates-and-release-notes.html">01. 42.00 生态系统更新与发行说明</a><a class="tree-link" href="02-custom-items-and-inventory-overview-in-fortnite.html">02. 自定义物品与背包总览</a><a class="tree-link" href="03-in-island-transactions-in-fortnite.html">03. 岛内交易</a><a class="tree-link" href="04-mobile-development-in-fortnite.html">04. 移动端开发</a><a class="tree-link" href="05-inputs-in-fortnite.html">05. 输入系统</a><a class="tree-link" href="06-ability-system-in-unreal-editor-for-fortnite.html">06. 能力系统 Ability System</a><a class="tree-link" href="07-partybased-gameplay-using-the-social-synergy-api-in-fortnite.html">07. 社交协同 API 与小队玩法</a><a class="tree-link" href="08-scene-graph-in-unreal-editor-for-fortnite.html">08. 场景图 Scene Graph</a><div class="tree-sec">B 入门</div><a class="tree-link" href="09-build-your-first-island-in-fortnite.html">09. 构建你的第一个岛屿</a><a class="tree-link" href="10-onboarding-guide-to-programming-with-verse-in-unreal-editor-for-fortnite.html">10. Verse 编程入门指南</a><a class="tree-link" href="11-building-basics-in-fortnite-creative.html">11. 建造基础</a><div class="tree-sec">C 品牌合集</div><a class="tree-link" href="12-star-wars-islands-in-fortnite.html">12. 星球大战™岛屿</a><a class="tree-link" href="13-kpop-demon-hunters-islands-in-fortnite.html">13. KPop 猎魔团岛屿</a><a class="tree-link" href="14-building-lego-islands-in-fortnite.html">14. 乐高®岛屿</a><a class="tree-link" href="15-the-walking-dead-universe-islands-in-unreal-editor-for-fortnite.html">15. 行尸走肉宇宙岛屿</a><a class="tree-link" href="16-teenage-mutant-ninja-turtle-islands-in-unreal-editor-for-fortnite.html">16. 忍者神龟岛屿</a><a class="tree-link" href="17-squid-game-islands-in-fortnite.html">17. 鱿鱼游戏岛屿</a><div class="tree-sec">D 开发者成功</div><a class="tree-link" href="18-using-creator-portal-in-fortnite-creative.html">18. 使用创作者门户</a><a class="tree-link" href="19-island-moderation-and-guidelines-in-fortnite-creative.html">19. 岛屿审核与准则</a><div class="tree-sec">E 协作</div><a class="tree-link" href="20-creating-teams-in-creator-portal-in-unreal-editor-for-fortnite.html">20. 在创作者门户创建团队</a><a class="tree-link" href="21-adding-playtesters-in-fortnite-creative.html">21. 添加试玩测试员</a><a class="tree-link" href="22-playtesting-your-island-in-unreal-editor-for-fortnite.html">22. 试玩测试你的岛屿</a><a class="tree-link" href="23-collaborating-in-unreal-editor-for-fortnite.html">23. 在 UEFN 中协作</a><a class="tree-link" href="24-lore-version-control-in-unreal-editor-for-fortnite.html">24. Lore 版本控制</a><a class="tree-link" href="25-conflicts-in-lore-version-control-in-unreal-editor-for-fortnite.html">25. Lore 中的冲突</a><a class="tree-link" href="26-version-history-and-conflict-resolution-in-unreal-editor-for-fortnite.html">26. 分支历史与冲突解决</a><div class="tree-sec">F 游戏示例</div><a class="tree-link" href="27-build-a-game-in-unreal-editor-for-fortnite.html">27. 构建一款游戏</a><a class="tree-link" href="28-unreal-editor-for-fortnite-starter-templates.html">28. UEFN 新手模板</a><div class="tree-sec">G Verse</div><a class="tree-link" href="29-learn-the-basics-of-writing-code-in-verse.html">29. 从零学习 Verse 代码基础</a><div class="tree-sec">H 专注领域</div><a class="tree-link" href="30-lighting-in-unreal-editor-for-fortnite.html">30. 灯光</a><a class="tree-link" href="31-animation-and-cinematics-in-unreal-editor-for-fortnite.html">31. 动画与过场动画</a><a class="tree-link" href="32-modeling-in-unreal-editor-for-fortnite.html">32. 建模</a><a class="tree-link" href="33-materials-in-unreal-editor-for-fortnite.html">33. 材质</a><a class="tree-link" href="34-environments-and-landscapes-in-unreal-editor-for-fortnite.html">34. 环境与地形</a><a class="tree-link active" href="35-audio-in-unreal-editor-for-fortnite.html">35. 音频</a><a class="tree-link" href="36-visual-effects-in-unreal-editor-for-fortnite.html">36. 视觉特效</a>
+</ul></nav></div></aside>
+<div class="page-content"><div class="page-document has-theme-bg">
+<header class="section-page-header"><nav><ol class="breadcrumb is-shrinkable"><li class="breadcrumb-item is-root"><img src="../assets/logo-epic.svg" alt="Epic Games"><a href="../index.html">Developer</a></li><li class="breadcrumb-item"><a href="../index.html">Fortnite 文档</a></li><li class="breadcrumb-item"><a href="35-audio-in-unreal-editor-for-fortnite.html">音频</a></li><li class="breadcrumb-item active" aria-current="page"><span class="text-truncate">在 UEFN 中使用调音台（Audio Mixer）设备</span></li></ol></nav><h1>在 UEFN 中使用调音台（Audio Mixer）设备</h1><p class="text-secondary mb-0">使用调音台（Audio Mixer）设备，像专业调音台一样动态、自动地控制游戏整体混音：既可调节武器、脚步声等 Fortnite 自带声音，也可通过控制总线调节自定义声波与声音提示。</p><p class="doc-meta">英文原标题：Using Audio Mixer Devices in Unreal Editor for Fortnite · <a href="https://dev.epicgames.com/documentation/fortnite/using-audio-mixer-devices-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">查看英文原文</a> · 社区翻译镜像，仅供学习</p></header>
+<div class="doc-columns"><article class="doc-article">
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/ffc1f2c1-272e-4e78-8a1a-f649f0328aca?resizing_type=fill&width=1920&height=335" alt="调音台设备题图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/ffc1f2c1-272e-4e78-8a1a-f649f0328aca?resizing_type=fill&width=1920&height=335" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>使用<strong>调音台（Audio Mixer）</strong>设备，像专业调音台一样，对游戏整体混音进行动态、自动的分组音量控制。</p>
+<p>通过调音台，你既可以调节 Fortnite 中已有的声音（如武器、角色脚步声、载具），也可以使用<a href="https://dev.epicgames.com/documentation/fortnite/unreal-editor-for-fortnite-glossary#control-bus" target="_blank" rel="noopener"><strong>控制总线（control buses）</strong></a>和<a href="https://dev.epicgames.com/documentation/fortnite/unreal-editor-for-fortnite-glossary#control-bus-mix" target="_blank" rel="noopener"><strong>控制总线混音（control bus mixes）</strong></a>来调节自定义<a href="https://dev.epicgames.com/documentation/fortnite/unreal-editor-for-fortnite-glossary#sound-wave" target="_blank" rel="noopener">声波（sound waves）</a>与<a href="https://dev.epicgames.com/documentation/fortnite/unreal-editor-for-fortnite-glossary#sound-cue" target="_blank" rel="noopener">声音提示（sound cues）</a>的音量。</p>
+<p>Fortnite 创作模式（Fortnite Creative）中也可以直接使用调音台，更多信息请参阅<a href="https://dev.epicgames.com/documentation/en-us/fortnite-creative/using-audio-mixer-devices-in-fortnite-creative" target="_blank" rel="noopener">调音台设备（Audio Mixer Device）</a>。</p>
+<p>可直接跳转到<a href="#sec-7">按持续时间激活混音</a>，按分步指南在你的岛屿上短时激活一个混音。</p>
+<h2 id="sec-1">控制总线</h2>
+<p>当声音被设置为使用<strong>控制总线（control bus）</strong>后，该总线上的所有声音就可以在<strong>控制总线混音（Control Bus Mix）</strong>中一起调制。</p>
+<p>以下控制总线可用于控制 Fortnite 中默认出现的各类声音的音量：</p>
+<table><tr><th>控制总线名称</th><th>说明</th></tr>
+<tr><td>CB FortAmbient</td><td>用于设置 FN 环境音的音量。</td></tr>
+<tr><td>CB FortExplosions</td><td>用于设置 FN 爆炸声音的音量。</td></tr>
+<tr><td>CB FortFootstep</td><td>用于设置角色脚步声的音量。</td></tr>
+<tr><td>CB FortGadgets</td><td>用于设置与 FN 创意模式小工具和设备相关声音的音量。</td></tr>
+<tr><td>CB FortGlobal</td><td>用于设置所有 FN 声音的音量。</td></tr>
+<tr><td>CB FortHitNotify</td><td>用于设置与玩家受击相关的声音的音量。</td></tr>
+<tr><td>CB FortImpacts</td><td>用于设置 impact 碰撞声音的音量。</td></tr>
+<tr><td>CB FortJam Volume</td><td>用于控制 Jam 曲目的音量。</td></tr>
+<tr><td>CB FortMusic</td><td>用于设置音乐的音量（包括表情音乐）。</td></tr>
+<tr><td>CB FortPatchwork Volume</td><td>用于设置 Patchwork 设备的音量。</td></tr>
+<tr><td>CB FortVehicles</td><td>用于设置载具声音的音量（不含引擎声）。</td></tr>
+<tr><td>CB FortVehicles Engine</td><td>用于设置载具引擎的音量。</td></tr>
+<tr><td>CB FortWeapon</td><td>用于设置武器的音量。</td></tr></table>
+<p>你也可以创建自己的控制总线。创建控制总线：</p>
+<ul><li>在<strong>内容浏览器（Content Browser）</strong>中，选中项目内容文件夹，点击 <strong>+添加（+Add）</strong>按钮，或在内容浏览器的空白处右键打开上下文菜单。</li><li>在<strong>创建高级资产（Create Advanced Assets）</strong>分区中，点击<strong>音频（Audio）&gt; 调制（Modulation）</strong>，再点击<strong>控制总线（Control Bus）</strong>。</li><li>为新的<strong>控制总线（control bus）</strong>输入名称。</li><li>打开该 <strong>控制总线（Control Bus）</strong>资产，将<strong>参数（Parameter）</strong>设为音量（Volume）。</li></ul>
+<p>要在自定义音频资产上使用控制总线，必须在声波资产上设置控制总线。该声波仍可用于声音提示，效果同样生效。</p>
+<p>为声波添加控制总线：</p>
+<ul><li>在<strong>内容浏览器（Content Browser）</strong>中，打开要加入控制总线的声波。</li><li>在“调制（Modulation）”下，将<strong>音量路由（Volume Routing）</strong>设为<strong>覆盖（Override）</strong>。</li><li>勾选<strong>调制（Modulate）</strong>复选框。</li><li>在<strong>音量调制器（Volume Modulators）</strong>数组中添加一个或多个<strong>控制总线（control buses）</strong>。</li></ul>
+<h2 id="sec-2">控制总线混音</h2>
+<p><strong>控制总线混音（Control bus mixes）</strong>将一组控制总线放在一起，为其中每条控制总线定义音量。</p>
+<p>创建控制总线混音：</p>
+<ul><li>在<strong>内容浏览器（Content Browser）</strong>中，选中项目内容文件夹，点击 <strong>+ 添加（+ Add）</strong>按钮，或在内容浏览器的空白处右键打开上下文菜单。</li><li>在<strong>创建高级资产（Create Advanced Assets）</strong>分区中，点击<strong>音频（Audio）&gt; 调制（Modulation）</strong>，再点击<strong>控制总线混音（Control Bus Mix）</strong>。</li><li>为新的<strong>控制总线混音（control bus mix）</strong>输入名称。</li></ul>
+<p>也可以直接从调音台（Mixer）设备创建控制总线混音。</p>
+<p>控制总线混音包含一个<strong>混音阶段（mix stages）</strong>数组，每个混音阶段有以下参数：</p>
+<table><tr><th>参数</th><th>说明</th></tr>
+<tr><td>总线（Bus）</td><td>一条控制总线，可以是 Fortnite 定义的总线，也可以是用户创建的总线。</td></tr>
+<tr><td>值（Value）</td><td>激活混音时，路由到该控制总线的声音应缩放到的音量。</td></tr>
+<tr><td>启动时间（Attack Time，秒）</td><td><a href="https://dev.epicgames.com/documentation/fortnite/unreal-editor-for-fortnite-glossary#attack" target="_blank" rel="noopener">启动（Attack）</a>是激活混音时应用该混音所需的时间（秒）。</td></tr>
+<tr><td>释放时间（Release Time，秒）</td><td><a href="https://dev.epicgames.com/documentation/fortnite/unreal-editor-for-fortnite-glossary#release" target="_blank" rel="noopener">释放（Release）</a>是停用混音时应用该混音所需的时间（秒）。</td></tr></table>
+<h2 id="sec-3">查找并放置设备</h2>
+<ul><li>打开<strong>内容浏览器（Content Browser）</strong>。</li><li>打开 <strong>Fortnite</strong> 文件夹索引列表。</li><li>打开 <strong>设备（Devices）</strong>文件夹。</li><li>选择<strong>调音台（Audio Mixer）</strong>设备，将其点击拖入<strong>视口（viewport）</strong>。</li><li>在<strong>大纲视图（Outliner）</strong>面板中选择<strong>调音台（Audio Mixer）</strong>设备。</li><li>在<strong>细节（Details）</strong>面板中配置<strong>调音台（Audio Mixer）</strong>设备的<strong>用户选项（User Options）</strong>。</li></ul>
+<h2 id="sec-4">用户选项</h2>
+<p>该设备在激活时应用控制总线混音，你可以为该设备配置以下值：</p>
+<table><tr><th>选项</th><th>值</th><th>说明</th></tr>
+<tr><td>混音（Mix）</td><td>None，选择一个控制总线混音</td><td>设备激活时应用的控制总线混音。</td></tr></table>
+<h2 id="sec-5">直接事件绑定</h2>
+<p>UEFN 中的设备使用<strong>事件绑定（Event Binding）</strong>相互通信。要在 UEFN 中为设备设置<a href="https://dev.epicgames.com/documentation/fortnite/unreal-editor-for-fortnite-glossary#direct-event-binding" target="_blank" rel="noopener">直接事件绑定（direct event binding）</a>：</p>
+<ul><li>在<strong>大纲视图（Outliner）</strong>面板中选择该设备。</li><li>打开<strong>细节（Details）</strong>面板。</li><li>导航到<strong>用户选项 - 函数（User Options-Functions）</strong>。</li><li>为某个函数添加一个数组元素。</li><li>选择要交互的<strong>设备（device）</strong>。</li><li>设置该设备执行的<strong>函数（function）</strong>，以向<strong>调音台（Audio Mixer）</strong>发送触发。</li></ul>
+<h3>函数</h3>
+<p><a href="https://dev.epicgames.com/documentation/fortnite/unreal-editor-for-fortnite-glossary#function" target="_blank" rel="noopener"><strong>函数（function）</strong></a>告诉所选设备：当触发设备执行动作时，它需要做什么。</p>
+<table><tr><th>选项</th><th>值</th><th>说明</th></tr>
+<tr><td>激活混音（Activate Mix）</td><td>点击<strong>添加（Add）</strong>图标选择设备，再选择<a href="https://dev.epicgames.com/documentation/fortnite/unreal-editor-for-fortnite-glossary#event" target="_blank" rel="noopener">事件（event）</a>。</td><td>当所选设备与事件触发调音台设备时，激活控制总线混音。</td></tr>
+<tr><td>停用混音（Deactivate Mix）</td><td>点击<strong>添加（Add）</strong>图标选择设备，再选择事件。</td><td>当所选设备与事件触发调音台设备时，停用控制总线混音。</td></tr>
+<tr><td>收到时注册玩家（Register Player When Receiving From）</td><td>点击<strong>添加（Add）</strong>图标选择设备，再选择事件。</td><td>当事件发生时，将触发玩家注册到该设备。</td></tr>
+<tr><td>收到时注销玩家（Unregister Player When Receiving From）</td><td>点击<strong>添加（Add）</strong>图标选择设备，再选择事件。</td><td>当事件发生时，将触发玩家从该设备注销。</td></tr>
+<tr><td>收到时注销所有玩家（Unregister All Players When Receiving From）</td><td>点击<strong>添加（Add）</strong>图标选择设备，再选择事件。</td><td>当事件发生时，将所有玩家从该设备注销。</td></tr></table>
+<h2 id="sec-6">在 Verse 中使用调音台设备</h2>
+<p>调音台的所有函数都在 Verse 中暴露。现在你可以使用 Verse 激活混音、停用混音，以及将玩家注册到混音或总线 / 从中注销。</p>
+<pre><code># Copyright Epic Games, Inc. All Rights Reserved.
+using { /Fortnite.com/Devices }
+using { /Verse.org/Simulation }
+using { /UnrealEngine.com/Temporary/Diagnostics }
+
+# A creative device that allows an audio mixer to be toggled on and off via a button device
+on_off_audio_mixer_device := class(creative_device):
+    @editable</code></pre>
+<p>要在你的 UEFN 体验中使用这段代码，请按以下步骤操作：</p>
+<ul><li>将一个调音台设备拖到你的岛屿上。</li><li>创建一个名为 <strong>audio_mixer_device_example</strong> 的新 Verse 设备。学习如何在 Verse 中创建新设备，请参阅<a href="https://dev.epicgames.com/documentation/en-us/uefn/create-your-own-device-in-verse" target="_blank" rel="noopener">使用 Verse 创建你自己的设备（Create Your Own Device Using Verse）</a>。</li><li>打开 Verse 资源管理器，双击 <strong>audio_mixer_device_example.verse</strong>，在 Visual Studio Code 中打开脚本。</li><li>粘贴上面的代码，编译后将该 Verse 创作的设备拖到你的岛屿上。</li><li>在<strong>大纲视图（Outliner）</strong>中选择你的 Verse 设备。</li><li>在该设备的<strong>细节（Details）</strong>面板中，将 AudioMixerDevice 的对象引用指定为岛屿上的调音台设备。你可以用吸管工具在视口中拾取设备，也可以用下拉框搜索该设备。</li><li>保存项目并点击<strong>启动会话（Launch Session）</strong>。</li></ul>
+<h3>调音台 API（Audio Mixer API）</h3>
+<p>有关在 Verse 中使用调音台设备的更多信息，请参阅 <code>audio_mixer_device</code> API 参考。</p>
+<h2 id="sec-7">按持续时间激活混音</h2>
+<p>在这个示例中，我们来为躲猫猫游戏做个原型：玩家寻找藏身点时脚步声静音，计时器耗尽后一切恢复正常！测试本示例需要以下四个设备：</p>
+<ul><li>玩家生成点（Player Spawner）</li><li>调音台（Audio Mixer）</li><li>计时器（Timer）</li><li>回合设置（Round Settings）</li></ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/10c7e169-951b-4c38-8c6a-b3b2a5a222bc?resizing_type=fit" alt="示例所需的四个设备合影示意" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/10c7e169-951b-4c38-8c6a-b3b2a5a222bc?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ul><li>选择<strong>调音台（Audio Mixer）</strong>设备并拖入视口。</li><li>在<strong>细节（Details）</strong>面板中，在总线（Bus）字段中指定 <strong>CBFortFootstep</strong>。</li><li>将<strong>推子值（Fader Value）</strong>设为 <strong>0.0</strong>。</li><li>勾选<strong>游戏开始时激活（Activate on Game Start）</strong>。</li></ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/5ddfd174-a233-4894-b826-a248fb21663e?resizing_type=fit" alt="调音台设备总线与推子值的设置示意" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/5ddfd174-a233-4894-b826-a248fb21663e?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ul><li>选择一个<strong>计时器（Timer）</strong>设备并拖入场景。</li><li>根据你的岛屿需要自定义设备设置。在本示例中，<strong>时长（Duration）</strong>设为 <strong>30.0</strong>。</li></ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/328df765-041b-4886-a61e-009332359423?resizing_type=fit" alt="计时器设备时长设置的示意" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/328df765-041b-4886-a61e-009332359423?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ul><li>选择并拖入<strong>回合设置（Round Settings）</strong>设备。本示例使用默认选项。</li><li>再次选择<strong>调音台（Audio Mixer）</strong>设备，前往<strong>用户选项 - 函数（User Options - Functions）</strong>分区。</li><li>点击 <strong>+</strong> 为<strong>激活混音（Activate Mix）</strong>添加一个数组元素。</li><li>选择<strong>回合设置（Round Settings）</strong>设备，并选择 <strong>On Round Start（回合开始时）</strong>选项。</li><li>点击 <strong>+</strong> 为<strong>停用混音（Deactivate Mix）</strong>添加一个数组元素。</li><li>选择<strong>计时器（Timer）</strong>设备，并选择 <strong>On Success（成功时）</strong>选项。</li></ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/5353689e-eabe-4540-8d83-5e2f4ebfd550?resizing_type=fit" alt="调音台事件绑定激活与停用混音的设置示意" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/5353689e-eabe-4540-8d83-5e2f4ebfd550?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ul><li>点击<strong>启动会话（Launch Session）</strong>测试你的游戏！回合开始时，在 30 秒计时器耗尽之前，你应该听不到脚步声。</li></ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/a01c8cc3-6089-47e9-a123-9718fd9ea52c?resizing_type=fit" alt="启动会话后脚步声静音效果的测试示意" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/a01c8cc3-6089-47e9-a123-9718fd9ea52c?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h2 id="sec-8">更多主题</h2>
+<ul><li><a href="adding-audio-to-your-project-in-unreal-editor-for-fortnite.html">为项目添加音频（Adding Audio to Your Project）</a>：为项目添加音频。</li><li><a href="using-audio-player-devices-in-unreal-editor-for-fortnite.html">音频播放器设备（Audio Player Device）</a>：导入、播放并自定义声波与声音提示。</li><li><a href="importing-custom-audio-in-unreal-editor-for-fortnite.html">导入自定义音频（Importing Custom Audio）</a>：将自定义音频导入你的岛屿，让玩家沉浸在你创造的世界中。</li><li><a href="audio-troubleshooting-in-unreal-editor-for-fortnite.html">音频故障排查（Audio Troubleshooting）</a>：UEFN 常见音频问题的解答。</li></ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/4120c4ca-d9f0-4179-95fe-10297986b79e?resizing_type=fit&width=640&height=640" alt="为项目添加音频" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/4120c4ca-d9f0-4179-95fe-10297986b79e?resizing_type=fit&width=640&height=640" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/b75bc25e-8809-400a-b3bf-fbc937a8cec8?resizing_type=fit&width=640&height=640" alt="音频播放器设备" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/b75bc25e-8809-400a-b3bf-fbc937a8cec8?resizing_type=fit&width=640&height=640" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/54adc69d-66fe-4b57-8b03-df9597f7f562?resizing_type=fit&width=640&height=640" alt="导入自定义音频" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/54adc69d-66fe-4b57-8b03-df9597f7f562?resizing_type=fit&width=640&height=640" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/b3caded9-a92a-4682-91dd-ee1acc7fdfa4?resizing_type=fit&width=640&height=640" alt="音频故障排查" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/b3caded9-a92a-4682-91dd-ee1acc7fdfa4?resizing_type=fit&width=640&height=640" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>遇到问题可在<a href="https://forums.unrealengine.com/categories?tag=fortnite" target="_blank" rel="noopener">开发者论坛（Developer Forums）</a>提问，或在<a href="https://dev.epicgames.com/community/fortnite/learning" target="_blank" rel="noopener">学习库（Learning Library）</a>中编写、阅读教程。</p>
+<div class="pager"><a href="35-audio-in-unreal-editor-for-fortnite.html"><small>← 返回父教程</small>音频</a><a href="sub-index.html"><small>子教程索引 →</small>全部子教程</a></div>
+</article><nav class="doc-toc" aria-label="本页内容"><b>本页内容</b><a href="#sec-1">控制总线</a>
+<a href="#sec-2">控制总线混音</a>
+<a href="#sec-3">查找并放置设备</a>
+<a href="#sec-4">用户选项</a>
+<a href="#sec-5">直接事件绑定</a>
+<a href="#sec-6">在 Verse 中使用调音台设备</a>
+<a href="#sec-7">按持续时间激活混音</a>
+<a href="#sec-8">更多主题</a></nav></div>
+</div></div>
+</div>
+<footer class="edc-footer"><div class="inner"><img src="../assets/logo-epic.svg" alt="Epic Games"><span>Fortnite 文档中文镜像 · UE教程/ · 本地打开 index.html 阅读 · 翻译整理自 Epic 官方文档，仅供学习交流</span></div></footer>
+</body>
+</html>

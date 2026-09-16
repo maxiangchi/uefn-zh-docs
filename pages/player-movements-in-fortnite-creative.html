@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fortnite 创意模式中的玩家移动 | Fortnite 文档中文镜像</title>
+<link rel="stylesheet" href="../assets/epic.css">
+<link rel="stylesheet" href="../assets/patch.css">
+<link rel="icon" href="../assets/logo-epic.svg">
+</head>
+<body class="theme-fortnite">
+<div class="edc-topbar"><div class="edc-topbar-inner"><img class="edc-logo" src="../assets/logo-epic.svg" alt="Epic Games"><span class="edc-brand">Epic Games <b>开发者社区</b></span><span class="edc-nav"><a href="../index.html">文档首页</a><a href="sub-index.html">子教程索引</a><a href="https://dev.epicgames.com/documentation/fortnite/player-movements-in-fortnite-creative" target="_blank" rel="noopener">英文原文</a></span></div></div>
+<div class="site-container">
+<aside class="site-nav"><div class="documents-tree"><nav><ul class="contents-table">
+<div class="tree-sec">A 最新动态</div>
+<a class="tree-link" href="01-42-00-fortnite-ecosystem-updates-and-release-notes.html">01. 42.00 生态系统更新与发行说明</a>
+<a class="tree-link" href="02-custom-items-and-inventory-overview-in-fortnite.html">02. 自定义物品与背包总览</a>
+<a class="tree-link" href="03-in-island-transactions-in-fortnite.html">03. 岛内交易</a>
+<a class="tree-link" href="04-mobile-development-in-fortnite.html">04. 移动端开发</a>
+<a class="tree-link" href="05-inputs-in-fortnite.html">05. 输入系统</a>
+<a class="tree-link" href="06-ability-system-in-unreal-editor-for-fortnite.html">06. 能力系统 Ability System</a>
+<a class="tree-link" href="07-partybased-gameplay-using-the-social-synergy-api-in-fortnite.html">07. 社交协同 API 与小队玩法</a>
+<a class="tree-link" href="08-scene-graph-in-unreal-editor-for-fortnite.html">08. 场景图 Scene Graph</a>
+<div class="tree-sec">B 入门</div>
+<a class="tree-link" href="09-build-your-first-island-in-fortnite.html">09. 构建你的第一个岛屿</a>
+<a class="tree-link" href="10-onboarding-guide-to-programming-with-verse-in-unreal-editor-for-fortnite.html">10. Verse 编程入门指南</a>
+<a class="tree-link active" href="11-building-basics-in-fortnite-creative.html">11. 建造基础</a>
+<div class="tree-sec">C 品牌合集</div>
+<a class="tree-link" href="12-star-wars-islands-in-fortnite.html">12. 星球大战™岛屿</a>
+<a class="tree-link" href="13-kpop-demon-hunters-islands-in-fortnite.html">13. KPop 猎魔团岛屿</a>
+<a class="tree-link" href="14-building-lego-islands-in-fortnite.html">14. 乐高®岛屿</a>
+<a class="tree-link" href="15-the-walking-dead-universe-islands-in-unreal-editor-for-fortnite.html">15. 行尸走肉宇宙岛屿</a>
+<a class="tree-link" href="16-teenage-mutant-ninja-turtle-islands-in-unreal-editor-for-fortnite.html">16. 忍者神龟岛屿</a>
+<a class="tree-link" href="17-squid-game-islands-in-fortnite.html">17. 鱿鱼游戏岛屿</a>
+<div class="tree-sec">D 开发者成功</div>
+<a class="tree-link" href="18-using-creator-portal-in-fortnite-creative.html">18. 使用创作者门户</a>
+<a class="tree-link" href="19-island-moderation-and-guidelines-in-fortnite-creative.html">19. 岛屿审核与准则</a>
+<div class="tree-sec">E 协作</div>
+<a class="tree-link" href="20-creating-teams-in-creator-portal-in-unreal-editor-for-fortnite.html">20. 在创作者门户创建团队</a>
+<a class="tree-link" href="21-adding-playtesters-in-fortnite-creative.html">21. 添加试玩测试员</a>
+<a class="tree-link" href="22-playtesting-your-island-in-unreal-editor-for-fortnite.html">22. 试玩测试你的岛屿</a>
+<a class="tree-link" href="23-collaborating-in-unreal-editor-for-fortnite.html">23. 在 UEFN 中协作</a>
+<a class="tree-link" href="24-lore-version-control-in-unreal-editor-for-fortnite.html">24. Lore 版本控制</a>
+<a class="tree-link" href="25-conflicts-in-lore-version-control-in-unreal-editor-for-fortnite.html">25. Lore 中的冲突</a>
+<a class="tree-link" href="26-version-history-and-conflict-resolution-in-unreal-editor-for-fortnite.html">26. 分支历史与冲突解决</a>
+<div class="tree-sec">F 游戏示例</div>
+<a class="tree-link" href="27-build-a-game-in-unreal-editor-for-fortnite.html">27. 构建一款游戏</a>
+<a class="tree-link" href="28-unreal-editor-for-fortnite-starter-templates.html">28. UEFN 新手模板</a>
+<div class="tree-sec">G Verse</div>
+<a class="tree-link" href="29-learn-the-basics-of-writing-code-in-verse.html">29. 从零学习 Verse 代码基础</a>
+<div class="tree-sec">H 专注领域</div>
+<a class="tree-link" href="30-lighting-in-unreal-editor-for-fortnite.html">30. 灯光</a>
+<a class="tree-link" href="31-animation-and-cinematics-in-unreal-editor-for-fortnite.html">31. 动画与过场动画</a>
+<a class="tree-link" href="32-modeling-in-unreal-editor-for-fortnite.html">32. 建模</a>
+<a class="tree-link" href="33-materials-in-unreal-editor-for-fortnite.html">33. 材质</a>
+<a class="tree-link" href="34-environments-and-landscapes-in-unreal-editor-for-fortnite.html">34. 环境与地形</a>
+<a class="tree-link" href="35-audio-in-unreal-editor-for-fortnite.html">35. 音频</a>
+<a class="tree-link" href="36-visual-effects-in-unreal-editor-for-fortnite.html">36. 视觉特效</a>
+</ul></nav></div></aside>
+<div class="page-content"><div class="page-document has-theme-bg">
+<header class="section-page-header"><nav><ol class="breadcrumb is-shrinkable"><li class="breadcrumb-item is-root"><img src="../assets/logo-epic.svg" alt="Epic Games"><a href="../index.html">Developer</a></li><li class="breadcrumb-item"><a href="../index.html">Fortnite 文档</a></li><li class="breadcrumb-item"><a href="11-building-basics-in-fortnite-creative.html">建造基础</a></li><li class="breadcrumb-item active" aria-current="page"><span class="text-truncate">Fortnite 创意模式中的玩家移动</span></li></ol></nav><h1>Fortnite 创意模式中的玩家移动</h1><p class="text-secondary mb-0">了解 Fortnite 创意模式中攀爬、疾跑、滑铲等多种玩家移动方式，以及它们如何影响你的岛屿设计。</p><p class="doc-meta">英文原标题：Player Movements in Fortnite Creative · <a href="https://dev.epicgames.com/documentation/fortnite/player-movements-in-fortnite-creative" target="_blank" rel="noopener">查看英文原文</a> · 社区翻译镜像，仅供学习</p></header>
+<div class="doc-columns"><article class="doc-article">
+<p>在 <strong>Fortnite 创意模式（Fortnite Creative）</strong>中，玩家有多种移动方式，这些方式可能会影响你的岛屿设计。在规划和设计整体体验时，了解玩家如何<a href="https://dev.epicgames.com/documentation/fortnite/fortnite-glossary#traverse" target="_blank" rel="noopener">穿越（traverse）</a>你的岛屿非常重要。</p>
+<p>这些独特的移动类型包括：</p>
+<ul>
+<li><a href="#sec-2">攀爬（Mantling）</a></li>
+<li><a href="#sec-3">翻越障碍（Hurdling）</a></li>
+<li><a href="#sec-4">疾跑（Sprinting）</a></li>
+<li><a href="#sec-5">滑铲（Sliding）</a></li>
+<li><a href="#sec-6">滑铲踢（Slide Kick）</a></li>
+<li><a href="#sec-7">撞肩（Shoulder Bashing）</a></li>
+<li><a href="#sec-8">助跑跳（Boosted Jump）</a></li>
+<li><a href="#sec-9">翻滚落地（Roll Landing）</a></li>
+<li><a href="#sec-10">蹬墙跳（Wall Kick）</a></li>
+<li><a href="#sec-11">爬墙（Wall Scramble）</a></li>
+</ul>
+<h2 id="sec-1">启用玩家移动</h2>
+<p>要启用或禁用上述任何移动设置，请按 <strong>M</strong> 键并点击<strong>岛屿设置（Island Settings）</strong>。点击<strong>玩家（Player）</strong>类别，再点击展开<strong>移动（Locomotion）</strong>子类别，向下滚动，直到找到以下设置：</p>
+<ul>
+<li>允许攀爬（Allow Mantling）</li>
+<li>允许翻越障碍（Allow Hurdling）</li>
+<li>允许疾跑（Allow Sprinting）</li>
+<li>允许滑铲（Allow Sliding）</li>
+<li>允许滑铲踢（Allow Slide Kick）</li>
+<li>允许撞肩（Allow Shoulder Bashing）</li>
+<li>允许助跑跳（Allow Boosted Jump）</li>
+<li>允许翻滚落地（Allow Roll Landing）</li>
+<li>允许蹬墙跳（Allow Wall Kick）</li>
+<li>允许爬墙（Allow Wall Scramble）</li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/c5cb0490-4ec2-4b69-b05a-56b97bb08921?resizing_type=fit" alt="岛屿设置中移动选项的原文示意图1" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/c5cb0490-4ec2-4b69-b05a-56b97bb08921?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>所有这些设置都可以设为<strong>开（On）</strong>或<strong>关（Off）</strong>。其中一些移动功能（例如攀爬和疾跑）还有可供自定义的附加选项。</p>
+<p>你也可以使用<strong>队伍设置与物品栏（Team Settings &amp; Inventory）</strong>设备或<a href="https://dev.epicgames.com/documentation/fortnite/class-designer" target="_blank" rel="noopener">职业设计器（Class Designer）</a>设备来开关这些移动功能。使用这些设备可以控制玩家何时、以何种方式使用这些特殊移动类型，让你的岛屿设计更加灵活。</p>
+<h2 id="sec-2">攀爬（Mantling）</h2>
+<p><a href="https://dev.epicgames.com/documentation/fortnite/fortnite-glossary#mantle" target="_blank" rel="noopener">攀爬（mantling）</a>为玩家在岛屿各点之间移动提供了一种有趣而刺激的方式。在岛屿上<a href="https://dev.epicgames.com/documentation/fortnite/fortnite-glossary#enable" target="_blank" rel="noopener">启用（enable）</a>攀爬后，可以增加一个设计维度，为玩家互动和<a href="https://dev.epicgames.com/documentation/fortnite/fortnite-glossary#traverse" target="_blank" rel="noopener">穿越（traversals）</a>创造新的空间。</p>
+<p>使用攀爬时，需要考虑<a href="https://dev.epicgames.com/documentation/fortnite/fortnite-glossary#fall-damage" target="_blank" rel="noopener">跌落伤害（fall damage）</a>的运作方式，以及对岛屿整体体验而言是否适合使用该功能。</p>
+<h3>跌落伤害（Fall Damage）</h3>
+<p>启用攀爬后，如果玩家在攀爬过程中坠落，或试图攀爬过高的表面，就可能受到跌落伤害。该伤害按百分比计算：</p>
+<ul>
+<li>如果玩家攀爬时超过了最大伤害 50% 的临界值，攀爬尝试将失败。玩家会坠落，并根据坠落距离受到伤害。</li>
+<li>如果玩家在下落过程中（累计伤害未超过最大伤害的 50% 时）中途攀爬，玩家会停止坠落、贴附到表面上，且不受任何伤害。</li>
+</ul>
+<h3>在岛屿中使用攀爬</h3>
+<p>攀爬是玩家体验岛屿的一种引人入胜的方式，提供了穿越岛屿的不同路径，并帮助你为玩家创造独特的挑战和目标。即使岛屿地形并非专为攀爬设计，玩家在穿越岛屿时仍可能找到有趣的使用方式。</p>
+<p>攀爬可用于多种游戏类型，包括 PvP 和非 PvP，例如盒子战（Boxfights）、毒圈战争（Zone Wars）、战斗类游戏，以及带有解谜、冒险、潜行和探索元素的游戏。它还为创造全新游戏类型或扩展现有类型提供了机会。例如，你可以在跑酷式探索、登山以及更复杂的冒险游戏中运用攀爬，加入与移动相关的解谜和其他刺激的岛屿行进方式，让玩家有多种途径完成目标。</p>
+<p>不过，在希望限制玩家移动的游戏类型中，攀爬可能会破坏玩法。此时可以将攀爬设为<strong>关</strong>来避免使用。可能适用的游戏类型包括死亡跑酷（Deathrun）、密室逃脱（Escape Room），以及体育、策略和竞速或载具类游戏。</p>
+<p>不妨多尝试攀爬，为玩家增添新的花样和挑战！</p>
+<p>较老的岛屿在启用攀爬后可能无法按预期运作。在攀爬出现之前许多原本不可交互的特性或道具现在都可以攀爬了，这可能让玩家进入岛屿体验边界之外的区域。</p>
+<p>虽然<a href="https://dev.epicgames.com/documentation/fortnite/fortnite-glossary" target="_blank" rel="noopener">屏障（Barrier）</a>设备可以帮助封堵问题点位，但由于屏障存在最小宽度，完全靠它围住所有问题区域可能并不可行。如果更新岛屿不现实或不值得投入时间，建议较老的体验保持攀爬关闭。</p>
+<h2 id="sec-3">翻越障碍（Hurdling）</h2>
+<p>当玩家跑向墙体或其他障碍物时，如果<strong>允许翻越（Allow Hurdling）</strong>选项设为<strong>开（On）</strong>，玩家按下跳跃键即可自动翻越该障碍物。</p>
+<h2 id="sec-4">疾跑（Sprinting）</h2>
+<p>玩家可以按住<strong>左 Shift（left Shift）</strong>键疾跑。除了移动速度提升外，玩家手持的物品（例如鹤嘴锄或武器）会收起，停止疾跑后恢复。此外，玩家在疾跑中起跳可以跳得更高、更远。</p>
+<p>玩家疾跑时，护盾条上方会显示<strong>能量条（Energy bar）</strong>，指示剩余可疾跑时间。能量耗尽后，玩家会停止疾跑。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/e59b3bc2-1cc3-4c71-8fb4-45b1885c527e?resizing_type=fit" alt="疾跑时显示的能量条原文示意图2" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/e59b3bc2-1cc3-4c71-8fb4-45b1885c527e?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>能量条会随时间自动回复。当玩家没有疾跑时，能量条会从 <a href="https://dev.epicgames.com/documentation/fortnite/fortnite-glossary#hud" target="_blank" rel="noopener">HUD（平视显示器）</a>上消失。</p>
+<h2 id="sec-5">滑铲（Sliding）</h2>
+<p><strong>滑铲（Sliding）</strong>是玩家快速穿过一片区域的炫酷移动方式。</p>
+<p>跑步时，玩家可以按住<strong>左 Ctrl（Left Ctrl）</strong>键滑铲。滑铲会持续数秒后停止。如果玩家在疾跑时按住<strong>左 Ctrl（Left Ctrl）</strong>，会直接进入滑铲。在滑铲中开始疾跑或起跳可以提前结束滑铲。</p>
+<p>下坡滑铲时，坡度越陡，滑铲速度越快。玩家虽然也可以在平地上滑铲，但滑铲速度与普通跑步速度相同（不及疾跑）。</p>
+<h2 id="sec-6">滑铲踢（Slide Kick）</h2>
+<p><strong>滑铲踢（Slide Kick）</strong>是玩家在滑铲时可以使用的一种特殊攻击。如果启用了该移动类型，滑铲中的玩家撞到对方玩家或可破坏物体时，会触发滑铲踢，造成伤害并击退对方玩家。</p>
+<h2 id="sec-7">撞肩（Shoulder Bashing）</h2>
+<p>使用撞肩，玩家可以在疾跑、滑铲或翻滚落地过程中无缝撞开房门。要实现这一点，必须将<strong>允许疾跑（Allow Sprinting）</strong>或<strong>允许滑铲（Allow Sliding）</strong>设为<strong>开（On）</strong>，同时将<strong>允许撞肩（Allow Shoulder Bashing）</strong>设为<strong>开（On）</strong>。当玩家撞开房门时，站在门另一侧的玩家会被击退，但不会受到伤害。</p>
+<p>目前，即使能量条还有剩余时间，玩家也无法在同一次疾跑中连续撞开两扇门。每次撞门之间，玩家必须先停下疾跑，再重新开始疾跑。</p>
+<h2 id="sec-8">助跑跳（Boosted Jump）</h2>
+<p>助跑跳是一种跑酷式跳跃。在从边缘起跳时可获得更快、更高的额外升力。相比不使用助跑跳的玩家，你可以用这种方式更快、更高效地移动。</p>
+<p>要完成助跑跳，必须先疾跑，然后沿斜坡滑下。在接近边缘时，按<strong>空格键（spacebar）</strong>从边缘跳起、跃入空中。</p>
+<h2 id="sec-9">翻滚落地（Roll Landing）</h2>
+<p>在落地前完成翻滚落地，可以恢复体力，或在从高于一层楼的高度跳下时避免受伤。在落地前按下或按住空格键，角色会团身翻滚落地，避免受到致命伤害。</p>
+<h2 id="sec-10">蹬墙跳（Wall Kick）</h2>
+<p>你可以用蹬墙跳躲避敌人，或在两面墙之间向上攀登。疾跑时接近墙体，按<strong>空格键（spacebar）</strong>跳上墙面，再按一次<strong>空格键（spacebar）</strong>蹬墙跳出。要在两面墙之间向上攀登，可交替朝两面墙起跳，每次落地时按<strong>空格键（spacebar）</strong>再次蹬墙跳出。</p>
+<h2 id="sec-11">爬墙（Wall Scramble）</h2>
+<p>使用爬墙可以到达敞开的窗户，或爬上两层楼或更高的台阶。接近墙体时，按<strong>空格键（spacebar）</strong>跳上墙面，然后持续按<strong>空格键（spacebar）</strong>向上爬，直到抓住台阶边缘或敞开的窗户。</p>
+<p class="doc-tags">标签：<a href="https://dev.epicgames.com/community/search?query=design" target="_blank" rel="noopener">design</a> · <a href="https://dev.epicgames.com/community/search?query=movement" target="_blank" rel="noopener">movement</a> · <a href="https://dev.epicgames.com/community/search?query=avatar" target="_blank" rel="noopener">avatar</a> · <a href="https://dev.epicgames.com/community/search?query=player" target="_blank" rel="noopener">player</a> · <a href="https://dev.epicgames.com/community/search?query=traverse" target="_blank" rel="noopener">traverse</a></p>
+<p class="doc-help">在<a href="https://forums.unrealengine.com/categories?tag=fortnite" target="_blank" rel="noopener">开发者论坛（Developer Forums）</a>提问并帮助同行；在<a href="https://dev.epicgames.com/community/fortnite/learning" target="_blank" rel="noopener">学习库（Learning Library）</a>撰写你自己的教程或阅读他人的教程。</p>
+<div class="pager"><a href="11-building-basics-in-fortnite-creative.html"><small>← 返回父教程</small>建造基础</a><a href="sub-index.html"><small>子教程索引 →</small>全部子教程</a></div>
+</article><nav class="doc-toc" aria-label="本页内容"><b>本页内容</b><a href="#sec-1">启用玩家移动</a><a href="#sec-2">攀爬（Mantling）</a><a href="#sec-3">翻越障碍（Hurdling）</a><a href="#sec-4">疾跑（Sprinting）</a><a href="#sec-5">滑铲（Sliding）</a><a href="#sec-6">滑铲踢（Slide Kick）</a><a href="#sec-7">撞肩（Shoulder Bashing）</a><a href="#sec-8">助跑跳（Boosted Jump）</a><a href="#sec-9">翻滚落地（Roll Landing）</a><a href="#sec-10">蹬墙跳（Wall Kick）</a><a href="#sec-11">爬墙（Wall Scramble）</a></nav></div>
+</div></div>
+</div>
+<footer class="edc-footer"><div class="inner"><img src="../assets/logo-epic.svg" alt="Epic Games"><span>Fortnite 文档中文镜像 · UE教程/ · 本地打开 index.html 阅读 · 翻译整理自 Epic 官方文档，仅供学习交流</span></div></footer>
+</body>
+</html>

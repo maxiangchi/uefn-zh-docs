@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第一个岛屿 02：在 Fortnite 中放置并自定义设备 | Fortnite 文档中文镜像</title>
+<link rel="stylesheet" href="../assets/epic.css">
+<link rel="stylesheet" href="../assets/patch.css">
+<link rel="icon" href="../assets/logo-epic.svg">
+</head>
+<body class="theme-fortnite">
+<div class="edc-topbar"><div class="edc-topbar-inner"><img class="edc-logo" src="../assets/logo-epic.svg" alt="Epic Games"><span class="edc-brand">Epic Games <b>开发者社区</b></span><span class="edc-nav"><a href="../index.html">文档首页</a><a href="sub-index.html">子教程索引</a><a href="https://dev.epicgames.com/documentation/fortnite/first-island-02-place-and-customize-devices-in-fortnite" target="_blank" rel="noopener">英文原文</a></span></div></div>
+<div class="site-container">
+<aside class="site-nav"><div class="documents-tree"><nav><ul class="contents-table">
+<div class="tree-sec">最新动态</div><a class="tree-link" href="01-42-00-fortnite-ecosystem-updates-and-release-notes.html">01. 42.00 生态系统更新与发行说明</a><a class="tree-link" href="02-custom-items-and-inventory-overview-in-fortnite.html">02. 自定义物品与背包总览</a><a class="tree-link" href="03-in-island-transactions-in-fortnite.html">03. 岛内交易</a><a class="tree-link" href="04-mobile-development-in-fortnite.html">04. 移动端开发</a><a class="tree-link" href="05-inputs-in-fortnite.html">05. 输入系统</a><a class="tree-link" href="06-ability-system-in-unreal-editor-for-fortnite.html">06. 能力系统 Ability System</a><a class="tree-link" href="07-partybased-gameplay-using-the-social-synergy-api-in-fortnite.html">07. 社交协同 API 与小队玩法</a><a class="tree-link" href="08-scene-graph-in-unreal-editor-for-fortnite.html">08. 场景图 Scene Graph</a><div class="tree-sec">入门</div><a class="tree-link active" href="09-build-your-first-island-in-fortnite.html">09. 构建你的第一个岛屿</a><a class="tree-link" href="10-onboarding-guide-to-programming-with-verse-in-unreal-editor-for-fortnite.html">10. Verse 编程入门指南</a><a class="tree-link" href="11-building-basics-in-fortnite-creative.html">11. 建造基础</a><div class="tree-sec">品牌合集</div><a class="tree-link" href="12-star-wars-islands-in-fortnite.html">12. 星球大战™岛屿</a><a class="tree-link" href="13-kpop-demon-hunters-islands-in-fortnite.html">13. KPop 猎魔团岛屿</a><a class="tree-link" href="14-building-lego-islands-in-fortnite.html">14. 乐高®岛屿</a><a class="tree-link" href="15-the-walking-dead-universe-islands-in-unreal-editor-for-fortnite.html">15. 行尸走肉宇宙岛屿</a><a class="tree-link" href="16-teenage-mutant-ninja-turtle-islands-in-unreal-editor-for-fortnite.html">16. 忍者神龟岛屿</a><a class="tree-link" href="17-squid-game-islands-in-fortnite.html">17. 鱿鱼游戏岛屿</a><div class="tree-sec">开发者成功</div><a class="tree-link" href="18-using-creator-portal-in-fortnite-creative.html">18. 使用创作者门户</a><a class="tree-link" href="19-island-moderation-and-guidelines-in-fortnite-creative.html">19. 岛屿审核与准则</a><div class="tree-sec">协作</div><a class="tree-link" href="20-creating-teams-in-creator-portal-in-unreal-editor-for-fortnite.html">20. 在创作者门户创建团队</a><a class="tree-link" href="21-adding-playtesters-in-fortnite-creative.html">21. 添加试玩测试员</a><a class="tree-link" href="22-playtesting-your-island-in-unreal-editor-for-fortnite.html">22. 试玩测试你的岛屿</a><a class="tree-link" href="23-collaborating-in-unreal-editor-for-fortnite.html">23. 在 UEFN 中协作</a><a class="tree-link" href="24-lore-version-control-in-unreal-editor-for-fortnite.html">24. Lore 版本控制</a><a class="tree-link" href="25-conflicts-in-lore-version-control-in-unreal-editor-for-fortnite.html">25. Lore 中的冲突</a><a class="tree-link" href="26-version-history-and-conflict-resolution-in-unreal-editor-for-fortnite.html">26. 分支历史与冲突解决</a><div class="tree-sec">游戏示例</div><a class="tree-link" href="27-build-a-game-in-unreal-editor-for-fortnite.html">27. 构建一款游戏</a><a class="tree-link" href="28-unreal-editor-for-fortnite-starter-templates.html">28. UEFN 新手模板</a><div class="tree-sec">Verse</div><a class="tree-link" href="29-learn-the-basics-of-writing-code-in-verse.html">29. 从零学习 Verse 代码基础</a><div class="tree-sec">专注领域</div><a class="tree-link" href="30-lighting-in-unreal-editor-for-fortnite.html">30. 灯光</a><a class="tree-link" href="31-animation-and-cinematics-in-unreal-editor-for-fortnite.html">31. 动画与过场动画</a><a class="tree-link" href="32-modeling-in-unreal-editor-for-fortnite.html">32. 建模</a><a class="tree-link" href="33-materials-in-unreal-editor-for-fortnite.html">33. 材质</a><a class="tree-link" href="34-environments-and-landscapes-in-unreal-editor-for-fortnite.html">34. 环境与地形</a><a class="tree-link" href="35-audio-in-unreal-editor-for-fortnite.html">35. 音频</a><a class="tree-link" href="36-visual-effects-in-unreal-editor-for-fortnite.html">36. 视觉特效</a>
+</ul></nav></div></aside>
+<div class="page-content"><div class="page-document has-theme-bg">
+<header class="section-page-header"><nav><ol class="breadcrumb is-shrinkable"><li class="breadcrumb-item is-root"><img src="../assets/logo-epic.svg" alt="Epic Games"><a href="../index.html">Developer</a></li><li class="breadcrumb-item"><a href="../index.html">Fortnite 文档</a></li><li class="breadcrumb-item"><a href="09-build-your-first-island-in-fortnite.html">构建你的第一个岛屿</a></li><li class="breadcrumb-item active" aria-current="page"><span class="text-truncate">第一个岛屿 02：在 Fortnite 中放置并自定义设备</span></li></ol></nav><h1>第一个岛屿 02：在 Fortnite 中放置并自定义设备</h1><p class="text-secondary mb-0">设备（Devices）是会“做事”的资产。本教程将使用物品授予器（Item Granter）让玩家出生时获得武器，并将其与玩家出生点绑定，构成基本的游戏循环（gameplay loop）。</p><p class="doc-meta">英文原标题：First Island 02 - Place and Customize Devices in Fortnite · <a href="https://dev.epicgames.com/documentation/fortnite/first-island-02-place-and-customize-devices-in-fortnite" target="_blank" rel="noopener">查看英文原文</a> · 社区翻译镜像，仅供学习</p></header>
+<div class="doc-columns"><article class="doc-article">
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/3828dfd4-80ba-448a-87fe-bce1af59dd63?resizing_type=fill&width=1920&height=335" alt="2. 放置并自定义设备题图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/3828dfd4-80ba-448a-87fe-bce1af59dd63?resizing_type=fill&width=1920&height=335" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p><strong>设备（Devices）</strong>是会做事的资产。不同的设备做不同的事，但它们都会<em>做些什么</em>。有些设备等待玩家交互后做事，有些设备则在被其他设备触发时做事。</p>
+<p>设备与其他设备、玩家动作一起，共同创造了<strong>玩法（gameplay）</strong>。</p>
+<p>在本教程中，你将使用设备来设置游戏：让玩家出生到岛上时获得一把武器。玩家将用这把武器射击标靶。玩家命中标靶后，得分会发生变化。这是一个基本的<strong>游戏循环（gameplay loop）</strong>，也是游戏设计的关键要素。</p>
+<h2 id="sec-1">使用的设备</h2>
+<ul>
+<li>1 x <a href="https://dev.epicgames.com/documentation/fortnite/using-item-granter-devices-in-fortnite-creative" target="_blank" rel="noopener">物品授予器（Item Granter）</a>设备</li>
+</ul>
+<h2 id="sec-2">放置物品授予器</h2>
+<p>你的岛上已经有玩家出生点设备。要让玩家出生时获得武器，你需要使用<strong>物品授予器（Item Granter）</strong>设备。</p>
+<ul>
+<li>如果内容浏览器尚未打开，转到顶部菜单栏，单击<strong>窗口（Window）&gt; 内容浏览器（Content Browser）</strong>，然后选择<strong>内容浏览器 1（Content Browser 1）</strong>面板。</li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/e6a7a492-8388-4c6c-87b7-3966b9785567?resizing_type=fit" alt="打开内容浏览器原文示意图1" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/e6a7a492-8388-4c6c-87b7-3966b9785567?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>这会打开<strong>内容浏览器（Content Browser）</strong>。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/6a73c776-3fce-46a5-8ebe-b24022631c83?resizing_type=fit" alt="内容浏览器面板原文示意图2" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/6a73c776-3fce-46a5-8ebe-b24022631c83?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>如果你关闭了内容浏览器，再次打开时，它会恢复到你关闭时的样子。</p>
+<ul>
+<li><strong>资产（asset）</strong>是用于构建游戏的任何元素。<strong>内容浏览器（Content Browser）</strong>是查找项目关联或可用全部资产的地方。</li>
+</ul>
+<p>在内容浏览器中，单击 <strong>Fortnite</strong>，显示不同的资产文件夹。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/671957ff-a455-4654-8d17-e4fd0f9b9000?resizing_type=fit" alt="Fortnite 资产文件夹原文示意图3" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/671957ff-a455-4654-8d17-e4fd0f9b9000?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ul>
+<li>单击<strong>设备（Devices）&gt; 物品（Item）</strong>文件夹，向下滚动直到找到<strong>物品授予器（Item Granter）</strong>设备，或使用<strong>搜索栏</strong>快速搜索 <strong>item granter</strong>。</li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/cb653a0d-c9e6-4b13-8def-99158e1f485a?resizing_type=fit" alt="查找物品授予器设备原文示意图4" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/cb653a0d-c9e6-4b13-8def-99158e1f485a?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ul>
+<li>将<strong>物品授予器（Item Granter）</strong>设备拖入视口。</li>
+</ul>
+<h2 id="sec-3">自定义物品授予器</h2>
+<p>所有设备都有决定其行为的默认设置，但你可以自定义大多数设备来创造自己的玩法。你要自定义的不是设备本身，而是设备的一个<strong>实例（instance）</strong>。</p>
+<p>可以将<strong>实例（instance）</strong>理解为资产的唯一副本。原始资产决定了该资产的默认属性（本例中即物品授予器设备），但你可以自定义新实例而不影响原始资产。</p>
+<ul>
+<li>如果<strong>细节（Details）</strong>面板尚未打开，先打开它（<strong>窗口（Window）&gt; 细节（Details）&gt; Detail 1</strong>）。</li>
+</ul>
+<ul>
+<li>在视口中单击<strong>物品授予器（Item Granter）</strong>设备将其选中，你将在细节面板中看到该设备。</li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/f7a359fb-5ce2-4d39-b476-9182e3502567?resizing_type=fit" alt="原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/f7a359fb-5ce2-4d39-b476-9182e3502567?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ul>
+<li>高亮选中<strong>物品授予器（Item Granter，实例）</strong>，然后设置以下<strong>用户选项（User Options）</strong>：</li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/c385f575-2ece-4595-b03e-2bfc47f79cf9?resizing_type=fit" alt="物品授予器用户选项原文示意图5" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/c385f575-2ece-4595-b03e-2bfc47f79cf9?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>授予时操作（On Grant Action）=<strong>保留全部（Keep All）</strong></p>
+<p>授予（Grant）=<strong>所有物品（All Items）</strong></p>
+<ul>
+<li>在不收起用户选项的情况下，展开<strong>高级（Advanced）</strong>，然后自定义以下设置：</li>
+</ul>
+<p>按循环授予（Grant on Cycle）=<strong>取消勾选</strong></p>
+<p>装备所授予物品（Equip Granted Item）=<strong>勾选</strong></p>
+<p>默认物品数量（Default Item Count）=<strong>勾选</strong>，然后设为 <strong>1</strong></p>
+<h2 id="sec-4">添加武器和弹药</h2>
+<p>要为玩家提供武器，你需要向授予器<strong>注册（register）</strong>武器。<strong>注册（Registering）</strong>就是将武器（或任何其他物品）与物品授予器设备关联起来。</p>
+<ul>
+<li>在<strong>物品授予器（实例）（Item Granter (Instance)）</strong>细节面板的<strong>用户选项（User Options）</strong>下找到<strong>物品列表（Item List）</strong>。</li>
+</ul>
+<ul>
+<li><strong>数组（array）</strong>是物品或数据的集合。单击 <strong>Array</strong> 旁边的 <strong>+ 图标</strong>，然后单击 <strong>Index [0]</strong> 的下拉框。</li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/a6b5fa90-c16d-42af-8bf6-63e522407ab5?resizing_type=fit" alt="物品列表示例原文示意图6" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/a6b5fa90-c16d-42af-8bf6-63e522407ab5?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>这会打开更多选项。</p>
+<ul>
+<li>单击如下所示的下拉框。</li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/bbd203c8-9279-44b1-9cf1-f574686ce4bd?resizing_type=fit" alt="物品选择下拉框原文示意图7" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/bbd203c8-9279-44b1-9cf1-f574686ce4bd?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>这会打开另一个窗口，你可以在其中搜索特定物品或某种类型的物品。</p>
+<ul>
+<li>在搜索栏中输入 <strong>assault rifle</strong>，然后从武器列表中选择。</li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/1aa57aea-6a1a-4e0b-88c6-356d1d099805?resizing_type=fit" alt="搜索突击步枪原文示意图8" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/1aa57aea-6a1a-4e0b-88c6-356d1d099805?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ul>
+<li>要搜索特定武器，可以使用武器名称。从列表中选择一把<strong>突击步枪（assault rifle）</strong>，将其添加到物品授予器设备的数组列表中。</li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/b5c0d574-2155-4401-9af6-7f05a736ef27?resizing_type=fit" alt="选择一把突击步枪" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/b5c0d574-2155-4401-9af6-7f05a736ef27?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p><strong>物品数量（Item Quantity）</strong>默认为 <strong>1</strong>。授予器将向玩家授予一把突击步枪。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/2f98fcaa-ebf5-4a9a-9455-924ede0c6f6b?resizing_type=fit" alt="物品索引 0 的数量" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/2f98fcaa-ebf5-4a9a-9455-924ede0c6f6b?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ul>
+<li>单击<strong>物品列表（Item List）</strong>旁边的 <strong>+ 图标</strong>添加另一件物品。</li>
+</ul>
+<p>在搜索栏中输入 ammo，搜索列表中会显示所有弹药类型。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/284a485f-791b-4625-9356-c05a3779a447?resizing_type=fit" alt="添加 900 发中型子弹" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/284a485f-791b-4625-9356-c05a3779a447?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>突击步枪使用<strong>中型子弹（medium bullets）</strong>。从列表中搜索并选择 <strong>AmmoMediumBullets</strong>。</p>
+<p>下一步是让玩家出生点和物品授予器设备协同工作。</p>
+<h2 id="sec-5">绑定物品授予器与玩家出生点</h2>
+<p>设备使用<strong>函数（Functions）</strong>（设备要做的事）和<strong>事件（Events）</strong>（触发函数的事）进行通信。</p>
+<p>与 Fortnite 创意模式（可以从函数绑定到事件，也可以从事件绑定到函数）不同，在 UEFN 中，你只能从函数绑定到事件。</p>
+<ul>
+<li>在细节面板的<strong>物品授予器（实例）（Item Granter (Instance)）</strong>中找到<strong>用户选项 - 函数（User Options - Functions）</strong>并展开。</li>
+</ul>
+<ul>
+<li>向下滚动到<strong>授予物品（Grant Item）</strong>，单击 <strong>+ 图标</strong>，然后单击下拉框。<strong>授予物品（Grant Item）</strong>是你要从其绑定的<strong>函数</strong>。</li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/70f0afb6-2100-4d8a-b950-d9a15c72c9b6?resizing_type=fit" alt="授予物品函数绑定原文示意图12" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/70f0afb6-2100-4d8a-b950-d9a15c72c9b6?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ul>
+<li>搜索或向下滚动到 <strong>Player 1 Spawn Pad</strong> 并单击选中。这是你要将<strong>物品授予器（Item Granter）</strong><strong>绑定</strong>到的设备。</li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/e2bed178-addf-4927-9fb1-826fb4495c30?resizing_type=fit" alt="选择 1 号玩家出生点原文示意图13" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/e2bed178-addf-4927-9fb1-826fb4495c30?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ul>
+<li>单击下拉框，然后选择<strong>玩家出生时（On Player Spawned）</strong>。这是你要绑定到<strong>授予物品（Grant Item）</strong>函数的事件。</li>
+</ul>
+<p>现在玩家出生到岛上时，就会带着分配好的突击步枪和弹药出生！</p>
+<p>如果找不到要找的设置，单击细节面板边缘并拖动，将其拉宽一些。</p>
+<h2 id="sec-6">移动对象</h2>
+<p>你可以使用<strong>移动（Move）</strong>工具之一移动<strong>资产（asset）</strong>，也称为<strong>对象（object）</strong>。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/2f92ea3c-0613-4fd3-b60c-76fff36dc1c1?resizing_type=fit" alt="移动工具原文示意图14" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/2f92ea3c-0613-4fd3-b60c-76fff36dc1c1?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p><strong>轴心点（pivot point）</strong>控制对象<strong>旋转</strong>和<strong>缩放</strong>的方式。任何尺寸或朝向变化都是相对于对象的轴心点而言的。UEFN 自带或内置的任何对象的轴心点都在其底部。<strong>QWER</strong> 键是单击图标的键盘等效操作。</p>
+<h3>1. 选择对象（Select objects，Q）</h3>
+<p>选中一个对象并将其高亮显示。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/bb96f80d-38ee-47f4-9131-9632d5dffa02?resizing_type=fit" alt="选择对象工具原文示意图15" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/bb96f80d-38ee-47f4-9131-9632d5dffa02?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h3>2. 选择并平移对象（Select and translate objects，W）</h3>
+<p>使其可使用平移箭头平移（移动）。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/9f974630-9873-483f-9263-2d06ab63b4c8?resizing_type=fit" alt="平移对象工具原文示意图16" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/9f974630-9873-483f-9263-2d06ab63b4c8?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h3>3. 选择并旋转对象（Select and rotate objects，E）</h3>
+<p>使其可在三个维度上旋转。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/8fe00543-c782-4aab-ad21-9a07af6bf15f?resizing_type=fit" alt="旋转对象工具原文示意图17" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/8fe00543-c782-4aab-ad21-9a07af6bf15f?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h3>4. 选择并缩放对象（Select and scale objects，R）</h3>
+<p>使其可在三个维度上缩放。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/9fcddb08-e23f-4169-833b-dfe566cf7e41?resizing_type=fit" alt="缩放对象工具原文示意图18" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/9fcddb08-e23f-4169-833b-dfe566cf7e41?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>移动对象的另一个关键组成部分是<strong>轴（axis）</strong>。<strong>轴（Axes）</strong>是三维空间中的方向。这些轴相对于轴心点，分别称为 <strong>X 轴</strong>（上）、<strong>Y 轴</strong>（左）和 <strong>Z 轴</strong>（前）。</p>
+<h2 id="sec-7">下一步</h2>
+<ul>
+<li><a href="first-island-03-build-a-shooting-gallery-in-fortnite.html"><strong>3. 建造射击场（Build a Shooting Gallery）</strong><br>添加一些标靶设备来建造射击场，并设置屏障防止玩家靠得太近。</a></li>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/126bd430-2bc9-47d2-8208-f8d2d20b33b9?resizing_type=fit&width=640&height=640" alt="3. 建造射击场" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/126bd430-2bc9-47d2-8208-f8d2d20b33b9?resizing_type=fit&width=640&height=640" target="_blank" rel="noopener">查看原图</a></div></figure>
+</ul>
+<p>标签：<a href="https://dev.epicgames.com/community/search?query=project" target="_blank" rel="noopener">project</a> · <a href="https://dev.epicgames.com/community/search?query=tutorial" target="_blank" rel="noopener">tutorial</a> · <a href="https://dev.epicgames.com/community/search?query=devices%20in%20uefn" target="_blank" rel="noopener">devices in uefn</a></p>
+<p><strong>提问并帮助同伴：<a href="https://forums.unrealengine.com/categories?tag=fortnite" target="_blank" rel="noopener">开发者论坛（Developer Forums）</a></strong></p>
+<p><strong>编写自己的教程或阅读他人的教程：<a href="https://dev.epicgames.com/community/fortnite/learning" target="_blank" rel="noopener">学习库（Learning Library）</a></strong></p>
+<div class="pager"><a href="09-build-your-first-island-in-fortnite.html"><small>← 返回父教程</small>构建你的第一个岛屿</a><a href="sub-index.html"><small>子教程索引 →</small>全部子教程</a></div>
+</article><nav class="doc-toc" aria-label="本页内容"><b>本页内容</b><a href="#sec-1">使用的设备</a>
+<a href="#sec-2">放置物品授予器</a>
+<a href="#sec-3">自定义物品授予器</a>
+<a href="#sec-4">添加武器和弹药</a>
+<a href="#sec-5">绑定物品授予器与玩家出生点</a>
+<a href="#sec-6">移动对象</a>
+<a href="#sec-7">下一步</a></nav></div>
+</div></div>
+</div>
+<footer class="edc-footer"><div class="inner"><img src="../assets/logo-epic.svg" alt="Epic Games"><span>Fortnite 文档中文镜像 · UE教程/ · 本地打开 index.html 阅读 · 翻译整理自 Epic 官方文档，仅供学习交流</span></div></footer>
+</body>
+</html>

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第一座岛屿 05：用 Verse 为玩法增添趣味 | Fortnite 文档中文镜像</title>
+<link rel="stylesheet" href="../assets/epic.css">
+<link rel="stylesheet" href="../assets/patch.css">
+<link rel="icon" href="../assets/logo-epic.svg">
+</head>
+<body class="theme-fortnite">
+<div class="edc-topbar"><div class="edc-topbar-inner"><img class="edc-logo" src="../assets/logo-epic.svg" alt="Epic Games"><span class="edc-brand">Epic Games <b>开发者社区</b></span><span class="edc-nav"><a href="../index.html">文档首页</a><a href="sub-index.html">子教程索引</a><a href="https://dev.epicgames.com/documentation/fortnite/first-island-05-spice-up-the-gameplay-with-verse-in-fortnite" target="_blank" rel="noopener">英文原文</a></span></div></div>
+<div class="site-container">
+<aside class="site-nav"><div class="documents-tree"><nav><ul class="contents-table">
+<li class="toc-group"><span class="toc-group-title">A · 最新动态</span><ul>
+<li><a href="01-42-00-fortnite-ecosystem-updates-and-release-notes.html">01. 42.00 生态系统更新与发行说明</a></li>
+<li><a href="02-custom-items-and-inventory-overview-in-fortnite.html">02. 自定义物品与背包总览</a></li>
+<li><a href="03-in-island-transactions-in-fortnite.html">03. 岛内交易</a></li>
+<li><a href="04-mobile-development-in-fortnite.html">04. 移动端开发</a></li>
+<li><a href="05-inputs-in-fortnite.html">05. 输入系统</a></li>
+<li><a href="06-ability-system-in-unreal-editor-for-fortnite.html">06. 能力系统 Ability System</a></li>
+<li><a href="07-partybased-gameplay-using-the-social-synergy-api-in-fortnite.html">07. 社交协同 API 与小队玩法</a></li>
+<li><a href="08-scene-graph-in-unreal-editor-for-fortnite.html">08. 场景图 Scene Graph</a></li>
+</ul></li>
+<li class="toc-group"><span class="toc-group-title">B · 入门指南</span><ul>
+<li><a href="09-build-your-first-island-in-fortnite.html" class="active">09. 构建你的第一个岛屿</a></li>
+<li><a href="10-onboarding-guide-to-programming-with-verse-in-unreal-editor-for-fortnite.html">10. Verse 编程入门指南</a></li>
+<li><a href="11-building-basics-in-fortnite-creative.html">11. 建造基础</a></li>
+</ul></li>
+<li class="toc-group"><span class="toc-group-title">C · 品牌合集</span><ul>
+<li><a href="12-star-wars-islands-in-fortnite.html">12. 星球大战™岛屿</a></li>
+<li><a href="13-kpop-demon-hunters-islands-in-fortnite.html">13. KPop 猎魔团岛屿</a></li>
+<li><a href="14-building-lego-islands-in-fortnite.html">14. 乐高®岛屿</a></li>
+<li><a href="15-the-walking-dead-universe-islands-in-unreal-editor-for-fortnite.html">15. 行尸走肉宇宙岛屿</a></li>
+<li><a href="16-teenage-mutant-ninja-turtle-islands-in-unreal-editor-for-fortnite.html">16. 忍者神龟岛屿</a></li>
+<li><a href="17-squid-game-islands-in-fortnite.html">17. 鱿鱼游戏岛屿</a></li>
+</ul></li>
+<li class="toc-group"><span class="toc-group-title">D · 开发者成功</span><ul>
+<li><a href="18-using-creator-portal-in-fortnite-creative.html">18. 使用创作者门户</a></li>
+<li><a href="19-island-moderation-and-guidelines-in-fortnite-creative.html">19. 岛屿审核与准则</a></li>
+</ul></li>
+<li class="toc-group"><span class="toc-group-title">E · 协作与版本控制</span><ul>
+<li><a href="20-creating-teams-in-creator-portal-in-unreal-editor-for-fortnite.html">20. 在创作者门户创建团队</a></li>
+<li><a href="21-adding-playtesters-in-fortnite-creative.html">21. 添加试玩测试员</a></li>
+<li><a href="22-playtesting-your-island-in-unreal-editor-for-fortnite.html">22. 试玩测试你的岛屿</a></li>
+<li><a href="23-collaborating-in-unreal-editor-for-fortnite.html">23. 在 UEFN 中协作</a></li>
+<li><a href="24-lore-version-control-in-unreal-editor-for-fortnite.html">24. Lore 版本控制</a></li>
+<li><a href="25-conflicts-in-lore-version-control-in-unreal-editor-for-fortnite.html">25. Lore 中的冲突</a></li>
+<li><a href="26-version-history-and-conflict-resolution-in-unreal-editor-for-fortnite.html">26. 分支历史与冲突解决</a></li>
+</ul></li>
+<li class="toc-group"><span class="toc-group-title">F · 游戏示例</span><ul>
+<li><a href="27-build-a-game-in-unreal-editor-for-fortnite.html">27. 构建一款游戏</a></li>
+<li><a href="28-unreal-editor-for-fortnite-starter-templates.html">28. UEFN 新手模板</a></li>
+</ul></li>
+<li class="toc-group"><span class="toc-group-title">G · Verse编程</span><ul>
+<li><a href="29-learn-the-basics-of-writing-code-in-verse.html">29. 从零学习 Verse 代码基础</a></li>
+</ul></li>
+<li class="toc-group"><span class="toc-group-title">H · 专注领域</span><ul>
+<li><a href="30-lighting-in-unreal-editor-for-fortnite.html">30. 灯光</a></li>
+<li><a href="31-animation-and-cinematics-in-unreal-editor-for-fortnite.html">31. 动画与过场动画</a></li>
+<li><a href="32-modeling-in-unreal-editor-for-fortnite.html">32. 建模</a></li>
+<li><a href="33-materials-in-unreal-editor-for-fortnite.html">33. 材质</a></li>
+<li><a href="34-environments-and-landscapes-in-unreal-editor-for-fortnite.html">34. 环境与地形</a></li>
+<li><a href="35-audio-in-unreal-editor-for-fortnite.html">35. 音频</a></li>
+<li><a href="36-visual-effects-in-unreal-editor-for-fortnite.html">36. 视觉特效</a></li>
+</ul></li>
+</ul></nav></div></aside>
+<div class="page-content"><div class="page-document has-theme-bg">
+<header class="section-page-header"><nav><ol class="breadcrumb is-shrinkable"><li class="breadcrumb-item is-root"><img src="../assets/logo-epic.svg" alt="Epic Games"><a href="../index.html">Developer</a></li><li class="breadcrumb-item"><a href="../index.html">Fortnite 文档</a></li><li class="breadcrumb-item"><a href="09-build-your-first-island-in-fortnite.html">构建你的第一个岛屿</a></li><li class="breadcrumb-item active" aria-current="page"><span class="text-truncate">第一座岛屿 05：用 Verse 为玩法增添趣味</span></li></ol></nav><h1>第一座岛屿 05：用 Verse 为玩法增添趣味</h1><p class="text-secondary mb-0">Verse 是一种可与 UEFN 配合使用的编程语言。本页介绍快速将 Verse 加入项目的入门基础，教你用 Verse 让靶子一击倒下，并实现加减分玩法。</p><p class="doc-meta">英文原标题：First Island 05 Spice Up The Gameplay With Verse In Fortnite · <a href="https://dev.epicgames.com/documentation/fortnite/first-island-05-spice-up-the-gameplay-with-verse-in-fortnite" target="_blank" rel="noopener">查看英文原文</a> · 社区翻译镜像，仅供学习</p></header>
+<div class="doc-columns"><article class="doc-article">
+<p><strong>Verse</strong> 是一种可与 UEFN 配合使用的编程语言。本页介绍快速将 Verse 加入项目的入门基础，为新手和有经验的程序员打下基础，让大家感受这门语言能做些什么。</p>
+<p>你在本教程前面创建的目标设备一击还打不倒，所以你将学习如何使用 Verse 让它们一击即倒！</p>
+<h2 id="sec-1">创建新的 Verse 设备</h2>
+<p>你将创建一个 Verse 设备并将它放置在岛屿上。</p>
+<p>可以把它理解为一个设备，它会根据你的指令告诉其他设备做什么。换句话说，你将编写一个 Verse 程序，用它重新编程 UEFN 中的现有设备！</p>
+<ul>
+<li>在<strong>菜单栏（menu bar）</strong>上选择 <strong>Verse</strong> &gt; <strong>Verse Explorer</strong>。</li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/99db373d-0cf4-477d-a6fc-0df5083180f6?resizing_type=fit" alt="打开 Verse Explorer" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/99db373d-0cf4-477d-a6fc-0df5083180f6?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ul>
+<li>在 <strong>Verse Explorer</strong> 中右键点击你的项目，选择<strong>向项目添加新的 Verse 文件（Add new Verse file to project）</strong>。</li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/065d1ca5-ba56-4d89-9e0c-ac7c346a72cd?resizing_type=fit" alt="向项目添加新的 Verse 文件" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/065d1ca5-ba56-4d89-9e0c-ac7c346a72cd?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>这会打开<strong>创建 Verse 脚本（Create Verse Script）</strong>窗口。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/c2b50fc8-a8bd-4bd1-95a1-dac99eaa6ff0?resizing_type=fit" alt="创建 Verse 脚本窗口" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/c2b50fc8-a8bd-4bd1-95a1-dac99eaa6ff0?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ul>
+<li>在<strong>创建 Verse 脚本（Create Verse Script）</strong>窗口中选择 <strong>Verse 设备（Verse Device）</strong>模板。</li>
+<li>在窗口底部将设备重命名为 <strong>shooting_range_manager_device</strong>，然后点击<strong>创建（Create）</strong>。</li>
+</ul>
+<p>你可以在<strong>内容浏览器（Content Browser）</strong>中项目名称下方找到 <strong>shooting_range_manager_device</strong>，也可以使用搜索框查找该设备。</p>
+<ul>
+<li>在<strong>菜单栏（menu bar）</strong>上选择 <strong>Verse</strong> &gt; <strong>构建 Verse 代码（Build Verse Code）</strong>。</li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/1fac29aa-5dd6-416f-8500-6c3ee2bd4a7c?resizing_type=fit" alt="点击 Build Verse Code，将更改加入项目" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/1fac29aa-5dd6-416f-8500-6c3ee2bd4a7c?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>使用 Verse 设备代码时，必须先<strong>构建（build）</strong>（也叫<strong>编译（compiling）</strong>）设备才能使用。这意味着让 Verse 把它转换成可以作为游戏或游戏一部分运行的格式。在构建完成之前，Verse 设备不会出现在内容浏览器或 Outliner（大纲视图）中。</p>
+<ul>
+<li>你可以在内容浏览器中项目名称下方找到 shooting_range_manager_device，也可以使用搜索框查找该设备。</li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/fb5d8e4e-1b31-4569-970b-44c4b1a435ec?resizing_type=fit" alt="你的 Verse 设备出现在内容浏览器中" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/fb5d8e4e-1b31-4569-970b-44c4b1a435ec?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ul>
+<li>将该设备拖入视口。</li>
+<li>在<strong>细节（Details）</strong>面板的<strong>用户选项（User Options）</strong>下，取消勾选<strong>游戏中可见（Visible in Game）</strong>，让游戏运行时隐藏该设备。</li>
+</ul>
+<h2 id="sec-2">设置好靶子</h2>
+<p>还记得<a href="first-island-03-build-a-shooting-gallery-in-fortnite.html">3. 建造射击场（3. Build a Shooting Gallery）</a>中的<strong>好靶子（good targets）</strong>吗？</p>
+<p>你将使用 Verse 设备设置好靶子，让它们被击中一次就倒下。</p>
+<ul>
+<li>在 <strong>Verse Explorer</strong> 中双击 <code>shooting_range_manager_device.verse</code> 打开 Verse 文件。</li>
+<li>删除文件中的所有代码，然后复制下面的代码，粘贴到原来代码的位置。</li>
+</ul>
+<pre><code>using { /Fortnite.com/Devices }
+using { /Verse.org/Simulation }
+
+# A device that manages shooting range gameplay.
+shooting_range_manager_device := class(creative_device):
+    @editable GoodTarget1:shooting_range_target_track_device = shooting_range_target_track_device{}
+    @editable</code></pre>
+<p>在 Verse 中，<strong>变量（variable）</strong>是程序中可以在程序运行时改变的信息。</p>
+<p>当变量是<strong>可编辑（editable）</strong>的，意味着代码在 UEFN 中是<strong>暴露（exposed）</strong>的，也就是说可以直接在 UEFN 中修改，而无需每次都重新构建 Verse 代码。</p>
+<p>你刚刚添加到 Verse 设备的代码创建了三个变量（GoodTarget1、GoodTarget2 和 GoodTarget3），它们的类型为 <code>shooting_range_track_device</code>。它们将代表玩家击中得分的目标。通过将它们设为 <code>@editable</code>，你现在可以在<strong>细节（Details）</strong>面板中随意设置它们的值，而不必反复修改 Verse 代码。由于是第一次添加这段代码，仍然需要编译一次。</p>
+<ul>
+<li>打开 <strong>shooting_range_manager_device</strong> 的 Details 面板，在视口中选中 <strong>shooting_range_manager_device</strong>。</li>
+<li>编译你的代码。</li>
+<li>在<strong>细节（Details）</strong>面板中，将每个好靶子分别设置为不同的 Target Dummy Track（靶子假人轨道）设备。</li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/b3d884d3-acdd-4178-b2c9-93c8cdbc1980?resizing_type=fit" alt="Verse 设备的用户选项" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/b3d884d3-acdd-4178-b2c9-93c8cdbc1980?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ul>
+<li>从下面代码块中的 <code>&lt;# --- New Code Start --- #&gt;</code> 开始，复制并粘贴以下代码到 Verse 文件中。这段代码让好靶子被击中时倒下。</li>
+</ul>
+<p>事件订阅将目标的 <code>HitEvent</code> 与为该目标定义的回调关联起来。</p>
+<pre><code>&lt;# --- New Code Start --- #&gt;
+# Runs when the device is started in a running game.
+OnBegin&lt;override&gt;()&lt;suspends&gt;:void=
+    # Subscribing to the GoodTarget HitEvents.
+    GoodTarget1.HitEvent.Subscribe(OnGoodTarget1Hit)
+    GoodTarget2.HitEvent.Subscribe(OnGoodTarget2Hit)
+    GoodTarget3.HitEvent.Subscribe(OnGoodTarget3Hit)
+    # A hit callback that pops down the first GoodTarget.</code></pre>
+<ul>
+<li>粘贴后编译你的代码。</li>
+</ul>
+<p>当你在代码块中看到以 <code>#</code> 或 <code>&lt;#</code> 开头、以 <code>#&gt;</code> 结尾的行，这些被称为<strong>代码注释（code comments）</strong>。</p>
+<p>代码注释不是程序的一部分，而是程序员写给其他程序员的信息，或用来提醒自己当时为什么这样做。</p>
+<p>有关代码注释的更多信息，请参阅 Verse 语言快速参考中<a href="https://dev.epicgames.com/documentation/en-us/uefn/verse-language-quick-reference#:~:text=4%20lines%20long" target="_blank" rel="noopener">代码注释（Code Comments）</a>一节。</p>
+<h2 id="sec-3">设置坏靶子</h2>
+<p>你的坏靶子是定制为<strong>泰迪熊（Teddy Bears）</strong>的<strong>靶子假人（Target Dummy）</strong>设备。这一次，你将把它们加入 Verse 设备，让它们同样一击即倒，但玩家每次击中会扣分而不是加分。</p>
+<ul>
+<li>添加以下代码，创建三个 <code>shooting_range_target_device</code> 变量来存储坏靶子的引用。</li>
+</ul>
+<pre><code>using { /Fortnite.com/Devices }
+using { /Verse.org/Simulation }
+
+# A device that manages shooting range gameplay.
+shooting_range_manager_device := class(creative_device):
+    @editable GoodTarget1:shooting_range_target_track_device = shooting_range_target_track_device{}
+    @editable</code></pre>
+<ul>
+<li>编译你的代码。</li>
+<li>在视口中选中 <strong>shooting_range_manager_device</strong>。</li>
+<li>在<strong>细节（Details）</strong>面板中，将每个坏靶子分别设置为不同的 Target Dummy（靶子假人）设备。</li>
+<li>添加以下代码，让坏靶子被击中时倒下。</li>
+</ul>
+<pre><code>using { /Fortnite.com/Devices }
+using { /Verse.org/Simulation }
+
+# A device that manages shooting range gameplay.
+shooting_range_manager_device := class(creative_device):
+    @editable GoodTarget1:shooting_range_target_track_device = shooting_range_target_track_device{}
+    @editable</code></pre>
+<h2 id="sec-4">设置计分</h2>
+<p>在使用 Verse 自定义设备之前，必须先添加你要自定义的设备。</p>
+<p>只用 Fortnite 设备也能设置计分，但在 Verse 中做这件事更容易，而且所需的设备更少。</p>
+<h3>添加计分设备（Add a Scoring Device）</h3>
+<p>尽管你要设置两种计分（加分和扣分），但使用 Verse 后，只需要一个计分设备就能全部搞定。</p>
+<ul>
+<li>在<strong>内容浏览器（Content Browser）</strong>的搜索栏中输入 <strong>Score Manager</strong> 找到 Score Manager 设备。</li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/5e57b31d-8abd-4556-b5de-b7843c9151c7?resizing_type=fit" alt="在搜索栏中搜索 Score Manager" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/5e57b31d-8abd-4556-b5de-b7843c9151c7?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ul>
+<li>将 <strong>Score Manager</strong> 设备拖入视口。Score Manager 的用户选项应在<strong>细节（Details）</strong>面板中打开。</li>
+<li>在<strong>细节（Details）</strong>面板中修改以下选项：</li>
+</ul>
+<table><thead><tr><th>选项</th><th>值</th></tr></thead><tbody>
+<tr><td>Enable During Phase（启用阶段）</td><td><strong>Gameplay Only（仅 gameplay）</strong></td></tr>
+<tr><td>Display Score Update on HUD（在 HUD 上显示分数更新）</td><td><strong>勾选（Check）</strong></td></tr>
+</tbody></table>
+<h3>用 Verse 自定义计分设备（Customize the Scoring Device with Verse）</h3>
+<p>现在你可以把 Score Manager 加入 Verse 设备，根据击中的目标调整玩家分数。</p>
+<ul>
+<li>添加以下代码，创建变量来存储计分器的引用和分数值。你可以通过修改赋值来更改默认分数，也可以在<strong>细节（Details）</strong>面板中修改值来覆盖默认值。</li>
+</ul>
+<pre><code>using { /Fortnite.com/Devices }
+using { /Verse.org/Simulation }
+
+# A device that manages shooting range gameplay.
+shooting_range_manager_device := class(creative_device):
+    &lt;# --- New Code Start --- #&gt;
+    @editable ScoreManager:score_manager_device = score_manager_device{}</code></pre>
+<ul>
+<li>编译你的代码。</li>
+<li>在视口中选中 <strong>shooting_range_manager_device</strong>。</li>
+<li>在 <strong>shooting_range_manager_device</strong> 的<strong>细节（Details）</strong>面板中，将 <strong>ScoreManager</strong> 设置为 Score Manager 设备。</li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/db61dc1b-d409-45f9-b8bf-c212a0d64a66?resizing_type=fit" alt="所有目标都已在 Verse 设备中找到" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/db61dc1b-d409-45f9-b8bf-c212a0d64a66?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ul>
+<li>添加以下代码，在击中好靶子和坏靶子时更新玩家分数。</li>
+</ul>
+<pre><code>using { /Fortnite.com/Devices }
+using { /Verse.org/Simulation }
+
+# A device that manages shooting range gameplay.
+shooting_range_manager_device := class(creative_device):
+    @editable ScoreManager:score_manager_device = score_manager_device{}
+    @editable</code></pre>
+<ul>
+<li>编译你的代码。</li>
+<li>从<strong>菜单栏（Menu Bar）</strong>选择 <strong>Verse</strong> &gt; <strong>构建 Verse 代码（Build Verse Code）</strong>。</li>
+</ul>
+<p>如果你一直开着 Fortnite 会话，点击 Push Changes（推送更改）到 live edit（实时编辑），让它接收你用 Verse 所做的更新。你可能还需要结束并重新开始一局游戏才能正常看到更改。</p>
+<ul>
+<li>在 Fortnite 会话中试玩你的更改，确认：
+<ul>
+<li>击中好靶子时分数增加。（游戏中按 <strong>M</strong> 键打开记分板。）</li>
+<li>击中坏靶子时分数减少。</li>
+<li>可以一击打倒靶子。</li>
+</ul>
+</li>
+</ul>
+<h2 id="sec-5">下一步</h2>
+<ul>
+<li><a href="first-island-06-use-props-to-set-a-theme-in-fortnite.html"><strong>6. 使用道具定下主题（6. Use Props to Set a Theme）</strong><br>使用 Fortnite Creative 中的道具和 gallery 设置游戏的外观！</a><figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/3a929ba4-66c4-48be-bda0-6cacdc690579?resizing_type=fit&width=640&height=640" alt="6. 使用道具定下主题。" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/3a929ba4-66c4-48be-bda0-6cacdc690579?resizing_type=fit&width=640&height=640" target="_blank" rel="noopener">查看原图</a></div></figure></li>
+</ul>
+<div class="pager"><a href="09-build-your-first-island-in-fortnite.html"><small>← 返回父教程</small>构建你的第一个岛屿</a><a href="sub-index.html"><small>子教程索引 →</small>全部子教程</a></div>
+</article><nav class="doc-toc" aria-label="本页内容"><b>本页内容</b><a href="#sec-1">创建新的 Verse 设备</a><a href="#sec-2">设置好靶子</a><a href="#sec-3">设置坏靶子</a><a href="#sec-4">设置计分</a><a href="#sec-5">下一步</a></nav></div>
+</div></div>
+</div>
+<footer class="edc-footer"><div class="inner"><img src="../assets/logo-epic.svg" alt="Epic Games"><span>Fortnite 文档中文镜像 · UE教程/ · 本地打开 index.html 阅读 · 翻译整理自 Epic 官方文档，仅供学习交流</span></div></footer>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>在 UEFN 中导入并播放网格体动画 | Fortnite 文档中文镜像</title><link rel="stylesheet" href="../assets/epic.css"><link rel="stylesheet" href="../assets/patch.css"><link rel="icon" href="../assets/logo-epic.svg"></head><body class="theme-fortnite"><div class="edc-topbar"><div class="edc-topbar-inner"><img class="edc-logo" src="../assets/logo-epic.svg" alt="Epic Games"><span class="edc-brand">Epic Games <b>开发者社区</b></span><span class="edc-nav"><a href="../index.html">文档首页</a><a href="sub-index.html">子教程索引</a><a href="https://dev.epicgames.com/documentation/fortnite/import-and-play-mesh-animations-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">英文原文</a></span></div></div><div class="site-container"><aside class="site-nav"><div class="documents-tree"><nav><ul class="contents-table"><div class="tree-sec">A 最新动态</div><a class="tree-link" href="01-42-00-fortnite-ecosystem-updates-and-release-notes.html">01. 42.00 生态系统更新与发行说明</a><a class="tree-link" href="02-custom-items-and-inventory-overview-in-fortnite.html">02. 自定义物品与背包总览</a><a class="tree-link" href="03-in-island-transactions-in-fortnite.html">03. 岛内交易</a><a class="tree-link" href="04-mobile-development-in-fortnite.html">04. 移动端开发</a><a class="tree-link" href="05-inputs-in-fortnite.html">05. 输入系统</a><a class="tree-link" href="06-ability-system-in-unreal-editor-for-fortnite.html">06. 能力系统 Ability System</a><a class="tree-link" href="07-partybased-gameplay-using-the-social-synergy-api-in-fortnite.html">07. 社交协同 API 与小队玩法</a><a class="tree-link" href="08-scene-graph-in-unreal-editor-for-fortnite.html">08. 场景图 Scene Graph</a><div class="tree-sec">B 入门</div><a class="tree-link" href="09-build-your-first-island-in-fortnite.html">09. 构建你的第一个岛屿</a><a class="tree-link" href="10-onboarding-guide-to-programming-with-verse-in-unreal-editor-for-fortnite.html">10. Verse 编程入门指南</a><a class="tree-link" href="11-building-basics-in-fortnite-creative.html">11. 建造基础</a><div class="tree-sec">C 品牌合集</div><a class="tree-link" href="12-star-wars-islands-in-fortnite.html">12. 星球大战岛屿</a><a class="tree-link" href="13-kpop-demon-hunters-islands-in-fortnite.html">13. KPop 猎魔团岛屿</a><a class="tree-link" href="14-building-lego-islands-in-fortnite.html">14. 乐高岛屿</a><a class="tree-link" href="15-the-walking-dead-universe-islands-in-unreal-editor-for-fortnite.html">15. 行尸走肉宇宙岛屿</a><a class="tree-link" href="16-teenage-mutant-ninja-turtle-islands-in-unreal-editor-for-fortnite.html">16. 忍者神龟岛屿</a><a class="tree-link" href="17-squid-game-islands-in-fortnite.html">17. 鱿鱼游戏岛屿</a><div class="tree-sec">D 开发者成功</div><a class="tree-link" href="18-using-creator-portal-in-fortnite-creative.html">18. 使用创作者门户</a><a class="tree-link" href="19-island-moderation-and-guidelines-in-fortnite-creative.html">19. 岛屿审核与准则</a><div class="tree-sec">E 协作</div><a class="tree-link" href="20-creating-teams-in-creator-portal-in-unreal-editor-for-fortnite.html">20. 在创作者门户创建团队</a><a class="tree-link" href="21-adding-playtesters-in-fortnite-creative.html">21. 添加试玩测试员</a><a class="tree-link" href="22-playtesting-your-island-in-unreal-editor-for-fortnite.html">22. 试玩测试你的岛屿</a><a class="tree-link" href="23-collaborating-in-unreal-editor-for-fortnite.html">23. 在 UEFN 中协作</a><a class="tree-link" href="24-lore-version-control-in-unreal-editor-for-fortnite.html">24. Lore 版本控制</a><a class="tree-link" href="25-conflicts-in-lore-version-control-in-unreal-editor-for-fortnite.html">25. Lore 中的冲突</a><a class="tree-link" href="26-version-history-and-conflict-resolution-in-unreal-editor-for-fortnite.html">26. 分支历史与冲突解决</a><div class="tree-sec">F 游戏示例</div><a class="tree-link" href="27-build-a-game-in-unreal-editor-for-fortnite.html">27. 构建一款游戏</a><a class="tree-link" href="28-unreal-editor-for-fortnite-starter-templates.html">28. UEFN 新手模板</a><div class="tree-sec">G Verse</div><a class="tree-link" href="29-learn-the-basics-of-writing-code-in-verse.html">29. 从零学习 Verse 代码基础</a><div class="tree-sec">H 专注领域</div><a class="tree-link" href="30-lighting-in-unreal-editor-for-fortnite.html">30. 灯光</a><a class="tree-link active" href="31-animation-and-cinematics-in-unreal-editor-for-fortnite.html">31. 动画与过场动画</a><a class="tree-link" href="32-modeling-in-unreal-editor-for-fortnite.html">32. 建模</a><a class="tree-link" href="33-materials-in-unreal-editor-for-fortnite.html">33. 材质</a><a class="tree-link" href="34-environments-and-landscapes-in-unreal-editor-for-fortnite.html">34. 环境与地形</a><a class="tree-link" href="35-audio-in-unreal-editor-for-fortnite.html">35. 音频</a><a class="tree-link" href="36-visual-effects-in-unreal-editor-for-fortnite.html">36. 视觉特效</a></ul></nav></div></aside><div class="page-content"><div class="page-document has-theme-bg"><header class="section-page-header"><nav><ol class="breadcrumb is-shrinkable"><li class="breadcrumb-item is-root"><img src="../assets/logo-epic.svg" alt="Epic Games"><a href="../index.html">Developer</a></li><li class="breadcrumb-item"><a href="../index.html">Fortnite 文档</a></li><li class="breadcrumb-item"><a href="31-animation-and-cinematics-in-unreal-editor-for-fortnite.html">动画与过场动画</a></li><li class="breadcrumb-item active" aria-current="page"><span class="text-truncate">在 UEFN 中导入并播放网格体动画</span></li></ol></nav><h1>在 UEFN 中导入并播放网格体动画</h1><p class="text-secondary mb-0">你可以使用 Unreal Editor for Fortnite (UEFN) 为骨架网格体制作动画。本教程将展示如何导入骨架网格体及其关联动画，以及网格体上的动画在 UEFN 中的工作方式。</p><p class="doc-meta">英文原标题：Import and Play Mesh Animations in Unreal Editor for Fortnite · <a href="https://dev.epicgames.com/documentation/fortnite/import-and-play-mesh-animations-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">查看英文原文</a> · 社区翻译镜像，仅供学习</p></header><div class="doc-columns"><article class="doc-article">
+<p>你可以使用 <strong>Unreal Editor for Fortnite (UEFN)</strong> 为<a href="https://dev.epicgames.com/documentation/fortnite/fortnite-glossary#skeletal-mesh" target="_blank" rel="noopener">skeletal meshes (骨架网格体)</a>制作动画。</p>
+<p>本教程将展示如何导入骨架网格体、网格体附带的动画，以及网格体上的动画在 UEFN 中的工作方式。</p>
+<h2 id="sec-1">导入骨架网格体及关联资源</h2>
+<p>UEFN 并未预置骨架网格体或动画，因此你必须自行创建或导入它们。</p>
+<p>要深入了解如何在 Unreal Engine (虚幻引擎)中处理自定义资源，请查看<strong><a href="https://dev.epicgames.com/documentation/unreal-engine/working-with-content-in-unreal-engine?application_version=5.5" target="_blank" rel="noopener">Working with Content (使用内容)</a>部分</strong>，重点阅读 <strong><a href="https://dev.epicgames.com/documentation/unreal-engine/fbx-content-pipeline?application_version=5.5" target="_blank" rel="noopener">FBX Content Pipeline (FBX 内容管线)</a>页面</strong>。</p>
+<ul>
+<li>打开你的 UEFN 项目。</li>
+<li>在 <strong>Content Browser (内容浏览器)</strong>中，打开项目的内容文件夹，为你的骨架网格体创建一个 Characters 文件夹。</li>
+<li>为每种要导入的角色创建一个子文件夹。双击该文件夹将其打开。
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/bd56c41c-0730-4fa3-8bc0-b2fb5c1925e4?resizing_type=fit" alt="资源子文件夹" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/bd56c41c-0730-4fa3-8bc0-b2fb5c1925e4?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+</li>
+<li>点击 <strong>Import (导入)</strong>，或在新文件夹内右键单击，从上下文下拉菜单中选择 <strong>Import to Current Folder (导入到当前文件夹)</strong>。
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/58544c16-3742-4bf3-bce4-830fa0f9e9ba?resizing_type=fit" alt="导入选项" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/58544c16-3742-4bf3-bce4-830fa0f9e9ba?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p class="img-hint">从底部工具栏选择 <strong>Preview… (预览…)</strong>可打开预览窗口，在其中查看你要导入的所有资源。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/9dead5f1-64a8-4a25-8342-d0ffd5fff6da?resizing_type=fit" alt="导入预览窗口" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/9dead5f1-64a8-4a25-8342-d0ffd5fff6da?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p class="img-hint">点击图片可放大。</p></li>
+<li>选择包含要导入网格体的 <a href="https://dev.epicgames.com/documentation/fortnite/fortnite-glossary#fbx" target="_blank" rel="noopener">FBX file (FBX 文件)</a>,然后点击 <strong>Open (打开)</strong>。</li>
+<li><strong>Import Content (导入内容)</strong>窗口随即打开，点击 <strong>Import (导入)</strong>即可导入该资源及其所有关联文件。</li>
+</ul>
+<p>在 Import Content (导入内容)窗口中，你可以通过自定义以下内容的导入选项，来管理随骨架网格体一起导入的资源：</p>
+<ul>
+<li>Static Meshes (静态网格体)</li>
+<li>Skeletal Meshes (骨架网格体)</li>
+<li>Animations (动画)</li>
+<li>Materials (材质)</li>
+<li>Textures (纹理)</li>
+</ul>
+<p>你的角色及其所有关联文件会上传到该子文件夹。</p>
+<p>当你导入 FBX 以外的文件时，Import Content (导入内容)窗口会<a href="https://dev.epicgames.com/documentation/fortnite/interchange-import-system-in-fortnite" target="_blank" rel="noopener">切换导入管线</a>以适配你要导入的文件类型。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/dcad604a-1995-461f-8eea-2e9d7cca3819?resizing_type=fit" alt="GLTF 导入管线" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/dcad604a-1995-461f-8eea-2e9d7cca3819?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h2 id="sec-2">检查导入的资源</h2>
+<p>在各自的关联编辑器中打开不同资源，以检查导入的资源。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/b95c8c94-18e4-408b-82d4-cc7fc9d77dbd?resizing_type=fit" alt="骨架网格体、骨架和动画的缩略图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/b95c8c94-18e4-408b-82d4-cc7fc9d77dbd?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ul>
+<li><strong><a href="#sec-2">Skeletal Mesh (骨架网格体)</a></strong></li>
+<li><strong><a href="#sec-2">Animation Sequence (动画序列)</a></strong></li>
+<li><strong><a href="#sec-2">Skeleton (骨架)</a></strong></li>
+</ul>
+<p>你可以在 UEFN 的其他动画工作流中使用这些资源：</p>
+<ul>
+<li><a href="animation-presets-in-unreal-editor-for-fortnite.html">Creating animation presets (创建动画预设)。</a></li>
+<li><a href="transfer-character-animations-in-unreal-editor-for-fortnite.html">Transferring character animations to a different character (将角色动画迁移到其他角色)。</a></li>
+<li><a href="convert-a-static-mesh-into-a-skeletal-mesh-in-unreal-editor-for-fortnite.html">Convert a static mesh into a skeletal mesh (将静态网格体转换为骨架网格体)。</a></li>
+</ul>
+<h3>Skeletal Mesh (骨架网格体)编辑器</h3>
+<p>双击骨架网格体文件会打开一个新窗口，你可以在其中更详细地查看网格体。点击右侧的 <strong>Skeleton Tree (骨架树)</strong>选项卡，导航到任意可动关节，测试骨架的哪些部位可以<a href="https://dev.epicgames.com/documentation/fortnite/fortnite-glossary#articulate" target="_blank" rel="noopener">articulate (活动)</a>。</p>
+<h3>Skeleton (骨架)编辑器</h3>
+<p>双击骨架文件会打开一个新窗口，你可以在其中更详细地查看骨架网格体资源的骨架。该编辑器提供了一种创建和编辑骨架网格体资源骨骼层级的方法。</p>
+<h3>Animation (动画)编辑器</h3>
+<p>双击动画缩略图可打开 Animation Editor (动画编辑器)。Animation Editor (动画编辑器)在新窗口中打开，你可以在编辑器中确认动画已应用到正确的角色并按预期播放。</p>
+<h2 id="sec-3">在岛屿上播放动画</h2>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/aaab4b48-15af-4d56-8b63-adceb981ab84?resizing_type=fit" alt="原文示意图1" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/aaab4b48-15af-4d56-8b63-adceb981ab84?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>有多种方法可以让动画在你的岛屿上播放。每种方法各有优点，具体取决于你的需求。</p>
+<h3>从 Content Browser (内容浏览器)拖放</h3>
+<p>选择要使用的 <strong>Animation Sequence (动画序列)</strong>文件，将其从 Content Browser (内容浏览器)拖入视口。</p>
+<p>除非在该资源的 <strong>Details (详情)</strong>选项卡下 <strong>Animation (动画)</strong>部分另有指定，否则动画将 perpetual loop (永久循环)播放。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/1da19587-f62e-44d3-834c-92e8cafcebc0?resizing_type=fit" alt="原文示意图2" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/1da19587-f62e-44d3-834c-92e8cafcebc0?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>动画不会在编辑器中播放。要查看动画播放效果，请在 Fortnite 客户端中<a href="https://dev.epicgames.com/documentation/fortnite/playtesting-your-island-unreal-editor-for-fortnite" target="_blank" rel="noopener">playtest (试玩测试)</a>你的岛屿。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/19670949-d8fc-4f4e-b9ea-ec9f71fe0508?resizing_type=fit" alt="原文示意图3" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/19670949-d8fc-4f4e-b9ea-ec9f71fe0508?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h3>使用 Animated Mesh (动画网格体)设备</h3>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/6922c514-d6c7-4ad4-a171-2dfd6feae34e?resizing_type=fit" alt="原文示意图4" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/6922c514-d6c7-4ad4-a171-2dfd6feae34e?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>当这个<a href="using-animated-mesh-device-in-unreal-editor-for-fortnite.html">device (设备)</a>与你的动画配对后，你可以控制各种动画触发器。</p>
+<ul>
+<li>在 Content Browser (内容浏览器)中导航到 <strong>Fortnite &gt; Devices (设备)</strong>。</li>
+<li>将 <strong>Animated Mesh (动画网格体)</strong>设备拖入视口。</li>
+<li>按如下方式配置设备的 <strong>User Options (用户选项)</strong>：</li>
+<li>要将设备绑定到骨架网格体，请将网格体拖放到 <strong>Skeletal Mesh (骨架网格体)</strong>字段，或从该字段的下拉菜单中选择网格体。</li>
+<li>将你想用于网格体的动画拖入 <strong>Animation (动画)</strong>字段，或从下拉菜单中选择。</li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/65b8f107-7c64-4a72-984e-a71f57749c27?resizing_type=fit" alt="原文示意图5" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/65b8f107-7c64-4a72-984e-a71f57749c27?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ul>
+<li>将两个 <strong>Trigger (触发器)</strong>设备拖入视口。</li>
+<li>要将触发器<a href="https://dev.epicgames.com/documentation/fortnite/fortnite-glossary#bind" target="_blank" rel="noopener">bind (绑定)</a>到动画：</li>
+<li>选中 <strong>Animated Mesh (动画网格体)</strong>设备，向下滚动到 <strong>User Options - Functions (用户选项 - 函数)</strong>。</li>
+<li>对于 <strong>Play Animation Event (播放动画事件)</strong>，点击 <strong>+</strong> 添加一个数组元素，然后在两个字段中分别选择 <strong>Trigger</strong> 和 <strong>On Triggered (触发时)</strong>。</li>
+<li>对于 <strong>Pause Animation Event (暂停动画事件)</strong>，点击 <strong>+</strong> 添加一个数组元素，然后在两个字段中分别选择 <strong>Trigger2</strong> 和 <strong>On Triggered (触发时)</strong>。</li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/b9cca90a-568c-4920-acc0-b0e1329dd64d?resizing_type=fit" alt="原文示意图6" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/b9cca90a-568c-4920-acc0-b0e1329dd64d?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ul>
+<li>按下 <strong>Play (播放)</strong>打开客户端查看设备的实际效果。踩上第一个触发器开始播放动画，第二个触发器暂停动画。</li>
+</ul>
+<ul>
+<li><a href="https://dev.epicgames.com/community/search?query=import" target="_blank" rel="noopener">import (导入)</a></li>
+<li><a href="https://dev.epicgames.com/community/search?query=animations" target="_blank" rel="noopener">animations (动画)</a></li>
+<li><a href="https://dev.epicgames.com/community/search?query=device" target="_blank" rel="noopener">device (设备)</a></li>
+<li><a href="https://dev.epicgames.com/community/search?query=skeletal%20mesh" target="_blank" rel="noopener">skeletal mesh (骨架网格体)</a></li>
+</ul>
+<hr>
+<p><strong>提出问题并帮助你的同行：</strong><a href="https://forums.unrealengine.com/categories?tag=fortnite" target="_blank" rel="noopener">Developer Forums (开发者论坛)</a></p>
+<p><strong>编写你自己的教程或阅读他人的教程：</strong><a href="https://dev.epicgames.com/community/fortnite/learning" target="_blank" rel="noopener">Learning Library (学习库)</a></p>
+<ul>
+<li><a href="#sec-1">导入骨架网格体及关联资源</a></li>
+<li><a href="#sec-2">检查导入的资源</a></li>
+<li><a href="#sec-2">Skeletal Mesh (骨架网格体)编辑器</a></li>
+<li><a href="#sec-2">Skeleton (骨架)编辑器</a></li>
+<li><a href="#sec-2">Animation (动画)编辑器</a></li>
+<li><a href="#sec-3">在岛屿上播放动画</a></li>
+<li><a href="#sec-3">从 Content Browser (内容浏览器)拖放</a></li>
+<li><a href="#sec-3">使用 Animated Mesh (动画网格体)设备</a></li>
+</ul><div class="pager"><a href="31-animation-and-cinematics-in-unreal-editor-for-fortnite.html"><small>← 返回父教程</small>动画与过场动画</a><a href="sub-index.html"><small>子教程索引 →</small>全部子教程</a></div></article><nav class="doc-toc" aria-label="本页内容"><b>本页内容</b><a href="#sec-1">导入骨架网格体及关联资源</a><a href="#sec-2">检查导入的资源</a><a href="#sec-3">在岛屿上播放动画</a></nav></div></div></div></div><footer class="edc-footer"><div class="inner"><img src="../assets/logo-epic.svg" alt="Epic Games"><span>Fortnite 文档中文镜像 · UE教程/ · 本地打开 index.html 阅读 · 翻译整理自 Epic 官方文档，仅供学习交流</span></div></footer></body></html>

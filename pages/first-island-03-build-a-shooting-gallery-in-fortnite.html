@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第一座岛 3：搭建射击场 | Fortnite 文档中文镜像</title>
+<link rel="stylesheet" href="../assets/epic.css">
+<link rel="stylesheet" href="../assets/patch.css">
+<link rel="icon" href="../assets/logo-epic.svg">
+</head>
+<body class="theme-fortnite">
+<div class="edc-topbar"><div class="edc-topbar-inner"><img class="edc-logo" src="../assets/logo-epic.svg" alt="Epic Games"><span class="edc-brand">Epic Games <b>开发者社区</b></span><span class="edc-nav"><a href="../index.html">文档首页</a><a href="sub-index.html">子教程索引</a><a href="https://dev.epicgames.com/documentation/fortnite/first-island-03-build-a-shooting-gallery-in-fortnite" target="_blank" rel="noopener">英文原文</a></span></div></div>
+<div class="site-container">
+<aside class="site-nav"><div class="documents-tree"><nav><ul class="contents-table">
+<div class="tree-sec">A · 最新动态</div><a class="tree-link" href="01-42-00-fortnite-ecosystem-updates-and-release-notes.html">01. 42.00 生态系统更新与发行说明</a><a class="tree-link" href="02-custom-items-and-inventory-overview-in-fortnite.html">02. 自定义物品与背包总览</a><a class="tree-link" href="03-in-island-transactions-in-fortnite.html">03. 岛内交易</a><a class="tree-link" href="04-mobile-development-in-fortnite.html">04. 移动端开发</a><a class="tree-link" href="05-inputs-in-fortnite.html">05. 输入系统</a><a class="tree-link" href="06-ability-system-in-unreal-editor-for-fortnite.html">06. 能力系统 Ability System</a><a class="tree-link" href="07-partybased-gameplay-using-the-social-synergy-api-in-fortnite.html">07. 社交协同 API 与小队玩法</a><a class="tree-link" href="08-scene-graph-in-unreal-editor-for-fortnite.html">08. 场景图 Scene Graph</a><div class="tree-sec">B · 入门</div><a class="tree-link active" href="09-build-your-first-island-in-fortnite.html">09. 构建你的第一个岛屿</a><a class="tree-link" href="10-onboarding-guide-to-programming-with-verse-in-unreal-editor-for-fortnite.html">10. Verse 编程入门指南</a><a class="tree-link" href="11-building-basics-in-fortnite-creative.html">11. 建造基础</a><div class="tree-sec">C · 品牌合集</div><a class="tree-link" href="12-star-wars-islands-in-fortnite.html">12. 星球大战™岛屿</a><a class="tree-link" href="13-kpop-demon-hunters-islands-in-fortnite.html">13. KPop 猎魔团岛屿</a><a class="tree-link" href="14-building-lego-islands-in-fortnite.html">14. 乐高®岛屿</a><a class="tree-link" href="15-the-walking-dead-universe-islands-in-unreal-editor-for-fortnite.html">15. 行尸走肉宇宙岛屿</a><a class="tree-link" href="16-teenage-mutant-ninja-turtle-islands-in-unreal-editor-for-fortnite.html">16. 忍者神龟岛屿</a><a class="tree-link" href="17-squid-game-islands-in-fortnite.html">17. 鱿鱼游戏岛屿</a><div class="tree-sec">D · 开发者成功</div><a class="tree-link" href="18-using-creator-portal-in-fortnite-creative.html">18. 使用创作者门户</a><a class="tree-link" href="19-island-moderation-and-guidelines-in-fortnite-creative.html">19. 岛屿审核与准则</a><div class="tree-sec">E · 协作</div><a class="tree-link" href="20-creating-teams-in-creator-portal-in-unreal-editor-for-fortnite.html">20. 在创作者门户创建团队</a><a class="tree-link" href="21-adding-playtesters-in-fortnite-creative.html">21. 添加试玩测试员</a><a class="tree-link" href="22-playtesting-your-island-in-unreal-editor-for-fortnite.html">22. 试玩测试你的岛屿</a><a class="tree-link" href="23-collaborating-in-unreal-editor-for-fortnite.html">23. 在 UEFN 中协作</a><a class="tree-link" href="24-lore-version-control-in-unreal-editor-for-fortnite.html">24. Lore 版本控制</a><a class="tree-link" href="25-conflicts-in-lore-version-control-in-unreal-editor-for-fortnite.html">25. Lore 中的冲突</a><a class="tree-link" href="26-version-history-and-conflict-resolution-in-unreal-editor-for-fortnite.html">26. 分支历史与冲突解决</a><div class="tree-sec">F · 游戏示例</div><a class="tree-link" href="27-build-a-game-in-unreal-editor-for-fortnite.html">27. 构建一款游戏</a><a class="tree-link" href="28-unreal-editor-for-fortnite-starter-templates.html">28. UEFN 新手模板</a><div class="tree-sec">G · Verse</div><a class="tree-link" href="29-learn-the-basics-of-writing-code-in-verse.html">29. 从零学习 Verse 代码基础</a><div class="tree-sec">H · 专注领域</div><a class="tree-link" href="30-lighting-in-unreal-editor-for-fortnite.html">30. 灯光</a><a class="tree-link" href="31-animation-and-cinematics-in-unreal-editor-for-fortnite.html">31. 动画与过场动画</a><a class="tree-link" href="32-modeling-in-unreal-editor-for-fortnite.html">32. 建模</a><a class="tree-link" href="33-materials-in-unreal-editor-for-fortnite.html">33. 材质</a><a class="tree-link" href="34-environments-and-landscapes-in-unreal-editor-for-fortnite.html">34. 环境与地形</a><a class="tree-link" href="35-audio-in-unreal-editor-for-fortnite.html">35. 音频</a><a class="tree-link" href="36-visual-effects-in-unreal-editor-for-fortnite.html">36. 视觉特效</a>
+</ul></nav></div></aside>
+<div class="page-content"><div class="page-document has-theme-bg">
+<header class="section-page-header"><nav><ol class="breadcrumb is-shrinkable"><li class="breadcrumb-item is-root"><img src="../assets/logo-epic.svg" alt="Epic Games"><a href="../index.html">Developer</a></li><li class="breadcrumb-item"><a href="../index.html">Fortnite 文档</a></li><li class="breadcrumb-item"><a href="09-build-your-first-island-in-fortnite.html">构建你的第一个岛屿</a></li><li class="breadcrumb-item active" aria-current="page"><span class="text-truncate">第一座岛 3：搭建射击场</span></li></ol></nav><h1>第一座岛 3：搭建射击场</h1><p class="text-secondary mb-0">给玩家加点能打的靶子：本教程区分好靶（命中得分）与坏靶（命中扣分），带你放移动靶、复制摆成嘉年华射击场、再加不该打的固定靶，最后用屏障把玩家挡在射击区之外。</p><p class="doc-meta">英文原标题：First Island 03: Build a Shooting Gallery in Fortnite · <a href="https://dev.epicgames.com/documentation/fortnite/first-island-03-build-a-shooting-gallery-in-fortnite" target="_blank" rel="noopener">查看英文原文</a> · 社区翻译镜像，仅供学习</p></header>
+<div class="doc-columns"><article class="doc-article">
+
+<p>给玩家加点能打的靶子吧！</p>
+<p>本教程把靶子分成<strong>好靶（good targets）</strong>和<strong>坏靶（bad targets）</strong>：好靶命中得分，坏靶命中扣分。</p>
+
+<h2 id="sec-1">用到的设备</h2>
+<ul>
+<li>3 x <a href="https://dev.epicgames.com/documentation/en-us/fortnite-creative/using-target-dummy-track-devices-in-fortnite-creative" target="_blank" rel="noopener"><strong>移动靶（Target Dummy Track）</strong></a>设备</li>
+<li>3 x <a href="https://dev.epicgames.com/documentation/en-us/fortnite-creative/using-target-dummy-devices-in-fortnite-creative" target="_blank" rel="noopener"><strong>固定靶（Target Dummy）</strong></a>设备</li>
+<li>1 x <a href="https://dev.epicgames.com/documentation/en-us/fortnite-creative/using-barrier-devices-in-fortnite-creative" target="_blank" rel="noopener"><strong>屏障（Barrier）</strong></a>设备</li>
+</ul>
+
+<h2 id="sec-2">添加移动靶</h2>
+<p>打中移动靶得分！</p>
+<ul>
+<li>打开<strong>内容浏览器（Content Browser）</strong>，沿文件夹找到 <strong>Fortnite &gt; Devices</strong>。</li>
+<li>搜索 <strong>target</strong>，筛出靶子设备。</li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/918fff00-944f-4157-95ec-ad11c2bc9e6a?resizing_type=fit" alt="搜索靶子设备原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/918fff00-944f-4157-95ec-ad11c2bc9e6a?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p><em>在搜索栏搜索 Target。</em></p>
+<ul>
+<li>把<strong>移动靶（Target Dummy Track）</strong>拖进视口，在细节面板的绿色（<a href="https://dev.epicgames.com/documentation/fortnite/leftupforward-coordinate-system-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">U 轴（U-axis）</a>）<strong>旋转（Rotation）</strong>字段填 <strong>90</strong>，旋转设备。这个靶子会在轨道上来回滑动。</li>
+<li>在<strong>细节</strong>面板的<strong>用户选项（User Options）</strong>下，把<strong>靶子类型（Target Type）</strong>定制为 <strong>Round（圆形）</strong>。</li>
+</ul>
+<p>这些圆形靶就是你的好靶，玩家打中得分。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/9fe2b624-d1cb-4280-ad2a-8b2b163e83f3?resizing_type=fit" alt="原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/9fe2b624-d1cb-4280-ad2a-8b2b163e83f3?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ul>
+<li>保持用户选项展开，再展开<strong>高级（Advanced）</strong>，按需滚动，定制以下选项。</li>
+</ul>
+<p>选项与值</p>
+<p>Score Value（分值）=<strong>0</strong></p>
+<p>Show Health Bar（显示血条）=<strong>取消勾选</strong></p>
+<p>Move on Proximity（靠近时移动）=<strong>取消勾选</strong></p>
+<p>Bullseye Knockdown（命中靶心击倒）=<strong>勾选</strong></p>
+<p>Hinge from Center（从中间折倒）=<strong>勾选</strong></p>
+<p>Reset Time Type（重置时间类型）=<strong>Random（随机）</strong></p>
+<p>Random Reset Minimum Time（随机重置最短时间）=<strong>3.0 s</strong></p>
+<p>Random Reset Maximum Time（随机重置最长）=<strong>6.0 s</strong></p>
+<p>Pop-Up Delay Type（弹出延迟类型）=<strong>Random（随机）</strong></p>
+<p>Random Pop-Up Minimum Time（随机弹出最短时间）=<strong>3.0 s</strong></p>
+<p>Random Pop-Up Maximum Time（随机弹出最长）=<strong>6.0 s</strong></p>
+<p>这套设置的效果：</p>
+<ul>
+<li>靶子变成圆形。</li>
+<li>靶子倒下时从支架中间折倒，而不是从底部折倒。</li>
+<li>重置与弹出时间随机，在 3 到 6 秒之间重置或弹出。</li>
+</ul>
+
+<h2 id="sec-3">添加更多靶子</h2>
+<p>只打一个靶子没劲，加几个把节奏带起来。</p>
+<p>这个已经定制好了，直接复制，再像嘉年华射击摊那样摆成错落有致的阵型。</p>
+<ul>
+<li>在视口点击 <strong>Target Dummy Track</strong> 设备选中它。</li>
+<li>按住 <strong>Alt 键</strong>，拖 <a href="https://dev.epicgames.com/documentation/fortnite/leftupforward-coordinate-system-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">L 轴（L-axis）</a><strong>箭头</strong>，复制出一个靶子。</li>
+</ul>
+<p>按住 <strong>Alt</strong> 键时，沿任意轴拖动物件都能复制。选中的轴限定拖动方向：左右、上下、前后。点两轴交界的直角，还能同时沿两轴拖。</p>
+<ul>
+<li>复制靶子，直到有三个。</li>
+<li>看地板网格<strong>平移（translate，移动）</strong>靶子，摆成错落阵型。</li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/23c092fb-c06d-403e-8f3e-e8ad28c7bb13?resizing_type=fit" alt="三个移动靶设备原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/23c092fb-c06d-403e-8f3e-e8ad28c7bb13?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p><em>Three Targets Dummy Track devices（三个移动靶设备）。</em></p>
+<p>想更随机一点，改改复制靶的随机重置与弹出延迟时间，别让它们整齐划一。</p>
+
+<h2 id="sec-4">添加固定靶</h2>
+<p>滑动靶给射击场加了一层复杂度——移动靶总比固定靶难打。</p>
+<p>这一步再加一层复杂度：放一个不该打的固定靶，打中扣分！</p>
+<ul>
+<li>在<strong>内容浏览器</strong>里再搜一遍 <strong>target</strong>。</li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/beae929b-487f-4039-a505-589acdd7d184?resizing_type=fit" alt="搜索固定靶原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/beae929b-487f-4039-a505-589acdd7d184?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p><em>在搜索栏输入 target。</em></p>
+<ul>
+<li>这次把<strong>固定靶（Target Dummy）</strong>拖进视口。和第一个靶子不同，它不在轨道上滑，而是在击倒和立起之间摆动。</li>
+</ul>
+<p>这个靶子就是你的<strong>坏靶</strong>，玩家打中扣分。</p>
+<ul>
+<li>在<strong>细节</strong>面板的<strong>用户选项（User Options）</strong>下，把<strong>靶子类型（Target Type）</strong>设为 <strong>Teddy Bear（泰迪熊）</strong>，再展开<strong>高级（Advanced）</strong>设以下值：</li>
+</ul>
+<p>选项与值</p>
+<p>Score Value（分值）=<strong>0</strong></p>
+<p>Show Health Bar（显示血条）=<strong>取消勾选</strong></p>
+<p>Pop Up Delay Type（弹出延迟类型）=<strong>Random（随机）</strong></p>
+<p>Random Pop Up Minimum Time（随机弹出最短时间）=<strong>2.0 s</strong></p>
+<p>Random Pop Up Maximum Time（随机弹出最长）=<strong>10.0 s</strong></p>
+<p>Time Before Hiding Type（隐藏前等待类型）=<strong>Random（随机）</strong></p>
+<p>Random Hide Minimum Time（随机隐藏最短时间）=<strong>2.0 s</strong></p>
+<p>Random Hide Maximum Time（随机隐藏最长）=<strong>10.0 s</strong></p>
+<p>Start Position（起始位置）=<strong>Down（倒下）</strong></p>
+<p>这套设置让靶子开局倒着，之后随机弹起。</p>
+
+<h2 id="sec-5">添加屏障</h2>
+<p>为了管住玩家走位，不让玩家边打边摸到靶子跟前，做一道屏障把玩家挡在远处。</p>
+<ul>
+<li>在<strong>内容浏览器</strong>里搜索 <strong>barrier</strong>。</li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/c22c1638-8b66-4409-b40e-1d1c81ca237f?resizing_type=fit" alt="搜索屏障原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/c22c1638-8b66-4409-b40e-1d1c81ca237f?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p><em>在搜索栏输入 barrier。</em></p>
+<ul>
+<li>把<strong>屏障（Barrier）</strong>设备拖进视口，放在靶子设备前面。</li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/a814091f-cb62-4fd1-8924-caaccf0a39af?resizing_type=fit" alt="添加屏障设备原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/a814091f-cb62-4fd1-8924-caaccf0a39af?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p><em>给视口添加屏障设备。</em></p>
+<ul>
+<li>在<strong>细节</strong>面板的<strong>用户选项（User Options）</strong>下，设 <strong>Barrier Depth（屏障进深）</strong>、<strong>Barrier Width（屏障宽度）</strong>、<strong>Barrier Height（屏障高度）</strong>，让屏障和射击场区域一样大，用<strong>变换箭头</strong>按需摆位置。</li>
+<li>打开 <strong>Barrier Material（屏障材质）</strong>下拉菜单，选 <strong>Clear（透明）</strong>，屏障就透亮了。</li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/03109e07-d0c1-406f-a381-56c2978205c4?resizing_type=fit" alt="选择透明屏障材质原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/03109e07-d0c1-406f-a381-56c2978205c4?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p><em>选择透明屏障材质，去掉屏障上的图案。</em></p>
+<ul>
+<li>往下滚到 <strong>Block Weapon Fire（阻挡武器开火）</strong>，<strong>取消勾选</strong>。</li>
+</ul>
+<p>玩家出生后可以在屏障后的区域闲逛，但进不了射击场区域。</p>
+
+<h2 id="sec-6">下一步</h2>
+<ul>
+<li><a href="first-island-04-playtest-your-island-in-fortnite.html">4. 试玩你的岛屿：看看试玩为什么是游戏设计与开发的关键一环。</a></li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/07ce08f1-02b8-40b5-9f91-e1d881c4d0cc?resizing_type=fit&width=640&height=640" alt="试玩你的岛屿原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/07ce08f1-02b8-40b5-9f91-e1d881c4d0cc?resizing_type=fit&width=640&height=640" target="_blank" rel="noopener">查看原图</a></div></figure>
+
+<div class="pager"><a href="09-build-your-first-island-in-fortnite.html"><small>← 返回父教程</small>构建你的第一个岛屿</a><a href="sub-index.html"><small>子教程索引 →</small>全部子教程</a></div>
+</article><nav class="doc-toc" aria-label="本页内容"><b>本页内容</b><a href="#sec-1">用到的设备</a><a href="#sec-2">添加移动靶</a><a href="#sec-3">添加更多靶子</a><a href="#sec-4">添加固定靶</a><a href="#sec-5">添加屏障</a><a href="#sec-6">下一步</a></nav></div>
+</div></div>
+</div>
+<footer class="edc-footer"><div class="inner"><img src="../assets/logo-epic.svg" alt="Epic Games"><span>Fortnite 文档中文镜像 · UE教程/ · 本地打开 index.html 阅读 · 翻译整理自 Epic 官方文档，仅供学习交流</span></div></footer>
+</body>
+</html>

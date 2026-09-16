@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>星球大战™团队征服模式（Fortnite） | Fortnite 文档中文镜像</title>
+<link rel="stylesheet" href="../assets/epic.css">
+<link rel="stylesheet" href="../assets/patch.css">
+<link rel="icon" href="../assets/logo-epic.svg">
+</head>
+<body class="theme-fortnite">
+<div class="edc-topbar"><div class="edc-topbar-inner"><img class="edc-logo" src="../assets/logo-epic.svg" alt="Epic Games"><span class="edc-brand">Epic Games <b>开发者社区</b></span><span class="edc-nav"><a href="../index.html">文档首页</a><a href="sub-index.html">子教程索引</a><a href="https://dev.epicgames.com/documentation/fortnite/star-wars-team-conquest-in-fortnite" target="_blank" rel="noopener">英文原文</a></span></div></div>
+<div class="site-container">
+<aside class="site-nav"><div class="documents-tree"><nav><ul class="contents-table">
+<div class="tree-sec">A · 最新动态</div>
+<a class="tree-link" href="01-42-00-fortnite-ecosystem-updates-and-release-notes.html">01. 42.00 生态系统更新与发行说明</a>
+<a class="tree-link" href="02-custom-items-and-inventory-overview-in-fortnite.html">02. 自定义物品与背包总览</a>
+<a class="tree-link" href="03-in-island-transactions-in-fortnite.html">03. 岛内交易</a>
+<a class="tree-link" href="04-mobile-development-in-fortnite.html">04. 移动端开发</a>
+<a class="tree-link" href="05-inputs-in-fortnite.html">05. 输入系统</a>
+<a class="tree-link" href="06-ability-system-in-unreal-editor-for-fortnite.html">06. 能力系统 Ability System</a>
+<a class="tree-link" href="07-partybased-gameplay-using-the-social-synergy-api-in-fortnite.html">07. 社交协同 API 与小队玩法</a>
+<a class="tree-link" href="08-scene-graph-in-unreal-editor-for-fortnite.html">08. 场景图 Scene Graph</a>
+<div class="tree-sec">B · 入门</div>
+<a class="tree-link" href="09-build-your-first-island-in-fortnite.html">09. 构建你的第一个岛屿</a>
+<a class="tree-link" href="10-onboarding-guide-to-programming-with-verse-in-unreal-editor-for-fortnite.html">10. Verse 编程入门指南</a>
+<a class="tree-link" href="11-building-basics-in-fortnite-creative.html">11. 建造基础</a>
+<div class="tree-sec">C · 品牌合集</div>
+<a class="tree-link active" href="12-star-wars-islands-in-fortnite.html">12. 星球大战™岛屿</a>
+<a class="tree-link" href="13-kpop-demon-hunters-islands-in-fortnite.html">13. KPop 猎魔团岛屿</a>
+<a class="tree-link" href="14-building-lego-islands-in-fortnite.html">14. 乐高®岛屿</a>
+<a class="tree-link" href="15-the-walking-dead-universe-islands-in-unreal-editor-for-fortnite.html">15. 行尸走肉宇宙岛屿</a>
+<a class="tree-link" href="16-teenage-mutant-ninja-turtle-islands-in-unreal-editor-for-fortnite.html">16. 忍者神龟岛屿</a>
+<a class="tree-link" href="17-squid-game-islands-in-fortnite.html">17. 鱿鱼游戏岛屿</a>
+<div class="tree-sec">D · 开发者成功</div>
+<a class="tree-link" href="18-using-creator-portal-in-fortnite-creative.html">18. 使用创作者门户</a>
+<a class="tree-link" href="19-island-moderation-and-guidelines-in-fortnite-creative.html">19. 岛屿审核与准则</a>
+<div class="tree-sec">E · 协作</div>
+<a class="tree-link" href="20-creating-teams-in-creator-portal-in-unreal-editor-for-fortnite.html">20. 在创作者门户创建团队</a>
+<a class="tree-link" href="21-adding-playtesters-in-fortnite-creative.html">21. 添加试玩测试员</a>
+<a class="tree-link" href="22-playtesting-your-island-in-unreal-editor-for-fortnite.html">22. 试玩测试你的岛屿</a>
+<a class="tree-link" href="23-collaborating-in-unreal-editor-for-fortnite.html">23. 在 UEFN 中协作</a>
+<a class="tree-link" href="24-lore-version-control-in-unreal-editor-for-fortnite.html">24. Lore 版本控制</a>
+<a class="tree-link" href="25-conflicts-in-lore-version-control-in-unreal-editor-for-fortnite.html">25. Lore 中的冲突</a>
+<a class="tree-link" href="26-version-history-and-conflict-resolution-in-unreal-editor-for-fortnite.html">26. 分支历史与冲突解决</a>
+<div class="tree-sec">F · 游戏示例</div>
+<a class="tree-link" href="27-build-a-game-in-unreal-editor-for-fortnite.html">27. 构建一款游戏</a>
+<a class="tree-link" href="28-unreal-editor-for-fortnite-starter-templates.html">28. UEFN 新手模板</a>
+<div class="tree-sec">G · Verse</div>
+<a class="tree-link" href="29-learn-the-basics-of-writing-code-in-verse.html">29. 从零学习 Verse 代码基础</a>
+<div class="tree-sec">H · 专注领域</div>
+<a class="tree-link" href="30-lighting-in-unreal-editor-for-fortnite.html">30. 灯光</a>
+<a class="tree-link" href="31-animation-and-cinematics-in-unreal-editor-for-fortnite.html">31. 动画与过场动画</a>
+<a class="tree-link" href="32-modeling-in-unreal-editor-for-fortnite.html">32. 建模</a>
+<a class="tree-link" href="33-materials-in-unreal-editor-for-fortnite.html">33. 材质</a>
+<a class="tree-link" href="34-environments-and-landscapes-in-unreal-editor-for-fortnite.html">34. 环境与地形</a>
+<a class="tree-link" href="35-audio-in-unreal-editor-for-fortnite.html">35. 音频</a>
+<a class="tree-link" href="36-visual-effects-in-unreal-editor-for-fortnite.html">36. 视觉特效</a>
+</ul></nav></div></aside>
+<div class="page-content"><div class="page-document has-theme-bg">
+<header class="section-page-header"><nav><ol class="breadcrumb is-shrinkable"><li class="breadcrumb-item is-root"><img src="../assets/logo-epic.svg" alt="Epic Games"><a href="../index.html">Developer</a></li><li class="breadcrumb-item"><a href="../index.html">Fortnite 文档</a></li><li class="breadcrumb-item"><a href="12-star-wars-islands-in-fortnite.html">星球大战™岛屿</a></li><li class="breadcrumb-item active" aria-current="page"><span class="text-truncate">星球大战™团队征服模式（Fortnite）</span></li></ol></nav><h1>星球大战™团队征服模式（Fortnite）</h1><p class="text-secondary mb-0">加入 UEFN 团队征服模板，学习使用星球大战™功能集打造玩家期待的身临其境的战斗场景：义军夺点，帝国死守。</p><p class="doc-meta">英文原标题：Star Wars Team Conquest In Fortnite · <a href="https://dev.epicgames.com/documentation/fortnite/star-wars-team-conquest-in-fortnite" target="_blank" rel="noopener">查看英文原文</a> · 社区翻译镜像，仅供学习</p></header>
+<div class="doc-columns"><article class="doc-article">
+<p>加入虚幻编辑器 Fortnite 版（UEFN）的<strong>团队征服（Team Conquest）</strong>模板，学习使用<strong>星球大战™（<i>Star Wars</i>™）</strong>功能集，打造玩家期待的身临其境的战斗场景。该模板展示了一种征服游戏模式：进攻方——义军（Rebels）夺取据点，防守方——帝国（Empire）阻挠义军的进攻。</p>
+<p>星球大战以银河中史诗般的战斗闻名。该模板重点介绍创建动态队伍对战战场玩法的功能与工作流，你还可以进一步扩展模板，让体验独属于你。</p>
+<p>利用该模板更好地理解如何打造符合品牌调性、引起粉丝玩家共鸣的战斗。你可以把本指南作为模板的配套读物，深入了解以下内容：</p>
+<ul>
+<li>游戏模式设置</li>
+<li>占领区域</li>
+<li>重生点与位置选择</li>
+<li>战场设计</li>
+</ul>
+<h2 id="sec-1">开始使用</h2>
+<p>该学习模板仅在 UEFN 中可用。</p>
+<p>访问模板的方法：</p>
+<ul>
+<li>打开 UEFN。</li>
+<li>在项目浏览器（Project Browser）中，点击 <strong>Brand Templates &gt; <i>Star Wars</i>™ &gt; Team Conquest</strong>。</li>
+<li>创建新项目，项目会在 UEFN 中启动。</li>
+</ul>
+<p>模板在 <strong>All &gt; <i>Star Wars</i>™ Content</strong> 中包含项目专属文件与功能集。关于创建项目与使用模板的更多信息，请参阅<a href="https://dev.epicgames.com/documentation/fortnite/accessing-brand-content-in-fortnite" target="_blank" rel="noopener">访问品牌内容（Accessing Brand Content）</a>。</p>
+<p>为获得模板的最佳体验，请把编辑器与一个 Fortnite 游戏客户端实例（<a href="https://dev.epicgames.com/documentation/fortnite/user-interface-reference-for-unreal-editor-for-fortnite#8-live-edit-options" target="_blank" rel="noopener">实时编辑（live edit）</a>会话）配合使用。你可以启用实时编辑，在探索的同时测试功能。</p>
+<p>在 Fortnite 客户端中，你可以用主工具栏中的<a href="https://dev.epicgames.com/documentation/en-us/fortnite/user-interface-reference-for-unreal-editor-for-fortnite#8-team-connected-session" target="_blank" rel="noopener">队伍连接会话（Team Connected Session）</a>选项，把当前视角设为 UEFN 视口：点击<strong>三人小像图标</strong>，再点击 <strong>Set Viewport Camera to Player View</strong>。</p>
+<h3>公告牌（Billboards）</h3>
+<p>模板包含讲解游戏模式关键特性的公告牌。在编辑器中查看公告牌，了解设备功能与游戏流程概念。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/b8aa0cc9-a113-4ddb-8ecb-fa320d778479?resizing_type=fit" alt="含模板解析的公告牌" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/b8aa0cc9-a113-4ddb-8ecb-fa320d778479?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>使用<a href="https://dev.epicgames.com/documentation/fortnite/fortnite-glossary#outliner-panel" target="_blank" rel="noopener">大纲视图（Outliner）</a>浏览公告牌，查看设计该项目用到的全部资产。你可以用快捷键 <strong>0</strong> 跳到视口中的第一块公告牌。</p>
+<p>加载模板时公告牌文字可能不显示，可尝试重新加载模板来查看文字。</p>
+<h2 id="sec-2">团队征服玩法</h2>
+<p>战斗发生在一颗塔图因风格的星球上，正值义军与风暴兵交锋。玩家被分为两队：义军或帝国。进入游戏重生后，玩家<a href="https://dev.epicgames.com/documentation/en-us/fortnite/fortnite-glossary#:~:text=Click%C2%A0Save.-,outfit,-A%20character%27s%20overall" target="_blank" rel="noopener">服装（outfits）</a>会自动更换为代表所属队伍的样式，进一步奠定战斗的叙事基调。</p>
+<p>信标（Beacon）设备把两队指引到第一个占领区。义军的目标是在计时结束前夺下全部区域，帝国则必须守住。夺下第一个区域后，义军队的一名玩家会变身为英雄角色，例如楚巴卡（Chewbacca）。这些是能给队伍带来优势的首领级角色。第一片区域还会解锁载具，随后第二个占领区被高亮。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/3cc1c27a-0b52-4dcc-ab9a-c1d5d8af3cd9?resizing_type=fit" alt="帝国队伍" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/3cc1c27a-0b52-4dcc-ab9a-c1d5d8af3cd9?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>整局游戏中，战地联络员 NPC 会播报占领区战况，并询问玩家希望在哪里重生。流程不断重复，直至最后一个占领区被夺下或时间耗尽。防守方只要在倒计时走完前阻止对方夺下全部区域即获胜。</p>
+<p>使用的设备：</p>
+<ul>
+<li>60 x <a href="https://dev.epicgames.com/documentation/fortnite/using-ai-patrol-path-node-devices-in-fortnite-creative" target="_blank" rel="noopener">AI 巡逻路径节点（AI Patrol Path Node）</a></li>
+<li>8 x <a href="https://dev.epicgames.com/documentation/en-us/fortnite/using-the-star-wars-vehicle-devices-in-fortnite" target="_blank" rel="noopener">装甲突击坦克（Armored Assault Tank）</a></li>
+<li>4 x <a href="https://dev.epicgames.com/documentation/fortnite/using-ascender-devices-in-fortnite-creative" target="_blank" rel="noopener">上升器（Ascender）</a></li>
+<li>3 x <a href="https://dev.epicgames.com/documentation/fortnite/using-beacon-devices-in-fortnite-creative" target="_blank" rel="noopener">信标（Beacon）</a></li>
+<li>3 x <a href="https://dev.epicgames.com/documentation/fortnite/using-capture-area-devices-in-fortnite" target="_blank" rel="noopener">占领区域（Capture Area）</a></li>
+<li>1 x <a href="https://dev.epicgames.com/documentation/fortnite/using-class-designer-devices-in-fortnite-creative" target="_blank" rel="noopener">职业设计器（Class Designer）</a></li>
+<li>4 x <a href="https://dev.epicgames.com/documentation/fortnite/using-the-conversation-device-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">对话（Conversation）</a></li>
+<li>1 x <a href="using-day-sequence-devices-in-unreal-editor-for-fortnite.html">日间序列（Day Sequence）</a></li>
+<li>4 x <a href="star-wars-team-conquest-in-fortnite.html">DF.9 炮塔生成器（DF.9 Turret Spawner）</a></li>
+<li>2 x <a href="https://dev.epicgames.com/documentation/fortnite/using-disguise-devices-in-fortnite" target="_blank" rel="noopener">伪装（Disguise）</a></li>
+<li>2 x <a href="https://dev.epicgames.com/documentation/fortnite/using-end-game-devices-in-fortnite-creative" target="_blank" rel="noopener">终局（End Game）</a></li>
+<li>14 x <a href="https://dev.epicgames.com/documentation/fortnite/using-guard-spawner-devices-in-fortnite-creative" target="_blank" rel="noopener">守卫生成器（Guard Spawner）</a></li>
+<li>6 x <a href="https://dev.epicgames.com/documentation/fortnite/using-hero-devices-in-fortnite" target="_blank" rel="noopener">英雄（Hero）</a></li>
+<li>6 x <a href="https://dev.epicgames.com/documentation/fortnite/using-hud-message-devices-in-fortnite-creative" target="_blank" rel="noopener">HUD 消息（HUD Message）</a></li>
+<li>25 x <a href="https://dev.epicgames.com/documentation/fortnite/using-player-spawn-pad-devices-in-fortnite-creative" target="_blank" rel="noopener">玩家生成器（Player Spawner）</a></li>
+<li>12 x <a href="https://dev.epicgames.com/documentation/fortnite/using-teleporter-devices-in-fortnite-creative" target="_blank" rel="noopener">传送器（Teleporter）</a></li>
+<li>1 x <a href="https://dev.epicgames.com/documentation/fortnite/using-timer-devices-in-fortnite-creative" target="_blank" rel="noopener">计时器（Timer）</a></li>
+<li>2 x <a href="https://dev.epicgames.com/documentation/en-us/fortnite/using-the-star-wars-vehicle-devices-in-fortnite" target="_blank" rel="noopener">TIE 战机生成器（TIE Fighter Spawner）</a></li>
+<li>1 x <a href="https://dev.epicgames.com/documentation/fortnite/using-switch-devices-in-fortnite-creative" target="_blank" rel="noopener">开关（Switch）</a></li>
+<li>2 x <a href="https://dev.epicgames.com/documentation/en-us/fortnite/using-the-star-wars-vehicle-devices-in-fortnite" target="_blank" rel="noopener">X 翼战机生成器（X-wing Spawner）</a></li>
+</ul>
+<p>该模板没有使用 Verse 的设备，但你可以用 <a href="creating-your-own-component-using-verse-in-unreal-editor-for-fortnite.html">Verse</a> 与<a href="getting-started-in-scene-graph-in-fortnite.html">场景图（Scene Graph）</a>扩展功能。</p>
+<h2 id="sec-3">游戏模式设置</h2>
+<p>游戏逻辑通过岛屿设置、计时器设备、终局设备与占领区域设备实现。</p>
+<h3>岛屿设置</h3>
+<p>团队征服的关键在于战场规模，以及有足够玩家来征服一座岛屿。为搭建基础玩法，调整了以下设置；未列出的设置均保持默认值。</p>
+<table><thead><tr><th>岛屿设置</th><th>生效值</th><th>说明</th></tr></thead><tbody>
+<tr><td><strong>最大玩家数（Max Players）</strong></td><td>12</td><td>一场对局中可实际参与的玩家总数。队伍规模通过巡逻 NPC 扩充。</td></tr>
+<tr><td><strong>队伍（Teams）</strong></td><td>Team Index = 2</td><td>把游戏限定为两队，并按索引号区分。</td></tr>
+<tr><td><strong>队伍规模（Team Size）</strong></td><td>Split Evenly</td><td>把最大玩家数在两队间平分，目标是保持队伍规模均衡、避免劣势。</td></tr>
+<tr><td><strong>总回合数（Total Rounds）</strong></td><td>1</td><td>把游戏设为 1 回合。增加回合数可鼓励玩家留在对局中，而不是返回大厅。</td></tr>
+<tr><td><strong>中途加入行为（Join in Progress Behavior）</strong></td><td>Spawn Immediately</td><td>玩家可加入进行中的对局。</td></tr>
+<tr><td><strong>重生位置（Spawn Location）</strong></td><td>Spawn Pads</td><td>让玩家在放置了玩家生成器的指定位置重生。</td></tr>
+<tr><td><strong>生成垫选择（Spawn Pad Selection）</strong></td><td>Random</td><td>随机选择把玩家送往哪个生成垫。</td></tr>
+<tr><td><strong>重生时间（Respawn Time）</strong></td><td>5s</td><td>玩家被淘汰后等待重生的秒数。调整该数值会影响游戏节奏，例如延长等待可作为被淘汰的代价。</td></tr>
+<tr><td><strong>倒地不起（Down But Not Out）</strong></td><td>Disabled</td><td>把玩家送回其生成垫选择战场位置，也给对方队伍留下翻盘机会。</td></tr>
+<tr><td><strong>被淘汰玩家的物品（Eliminated Player's Items）</strong></td><td>Keep</td><td>玩家被淘汰后保留配装，变身为英雄角色的玩家除外。</td></tr>
+<tr><td><strong>允许建造模式（Allow Build Mode）</strong></td><td>None</td><td>禁止玩家建造。</td></tr>
+</tbody></table>
+<p>在岛屿设置中，<strong>中途加入行为（Join In-Progress Behavior）</strong>设为 <strong>Spawn Immediately</strong>，即玩家可加入进行中的对局。该设置便于测试，以及与朋友一起探索学习模板。为避免玩家错过剧情，你可以将其设为 <strong>Spectate</strong>。</p>
+<h3>终局设置</h3>
+<p>终局条件由<strong>终局（End Game）</strong>设备创建，每队各一个设备，用于设定获胜条件。</p>
+<ul>
+<li><strong>帝国队：</strong>计时耗尽时仍有未被夺下的区域即获胜。</li>
+<li><strong>义军队：</strong>在剩余时间内夺下全部三个区域即获胜。</li>
+</ul>
+<p><strong>计时器（Timer）</strong>设备控制对局时长，模板时长为 900 秒（15 分钟）。</p>
+<p>该设备设为对局开始时启用并倒计时；为防止玩家调整时间，<strong>Can Interact</strong> 已禁用。</p>
+<h2 id="sec-4">占领区域与事件触发</h2>
+<p>游戏的核心流程围绕占领区域（Capture Area）设备展开。用这些设备可以创建可供队伍争夺的区域；这些区域是战斗的心脏——帝国队必须避免区域被义军队夺走控制权。</p>
+<p>当区域控制权变更时，会触发玩法要素，例如队伍重生位置、新增载具生成，以及义军队获得英雄（Hero）设备角色。</p>
+<h3>占领区域设备设置</h3>
+<p>设备的设置定义进攻方与防守方，以及主要的事件触发。分配依据岛屿设置中的队伍（Team）选项值。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/4b65583c-a48a-4176-9a8f-802f8f0d6184?resizing_type=fit" alt="区域 A 的占领区域设置" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/4b65583c-a48a-4176-9a8f-802f8f0d6184?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/1ed5f974-d181-43d8-88a1-f02b357e8104?resizing_type=fit" alt="区域 B 的占领区域设置" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/1ed5f974-d181-43d8-88a1-f02b357e8104?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/368f1785-3f37-4c37-bf96-a5b3c5a5b0c2?resizing_type=fit" alt="区域 C 的占领区域设置" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/368f1785-3f37-4c37-bf96-a5b3c5a5b0c2?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>占领区域设备主要调整的选项如下表所示：</p>
+<table><thead><tr><th>选项</th><th>设置值</th><th>说明</th></tr></thead><tbody>
+<tr><td><strong>起始队伍（Starting Team）</strong></td><td>Team Index = 2</td><td>决定哪队开局拥有该区域。<strong>Team Index = 2</strong> 表示帝国队拥有该区域。</td></tr>
+<tr><td><strong>对局中可见（Visible During Game）</strong></td><td>Enabled</td><td>显示占领进度。</td></tr>
+<tr><td><strong>可被哪队占领（Can Be Captured By）</strong></td><td>Team Index = 1</td><td>决定哪队可以争夺该区域。<strong>Team Index = 1</strong> 代表义军队。</td></tr>
+<tr><td><strong>强调色类型（Accent Color Type）</strong></td><td>Blue</td><td>标识哪队控制该区域。</td></tr>
+<tr><td><strong>控制时间（Control Time）</strong></td><td>15s</td><td>玩家需站在区域内多少秒才能夺取控制权。</td></tr>
+<tr><td><strong>启用阶段（Enable During Phase）</strong></td><td>Gameplay only</td><td>设为仅在玩法阶段激活。</td></tr>
+<tr><td><strong>中立化时间覆盖（Neutralize Time Override）</strong></td><td>No Neutralize</td><td>争夺方夺取区域前无需把区域打回中立状态。</td></tr>
+<tr><td><strong>进度衰减类型（Progress Decay Type）</strong></td><td>No Decay</td><td>争夺方离开区域不损失进度，这给帝国队带来压力，必须拦住义军。</td></tr>
+<tr><td><strong>边界使用样条形状（Use Spline Shape for Boundary）</strong></td><td>Enabled</td><td>在设备周围激活可调整的样条点，创建自定义形状。模板中区域形状已按周围结构调整。</td></tr>
+</tbody></table>
+<p>调整形状与控制时间，体会玩家争夺区域时的手感。你可以收紧形状以贴合特定物体，就像有人试图偷走它或修理机械零件。时间极大影响游戏流程：太快，防守方会觉得毫无胜算；反之争夺方亦然。</p>
+<p>为保证游戏模式逻辑流转，只有第一个占领区域设备应在对局开始时激活，其余保持禁用，直到义军队夺下该区域。设备的事件触发为 On Control Change Stats 与 On Control Change。</p>
+<ul>
+<li><strong>On Control Change Stats：</strong>三个设备都激活各自队伍的对应 HUD 消息，通知区域正在被占领。</li>
+<li><strong>On Control Change：</strong>在三个设备之间启用/禁用多种功能，主要触发对象为英雄（Hero）设备、载具与重生点。</li>
+</ul>
+<p>你可以在相关设备的 Functions 部分调整为队伍启用/禁用的功能，并将其指定给 On Control Change 选项。</p>
+<p>关于设备及其事件使用的更多信息，请参阅<a href="using-devices-in-fortnite.html">使用设备（Using Devices）</a>。</p>
+<h3>英雄变身</h3>
+<p>用拥有特殊配装与能力的英雄角色充实参与感，玩家可变身为他们。英雄（Hero）设备让玩家有机会成为传奇星球大战角色：</p>
+<ul>
+<li>楚巴卡（Chewbacca）</li>
+<li>蕾伊·天行者（Rey Skywalker）</li>
+<li>帕尔帕廷皇帝（Emperor Palpatine）</li>
+<li>达斯·维达（Darth Vader）</li>
+<li>曼达洛人（The Mandalorian）</li>
+<li>莱娅·奥加纳（Leia Organa）</li>
+</ul>
+<p>每名角色的生命与护盾提升幅度各不相同，移动速度与跳跃有增有减，全部角色拥有无限体力。关于角色配装与数值的更多信息，请参阅<a href="https://dev.epicgames.com/documentation/fortnite/using-hero-devices-in-fortnite" target="_blank" rel="noopener">英雄设备（Hero Devices）</a>。</p>
+<p>夺下区域后，义军队的一名玩家会变身为其中一位英雄（首领级）角色。</p>
+<p>以下英雄按队伍与区域激活：</p>
+<ul>
+<li>占领区 A - 楚巴卡</li>
+<li>占领区 B - 蕾伊·天行者</li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/04898dc4-56b4-4e74-b5b1-c7d44395bf55?resizing_type=fit" alt="楚巴卡英雄变身" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/04898dc4-56b4-4e74-b5b1-c7d44395bf55?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>为体验挑选英雄时要考虑其配装。例如，若把曼达洛人设为在区域 A 激活，他增强的喷气背包会带来巨大优势，能快速赶往下一区域；而很可能仍在区域 A 的帝国队追赶机会大减。</p>
+<p>帝国队没有激活的英雄（从义军视角看是反派），但区域 B 与 C 中备有可设置的设备。你可以在达成某个目标后为帝国队激活，例如队伍达到一定淘汰数且区域 A 已被夺下。实现方式是搭配<a href="https://dev.epicgames.com/documentation/fortnite/using-stat-counter-devices-in-fortnite-creative" target="_blank" rel="noopener">统计计数器（Stat Counter）</a>与<a href="https://dev.epicgames.com/documentation/fortnite/using-visual-effect-powerup-devices-in-fortnite-creative" target="_blank" rel="noopener">视觉特效能量提升（Visual Effect Powerup）</a>等设备，用某种提示表示变身可用。</p>
+<h3>载具移动</h3>
+<p>地图各处分布着多种载具（含炮塔），助力移动并拉平双方差距。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/023e96b0-08ba-4321-a6b2-df4f3148f032?resizing_type=fit" alt="装甲突击坦克" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/023e96b0-08ba-4321-a6b2-df4f3148f032?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>载具与炮塔按以下顺序生成：</p>
+<ul>
+<li><strong>装甲突击坦克：</strong>义军队夺下第一个区域后生成。让双方都有机会穿越沙漠地带前往下一区域；区域 B 被夺下后禁用。位于区域 A。</li>
+<li><strong>DF.9 炮塔：</strong>区域 A 被夺下后解锁，为帝国队提供额外防御。位于区域 B。</li>
+<li><strong>X 翼战机：</strong>夺下第二个区域后解锁。若玩家选择在沙漠爬行者（Sandcrawler）重生，可乘它穿越地图。位于区域 A。</li>
+<li><strong>装甲突击坦克：</strong>区域 B 被夺下后解锁，提供从区域 B 到 C 的移动。 </li>
+<li>涡轮激光炮塔：对局开始即启用。敌方载具进入该区域时减速。位于区域 C。</li>
+<li><strong>TIE 战机：</strong>区域 B 被夺下后解锁。位于区域 C。</li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/10b63b17-0fce-4123-a4d4-357d759f5052?resizing_type=fit" alt="TIE 战机生成器" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/10b63b17-0fce-4123-a4d4-357d759f5052?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>每个载具设备都有一个占领区域设备连接到其 Enable 功能。</p>
+<p>关于设备的更多信息，请参阅<a href="https://dev.epicgames.com/documentation/fortnite/using-star-wars-vehicle-devices-in-fortnite" target="_blank" rel="noopener">STAR WARS™ 载具生成器设备</a>。</p>
+<h2 id="sec-5">重生系统</h2>
+<p>占领区域设备在被夺下时启用/禁用选定的重生点。这些点由玩家生成器、对话与传送设备连接而成。</p>
+<p>对局开始时，义军队在沙漠爬行者重生；每次被淘汰后都会先回到该点，再选择战场位置传送。帝国队在第一个占领区另一端重生，并一直在那里重生，直到第一个区域被夺下。</p>
+<h3>队伍伪装</h3>
+<p>初次进入游戏时，玩家服装会通过<strong>伪装（Disguise）</strong>设备更换为匹配队伍的样式，变身为<strong>平民（Civilian）</strong>或<strong>风暴兵（Stormtrooper）</strong>伪装。你可以把设备调为随机服装以增加队伍多样性，或更换服装组创建新队伍。</p>
+<p>为进一步让玩家沉浸于战场、强化星球大战主题，玩家的 HUD 经过重新设计。功能集中包含玩家界面的主题小部件，例如玩家图标与<a href="https://dev.epicgames.com/documentation/fortnite/fortnite-glossary#quick-bar" target="_blank" rel="noopener">快捷栏（quick-bar）</a>，位于 <strong><i>Star Wars</i>™ Content &gt; UI Player HUD</strong>。你可以把这些小部件添加到 <strong>HUD 控制器（HUD Controller）</strong>设备，即插即用。模板文件中已包含这些小部件的可编辑文件，可进一步自定义。由于玩家已通过伪装设备变身，HUD 控制器设备中不再保留玩家图标。</p>
+<p>在模板中激活主题 UI：</p>
+<ul>
+<li>在大纲视图中搜索并点击 <strong>HUD Controller</strong>。</li>
+<li>在细节（Details）面板中把优先级改为 <strong>High</strong>。</li>
+</ul>
+<p>关于功能集小部件与自制 UI 元素的更多信息，请参阅<a href="https://dev.epicgames.com/documentation/fortnite/star-wars-custom-ui-in-fortnite" target="_blank" rel="noopener">星球大战自定义 UI</a>与<a href="https://dev.epicgames.com/documentation/fortnite/ingame-user-interfaces-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">游戏内用户界面</a>。</p>
+<h3>设备设置</h3>
+<p>每队的初始玩家生成器设备数量等于岛屿设置中<strong>最大玩家数（Max Players）</strong>的一半。为每名玩家各配一个玩家生成器最为理想，可避免玩家重叠或空降堆叠。</p>
+<p>首次占领后，两队玩家在重生时会开始收到位置提示。提示由对话（Conversation）设备与存放对话文本及流程的对话库（conversation banks）创建。项目包含四个对话库资产，挂在对话设备上，位于项目文件夹 <strong>All &gt; [Project Name] &gt; Dialogue</strong>。对话库包含带位置选项（Response）的分支树，选项会触发树中对应的对话事件（Conversation Event）节点。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/b6f07d62-06e5-4b05-bde5-5f4ebbfcd601?resizing_type=fit" alt="对话库" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/b6f07d62-06e5-4b05-bde5-5f4ebbfcd601?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>关于设计自己的对话与绑定按钮的更多信息，请参阅<a href="https://dev.epicgames.com/documentation/fortnite/creating-conversations-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">创建对话（Creating Conversations）</a>。</p>
+<p>玩家通过传送器（Teleporter）设备前往在提示中选择的位置。每个区域各有一个对话设备，在占领后启用。</p>
+<p>创建重生提示并激活传送的方法：</p>
+<ul>
+<li>在对话设备上，把 <strong>Enable</strong> 功能连接到相关占领区域设备的 <strong>On Control Change</strong> 事件。</li>
+<li><strong>Conversation</strong> 选项添加其中一个对话库。</li>
+<li>玩家在<strong>玩家生成器（Player Spawner）</strong>设备上重生时激活对话；<strong>Initiate Conversation</strong> 功能挂在生成器的 On Player Spawned 事件上。</li>
+<li><strong>传送器（Teleporter）</strong>设备放置在指定位置。</li>
+<li><strong>Enable</strong> 功能连接到相关<strong>占领区域（Capture Area）</strong>设备的 <strong>On Control Change</strong> 事件。</li>
+<li><strong>Teleport</strong> 功能连接到相关<strong>占领区域（Capture Area）</strong>设备的 <strong>On Control Change</strong> 事件。</li>
+</ul>
+<p>传送设备目前可监听 10 个此类事件，两队重生点总数因此限制为 10 个，也就无需在每个位置放置多个玩家生成器设备。</p>
+<p>你还可以用位置选择提示扩展重生系统，例如区域被夺下后让帝国队选择回防位置、备战下一区域。此外，玩家生成器包含 Verse 实现的 Respawn The Player 功能，还有生成器组版本：给定目标玩家与一组生成器设备，它会从该子组中挑选最优者。</p>
+<h3>重生点选择与界面</h3>
+<p>通过对话设备创建界面，让战地联络员 NPC 提示玩家选择希望在战区的哪里重生。对话小部件可在项目文件夹 <strong>All &gt; [Project Name] &gt; UI &gt; Widgets &gt; Conversation</strong> 中访问。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/420349b2-1338-4e48-8015-f9043b5c6245?resizing_type=fit" alt="位置选择提示" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/420349b2-1338-4e48-8015-f9043b5c6245?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>战斗中会出现各种战况报告，例如义军夺下据点时。这些报告由 HUD 消息（HUD Message）设备创建，相关小部件位于 <strong>All &gt; [Project Name] &gt; UI &gt; Widgets &gt; HUDMessage</strong>。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/f0b1f6c6-8c37-43f5-adbb-ca8cfc49fa4e?resizing_type=fit" alt="战地联络员 HUD 消息" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/f0b1f6c6-8c37-43f5-adbb-ca8cfc49fa4e?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>了解更多请参阅<a href="https://dev.epicgames.com/documentation/fortnite/custom-conversation-ui-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">自定义对话 UI</a>。</p>
+<p>你可以用<a href="https://dev.epicgames.com/documentation/fortnite/migrating-template-assets-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">迁移工具（migration tool）</a>把这些小部件及其他模板资产添加到你的其他星球大战项目：如果想为其他游戏模式挑选资产，不必清空视口资产从零开始。</p>
+<h2 id="sec-6">设计战场</h2>
+<p>刻意选择重生位置与周围资产，有助于营造投身战斗的感觉。打造征服模式时，关卡与环境设计和游戏逻辑、机制同样重要，会影响玩家体验。</p>
+<p>战场采用线性关卡设计：两队都从区域 A 出发（并根据耗时情况）打到区域 B。环境设计围绕行进路线展开，定下主题基调并引导玩家在关卡中移动。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/399eba35-8329-424f-a5fb-140a50577d9a?resizing_type=fit" alt="团队征服线性关卡设计" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/399eba35-8329-424f-a5fb-140a50577d9a?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>你可以用更多品牌资产扩展设计。查看功能集可用性请参阅<a href="working-with-star-wars-islands-in-fortnite.html">使用 STAR WARS™ 岛屿</a>。</p>
+<h3>巡逻 NPC</h3>
+<p>每队都通过<strong>守卫生成器（Guard Spawner）</strong>设备加入非玩家角色（NPC），营造大规模团队感。NPC 的职业与服装匹配队伍主题。你可以用 <strong>AI 巡逻路径节点（AI Patrol Path Node）</strong>设备为 NPC 创建巡逻路线，NPC 会在区域巡逻，协助玩家作战并提升战力。</p>
+<p>与玩家生成器类似，守卫生成器会更新，让 NPC 进攻或防守新的占领区。守卫生成器放置在各区域，玩家进入该区域时激活。</p>
+<h3>位置与移动的队伍策略</h3>
+<p>队伍庞大时，考虑玩家扮演的不同角色，以及他们为占据优势可能前往地图何处，并围绕这些角色设计环境。例如，城镇景观为偏爱狙击的玩家提供制高点；第一区域之后的开阔地创造载具作战机会，也让帝国队有机会布防阻击义军进攻。</p>
+<p>用精心挑选的重生位置让玩家感觉正踏入战场，例如义军队从沙漠爬行者出发，帝国队在运兵船附近重生，这些设计选择都是有意的。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/897e670c-5bdd-4253-9b70-486a9b3a98dd?resizing_type=fit" alt="义军队重生位置" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/897e670c-5bdd-4253-9b70-486a9b3a98dd?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/7c0d8ffe-a2c8-442a-a547-5ff8e1f0b7bd?resizing_type=fit" alt="帝国队重生位置" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/7c0d8ffe-a2c8-442a-a547-5ff8e1f0b7bd?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>除载具外还有其他移动方式。第一区域之后，地图上放置了上升器（Ascender）设备，让玩家登高俯瞰战场。</p>
+<p>星球大战功能集还包含其他移动资产，例如可骑乘的汤汤（Tauntaun），以及两个版本的曼达洛人喷气背包。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/8aa76576-bb57-4ccd-901c-dfbc6d5e7586?resizing_type=fit" alt="汤汤坐骑" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/8aa76576-bb57-4ccd-901c-dfbc6d5e7586?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h3>环境设计</h3>
+<p>战斗设在被高大沙漠岩壁环绕的山谷中，焦点是前方的区域，以及远方歼星舰的景象。建筑结构方面，团队使用图库资产与预制件确立两队阵营。</p>
+<p>使用的主要预制件与图库：</p>
+<ul>
+<li>第一秩序（First Order）</li>
+<li>前哨站预制件与图库</li>
+<li>沙漠生物群系（Desert Biome）</li>
+</ul>
+<p>远方歼星舰旁还有星际战机与 X 翼战机交战，进一步夯实大规模战斗感。空战由 Dog Fight VFX Niagara 系统资产创建，资产包含舰船生成速率、缩放等可调参数，位于 <strong><i>Star Wars</i> Content™ &gt; VFX</strong>。了解更多请参阅<a href="star-wars-visual-effects-in-fortnite.html">STAR WARS™ 视觉特效</a>。</p>
+<p>为捕捉塔图因氛围，团队在天空加入了双星。该天空效果在<strong>世界设置（World Settings）</strong>面板中设置：<strong>Time of Day &gt; World Time of Day Manager &gt; DSA Binary Sun</strong>。</p>
+<p>你还可以用<a href="using-day-sequence-devices-in-unreal-editor-for-fortnite.html">日间序列（Day Sequence）</a>设备进一步调整天空观感。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/52554d46-7f38-46ad-8214-d2489a185381?resizing_type=fit" alt="世界设置面板" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/52554d46-7f38-46ad-8214-d2489a185381?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>关于设计景观与添加环境构件的更多信息，请参阅<a href="https://dev.epicgames.com/documentation/fortnite/star-wars-vistas-and-biome-environments-in-fortnite" target="_blank" rel="noopener">远景与生物群系环境（Vistas and Biome Environments）</a>。</p>
+<h2 id="sec-7">设计技巧</h2>
+<p>其他设计考量如下：</p>
+<ul>
+<li>在一片区域增设占领区，提高地图挑战：必须夺下多个区域才能守住该据点。</li>
+<li>在加载房间添加教学内容，像编辑器中的介绍公告牌那样告知玩家目标。你可以建造专属大厅空间，并把玩家生成器设备的 <strong>Enabled During Phase</strong> 选项设为 <strong>Pre-Game Only</strong>。</li>
+<li>为玩家提供地图与潜在重生点的电影化概览。了解更多请参阅<a href="making-cinematics-and-cutscenes-in-unreal-editor-for-fortnite.html">过场动画与片头（Cinematics and Cutscenes）</a>。</li>
+<li>若已是英雄的玩家又占领了区域，可以让他选择是否变身为新英雄，并把英雄名额让给下一位玩家。</li>
+<li>星球大战功能集包含众多角色，把他们加入关卡设计或过场动画以进一步定调，例如在战斗尾声加入收集零件的贾瓦人（Jawas）。</li>
+<li>用主题宝箱为占领区域生成特殊战利品，或提供打造自定义光剑的机会。关于为玩家提供光剑工作台的更多信息，请参阅<a href="star-wars-lightsabers-and-force-powers-in-fortnite.html">光剑与原力（Lightsabers and Force Powers）</a>。</li>
+<li>让玩家乘电影化载具入场，进一步烘托氛围。了解更多请参阅<a href="working-with-star-wars-islands-in-fortnite.html#cinematic-assets">《使用星球大战岛屿》的电影化资产（Cinematic Assets）</a>一节。</li>
+</ul>
+<h2 id="sec-8">相关文档</h2>
+<ul>
+<li><a href="starting-and-organizing-a-project-in-fortnite.html">启动并组织项目</a></li>
+<li><a href="working-with-star-wars-islands-in-fortnite.html">使用 STAR WARS™ 岛屿</a></li>
+<li><a href="https://dev.epicgames.com/documentation/fortnite/migrating-template-assets-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">迁移模板资产</a></li>
+<li><a href="https://dev.epicgames.com/documentation/fortnite/memory-and-optimization-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">内存与优化</a></li>
+</ul>
+<div class="pager"><a href="12-star-wars-islands-in-fortnite.html"><small>← 返回父教程</small>星球大战™岛屿</a><a href="sub-index.html"><small>子教程索引 →</small>全部子教程</a></div>
+</article><nav class="doc-toc" aria-label="本页内容"><b>本页内容</b><a href="#sec-1">开始使用</a><a href="#sec-2">团队征服玩法</a><a href="#sec-3">游戏模式设置</a><a href="#sec-4">占领区域与事件触发</a><a href="#sec-5">重生系统</a><a href="#sec-6">设计战场</a><a href="#sec-7">设计技巧</a><a href="#sec-8">相关文档</a></nav></div>
+</div></div>
+</div>
+<footer class="edc-footer"><div class="inner"><img src="../assets/logo-epic.svg" alt="Epic Games"><span>Fortnite 文档中文镜像 · UE教程/ · 本地打开 index.html 阅读 · 翻译整理自 Epic 官方文档，仅供学习交流</span></div></footer>
+</body>
+</html>

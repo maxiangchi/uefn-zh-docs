@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>荒漠统治（Deserted Domination）模板 | Fortnite 文档中文镜像</title>
+<link rel="stylesheet" href="../assets/epic.css">
+<link rel="stylesheet" href="../assets/patch.css">
+<link rel="icon" href="../assets/logo-epic.svg">
+</head>
+<body class="theme-fortnite">
+<div class="edc-topbar"><div class="edc-topbar-inner"><img class="edc-logo" src="../assets/logo-epic.svg" alt="Epic Games"><span class="edc-brand">Epic Games <b>开发者社区</b></span><span class="edc-nav"><a href="../index.html">文档首页</a><a href="sub-index.html">子教程索引</a><a href="https://dev.epicgames.com/documentation/fortnite/deserted-domination-template-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">英文原文</a></span></div></div>
+<div class="site-container">
+<aside class="site-nav"><div class="documents-tree"><nav><ul class="contents-table">
+<div class="tree-sec">A 最新动态</div><a class="tree-link" href="01-42-00-fortnite-ecosystem-updates-and-release-notes.html">01. 42.00 生态系统更新与发行说明</a><a class="tree-link" href="02-custom-items-and-inventory-overview-in-fortnite.html">02. 自定义物品与背包总览</a><a class="tree-link" href="03-in-island-transactions-in-fortnite.html">03. 岛内交易</a><a class="tree-link" href="04-mobile-development-in-fortnite.html">04. 移动端开发</a><a class="tree-link" href="05-inputs-in-fortnite.html">05. 输入系统</a><a class="tree-link" href="06-ability-system-in-unreal-editor-for-fortnite.html">06. 能力系统 Ability System</a><a class="tree-link" href="07-partybased-gameplay-using-the-social-synergy-api-in-fortnite.html">07. 社交协同 API 与小队玩法</a><a class="tree-link" href="08-scene-graph-in-unreal-editor-for-fortnite.html">08. 场景图 Scene Graph</a><div class="tree-sec">B 入门</div><a class="tree-link" href="09-build-your-first-island-in-fortnite.html">09. 构建你的第一个岛屿</a><a class="tree-link" href="10-onboarding-guide-to-programming-with-verse-in-unreal-editor-for-fortnite.html">10. Verse 编程入门指南</a><a class="tree-link" href="11-building-basics-in-fortnite-creative.html">11. 建造基础</a><div class="tree-sec">C 品牌合集</div><a class="tree-link" href="12-star-wars-islands-in-fortnite.html">12. 星球大战™岛屿</a><a class="tree-link" href="13-kpop-demon-hunters-islands-in-fortnite.html">13. KPop 猎魔团岛屿</a><a class="tree-link" href="14-building-lego-islands-in-fortnite.html">14. 乐高®岛屿</a><a class="tree-link" href="15-the-walking-dead-universe-islands-in-unreal-editor-for-fortnite.html">15. 行尸走肉宇宙岛屿</a><a class="tree-link" href="16-teenage-mutant-ninja-turtle-islands-in-unreal-editor-for-fortnite.html">16. 忍者神龟岛屿</a><a class="tree-link" href="17-squid-game-islands-in-fortnite.html">17. 鱿鱼游戏岛屿</a><div class="tree-sec">D 开发者成功</div><a class="tree-link" href="18-using-creator-portal-in-fortnite-creative.html">18. 使用创作者门户</a><a class="tree-link" href="19-island-moderation-and-guidelines-in-fortnite-creative.html">19. 岛屿审核与准则</a><div class="tree-sec">E 协作</div><a class="tree-link" href="20-creating-teams-in-creator-portal-in-unreal-editor-for-fortnite.html">20. 在创作者门户创建团队</a><a class="tree-link" href="21-adding-playtesters-in-fortnite-creative.html">21. 添加试玩测试员</a><a class="tree-link" href="22-playtesting-your-island-in-unreal-editor-for-fortnite.html">22. 试玩测试你的岛屿</a><a class="tree-link" href="23-collaborating-in-unreal-editor-for-fortnite.html">23. 在 UEFN 中协作</a><a class="tree-link" href="24-lore-version-control-in-unreal-editor-for-fortnite.html">24. Lore 版本控制</a><a class="tree-link" href="25-conflicts-in-lore-version-control-in-unreal-editor-for-fortnite.html">25. Lore 中的冲突</a><a class="tree-link" href="26-version-history-and-conflict-resolution-in-unreal-editor-for-fortnite.html">26. 分支历史与冲突解决</a><div class="tree-sec">F 游戏示例</div><a class="tree-link active" href="27-build-a-game-in-unreal-editor-for-fortnite.html">27. 构建一款游戏</a><a class="tree-link" href="28-unreal-editor-for-fortnite-starter-templates.html">28. UEFN 新手模板</a><div class="tree-sec">G Verse</div><a class="tree-link" href="29-learn-the-basics-of-writing-code-in-verse.html">29. 从零学习 Verse 代码基础</a><div class="tree-sec">H 专注领域</div><a class="tree-link" href="30-lighting-in-unreal-editor-for-fortnite.html">30. 灯光</a><a class="tree-link" href="31-animation-and-cinematics-in-unreal-editor-for-fortnite.html">31. 动画与过场动画</a><a class="tree-link" href="32-modeling-in-unreal-editor-for-fortnite.html">32. 建模</a><a class="tree-link" href="33-materials-in-unreal-editor-for-fortnite.html">33. 材质</a><a class="tree-link" href="34-environments-and-landscapes-in-unreal-editor-for-fortnite.html">34. 环境与地形</a><a class="tree-link" href="35-audio-in-unreal-editor-for-fortnite.html">35. 音频</a><a class="tree-link" href="36-visual-effects-in-unreal-editor-for-fortnite.html">36. 视觉特效</a>
+</ul></nav></div></aside>
+<div class="page-content"><div class="page-document has-theme-bg">
+<header class="section-page-header"><nav><ol class="breadcrumb is-shrinkable"><li class="breadcrumb-item is-root"><img src="../assets/logo-epic.svg" alt="Epic Games"><a href="../index.html">Developer</a></li><li class="breadcrumb-item"><a href="../index.html">Fortnite 文档</a></li><li class="breadcrumb-item"><a href="27-build-a-game-in-unreal-editor-for-fortnite.html">构建一款游戏</a></li><li class="breadcrumb-item active" aria-current="page"><span class="text-truncate">荒漠统治（Deserted Domination）模板</span></li></ol></nav><h1>荒漠统治（Deserted Domination）模板</h1><p class="text-secondary mb-0">荒漠统治（Deserted: Domination）是一款双队伍争夺目标点的统治类玩法：玩家使用占领区域（Capture Area）设备等设备展开据点争夺战，还能用 Verse 创建自定义设备。跟随本教程，你将学会在 UEFN 中制作进阶玩法，并接触关卡序列（Level Sequencing）与后期处理（Post Processing）等 UE5 特性。</p><p class="doc-meta">英文原标题：Deserted Domination Template In Unreal Editor For Fortnite · <a href="https://dev.epicgames.com/documentation/fortnite/deserted-domination-template-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">查看英文原文</a> · 社区翻译镜像，仅供学习</p></header>
+<div class="doc-columns"><article class="doc-article">
+
+<p><strong>荒漠统治（Deserted: Domination）</strong>是一款统治类（Domination）玩法：两支队伍的玩家为争夺目标点而战。这种玩法使用了<strong>占领区域（Capture Area）</strong>设备等设备，甚至还包括用 <strong>Verse</strong> 创建的自定义设备。</p>
+<p>跟随本教程，你将学会如何在虚幻编辑器 Fortnite 版（UEFN）中创建进阶玩法。此外，你还将接触到虚幻引擎 5（UE5）的特性，例如<a href="create-your-own-device-using-verse-in-unreal-editor-for-fortnite.html">关卡序列（Level Sequencing）</a>和<a href="https://dev.epicgames.com/documentation/unreal-engine/post-process-effects-in-unreal-engine?application_version=5.5" target="_blank" rel="noopener">后期处理（Post Processing）</a>。</p>
+<p>文中还会给出外部资源链接，帮助你学习 Verse 与 UE5 特性，以及我们涉及的其他内容。</p>
+<p>你可以在<strong>项目浏览器（Project Browser）</strong>的<strong>示例项目（Sample Projects）</strong>分区中找到 <strong>Deserted</strong>。</p>
+<p>以下是复刻这座岛屿所需的步骤概览：</p>
+<ul>
+<li>创建新项目，并<a href="https://dev.epicgames.com/documentation/fortnite/island-settings-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">修改岛屿设置（Island Settings）</a>来搭建游戏。</li>
+<li>为玩家生成编写一段 Verse 脚本。</li>
+<li>添加并自定义核心玩法设备。</li>
+<li>添加自定义生成系统。</li>
+<li>添加玩家配装。</li>
+<li>添加音效。</li>
+<li>添加视觉效果。</li>
+</ul>
+
+<h2 id="sec-1">创建新项目</h2>
+<p>请阅读我们的<a href="starting-and-organizing-a-project-in-fortnite.html">项目组织（Project Organization）</a>页面，了解有关创建新项目的更多信息。</p>
+<p>要设置岛屿设置，请从内容抽屉（Content Drawer）中放置一个岛屿设置（Island Settings）设备。</p>
+<p>按下表所示自定义其设置。</p>
+<table><thead><tr><th>选项</th><th>值</th><th>说明</th></tr></thead><tbody>
+<tr><td><strong>语音聊天范围（Voice Chat Scope）</strong></td><td>全部（All）</td><td>决定语音聊天允许在队伍内、允许所有玩家之间，还是完全不允许。</td></tr>
+<tr><td><strong>最大玩家数（Max Players）</strong></td><td>12</td><td>决定允许进入游戏的最大玩家数量。</td></tr>
+<tr><td><strong>队伍（Teams）</strong></td><td>队伍索引（Team Index）- 2</td><td>决定玩家将被分成几支队伍。</td></tr>
+<tr><td><strong>队伍人数（Team Size）</strong></td><td>平均分配（Split Evenly）</td><td>决定玩家如何在各队伍之间分配。</td></tr>
+<tr><td><strong>默认职业标识（Default Class Identifier）</strong></td><td>职业槽位（Class Slot）- 1</td><td>定义玩家在游戏开始时或职业被设置时的默认职业（Class）。</td></tr>
+<tr><td><strong>总回合数（Total Rounds）</strong></td><td>5</td><td>决定游戏结束前要进行多少回合。</td></tr>
+<tr><td><strong>队伍轮换（Team Rotation）</strong></td><td>开（True）</td><td>决定队伍的轮换频率。</td></tr>
+<tr><td><strong>队伍外观确定时机（Team Visuals Determined At）</strong></td><td>游戏开始时（Game Start）</td><td>决定队伍名称和颜色是每回合变化，还是在游戏开始时确定后保持不变。</td></tr>
+<tr><td><strong>时间限制（Time Limit）</strong></td><td>15.0</td><td>指定每一回合的时长；若只有一回合，则为整局游戏的时长。</td></tr>
+<tr><td><strong>结束比分（Score to End）</strong></td><td>500</td><td>当玩家或队伍达到指定分数时结束该回合。</td></tr>
+<tr><td><strong>仅在找到生成点时允许重生（Only Allow Respawn if Spawn Pads Found）</strong></td><td>开（True）</td><td>仅当存在有效的生成点时才允许玩家重生。</td></tr>
+<tr><td><strong>自动开始（Auto Start）</strong></td><td>30.0</td><td>指定游戏是否在所选时间后自动开始。</td></tr>
+<tr><td><strong>允许观战其他队伍（Allow Spectating Other Teams）</strong></td><td>允许（Allowed）</td><td>决定观战玩家是否可以观看其他队伍。</td></tr>
+<tr><td><strong>淘汰得分（Elimination Score）</strong></td><td>3.0</td><td>决定玩家淘汰另一名玩家时获得的分数。</td></tr>
+<tr><td><strong>助攻得分（Assist Score）</strong></td><td>1.0</td><td>决定玩家协助淘汰另一名玩家时获得的分数。</td></tr>
+<tr><td><strong>禁用玩家碰撞（Disable Player Collision）</strong></td><td>开（True）</td><td>决定玩家之间是会相互碰撞还是相互穿过。</td></tr>
+</tbody></table>
+
+<h2 id="sec-2">创建用于玩家生成的 Verse 脚本</h2>
+<p>你可以使用 Verse 来控制玩家生成器，使玩家始终生成在己方领地内（己方已占领的占领区域附近，或盟友附近的区域）。为此，需要将标准创意设备与 Verse 结合使用。</p>
+<p>按<a href="create-your-own-device-using-verse-in-unreal-editor-for-fortnite.html">此页面</a>所述添加一个新的 Verse 脚本，然后粘贴以下代码：</p>
+<pre><code># Copyright Epic Games, Inc. All Rights Reserved.
+using { /Fortnite.com/Devices }
+using { /Fortnite.com/Teams }
+using { /Verse.org/Simulation }
+using { /Verse.org/Simulation/Tags }
+## This device manages the player spawners
+## An intial set of spawners starts enabled
+## After a short time, the initial spawners are disabled</code></pre>
+<p>使用<a href="10-onboarding-guide-to-programming-with-verse-in-unreal-editor-for-fortnite.html">这份指南</a>了解有关 Verse 的更多信息。</p>
+<p>在本教程中，我们将使用 <a href="https://dev.epicgames.com/documentation/fortnite/verse-tags-in-fortnite" target="_blank" rel="noopener">Verse 标签（Verse tags）</a>来获取对其他创意设备的引用。</p>
+<p>接下来，编译该 Verse 脚本。</p>
+<p>在内容浏览器（Content Browser）中找到你创建的 <strong>DominationSpawnManager</strong> 设备，将其拖入世界中以自定义其设置。</p>
+<p>这些设置和新的 Verse 设备只有在编译之后才会出现。</p>
+
+<h2 id="sec-3">添加并自定义核心设备</h2>
+<h3>玩家生成点（Player Spawn Pad）设备</h3>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/32307fac-f2e9-47d4-a826-26eee89ce4a3?resizing_type=fit" alt="玩家生成点设备示例" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/32307fac-f2e9-47d4-a826-26eee89ce4a3?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p><a href="https://dev.epicgames.com/documentation/en-us/fortnite-creative/using-player-spawn-pad-devices-in-fortnite-creative" target="_blank" rel="noopener"><strong>玩家生成点（Player Spawn Pad）</strong></a>设备由 Verse 脚本控制，由脚本决定有效的生成位置。</p>
+<p>你将使用多种不同设置与功能的生成点。其中一些将通过 Verse 进行通信——通过启用或禁用来决定可行的生成位置。</p>
+<p>你总共需要 16 个初始生成器：队伍 1 八个，队伍 2 八个。把它们放置在开阔地带，它们仅用于每回合开始时的第一波生成。</p>
+<p>要自定义此设备，请执行以下操作：</p>
+<ul>
+<li>从内容抽屉（Content Drawer）中选择并放置一个玩家生成点（Player Spawn Pad）设备。</li>
+<li>按下表所示自定义其设置：</li>
+</ul>
+<table><thead><tr><th>选项</th><th>值</th><th>说明</th></tr></thead><tbody>
+<tr><td><strong>玩家队伍（Player Team）</strong></td><td>队伍索引（Team Index）/ 队伍 1 或队伍 2</td><td>设置队伍 1 或队伍 2 将生成在这个特定的生成器上。</td></tr>
+<tr><td><strong>用作岛屿起点（Use as Island Start）</strong></td><td>关（False）</td><td>此设备不会用作岛屿起点传送器。</td></tr>
+<tr><td><strong>游戏中可见（Visible in Game）</strong></td><td>关（False）</td><td>此设备在游戏过程中不可见。</td></tr>
+<tr><td><strong>优先级组（Priority Group）</strong></td><td>10</td><td>勾选优先级组（Priority Group）复选框。这是生成用的优先级，数字越小优先级越高。</td></tr>
+<tr><td><strong>显示敌人范围（Display Enemy Range）</strong></td><td>关（Off）</td><td>这是在编辑器中查看敌人范围检查（Enemy Range Check）的可视化器。默认全部设为关，即使未使用敌人范围检查也是如此。</td></tr>
+</tbody></table>
+<ul><li>按以下说明添加<a href="https://dev.epicgames.com/documentation/fortnite/verse-tags-in-fortnite" target="_blank" rel="noopener">Verse 标签（Verse Tags）</a>。Verse 标签可在游戏运行时找到标有特定标签的设备。</li></ul>
+<p>操作步骤如下。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/8375e727-c5d7-4f07-a3d7-f174fe9f3db3?resizing_type=fit" alt="VerseTagMarkup 标签设置面板" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/8375e727-c5d7-4f07-a3d7-f174fe9f3db3?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ul>
+<li>在<strong>细节（Details）</strong>面板中选择 <strong>VerseTagMarkup</strong>。</li>
+<li>在<strong>标签（Tags）</strong>下点击<strong>编辑（Edit）</strong>，打开一列 true/false 复选框。</li>
+<li>对于初始生成器，选择 initial 标签。确保每个生成器都有队伍 1 或队伍 2 的 <strong>TeamOwnership</strong>。</li>
+<li>将此设备复制粘贴 15 次（总共 16 个设备）。</li>
+</ul>
+<p>将一半设备放在地图一侧，并配一个占领区域（Capture Area）设备；另一半放在地图对侧，再配一个占领区域设备。在地图中央再放第三个占领区域设备。将这三个占领区域设备命名为 Capture Area_A 至 Capture Area_C。</p>
+<p>这些玩家生成器仅在游戏刚开始、被 Verse 禁用之前使用。</p>
+<p>Verse 标签可以在任何位置定义。本教程的标签定义在 <code>ProjectName.verse</code> 中（即以你的项目名命名的文件）。</p>
+<p>打开该文件并粘贴以下标签以完成设置。</p>
+<pre><code># Copyright Epic Games, Inc. All Rights Reserved.
+using { /Verse.org/Simulation/Tags }
+DominationSpawnTags&lt;public&gt; := module:
+    Tag_SpawnGroup&lt;public&gt;:= class(tag){}
+    Tag_SpawnGroup_Initial&lt;public&gt;:= class(Tag_SpawnGroup){}
+    Tag_SpawnGroup_GroupA&lt;public&gt;:= class(Tag_SpawnGroup){}
+    Tag_SpawnGroup_GroupB&lt;public&gt;:= class(Tag_SpawnGroup){}
+    Tag_SpawnGroup_GroupC&lt;public&gt;:= class(Tag_SpawnGroup){}</code></pre>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/b52b59ae-b9ee-4715-ad1d-c2bab269b8b5?resizing_type=fit" alt="分布在安全区域的生成器集群" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/b52b59ae-b9ee-4715-ad1d-c2bab269b8b5?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>如上图所示，将生成器集群放在远离战斗的安全区域。Verse 会根据脚本判断它们是否有效，并将其关闭或开启。</p>
+<p>红色玩家生成点是 Verse 控制的三组生成器之一。每组中有两个重叠的生成器，一个属于队伍 1，另一个属于队伍 2，地图上的其他位置也有同样的布置。</p>
+<p>生成点集群中白色的生成器称为备用生成器（Fallback Spawner）。当 Verse 检查时若没有其他有效位置，玩家就会生成在这里。</p>
+<p>你可以在地图上添加多组生成器，每组包含队伍 1 和队伍 2各一个。将生成组标记为 Group A、B 或 C，以表示它响应哪个占领区域。</p>
+<p>围绕与之关联的占领区域（Capture Area）设备来布置各组。</p>
+<p>要设置生成器组，请执行以下操作：</p>
+<ul>
+<li>在安全区域将两个生成点叠放在一起，一个分配给队伍 1，另一个分配给队伍 2。</li>
+<li>按下表所示自定义其设置。</li>
+</ul>
+<table><thead><tr><th>选项</th><th>值</th><th>说明</th></tr></thead><tbody>
+<tr><td><strong>玩家队伍（Player Team）</strong></td><td>队伍索引（Team Index）/ 1 或 2</td><td>将队伍索引（Team Index）设为队伍 1 或队伍 2，以生成对应队伍的玩家。</td></tr>
+<tr><td><strong>用作岛屿起点（Use as Island Start）</strong></td><td>关（False）</td><td>不会用作岛屿起点传送器。</td></tr>
+<tr><td><strong>游戏中可见（Visible in Game）</strong></td><td>关（False）</td><td>游戏过程中生成器不可见。</td></tr>
+<tr><td><strong>启用阶段（Enabled During Phase）</strong></td><td>无（None）</td><td>这些生成器仅由 Verse 使用，默认设为禁用。</td></tr>
+<tr><td><strong>优先级组（Priority Group）</strong></td><td>10</td><td>勾选优先级组（Priority Group）复选框。这是生成用的优先级，数字越小优先级越高。</td></tr>
+<tr><td><strong>敌人范围检查（Enemy Range Check）</strong></td><td>60</td><td>这是检查敌人以判断是否为有效生成点的距离。可根据地图大小调整：地图大就用大一些的区域，地图小就用小一些的区域。</td></tr>
+<tr><td><strong>显示敌人范围（Display Enemy Range）</strong></td><td>关（Off）</td><td>这是在编辑器中查看敌人范围检查的可视化器。默认全部设为关，即使未使用敌人范围检查也是如此。</td></tr>
+</tbody></table>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/b9f9c75a-cab6-4278-a02c-0fbc49e8115a?resizing_type=fit" alt="生成点 Verse 标签分组勾选示例" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/b9f9c75a-cab6-4278-a02c-0fbc49e8115a?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ul>
+<li>像上一节一样添加 Verse 标签，勾选以下复选框。</li>
+<li>占领点 A 周围的生成点勾选 <strong>GroupA</strong>。</li>
+<li>占领点 B 周围的生成点勾选 <strong>GroupB</strong>。</li>
+<li>占领点 C 周围的生成点勾选 <strong>GroupC</strong>。</li>
+<li>在刚放置的两个生成点旁边再放一个玩家生成点，作为备用生成器（Fallback Spawner）。</li>
+<li>按下表所示自定义其设置。</li>
+</ul>
+<table><thead><tr><th>选项</th><th>值</th><th>说明</th></tr></thead><tbody>
+<tr><td><strong>玩家队伍（Player Team）</strong></td><td>任意（Any）</td><td>将队伍索引（Team Index）设为队伍 1 或队伍 2，以生成对应队伍的玩家。</td></tr>
+<tr><td><strong>用作岛屿起点（Use as Island Start）</strong></td><td>关（False）</td><td>不会用作岛屿起点传送器。</td></tr>
+<tr><td><strong>游戏中可见（Visible in Game）</strong></td><td>关（False）</td><td>游戏过程中生成器不可见。</td></tr>
+<tr><td><strong>启用阶段（Enabled During Phase）</strong></td><td>始终（Always）</td><td>这些是玩家随时可用的有效生成器。</td></tr>
+<tr><td><strong>优先级组（Priority Group）</strong></td><td>20</td><td>勾选优先级组（Priority Group）复选框。这是生成用的优先级，数字越小优先级越高。</td></tr>
+<tr><td><strong>敌人范围检查（Enemy Range Check）</strong></td><td>60</td><td>这是检查敌人以判断是否为有效生成点的距离。可根据地图大小调整：地图大就用大一些的区域，地图小就用小一些的区域。</td></tr>
+<tr><td><strong>显示敌人范围（Display Enemy Range）</strong></td><td>关（Off）</td><td>这是在编辑器中查看敌人范围检查的可视化器。默认全部设为关，即使未使用敌人范围检查也是如此。</td></tr>
+</tbody></table>
+<ul><li>将此设备均匀地复制粘贴到地图各处，也可以放在与占领点关联的生成器相同的位置。</li></ul>
+<p>总共放置 16 个此类生成器，它们不受队伍限制。这意味着当一方占领全部 3 个据点时，被击败的敌人将随机出现在地图各处，而不是出现在可预测的区域。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/dc9ba043-85d2-414a-b694-73ee8590f504?resizing_type=fit" alt="备用生成器分布示意" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/dc9ba043-85d2-414a-b694-73ee8590f504?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>最后，还有许多用于<a href="building-pregame-lobbies-in-fortnite-creative.html">赛前大厅（pre-game lobby）</a>的生成点，玩家将在此等待游戏排队。总共有 16 个，放在为两队玩家建造的等待区域内。</p>
+<p>要设置这些设备，请执行以下操作：</p>
+<ul>
+<li>创建一个赛前大厅。</li>
+<li>在大厅中放置一个玩家生成点（Player Spawn Pad）设备。</li>
+<li>按下表所示自定义其设置。</li>
+</ul>
+<table><thead><tr><th>选项</th><th>值</th><th>说明</th></tr></thead><tbody>
+<tr><td><strong>玩家队伍（Player Team）</strong></td><td>无（None）</td><td>仅用作岛屿起点。</td></tr>
+<tr><td><strong>用作岛屿起点（Use as Island Start）</strong></td><td>开（True）</td><td>将用作赛前岛屿起点。</td></tr>
+<tr><td><strong>游戏中可见（Visible in Game）</strong></td><td>关（False）</td><td>游戏过程中生成器不可见。</td></tr>
+<tr><td><strong>启用阶段（Enabled During Phase）</strong></td><td>仅赛前（Pre-Game Only）</td><td>决定该设备在哪些游戏阶段启用。</td></tr>
+<tr><td><strong>优先级组（Priority Group）</strong></td><td>80</td><td>勾选优先级组（Priority Group）复选框。这些生成点在赛前阶段始终使用。</td></tr>
+<tr><td><strong>显示敌人范围（Display Enemy Range）</strong></td><td>关（Off）</td><td>这是在编辑器中查看敌人范围检查的可视化器。默认全部设为关，即使未使用敌人范围检查也是如此。</td></tr>
+</tbody></table>
+<ul><li>将此设备复制粘贴 15 次。</li></ul>
+
+<h3>占领区域（Capture Area）设备</h3>
+<p>接下来，按以下步骤自定义占领区域（Capture Area）设备：</p>
+<ul>
+<li>编辑已放置的占领区域（Capture Area）设备。</li>
+<li>按下表所示自定义其设置。</li>
+</ul>
+<table><thead><tr><th>选项</th><th>值</th><th>说明</th></tr></thead><tbody>
+<tr><td><strong>占领半径（Capture Radius）</strong></td><td>0.45</td><td>设备周围占领区域的半径（以地块为单位）。</td></tr>
+<tr><td><strong>游戏中可见（Visible During Game）</strong></td><td>关（False）</td><td>此设备的底座在游戏过程中不可见。</td></tr>
+<tr><td><strong>定期计分（Periodic Scoring）</strong></td><td>占领队伍（Owning Team）</td><td>每隔若干秒，为当前占领该据点的队伍计分。</td></tr>
+<tr><td><strong>夺取控制权得分（Score On Taking Control）</strong></td><td>3</td><td>夺取据点时奖励的分数。</td></tr>
+<tr><td><strong>强调色类型（Accent Color Type）</strong></td><td>队伍关系颜色（Team Relationship Color）</td><td>显示当前占据该据点的队伍的颜色。</td></tr>
+<tr><td><strong>占领高度（Capture Height）</strong></td><td>0.0625</td><td>占领设备的高度（以地块为单位）。</td></tr>
+<tr><td><strong>敌人争夺计分（Enemies Contest Scoring）</strong></td><td>开（True）</td><td>当占领区域内有敌人时，禁用定期计分。</td></tr>
+<tr><td><strong>可被占领队伍（Can Be Captured By Team）</strong></td><td>全部（All）</td><td>任何队伍都可以占领这些据点。</td></tr>
+<tr><td><strong>控制时间（Control Time）</strong></td><td>10</td><td>在占领区域内停留以夺取控制权所需的秒数。</td></tr>
+<tr><td><strong>中立化时间覆盖（Neutralize Time Override）</strong></td><td>无需中立化（No Neutralize）</td><td>一旦据点被某队占领，对方无需先将其中立化。</td></tr>
+<tr><td><strong>每多一名玩家加速夺取（Take Control Faster Per Player）</strong></td><td>2.0</td><td>每多一名协助的队友，占领与中立化速度的倍率。</td></tr>
+<tr><td><strong>进度衰减类型（Progress Decay Type）</strong></td><td>随时间（Over Time）</td><td>决定如何处理部分占领进度。</td></tr>
+<tr><td><strong>部分进度衰减速度（Partial Progress Decay Speed）</strong></td><td>0.5</td><td>当占领区域内没有队友时，部分进度衰减的速度。</td></tr>
+<tr><td><strong>HUD 元素（HUD Elements）</strong></td><td>徽章（Badge）</td><td>占领区域在 UI 上显示为徽章。</td></tr>
+<tr><td><strong>需要视线（Requires Line Of Sight）</strong></td><td>关（False）</td><td>无论是否有视线，始终显示占领区域徽章。</td></tr>
+<tr><td><strong>敌对图标文本（Hostile Icon Text）</strong></td><td>占领（Capture）</td><td>当敌人控制占领点时显示的 UI 文本。</td></tr>
+<tr><td><strong>隐藏 HUD 图标距离（Hide HUD Icon At）</strong></td><td>300</td><td>不再显示 HUD 徽章所需的米数距离。</td></tr>
+<tr><td><strong>钳制到屏幕（Clamp To Screen）</strong></td><td>开（True）</td><td>渲染徽章时将其钳制到屏幕内。</td></tr>
+<tr><td><strong>友方图标文本（Friendly Icon Text）</strong></td><td>防守（Defend）</td><td>当你的队伍控制占领区域时显示的 UI 文本。</td></tr>
+<tr><td><strong>中立图标文本（Neutral Icon Text）</strong></td><td>占领（Capture）</td><td>当占领区域无人控制时显示的 UI 文本。</td></tr>
+<tr><td><strong>HUD 文本大小（HUD Text Size）</strong></td><td>1.5</td><td>随徽章一起显示的文本大小。</td></tr>
+<tr><td><strong>HUD 消息（HUD Message）</strong></td><td>Captured A - Captured C</td><td>设置随比分在 HUD 上显示的消息。每个设备设置唯一消息，从“Captured A”到“Captured C”。</td></tr>
+<tr><td><strong>显示地图标记（Show Map Marker）</strong></td><td>开（True）</td><td>决定是否在小地图上显示目标图标。</td></tr>
+<tr><td><strong>排序（Sort Order）</strong></td><td>1 - 3</td><td>决定目标在 UI 中的顺序。每个设备设置唯一序号，从 1 到 3。</td></tr>
+</tbody></table>
+<ul><li>对每个占领区域（Capture Area）重复此步骤。</li></ul>
+<p>如前所述，地图两侧各应有一个占领区域（Capture Area）设备，中央有一个。你应将这些设备分散在地图上：每支队伍附近各有一个占领区域设备，中央第三个供双方争夺。</p>
+<p>好的占领点选址应考虑掩体、周围地形、海拔高度以及与其他占领点的距离。</p>
+<p>你还应考虑如何从视觉上标示占领区域。占领区域（Capture Area）设备自带一些不错的默认选项，你也可以考虑利用世界美术、灯光和贴花。</p>
+<p>在 Deserted 中，底座被替换为旋转灯具，以在视觉上加以区分。</p>
+
+<h3>玩家计数器（Player Counter）</h3>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/e59b8a1f-f20c-4e06-8410-7e32d1e94212?resizing_type=fit" alt="玩家计数器设备放置示例" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/e59b8a1f-f20c-4e06-8410-7e32d1e94212?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>放置三个<a href="https://dev.epicgames.com/documentation/en-us/fortnite-creative/using-player-counter-devices-in-fortnite-creative" target="_blank" rel="noopener">玩家计数器（Player Counter）</a>设备，每个占领区域（Capture Area）设备旁边各放一个。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/52d0e251-cc14-4f07-ae6c-1c0e9860d4a9?resizing_type=fit" alt="覆盖占领点 C 的 LargeZone 区域体积" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/52d0e251-cc14-4f07-ae6c-1c0e9860d4a9?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>接下来，设置玩家计数器（Player Counter）设备，创建与上述设备关联的区域体积。你可以将这些设备命名为 LargeZone_A 至 LargeZone_C。</p>
+<p>在上图中，你可以看到包围占领点 C 的红色体积。体积大小会因其覆盖区域的大小而异。</p>
+<p>将玩家计数器（Player Counter）设备自定义为以下设置。</p>
+<table><thead><tr><th>选项</th><th>值</th><th>说明</th></tr></thead><tbody>
+<tr><td><strong>比较玩家数量（Compare Player Count）</strong></td><td>不比较（Do Not Compare）</td><td>不对该区域的相对玩家数量进行评估。</td></tr>
+<tr><td><strong>信息面板可见（Info Panel Visible）</strong></td><td>关（False）</td><td>游戏过程中不显示信息面板。</td></tr>
+<tr><td><strong>使用区域（Use Zone）</strong></td><td>开（True）</td><td>勾选此框以使用区域进行计算，而不是整张地图。</td></tr>
+<tr><td><strong>区域宽度（Zone Width）</strong></td><td>变量（Variable）</td><td>将此区域设为覆盖其中一个占领点周围的整个区域。</td></tr>
+<tr><td><strong>区域深度（Zone Depth）</strong></td><td>变量（Variable）</td><td>将此区域设为覆盖其中一个占领点周围的整个区域。</td></tr>
+<tr><td><strong>区域高度（Zone Height）</strong></td><td>变量（Variable）</td><td>将此区域设为覆盖其中一个占领点周围的整个区域。</td></tr>
+</tbody></table>
+<p>对 LargeZone_B 和 LargeZone_C 设备重复第三步和第四步。</p>
+
+<h3>Verse 设备</h3>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/a06bb8a8-63ce-48de-a285-b67d66e05e71?resizing_type=fit" alt="Verse 设备关联示意" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/a06bb8a8-63ce-48de-a285-b67d66e05e71?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>使用此设备将直接事件绑定链接到所需的设备，以便 Verse 脚本引用它们。</p>
+<p>要自定义 Verse 设备，请执行以下操作：</p>
+<ul><li>在<strong>大纲（Outliner）</strong>选项卡中找到并选择 <strong>DominationSpawnManager</strong>。</li></ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/50e34193-c497-4d52-b25f-5d9e5e801a22?resizing_type=fit" alt="DominationSpawnManager 实例细节面板" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/50e34193-c497-4d52-b25f-5d9e5e801a22?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ul>
+<li>在<strong>细节（Details）</strong>面板中选择 <strong>DominationSpawnManager（实例）</strong>。</li>
+<li>按下表所示自定义其设置：</li>
+</ul>
+<table><thead><tr><th>选项</th><th>值</th><th>说明</th></tr></thead><tbody>
+<tr><td><strong>游戏中可见（Visible In Game）</strong></td><td>关（False）</td><td>此设备在游戏中不可见。</td></tr>
+<tr><td><strong>游戏开始时启用（Enabled At Game Start）</strong></td><td>开（True）</td><td>此设备将在游戏开始时启用。</td></tr>
+</tbody></table>
+<p>在 <strong>DominationSpawnManager</strong> 下使用以下设置：</p>
+<table><thead><tr><th>选项</th><th>值</th><th>说明</th></tr></thead><tbody>
+<tr><td><strong>0</strong></td><td>Capture Area_A</td><td>告知 Verse 脚本哪支队伍占领了该据点。</td></tr>
+<tr><td><strong>1</strong></td><td>Capture Area_B</td><td>告知 Verse 脚本哪支队伍占领了该据点。</td></tr>
+<tr><td><strong>2</strong></td><td>Capture Area_C</td><td>告知 Verse 脚本哪支队伍占领了该据点。</td></tr>
+<tr><td><strong>0</strong></td><td>LargeZone_A</td><td>与 <strong>TriggersLargeZoneEntered</strong> 配合使用：当玩家离开该区域时，告知 Verse 脚本以推断可行的生成器。</td></tr>
+<tr><td><strong>1</strong></td><td>LargeZone_B</td><td>与 <strong>TriggersLargeZoneEntered</strong> 配合使用：当玩家离开该区域时，告知 Verse 脚本以推断可行的生成器。</td></tr>
+<tr><td><strong>2</strong></td><td>LargeZone_C</td><td>与 <strong>TriggersLargeZoneEntered</strong> 配合使用：当玩家离开该区域时，告知 Verse 脚本以推断可行的生成器。</td></tr>
+</tbody></table>
+
+<h3>锁（Lock）设备</h3>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/4f61db1b-249d-475c-80c1-75a8f2a2eff3?resizing_type=fit" alt="锁设备放置示例" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/4f61db1b-249d-475c-80c1-75a8f2a2eff3?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>许多玩家生成区域都配有<a href="https://dev.epicgames.com/documentation/en-us/fortnite-creative/using-lock-devices-in-fortnite-creative" target="_blank" rel="noopener">锁（Lock）</a>设备。每个锁（Lock）设备都应有唯一名称。</p>
+<p>你可以用带锁和门的生成小隔间，确保玩家无法重新进入。</p>
+<p>建议将相互关联的组件用统一编号，以便跟踪每个位置。在本教程中，总共有四个封闭的安全生成区域。</p>
+<p>按以下步骤自定义 1 至 4 号锁：</p>
+<ul>
+<li>在紧闭的门外放置一个锁（Lock）设备。</li>
+<li>在房间内放置两个<a href="https://dev.epicgames.com/documentation/fortnite/using-trigger-devices-in-fortnite-creative" target="_blank" rel="noopener"><strong>触发器（Trigger）</strong></a>设备以覆盖门口。
+<ol><li>以便于引用的方式命名触发器（Trigger）设备。本教程中的触发器命名为 TriggerDoorOpen1 - 4 和 TriggerDoorClose1 - 4。</li></ol></li>
+<li>按下表所示自定义锁（Lock）设备的设置。</li>
+</ul>
+<table><thead><tr><th>选项</th><th>值</th><th>说明</th></tr></thead><tbody>
+<tr><td><strong>游戏期间可见（Visible During Game）</strong></td><td>关（False）</td><td>此设备在游戏过程中不可见。</td></tr>
+<tr><td><strong>锁定时隐藏交互（Hide Interaction When Locked）</strong></td><td>开（True）</td><td>锁定时玩家在游戏中看不到该交互。</td></tr>
+</tbody></table>
+<ul><li>设置直接事件绑定，将锁（Lock）设备与触发器（Trigger）设备配对。</li></ul>
+<table><thead><tr><th>设备 A</th><th>功能</th><th>设备 B</th><th>事件</th><th>说明</th></tr></thead><tbody>
+<tr><td><strong>锁（Lock）</strong></td><td><strong>开门（Open）</strong></td><td>DoorOpenTrigger1 - DoorOpenTrigger4</td><td>触发时（On Triggered）</td><td>当 TriggerDoorOpen1 设备被激活时，将打开这扇门。</td></tr>
+<tr><td><strong>锁（Lock）</strong></td><td><strong>关门（Close）</strong></td><td>DoorCloseTrigger1 - DoorOpenTrigger4</td><td>触发时（On Triggered）</td><td>当 TriggerDoorClose1 设备被激活时，将关闭这扇门。</td></tr>
+</tbody></table>
+<p>对每个安全区域重复这些步骤三次，并将直接事件绑定改为与旁边的触发器匹配。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/e321a984-8872-4405-85cd-5dbff924ca03?resizing_type=fit" alt="门口触发器布置：开门与延时关门" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/e321a984-8872-4405-85cd-5dbff924ca03?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>覆盖门口的触发器（Trigger）设备需要玩家接触，随后向锁（Lock）设备发送信号开门，如左侧覆盖门口的触发器（Trigger）设备所示。</p>
+<p>右侧的第二个触发器（Trigger）设备会等待两秒再发送信号，在玩家身后关门。这样里面的人可以离开，而外面潜在的蹲守者无法进入。</p>
+<p>要自定义这些设备，请执行以下操作：</p>
+<ul><li>按以下表格自定义 TriggerDoorOpen1 至 TriggerDoorOpen4。</li></ul>
+<table><thead><tr><th>选项</th><th>值</th><th>说明</th></tr></thead><tbody>
+<tr><td><strong>游戏中可见（Visible In Game）</strong></td><td>关（False）</td><td>触发器在游戏中不可见。</td></tr>
+<tr><td><strong>触发器视觉特效（Trigger VFX）</strong></td><td>关（False）</td><td>此设备没有视觉特效。</td></tr>
+<tr><td><strong>触发器音效（Trigger SFX）</strong></td><td>关（False）</td><td>此设备没有音效。</td></tr>
+</tbody></table>
+<ul><li>按以下表格自定义 TriggerDoorClosed1 至 TriggerDoorClosed4。</li></ul>
+<table><thead><tr><th>选项</th><th>值</th><th>说明</th></tr></thead><tbody>
+<tr><td><strong>游戏中可见（Visible In Game）</strong></td><td>关（False）</td><td>触发器在游戏中不可见。</td></tr>
+<tr><td><strong>由玩家触发（Triggered by Player）</strong></td><td>关（False）</td><td>与玩家接触不会激活此触发器。</td></tr>
+<tr><td><strong>触发器延迟（Trigger Delay）</strong></td><td>2</td><td>两秒后，此设备将发送信号。</td></tr>
+<tr><td><strong>触发器视觉特效（Trigger VFX）</strong></td><td>关（False）</td><td>此设备没有视觉特效。</td></tr>
+<tr><td><strong>触发器音效（Trigger SFX）</strong></td><td>关（False）</td><td>此设备没有音效。</td></tr>
+</tbody></table>
+<ul><li>接下来，设置直接事件绑定。</li></ul>
+<table><thead><tr><th>设备 A</th><th>功能</th><th>设备 B</th><th>事件</th><th>说明</th></tr></thead><tbody>
+<tr><td><strong>触发器（Trigger）</strong></td><td><strong>触发（Trigger）</strong></td><td>TriggerDoorOpen1 - TriggerDoorOpen4</td><td>触发时（On Triggered）</td><td>当门口触发器被激活时发送信号，使此设备在两秒后激活并打开锁。</td></tr>
+</tbody></table>
+<p>在每个需要自动开门的封闭房间中，用递增的数字命名重复此设置。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/3a552303-a3ab-4903-8a3b-7a781f5ddbb5?resizing_type=fit" alt="游戏开始时保持开启的门设置示例" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/3a552303-a3ab-4903-8a3b-7a781f5ddbb5?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>你可能希望某扇门在游戏开始时保持开启、关闭或锁定，这也可以用锁（Lock）设备实现。在本例中，我们希望这扇门开启，以保证更好的移动流线。</p>
+<p>要设置此机制，请执行以下操作：</p>
+<ul>
+<li>放置另一个锁（Lock）设备，命名为 LockDevice5。</li>
+<li>按下表所示自定义其设置。</li>
+</ul>
+<table><thead><tr><th>选项</th><th>值</th><th>说明</th></tr></thead><tbody>
+<tr><td><strong>游戏期间可见（Visible During Game）</strong></td><td>关（False）</td><td>此设备在游戏过程中不可见。</td></tr>
+<tr><td><strong>锁定时隐藏交互（Hide Interaction When Locked）</strong></td><td>开（True）</td><td>锁定时玩家在游戏中看不到该交互。</td></tr>
+<tr><td><strong>初始门位置（Initial Door Position）</strong></td><td>开（Open）</td><td>游戏过程中门将从开启状态开始。</td></tr>
+</tbody></table>
+
+<h3>HUD 控制器（HUD Controller）</h3>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/086ac29e-f1b6-4d23-877c-6846113a6c55?resizing_type=fit" alt="HUD 控制器设备示例" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/086ac29e-f1b6-4d23-877c-6846113a6c55?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p><a href="https://dev.epicgames.com/documentation/en-us/fortnite-creative/using-hud-controller-devices-in-fortnite-creative" target="_blank" rel="noopener">HUD 控制器（HUD Controller）</a>设备可以定制岛屿的众多设置。要设置此设备，请执行以下操作：</p>
+<ul>
+<li>在岛屿上放置一个 HUD 控制器（HUD Controller）设备。</li>
+<li>按下表所示自定义其设置。</li>
+</ul>
+<table><thead><tr><th>选项</th><th>值</th><th>说明</th></tr></thead><tbody>
+<tr><td><strong>显示 HUD（Show HUD）</strong></td><td>是（Yes）</td><td>在 UI 中显示 HUD。</td></tr>
+<tr><td><strong>显示小地图（Show Minimap）</strong></td><td>否（No）</td><td>在 UI 中隐藏小地图。</td></tr>
+<tr><td><strong>显示 HUD 信息框（Show HUD Info Box）</strong></td><td>是（Yes）</td><td>在 UI 中显示 HUD 信息框。</td></tr>
+<tr><td><strong>显示建造菜单（Show Build Menu）</strong></td><td>否（No）</td><td>在 UI 中隐藏建造菜单。</td></tr>
+<tr><td><strong>显示玩家物品栏（Show Player Inventory）</strong></td><td>是（Yes）</td><td>显示玩家的物品栏。</td></tr>
+<tr><td><strong>显示木材资源（Show Wood Resource）</strong></td><td>否（No）</td><td>在 UI 中隐藏此元素。</td></tr>
+<tr><td><strong>显示石材资源（Show Stone Resource）</strong></td><td>否（No）</td><td>在 UI 中隐藏此元素。</td></tr>
+<tr><td><strong>显示金属资源（Show Metal Resource）</strong></td><td>否（No）</td><td>在 UI 中隐藏此元素。</td></tr>
+<tr><td><strong>显示金币资源（Show Gold Resource）</strong></td><td>否（No）</td><td>在 UI 中隐藏此元素。</td></tr>
+<tr><td><strong>显示地图记分板提示（Show Map Scoreboard Prompt）</strong></td><td>是（Yes）</td><td>显示地图记分板提示。</td></tr>
+<tr><td><strong>显示风暴计时器（Show Storm Timer）</strong></td><td>否（No）</td><td>在 UI 中隐藏风暴计时器。</td></tr>
+<tr><td><strong>显示玩家数量（Show Player Count）</strong></td><td>否（No）</td><td>在 UI 中隐藏玩家数量。</td></tr>
+<tr><td><strong>显示淘汰计数器（Show Elimination Counter）</strong></td><td>否（No）</td><td>在 UI 中隐藏淘汰计数器。</td></tr>
+<tr><td><strong>显示回合计时器（Show Round Timer）</strong></td><td>否（No）</td><td>在 UI 中隐藏回合计时器。</td></tr>
+</tbody></table>
+
+<h3>屏障（Barrier）设备</h3>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/263bcf83-fb39-40e4-b79e-8b652ff59173?resizing_type=fit" alt="包围竞技场的隐形屏障示意" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/263bcf83-fb39-40e4-b79e-8b652ff59173?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>主战斗竞技场周围有许多隐形的<a href="using-barrier-devices-in-fortnite-creative.html">屏障（Barrier）</a>设备，防止玩家离开竞技场。你可以根据所创建的地图调整它们的数量和大小，但它们应具备以下基本设置。</p>
+<p>要自定义屏障（Barrier）设备，请执行以下操作：</p>
+<ul>
+<li>在可阻挡玩家离开竞技场的位置放置一个屏障（Barrier）设备。</li>
+<li>按下表所示自定义其设置：</li>
+</ul>
+<table><thead><tr><th>选项</th><th>值</th><th>说明</th></tr></thead><tbody>
+<tr><td><strong>屏障材质（Barrier Material）</strong></td><td>无（None）</td><td>不使用纹理，使其在游戏过程中隐形。</td></tr>
+<tr><td><strong>屏障深度（Barrier Depth）</strong></td><td>变量（Variable）</td><td>按需调整以完全包围该区域。</td></tr>
+<tr><td><strong>宽度（Width）</strong></td><td>变量（Variable）</td><td>按需调整以完全包围该区域。</td></tr>
+<tr><td><strong>屏障高度（Barrier Height）</strong></td><td>3</td><td>决定隐形屏障的高度（以地块为单位）。</td></tr>
+</tbody></table>
+<ul><li>复制粘贴此设备，围绕竞技场打造无缝屏障。</li></ul>
+
+<h3>突变区（Mutator Zone）设备</h3>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/cc19477f-7330-4c9c-825c-7c6a770fc1b2?resizing_type=fit" alt="覆盖整个竞技场的突变区示意" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/cc19477f-7330-4c9c-825c-7c6a770fc1b2?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>关卡下方有一个<a href="https://dev.epicgames.com/documentation/en-us/fortnite-creative/using-mutator-zone-devices-in-fortnite-creative" target="_blank" rel="noopener">突变区（Mutator Zone）</a>设备。该设备的宽度、深度和高度应足以包围整个竞技场。</p>
+<p>其中一些设置代替<strong>我的岛屿（My Island）</strong>设置，用于强制执行某些规则。要自定义此设备，请执行以下操作：</p>
+<ul>
+<li>在关卡下方放置一个突变区（Mutator Zone）设备。</li>
+<li>按下表所示自定义其设置。</li>
+</ul>
+<table><thead><tr><th>选项</th><th>值</th><th>说明</th></tr></thead><tbody>
+<tr><td><strong>区域宽度（Zone Width）</strong></td><td>变量（Variable）</td><td>按需调整以完全包围该区域。</td></tr>
+<tr><td><strong>区域深度（Zone Depth）</strong></td><td>变量（Variable）</td><td>按需调整以完全包围该区域。</td></tr>
+<tr><td><strong>区域高度（Zone Height）</strong></td><td>变量（Variable）</td><td>按需调整以完全包围该区域。</td></tr>
+<tr><td><strong>影响生物（Affects Creatures）</strong></td><td>关（False）</td><td>生物不受该区域影响。</td></tr>
+<tr><td><strong>影响守卫（Affects Guards）</strong></td><td>关（False）</td><td>守卫不受该区域影响。</td></tr>
+<tr><td><strong>允许编辑（Allow Editing）</strong></td><td>关（False）</td><td>该区域不允许编辑玩家建造的建筑。</td></tr>
+<tr><td><strong>启用视觉特效（Enable VFX）</strong></td><td>关（False）</td><td>此设备没有视觉特效。</td></tr>
+<tr><td><strong>允许武器开火（Allow Weapon Fire）</strong></td><td>开（True）</td><td>玩家可以在该区域内开火。</td></tr>
+<tr><td><strong>允许建造（Allow Building）</strong></td><td>关（False）</td><td>玩家无法在该区域内建造。</td></tr>
+<tr><td><strong>启用阶段（Enabled On Phase）</strong></td><td>始终（Always）</td><td>突变区（Mutator Zone）在任何游戏阶段都保持开启和激活。</td></tr>
+<tr><td><strong>拾取物存在时长（Pickup Life Span）</strong></td><td>开：25（True: 25）</td><td>设为开时，掉落物品会在整数指定的秒数后被销毁，本例为 25 秒。这样玩家可以拾取被淘汰玩家掉落的武器。</td></tr>
+</tbody></table>
+
+<h2 id="sec-4">添加玩家配装</h2>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/f99df4d2-3dba-467b-a34c-7a00d55c85f6?resizing_type=fit" alt="职业选择器与职业设计器配装设置" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/f99df4d2-3dba-467b-a34c-7a00d55c85f6?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>你可以为玩家创建一套配装，用于争夺占领点时的战斗。将<a href="https://dev.epicgames.com/documentation/en-us/fortnite-creative/using-class-selector-ui-devices-in-fortnite-creative" target="_blank" rel="noopener">职业选择器 UI（Class Selector UI）</a>设备与<a href="https://dev.epicgames.com/documentation/en-us/fortnite-creative/using-class-designer-devices-in-fortnite-creative" target="_blank" rel="noopener">职业设计器（Class Designer）</a>设备配对，即可在比赛开始时创建职业并展示给玩家选择。</p>
+<p>每个职业都需要各自的职业设计器（Class Designer）设备。职业选择器 UI（Class Selector UI）设备只能放置一个。</p>
+<p>要设置配装，请执行以下操作：</p>
+<ul>
+<li>放置一个职业选择器 UI（Class Selector UI）设备，使用默认设置。</li>
+<li>为每个希望玩家使用的职业和配装各放置一个职业设计器（Class Designer）。
+<ol><li>将武器和弹药注册到职业设计器（Class Designer），主要武器最先注册。</li></ol></li>
+<li>按下表所示自定义其设置。</li>
+</ul>
+<table><thead><tr><th>选项</th><th>值</th><th>说明</th></tr></thead><tbody>
+<tr><td><strong>职业名称（Class Name）</strong></td><td>&lt;变量&gt;（&lt;Variable&gt;）</td><td>输入希望该职业在职业选择器中显示的名称。</td></tr>
+<tr><td><strong>职业描述（Class Description）</strong></td><td>&lt;变量&gt;（&lt;Variable&gt;）</td><td>输入职业及配装的描述，用于职业选择器。</td></tr>
+<tr><td><strong>职业标识（Class Identifier）</strong></td><td>&lt;变量&gt;（&lt;Variable&gt;）</td><td>每个职业都需要单独的标识，从 1 到 X，X 为你创建的职业数量。</td></tr>
+<tr><td><strong>装备授予物品（Equip Granted Item）</strong></td><td>第一件物品（First Item）</td><td>生成时装备已注册配装中的第一件物品。</td></tr>
+</tbody></table>
+
+<h2 id="sec-5">添加音效</h2>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/46211471-d08e-45f5-8672-c48e10133be6?resizing_type=fit" alt="导入的音效资源示例" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/46211471-d08e-45f5-8672-c48e10133be6?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>点击<a href="https://dev.epicgames.com/documentation/unreal-engine/importing-audio-files?application_version=5.5" target="_blank" rel="noopener">此处</a>了解有关导入音频的更多信息。</p>
+<p>导入音效后，将其从内容浏览器（Content Browser）拖到声音发出的区域。</p>
+<p>你还可以在自选区域添加一组全局音效。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/49c3e384-6cba-4587-8ab5-24e4f0318e31?resizing_type=fit" alt="集中放置的全局音效" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/49c3e384-6cba-4587-8ab5-24e4f0318e31?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>为此，将声波（Sound Wave）从内容浏览器（Content Browser）拖放到竞技场中。位置不重要，集中放在方便的位置即可。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/cef430ec-eda5-4b80-93b6-a2e605e51ba4?resizing_type=fit" alt="声波资产循环设置" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/cef430ec-eda5-4b80-93b6-a2e605e51ba4?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>打开声波（Sound Wave）资产，在细节面板中将<strong>循环（Looping）</strong>设为<strong>开（True）</strong>。与上文创建的提示音（Cue）不同，此声音将在整张地图播放，因此无需其他操作。</p>
+<p>如果你想更精细地控制音频，提示音（Cue）会很有用。</p>
+<p>右键点击自定义 <code>.wav</code> 文件的声波资产，选择<strong>创建提示音（Create Cue）</strong>，即可创建一个循环波形播放器并连接输出。上述蓝图会在创建提示音时自动生成。</p>
+<p>操作如下：</p>
+<p>点击<strong>波形播放器（Wave Player）</strong>，将<strong>循环（Looping）</strong>改为 True。</p>
+<p>然后点击循环波形播放器（Looping Wave Player），将<strong>覆盖衰减（Override Attenuation）</strong>改为 True，以设置内半径（Inner Radius）和衰减距离（Falloff Distance）。</p>
+
+<h2 id="sec-6">添加视觉效果</h2>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/01e227e2-66a9-4489-80e2-ec27173bc27c?resizing_type=fit" alt="后期处理体积设置示例" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/01e227e2-66a9-4489-80e2-ec27173bc27c?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>使用<a href="https://dev.epicgames.com/documentation/unreal-engine/post-process-effects-in-unreal-engine?application_version=5.5" target="_blank" rel="noopener">后期处理特效（Post Processing Effects）</a>可以改变项目的外观和氛围，例如调色或应用镜头特效。按以下步骤让后期处理体积（Post Process Volume）影响整个关卡。</p>
+<ul>
+<li>向关卡添加<strong>后期处理体积（Post Process Volume）</strong>。放置步骤请参阅<a href="https://dev.epicgames.com/documentation/unreal-engine/post-process-effects-in-unreal-engine?application_version=5.5" target="_blank" rel="noopener">使用后期处理体积（Using Post Process Volumes）</a>。</li>
+<li>在后期处理体积（Post Process Volume）的<strong>细节（Details）</strong>面板中，在<strong>后期处理体积设置（Post Process Volume Settings）</strong>下启用<strong>无限范围（未绑定）（Infinite Extent (Unbound)）</strong>，这意味着后期处理体积将影响整个关卡。</li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/0e50f288-975e-40f5-83e2-91f0961581b1?resizing_type=fit" alt="本项目使用的后期处理特效列表" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/0e50f288-975e-40f5-83e2-91f0961581b1?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>本项目使用了以下后期处理特效：</p>
+<ul>
+<li><a href="https://dev.epicgames.com/documentation/unreal-engine/bloom-in-unreal-engine?application_version=5.5" target="_blank" rel="noopener">泛光（Bloom）</a>：控制场景较亮区域的雾化/辉光</li>
+<li><a href="https://dev.epicgames.com/documentation/unreal-engine/post-process-effects-in-unreal-engine?application_version=5.5" target="_blank" rel="noopener">色散（Chromatic Aberration）</a>：在屏幕边缘增加一些颜色通道分离/畸变</li>
+<li><a href="https://dev.epicgames.com/documentation/unreal-engine/post-process-effects-in-unreal-engine?application_version=5.5" target="_blank" rel="noopener">镜头光斑（Lens Flares）</a>：控制明亮光源在镜头上投射光斑的方式</li>
+<li><a href="https://dev.epicgames.com/documentation/unreal-engine/post-process-effects-in-unreal-engine?application_version=5.5" target="_blank" rel="noopener">暗角（Vignette）</a>：在屏幕边缘增加深色渐变</li>
+<li><a href="https://dev.epicgames.com/documentation/unreal-engine/post-process-effects-in-unreal-engine?application_version=5.5" target="_blank" rel="noopener">胶片颗粒（Film Grain）</a>：增加胶片颗粒</li>
+<li><a href="https://dev.epicgames.com/documentation/unreal-engine/color-grading-and-the-filmic-tonemapper-in-unreal-engine?application_version=5.5" target="_blank" rel="noopener">调色（Color Grading）</a>：在饱和度/对比度/伽马中，我们只调整了饱和度（场景去饱和，意味着颜色更少、更偏灰）</li>
+</ul>
+<p>本项目还使用了以下后期处理材质：</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/6d00a095-5ded-4065-8919-f70c04c3f746?resizing_type=fit" alt="本项目使用的后期处理材质" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/6d00a095-5ded-4065-8919-f70c04c3f746?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ul>
+<li>场景热浪扭曲特效（Heat Shimmer Effect to Scene）</li>
+<li>基于材质的调色（Material Based Color Grading）</li>
+<li>基于镜头朝向的场景着色（Scene Coloration Based off Camera Look Direction）</li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/83f1aaa6-f0dd-4ade-a375-93090c5f2db0?resizing_type=fit" alt="场景中的贴花效果" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/83f1aaa6-f0dd-4ade-a375-93090c5f2db0?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>你还可以添加<a href="33-materials-in-unreal-editor-for-fortnite.html">贴花（decals）</a>。贴花在材质编辑器中制作，然后拖入场景。</p>
+<p>在内容浏览器（Content Browser）中找到贴花并拖到希望其出现的位置。</p>
+<p>使用<strong>缩放（Scale）</strong>选项和<strong>邻近（Proximity）</strong>在静态网格体上显示贴花参与者（decal actor）。这可以在泥土上创建额外纹理，创建自定义纹理来表现泼洒的油漆等效果，或用于广播，在静态网格体上制作标志和战斗损伤。</p>
+<p>你甚至可以在玩法中添加警报灯（Klaxon lights）。</p>
+<p>警报灯是一个静态网格体，带有旋转的材质组件，并结合了使用灯光材质函数的点光源。</p>
+<p>警报灯最初创建为 FBX 文件并导入 UEFN。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/0ff8d7d5-940f-47c4-a4fb-45b8631103d0?resizing_type=fit" alt="在文件夹中导入内容" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/0ff8d7d5-940f-47c4-a4fb-45b8631103d0?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>UEFN 可以导入各种内容，如 3D 对象、音频文件、纹理等，支持多种不同格式。右键点击要导入到的文件夹，即可看到导入选项。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/bb583fa4-dd2f-41b9-8af9-9a47e77ffb57?resizing_type=fit" alt="为导入的对象应用材质" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/bb583fa4-dd2f-41b9-8af9-9a47e77ffb57?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>对象导入后，需要从场景文件为其添加材质。只需双击该对象，将材质应用到所导入对象的材质槽即可。</p>
+<p>关于如何在 UEFN 中导入和使用 3D 对象，其他教程中有更多信息，本文档不再赘述。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/5f247200-5914-4dd8-a3f9-6783cac355ed?resizing_type=fit" alt="Niagara 动态视觉特效资产" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/5f247200-5914-4dd8-a3f9-6783cac355ed?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>Niagara 可用于创建动态<a href="36-visual-effects-in-unreal-editor-for-fortnite.html">视觉特效（visual effects）</a>。</p>
+<p>在内容浏览器中找到已完成的资产，然后拖放。资产的缩放可以微调。</p>
+<p>使用关卡序列器（Level Sequencer），你还可以设计玩法，让氛围海鸥围绕某个区域盘旋。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/8270b814-5921-47c8-a698-860846e58155?resizing_type=fit" alt="氛围海鸥盘旋全局资产" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/8270b814-5921-47c8-a698-860846e58155?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>这是所有创作者都可用的全局资产，来自核心 UEFN 内容浏览器。要添加它，请在内容浏览器中搜索 Fortnite 文件夹并拖放 Atmospheric Seagulls Orbit。</p>
+<p>你还可以添加从玩法上空飞过的战机。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/3e0bb4d6-50cb-4dc7-979d-b74e55202f31?resizing_type=fit" alt="战机飞越过场" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/3e0bb4d6-50cb-4dc7-979d-b74e55202f31?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>战机使用<a href="using-cinematic-sequence-device-in-unreal-editor-for-fortnite.html">电影序列（Cinematic Sequence）</a>设备。战机的实体模型用于飞越，并藏在关卡下方。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/27bd46bf-ca4c-4da2-b463-db3c21a0d3b3?resizing_type=fit" alt="战机用的关卡序列" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/27bd46bf-ca4c-4da2-b463-db3c21a0d3b3?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>你需要为战机创建关卡序列（Level Sequence），点击<a href="sequencer-and-control-rig-in-unreal-editor-for-fortnite.html">此处</a>了解如何制作自己的序列。它们包含战机变换关键帧、音频音效、镜头震动和视觉特效发射器。</p>
+<p>你可以使用 Verse 来控制序列的播放时机。为此，你需要用下面的脚本创建一个新的 Verse 设备。</p>
+<p>编译下面的 Verse 脚本。新设备将在内容浏览器中创建，可像普通设备一样在关卡中拖放和编辑。</p>
+<pre><code># Copyright Epic Games, Inc. All Rights Reserved.
+using { /Fortnite.com/Devices }
+using { /Verse.org/Random }
+using { /Verse.org/Simulation }
+################################################################################
+## This device references an array of Cinematic Sequence Devices, and plays them randomly with a variable cooldown in between.
+################################################################################
+sequencer_randomization_device := class&lt;concrete&gt;(creative_device):</code></pre>
+<p>为每个飞越方向各添加一个电影序列（Cinematic Sequence）设备，并设置如下。</p>
+<table><thead><tr><th>选项</th><th>值</th><th>说明</th></tr></thead><tbody>
+<tr><td><strong>序列（Sequence）</strong></td><td>已创建的序列（Created Sequence）</td><td>在此字段中放置电影关卡序列。本教程在三个电影序列中使用了三个关卡实例，由 Verse 脚本随机决定飞越时间。</td></tr>
+</tbody></table>
+<p>从内容浏览器添加 Verse 设备，并按下表自定义其设置。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/21aab952-45cb-4f34-8018-e91934842ce6?resizing_type=fit" alt="战机飞越 Verse 设备冷却设置" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/21aab952-45cb-4f34-8018-e91934842ce6?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<table><thead><tr><th>选项</th><th>值</th><th>说明</th></tr></thead><tbody>
+<tr><td><strong>CooldownMin</strong></td><td>180</td><td>战机再次飞越之前的最小冷却时间（秒）。</td></tr>
+<tr><td><strong>CooldownMax</strong></td><td>500</td><td>Verse 脚本再次执行战机飞越之前等待的最大冷却时间（秒）。</td></tr>
+<tr><td><strong>PreventBackToBackRepeats</strong></td><td>开（True）</td><td>只要连接了多个序列器，战机就不会连续两次朝同一方向飞行。</td></tr>
+</tbody></table>
+<p>还需要引用每个电影序列器（Cinematic Sequencer）设备以触发它们。</p>
+<table><thead><tr><th>设备 A</th><th>功能</th><th>设备 B</th><th>事件</th><th>说明</th></tr></thead><tbody>
+<tr><td><strong>序列器列表（Sequencer List）</strong></td><td>战机（Jet）</td><td>CinematicSequenceDevice</td><td>1-3</td><td>为每个电影序列设备各添加一个引用。</td></tr>
+</tbody></table>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/30d2d2f3-51fe-4b65-a515-af192d547efa?resizing_type=fit" alt="用关卡序列制作的移动管道" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/30d2d2f3-51fe-4b65-a515-af192d547efa?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>你还可以使用关卡序列（Level Sequence）与电影序列（Cinematic Sequence）设备来制作移动的管道。</p>
+
+<div class="pager"><a href="27-build-a-game-in-unreal-editor-for-fortnite.html"><small>← 返回父教程</small>构建一款游戏</a><a href="sub-index.html"><small>子教程索引 →</small>全部子教程</a></div>
+</article><nav class="doc-toc" aria-label="本页内容"><b>本页内容</b><a href="#sec-1">创建新项目</a><a href="#sec-2">创建用于玩家生成的 Verse 脚本</a><a href="#sec-3">添加并自定义核心设备</a><a href="#sec-4">添加玩家配装</a><a href="#sec-5">添加音效</a><a href="#sec-6">添加视觉效果</a></nav></div>
+</div></div>
+</div>
+<footer class="edc-footer"><div class="inner"><img src="../assets/logo-epic.svg" alt="Epic Games"><span>Fortnite 文档中文镜像 · UE教程/ · 本地打开 index.html 阅读 · 翻译整理自 Epic 官方文档，仅供学习交流</span></div></footer>
+</body>
+</html>

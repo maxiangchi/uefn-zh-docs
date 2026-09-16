@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>使用白昼序列（Day Sequence）设备 | Fortnite 文档中文镜像</title>
+<link rel="stylesheet" href="../assets/epic.css">
+<link rel="stylesheet" href="../assets/patch.css">
+<link rel="icon" href="../assets/logo-epic.svg">
+</head>
+<body class="theme-fortnite">
+<div class="edc-topbar"><div class="edc-topbar-inner"><img class="edc-logo" src="../assets/logo-epic.svg" alt="Epic Games"><span class="edc-brand">Epic Games <b>开发者社区</b></span><span class="edc-nav"><a href="../index.html">文档首页</a><a href="sub-index.html">子教程索引</a><a href="https://dev.epicgames.com/documentation/fortnite/using-day-sequence-devices-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">英文原文</a></span></div></div>
+<div class="site-container">
+<aside class="site-nav"><div class="documents-tree"><nav><ul class="contents-table">
+<div class="tree-sec">A 最新动态</div><a class="tree-link" href="01-42-00-fortnite-ecosystem-updates-and-release-notes.html">01. 42.00 生态系统更新与发行说明</a><a class="tree-link" href="02-custom-items-and-inventory-overview-in-fortnite.html">02. 自定义物品与背包总览</a><a class="tree-link" href="03-in-island-transactions-in-fortnite.html">03. 岛内交易</a><a class="tree-link" href="04-mobile-development-in-fortnite.html">04. 移动端开发</a><a class="tree-link" href="05-inputs-in-fortnite.html">05. 输入系统</a><a class="tree-link" href="06-ability-system-in-unreal-editor-for-fortnite.html">06. 能力系统 Ability System</a><a class="tree-link" href="07-partybased-gameplay-using-the-social-synergy-api-in-fortnite.html">07. 社交协同 API 与小队玩法</a><a class="tree-link" href="08-scene-graph-in-unreal-editor-for-fortnite.html">08. 场景图 Scene Graph</a><div class="tree-sec">B 入门</div><a class="tree-link" href="09-build-your-first-island-in-fortnite.html">09. 构建你的第一个岛屿</a><a class="tree-link" href="10-onboarding-guide-to-programming-with-verse-in-unreal-editor-for-fortnite.html">10. Verse 编程入门指南</a><a class="tree-link" href="11-building-basics-in-fortnite-creative.html">11. 建造基础</a><div class="tree-sec">C 品牌合集</div><a class="tree-link" href="12-star-wars-islands-in-fortnite.html">12. 星球大战™岛屿</a><a class="tree-link" href="13-kpop-demon-hunters-islands-in-fortnite.html">13. KPop 猎魔团岛屿</a><a class="tree-link" href="14-building-lego-islands-in-fortnite.html">14. 乐高®岛屿</a><a class="tree-link" href="15-the-walking-dead-universe-islands-in-unreal-editor-for-fortnite.html">15. 行尸走肉宇宙岛屿</a><a class="tree-link" href="16-teenage-mutant-ninja-turtle-islands-in-unreal-editor-for-fortnite.html">16. 忍者神龟岛屿</a><a class="tree-link" href="17-squid-game-islands-in-fortnite.html">17. 鱿鱼游戏岛屿</a><div class="tree-sec">D 开发者成功</div><a class="tree-link" href="18-using-creator-portal-in-fortnite-creative.html">18. 使用创作者门户</a><a class="tree-link" href="19-island-moderation-and-guidelines-in-fortnite-creative.html">19. 岛屿审核与准则</a><div class="tree-sec">E 协作</div><a class="tree-link" href="20-creating-teams-in-creator-portal-in-unreal-editor-for-fortnite.html">20. 在创作者门户创建团队</a><a class="tree-link" href="21-adding-playtesters-in-fortnite-creative.html">21. 添加试玩测试员</a><a class="tree-link" href="22-playtesting-your-island-in-unreal-editor-for-fortnite.html">22. 试玩测试你的岛屿</a><a class="tree-link" href="23-collaborating-in-unreal-editor-for-fortnite.html">23. 在 UEFN 中协作</a><a class="tree-link" href="24-lore-version-control-in-unreal-editor-for-fortnite.html">24. Lore 版本控制</a><a class="tree-link" href="25-conflicts-in-lore-version-control-in-unreal-editor-for-fortnite.html">25. Lore 中的冲突</a><a class="tree-link" href="26-version-history-and-conflict-resolution-in-unreal-editor-for-fortnite.html">26. 分支历史与冲突解决</a><div class="tree-sec">F 游戏示例</div><a class="tree-link" href="27-build-a-game-in-unreal-editor-for-fortnite.html">27. 构建一款游戏</a><a class="tree-link" href="28-unreal-editor-for-fortnite-starter-templates.html">28. UEFN 新手模板</a><div class="tree-sec">G Verse</div><a class="tree-link" href="29-learn-the-basics-of-writing-code-in-verse.html">29. 从零学习 Verse 代码基础</a><div class="tree-sec">H 专注领域</div><a class="tree-link active" href="30-lighting-in-unreal-editor-for-fortnite.html">30. 灯光</a><a class="tree-link" href="31-animation-and-cinematics-in-unreal-editor-for-fortnite.html">31. 动画与过场动画</a><a class="tree-link" href="32-modeling-in-unreal-editor-for-fortnite.html">32. 建模</a><a class="tree-link" href="33-materials-in-unreal-editor-for-fortnite.html">33. 材质</a><a class="tree-link" href="34-environments-and-landscapes-in-unreal-editor-for-fortnite.html">34. 环境与地形</a><a class="tree-link" href="35-audio-in-unreal-editor-for-fortnite.html">35. 音频</a><a class="tree-link" href="36-visual-effects-in-unreal-editor-for-fortnite.html">36. 视觉特效</a>
+</ul></nav></div></aside>
+<div class="page-content"><div class="page-document has-theme-bg">
+<header class="section-page-header"><nav><ol class="breadcrumb is-shrinkable"><li class="breadcrumb-item is-root"><img src="../assets/logo-epic.svg" alt="Epic Games"><a href="../index.html">Developer</a></li><li class="breadcrumb-item"><a href="../index.html">Fortnite 文档</a></li><li class="breadcrumb-item"><a href="30-lighting-in-unreal-editor-for-fortnite.html">灯光</a></li><li class="breadcrumb-item active" aria-current="page"><span class="text-truncate">使用白昼序列（Day Sequence）设备</span></li></ol></nav><h1>使用白昼序列（Day Sequence）设备</h1><p class="text-secondary mb-0">白昼序列（Day Sequence）设备可控制天空并编辑日光、云、雾、天空颜色、太阳、月亮与天光等设置，本文介绍其查找放置方法与全部用户选项。</p><p class="doc-meta">英文原标题：Using Day Sequence Devices in Unreal Editor for Fortnite · <a href="https://dev.epicgames.com/documentation/fortnite/using-day-sequence-devices-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">查看英文原文</a> · 社区翻译镜像，仅供学习</p></header>
+<div class="doc-columns"><article class="doc-article">
+<p>使用<b>白昼序列（Day Sequence）</b>设备，你可以控制天空并编辑以下设置：</p>
+<ul>
+<li>日光（Sunlight）</li>
+<li>云（Clouds）</li>
+<li>雾（Fog）</li>
+<li>天空颜色（Sky Color）</li>
+<li>太阳（Sun）</li>
+<li>月亮（Moon）</li>
+<li>天光（Skylight）</li>
+</ul>
+<p><b>白昼序列（Day Sequence）</b>设备的作用很像天空穹顶（Skydome）设备——你可以修改多项设备设置，自定义岛屿的外观，或让岛屿经历昼夜循环变化。</p>
+<p><b>白昼序列（Day Sequence）</b>的全部设置可以任意组合使用。</p>
+<p>白昼序列（Day Sequence）设备仅支持<b>昼夜循环（Day Night Cycle）</b>这一时间（Time of Day）管理器。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/53ffdea7-f1ba-4d44-b99f-80ca48a4f1ea?resizing_type=fit" alt="原文示意图1" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/53ffdea7-f1ba-4d44-b99f-80ca48a4f1ea?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<div class="block-callout tip">提示：建议用大胆的增量修改，快速确定自然光照的中间值。先用尽量少的调整做出项目的基准光照，再打磨项目独特的外观。先用最少的调整确定基准光照，意味着之后每次调整光照都不必从头再来。</div>
+<h2 id="sec-1">查找并放置设备</h2>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/125c396d-93ae-4dd1-b4eb-2a0ae54b855f?resizing_type=fit" alt="查找并放置白昼序列设备的示意，点击图片可放大查看" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/125c396d-93ae-4dd1-b4eb-2a0ae54b855f?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p><i>点击图片可放大查看。</i></p>
+<ol>
+<li>打开<a href="https://docs.unrealengine.com/content-browser-in-unreal-engine/" target="_blank" rel="noopener">内容浏览器（Content Browser）</a>。</li>
+<li>打开 <b>Fortnite</b> 文件夹索引列表。</li>
+<li>打开 <b>Devices</b> 文件夹。</li>
+<li>选中<b>白昼序列（Day Sequence）</b>设备，将其拖入<b>视口（Viewport）</b>。</li>
+<li>在<b>大纲（Outliner）</b>面板中选中<b>白昼序列（Day Sequence）</b>设备。</li>
+<li>在<b>细节（Details）</b>面板中自定义<b>白昼序列（Day Sequence）</b>设备的选项。</li>
+</ol>
+<p>部分参数可以直接在选项旁的输入框中键入数值。这样有时可以设置仅靠左右拖动鼠标无法设置的值。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/675584c3-49b3-45a8-b857-32f85aadd9f5?resizing_type=fit" alt="原文示意图3" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/675584c3-49b3-45a8-b857-32f85aadd9f5?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h3>在创意模式（Creative）中查找并放置设备</h3>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/4e72b390-4fab-4cb0-9359-aa27ec9b35b4?resizing_type=fit" alt="在创意模式中查找并放置白昼序列设备的示意，点击图片可放大查看" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/4e72b390-4fab-4cb0-9359-aa27ec9b35b4?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p><i>点击图片可放大查看。</i></p>
+<ol>
+<li>在<a href="https://dev.epicgames.com/documentation/en-us/fortnite-creative/fortnite-creative-glossary#create-mode" target="_blank" rel="noopener">创建模式（Create mode）</a>下，按 <b>Tab</b> 键打开<a href="https://dev.epicgames.com/documentation/en-us/fortnite-creative/fortnite-creative-glossary#creativeinventory" target="_blank" rel="noopener">创意模式物品栏（CREATIVE inventory）</a>界面。</li>
+<li>点击 <b>DEVICES</b> 选项卡并滚动选择该设备。你也可以用<b>搜索（Search）</b>框或左侧<b>分类（Categories）</b>面板查找设备。</li>
+<li>点击 <b>PLACE NOW</b> 以<a href="https://dev.epicgames.com/documentation/en-us/fortnite-creative/fortnite-creative-glossary#place" target="_blank" rel="noopener">立即放置（place）</a>，或将其放入<a href="https://dev.epicgames.com/documentation/en-us/fortnite-creative/fortnite-creative-glossary#quick-bar" target="_blank" rel="noopener">快捷栏（QUICK BAR）</a>稍后放置。</li>
+<li>按 <b>Esc</b> 返回创建模式下的岛屿。用<a href="https://dev.epicgames.com/documentation/en-us/fortnite-creative/fortnite-creative-glossary#phone" target="_blank" rel="noopener">手机（phone）</a>工具定位设备，左键点击放置。再按 <b>Esc</b> 将设备与手机分离。</li>
+<li>用手机对准设备。如果没有立即弹出 <b>CUSTOMIZE</b> 弹窗，走近一些直到弹出，然后按 E 打开 CUSTOMIZE 面板。</li>
+</ol>
+<p>如果在岛屿上使用同一设备的多个副本，为它们<a href="https://dev.epicgames.com/documentation/en-us/fortnite-creative/fortnite-creative-glossary#rename-a-device" target="_blank" rel="noopener">重命名（rename）</a>会很有帮助。你可以按每个设备的用途取名，方便记住它们各自的作用。</p>
+<h2 id="sec-2">创意模式设备上下文过滤</h2>
+<p>下文列出的白昼序列（Day Sequence）设备的主要选项都使用了名为“上下文过滤（Contextual Filtering）”的功能。把某个主要功能的选项值设为 <b>ON</b> 后，会隐藏或显示更多附加选项。</p>
+<p>该功能减少了自定义（Customize）面板的杂乱，使选项更易于管理与浏览。</p>
+<h2 id="sec-3">用户选项</h2>
+<p>确定基准光照起点的目标是：用一组简单、可复用的设置组合，后续场景变复杂时也能沿用。修改的设置越少，日后调整就越容易。</p>
+<p>在创意模式（Creative）中与在 UEFN 中一样，可用于调整光照与天际线的设置都有一定范围限制。</p>
+<p>该设备可配置以下选项：</p>
+<h3>常规（General）</h3>
+<p>这些选项让你可以在岛屿上使用多个白昼序列（Day Sequence）设备。</p>
+<table class="doc-table"><thead><tr><th>选项（Option）</th><th>说明（Description）</th></tr></thead><tbody>
+<tr><td><b>Day / Night Cycle</b></td><td>昼夜循环（Day / Night Cycle）控制太阳与月亮在岛屿上的呈现方式：<ul><li><b>Default（默认）</b>等同于为一天随机选择一个开始时间。</li><li><b>Fixed Time（固定时间）</b>可选择固定的时刻。</li><li><b>Start at Specified Time（从指定时间开始）</b>从所选时间开始并继续昼夜循环。</li><li><b>Random Fixed Time（随机固定时间）</b>为每个加载的会话随机选择一个时刻。</li><li><b>Random Start Time（随机开始时间）</b>为每个加载的会话随机选择一个开始时间。</li></ul></td></tr>
+<tr><td><b>Priority</b></td><td><b>优先级（Priority）</b>决定哪个白昼序列（Day Sequence）设备优先。该设置可用于让一个白昼序列（Day Sequence）设备覆盖使用相同属性的另一个设备。</td></tr>
+<tr><td><b>Fade Speed</b></td><td><b>淡入淡出速度（Fade Speed）</b>决定设备的淡入、淡出速度。该选项仅在使用<b>淡入（Fade In）</b>或<b>淡出（Fade Out）</b>功能时可用。</td></tr>
+</tbody></table>
+<p>在处理室外光照时，先选定时刻非常重要，因为它会影响阴影的方向与长度，让地图外观更有趣。</p>
+<h3>触发体积（Trigger Volume）</h3>
+<p>选择<b>触发体积（Trigger Volume）</b>后，白昼序列（Day Sequence）设备设置将不再应用于整个岛屿，而是限定在该空间位置内。只有进入该体积后才能看到环境变化。</p>
+<table class="doc-table"><thead><tr><th>选项（Option）</th><th>说明（Description）</th></tr></thead><tbody>
+<tr><td><b>Blending</b></td><td><b>混合（Blending）</b>决定根据玩家与体积的接近程度如何混合视觉效果。设为 None 时，视觉效果立即启用。</td></tr>
+<tr><td><b>Blending Distance</b></td><td><b>混合距离（Blending Distance）</b>决定玩家进入体积时设备混合视觉效果的速度。</td></tr>
+<tr><td><b>Extent X</b></td><td><b>X 范围（Extent X）</b>决定体积沿 X 轴的尺寸。</td></tr>
+<tr><td><b>Extent Y</b></td><td><b>Y 范围（Extent Y）</b>决定体积沿 Y 轴的尺寸。</td></tr>
+<tr><td><b>Extent Z</b></td><td><b>Z 范围（Extent Z）</b>决定体积沿 Z 轴的尺寸。</td></tr>
+</tbody></table>
+<h3>日光（Sunlight）</h3>
+<p>岛屿上的日光决定阴影外观、是否有太阳耀斑，以及光线如何在世界材质上反弹。日光还决定放置建筑道具时需要多少室内、室外光照。</p>
+<table class="doc-table"><thead><tr><th>选项（Option）</th><th>说明（Description）</th></tr></thead><tbody>
+<tr><td><b>Enable Sun Component</b></td><td><b>启用太阳组件（Enable Sun Component）</b>覆盖昼夜循环（Day / Night Cycle），将太阳固定在一个位置。</td></tr>
+<tr><td><b>Intensity</b></td><td><b>强度（Intensity）</b>设置太阳组件发光的强度。</td></tr>
+<tr><td><b>Color</b></td><td><b>颜色（Color）</b>更改太阳组件的颜色。</td></tr>
+<tr><td><b>Enable Flare</b></td><td><b>启用耀斑（Enable Flare）</b>启用或禁用直视太阳时的镜头光晕。</td></tr>
+<tr><td><b>Rotation Z</b></td><td><b>Z 旋转（Rotation Z）</b>让太阳沿 Z 轴（蓝色轴）旋转。</td></tr>
+<tr><td><b>Rotation X</b></td><td><b>X 旋转（Rotation X）</b>让太阳沿 X 轴（红色轴）旋转。</td></tr>
+</tbody></table>
+<h3>雾（Fog）</h3>
+<p>白昼序列（Day Sequence）设备会在相机视锥的每一点计算雾的密度与光照，以支持变化的密度以及任意数量影响雾的光源。雾控制类似于 <a href="https://dev.epicgames.com/documentation/en-us/unreal-engine/volumetric-fog-in-unreal-engine?application_version=5.5" target="_blank" rel="noopener">Unreal Engine 体积雾（Volumetric Fog）</a>，可通过粒子可在其中生成的粒子系统，控制雾在场景中的外观。</p>
+<table class="doc-table"><thead><tr><th>选项（Option）</th><th>说明（Description）</th></tr></thead><tbody>
+<tr><td><b>Enable Fog Component</b></td><td><b>启用雾组件（Enable Fog Component）</b>启用雾。</td></tr>
+<tr><td><b>Density</b></td><td><b>密度（Density）</b>修改雾密度，可理解为雾层的厚度。</td></tr>
+<tr><td><b>Color</b></td><td><b>颜色（Color）</b>更改雾颜色。</td></tr>
+<tr><td><b>Height Falloff</b></td><td><b>高度衰减（Height Falloff）</b>高度密度因子控制密度如何随高度降低而增加。值越小，过渡越大。</td></tr>
+<tr><td><b>Directional Inscattering Color</b></td><td><b>定向内散射颜色（Directional Inscattering Color）</b>设置雾的内散射颜色，即雾的主色。</td></tr>
+<tr><td><b>Max Opacity</b></td><td><b>最大不透明度（Max Opacity）</b>控制雾的最大不透明度。值为 1 表示雾完全不透明，0 表示雾不可见。</td></tr>
+<tr><td><b>Secondary Density</b></td><td><b>次级密度（Secondary Density）</b>次级雾层的全局密度因子，可用于叠加另一层雾的厚度。</td></tr>
+<tr><td><b>Secondary Falloff</b></td><td><b>次级衰减（Secondary Falloff）</b>次级雾层的高度密度因子，控制密度如何随高度降低而增加。值越小，过渡越大。</td></tr>
+<tr><td><b>Secondary Offset</b></td><td><b>次级偏移（Secondary Offset）</b>相对 Actor 世界 Z 高度位置的高度偏移。</td></tr>
+<tr><td><b>Sunlight Volumetric Scattering</b></td><td><b>日光体积散射（Sunlight Volumetric Scattering）</b>太阳组件体积散射的强度。</td></tr>
+</tbody></table>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/a8e9cc45-2f02-466c-b180-70eec0967c61?resizing_type=fit&width=1920&height=1080" alt="无雾效果对比" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/a8e9cc45-2f02-466c-b180-70eec0967c61?resizing_type=fit&width=1920&height=1080" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/fb677605-5ab8-47af-85e9-bc8dc694032a?resizing_type=fit&width=1920&height=1080" alt="有雾效果对比" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/fb677605-5ab8-47af-85e9-bc8dc694032a?resizing_type=fit&width=1920&height=1080" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h3>天光（Skylight）</h3>
+<p>天光（Skylight）设置决定天光在材质与道具上的反射强度。这会影响阴影变暗程度，以及自发光材质反射多少光线。</p>
+<table class="doc-table"><thead><tr><th>选项（Option）</th><th>说明（Description）</th></tr></thead><tbody>
+<tr><td><b>Enable Skylight Component</b></td><td><b>启用天光组件（Enable Skylight Component）</b>启用天光。</td></tr>
+<tr><td><b>Intensity</b></td><td><b>强度（Intensity）</b>更改天光强度。</td></tr>
+<tr><td><b>Color</b></td><td><b>颜色（Color）</b>更改天光颜色。</td></tr>
+</tbody></table>
+<h3>天空（Sky）</h3>
+<p>天空大气（Sky Atmosphere）组件是基于物理的天空与大气渲染技术。它足够灵活，既可创建具有日出日落时刻变化的地球式大气，也可创建异星风情的大气。</p>
+<table class="doc-table"><thead><tr><th>选项（Option）</th><th>说明（Description）</th></tr></thead><tbody>
+<tr><td><b>Enable Sky Atmosphere Component</b></td><td><b>启用天空大气组件（Enable Sky Atmosphere Component）</b>启用天空大气组件。</td></tr>
+<tr><td><b>Sky Gradient Blend</b></td><td><b>天空渐变混合（Sky Gradient Blend）</b>决定天空自定义颜色的混合。1 = 全用自定义颜色，0 = 不用自定义颜色。</td></tr>
+<tr><td><b>Sky Gradient Low Color</b></td><td><b>天空渐变低部颜色（Sky Gradient Low Color）</b>天空下部的颜色。</td></tr>
+<tr><td><b>Sky Gradient Mid Color</b></td><td><b>天空渐变中部颜色（Sky Gradient Mid Color）</b>天空中间的颜色。</td></tr>
+<tr><td><b>Sky Gradient High Color</b></td><td><b>天空渐变高部颜色（Sky Gradient High Color）</b>天空上部的颜色。</td></tr>
+<tr><td><b>Sun Size</b></td><td><b>太阳尺寸（Sun Size）</b>修改天空中的太阳圆盘尺寸。</td></tr>
+<tr><td><b>Sun Intensity</b></td><td><b>太阳强度（Sun Intensity）</b>修改太阳发出的光量。</td></tr>
+<tr><td><b>Sun Color</b></td><td><b>太阳颜色（Sun Color）</b>修改太阳颜色。</td></tr>
+<tr><td><b>Custom Sun Color Blend</b></td><td><b>自定义太阳颜色混合（Custom Sun Color Blend）</b>决定太阳组件自定义颜色的混合。1 = 全用自定义颜色，0 = 不用自定义颜色。</td></tr>
+<tr><td><b>Moon Size</b></td><td><b>月亮尺寸（Moon Size）</b>修改天空中的月亮圆盘尺寸。</td></tr>
+<tr><td><b>Moon Intensity</b></td><td><b>月亮强度（Moon Intensity）</b>修改月亮发出的光量。</td></tr>
+<tr><td><b>Moon Color</b></td><td><b>月亮颜色（Moon Color）</b>修改月亮颜色。</td></tr>
+<tr><td><b>Moon Halo Size</b></td><td><b>月晕尺寸（Moon Halo Size）</b>更改月晕的尺寸。</td></tr>
+<tr><td><b>Moon Halo Intensity</b></td><td><b>月晕强度（Moon Halo Intensity）</b>更改月晕的强度。</td></tr>
+<tr><td><b>Star Brightness</b></td><td><b>星星亮度（Star Brightness）</b>更改夜空星星的亮度。</td></tr>
+</tbody></table>
+<h3>云（Clouds）</h3>
+<p>云（Clouds）可以营造氛围，并因天空云量改变世界光照外观。这可能导致四处阴影更多、已有阴影的阴影色更深、天空可见度更低。</p>
+<table class="doc-table"><thead><tr><th>选项（Option）</th><th>说明（Description）</th></tr></thead><tbody>
+<tr><td><b>Light Color</b></td><td><b>亮部颜色（Light Color）</b>更改云被日光照射部分的颜色。</td></tr>
+<tr><td><b>Shadow Color</b></td><td><b>阴影颜色（Shadow Color）</b>更改云较暗部分的颜色。</td></tr>
+<tr><td><b>Lighting Brightness</b></td><td><b>光照亮度（Lighting Brightness）</b>更改云的明暗。</td></tr>
+<tr><td><b>Coverage</b></td><td><b>覆盖率（Coverage）</b>增加或减少整体云覆盖。</td></tr>
+<tr><td><b>Size</b></td><td><b>尺寸（Size）</b>更改云的尺寸。</td></tr>
+<tr><td><b>Opacity</b></td><td><b>不透明度（Opacity）</b>更改云的厚度。</td></tr>
+<tr><td><b>Speed</b></td><td><b>速度（Speed）</b>更改云从头顶飘过的速度。</td></tr>
+<tr><td><b>Direction X</b></td><td><b>X 方向（Direction X）</b>更改云的方向。</td></tr>
+<tr><td><b>Direction Y</b></td><td><b>Y 方向（Direction Y）</b>更改云的方向。</td></tr>
+</tbody></table>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/0f32c9b6-2221-4402-8f93-99ec86becc35?resizing_type=fit&width=1920&height=1080" alt="云尺寸 0.01 效果对比" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/0f32c9b6-2221-4402-8f93-99ec86becc35?resizing_type=fit&width=1920&height=1080" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/abffc658-c88f-43e0-9140-d3e486c27a8a?resizing_type=fit&width=1920&height=1080" alt="云尺寸 1 效果对比" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/abffc658-c88f-43e0-9140-d3e486c27a8a?resizing_type=fit&width=1920&height=1080" target="_blank" rel="noopener">查看原图</a></div></figure>
+<div class="pager"><a href="30-lighting-in-unreal-editor-for-fortnite.html"><small>← 返回父教程</small>灯光</a><a href="sub-index.html"><small>子教程索引 →</small>全部子教程</a></div>
+</article><nav class="doc-toc" aria-label="本页内容"><b>本页内容</b><a href="#sec-1">查找并放置设备</a><a href="#sec-2">创意模式设备上下文过滤</a><a href="#sec-3">用户选项</a></nav></div>
+</div></div>
+</div>
+<footer class="edc-footer"><div class="inner"><img src="../assets/logo-epic.svg" alt="Epic Games"><span>Fortnite 文档中文镜像 · UE教程/ · 本地打开 index.html 阅读 · 翻译整理自 Epic 官方文档，仅供学习交流</span></div></footer>
+</body>
+</html>

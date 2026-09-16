@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UEFN 中的材质节点与设置 | Fortnite 文档中文镜像</title>
+<link rel="stylesheet" href="../assets/epic.css">
+<link rel="stylesheet" href="../assets/patch.css">
+<link rel="icon" href="../assets/logo-epic.svg">
+</head>
+<body class="theme-fortnite">
+<div class="edc-topbar"><div class="edc-topbar-inner"><img class="edc-logo" src="../assets/logo-epic.svg" alt="Epic Games"><span class="edc-brand">Epic Games <b>开发者社区</b></span><span class="edc-nav"><a href="../index.html">文档首页</a><a href="sub-index.html">子教程索引</a><a href="https://dev.epicgames.com/documentation/fortnite/material-nodes-and-settings-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">英文原文</a></span></div></div>
+<div class="site-container">
+<aside class="site-nav"><div class="documents-tree"><nav><ul class="contents-table">
+<div class="tree-sec">A · 最新动态</div>
+<a class="tree-link" href="01-42-00-fortnite-ecosystem-updates-and-release-notes.html">01. 42.00 生态系统更新与发行说明</a>
+<a class="tree-link" href="02-custom-items-and-inventory-overview-in-fortnite.html">02. 自定义物品与背包总览</a>
+<a class="tree-link" href="03-in-island-transactions-in-fortnite.html">03. 岛内交易</a>
+<a class="tree-link" href="04-mobile-development-in-fortnite.html">04. 移动端开发</a>
+<a class="tree-link" href="05-inputs-in-fortnite.html">05. 输入系统</a>
+<a class="tree-link" href="06-ability-system-in-unreal-editor-for-fortnite.html">06. 能力系统 Ability System</a>
+<a class="tree-link" href="07-partybased-gameplay-using-the-social-synergy-api-in-fortnite.html">07. 社交协同 API 与小队玩法</a>
+<a class="tree-link" href="08-scene-graph-in-unreal-editor-for-fortnite.html">08. 场景图 Scene Graph</a>
+<div class="tree-sec">B · 入门指南</div>
+<a class="tree-link" href="09-build-your-first-island-in-fortnite.html">09. 构建你的第一个岛屿</a>
+<a class="tree-link" href="10-onboarding-guide-to-programming-with-verse-in-unreal-editor-for-fortnite.html">10. Verse 编程入门指南</a>
+<a class="tree-link" href="11-building-basics-in-fortnite-creative.html">11. 建造基础</a>
+<div class="tree-sec">C · 品牌合集</div>
+<a class="tree-link" href="12-star-wars-islands-in-fortnite.html">12. 星球大战™岛屿</a>
+<a class="tree-link" href="13-kpop-demon-hunters-islands-in-fortnite.html">13. KPop 猎魔团岛屿</a>
+<a class="tree-link" href="14-building-lego-islands-in-fortnite.html">14. 乐高®岛屿</a>
+<a class="tree-link" href="15-the-walking-dead-universe-islands-in-unreal-editor-for-fortnite.html">15. 行尸走肉宇宙岛屿</a>
+<a class="tree-link" href="16-teenage-mutant-ninja-turtle-islands-in-unreal-editor-for-fortnite.html">16. 忍者神龟岛屿</a>
+<a class="tree-link" href="17-squid-game-islands-in-fortnite.html">17. 鱿鱼游戏岛屿</a>
+<div class="tree-sec">D · 开发者成功</div>
+<a class="tree-link" href="18-using-creator-portal-in-fortnite-creative.html">18. 使用创作者门户</a>
+<a class="tree-link" href="19-island-moderation-and-guidelines-in-fortnite-creative.html">19. 岛屿审核与准则</a>
+<div class="tree-sec">E · 协作与版本控制</div>
+<a class="tree-link" href="20-creating-teams-in-creator-portal-in-unreal-editor-for-fortnite.html">20. 在创作者门户创建团队</a>
+<a class="tree-link" href="21-adding-playtesters-in-fortnite-creative.html">21. 添加试玩测试员</a>
+<a class="tree-link" href="22-playtesting-your-island-in-unreal-editor-for-fortnite.html">22. 试玩测试你的岛屿</a>
+<a class="tree-link" href="23-collaborating-in-unreal-editor-for-fortnite.html">23. 在 UEFN 中协作</a>
+<a class="tree-link" href="24-lore-version-control-in-unreal-editor-for-fortnite.html">24. Lore 版本控制</a>
+<a class="tree-link" href="25-conflicts-in-lore-version-control-in-unreal-editor-for-fortnite.html">25. Lore 中的冲突</a>
+<a class="tree-link" href="26-version-history-and-conflict-resolution-in-unreal-editor-for-fortnite.html">26. 分支历史与冲突解决</a>
+<div class="tree-sec">F · 游戏示例</div>
+<a class="tree-link" href="27-build-a-game-in-unreal-editor-for-fortnite.html">27. 构建一款游戏</a>
+<a class="tree-link" href="28-unreal-editor-for-fortnite-starter-templates.html">28. UEFN 新手模板</a>
+<div class="tree-sec">G · Verse 编程</div>
+<a class="tree-link" href="29-learn-the-basics-of-writing-code-in-verse.html">29. 从零学习 Verse 代码基础</a>
+<div class="tree-sec">H · 专注领域</div>
+<a class="tree-link" href="30-lighting-in-unreal-editor-for-fortnite.html">30. 灯光</a>
+<a class="tree-link" href="31-animation-and-cinematics-in-unreal-editor-for-fortnite.html">31. 动画与过场动画</a>
+<a class="tree-link" href="32-modeling-in-unreal-editor-for-fortnite.html">32. 建模</a>
+<a class="tree-link active" href="33-materials-in-unreal-editor-for-fortnite.html">33. 材质</a>
+<a class="tree-link" href="34-environments-and-landscapes-in-unreal-editor-for-fortnite.html">34. 环境与地形</a>
+<a class="tree-link" href="35-audio-in-unreal-editor-for-fortnite.html">35. 音频</a>
+<a class="tree-link" href="36-visual-effects-in-unreal-editor-for-fortnite.html">36. 视觉特效</a>
+</ul></nav></div></aside>
+<div class="page-content"><div class="page-document has-theme-bg">
+<header class="section-page-header"><nav><ol class="breadcrumb is-shrinkable"><li class="breadcrumb-item is-root"><img src="../assets/logo-epic.svg" alt="Epic Games"><a href="../index.html">Developer</a></li><li class="breadcrumb-item"><a href="../index.html">Fortnite 文档</a></li><li class="breadcrumb-item"><a href="33-materials-in-unreal-editor-for-fortnite.html">材质</a></li><li class="breadcrumb-item active" aria-current="page"><span class="text-truncate">UEFN 中的材质节点与设置</span></li></ol></nav><h1>UEFN 中的材质节点与设置</h1><p class="text-secondary mb-0">在进入教程之前，请先熟悉材质编辑器的基础概念与主材质节点（Main Material Node），了解基础颜色（Base Color）、金属度（Metallic）等输入如何塑造材质外观。</p><p class="doc-meta">英文原标题：Material Nodes And Settings In Unreal Editor For Fortnite · <a href="https://dev.epicgames.com/documentation/fortnite/material-nodes-and-settings-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">查看英文原文</a> · 社区翻译镜像，仅供学习</p></header>
+<div class="doc-columns"><article class="doc-article">
+
+<p>在开始学习本系列教程之前，请先熟悉<a href="https://docs.unrealengine.com/essential-unreal-engine-material-concepts/" target="_blank" rel="noopener">材质核心概念（Essential Materials Concepts）</a>、<a href="https://docs.unrealengine.com/unreal-engine-material-editor-user-guide/" target="_blank" rel="noopener">材质编辑器用户指南（Material Editor User Guide）</a>和<a href="https://docs.unrealengine.com/unreal-engine-material-editor-ui/" target="_blank" rel="noopener">材质编辑器界面（Material Editor UI）</a>。这些页面介绍了创建材质实例和材质编辑器的背景知识。</p>
+<p><strong>基础颜色（Base Color）</strong>、<strong>金属度（Metallic）</strong>、<strong>高光（Specular）</strong>和<strong>粗糙度（Roughness）</strong>是 UEFN 中材质的工作基础。要更好地理解材质的外观与行为，请参阅<a href="https://docs.unrealengine.com/physically-based-materials-in-unreal-engine/" target="_blank" rel="noopener">基于物理的材质（Physically Based Materials）</a>。该页面解释了<strong>主材质节点（Main Material Node）</strong>（即材质根节点）的不同输入如何工作并相互影响。</p>
+<p>要了解如何使用主材质节点（Main Material Node）上的输入引脚（input pin），请参阅<a href="https://docs.unrealengine.com/material-inputs-in-unreal-engine/" target="_blank" rel="noopener">材质输入（Material Inputs）</a>。该页面介绍了不同的引脚如何帮助创建特定类型的表面。</p>
+<h2 id="sec-1">材质属性</h2>
+<p>材质定义表面的属性，着色模型定义表面与光照的交互方式。</p>
+<p>在为网格体制作材质时，大多数情况下不需要更改材质编辑器细节（Details）面板中的材质属性。只有在创建通过用户界面（UI）、<a href="https://dev.epicgames.com/documentation/fortnite/unreal-editor-for-fortnite-glossary#post-processing" target="_blank" rel="noopener">后期处理（post processing）</a>或灯光与玩家交互的材质时，才需要更改材质域（Material Domain）设置。以下是入门时建议使用的默认设置。</p>
+<table><thead><tr><th>属性</th><th>设置</th><th>说明</th></tr></thead><tbody>
+<tr><td>材质域（Material Domain）</td><td>表面（Surface）</td><td>定义材质的用途。<strong>表面（Surface）</strong>定义网格体表面上的材质表现。</td></tr>
+<tr><td>混合模式（Blend Mode）</td><td>遮罩（Masked）</td><td>定义材质输出与背后像素的混合方式。<strong>遮罩（Masked）</strong>会在网格体上创建遮罩。</td></tr>
+<tr><td>着色模型（Shading Model）</td><td>默认光照（Default Lit）</td><td>通过设置材质与光照的交互方式，定义表面材质如何生成最终颜色。默认光照着色适合任何实心网格体。</td></tr>
+</tbody></table>
+<p>当你对材质创建更加得心应手之后，可以尝试调整这些属性，改变材质在网格体上的交互方式与贴合效果。</p>
+<p>如果你要为镂空网格体或双面网格体创建材质，请勾选<strong>双面（Two Sided）</strong>选项，为网格体背面生成次级颜色，这非常适合为植物叶片这类薄片物体创建材质。</p>
+<h2 id="sec-2">节点</h2>
+<p>UEFN 使用材质节点来创建材质和纹理，也可以将其转换为材质实例（Material Instance），这样在材质中设置的参数就可以在设备、后期处理、灯光、UI 等地方被引用。材质编辑器打开时会显示一个<a href="https://docs.unrealengine.com/using-the-main-material-node-in-unreal-engine/" target="_blank" rel="noopener">主材质节点（Main Material Node）</a>，其他材质节点可以接入它的输入引脚。通过为材质节点赋值，你可以定义资产的颜色、<a href="https://docs.unrealengine.com/unreal-engine-material-expressions-reference/" target="_blank" rel="noopener">颜色在资产上的呈现方式</a>，以及<a href="https://docs.unrealengine.com/using-texture-masks-in-unreal-engine/" target="_blank" rel="noopener">纹理在资产上的作用方式</a>。</p>
+<p>根据所选材质节点的不同，你可以在材质中使用纹理和 <a href="https://docs.unrealengine.com/customized-uvs-in-unreal-engine-materials/" target="_blank" rel="noopener">UV</a> 来创建有趣的效果，例如闪烁的灯光，或吹拂植被的风。</p>
+<p>使用<a href="https://docs.unrealengine.com/using-the-main-material-node-in-unreal-engine/" target="_blank" rel="noopener">主材质节点（Main Material Node）</a>的<strong>基础颜色（Base Color）输入</strong>可以查看不同节点的作用。主材质节点（Main Material Node）甚至可以接受来自<strong>默认颜色（Default Color）</strong>节点的 <a href="https://dev.epicgames.com/documentation/fortnite/verse-glossary" target="_blank" rel="noopener">浮点（Float）</a>、三维向量（3Vector）或四维向量（4Vector）值。</p>
+<p>将材质实例拖放到视口中的网格体上。缩小材质编辑器窗口后，你就可以实时编辑网格体材质节点，而无需编译。</p>
+<p>下表列出了最常用的节点。编辑节点值并将其接入主材质节点（Main Material Node），查看它们的效果。</p>
+<h3>常量三维向量表达式（Constant 3Vector expression）</h3>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/2411ec43-2ac5-40fb-a378-9d0408fd6d94?resizing_type=fit" alt="常量三维向量表达式节点示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/2411ec43-2ac5-40fb-a378-9d0408fd6d94?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>为主材质节点（Main Material Node）添加颜色。你可以使用<strong>值（Value）</strong>节点为 R、G、B 和 A 输入分别赋值。</p>
+<p>RGB 输入对应以下方向：</p>
+<ul><li>R = X</li><li>G = Y</li><li>B = Z</li></ul>
+<p>参阅<a href="https://docs.unrealengine.com/material-data-types-in-unreal-engine/" target="_blank" rel="noopener">材质数据类型（Material Data Types）</a>，了解有关常量值的更多信息。</p>
+<p>按住 <strong>3</strong> 键并<strong>左键单击</strong，即可在材质编辑器中添加<strong>默认颜色（Default Color）</strong>节点。</p>
+<p>在材质编辑器中右键单击<strong>默认颜色（Default Color）</strong>节点，可以将其转换为<strong>颜色参数（Color Parameter）</strong>节点。</p>
+<h3>常量节点（Constant node）</h3>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/63a4126a-f625-4dad-9bab-09443a670e3a?resizing_type=fit" alt="常量节点示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/63a4126a-f625-4dad-9bab-09443a670e3a?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>为材质节点或材质属性添加一个起决定作用的值。</p>
+<p>将此节点接入另一个节点以定义其值，或直接接入主材质节点（Main Material Node）以定义某个属性的值。</p>
+<p>按住 <strong>1</strong> 键并<strong>左键单击</strong>，即可在材质编辑器中添加<strong>值（Value）</strong>节点。</p>
+<h3>标量参数节点（Scalar Parameter node）</h3>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/83e7cc1d-6ab4-44d8-877c-d7cd34dd3a5c?resizing_type=fit" alt="标量参数节点示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/83e7cc1d-6ab4-44d8-877c-d7cd34dd3a5c?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>为所接入属性的材质节点添加参数值。</p>
+<p>在<strong>调色板面板（Palette panel）</strong>中搜索 <strong>Scalar Parameter</strong> 节点。</p>
+<h3>插值节点（Interpolate node）</h3>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/1c826022-0a5f-49bb-8cdb-3015f2267af3?resizing_type=fit" alt="插值节点示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/1c826022-0a5f-49bb-8cdb-3015f2267af3?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>为 A、B 和 Alpha 输入分别添加值，并在信息源之间进行插值。</p>
+<p>将颜色节点接入 Lerp 节点的 A、B 和 Alpha 输入，再将 Lerp 节点接入主材质节点（Main Material Node），即可在 RGB 值与属性之间创建颜色混合。</p>
+<p>Lerp 节点甚至可以接入另一种节点类型，从而对某个材质属性产生效果。</p>
+<p>在<strong>调色板面板（Palette panel）</strong>中搜索 <strong>Lerp</strong> 节点。</p>
+<h3>坐标节点（Coordinate node）</h3>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/4e00e176-4970-423a-9d61-732d3a3c5c63?resizing_type=fit" alt="坐标节点示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/4e00e176-4970-423a-9d61-732d3a3c5c63?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>为坐标添加颜色值。</p>
+<p>将颜色坐标添加到一个属性，或添加到两个不同的属性。</p>
+<p>按住 <strong>2</strong> 键并<strong>左键单击</strong>，即可在材质编辑器中添加<strong>坐标（Coordinate）</strong>节点。</p>
+<h3>材质表达式常量四维向量节点（Material Expression Constant 4Vector node）</h3>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/b6294cd9-9dfc-453d-91c8-6ae2f401de29?resizing_type=fit" alt="常量四维向量节点示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/b6294cd9-9dfc-453d-91c8-6ae2f401de29?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>在四个颜色输入上添加恒定颜色，可以接入一个属性，也可以使用 RGB 和 Alpha 输入将颜色分散到多个属性。</p>
+<p>将 Constant 节点添加到一个属性，或横跨多个属性使用。</p>
+<p>按住 <strong>4</strong> 键并<strong>左键单击</strong>，即可在材质编辑器中添加 <strong>Constant</strong> 节点。</p>
+<h3>凹凸偏移节点（BumpOffset node）</h3>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/f64af6a7-a448-46d9-9d36-427c89d690dd?resizing_type=fit" alt="凹凸偏移节点示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/f64af6a7-a448-46d9-9d36-427c89d690dd?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>为高度图上的坐标添加值，通过扭曲 UV 在材质上创建深度纹理。</p>
+<p>BumpOffset 节点利用每个像素的高度信息为纹理增加深度。将此节点与<strong>纹理采样（Texture Sample）</strong>节点配合使用，调整纹理值与外观。</p>
+<p>在<strong>调色板面板（Palette panel）</strong>中搜索 <strong>BumpOffset</strong> 节点和 <strong>Texture Sample</strong> 节点。</p>
+<h3>时间节点（Time node）</h3>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/2d1b035e-cee2-418c-8643-7d82f44495ff?resizing_type=fit" alt="时间节点示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/2d1b035e-cee2-418c-8643-7d82f44495ff?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>向编辑器询问时间、对游戏内时间计时，并为所接入的属性提供一个值。</p>
+<p>将 Time 节点接入其他材质节点，可以为该材质节点对属性的效果定义时间限制。</p>
+<p>在<strong>调色板面板（Palette panel）</strong>中搜索 <strong>Time</strong> 节点。</p>
+<h3>色相偏移节点（Hue Shift node）</h3>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/a5598c11-3497-41b9-95a0-d398babb16b0?resizing_type=fit" alt="色相偏移节点示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/a5598c11-3497-41b9-95a0-d398babb16b0?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>接入属性后，在颜色值之间偏移。</p>
+<p>将 Hue Shift 节点与 Value 节点配合使用，用 Value 节点定义色相偏移百分比（Hue Shift Percentage）的值，并接入纹理节点来添加纹理。</p>
+<p>在<strong>调色板面板（Palette panel）</strong>中搜索 <strong>Hue Shift</strong> 节点。</p>
+<h3>平移节点（Panner node）</h3>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/496e80cf-6312-4a05-89be-c885f511153f?resizing_type=fit" alt="平移节点示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/496e80cf-6312-4a05-89be-c885f511153f?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>更改 UV 在材质实例中移动（平移）的速度和方向。</p>
+<p>为坐标（Coordinate）和速度（Speed）选择一个值。</p>
+<p>还可以将额外的 Value 节点接入 Panner，进一步定义单个属性。</p>
+<p>在<strong>调色板面板（Palette panel）</strong>中搜索 <strong>Panner</strong> 节点。</p>
+<h3>顶点法线世界位置偏移节点（VertexNormal World Position Offset node）</h3>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/7e010b0d-6551-4f2a-beda-97aa556cac95?resizing_type=fit" alt="顶点法线世界位置偏移节点示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/7e010b0d-6551-4f2a-beda-97aa556cac95?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>将顶点沿随机方向移动。</p>
+<p>将值节点接入 VertexNormalWS 节点，为顶点移动的幅度赋值。</p>
+<p>在<strong>调色板面板（Palette panel）</strong>中搜索<strong>顶点法线世界位置偏移（Vertex Normal World Position Offset）</strong>节点。</p>
+<h3>噪点节点（Noise node）</h3>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/b9ba22cd-e3ef-44ab-9580-f69d35f4f294?resizing_type=fit" alt="噪点节点示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/b9ba22cd-e3ef-44ab-9580-f69d35f4f294?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>为所接入的材质属性添加纹理（噪点）。</p>
+<p>可以与特定纹理配合使用，为噪点添加“图案”，或生成所需的纹理。</p>
+<p>将其他材质节点接入 Noise 节点，可以扭曲材质的某些方面。</p>
+<p>在<strong>调色板面板（Palette panel）</strong>中搜索 <strong>Noise</strong> 节点。</p>
+<h3>乘法节点（Multiply node）</h3>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/9398bccd-b575-4f92-affc-da4cf5689526?resizing_type=fit" alt="乘法节点示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/9398bccd-b575-4f92-affc-da4cf5689526?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>提供一种方式，将某个节点对特定属性的影响相乘。</p>
+<p>将其他材质节点接入 Multiply 节点，可以对某个材质属性创建所需的效果。</p>
+<p>例如，将<strong>默认颜色（Default Color）节点</strong>接入 <strong>Multiply 节点</strong>，再为 <strong>Multiply 节点</strong>添加一个值，然后将 <strong>Multiply 节点</strong>接入<strong>自发光（Emissive）输入</strong>，即可用该材质创建发光效果。</p>
+<h3>遮罩节点（Mask node）</h3>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/914d1635-a965-4ee8-99e4-196f3583722a?resizing_type=fit" alt="遮罩节点示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/914d1635-a965-4ee8-99e4-196f3583722a?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>为属性的 R（X）或 G（Y）输入添加遮罩效果。</p>
+<h3>追加向量（AppendVector）</h3>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/d160ea52-662e-4aa8-8862-9d6dc7038177?resizing_type=fit" alt="追加向量节点示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/d160ea52-662e-4aa8-8862-9d6dc7038177?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>将数据通道组合在一起，创建比原来通道更多的向量。AppendVector 按输入顺序工作，A 输入始终追加在 B 输入之前。</p>
+<h3>阶梯节点（Step node）</h3>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/32e0df2d-e637-4197-9edc-ec80f331d041?resizing_type=fit" alt="阶梯节点示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/32e0df2d-e637-4197-9edc-ec80f331d041?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>阶梯节点是一种着色器函数，用于比较两个值，以其中一个值的边缘为基准指定另一个值的边缘，通过定义值的边缘实现从一个值到下一个值的阶梯过渡。可用于定义渐变：决定显示一个颜色值相对另一个颜色值的多少。</p>
+<h3>纹理坐标节点（TextureCoordinate node）</h3>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/368e82dc-f753-4554-b0a6-8f9185424410?resizing_type=fit" alt="纹理坐标节点示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/368e82dc-f753-4554-b0a6-8f9185424410?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>该节点将 UV 纹理坐标输出为双通道向量值，使材质可以使用不同的 UV 通道、指定平铺，并对网格体的 UV 进行操作。</p>
+<h3>钳制节点（Clamp node）</h3>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/ed417b10-b431-42ef-88e6-b422df2f5026?resizing_type=fit" alt="钳制节点示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/ed417b10-b431-42ef-88e6-b422df2f5026?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>Clamp 节点接受输入值，并将其约束在由最小值和最大值定义的特定范围内。</p>
+<h3>线性渐变节点（LinearGradient node）</h3>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/6c8b0e68-49c6-451e-9faf-f332a54ae039?resizing_type=fit" alt="线性渐变节点示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/6c8b0e68-49c6-451e-9faf-f332a54ae039?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>使用 UV 通道 0 生成线性渐变，具体沿 U 还是 V 方向取决于使用了哪个输出。</p>
+<h3>常量偏移缩放节点（ConstantBiasScale node）</h3>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/756af516-010a-419f-87db-73f1d3b1d18b?resizing_type=fit" alt="常量偏移缩放节点示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/756af516-010a-419f-87db-73f1d3b1d18b?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>接受一个输入值，加上偏移（bias）值，再乘以缩放系数并输出结果。</p>
+<h3>向上取整节点（Ceil node）</h3>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/ffee5501-6d8e-4dd1-bc33-d4ffeb8e9781?resizing_type=fit" alt="向上取整节点示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/ffee5501-6d8e-4dd1-bc33-d4ffeb8e9781?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>Ceil 是一种表达式，接受输入值，将值向上舍入到下一个整数并输出结果。例如，向 Ceil 输入 0.2，它会将该值向上舍入为 1.0。</p>
+<h3>命名重路由节点（Named ReRoute node）</h3>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/6de5510b-8033-4c00-ac0c-628df066a6d0?resizing_type=fit" alt="命名重路由节点示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/6de5510b-8033-4c00-ac0c-628df066a6d0?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>提供一种为节点命名并重路由材质节点的方式。</p>
+<p>重路由材质节点可以将多个材质节点串联起来创建复杂的纹理和 UV，然后将串联结果的最终值接入用于创建<strong>基础颜色（Base Color）</strong>的材质节点。</p>
+<p>要学习如何组织材质图表，请参阅虚幻引擎文档中的<a href="https://dev.epicgames.com/documentation/en-us/unreal-engine/organizing-a-material-graph-in-unreal-engine" target="_blank" rel="noopener">组织材质图表（Organizing a Material Graph）</a>。</p>
+<p>使用以下快捷键打开对应的材质节点。</p>
+<ul><li><strong>常量（Constant）</strong>：按住键盘上的 <strong>1</strong> 键并单击。</li><li><strong>常量三维向量（Constant 3 Vector）</strong>：按住键盘上的 <strong>3</strong> 键并单击。</li><li><strong>乘法（Multiply）</strong>：按住 <strong>M</strong> 键并单击。</li><li><strong>线性插值（Linear Interpolate）</strong>：按住 <strong>L</strong> 键并单击。</li></ul>
+<p>你越是多动手尝试这些节点、它们的取值，以及想要影响的属性，就越擅长创建自定义材质和纹理。理解如何使用值是创建材质的关键。将你创建的材质用于导入的网格体，或用于使用<a href="modeling-mode-in-unreal-editor-for-fortnite.html">建模模式（Modeling Mode）</a>制作的网格体。</p>
+<p>材质和纹理甚至可以与<a href="https://dev.epicgames.com/documentation/fortnite/cinematic-sequence-device-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">过场动画序列设备（Cinematic Sequence device）</a>配合使用，在网格体上创建自定义效果。</p>
+<p>创建新材质时，请关注材质的统计信息。单个材质的指令数不应超过 500 条。否则材质会过于消耗数据，很可能无法正常渲染。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/9de00b8f-f231-4916-8751-d4065724fb65?resizing_type=fit" alt="材质统计信息示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/9de00b8f-f231-4916-8751-d4065724fb65?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>参阅<a href="https://docs.unrealengine.com/creating-shiny-materials-in-unreal-engine/" target="_blank" rel="noopener">创建闪亮材质（Creating Shiny Material）</a>、<a href="https://docs.unrealengine.com/using-the-emissive-material-input-in-unreal-engine/" target="_blank" rel="noopener">使用自发光材质输入（Using the Emissive Material Input）</a>和<a href="https://docs.unrealengine.com/using-transparency-in-unreal-engine-materials/" target="_blank" rel="noopener">在材质中使用透明度（Using Transparency in Materials）</a>，学习材质创建的基础知识。这些教程涵盖了闪亮、金属、发光材质以及低不透明度材质等基础材质。</p>
+<p>标签：<a href="https://dev.epicgames.com/community/search?query=asset" target="_blank" rel="noopener">asset</a></p>
+<hr>
+<p><strong>提问并帮助你的同行：</strong><a href="https://forums.unrealengine.com/categories?tag=fortnite" target="_blank" rel="noopener">开发者论坛（Developer Forums）</a></p>
+<p><strong>编写你自己的教程或阅读他人的教程：</strong><a href="https://dev.epicgames.com/community/fortnite/learning" target="_blank" rel="noopener">学习库（Learning Library）</a></p>
+
+<div class="pager"><a href="33-materials-in-unreal-editor-for-fortnite.html"><small>← 返回父教程</small>材质</a><a href="sub-index.html"><small>子教程索引 →</small>全部子教程</a></div>
+</article><nav class="doc-toc" aria-label="本页内容"><b>本页内容</b><a href="#sec-1">材质属性</a><a href="#sec-2">节点</a></nav></div>
+</div></div>
+</div>
+<footer class="edc-footer"><div class="inner"><img src="../assets/logo-epic.svg" alt="Epic Games"><span>Fortnite 文档中文镜像 · UE教程/ · 本地打开 index.html 阅读 · 翻译整理自 Epic 官方文档，仅供学习交流</span></div></footer>
+</body>
+</html>

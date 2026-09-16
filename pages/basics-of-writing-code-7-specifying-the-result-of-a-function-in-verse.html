@@ -1,0 +1,72 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Verse 代码基础 7：指定函数的返回值 | Fortnite 文档中文镜像</title><link rel="stylesheet" href="../assets/epic.css"><link rel="stylesheet" href="../assets/patch.css"><link rel="icon" href="../assets/logo-epic.svg"></head><body class="theme-fortnite"><div class="edc-topbar"><div class="edc-topbar-inner"><img class="edc-logo" src="../assets/logo-epic.svg" alt="Epic Games"><span class="edc-brand">Epic Games <b>开发者社区</b></span><span class="edc-nav"><a href="../index.html">文档首页</a><a href="sub-index.html">子教程索引</a><a href="https://dev.epicgames.com/documentation/fortnite/basics-of-writing-code-7-specifying-the-result-of-a-function-in-verse" target="_blank" rel="noopener">英文原文</a></span></div></div><div class="site-container"><aside class="site-nav"><div class="documents-tree"><nav><ul class="contents-table"><div class="tree-sec">A 最新动态</div><a class="tree-link" href="01-42-00-fortnite-ecosystem-updates-and-release-notes.html">01. 42.00 生态系统更新与发行说明</a><a class="tree-link" href="02-custom-items-and-inventory-overview-in-fortnite.html">02. 自定义物品与背包总览</a><a class="tree-link" href="03-in-island-transactions-in-fortnite.html">03. 岛内交易</a><a class="tree-link" href="04-mobile-development-in-fortnite.html">04. 移动端开发</a><a class="tree-link" href="05-inputs-in-fortnite.html">05. 输入系统</a><a class="tree-link" href="06-ability-system-in-unreal-editor-for-fortnite.html">06. 能力系统 Ability System</a><a class="tree-link" href="07-partybased-gameplay-using-the-social-synergy-api-in-fortnite.html">07. 社交协同 API 与小队玩法</a><a class="tree-link" href="08-scene-graph-in-unreal-editor-for-fortnite.html">08. 场景图 Scene Graph</a><div class="tree-sec">B 入门</div><a class="tree-link" href="09-build-your-first-island-in-fortnite.html">09. 构建你的第一个岛屿</a><a class="tree-link" href="10-onboarding-guide-to-programming-with-verse-in-unreal-editor-for-fortnite.html">10. Verse 编程入门指南</a><a class="tree-link" href="11-building-basics-in-fortnite-creative.html">11. 建造基础</a><div class="tree-sec">C 品牌合集</div><a class="tree-link" href="12-star-wars-islands-in-fortnite.html">12. 星球大战岛屿</a><a class="tree-link" href="13-kpop-demon-hunters-islands-in-fortnite.html">13. KPop 猎魔团岛屿</a><a class="tree-link" href="14-building-lego-islands-in-fortnite.html">14. 乐高岛屿</a><a class="tree-link" href="15-the-walking-dead-universe-islands-in-unreal-editor-for-fortnite.html">15. 行尸走肉宇宙岛屿</a><a class="tree-link" href="16-teenage-mutant-ninja-turtle-islands-in-unreal-editor-for-fortnite.html">16. 忍者神龟岛屿</a><a class="tree-link" href="17-squid-game-islands-in-fortnite.html">17. 鱿鱼游戏岛屿</a><div class="tree-sec">D 开发者成功</div><a class="tree-link" href="18-using-creator-portal-in-fortnite-creative.html">18. 使用创作者门户</a><a class="tree-link" href="19-island-moderation-and-guidelines-in-fortnite-creative.html">19. 岛屿审核与准则</a><div class="tree-sec">E 协作</div><a class="tree-link" href="20-creating-teams-in-creator-portal-in-unreal-editor-for-fortnite.html">20. 在创作者门户创建团队</a><a class="tree-link" href="21-adding-playtesters-in-fortnite-creative.html">21. 添加试玩测试员</a><a class="tree-link" href="22-playtesting-your-island-in-unreal-editor-for-fortnite.html">22. 试玩测试你的岛屿</a><a class="tree-link" href="23-collaborating-in-unreal-editor-for-fortnite.html">23. 在 UEFN 中协作</a><a class="tree-link" href="24-lore-version-control-in-unreal-editor-for-fortnite.html">24. Lore 版本控制</a><a class="tree-link" href="25-conflicts-in-lore-version-control-in-unreal-editor-for-fortnite.html">25. Lore 中的冲突</a><a class="tree-link" href="26-version-history-and-conflict-resolution-in-unreal-editor-for-fortnite.html">26. 分支历史与冲突解决</a><div class="tree-sec">F 游戏示例</div><a class="tree-link" href="27-build-a-game-in-unreal-editor-for-fortnite.html">27. 构建一款游戏</a><a class="tree-link" href="28-unreal-editor-for-fortnite-starter-templates.html">28. UEFN 新手模板</a><div class="tree-sec">G Verse</div><a class="tree-link active" href="29-learn-the-basics-of-writing-code-in-verse.html">29. 从零学习 Verse 代码基础</a><div class="tree-sec">H 专注领域</div><a class="tree-link" href="30-lighting-in-unreal-editor-for-fortnite.html">30. 灯光</a><a class="tree-link" href="31-animation-and-cinematics-in-unreal-editor-for-fortnite.html">31. 动画与过场动画</a><a class="tree-link" href="32-modeling-in-unreal-editor-for-fortnite.html">32. 建模</a><a class="tree-link" href="33-materials-in-unreal-editor-for-fortnite.html">33. 材质</a><a class="tree-link" href="34-environments-and-landscapes-in-unreal-editor-for-fortnite.html">34. 环境与地形</a><a class="tree-link" href="35-audio-in-unreal-editor-for-fortnite.html">35. 音频</a><a class="tree-link" href="36-visual-effects-in-unreal-editor-for-fortnite.html">36. 视觉特效</a></ul></nav></div></aside><div class="page-content"><div class="page-document has-theme-bg"><header class="section-page-header"><nav><ol class="breadcrumb is-shrinkable"><li class="breadcrumb-item is-root"><img src="../assets/logo-epic.svg" alt="Epic Games"><a href="../index.html">Developer</a></li><li class="breadcrumb-item"><a href="../index.html">Fortnite 文档</a></li><li class="breadcrumb-item"><a href="29-learn-the-basics-of-writing-code-in-verse.html">从零学习 Verse 代码基础</a></li><li class="breadcrumb-item active" aria-current="page"><span class="text-truncate">Verse 代码基础 7：指定函数的返回值</span></li></ol></nav><h1>Verse 代码基础 7：指定函数的返回值</h1><p class="text-secondary mb-0">函数可以在调用时返回一个值，这个值就是结果（result）。本课将学习如何在函数签名（function signature）中指定返回类型，并使用返回（return）关键字提供结果。</p><p class="doc-meta">英文原标题：Basics of Writing Code 7: Specifying the Result of a Function in Verse · <a href="https://dev.epicgames.com/documentation/fortnite/basics-of-writing-code-7-specifying-the-result-of-a-function-in-verse" target="_blank" rel="noopener">查看英文原文</a> · 社区翻译镜像，仅供学习</p></header><div class="doc-columns"><article class="doc-article"><h3>前置知识</h3>
+<p>要理解和使用本页内容，请确认你已熟悉以下主题：</p>
+<ul>
+<li><a href="basics-of-writing-code-6-defining-a-function-in-verse.html">第 6 课：在 Verse 中定义函数</a></li>
+</ul>
+<p>函数可以执行操作。函数能做的一件事，就是在你调用它时返回一个值。这个值就是<strong>结果（result）</strong>。</p>
+<p>例如，当你调用 <code>GetRandomInt(1, 10)</code> 时，你会期望得到一个 1 到 10 之间的随机整数。</p>
+<p>要改变你希望从函数中获得的<strong>值的类型</strong>，需要修改<strong>函数签名（function signature）</strong>中的类型。例如：</p>
+<pre><code>GetNumberOfMousetrapsYouCanAfford() : int</code></pre>
+<p>在这个例子中，<code>GetNumberOfMousetrapsYouCanAfford()</code> 的返回类型是 <code>int</code>，因此每当你在代码中调用 <code>GetNumberOfMousetrapsYouCanAfford()</code> 时，都可以期望它返回一个整数。</p>
+<pre><code>GetNumberOfMousetrapsYouCanAfford() : float</code></pre>
+<p>另一方面，如果你把类型改为 <code>float</code>，它就会返回另一种类型的值。</p>
+<p>当函数指定了返回类型后，函数<strong>主体（函数体，代码块，code block）</strong>必须产生与该类型匹配的结果。如果不匹配，代码将无法编译——也就是说会出现编译器错误。准备好学习如何避免这种情况了吗？</p>
+<h2 id="sec-1">结果与返回</h2>
+<p><strong>结果（result）</strong>就是函数在<strong>执行（运行，execute）</strong>时<strong>返回（return）</strong>的值。</p>
+<p><a href="basics-of-writing-code-2-basic-programming-concepts-in-verse.html">第 2 课</a>介绍过<strong>关键字（keyword）</strong>，它们是 Verse 内置的特殊单词，每个关键字都附带了非常明确的行为。</p>
+<p>在 Verse 中，<strong>返回（return）</strong>也是一个<strong>关键字（keyword）</strong>，它告诉函数提供紧跟在 return 关键字之后的表达式所产生的值，作为函数的结果。</p>
+<pre><code>MyFunction() : int = return 5
+OnBegin&lt;override&gt;()&lt;suspend&gt; : void = MyFunction() # result is 5</code></pre>
+<p>在上面的例子中，当调用 <code>MyFunction()</code> 时，这段代码将<strong>返回（return）</strong>值 <code>5</code>。</p>
+<p>省略 <code>return</code> 并不会破坏你的函数，但显式写出 <code>return</code> 是良好的编程习惯。如果你想进一步了解，请参阅 Functions（函数）相关文档。</p>
+<h3>提前返回（Early Returns）</h3>
+<p>当程序执行到 <code>return</code> 表达式时，程序会<strong>立即退出</strong>函数代码块。这意味着，如果你把 <code>return</code> 表达式放在其他代码之前，后面的代码将不会执行。当满足某个指定条件、需要提前退出函数时，这种写法非常有用。</p>
+<p>下面的函数会根据 <code>CoinsPerMousetrap</code> 更新 <code>Coins</code> 变量。但是，<code>Coins</code> 变量必须为正值才能购买捕鼠器。如果 <code>Coins</code> 为负数，函数会打印一条错误消息并立即返回，因为此时再运行函数体中的其余代码已经没有意义。</p>
+<p>事实上，如果没有 return，函数会错误地继续扣减 <code>Coins</code> 的值，而且永远不会提示 <code>Coins</code> 为负数的问题。</p>
+<pre><code>var Coins : int = -10
+CoinsPerMousetrap : int = 100
+BuyMousetrap() : void =
+    if (Coins &lt; 0):
+        Print("Error: Coins set to negative value")
+        return
+    set Coins = Coins - CoinsPerMousetrap
+    Print("Mousetrap bought! You have {Coins} coins left.")</code></pre>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/c421ede3-b39c-449d-8d9d-5e596106e3d0?resizing_type=fit" alt="提前返回代码示例：Coins 为负数时打印错误并直接返回" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/c421ede3-b39c-449d-8d9d-5e596106e3d0?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>提前使用 <code>return</code> 退出函数也可能引入缺陷，因此必须谨慎使用。例如，在下面的代码中，由于 <code>return</code> 会在 <code>Print("Mousetrap bought! You have {Coins} coins left.")</code> 之前运行，函数将永远不会打印 <code>Coins</code> 的新值。</p>
+<pre><code>var Coins : int = 500
+CoinsPerMousetrap : int = 100
+BuyMousetrap() : void =
+    if (Coins &lt; 0):
+        Print("Error: Coins set to negative value")
+        return
+    set Coins = Coins - CoinsPerMousetrap
+    return
+    Print("Mousetrap bought! You have {Coins} coins left.")</code></pre>
+<p>如果代码中存在提前 <code>return</code>，代码仍然可以通过编译，但 Visual Studio Code 会警告你：<code>return</code> 之后的表达式将不会运行。</p>
+<h3>无有效结果的函数使用空类型（Void for Functions with No Useful Result）</h3>
+<p>有时候你需要结果，有时候则不需要。</p>
+<p>如果你还记得<a href="basics-of-writing-code-2-basic-programming-concepts-in-verse.html">第 2 课</a>中的类型（type），你可能还记得每种类型都需要特定种类的值。下面的列表非常简短。Verse 使用很多类型，但以下是最常见的几种，也是使用变量和常量的基础。</p>
+<table><thead><tr><th>类型</th><th>说明</th><th>取值</th></tr></thead><tbody>
+<tr><td><code>logic</code></td><td>该值类型只能为真或假。</td><td>true / false</td></tr>
+<tr><td><code>int</code></td><td>整数是整数（不是分数），<code>int</code> 即 integer（整数）的缩写。</td><td>整数</td></tr>
+<tr><td><code>float</code></td><td>该类型用于非整数的值，例如分数。</td><td>带小数点的数字</td></tr>
+<tr><td><code>string</code></td><td>该类型用于任何文本，可以是字母、数字、标点、空格，甚至表情符号。😻</td><td>字母、数字、标点、空格、表情符号</td></tr>
+</tbody></table>
+<p>当你创建的函数不需要产生结果时，可以把函数的返回类型设为 <code>void</code>（空类型）。</p>
+<p>这意味着代码块中的最后一个表达式可以产生任意类型的值，而不会引发编译器错误，因为该函数的类型已被设为<strong>空类型（void）</strong>。</p>
+<p>对于返回类型为 void 的函数，你仍然可以使用 <code>return</code> 关键字——只不过不需要在 <code>return</code> 关键字后面提供值。</p>
+<h2 id="sec-2">小结</h2>
+<ul>
+<li><strong>结果（result）</strong>是调用函数时从函数中获得的返回值。</li>
+<li>在代码块中，最后一个表达式将产生<strong>结果（result）</strong>。</li>
+<li>要改变函数中<strong>值（value）</strong>的类型，需要修改<strong>函数签名（function signature）</strong>中的<strong>类型（type）</strong>。</li>
+<li><strong>返回（return）</strong>是一个关键字，它告诉函数提供紧随其后的表达式所产生的值。</li>
+<li><strong>提前返回（early return）</strong>是指在代码块结束之前使用 return 关键字。这会导致程序<strong>立即退出</strong>该代码块，不再运行块中剩余的代码。</li>
+<li><strong>空类型（void）</strong>表示函数的值不会在其他地方使用，或者说不值得特别处理。你可以把不需要产生结果的函数类型设为 void。</li>
+</ul>
+<h2 id="sec-3">练习时间！</h2>
+<ul>
+<li><a href="basics-of-writing-code-7-practice-time-in-verse.html">第 7 课：练习时间！练习编写返回结果的函数。</a></li>
+</ul>
+<p>标签：<a href="https://dev.epicgames.com/community/search?query=verse" target="_blank" rel="noopener">verse</a> · <a href="https://dev.epicgames.com/community/search?query=functions" target="_blank" rel="noopener">functions</a> · <a href="https://dev.epicgames.com/community/search?query=void" target="_blank" rel="noopener">void</a> · <a href="https://dev.epicgames.com/community/search?query=program" target="_blank" rel="noopener">program</a> · <a href="https://dev.epicgames.com/community/search?query=results" target="_blank" rel="noopener">results</a> · <a href="https://dev.epicgames.com/community/search?query=returns" target="_blank" rel="noopener">returns</a> · <a href="https://dev.epicgames.com/community/search?query=self" target="_blank" rel="noopener">self</a> · <a href="https://dev.epicgames.com/community/search?query=early%20returns" target="_blank" rel="noopener">early returns</a></p>
+<p>在<a href="https://forums.unrealengine.com/categories?tag=fortnite" target="_blank" rel="noopener">开发者论坛（Developer Forums）</a>提问并帮助同伴。在<a href="https://dev.epicgames.com/community/fortnite/learning" target="_blank" rel="noopener">学习库（Learning Library）</a>编写你自己的教程或阅读他人的教程。</p><div class="pager"><a href="29-learn-the-basics-of-writing-code-in-verse.html"><small>← 返回父教程</small>从零学习 Verse 代码基础</a><a href="sub-index.html"><small>子教程索引 →</small>全部子教程</a></div></article><nav class="doc-toc" aria-label="本页内容"><b>本页内容</b><a href="#sec-1">结果与返回</a><a href="#sec-2">小结</a><a href="#sec-3">练习时间！</a></nav></div></div></div></div><footer class="edc-footer"><div class="inner"><img src="../assets/logo-epic.svg" alt="Epic Games"><span>Fortnite 文档中文镜像 · UE教程/ · 本地打开 index.html 阅读 · 翻译整理自 Epic 官方文档，仅供学习交流</span></div></footer></body></html>

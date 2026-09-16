@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>用 Verse 制作团队淘汰赛（Team Elimination） | Fortnite 文档中文镜像</title>
+<link rel="stylesheet" href="../assets/epic.css">
+<link rel="stylesheet" href="../assets/patch.css">
+<link rel="icon" href="../assets/logo-epic.svg">
+</head>
+<body class="theme-fortnite">
+<div class="edc-topbar"><div class="edc-topbar-inner"><img class="edc-logo" src="../assets/logo-epic.svg" alt="Epic Games"><span class="edc-brand">Epic Games <b>开发者社区</b></span><span class="edc-nav"><a href="../index.html">文档首页</a><a href="sub-index.html">子教程索引</a><a href="https://dev.epicgames.com/documentation/fortnite/team-elimination-game-in-verse" target="_blank" rel="noopener">英文原文</a></span></div></div>
+<div class="site-container">
+<aside class="site-nav"><div class="documents-tree"><nav><ul class="contents-table">
+<div class="tree-sec">A · 最新动态</div>
+<a class="tree-link" href="01-42-00-fortnite-ecosystem-updates-and-release-notes.html">01. 42.00 生态系统更新与发行说明</a>
+<a class="tree-link" href="02-custom-items-and-inventory-overview-in-fortnite.html">02. 自定义物品与背包总览</a>
+<a class="tree-link" href="03-in-island-transactions-in-fortnite.html">03. 岛内交易</a>
+<a class="tree-link" href="04-mobile-development-in-fortnite.html">04. 移动端开发</a>
+<a class="tree-link" href="05-inputs-in-fortnite.html">05. 输入系统</a>
+<a class="tree-link" href="06-ability-system-in-unreal-editor-for-fortnite.html">06. 能力系统 Ability System</a>
+<a class="tree-link" href="07-partybased-gameplay-using-the-social-synergy-api-in-fortnite.html">07. 社交协同 API 与小队玩法</a>
+<a class="tree-link" href="08-scene-graph-in-unreal-editor-for-fortnite.html">08. 场景图 Scene Graph</a>
+<div class="tree-sec">B · 入门</div>
+<a class="tree-link" href="09-build-your-first-island-in-fortnite.html">09. 构建你的第一个岛屿</a>
+<a class="tree-link" href="10-onboarding-guide-to-programming-with-verse-in-unreal-editor-for-fortnite.html">10. Verse 编程入门指南</a>
+<a class="tree-link" href="11-building-basics-in-fortnite-creative.html">11. 建造基础</a>
+<div class="tree-sec">C · 品牌合集</div>
+<a class="tree-link" href="12-star-wars-islands-in-fortnite.html">12. 星球大战™岛屿</a>
+<a class="tree-link" href="13-kpop-demon-hunters-islands-in-fortnite.html">13. KPop 猎魔团岛屿</a>
+<a class="tree-link" href="14-building-lego-islands-in-fortnite.html">14. 乐高®岛屿</a>
+<a class="tree-link" href="15-the-walking-dead-universe-islands-in-unreal-editor-for-fortnite.html">15. 行尸走肉宇宙岛屿</a>
+<a class="tree-link" href="16-teenage-mutant-ninja-turtle-islands-in-unreal-editor-for-fortnite.html">16. 忍者神龟岛屿</a>
+<a class="tree-link" href="17-squid-game-islands-in-fortnite.html">17. 鱿鱼游戏岛屿</a>
+<div class="tree-sec">D · 开发者成功</div>
+<a class="tree-link" href="18-using-creator-portal-in-fortnite-creative.html">18. 使用创作者门户</a>
+<a class="tree-link" href="19-island-moderation-and-guidelines-in-fortnite-creative.html">19. 岛屿审核与准则</a>
+<div class="tree-sec">E · 协作</div>
+<a class="tree-link" href="20-creating-teams-in-creator-portal-in-unreal-editor-for-fortnite.html">20. 在创作者门户创建团队</a>
+<a class="tree-link" href="21-adding-playtesters-in-fortnite-creative.html">21. 添加试玩测试员</a>
+<a class="tree-link" href="22-playtesting-your-island-in-unreal-editor-for-fortnite.html">22. 试玩测试你的岛屿</a>
+<a class="tree-link" href="23-collaborating-in-unreal-editor-for-fortnite.html">23. 在 UEFN 中协作</a>
+<a class="tree-link" href="24-lore-version-control-in-unreal-editor-for-fortnite.html">24. Lore 版本控制</a>
+<a class="tree-link" href="25-conflicts-in-lore-version-control-in-unreal-editor-for-fortnite.html">25. Lore 中的冲突</a>
+<a class="tree-link" href="26-version-history-and-conflict-resolution-in-unreal-editor-for-fortnite.html">26. 分支历史与冲突解决</a>
+<div class="tree-sec">F · 游戏示例</div>
+<a class="tree-link active" href="27-build-a-game-in-unreal-editor-for-fortnite.html">27. 构建一款游戏</a>
+<a class="tree-link" href="28-unreal-editor-for-fortnite-starter-templates.html">28. UEFN 新手模板</a>
+<div class="tree-sec">G · Verse</div>
+<a class="tree-link" href="29-learn-the-basics-of-writing-code-in-verse.html">29. 从零学习 Verse 代码基础</a>
+<div class="tree-sec">H · 专注领域</div>
+<a class="tree-link" href="30-lighting-in-unreal-editor-for-fortnite.html">30. 灯光</a>
+<a class="tree-link" href="31-animation-and-cinematics-in-unreal-editor-for-fortnite.html">31. 动画与过场动画</a>
+<a class="tree-link" href="32-modeling-in-unreal-editor-for-fortnite.html">32. 建模</a>
+<a class="tree-link" href="33-materials-in-unreal-editor-for-fortnite.html">33. 材质</a>
+<a class="tree-link" href="34-environments-and-landscapes-in-unreal-editor-for-fortnite.html">34. 环境与地形</a>
+<a class="tree-link" href="35-audio-in-unreal-editor-for-fortnite.html">35. 音频</a>
+<a class="tree-link" href="36-visual-effects-in-unreal-editor-for-fortnite.html">36. 视觉特效</a>
+</ul></nav></div></aside>
+<div class="page-content"><div class="page-document has-theme-bg">
+<header class="section-page-header"><nav><ol class="breadcrumb is-shrinkable"><li class="breadcrumb-item is-root"><img src="../assets/logo-epic.svg" alt="Epic Games"><a href="../index.html">Developer</a></li><li class="breadcrumb-item"><a href="../index.html">Fortnite 文档</a></li><li class="breadcrumb-item"><a href="27-build-a-game-in-unreal-editor-for-fortnite.html">构建一款游戏</a></li><li class="breadcrumb-item active" aria-current="page"><span class="text-truncate">用 Verse 制作团队淘汰赛（Team Elimination）</span></li></ol></nav><h1>用 Verse 制作团队淘汰赛（Team Elimination）</h1><p class="text-secondary mb-0">用 Verse 创建多人竞技游戏模式：玩家以小队为单位依次解锁一系列武器，每次淘汰都会让自己或队友获得下一把武器。</p><p class="doc-meta">英文原标题：Team Elimination Game in Verse · <a href="https://dev.epicgames.com/documentation/fortnite/team-elimination-game-in-verse" target="_blank" rel="noopener">查看英文原文</a> · 社区翻译镜像，仅供学习</p></header>
+<div class="doc-columns"><article class="doc-article">
+<p>让玩家按顺序逐把体验武器的游戏模式，是动作品类的常青树。它迫使玩家对每一把到手的武器迅速做出反应，带来紧张刺激、变化多端的体验，每一局都不重样。然而，这类体验高度依赖武器发放顺序：如果玩家长时间卡在同一把武器上，就会产生挫败感。</p>
+<p>本示例加入了合作 twist（协作变体）：玩家以小队为单位推进武器进度，高手可以帮队友晋升武器层级，带他们跨过难用的武器。</p>
+<p>完成本指南，你将学会创建一个游戏模式：玩家依次解锁一系列武器，每次淘汰都会让自己或队友获得下一把武器。</p>
+<h2 id="sec-1">用到的 Verse 语言特性（Verse Language Features Used）</h2>
+<ul>
+<li>map：本示例使用 <a href="https://dev.epicgames.com/documentation/fortnite/verse-glossary" target="_blank" rel="noopener">map</a> 容器类型，以“玩家—数据”键值对记录每位玩家的当前武器层级与队伍归属。</li>
+<li>类型别名（Type Aliasing）：<a href="https://dev.epicgames.com/documentation/fortnite/verse-glossary#type-alias" target="_blank" rel="noopener">类型别名</a>允许你为一个类型起个专属名字，而不创建新类型。</li>
+<li>option：该设备使用 <a href="https://dev.epicgames.com/documentation/fortnite/verse-glossary" target="_blank" rel="noopener">option（可空类型）</a>来决定玩家拿下淘汰时应给哪位玩家发武器。</li>
+<li>array：该设备使用多个<a href="https://dev.epicgames.com/documentation/fortnite/verse-glossary" target="_blank" rel="noopener">数组（arrays）</a>存储对其他设备和各队伍玩家的引用。</li>
+<li>for：用 <a href="https://dev.epicgames.com/documentation/fortnite/verse-glossary#for-expression" target="_blank" rel="noopener">for 表达式</a>遍历设备使用的数组。</li>
+<li>if：用 <a href="https://dev.epicgames.com/documentation/fortnite/verse-glossary#if-expression" target="_blank" rel="noopener">if 表达式</a>判断玩家武器层级是否高于队友，以及淘汰数是否达到终局条件。</li>
+<li>failure：用<a href="https://dev.epicgames.com/documentation/fortnite/verse-glossary#failure-context" target="_blank" rel="noopener">失败上下文（Failure contexts）</a>访问数组并控制程序流程。</li>
+</ul>
+<h2 id="sec-2">用到的 Verse API（Verse APIs Used）</h2>
+<ul>
+<li><strong>可订阅事件（Subscribable）：</strong>你将<a href="https://dev.epicgames.com/documentation/fortnite/verse-glossary#subscribe" target="_blank" rel="noopener">订阅（subscribe）</a>多个事件，如玩家生成、玩家淘汰、玩家加入游戏等。</li>
+<li><strong>游玩空间（Playspace）：</strong><a href="https://dev.epicgames.com/documentation/fortnite/verse-glossary#playspace" target="_blank" rel="noopener">playspace</a>跟踪玩家加入/离开等可订阅事件，也负责获取玩家与队伍列表、查找玩家所在队伍。本教程将订阅多个 playspace 事件，并用 playspace <a href="https://dev.epicgames.com/documentation/fortnite/verse-glossary#method" target="_blank" rel="noopener">方法（methods）</a>直接获取并操作玩家与队伍。</li>
+<li><strong>队伍（Teams）：</strong>team <a href="https://dev.epicgames.com/documentation/fortnite/verse-glossary" target="_blank" rel="noopener">类（class）</a>负责玩家的移入/移出队伍。本教程将直接用 team 类操作队伍、比较玩家的武器层级。</li>
+</ul>
+<h2 id="sec-3">步骤（Steps）</h2>
+<p>按以下步骤学习创建多人竞技游戏模式：让各队伍依次解锁一系列武器。最后一步附有完整脚本供参考。</p>
+<ul>
+<li><a href="https://dev.epicgames.com/documentation/fortnite/team-elimination-1-setting-up-the-level-in-verse" target="_blank" rel="noopener">1. 搭建团队淘汰赛关卡：用 Verse 创建让各队伍依次解锁一系列武器的多人竞技游戏模式。</a></li>
+<li><a href="https://dev.epicgames.com/documentation/fortnite/team-elimination-2-finding-devices-at-runtime-in-verse" target="_blank" rel="noopener">2. 在运行时查找设备：用 Verse 创建让各队伍依次解锁一系列武器的多人竞技游戏模式。</a></li>
+<li><a href="https://dev.epicgames.com/documentation/fortnite/team-elimination-3-subscribing-to-player-events-in-verse" target="_blank" rel="noopener">3. 订阅玩家事件：用 Verse 创建让各队伍依次解锁一系列武器的多人竞技游戏模式。</a></li>
+<li><a href="https://dev.epicgames.com/documentation/fortnite/team-elimination-4-tracking-players-using-maps-in-verse" target="_blank" rel="noopener">4. 用 map 跟踪玩家：用 Verse 创建让各队伍依次解锁一系列武器的多人竞技游戏模式。</a></li>
+<li><a href="https://dev.epicgames.com/documentation/fortnite/team-elimination-5-granting-weapons-on-eliminations-in-verse" target="_blank" rel="noopener">5. 淘汰后发放武器：用 Verse 创建让各队伍依次解锁一系列武器的多人竞技游戏模式。</a></li>
+<li><a href="https://dev.epicgames.com/documentation/fortnite/team-elimination-6-handling-a-player-joining-a-game-in-progress-in-verse" target="_blank" rel="noopener">6. 处理对局中途加入的玩家：用 Verse 创建让各队伍依次解锁一系列武器的多人竞技游戏模式。</a></li>
+<li><a href="https://dev.epicgames.com/documentation/fortnite/team-elimination-7-testing-multiplayer-using-the-sentry-device-in-verse" target="_blank" rel="noopener">7. 用 Sentry 设备测试多人联机：用 Verse 创建让各队伍依次解锁一系列武器的多人竞技游戏模式。</a></li>
+<li><a href="https://dev.epicgames.com/documentation/fortnite/team-elimiation-8-final-result-in-verse" target="_blank" rel="noopener">8. 最终成果：用 Verse 创建让各队伍依次解锁一系列武器的多人竞技游戏模式。</a></li>
+<li><a href="https://dev.epicgames.com/community/search?query=verse" target="_blank" rel="noopener">verse</a></li>
+<li><a href="https://dev.epicgames.com/community/search?query=map" target="_blank" rel="noopener">map</a></li>
+<li><a href="https://dev.epicgames.com/community/search?query=multiplayer" target="_blank" rel="noopener">multiplayer</a></li>
+<li><a href="https://dev.epicgames.com/community/search?query=option" target="_blank" rel="noopener">option</a></li>
+<li><a href="https://dev.epicgames.com/community/search?query=team" target="_blank" rel="noopener">team</a></li>
+<li><a href="https://dev.epicgames.com/community/search?query=playspace" target="_blank" rel="noopener">playspace</a></li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/5030de10-4b60-4d7b-af28-d646e6916ab9?resizing_type=fit&width=640&height=640" alt="搭建团队淘汰赛关卡的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/5030de10-4b60-4d7b-af28-d646e6916ab9?resizing_type=fit&width=640&height=640" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/b4061807-3dd1-4496-9f15-7a631f3d1f9e?resizing_type=fit&width=640&height=640" alt="在运行时查找设备的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/b4061807-3dd1-4496-9f15-7a631f3d1f9e?resizing_type=fit&width=640&height=640" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/06104297-24fa-45c2-87b3-919b3f8b7137?resizing_type=fit&width=640&height=640" alt="订阅玩家事件的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/06104297-24fa-45c2-87b3-919b3f8b7137?resizing_type=fit&width=640&height=640" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/5a6dd8ca-16fa-43cb-ba16-50b62f60a5f7?resizing_type=fit&width=640&height=640" alt="用 map 跟踪玩家的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/5a6dd8ca-16fa-43cb-ba16-50b62f60a5f7?resizing_type=fit&width=640&height=640" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/e8c42907-0294-4a94-a124-e86c96f227f4?resizing_type=fit&width=640&height=640" alt="淘汰后发放武器的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/e8c42907-0294-4a94-a124-e86c96f227f4?resizing_type=fit&width=640&height=640" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/99a3886e-6fcd-4e15-834b-35f045ffe51e?resizing_type=fit&width=640&height=640" alt="处理对局中途加入玩家的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/99a3886e-6fcd-4e15-834b-35f045ffe51e?resizing_type=fit&width=640&height=640" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/19cacadf-9add-4161-9ba2-182dc50c061d?resizing_type=fit&width=640&height=640" alt="用 Sentry 设备测试多人联机的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/19cacadf-9add-4161-9ba2-182dc50c061d?resizing_type=fit&width=640&height=640" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/93c003db-9c3f-4f69-b842-2dcca37a3329?resizing_type=fit&width=640&height=640" alt="最终成果的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/93c003db-9c3f-4f69-b842-2dcca37a3329?resizing_type=fit&width=640&height=640" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p><a href="https://forums.unrealengine.com/categories?tag=fortnite" target="_blank" rel="noopener">在开发者论坛提问并帮助同伴</a></p>
+<p><a href="https://dev.epicgames.com/community/fortnite/learning" target="_blank" rel="noopener">在学习库中编写或阅读他人教程</a></p>
+<div class="pager"><a href="27-build-a-game-in-unreal-editor-for-fortnite.html"><small>← 返回父教程</small>构建一款游戏</a><a href="sub-index.html"><small>子教程索引 →</small>全部子教程</a></div>
+</article><nav class="doc-toc" aria-label="本页内容"><b>本页内容</b><a href="#sec-1">用到的 Verse 语言特性</a><a href="#sec-2">用到的 Verse API</a><a href="#sec-3">步骤</a></nav></div>
+</div></div>
+</div>
+<footer class="edc-footer"><div class="inner"><img src="../assets/logo-epic.svg" alt="Epic Games"><span>Fortnite 文档中文镜像 · UE教程/ · 本地打开 index.html 阅读 · 翻译整理自 Epic 官方文档，仅供学习交流</span></div></footer>
+</body>
+</html>

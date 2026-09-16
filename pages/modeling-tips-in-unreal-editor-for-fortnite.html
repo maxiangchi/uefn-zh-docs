@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UEFN 建模技巧（Modeling Tips） | Fortnite 文档中文镜像</title>
+<link rel="stylesheet" href="../assets/epic.css">
+<link rel="stylesheet" href="../assets/patch.css">
+<link rel="icon" href="../assets/logo-epic.svg">
+</head>
+<body class="theme-fortnite">
+<div class="edc-topbar"><div class="edc-topbar-inner"><img class="edc-logo" src="../assets/logo-epic.svg" alt="Epic Games"><span class="edc-brand">Epic Games <b>开发者社区</b></span><span class="edc-nav"><a href="../index.html">文档首页</a><a href="sub-index.html">子教程索引</a><a href="https://dev.epicgames.com/documentation/fortnite/modeling-tips-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">英文原文</a></span></div></div>
+<div class="site-container">
+<aside class="site-nav"><div class="documents-tree"><nav><ul class="contents-table">
+<div class="tree-sec">A · 最新动态</div>
+<a class="tree-link" href="01-42-00-fortnite-ecosystem-updates-and-release-notes.html">01. 42.00 生态系统更新与发行说明</a>
+<a class="tree-link" href="02-custom-items-and-inventory-overview-in-fortnite.html">02. 自定义物品与背包总览</a>
+<a class="tree-link" href="03-in-island-transactions-in-fortnite.html">03. 岛内交易</a>
+<a class="tree-link" href="04-mobile-development-in-fortnite.html">04. 移动端开发</a>
+<a class="tree-link" href="05-inputs-in-fortnite.html">05. 输入系统</a>
+<a class="tree-link" href="06-ability-system-in-unreal-editor-for-fortnite.html">06. 能力系统 Ability System</a>
+<a class="tree-link" href="07-partybased-gameplay-using-the-social-synergy-api-in-fortnite.html">07. 社交协同 API 与小队玩法</a>
+<a class="tree-link" href="08-scene-graph-in-unreal-editor-for-fortnite.html">08. 场景图 Scene Graph</a>
+<div class="tree-sec">B · 入门</div>
+<a class="tree-link" href="09-build-your-first-island-in-fortnite.html">09. 构建你的第一个岛屿</a>
+<a class="tree-link" href="10-onboarding-guide-to-programming-with-verse-in-unreal-editor-for-fortnite.html">10. Verse 编程入门指南</a>
+<a class="tree-link" href="11-building-basics-in-fortnite-creative.html">11. 建造基础</a>
+<div class="tree-sec">C · 品牌合集</div>
+<a class="tree-link" href="12-star-wars-islands-in-fortnite.html">12. 星球大战™岛屿</a>
+<a class="tree-link" href="13-kpop-demon-hunters-islands-in-fortnite.html">13. KPop 猎魔团岛屿</a>
+<a class="tree-link" href="14-building-lego-islands-in-fortnite.html">14. 乐高®岛屿</a>
+<a class="tree-link" href="15-the-walking-dead-universe-islands-in-unreal-editor-for-fortnite.html">15. 行尸走肉宇宙岛屿</a>
+<a class="tree-link" href="16-teenage-mutant-ninja-turtle-islands-in-unreal-editor-for-fortnite.html">16. 忍者神龟岛屿</a>
+<a class="tree-link" href="17-squid-game-islands-in-fortnite.html">17. 鱿鱼游戏岛屿</a>
+<div class="tree-sec">D · 开发者成功</div>
+<a class="tree-link" href="18-using-creator-portal-in-fortnite-creative.html">18. 使用创作者门户</a>
+<a class="tree-link" href="19-island-moderation-and-guidelines-in-fortnite-creative.html">19. 岛屿审核与准则</a>
+<div class="tree-sec">E · 协作</div>
+<a class="tree-link" href="20-creating-teams-in-creator-portal-in-unreal-editor-for-fortnite.html">20. 在创作者门户创建团队</a>
+<a class="tree-link" href="21-adding-playtesters-in-fortnite-creative.html">21. 添加试玩测试员</a>
+<a class="tree-link" href="22-playtesting-your-island-in-unreal-editor-for-fortnite.html">22. 试玩测试你的岛屿</a>
+<a class="tree-link" href="23-collaborating-in-unreal-editor-for-fortnite.html">23. 在 UEFN 中协作</a>
+<a class="tree-link" href="24-lore-version-control-in-unreal-editor-for-fortnite.html">24. Lore 版本控制</a>
+<a class="tree-link" href="25-conflicts-in-lore-version-control-in-unreal-editor-for-fortnite.html">25. Lore 中的冲突</a>
+<a class="tree-link" href="26-version-history-and-conflict-resolution-in-unreal-editor-for-fortnite.html">26. 分支历史与冲突解决</a>
+<div class="tree-sec">F · 游戏示例</div>
+<a class="tree-link" href="27-build-a-game-in-unreal-editor-for-fortnite.html">27. 构建一款游戏</a>
+<a class="tree-link" href="28-unreal-editor-for-fortnite-starter-templates.html">28. UEFN 新手模板</a>
+<div class="tree-sec">G · Verse</div>
+<a class="tree-link" href="29-learn-the-basics-of-writing-code-in-verse.html">29. 从零学习 Verse 代码基础</a>
+<div class="tree-sec">H · 专注领域</div>
+<a class="tree-link" href="30-lighting-in-unreal-editor-for-fortnite.html">30. 灯光</a>
+<a class="tree-link" href="31-animation-and-cinematics-in-unreal-editor-for-fortnite.html">31. 动画与过场动画</a>
+<a class="tree-link active" href="32-modeling-in-unreal-editor-for-fortnite.html">32. 建模</a>
+<a class="tree-link" href="33-materials-in-unreal-editor-for-fortnite.html">33. 材质</a>
+<a class="tree-link" href="34-environments-and-landscapes-in-unreal-editor-for-fortnite.html">34. 环境与地形</a>
+<a class="tree-link" href="35-audio-in-unreal-editor-for-fortnite.html">35. 音频</a>
+<a class="tree-link" href="36-visual-effects-in-unreal-editor-for-fortnite.html">36. 视觉特效</a>
+</ul></nav></div></aside>
+<div class="page-content"><div class="page-document has-theme-bg">
+<header class="section-page-header"><nav><ol class="breadcrumb is-shrinkable"><li class="breadcrumb-item is-root"><img src="../assets/logo-epic.svg" alt="Epic Games"><a href="../index.html">Developer</a></li><li class="breadcrumb-item"><a href="../index.html">Fortnite 文档</a></li><li class="breadcrumb-item"><a href="32-modeling-in-unreal-editor-for-fortnite.html">建模</a></li><li class="breadcrumb-item active" aria-current="page"><span class="text-truncate">UEFN 建模技巧（Modeling Tips）</span></li></ol></nav><h1>UEFN 建模技巧（Modeling Tips）</h1><p class="text-secondary mb-0">在常用 3D 软件中为 UEFN 创建资产前，先了解资产朝向、道具建模、命名规范与 UV 要求，确保道具在 UEFN 中顺畅运行。</p><p class="doc-meta">英文原标题：Modeling Tips in Unreal Editor for Fortnite · <a href="https://dev.epicgames.com/documentation/fortnite/modeling-tips-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">查看英文原文</a> · 社区翻译镜像，仅供学习</p></header>
+<div class="doc-columns"><article class="doc-article">
+<p>在你最顺手的 3D 软件中为 <strong>虚幻编辑器 Fortnite 版（UEFN）</strong>项目创建<a href="https://dev.epicgames.com/documentation/fortnite/unreal-editor-for-fortnite-glossary#asset" target="_blank" rel="noopener">资产（assets）</a>之前，请先读完下面的建模注意事项，确保你创建的道具能在 UEFN 中顺畅运行。</p>
+<p>为确保使用正确的比例，请参阅<a href="https://dev.epicgames.com/documentation/fortnite/fortniteready-assets-best-practices-in-fortnite" target="_blank" rel="noopener">在 UEFN 中创建 Fortnite 就绪资产</a>，了解单位、比例与网格尺寸。</p>
+<h2 id="sec-1">摆放资产朝向（Orienting Your Assets）</h2>
+<p><strong>Blender</strong></p>
+<ul>
+<li><strong>Z 轴</strong>朝上，<strong>Y 轴正方向</strong>朝前；</li>
+<li>用 <strong>Y 轴正方向</strong>作为模型的正面朝向。</li>
+</ul>
+<p><strong>Maya</strong></p>
+<ul>
+<li>坐标系设为 <strong>Z-up</strong>，<strong>Y 轴负方向</strong>为正确的正面朝向；</li>
+<li>导入 UEFN 后会自动转换为<strong> Y 轴正方向</strong>。</li>
+</ul>
+<p><strong>3DS Max</strong></p>
+<ul>
+<li>使用右手系、<strong>Z 轴</strong>朝上的世界坐标系。视口前视图中，<strong>Y 轴正方向</strong>指向屏幕内侧。</li>
+</ul>
+<p>建议在 blockout（白盒）阶段就把<a href="https://dev.epicgames.com/documentation/fortnite/unreal-editor-for-fortnite-glossary#mesh" target="_blank" rel="noopener">网格体（mesh）</a>导入，确认其在 UEFN 中的坐标正确，及早发现其他问题，避免细化后再返工。</p>
+<p>要让资产在 Fab Marketplace 中正确显示，请做到：</p>
+<ul>
+<li>制作时就匹配 Z-up 轴，或在导出时转换以匹配 UEFN，否则资产导入时朝向可能错误；</li>
+<li><a href="https://dev.epicgames.com/documentation/fortnite/unreal-editor-for-fortnite-glossary#pivot-point" target="_blank" rel="noopener">轴心点（Pivot points）</a>应便于顺畅组装，并基于网格体本身而非场景来放置。一般把轴心点放在地面高度；需要随机旋转的网格体，应把轴心点放在网格体中心。</li>
+</ul>
+<h2 id="sec-2">创建道具（Creating a Prop）</h2>
+<p>用你最顺手的 3D 工具为 UEFN 创建自定义资产。</p>
+<p>在为<a href="https://dev.epicgames.com/documentation/fortnite/unreal-editor-for-fortnite-glossary#object" target="_blank" rel="noopener">对象（object）</a>设计基础网格体时，遵循以下指南，创建同时面向 Fab Marketplace 与 UEFN 就绪的资产。</p>
+<p>创建 UEFN 资产时可能遇到的问题清单，请参阅《在 UEFN 中创建 Fortnite 就绪资产》中的<a href="https://dev.epicgames.com/documentation/fortnite/fortniteready-assets-best-practices-in-fortnite" target="_blank" rel="noopener">资产故障排查（Asset Troubleshooting）</a>一节。</p>
+<h3>多边形建模（Poly Modeling）</h3>
+<ul>
+<li>从原型（blockout 资产）起步，确定资产的剪影与大体观感，观察其与角色比例的关系。合适后再深入细化；</li>
+<li>网格体应<a href="https://www.epicgames.com/fortnite/en-US/creative/docs/fortnite-creative-glossary#orientation" target="_blank" rel="noopener">定向（oriented）</a>，使正面朝向与 UEFN 中的 <a href="https://www.epicgames.com/fortnite/en-US/creative/docs/fortnite-creative-glossary#axis" target="_blank" rel="noopener">X 轴（axis）</a>正方向一致；</li>
+<li>物体应有厚度，例外情况可用双面材质处理；</li>
+<li>倒角边不能小于 0.5 厘米；</li>
+<li>尽可能做成连续网格体，注意内部多边形；</li>
+<li>网格体表面复杂度保持尽可能简单，让资产文件尽可能小；</li>
+<li>如果资产包含可独立使用的部件，应做成模块化。例如集市摊位带篮子与水果：可以是一个整体，也可以把篮子、水果做成可单独使用的独立网格体；</li>
+<li>删掉不需要的东西；</li>
+<li>为 3D 资产制作平铺材质时，使用面加权<a href="https://dev.epicgames.com/documentation/fortnite/unreal-editor-for-fortnite-glossary#normal" target="_blank" rel="noopener">法线（normals）</a>以获得平滑边缘。</li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/9f623894-47c4-4cd0-96b4-55ad9e766433?resizing_type=fit" alt="多边形建模示例的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/9f623894-47c4-4cd0-96b4-55ad9e766433?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h3>多边形、顶点与象限（Polygons, Vertices, and Quadrants）</h3>
+<ul>
+<li>资产保持低多边形、简洁；</li>
+<li>把部件焊接在一起，避免网格体出现破洞：元素之间不应有孔洞。如果物体可独立使用，要分别考虑（例如桌子和椅子应是不同对象、不同 TextureSet，可独立使用）；</li>
+<li>网格体保持干净，尽量用四边面，只在必要处用三角面，注意重叠面；</li>
+<li>平坦处布线稀疏、复杂处布线密集：平坦表面用更少的多边形；</li>
+<li>最终<a href="https://dev.epicgames.com/documentation/fortnite/unreal-editor-for-fortnite-glossary#vertex" target="_blank" rel="noopener">顶点（vertex）</a>数以 UE 中的统计为准，而非建模软件中的数字：硬边、多重平滑组、多余 UV 都会增加引擎内最终顶点数。</li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/93d32757-58c4-4192-b059-cdc033610263?resizing_type=fit" alt="多边形与顶点布线示例的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/93d32757-58c4-4192-b059-cdc033610263?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h3>水密结构（Watertight Construction）</h3>
+<p>能否做出水密资产取决于你的设计选择。建模软件一般有高亮边界边的选项，帮你找到未焊接的边。用清理工具查找有问题的几何体，确保资产没有<a href="https://dev.epicgames.com/documentation/fortnite/unreal-editor-for-fortnite-glossary#backface" target="_blank" rel="noopener">背面（backfaces）</a>与缝隙。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/cef9b081-1ccd-474b-9c19-aa1dda0741bf?resizing_type=fit" alt="水密结构检查示例的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/cef9b081-1ccd-474b-9c19-aa1dda0741bf?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h2 id="sec-3">静态网格体命名规范（Static Mesh Naming Conventions）</h2>
+<p>命名资产时，要能看出资产是什么。例如网格体是椅子，命名就应包含 "chair"。</p>
+<p>同一网格体有多个时，在资产名后加编号：Blue_Highback_Chair_01、Blue_Highback_Chair_02，以此类推。</p>
+<h2 id="sec-4">UV</h2>
+<p>网格体至少需要一套 <a href="https://dev.epicgames.com/documentation/fortnite/unreal-editor-for-fortnite-glossary#uv-mapping" target="_blank" rel="noopener">UV</a>。建筑资产的第二套 UV 用于区分不同的 texture set（纹理集）指派；自定义材质可以用多套 UV 实现更多效果。</p>
+<p>要正确排布 UV：若采用高模烘焙流程，所有 UV 必须在 [0 到 1] 空间内；若使用平铺材质，UV 可以超出 [0 到 1] 空间并重叠。</p>
+<p>不要拉伸 UV 或 <a href="https://dev.epicgames.com/documentation/fortnite/unreal-editor-for-fortnite-glossary#uv-island" target="_blank" rel="noopener">UV 孤岛（UV islands）</a>，UV 排布尽可能紧凑高效。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/30abedcf-da8d-4d91-a9b0-fd5ad1f7b033?resizing_type=fit" alt="UV 排布示例的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/30abedcf-da8d-4d91-a9b0-fd5ad1f7b033?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p><strong>创建 UV 时：</strong></p>
+<ul>
+<li>使用 <a href="https://dev.epicgames.com/documentation/fortnite/unreal-editor-for-fortnite-glossary#texel" target="_blank" rel="noopener">纹素（texel）</a>密度 1024 px/m（该数值可因物体而异）；</li>
+<li>按对象分组 texture set，例如桌椅应由基础 T_Table01Base_[TextureSet] 与 T_Chair01_[TextureSet] 组成；</li>
+<li>把 UV 孤岛放在 [0 到 1] 方框内；</li>
+<li>尽可能缝合 UV 孤岛以减少接缝，UV 孤岛数量越少越好；</li>
+<li>为物体的<strong>所有</strong>元素创建 UV。</li>
+</ul>
+<p>为<strong>可平铺材质</strong>创建 UV 时的额外注意事项：</p>
+<ul>
+<li>UV 孤岛可以带不同偏移重叠；</li>
+<li>UV 孤岛水平放置，便于后期切换材质：这样换材质、做变体更方便；</li>
+<li>用 <strong>Relax</strong> 选项与边/环对齐工具横平竖直地对齐 UV，拉伸更小；</li>
+<li>UV 孤岛拉直得越平滑越好。</li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/58c6563c-28e9-4c00-a3e6-b66183cecdb6?resizing_type=fit" alt="UV 孤岛拉直示例的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/58c6563c-28e9-4c00-a3e6-b66183cecdb6?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>把选中区域拉直以展平 UV 孤岛时，某些建模软件会引入拉伸。</p>
+<h3>材质文件命名规范（Material File-Naming Conventions）</h3>
+<p>纹理与材质的文件命名与静态网格体命名规范类似：材质名应能看出材质用途与类型。</p>
+<p>如果材质属于一组资产，组内所有物品使用同一标识。例如制作马戏团主题的一套道具、材质与纹理，就在命名中加入主题（Circus_Stripe_Material）。命名不同会被视为新材质，需要重新创建。</p>
+<p>相关标签：<a href="https://dev.epicgames.com/community/search?query=assets" target="_blank" rel="noopener">assets</a> · <a href="https://dev.epicgames.com/community/search?query=modeling" target="_blank" rel="noopener">modeling</a> · <a href="https://dev.epicgames.com/community/search?query=information" target="_blank" rel="noopener">information</a></p>
+<p><a href="https://forums.unrealengine.com/categories?tag=fortnite" target="_blank" rel="noopener">在开发者论坛提问并帮助同伴</a></p>
+<p><a href="https://dev.epicgames.com/community/fortnite/learning" target="_blank" rel="noopener">在学习库中编写或阅读他人教程</a></p>
+<div class="pager"><a href="32-modeling-in-unreal-editor-for-fortnite.html"><small>← 返回父教程</small>建模</a><a href="sub-index.html"><small>子教程索引 →</small>全部子教程</a></div>
+</article><nav class="doc-toc" aria-label="本页内容"><b>本页内容</b><a href="#sec-1">摆放资产朝向</a><a href="#sec-2">创建道具</a><a href="#sec-3">静态网格体命名规范</a><a href="#sec-4">UV</a></nav></div>
+</div></div>
+</div>
+<footer class="edc-footer"><div class="inner"><img src="../assets/logo-epic.svg" alt="Epic Games"><span>Fortnite 文档中文镜像 · UE教程/ · 本地打开 index.html 阅读 · 翻译整理自 Epic 官方文档，仅供学习交流</span></div></footer>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>使用 Verse 持久化的极速竞速模板 | Fortnite 文档中文镜像</title>
+<link rel="stylesheet" href="../assets/epic.css">
+<link rel="stylesheet" href="../assets/patch.css">
+<link rel="icon" href="../assets/logo-epic.svg">
+</head>
+<body class="theme-fortnite">
+<div class="edc-topbar"><div class="edc-topbar-inner"><img class="edc-logo" src="../assets/logo-epic.svg" alt="Epic Games"><span class="edc-brand">Epic Games <b>开发者社区</b></span><span class="edc-nav"><a href="../index.html">文档首页</a><a href="sub-index.html">子教程索引</a><a href="https://dev.epicgames.com/documentation/fortnite/speedway-race-with-verse-persistence-template" target="_blank" rel="noopener">英文原文</a></span></div></div>
+<div class="site-container">
+<aside class="site-nav"><div class="documents-tree"><nav><ul class="contents-table">
+<div class="tree-sec">A最新动态</div><a class="tree-link" href="01-42-00-fortnite-ecosystem-updates-and-release-notes.html">01. 42.00 生态系统更新与发行说明</a><a class="tree-link" href="02-custom-items-and-inventory-overview-in-fortnite.html">02. 自定义物品与背包总览</a><a class="tree-link" href="03-in-island-transactions-in-fortnite.html">03. 岛内交易</a><a class="tree-link" href="04-mobile-development-in-fortnite.html">04. 移动端开发</a><a class="tree-link" href="05-inputs-in-fortnite.html">05. 输入系统</a><a class="tree-link" href="06-ability-system-in-unreal-editor-for-fortnite.html">06. 能力系统 Ability System</a><a class="tree-link" href="07-partybased-gameplay-using-the-social-synergy-api-in-fortnite.html">07. 社交协同 API 与小队玩法</a><a class="tree-link" href="08-scene-graph-in-unreal-editor-for-fortnite.html">08. 场景图 Scene Graph</a><div class="tree-sec">B入门</div><a class="tree-link" href="09-build-your-first-island-in-fortnite.html">09. 构建你的第一个岛屿</a><a class="tree-link" href="10-onboarding-guide-to-programming-with-verse-in-unreal-editor-for-fortnite.html">10. Verse 编程入门指南</a><a class="tree-link" href="11-building-basics-in-fortnite-creative.html">11. 建造基础</a><div class="tree-sec">C品牌合集</div><a class="tree-link" href="12-star-wars-islands-in-fortnite.html">12. 星球大战™岛屿</a><a class="tree-link" href="13-kpop-demon-hunters-islands-in-fortnite.html">13. KPop 猎魔团岛屿</a><a class="tree-link" href="14-building-lego-islands-in-fortnite.html">14. 乐高®岛屿</a><a class="tree-link" href="15-the-walking-dead-universe-islands-in-unreal-editor-for-fortnite.html">15. 行尸走肉宇宙岛屿</a><a class="tree-link" href="16-teenage-mutant-ninja-turtle-islands-in-unreal-editor-for-fortnite.html">16. 忍者神龟岛屿</a><a class="tree-link" href="17-squid-game-islands-in-fortnite.html">17. 鱿鱼游戏岛屿</a><div class="tree-sec">D开发者成功</div><a class="tree-link" href="18-using-creator-portal-in-fortnite-creative.html">18. 使用创作者门户</a><a class="tree-link" href="19-island-moderation-and-guidelines-in-fortnite-creative.html">19. 岛屿审核与准则</a><div class="tree-sec">E协作</div><a class="tree-link" href="20-creating-teams-in-creator-portal-in-unreal-editor-for-fortnite.html">20. 在创作者门户创建团队</a><a class="tree-link" href="21-adding-playtesters-in-fortnite-creative.html">21. 添加试玩测试员</a><a class="tree-link" href="22-playtesting-your-island-in-unreal-editor-for-fortnite.html">22. 试玩测试你的岛屿</a><a class="tree-link" href="23-collaborating-in-unreal-editor-for-fortnite.html">23. 在 UEFN 中协作</a><a class="tree-link" href="24-lore-version-control-in-unreal-editor-for-fortnite.html">24. Lore 版本控制</a><a class="tree-link" href="25-conflicts-in-lore-version-control-in-unreal-editor-for-fortnite.html">25. Lore 中的冲突</a><a class="tree-link" href="26-version-history-and-conflict-resolution-in-unreal-editor-for-fortnite.html">26. 分支历史与冲突解决</a><div class="tree-sec">F游戏示例</div><a class="tree-link active" href="27-build-a-game-in-unreal-editor-for-fortnite.html">27. 构建一款游戏</a><a class="tree-link" href="28-unreal-editor-for-fortnite-starter-templates.html">28. UEFN 新手模板</a><div class="tree-sec">G Verse</div><a class="tree-link" href="29-learn-the-basics-of-writing-code-in-verse.html">29. 从零学习 Verse 代码基础</a><div class="tree-sec">H专注领域</div><a class="tree-link" href="30-lighting-in-unreal-editor-for-fortnite.html">30. 灯光</a><a class="tree-link" href="31-animation-and-cinematics-in-unreal-editor-for-fortnite.html">31. 动画与过场动画</a><a class="tree-link" href="32-modeling-in-unreal-editor-for-fortnite.html">32. 建模</a><a class="tree-link" href="33-materials-in-unreal-editor-for-fortnite.html">33. 材质</a><a class="tree-link" href="34-environments-and-landscapes-in-unreal-editor-for-fortnite.html">34. 环境与地形</a><a class="tree-link" href="35-audio-in-unreal-editor-for-fortnite.html">35. 音频</a><a class="tree-link" href="36-visual-effects-in-unreal-editor-for-fortnite.html">36. 视觉特效</a>
+</ul></nav></div></aside>
+<div class="page-content"><div class="page-document has-theme-bg">
+<header class="section-page-header"><nav><ol class="breadcrumb is-shrinkable"><li class="breadcrumb-item is-root"><img src="../assets/logo-epic.svg" alt="Epic Games"><a href="../index.html">Developer</a></li><li class="breadcrumb-item"><a href="../index.html">Fortnite 文档</a></li><li class="breadcrumb-item"><a href="27-build-a-game-in-unreal-editor-for-fortnite.html">构建一款游戏</a></li><li class="breadcrumb-item active" aria-current="page"><span class="text-truncate">使用 Verse 持久化的极速竞速模板</span></li></ol></nav><h1>使用 Verse 持久化的极速竞速模板</h1><p class="text-secondary mb-0">极速竞速 Verse 持久化（Speedway Race with Verse Persistence）模板是将创意模式模板“设计极速竞速”转换到 UEFN 的版本，新增了 Verse 持久化本地排行榜、按上一轮名次排位发车与选手数据开场过场动画等功能。</p><p class="doc-meta">英文原标题：Speedway Race With Verse Persistence Template · <a href="https://dev.epicgames.com/documentation/fortnite/speedway-race-with-verse-persistence-template" target="_blank" rel="noopener">查看英文原文</a> · 社区翻译镜像，仅供学习</p></header>
+<div class="doc-columns"><article class="doc-article">
+
+<p><strong>极速竞速 Verse 持久化（Speedway Race with Verse Persistence）</strong>模板是将创意模式模板<a href="https://dev.epicgames.com/documentation/en-us/fortnite-creative/design-a-speedway-race-in-fortnite-creative" target="_blank" rel="noopener">设计极速竞速（Designing a Speedway Race）</a>转换到 UEFN 的版本，并为项目添加了以下功能：</p>
+<ul>
+<li>使用 Verse 持久化（Verse Persistence）在赛前大厅显示持久化本地排行榜，仅在第一轮显示。</li>
+<li>使用 Verse 持久化，根据上一轮完赛名次，在起跑线为玩家分配车辆的系统。</li>
+<li>使用过场动画与 Verse 展示每位玩家数据的发车阵容。</li>
+<li>还有更多！</li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/e8a98b47-5f52-4389-96fc-11e9366b973a?resizing_type=fit" alt="极速竞速模板原文示意图1" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/e8a98b47-5f52-4389-96fc-11e9366b973a?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>创意模式模板“设计极速竞速”的目标是使用赛道资产打造独特的竞速模式，并加入一些体验优化功能。而这套 UEFN 模板采用整体方案，替换并升级了地图中的多处功能，以发挥 UEFN 的强大能力。</p>
+<p>以下章节将更详细地介绍这些更新。</p>
+<h2 id="sec-1">升级教学区</h2>
+<p>你可以在教学区找到排行榜。每次首次进入该地图的第一轮，你都有 30 秒查看当前排行榜并探索教学区。</p>
+<p>该区域为寻求竞速乐趣的玩家打造得视觉出众，同时提供丰富的细节，说明如何构建一张同样的地图。教学区相对创意模板重新设计得更干净开阔，并加入天窗引入自然的 Lumen 光照。</p>
+<p>在 UEFN 中加载模板后，你可以阅读每组设备与 Verse 脚本的搭建说明，了解模板的构建方式，并将其应用到自己的体验中。</p>
+<p>教学区集中了大部分设备，方便你浏览并理解其逻辑，包括核心留存设备、荣誉（Accolades）与数据分析（Analytics）。荣誉设备仅在你完成一圈或完成比赛时授予 XP。</p>
+<p>你可以设置数据分析设备追踪 various 数据点，帮助你在未来更新中改进项目。该模板追踪每个检查点的完成频率，以及比赛中银币的拾取频率，两者都能反映特定检查点或金币的到达难易程度。基于这些数据，你可以在未来版本中调整这些物体的位置或数量，让整局流程更顺畅，带来更好的竞速体验。</p>
+<h2 id="sec-2">整理大纲</h2>
+<p>将项目转换到 UEFN 后，<strong>大纲（Outliner）</strong>中堆满了杂乱无章的资产长列表。</p>
+<p>虽然一切仍可运行，但载具、屏障等物品名称后被追加了数字，难以理解项目结构。转换过程自动添加这些数字，以确保每个资产与设备名称唯一。</p>
+<p>为此，项目中加入了一套文件系统，按位置与功能组织所有对象。虽然整理需要时间，但该系统让你比在创意模式中更高效地移动或删除成组对象乃至整个区域。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/aba93d42-fd95-4d15-b99c-1cbf4839b44b?resizing_type=fit" alt="整理后的大纲原文示意图2" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/aba93d42-fd95-4d15-b99c-1cbf4839b44b?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h2 id="sec-3">持久化本地排行榜</h2>
+<p>由于原创意地图缺乏可持久化数据，过往冠军与玩家数据无法追踪。在更新后的 UEFN 模板地图中，使用 Verse 与 Verse 持久化可以跨游戏会话存储玩家数据，统计玩家生涯数据并创建本地排行榜。你只能访问当前会话中玩家的数据，因此排行榜仅反映当前在玩玩家的数据。</p>
+<p>我们决定将“领奖台（podiums）”与“单圈时间（lap time）”作为每位玩家最重要的<a href="https://dev.epicgames.com/documentation/fortnite/using-persistable-data-in-verse" target="_blank" rel="noopener">可持久化（persistable）</a>数据来追踪。玩家只有进入完赛前三名才能获得领奖台成绩，最快单圈时间则记录最快的车手。此外还加入一项名为“积分（points）”的额外数据，玩家按比赛名次获得积分，因此参赛多但名次不高的玩家也能积累大量积分。通过这些数据，我们在一套榜单中同时致敬最勇猛、最快与最投入的车手。</p>
+<p>转换后的模板使用带本地排行榜的赛前大厅，展示每位玩家的生涯数据。这些数据按生涯积分排序，积分最高的玩家排在最前，前三名会被高亮以彰显实力。这些数据也会在发车阵容过场动画期间显示在 HUD 上，让玩家观察竞争对手，记住比赛中要盯防谁。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/7af78be5-4e55-4733-ad6f-d396d49623a5?resizing_type=fit" alt="持久化本地排行榜原文示意图3" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/7af78be5-4e55-4733-ad6f-d396d49623a5?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>要了解如何创建持久化本地排行榜，请查看<a href="https://dev.epicgames.com/documentation/fortnite/make-your-own-ingame-leaderboard-in-verse" target="_blank" rel="noopener">打造你自己的游戏内排行榜（Make Your Own In-Game Leaderboard）</a>。</p>
+<h2 id="sec-4">起跑线发车顺序</h2>
+<p>转换后的模板将原项目中起跑线随机发车顺序，改为基于车手上一轮表现的顺序，这鼓励玩家即使不在第一名也要尽快完赛。</p>
+<p>第一轮车手随机排位，第一轮之后按上一轮完赛名次排序。该信息需要在轮次之间存储，但游戏结束后不必保留。你可以按上轮完赛名次对玩家排序来确定发车顺序。要学习如何存储轮次信息与排序数据，请查看以下教程：</p>
+<ul>
+<li><a href="https://dev.epicgames.com/documentation/fortnite/custom-round-logic-using-verse" target="_blank" rel="noopener">自定义轮次逻辑（Custom Round Logic）</a></li>
+<li><a href="https://dev.epicgames.com/documentation/fortnite/sorting-algorithms-in-verse" target="_blank" rel="noopener">排序算法（Sorting Algorithms）</a></li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/3d5e6485-eefe-47c1-a800-549d712ac344?resizing_type=fit" alt="起跑线发车顺序原文示意图4" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/3d5e6485-eefe-47c1-a800-549d712ac344?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<pre><code># Orders and returns players by their finish order in the previous round. # During the first round, players are given random starting placements. GetPlayerStartOrder&lt;public&gt;(Players:[]player):[]player= var OrderedPlayers:[]player = Players if: IsFirstRound[GetRound[]] then: # Randomize player order because it's first round. set OrderedPlayers = Shuffle(OrderedPlayers)</code></pre>
+<p>在为玩家分配载具并将其布置到起跑线时，要确保这些玩家确实是活跃且要参赛的。你可以创建一个名为 <code>GetAllValidPlayers()</code> 的函数，遍历所有玩家，返回仍活跃（尚未离开游戏）且非旁观者（将实际参赛）的玩家。</p>
+<pre><code># Get all players that are able to race. GetAllValidPlayers(Players:[]player):[]player= # Valid players are ones that are active and not spectating. for: Player : Players Player.IsActive[] not Player.IsSpectator[] do: Player</code></pre>
+<p>综合以上，项目使用 <code>starting_game_sequence</code> 设备在第一轮搭建排行榜大厅，然后在开赛前为玩家分配发车位与载具。</p>
+<pre><code># This file handles the logic for the pregame lobby and the cinematics that play at the beginning of a race. # It controls the length of the starting lineup based on the number of players, and plays an intro for each # player by displaying their stats. using { /Fortnite.com/Characters } using { /Fortnite.com/Devices } using { /Fortnite.com/FortPlayerUtilities } using { /Verse.org/Native } using { /Verse.org/Simulation } using { /UnrealEngine.com/Temporary/Diagnostics }</code></pre>
+<h2 id="sec-5">带选手数据的起跑过场动画</h2>
+<p>创意版“设计极速竞速”模板原使用脉冲触发器（Pulse Trigger）设备编排<strong>准备-就位-出发（ready-set-go）</strong>开场。脉冲触发器在设定时间内按顺序激活触发器，显示文本并点亮起跑线灯光。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/8faf7edf-3a0e-4908-9d12-b6e5d49823bd?resizing_type=fit" alt="起跑介绍原文示意图5" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/8faf7edf-3a0e-4908-9d12-b6e5d49823bd?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>在转换后的模板中，脉冲触发器设备被 UEFN 的<a href="using-cinematic-sequence-device-in-unreal-editor-for-fortnite.html">过场动画序列（Cinematic Sequence device）</a>取代，呈现盛大的开场过场动画。使用 Sequencer，你可以添加不同机位、平视显示器（HUD，Heads Up Display）元素，以及随活跃玩家数量动态调整的发车阵容视图。与之前脉冲触发器的设置类似，关卡序列在重要时刻激活设备，让你决定何时展示下一位玩家的分数、何时剪掉开场。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/a59ecf70-4c2b-49f5-877d-5f8f84b709cd?resizing_type=fit" alt="过场动画序列原文示意图6" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/a59ecf70-4c2b-49f5-877d-5f8f84b709cd?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>具体来说，关卡序列在每位选手介绍开始时激活名为 <strong>StartPlayerIntroEvent</strong> 的<a href="https://dev.epicgames.com/documentation/en-us/fortnite-creative/using-trigger-devices-in-fortnite-creative" target="_blank" rel="noopener">触发器（Trigger device）</a>设备，在每位选手介绍结束时激活名为 <strong>EndPlayerIntroEvent</strong> 的触发器设备。Verse 代码据此判断已展示过多少位选手介绍，数量与游戏中玩家数相同时停止播放过场动画。如果过场动画先播完，也会因处于 <code>race</code> 表达式中而取消等待选手介绍。</p>
+<p>Verse 代码为每位玩家调用 <code>WaitForPlayerIntro()</code>，为每位玩家启动循环，等待 <strong>StartPlayerIntroEvent</strong> 触发器设备激活的次数达到该玩家的发车顺位，以确定何时在 HUD 显示该玩家数据。这些 <code>WaitForPlayerIntro()</code> 循环都在<a href="https://dev.epicgames.com/community/snippets/oYRX/fortnite-generic-sync-and-race-across-elements-in-an-array" target="_blank" rel="noopener"><code>ArraySync()</code> 函数</a>中调用，该函数使用分治并发算法在多个异步函数与数组元素之间 <code>sync</code> 同步。</p>
+<pre><code># A Verse-authored creative device that can be placed in a level starting_game_sequence := class(creative_device): # The cinematic that intros the players and their stats. @editable StartingLineupCinematic:cinematic_sequence_device = cinematic_sequence_device{} # The cinematic that we cut to after the lineup and before the race starts. @editable RaceStartCinematic:cinematic_sequence_device = cinematic_sequence_device{}</code></pre>
+<p>项目使用<a href="https://dev.epicgames.com/documentation/en-us/fortnite-creative/using-popup-dialog-devices-in-fortnite-creative" target="_blank" rel="noopener">弹窗对话框（Pop-Up Dialog device）</a>设备，在<a href="https://dev.epicgames.com/documentation/fortnite/ui-widget-editor-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">微件编辑器（Widget Editor）</a>中设计微件，并用 Verse 替换其中的信息，具体做法是设置弹窗对话框设备上按钮的文本。</p>
+<pre><code># Updates the Popup UI to display the lifetime stats of the given player during the # race starting sequence. UpdatePopupUI&lt;public&gt;(Player:agent, PopupDialogUI:popup_dialog_device):void= if: CurrentPlayerStats := GetPlayerStats[Player] then: PopupDialogUI.SetButtonText(PlayerText(Player), 0) PopupDialogUI.SetButtonText(PointsText(CurrentPlayerStats.Points), 1) PopupDialogUI.SetButtonText(PodiumsText(CurrentPlayerStats.Podiums), 2) BestLapText:message = if(IsValidBestLapTime[CurrentPlayerStats.BestLapTime]):</code></pre>
+<h2 id="sec-6">关卡设计</h2>
+<p>在这次更新中，我们使用地形模式创建了越野赛道。通过减少资产用量节省了内存，赛道周围的群山也更有层次。我们还用水体与瀑布创造了新地形，将视线引向赛道的下一段。</p>
+<p>我们从原项目的旧版昼夜循环升级到先进的 Fortnite 第 4 章光照。新循环让我们得以使用<a href="https://dev.epicgames.com/documentation/en-us/uefn/UE/building-virtual-worlds/lighting-and-shadows/global-illumination/lumen?application_version=1.0" target="_blank" rel="noopener">Lumen</a>，呈现更柔和的阴影与真实的全局光照。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/dca98b3f-b424-461a-adcb-c5c3a09762bd?resizing_type=fit" alt="关卡设计原文示意图7" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/dca98b3f-b424-461a-adcb-c5c3a09762bd?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/428ad9dc-7839-4dec-bd37-b4b71833f9da?resizing_type=fit" alt="赛道设计原文示意图8" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/428ad9dc-7839-4dec-bd37-b4b71833f9da?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>你知道吗，原竞速模板中有 120 多个屏障？屏障用于让玩家待在赛道上，确保车辆永不出界。在更新版中，屏障仅用于开赛前将玩家固定在各自位置，而不再围满整条赛道。竞速检查点、收集品与部分环境装饰用于鼓励玩家留在赛道上：</p>
+<ul>
+<li><strong>金币加速</strong>：在每串金币的最后一枚下方放置加速垫，鼓励玩家为最快圈速紧贴赛道。金币每圈刷新，错过的玩家下圈还有机会拾取。</li>
+<li><strong>用视觉设计引导玩家留在赛道</strong>：赛道多处使用矮白色屏障强调预期的行车路线。路面设计得足够宽，可容纳几辆车并排。树木、房车等装饰与道具的摆放让玩家车辆能舒适通过不被卡住，同时不鼓励抄非预期路线。</li>
+<li><strong>捷径与跳台</strong>：原地图是简单的 8 字形，但在试玩中我们发现玩家喜欢用跳台抄近道。新设计加入了几处捷径与跳台，让玩家选择自己想要的完赛路线。</li>
+</ul>
+<p>最终，特意布置的竞速检查点是要求玩家沿赛道行进的最后一道保障，因为每个检查点都是推进比赛所必需的。</p>
+<p>标签：verse、round、multiplayer、session、persistence、leaderboard</p>
+<div class="block-callout">在<a href="https://forums.unrealengine.com/categories?tag=fortnite" target="_blank" rel="noopener">开发者论坛（Developer Forums）</a>提问并帮助同行。在<a href="https://dev.epicgames.com/community/fortnite/learning" target="_blank" rel="noopener">学习库（Learning Library）</a>编写自己的教程或阅读他人的教程。</div>
+
+<div class="pager"><a href="27-build-a-game-in-unreal-editor-for-fortnite.html"><small>← 返回父教程</small>构建一款游戏</a><a href="sub-index.html"><small>子教程索引 →</small>全部子教程</a></div>
+</article><nav class="doc-toc" aria-label="本页内容"><b>本页内容</b><a href="#sec-1">升级教学区</a><a href="#sec-2">整理大纲</a><a href="#sec-3">持久化本地排行榜</a><a href="#sec-4">起跑线发车顺序</a><a href="#sec-5">带选手数据的起跑过场动画</a><a href="#sec-6">关卡设计</a></nav></div>
+</div></div>
+</div>
+<footer class="edc-footer"><div class="inner"><img src="../assets/logo-epic.svg" alt="Epic Games"><span>Fortnite 文档中文镜像 · UE教程/ · 本地打开 index.html 阅读 · 翻译整理自 Epic 官方文档，仅供学习交流</span></div></footer>
+</body>
+</html>

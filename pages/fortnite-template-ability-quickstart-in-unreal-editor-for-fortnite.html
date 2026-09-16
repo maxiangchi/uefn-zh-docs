@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UEFN 中的 Fortnite 模板能力快速入门 | Fortnite 文档中文镜像</title>
+<link rel="stylesheet" href="../assets/epic.css">
+<link rel="stylesheet" href="../assets/patch.css">
+<link rel="icon" href="../assets/logo-epic.svg">
+</head>
+<body class="theme-fortnite">
+<div class="edc-topbar"><div class="edc-topbar-inner"><img class="edc-logo" src="../assets/logo-epic.svg" alt="Epic Games"><span class="edc-brand">Epic Games <b>开发者社区</b></span><span class="edc-nav"><a href="../index.html">文档首页</a><a href="sub-index.html">子教程索引</a><a href="https://dev.epicgames.com/documentation/fortnite/fortnite-template-ability-quickstart-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">英文原文</a></span></div></div>
+<div class="site-container">
+<aside class="site-nav"><div class="documents-tree"><nav><ul class="contents-table">
+<div class="tree-sec">A 最新动态</div>
+<a class="tree-link" href="01-42-00-fortnite-ecosystem-updates-and-release-notes.html">01. 42.00 生态系统更新与发行说明</a>
+<a class="tree-link" href="02-custom-items-and-inventory-overview-in-fortnite.html">02. 自定义物品与背包总览</a>
+<a class="tree-link" href="03-in-island-transactions-in-fortnite.html">03. 岛内交易</a>
+<a class="tree-link" href="04-mobile-development-in-fortnite.html">04. 移动端开发</a>
+<a class="tree-link" href="05-inputs-in-fortnite.html">05. 输入系统</a>
+<a class="tree-link active" href="06-ability-system-in-unreal-editor-for-fortnite.html">06. 能力系统 Ability System</a>
+<a class="tree-link" href="07-partybased-gameplay-using-the-social-synergy-api-in-fortnite.html">07. 社交协同 API 与小队玩法</a>
+<a class="tree-link" href="08-scene-graph-in-unreal-editor-for-fortnite.html">08. 场景图 Scene Graph</a>
+<div class="tree-sec">B 入门</div>
+<a class="tree-link" href="09-build-your-first-island-in-fortnite.html">09. 构建你的第一个岛屿</a>
+<a class="tree-link" href="10-onboarding-guide-to-programming-with-verse-in-unreal-editor-for-fortnite.html">10. Verse 编程入门指南</a>
+<a class="tree-link" href="11-building-basics-in-fortnite-creative.html">11. 建造基础</a>
+<div class="tree-sec">C 品牌合集</div>
+<a class="tree-link" href="12-star-wars-islands-in-fortnite.html">12. 星球大战™岛屿</a>
+<a class="tree-link" href="13-kpop-demon-hunters-islands-in-fortnite.html">13. KPop 猎魔团岛屿</a>
+<a class="tree-link" href="14-building-lego-islands-in-fortnite.html">14. 乐高®岛屿</a>
+<a class="tree-link" href="15-the-walking-dead-universe-islands-in-unreal-editor-for-fortnite.html">15. 行尸走肉宇宙岛屿</a>
+<a class="tree-link" href="16-teenage-mutant-ninja-turtle-islands-in-unreal-editor-for-fortnite.html">16. 忍者神龟岛屿</a>
+<a class="tree-link" href="17-squid-game-islands-in-fortnite.html">17. 鱿鱼游戏岛屿</a>
+<div class="tree-sec">D 开发者成功</div>
+<a class="tree-link" href="18-using-creator-portal-in-fortnite-creative.html">18. 使用创作者门户</a>
+<a class="tree-link" href="19-island-moderation-and-guidelines-in-fortnite-creative.html">19. 岛屿审核与准则</a>
+<div class="tree-sec">E 协作</div>
+<a class="tree-link" href="20-creating-teams-in-creator-portal-in-unreal-editor-for-fortnite.html">20. 在创作者门户创建团队</a>
+<a class="tree-link" href="21-adding-playtesters-in-fortnite-creative.html">21. 添加试玩测试员</a>
+<a class="tree-link" href="22-playtesting-your-island-in-unreal-editor-for-fortnite.html">22. 试玩测试你的岛屿</a>
+<a class="tree-link" href="23-collaborating-in-unreal-editor-for-fortnite.html">23. 在 UEFN 中协作</a>
+<a class="tree-link" href="24-lore-version-control-in-unreal-editor-for-fortnite.html">24. Lore 版本控制</a>
+<a class="tree-link" href="25-conflicts-in-lore-version-control-in-unreal-editor-for-fortnite.html">25. Lore 中的冲突</a>
+<a class="tree-link" href="26-version-history-and-conflict-resolution-in-unreal-editor-for-fortnite.html">26. 分支历史与冲突解决</a>
+<div class="tree-sec">F 游戏示例</div>
+<a class="tree-link" href="27-build-a-game-in-unreal-editor-for-fortnite.html">27. 构建一款游戏</a>
+<a class="tree-link" href="28-unreal-editor-for-fortnite-starter-templates.html">28. UEFN 新手模板</a>
+<div class="tree-sec">G Verse</div>
+<a class="tree-link" href="29-learn-the-basics-of-writing-code-in-verse.html">29. 从零学习 Verse 代码基础</a>
+<div class="tree-sec">H 专注领域</div>
+<a class="tree-link" href="30-lighting-in-unreal-editor-for-fortnite.html">30. 灯光</a>
+<a class="tree-link" href="31-animation-and-cinematics-in-unreal-editor-for-fortnite.html">31. 动画与过场动画</a>
+<a class="tree-link" href="32-modeling-in-unreal-editor-for-fortnite.html">32. 建模</a>
+<a class="tree-link" href="33-materials-in-unreal-editor-for-fortnite.html">33. 材质</a>
+<a class="tree-link" href="34-environments-and-landscapes-in-unreal-editor-for-fortnite.html">34. 环境与地形</a>
+<a class="tree-link" href="35-audio-in-unreal-editor-for-fortnite.html">35. 音频</a>
+<a class="tree-link" href="36-visual-effects-in-unreal-editor-for-fortnite.html">36. 视觉特效</a>
+</ul></nav></div></aside>
+<div class="page-content"><div class="page-document has-theme-bg">
+<header class="section-page-header"><nav><ol class="breadcrumb is-shrinkable"><li class="breadcrumb-item is-root"><img src="../assets/logo-epic.svg" alt="Epic Games"><a href="../index.html">Developer</a></li><li class="breadcrumb-item"><a href="../index.html">Fortnite 文档</a></li><li class="breadcrumb-item"><a href="06-ability-system-in-unreal-editor-for-fortnite.html">能力系统 Ability System</a></li><li class="breadcrumb-item active" aria-current="page"><span class="text-truncate">UEFN 中的 Fortnite 模板能力快速入门</span></li></ol></nav><h1>UEFN 中的 Fortnite 模板能力快速入门</h1><p class="text-secondary mb-0">构建你的第一个 Fortnite 模板能力“Spicy Sprint（香辣疾跑）”，同时施加持续伤害与移速提升效果。</p><p class="doc-meta">英文原标题：Fortnite Template Ability Quickstart in Unreal Editor for Fortnite · <a href="https://dev.epicgames.com/documentation/fortnite/fortnite-template-ability-quickstart-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">查看英文原文</a> · 社区翻译镜像，仅供学习</p></header>
+<div class="doc-columns"><article class="doc-article">
+<p>本教程将教你构建你的第一个 Fortnite 模板能力：<strong>"Spicy Sprint（香辣疾跑）"</strong>能力，可同时施加持续伤害（damage-over-time）效果与移速提升。</p>
+<p>你将创建定义模板能力的 Verse 脚本，构建赋予该能力的物品，并创建一个把物品发放给玩家的设备。</p>
+<h2 id="sec-1">前置条件</h2>
+<p>要使用模板能力并完成本教程，必须在项目设置（Project Settings）中启用<strong>场景图实验性功能（Scene Graph Experimental Features）</strong>与<strong>自定义物品与背包（Custom Items and Inventory）</strong>。</p>
+<p>此外，建议先阅读<a href="custom-items-and-inventories-with-scene-graph-in-uefn.html">自定义物品与背包（Custom Items and Inventories）</a>文档以补充背景知识，但这不是必需的。</p>
+<h2 id="sec-2">创建 Verse 脚本</h2>
+<p>在本节中，你将创建 Verse 脚本，用于存放本教程的全部代码。</p>
+<ul>
+<li>在<strong>菜单栏（menu bar）</strong>上选择 <strong>Verse &gt; Verse Explorer（Verse 资源管理器）</strong>。</li>
+<li>在 <strong>Verse Explorer（Verse 资源管理器）</strong>中右键点击你的项目，选择 <strong>Create Verse File（创建 Verse 文件）</strong>。</li>
+<li>在 <strong>Create Verse Script（创建 Verse 脚本）</strong>窗口中，把脚本命名为 <strong>template_ability_example</strong>，并选择 <strong>Create Empty（创建空文件）</strong>。</li>
+<li>在<strong>菜单栏（menu bar）</strong>上选择 <strong>Verse &gt; Open Project in VS Code（在 VS Code 中打开项目）</strong>。</li>
+<li>输入以下代码以添加所需模块：</li>
+</ul>
+<pre><code class="language-verse">using { /Fortnite.com/Abilities }
+using { /Fortnite.com/Devices }
+using { /Fortnite.com/Itemization }
+using { /UnrealEngine.com/Abilities }
+using { /UnrealEngine.com/Itemization }
+using { /Verse.org/SceneGraph }
+using { /Verse.org/Simulation }</code></pre>
+<ul>
+<li>添加一个工具函数，用于返回玩家身上的武器快捷栏组件。授予模板能力物品时将用到它。</li>
+</ul>
+<pre><code class="language-verse"># A utility method that gets the first fort_inventory_weapon_hotbar_component on the player.
+(Player : player).GetWeaponHotbarComponent()&lt;decides&gt;&lt;transacts&gt; : fort_inventory_weapon_hotbar_component =
+    first (WeaponHotbarComponent : Player.FindDescendantComponents(fort_inventory_weapon_hotbar_component)) { WeaponHotbarComponent }</code></pre>
+<h2 id="sec-3">创建基础模板能力类</h2>
+<p>定义基础 template_ability 类及其必需的重写。编译后，创建物品预制体时可以配置该类的属性。</p>
+<ul>
+<li>添加 <code>template_ability</code> 类和 <code>ActiveEffects</code> 列表重写。</li>
+<li>添加 <code>MakeContext()</code> 与 <code>MakeAbility()</code> 工厂函数重写。当玩家使用能力时，这些函数负责构造能力上下文（context）与效果（effect）。</li>
+<li>保存 Verse 文件。</li>
+<li>在<strong>编辑器（Editor）</strong>中点击工具栏上的 <strong>Compile Verse（编译 Verse）</strong>。</li>
+</ul>
+<h2 id="sec-4">创建 Spicy Sprint 物品预制体</h2>
+<p>接下来，构建带有 Spicy Sprint 能力的物品预制体。</p>
+<ul>
+<li>在<strong>内容浏览器（Content Browser）</strong>中点击 <strong>Add (+)（添加）</strong>按钮，再选择 <strong>Entity Prefab（实体预制体）</strong>。</li>
+<li>在 <strong>Create Entity Prefab Definition（创建实体预制体定义）</strong>窗口中选择 <strong>New prefab (+)（新建预制体）</strong>。</li>
+<li>把预制体命名为 <strong>PF_SpicySprintItem</strong>。</li>
+<li>双击该预制体，打开<strong>预制体编辑器（Prefab Editor）</strong>。</li>
+<li>在<strong>细节（Details）</strong>面板中：</li>
+<li>点击 <strong>Add Component (+)（添加组件）</strong>按钮，搜索 <strong>item_component</strong> 并添加。</li>
+<li>选中 <strong>item_component</strong>，在 <strong>Categories（分类）</strong>列表中添加一个条目。</li>
+<li>把新条目设为 <strong>FortniteItemCategories.WeaponMelee</strong>。</li>
+<li>点击 <strong>Add Component (+)（添加组件）</strong>按钮，搜索 <strong>fort_item_ability_component</strong> 并添加。</li>
+<li>选中 <strong>fort_item_ability_component</strong>，在 <strong>ItemAbilities（物品能力）</strong>列表中添加一个条目。</li>
+</ul>
+<p>如果希望该能力仅在物品处于装备状态时可用，可以改为添加到 <strong>ItemEquippedAbilities（装备时物品能力）</strong>列表。</p>
+<ul>
+<li>把 <strong>Index[0]</strong> 的值设为 <strong>template_ability</strong>，然后展开 <strong>Index[0]</strong>。</li>
+<li>把 <strong>InputTrigger（输入触发器）</strong>设为 <strong>Assets_input_action</strong>，再点击新出现的下拉框并搜索 <strong>IA_Sprint</strong>。</li>
+<li>把 <strong>TargetQuery（目标查询）</strong>设为 <strong>self_ability_target_query</strong>。</li>
+<li>在 <strong>AbilityElements（能力元素）</strong>列表中添加两个条目。</li>
+<li>点击 <strong>Index[0]</strong> 下拉框并设为 <strong>fort_ability_status_effect_burn_point</strong>。该状态效果会造成周期性生命伤害。</li>
+<li>点击 <strong>Index[1]</strong> 下拉框并设为 <strong>fort_ability_status_effect_pepper_point</strong>。该状态效果会提升移动速度。</li>
+<li>（可选）可以自定义每个状态效果的 <strong>StatusEffectDuration（状态效果时长）</strong>与 <strong>Time（时间）</strong>。</li>
+<li>保存预制体。</li>
+<li>把 <strong>PF_SpicySprintItem</strong> 预制体从<strong>内容浏览器（Content Browser）</strong>拖入<strong>关卡（Level）</strong>，然后保存关卡。</li>
+</ul>
+<h2 id="sec-5">创建物品发放设备</h2>
+<p>创建在对局开始时把 Spicy Sprint 物品发放给玩家的设备。</p>
+<ul>
+<li>添加 <code>template_ability_item_granter_device</code> 与成员变量。这声明了一个新的创意设备，并暴露模板能力物品属性，稍后可在<strong>细节（Details）</strong>面板中设置。</li>
+</ul>
+<pre><code class="language-verse"># A creative device that grants the assigned item to the first player.
+template_ability_item_granter_device := class(creative_device):
+    # The template ability item to grant.
+    @editable TemplateAbilityItemEntity : entity = entity{}</code></pre>
+<ul>
+<li>添加 <code>GrantItemTo()</code> 函数。它获取武器快捷栏与物品组件，再把物品加入快捷栏。</li>
+</ul>
+<pre><code class="language-verse"># Grants the TemplateAbilityItemEntity to the given player.
+GrantItemTo(Player : player) : void =
+    if:
+        WeaponHotbarComponent := Player.GetWeaponHotbarComponent[]
+        ItemComponent := TemplateAbilityItemEntity.GetComponent[item_component]
+    then:
+        WeaponHotbarComponent.AddItem(TemplateAbilityItemEntity)
+        ItemComponent.Equip()</code></pre>
+<ul>
+<li>添加 <code>OnBegin()</code> 回调重写，在对局开始时把物品发放给第一位玩家。</li>
+</ul>
+<pre><code class="language-verse"># When the session begins, grant the item entity to the first player.
+OnBegin&lt;override&gt;()&lt;suspends&gt; : void =
+    if (FirstPlayer := GetPlayspace().GetPlayers()[0]):
+        GrantItemTo(FirstPlayer)</code></pre>
+<ul>
+<li>保存 Verse 文件。</li>
+<li>在<strong>编辑器（Editor）</strong>中点击工具栏上的 <strong>Compile Verse（编译 Verse）</strong>。</li>
+<li>把 <strong>template_ability_item_granter_device</strong> 从<strong>内容浏览器（Content Browser）</strong>拖入<strong>关卡（Level）</strong>。</li>
+<li>在关卡中选中该设备。</li>
+<li>在<strong>细节（Details）</strong>面板中，把 <strong>TemplateAbilityItemEntity</strong> 设为关卡中的 <strong>PF_SpicySprintItem</strong> 预制体实例。</li>
+<li>保存关卡。</li>
+</ul>
+<h2 id="sec-6">试玩测试</h2>
+<p>启动对局并试玩测试，验证按下疾跑（Sprint）时是否触发了 Spicy Sprint：受灼烧状态效果影响，你的生命会按固定频率下降，同时受辣椒状态效果影响，移动速度得到提升。</p>
+<h2 id="sec-7">自主探索</h2>
+<p>想进一步尝试？以下是几个可以自主探索的方向：</p>
+<ul>
+<li>使用其他 <strong>TargetQuery（目标查询）</strong>选项，创建准星瞄准或范围效果类物品。</li>
+<li>尝试其他 <strong>AbilityElements（能力元素）</strong>类型，打造完全不同的物品。</li>
+<li>在不同的 <strong>Time（时间）</strong>值上叠加元素，创造有趣的效果序列。</li>
+</ul>
+<h2 id="sec-8">完整代码</h2>
+<pre><code class="language-verse">using { /Fortnite.com/Abilities }
+using { /Fortnite.com/Devices }
+using { /Fortnite.com/Itemization }
+using { /UnrealEngine.com/Abilities }
+using { /UnrealEngine.com/Itemization }
+using { /Verse.org/SceneGraph }
+using { /Verse.org/Simulation }
+# A utility method that gets the first fort_inventory_weapon_hotbar_component on the player.
+(Player : player).GetWeaponHotbarComponent()<decides><transacts> : fort_inventory_weapon_hotbar_component =
+    first (WeaponHotbarComponent : Player.FindDescendantComponents(fort_inventory_weapon_hotbar_component)) { WeaponHotbarComponent }
+    ...（完整脚本见本教程上述各节代码，详见英文原文）</code></pre>
+<p class="doc-help">在<a href="https://forums.unrealengine.com/categories?tag=fortnite" target="_blank" rel="noopener">开发者论坛（Developer Forums）</a>提问并帮助同行；在<a href="https://dev.epicgames.com/community/fortnite/learning" target="_blank" rel="noopener">学习库（Learning Library）</a>撰写你自己的教程或阅读他人的教程。</p>
+<div class="pager"><a href="06-ability-system-in-unreal-editor-for-fortnite.html"><small>← 返回父教程</small>能力系统 Ability System</a><a href="sub-index.html"><small>子教程索引 →</small>全部子教程</a></div>
+</article><nav class="doc-toc" aria-label="本页内容"><b>本页内容</b><a href="#sec-1">前置条件</a><a href="#sec-2">创建 Verse 脚本</a><a href="#sec-3">创建基础模板能力类</a><a href="#sec-4">创建 Spicy Sprint 物品预制体</a><a href="#sec-5">创建物品发放设备</a><a href="#sec-6">试玩测试</a><a href="#sec-7">自主探索</a><a href="#sec-8">完整代码</a></nav></div>
+</div></div>
+</div>
+<footer class="edc-footer"><div class="inner"><img src="../assets/logo-epic.svg" alt="Epic Games"><span>Fortnite 文档中文镜像 · UE教程/ · 本地打开 index.html 阅读 · 翻译整理自 Epic 官方文档，仅供学习交流</span></div></footer>
+</body>
+</html>

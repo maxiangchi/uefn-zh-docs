@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>在 UEFN 中创建双面材质 | Fortnite 文档中文镜像</title>
+<link rel="stylesheet" href="../assets/epic.css">
+<link rel="stylesheet" href="../assets/patch.css">
+<link rel="icon" href="../assets/logo-epic.svg">
+</head>
+<body class="theme-fortnite">
+<div class="edc-topbar"><div class="edc-topbar-inner"><img class="edc-logo" src="../assets/logo-epic.svg" alt="Epic Games"><span class="edc-brand">Epic Games <b>开发者社区</b></span><span class="edc-nav"><a href="../index.html">文档首页</a><a href="sub-index.html">子教程索引</a><a href="https://dev.epicgames.com/documentation/fortnite/create-twosided-materials-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">英文原文</a></span></div></div>
+<div class="site-container">
+<aside class="site-nav"><div class="documents-tree"><nav><ul class="contents-table">
+<div class="tree-sec">A · 最新动态</div><a class="tree-link" href="01-42-00-fortnite-ecosystem-updates-and-release-notes.html">01. 42.00 生态系统更新与发行说明</a><a class="tree-link" href="02-custom-items-and-inventory-overview-in-fortnite.html">02. 自定义物品与背包总览</a><a class="tree-link" href="03-in-island-transactions-in-fortnite.html">03. 岛内交易</a><a class="tree-link" href="04-mobile-development-in-fortnite.html">04. 移动端开发</a><a class="tree-link" href="05-inputs-in-fortnite.html">05. 输入系统</a><a class="tree-link" href="06-ability-system-in-unreal-editor-for-fortnite.html">06. 能力系统 Ability System</a><a class="tree-link" href="07-partybased-gameplay-using-the-social-synergy-api-in-fortnite.html">07. 社交协同 API 与小队玩法</a><a class="tree-link" href="08-scene-graph-in-unreal-editor-for-fortnite.html">08. 场景图 Scene Graph</a><div class="tree-sec">B · 入门指南</div><a class="tree-link" href="09-build-your-first-island-in-fortnite.html">09. 构建你的第一个岛屿</a><a class="tree-link" href="10-onboarding-guide-to-programming-with-verse-in-unreal-editor-for-fortnite.html">10. Verse 编程入门指南</a><a class="tree-link" href="11-building-basics-in-fortnite-creative.html">11. 建造基础</a><div class="tree-sec">C · 品牌合集</div><a class="tree-link" href="12-star-wars-islands-in-fortnite.html">12. 星球大战™岛屿</a><a class="tree-link" href="13-kpop-demon-hunters-islands-in-fortnite.html">13. KPop 猎魔团岛屿</a><a class="tree-link" href="14-building-lego-islands-in-fortnite.html">14. 乐高®岛屿</a><a class="tree-link" href="15-the-walking-dead-universe-islands-in-unreal-editor-for-fortnite.html">15. 行尸走肉宇宙岛屿</a><a class="tree-link" href="16-teenage-mutant-ninja-turtle-islands-in-unreal-editor-for-fortnite.html">16. 忍者神龟岛屿</a><a class="tree-link" href="17-squid-game-islands-in-fortnite.html">17. 鱿鱼游戏岛屿</a><div class="tree-sec">D · 开发者成功</div><a class="tree-link" href="18-using-creator-portal-in-fortnite-creative.html">18. 使用创作者门户</a><a class="tree-link" href="19-island-moderation-and-guidelines-in-fortnite-creative.html">19. 岛屿审核与准则</a><div class="tree-sec">E · 协作与版本控制</div><a class="tree-link" href="20-creating-teams-in-creator-portal-in-unreal-editor-for-fortnite.html">20. 在创作者门户创建团队</a><a class="tree-link" href="21-adding-playtesters-in-fortnite-creative.html">21. 添加试玩测试员</a><a class="tree-link" href="22-playtesting-your-island-in-unreal-editor-for-fortnite.html">22. 试玩测试你的岛屿</a><a class="tree-link" href="23-collaborating-in-unreal-editor-for-fortnite.html">23. 在 UEFN 中协作</a><a class="tree-link" href="24-lore-version-control-in-unreal-editor-for-fortnite.html">24. Lore 版本控制</a><a class="tree-link" href="25-conflicts-in-lore-version-control-in-unreal-editor-for-fortnite.html">25. Lore 中的冲突</a><a class="tree-link" href="26-version-history-and-conflict-resolution-in-unreal-editor-for-fortnite.html">26. 分支历史与冲突解决</a><div class="tree-sec">F · 游戏示例</div><a class="tree-link" href="27-build-a-game-in-unreal-editor-for-fortnite.html">27. 构建一款游戏</a><a class="tree-link" href="28-unreal-editor-for-fortnite-starter-templates.html">28. UEFN 新手模板</a><div class="tree-sec">G · Verse 编程</div><a class="tree-link" href="29-learn-the-basics-of-writing-code-in-verse.html">29. 从零学习 Verse 代码基础</a><div class="tree-sec">H · 专注领域</div><a class="tree-link" href="30-lighting-in-unreal-editor-for-fortnite.html">30. 灯光</a><a class="tree-link" href="31-animation-and-cinematics-in-unreal-editor-for-fortnite.html">31. 动画与过场动画</a><a class="tree-link" href="32-modeling-in-unreal-editor-for-fortnite.html">32. 建模</a><a class="tree-link active" href="33-materials-in-unreal-editor-for-fortnite.html">33. 材质</a><a class="tree-link" href="34-environments-and-landscapes-in-unreal-editor-for-fortnite.html">34. 环境与地形</a><a class="tree-link" href="35-audio-in-unreal-editor-for-fortnite.html">35. 音频</a><a class="tree-link" href="36-visual-effects-in-unreal-editor-for-fortnite.html">36. 视觉特效</a>
+</ul></nav></div></aside>
+<div class="page-content"><div class="page-document has-theme-bg">
+<header class="section-page-header"><nav><ol class="breadcrumb is-shrinkable"><li class="breadcrumb-item is-root"><img src="../assets/logo-epic.svg" alt="Epic Games"><a href="../index.html">Developer</a></li><li class="breadcrumb-item"><a href="../index.html">Fortnite 文档</a></li><li class="breadcrumb-item"><a href="33-materials-in-unreal-editor-for-fortnite.html">材质</a></li><li class="breadcrumb-item active" aria-current="page"><span class="text-truncate">在 UEFN 中创建双面材质</span></li></ol></nav><h1>在 UEFN 中创建双面材质</h1><p class="text-secondary mb-0">用双面材质（Two-Sided Material）为灌木叶片等网格体制作正反面不同颜色或镂空深度效果；本文逐步讲解材质编辑器中的节点连线与不透明度蒙版（Opacity Mask）配置。</p><p class="doc-meta">英文原标题：Create Twosided Materials In Unreal Editor For Fortnite · <a href="https://dev.epicgames.com/documentation/fortnite/create-twosided-materials-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">查看英文原文</a> · 社区翻译镜像，仅供学习</p></header>
+<div class="doc-columns"><article class="doc-article">
+<p>使用双面材质（Two-Sided Material）可以制作灌木叶片，或在网格体上营造深度效果。先选一个基础颜色，再叠加更多材质节点进行丰富。</p>
+<ol>
+<li>在项目中新建一个材质（Material），双击<strong>材质缩略图</strong>打开<strong>材质编辑器（Material Editor）</strong>。</li>
+<li>选中<strong>主材质（Main Material）</strong>节点，在<strong>细节（Details）</strong>面板中勾选 <strong>双面（Two Sided）</strong>选项。</li>
+</ol>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/a51232d9-d103-4286-9301-3cc6a3532e45?resizing_type=fit" alt="原文示意图1" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><figcaption>原文示意图1</figcaption><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/a51232d9-d103-4286-9301-3cc6a3532e45?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ol start="3">
+<li>添加以下节点：
+<ul>
+<li>2 个 <strong>常量三维向量表达式（Constant 3Vector expression）</strong>节点</li>
+<li><strong>双面符号（TwoSidedSign）</strong>节点</li>
+<li><strong>饱和（Saturate）</strong>节点</li>
+<li><strong>插值（Interpolate / Lerp）</strong>节点</li>
+</ul>
+</li>
+<li>选中第一个<strong>常量三维向量表达式（Constant 3Vector expression）</strong>节点并设置一个颜色，然后从该节点拖出连线，接到 <strong>Lerp</strong> 节点的 <strong>A 输入</strong>。</li>
+<li>选中第二个<strong>常量三维向量表达式（Constant 3Vector expression）</strong>节点并设置一个颜色，然后从该节点拖出连线，接到 <strong>Lerp</strong> 节点的 <strong>B 输入</strong>。</li>
+<li>从 <strong>双面符号（TwoSidedSign）</strong>节点拖出连线，接到 <strong>饱和（Saturate）</strong>节点。</li>
+<li>从<strong>饱和（Saturate）</strong>节点拖出连线，接到 <strong>Lerp</strong> 节点的 <strong>Alpha 输入</strong>。</li>
+<li>从<strong>插值（Interpolate）</strong>节点拖出连线，接到材质根节点。</li>
+</ol>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/d51ff7d2-dda7-4f48-8f45-1839b660f95e?resizing_type=fit" alt="原文示意图2" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><figcaption>原文示意图2</figcaption><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/d51ff7d2-dda7-4f48-8f45-1839b660f95e?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ol start="9">
+<li>把预览窗口中的形状切换为扁平正方形。</li>
+</ol>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/9918f58b-126d-4c4d-9d2c-cacbae2c6504?resizing_type=fit" alt="原文示意图3" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><figcaption>原文示意图3</figcaption><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/9918f58b-126d-4c4d-9d2c-cacbae2c6504?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>上面的配置对网格体的正面和背面做了区别处理，会翻转法线使其始终朝向相机。如果想营造深度错觉：</p>
+<ol start="10">
+<li>选中<strong>主材质节点（Main Material Node）</strong>，在<strong>细节（Details）</strong>面板把<strong>混合模式（Blend Mode）</strong>改为<strong>已遮罩（Masked）</strong>。这样主材质节点上会出现更多可用输入，例如制作深度效果所需的<strong>不透明度蒙版（Opacity Mask）</strong>。</li>
+</ol>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/b543e67a-35b7-4a2a-940d-b98a6c483821?resizing_type=fit" alt="原文示意图4" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><figcaption>原文示意图4</figcaption><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/b543e67a-35b7-4a2a-940d-b98a6c483821?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ol start="11">
+<li>删除其中一个<strong>常量三维向量表达式（Constant 3Vector expression）</strong>节点和 <strong>Lerp</strong> 节点。</li>
+<li>在<strong>双面符号（TwoSidedSign）</strong>节点与<strong>饱和（Saturate）</strong>节点之间添加一个<strong>乘法（Multiply）</strong>节点。</li>
+<li>选中 <strong>乘法（Multiply）</strong>节点，把 <strong>B 输入</strong>的值改为 <strong>-1.0</strong>。</li>
+</ol>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/2693549e-0ba7-41f5-9a57-7f1506ce6b68?resizing_type=fit" alt="原文示意图5" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><figcaption>原文示意图5</figcaption><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/2693549e-0ba7-41f5-9a57-7f1506ce6b68?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ol start="14">
+<li>从<strong>饱和（Saturate）</strong>节点拖出连线，接到<strong>主材质节点（Main Material Node）</strong>的<strong>不透明度蒙版（Opacity Mask）输入</strong>。</li>
+</ol>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/73439b6e-dfd3-4474-8be6-a41f4f8b3a35?resizing_type=fit" alt="原文示意图6" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><figcaption>原文示意图6</figcaption><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/73439b6e-dfd3-4474-8be6-a41f4f8b3a35?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ol start="15">
+<li>点击<strong>应用（Apply）</strong>。预览窗口中的球体顶部出现了一道阴影。</li>
+</ol>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/47eb5d34-4624-4b46-bc33-eb1efa2f95a6?resizing_type=fit" alt="原文示意图7" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><figcaption>原文示意图7</figcaption><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/47eb5d34-4624-4b46-bc33-eb1efa2f95a6?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ol start="16">
+<li>把新材质应用到一个立方体网格体上。注意看，立方体看起来像一个空盒子。</li>
+</ol>
+<p>上面的配置做出的材质只渲染实心物体的内表面，所以从各个角度看网格体都是中空的。这是一种很有趣的材质，放在项目里可以营造镜厅风格的效果。</p>
+<p>标签：</p>
+<ul class="doc-tags"><li><a href="https://dev.epicgames.com/community/search?query=assets" target="_blank" rel="noopener">assets</a></li></ul>
+<div class="related-links"><p>在 <a href="https://forums.unrealengine.com/categories?tag=fortnite" target="_blank" rel="noopener">开发者论坛（Developer Forums）</a> 提问并帮助同行；在 <a href="https://dev.epicgames.com/community/fortnite/learning" target="_blank" rel="noopener">学习库（Learning Library）</a> 撰写或阅读教程。</p></div>
+<div class="pager"><a href="33-materials-in-unreal-editor-for-fortnite.html"><small>← 返回父教程</small>材质</a><a href="sub-index.html"><small>子教程索引 →</small>全部子教程</a></div>
+</article><nav class="doc-toc" aria-label="本页内容"><b>本页内容</b></nav></div>
+</div></div>
+</div>
+<footer class="edc-footer"><div class="inner"><img src="../assets/logo-epic.svg" alt="Epic Games"><span>Fortnite 文档中文镜像 · UE教程/ · 本地打开 index.html 阅读 · 翻译整理自 Epic 官方文档，仅供学习交流</span></div></footer>
+</body>
+</html>

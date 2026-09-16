@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>使用音频播放器（Audio Player）设备 | Fortnite 文档中文镜像</title>
+<link rel="stylesheet" href="../assets/epic.css">
+<link rel="stylesheet" href="../assets/patch.css">
+<link rel="icon" href="../assets/logo-epic.svg">
+</head>
+<body class="theme-fortnite">
+<div class="edc-topbar"><div class="edc-topbar-inner"><img class="edc-logo" src="../assets/logo-epic.svg" alt="Epic Games"><span class="edc-brand">Epic Games <b>开发者社区</b></span><span class="edc-nav"><a href="../index.html">文档首页</a><a href="sub-index.html">子教程索引</a><a href="https://dev.epicgames.com/documentation/fortnite/using-audio-player-devices-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">英文原文</a></span></div></div>
+<div class="site-container">
+<aside class="site-nav"><div class="documents-tree"><nav><ul class="contents-table">
+<li class="toc-group"><span class="toc-group-title">A · 最新动态</span><ul><li><a href="01-42-00-fortnite-ecosystem-updates-and-release-notes.html">01. 42.00 生态系统更新与发行说明</a></li><li><a href="02-custom-items-and-inventory-overview-in-fortnite.html">02. 自定义物品与背包总览</a></li><li><a href="03-in-island-transactions-in-fortnite.html">03. 岛内交易</a></li><li><a href="04-mobile-development-in-fortnite.html">04. 移动端开发</a></li><li><a href="05-inputs-in-fortnite.html">05. 输入系统</a></li><li><a href="06-ability-system-in-unreal-editor-for-fortnite.html">06. 能力系统 Ability System</a></li><li><a href="07-partybased-gameplay-using-the-social-synergy-api-in-fortnite.html">07. 社交协同 API 与小队玩法</a></li><li><a href="08-scene-graph-in-unreal-editor-for-fortnite.html">08. 场景图 Scene Graph</a></li></ul></li>
+<li class="toc-group"><span class="toc-group-title">B · 入门指南</span><ul><li><a href="09-build-your-first-island-in-fortnite.html">09. 构建你的第一个岛屿</a></li><li><a href="10-onboarding-guide-to-programming-with-verse-in-unreal-editor-for-fortnite.html">10. Verse 编程入门指南</a></li><li><a href="11-building-basics-in-fortnite-creative.html">11. 建造基础</a></li></ul></li>
+<li class="toc-group"><span class="toc-group-title">C · 品牌合集</span><ul><li><a href="12-star-wars-islands-in-fortnite.html">12. 星球大战™岛屿</a></li><li><a href="13-kpop-demon-hunters-islands-in-fortnite.html">13. KPop 猎魔团岛屿</a></li><li><a href="14-building-lego-islands-in-fortnite.html">14. 乐高®岛屿</a></li><li><a href="15-the-walking-dead-universe-islands-in-unreal-editor-for-fortnite.html">15. 行尸走肉宇宙岛屿</a></li><li><a href="16-teenage-mutant-ninja-turtle-islands-in-unreal-editor-for-fortnite.html">16. 忍者神龟岛屿</a></li><li><a href="17-squid-game-islands-in-fortnite.html">17. 鱿鱼游戏岛屿</a></li></ul></li>
+<li class="toc-group"><span class="toc-group-title">D · 开发者成功</span><ul><li><a href="18-using-creator-portal-in-fortnite-creative.html">18. 使用创作者门户</a></li><li><a href="19-island-moderation-and-guidelines-in-fortnite-creative.html">19. 岛屿审核与准则</a></li></ul></li>
+<li class="toc-group"><span class="toc-group-title">E · 协作与版本控制</span><ul><li><a href="20-creating-teams-in-creator-portal-in-unreal-editor-for-fortnite.html">20. 在创作者门户创建团队</a></li><li><a href="21-adding-playtesters-in-fortnite-creative.html">21. 添加试玩测试员</a></li><li><a href="22-playtesting-your-island-in-unreal-editor-for-fortnite.html">22. 试玩测试你的岛屿</a></li><li><a href="23-collaborating-in-unreal-editor-for-fortnite.html">23. 在 UEFN 中协作</a></li><li><a href="24-lore-version-control-in-unreal-editor-for-fortnite.html">24. Lore 版本控制</a></li><li><a href="25-conflicts-in-lore-version-control-in-unreal-editor-for-fortnite.html">25. Lore 中的冲突</a></li><li><a href="26-version-history-and-conflict-resolution-in-unreal-editor-for-fortnite.html">26. 分支历史与冲突解决</a></li></ul></li>
+<li class="toc-group"><span class="toc-group-title">F · 游戏示例</span><ul><li><a href="27-build-a-game-in-unreal-editor-for-fortnite.html">27. 构建一款游戏</a></li><li><a href="28-unreal-editor-for-fortnite-starter-templates.html">28. UEFN 新手模板</a></li></ul></li>
+<li class="toc-group"><span class="toc-group-title">G · Verse编程</span><ul><li><a href="29-learn-the-basics-of-writing-code-in-verse.html">29. 从零学习 Verse 代码基础</a></li></ul></li>
+<li class="toc-group"><span class="toc-group-title">H · 专注领域</span><ul><li><a href="30-lighting-in-unreal-editor-for-fortnite.html">30. 灯光</a></li><li><a href="31-animation-and-cinematics-in-unreal-editor-for-fortnite.html">31. 动画与过场动画</a></li><li><a href="32-modeling-in-unreal-editor-for-fortnite.html">32. 建模</a></li><li><a href="33-materials-in-unreal-editor-for-fortnite.html">33. 材质</a></li><li><a href="34-environments-and-landscapes-in-unreal-editor-for-fortnite.html">34. 环境与地形</a></li><li><a href="35-audio-in-unreal-editor-for-fortnite.html" class="active">35. 音频</a></li><li><a href="36-visual-effects-in-unreal-editor-for-fortnite.html">36. 视觉特效</a></li></ul></li>
+</ul></nav></div></aside>
+<div class="page-content"><div class="page-document has-theme-bg">
+<header class="section-page-header"><nav><ol class="breadcrumb is-shrinkable"><li class="breadcrumb-item is-root"><img src="../assets/logo-epic.svg" alt="Epic Games"><a href="../index.html">Developer</a></li><li class="breadcrumb-item"><a href="../index.html">Fortnite 文档</a></li><li class="breadcrumb-item"><a href="35-audio-in-unreal-editor-for-fortnite.html">音频</a></li><li class="breadcrumb-item active" aria-current="page"><span class="text-truncate">使用音频播放器（Audio Player）设备</span></li></ol></nav><h1>使用音频播放器（Audio Player）设备</h1><p class="text-secondary mb-0">使用音频播放器（Audio Player）设备，配合自定义声波（sound waves）与声音提示（sound cues），在你的项目中播放音频。</p><p class="doc-meta">英文原标题：Using Audio Player Devices In Unreal Editor For Fortnite · <a href="https://dev.epicgames.com/documentation/fortnite/using-audio-player-devices-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">查看英文原文</a> · 社区翻译镜像，仅供学习</p></header>
+<div class="doc-columns"><article class="doc-article">
+<p>使用<strong>音频播放器（Audio Player）</strong>设备，配合你自定义的<a href="https://dev.epicgames.com/documentation/fortnite/unreal-editor-for-fortnite-glossary#sound-wave" target="_blank" rel="noopener">声波（sound waves）</a>和<a href="https://dev.epicgames.com/documentation/fortnite/unreal-editor-for-fortnite-glossary#sound-cue" target="_blank" rel="noopener">声音提示（sound cues）</a>，在你的项目中播放音频。</p>
+<h2 id="sec-1">查找并放置设备</h2>
+<ol>
+<li>打开<strong>内容浏览器（Content Browser）</strong>。</li>
+<li>打开 <strong>Fortnite</strong> 文件夹索引列表。</li>
+<li>打开 <strong>Devices</strong> 文件夹。</li>
+<li>选择<strong>音频播放器（Audio Player）</strong>设备，将其拖入<strong>视口（viewport）</strong>。</li>
+<li>在<strong>大纲视图（Outliner）</strong>面板中选择<strong>音频播放器（Audio Player）</strong>设备。</li>
+<li>在<strong>细节（Details）</strong>面板中为<strong>音频播放器（Audio Player）</strong>设备配置<strong>用户选项（User Options）</strong>。</li>
+</ol>
+<h2 id="sec-2">用户选项</h2>
+<p>该设备被激活时播放声波或声音提示素材。添加到视口后，音频设备会显示为一个小扬声器。该网格体可在游戏中隐藏，也可自定义以契合你正在创建的世界。</p>
+<p>你可以通过以下选项配置该设备。</p>
+<table><thead><tr><th>选项</th><th>值</th><th>说明</th></tr></thead><tbody>
+<tr><td><strong>音频（Audio）</strong></td><td>选择声波或声音提示</td><td>设备被触发播放时要播放的音频。</td></tr>
+<tr><td><strong>音量（Volume）</strong></td><td><strong>1.0</strong>，选择音量</td><td>设置音频的音量。这是一个线性设置，因此 0.5 为源音频音量的一半响度，2.0 为两倍响度。</td></tr>
+<tr><td><strong>游戏中可见（Visible in Game）</strong></td><td><strong>False</strong>，True</td><td>决定设备在游戏期间是否可见。</td></tr>
+<tr><td><strong>淡入时长（Fade in Duration）</strong></td><td><strong>0.0</strong>，选择时长</td><td>设备被触发播放时，声音达到完整音量所需的秒数。</td></tr>
+<tr><td><strong>淡出时长（Fade Out Duration）</strong></td><td><strong>0.0</strong>，选择时长</td><td>设备被触发停止时，声音达到完整音量所需的秒数。</td></tr>
+<tr><td><strong>启用阶段（Enabled During Phase）</strong></td><td><strong>Always</strong>、None、Pre-Game Only、Gameplay Only、Create Only</td><td>决定设备在哪一游戏阶段自动启用。</td></tr>
+<tr><td><strong>激活时重启音频（Restart Audio when Activated）</strong></td><td><strong>False</strong>，True</td><td>决定触发播放时音频是否重新开始。若不设置，音频已在播放时触发将被忽略。</td></tr>
+<tr><td><strong>受击时播放（Play on Hit）</strong></td><td><strong>True</strong>，False</td><td>决定玩家击中时是否播放音频。</td></tr>
+<tr><td><strong>可听见者（Can be Heard By）</strong></td><td><strong>Everyone</strong>、Instigator Only、Registered Players Only、Non-Registered Players Only</td><td>决定谁能听见该设备的音频。</td></tr>
+<tr><td><strong>播放位置（Play Location）</strong></td><td><strong>Device</strong>、Local Player、Registered Players、Instigating Players</td><td>决定音频从设备位置播放，还是从已注册玩家的位置播放。</td></tr>
+<tr><td><strong>播放速度（Playback Speed）</strong></td><td><strong>1.0</strong>，选择播放速率</td><td>通过改变播放速度来升高或降低音频音调。2.0 为两倍速，0.5 为源音频音量的一半速度。</td></tr>
+<tr><td><strong>启用空间化（Enable Spatialization）</strong></td><td><strong>True</strong>，False</td><td>根据相对听者的位置启用音频声像。</td></tr>
+<tr><td><strong>启用音量衰减（Enable Volume Attenuation）</strong></td><td><strong>True</strong>，False</td><td>根据与听者的距离启用音量变化。听者距离声音位置越远，源音频越安静。</td></tr>
+<tr><td><strong>衰减函数（Attenuation Function）</strong></td><td><strong>Linear</strong>、Logarithmic</td><td>定义衰减最小距离与衰减距离之间的映射函数。</td></tr>
+<tr><td><strong>衰减最小距离（Attenuation Min Distance）</strong></td><td><strong>4.0</strong>，设置距离</td><td>音频保持在音量（Volume）设置值的范围。</td></tr>
+<tr><td><strong>衰减距离（Attenuation Falloff Distance）</strong></td><td><strong>32.0</strong>，设置距离</td><td>声音从设定音量衰减至无声所经过的、从衰减最小距离起算的范围。</td></tr>
+<tr><td><strong>启用衰减可视化（Enable Attenuation Visuals）</strong></td><td><strong>False</strong>，True</td><td>若设置，在编辑时显示额外的衰减可视化效果。</td></tr>
+</tbody></table>
+<h3>直接事件绑定</h3>
+<p>UEFN 中的设备使用<strong>事件绑定（Event Binding）</strong>进行通信。要在 UEFN 中为设备设置直接事件绑定：</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/a132fc58-781d-41cc-80ad-5ac76aee49cb?resizing_type=fit" alt="原文示意图1" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/a132fc58-781d-41cc-80ad-5ac76aee49cb?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ol>
+<li>在<strong>大纲视图（Outliner）</strong>面板中选择设备。</li>
+<li>打开<strong>细节（Details）</strong>面板。</li>
+<li>导航到<strong>用户选项-函数（User Options-Functions）</strong>。</li>
+<li>为函数添加一个元素。</li>
+<li>选择要交互的<strong>设备（device）</strong>。</li>
+<li>设置该设备执行的<strong>函数（function）</strong>，以向<strong>音频设备（Audio Device）</strong>发送触发。</li>
+</ol>
+<h3>函数</h3>
+<p><strong>函数（function）</strong>告诉所选设备：当触发设备执行操作时应该做什么。</p>
+<table><thead><tr><th>选项</th><th>值</th><th>说明</th></tr></thead><tbody>
+<tr><td><strong>播放（Play）</strong></td><td>点击<strong>添加（Add）</strong>图标选择设备，再选择事件。</td><td>所选设备与事件触发音频播放器设备时播放音频。要求设备处于<strong>启用（Enabled）</strong>状态。</td></tr>
+<tr><td><strong>停止（Stop）</strong></td><td>点击<strong>添加（Add）</strong>图标选择设备，再选择事件。</td><td>所选设备与事件触发音频播放器设备时停止音频。</td></tr>
+<tr><td><strong>启用（Enable）</strong></td><td>点击<strong>添加（Add）</strong>图标选择设备，再选择事件。</td><td>所选设备与事件触发音频播放器设备时启用音频设备（若尚未被<strong>启用阶段（Enabled During Phase）</strong>选项启用）。</td></tr>
+<tr><td><strong>禁用（Disable）</strong></td><td>点击<strong>添加（Add）</strong>图标选择设备，再选择事件。</td><td>所选设备与事件触发音频播放器设备时禁用音频设备。</td></tr>
+<tr><td><strong>注册玩家（Register Player）</strong></td><td>点击<strong>添加（Add）</strong>图标选择设备，再选择事件。</td><td>所选设备与事件触发音频播放器设备时，将玩家注册为音频播放目标。</td></tr>
+<tr><td><strong>注销玩家（Unregister Player）</strong></td><td>点击<strong>添加（Add）</strong>图标选择设备，再选择事件。</td><td>所选设备与事件触发音频播放器设备时，将玩家从音频播放目标中注销。</td></tr>
+<tr><td><strong>注销全部玩家（Unregister All Players）</strong></td><td>点击<strong>添加（Add）</strong>图标选择设备，再选择事件。</td><td>所选设备与事件触发音频播放器设备时，将所有已注册玩家从音频播放目标中移除。</td></tr>
+</tbody></table>
+<h2 id="sec-3">更多主题</h2>
+<ul>
+<li><a href="adding-audio-to-your-project-in-unreal-editor-for-fortnite.html"><strong>为项目添加音频（Adding Audio to Your Project）</strong></a>——为项目添加音频。<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/4120c4ca-d9f0-4179-95fe-10297986b79e?resizing_type=fit&width=640&height=640" alt="向项目添加音频。" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/4120c4ca-d9f0-4179-95fe-10297986b79e?resizing_type=fit&width=640&height=640" target="_blank" rel="noopener">查看原图</a></div></figure></li>
+<li><a href="using-audio-mixer-devices-in-unreal-editor-for-fortnite.html"><strong>音频混合器设备（The Audio Mixer Device）</strong></a>——使用音频混合器设备调整声音组的音量。<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/36ccfbcb-c8fd-4297-88a7-4d90754a1f69?resizing_type=fit&width=640&height=640" alt="混音器设备。" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/36ccfbcb-c8fd-4297-88a7-4d90754a1f69?resizing_type=fit&width=640&height=640" target="_blank" rel="noopener">查看原图</a></div></figure></li>
+<li><a href="importing-custom-audio-in-unreal-editor-for-fortnite.html"><strong>导入自定义音频（Importing Custom Audio）</strong></a>——将自定义音频导入你的岛屿，让玩家沉浸在你创造的世界中。<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/54adc69d-66fe-4b57-8b03-df9597f7f562?resizing_type=fit&width=640&height=640" alt="导入自定义音频。" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/54adc69d-66fe-4b57-8b03-df9597f7f562?resizing_type=fit&width=640&height=640" target="_blank" rel="noopener">查看原图</a></div></figure></li>
+<li><a href="audio-troubleshooting-in-unreal-editor-for-fortnite.html"><strong>音频故障排除（Audio Troubleshooting）</strong></a>——Unreal Editor for Fortnite 常见音频问题解答。<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/b3caded9-a92a-4682-91dd-ee1acc7fdfa4?resizing_type=fit&width=640&height=640" alt="音频故障排除。" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/b3caded9-a92a-4682-91dd-ee1acc7fdfa4?resizing_type=fit&width=640&height=640" target="_blank" rel="noopener">查看原图</a></div></figure></li>
+</ul>
+<div class="pager"><a href="35-audio-in-unreal-editor-for-fortnite.html"><small>← 返回父教程</small>音频</a><a href="sub-index.html"><small>子教程索引 →</small>全部子教程</a></div>
+</article><nav class="doc-toc" aria-label="本页内容"><b>本页内容</b><a href="#sec-1">查找并放置设备</a><a href="#sec-2">用户选项</a><a href="#sec-3">更多主题</a></nav></div>
+</div></div>
+</div>
+<footer class="edc-footer"><div class="inner"><img src="../assets/logo-epic.svg" alt="Epic Games"><span>Fortnite 文档中文镜像 · UE教程/ · 本地打开 index.html 阅读 · 翻译整理自 Epic 官方文档，仅供学习交流</span></div></footer>
+</body>
+</html>

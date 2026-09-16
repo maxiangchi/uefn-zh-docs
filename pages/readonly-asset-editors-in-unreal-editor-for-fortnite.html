@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>只读资产编辑器 | Fortnite 文档中文镜像</title>
+<link rel="stylesheet" href="../assets/epic.css">
+<link rel="stylesheet" href="../assets/patch.css">
+<link rel="icon" href="../assets/logo-epic.svg">
+</head>
+<body class="theme-fortnite">
+<div class="edc-topbar"><div class="edc-topbar-inner"><img class="edc-logo" src="../assets/logo-epic.svg" alt="Epic Games"><span class="edc-brand">Epic Games <b>开发者社区</b></span><span class="edc-nav"><a href="../index.html">文档首页</a><a href="sub-index.html">子教程索引</a><a href="https://dev.epicgames.com/documentation/fortnite/readonly-asset-editors-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">英文原文</a></span></div></div>
+<div class="site-container">
+<aside class="site-nav"><div class="documents-tree"><nav><ul class="contents-table">
+<li class="toc-group"><span class="toc-group-title">A · 最新动态</span><ul><li><a href="01-42-00-fortnite-ecosystem-updates-and-release-notes.html">01. 42.00 生态系统更新与发行说明</a></li><li><a href="02-custom-items-and-inventory-overview-in-fortnite.html">02. 自定义物品与背包总览</a></li><li><a href="03-in-island-transactions-in-fortnite.html">03. 岛内交易</a></li><li><a href="04-mobile-development-in-fortnite.html">04. 移动端开发</a></li><li><a href="05-inputs-in-fortnite.html">05. 输入系统</a></li><li><a href="06-ability-system-in-unreal-editor-for-fortnite.html">06. 能力系统 Ability System</a></li><li><a href="07-partybased-gameplay-using-the-social-synergy-api-in-fortnite.html">07. 社交协同 API 与小队玩法</a></li><li><a href="08-scene-graph-in-unreal-editor-for-fortnite.html">08. 场景图 Scene Graph</a></li></ul></li>
+<li class="toc-group"><span class="toc-group-title">B · 入门指南</span><ul><li><a href="09-build-your-first-island-in-fortnite.html">09. 构建你的第一个岛屿</a></li><li><a href="10-onboarding-guide-to-programming-with-verse-in-unreal-editor-for-fortnite.html">10. Verse 编程入门指南</a></li><li><a href="11-building-basics-in-fortnite-creative.html">11. 建造基础</a></li></ul></li>
+<li class="toc-group"><span class="toc-group-title">C · 品牌合集</span><ul><li><a href="12-star-wars-islands-in-fortnite.html">12. 星球大战™岛屿</a></li><li><a href="13-kpop-demon-hunters-islands-in-fortnite.html">13. KPop 猎魔团岛屿</a></li><li><a href="14-building-lego-islands-in-fortnite.html">14. 乐高®岛屿</a></li><li><a href="15-the-walking-dead-universe-islands-in-unreal-editor-for-fortnite.html">15. 行尸走肉宇宙岛屿</a></li><li><a href="16-teenage-mutant-ninja-turtle-islands-in-unreal-editor-for-fortnite.html">16. 忍者神龟岛屿</a></li><li><a href="17-squid-game-islands-in-fortnite.html">17. 鱿鱼游戏岛屿</a></li></ul></li>
+<li class="toc-group"><span class="toc-group-title">D · 开发者成功</span><ul><li><a href="18-using-creator-portal-in-fortnite-creative.html">18. 使用创作者门户</a></li><li><a href="19-island-moderation-and-guidelines-in-fortnite-creative.html">19. 岛屿审核与准则</a></li></ul></li>
+<li class="toc-group"><span class="toc-group-title">E · 协作与版本控制</span><ul><li><a href="20-creating-teams-in-creator-portal-in-unreal-editor-for-fortnite.html">20. 在创作者门户创建团队</a></li><li><a href="21-adding-playtesters-in-fortnite-creative.html">21. 添加试玩测试员</a></li><li><a href="22-playtesting-your-island-in-unreal-editor-for-fortnite.html">22. 试玩测试你的岛屿</a></li><li><a href="23-collaborating-in-unreal-editor-for-fortnite.html">23. 在 UEFN 中协作</a></li><li><a href="24-lore-version-control-in-unreal-editor-for-fortnite.html">24. Lore 版本控制</a></li><li><a href="25-conflicts-in-lore-version-control-in-unreal-editor-for-fortnite.html">25. Lore 中的冲突</a></li><li><a href="26-version-history-and-conflict-resolution-in-unreal-editor-for-fortnite.html">26. 分支历史与冲突解决</a></li></ul></li>
+<li class="toc-group"><span class="toc-group-title">F · 游戏示例</span><ul><li><a href="27-build-a-game-in-unreal-editor-for-fortnite.html">27. 构建一款游戏</a></li><li><a href="28-unreal-editor-for-fortnite-starter-templates.html">28. UEFN 新手模板</a></li></ul></li>
+<li class="toc-group"><span class="toc-group-title">G · Verse编程</span><ul><li><a href="29-learn-the-basics-of-writing-code-in-verse.html">29. 从零学习 Verse 代码基础</a></li></ul></li>
+<li class="toc-group"><span class="toc-group-title">H · 专注领域</span><ul><li><a href="30-lighting-in-unreal-editor-for-fortnite.html">30. 灯光</a></li><li><a href="31-animation-and-cinematics-in-unreal-editor-for-fortnite.html">31. 动画与过场动画</a></li><li><a href="32-modeling-in-unreal-editor-for-fortnite.html" class="active">32. 建模</a></li><li><a href="33-materials-in-unreal-editor-for-fortnite.html">33. 材质</a></li><li><a href="34-environments-and-landscapes-in-unreal-editor-for-fortnite.html">34. 环境与地形</a></li><li><a href="35-audio-in-unreal-editor-for-fortnite.html">35. 音频</a></li><li><a href="36-visual-effects-in-unreal-editor-for-fortnite.html">36. 视觉特效</a></li></ul></li>
+</ul></nav></div></aside>
+<div class="page-content"><div class="page-document has-theme-bg">
+<header class="section-page-header"><nav><ol class="breadcrumb is-shrinkable"><li class="breadcrumb-item is-root"><img src="../assets/logo-epic.svg" alt="Epic Games"><a href="../index.html">Developer</a></li><li class="breadcrumb-item"><a href="../index.html">Fortnite 文档</a></li><li class="breadcrumb-item"><a href="32-modeling-in-unreal-editor-for-fortnite.html">建模</a></li><li class="breadcrumb-item active" aria-current="page"><span class="text-truncate">只读资产编辑器</span></li></ol></nav><h1>只读资产编辑器</h1><p class="text-secondary mb-0">你可以在资产编辑器中以只读模式打开烘焙（cooked）后的资产，查看其中可用且被认为适宜的数据，而无需修改资产本身。</p><p class="doc-meta">英文原标题：Readonly Asset Editors In Unreal Editor For Fortnite · <a href="https://dev.epicgames.com/documentation/fortnite/readonly-asset-editors-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">查看英文原文</a> · 社区翻译镜像，仅供学习</p></header>
+<div class="doc-columns"><article class="doc-article">
+<p>你可以在资产编辑器中以只读模式打开<a href="https://dev.epicgames.com/documentation/fortnite/unreal-editor-for-fortnite-glossary#cook" target="_blank" rel="noopener">烘焙（cooked）</a>后的资产。该模式允许你查看烘焙资产中可用且被认为适宜的任何数据，而你自己无法修改这些资产。</p>
+<p>能够查看 UEFN 附带的烘焙资产的最大好处是，可以看到它们设置方式中的所有关键数据，这能教会你良好的实践，并为创建自己的资产提供可靠的参考。</p>
+<p>可以在只读模式下查看的资产类型为<strong>静态网格体（Static Meshes）</strong>和<strong>纹理（Textures）</strong>。</p>
+<p>UEFN 附带的资产、从 Fab 下载的资产，以及导入项目的任何其他第三方烘焙资产，都可以在只读资产编辑器（Read Only Asset Editor）中查看。</p>
+<h2 id="sec-1">查看 UEFN 资产</h2>
+<ol>
+<li>打开一个 UEFN 项目。</li>
+<li>在<strong>内容浏览器（Content Browser）</strong>中，转到<strong>全部（All）</strong>，点击搜索栏旁边的<strong>过滤器（Filter）</strong>漏斗图标。选择<strong>静态网格体（Static Mesh）</strong>和<strong>纹理（Texture）</strong>以应用过滤器。</li>
+</ol>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/0da694e2-04b0-4e3e-be82-e152cbe7b66e?resizing_type=fit" alt="原文示意图1" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/0da694e2-04b0-4e3e-be82-e152cbe7b66e?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ol start="3">
+<li>双击静态网格体或纹理，打开对应的只读编辑器。</li>
+</ol>
+<h2 id="sec-2">查看 Fab 资产</h2>
+<ol>
+<li>在你的 UEFN 项目中，打开 <strong>Fab 商城（Fab Marketplace）</strong>。</li>
+</ol>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/6d8dde81-83fe-45d0-a463-8a72df2c482b?resizing_type=fit" alt="原文示意图2" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/6d8dde81-83fe-45d0-a463-8a72df2c482b?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ol start="2">
+<li>选择一个资产，选择<strong>添加为引用资产（Add as a referenced asset）</strong>并点击<strong>添加到内容浏览器（Add to Content Browser）</strong>，或直接将其拖入场景。</li>
+</ol>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/48f4b00c-7750-41c6-96a3-9a790273bfd9?resizing_type=fit" alt="原文示意图3" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/48f4b00c-7750-41c6-96a3-9a790273bfd9?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ol start="3">
+<li>回到<strong>内容浏览器（Content Browser）</strong>，转到<strong>全部（All） &gt; 引用内容（Referenced Content） &gt; 资产名称（Asset_Name）</strong>，双击该资产关联的<strong>静态网格体（Static Mesh）</strong>文件。</li>
+</ol>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/26d137b6-5766-4e98-b553-91c8dca6aecb?resizing_type=fit" alt="原文示意图4" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/26d137b6-5766-4e98-b553-91c8dca6aecb?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ol start="4">
+<li>这会打开只读静态网格体编辑器。</li>
+</ol>
+<p>部分 Fab 资产允许你编辑其属性。在这种情况下，可以在添加到内容浏览器之前选择<strong>添加为可修改的 Unreal Engine 资产（Add as a modifiable Unreal Engine asset）</strong>。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/a3fc77ec-373b-4b37-9b8f-e71026a72a82?resizing_type=fit" alt="原文示意图5" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/a3fc77ec-373b-4b37-9b8f-e71026a72a82?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h2 id="sec-3">只读编辑器的差异</h2>
+<p>在常规编辑器窗口中，大多数设置都可供你使用。你可以更改材质分层和资产的碰撞。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/c58d39f5-8f76-4edc-8b3f-0f7602613444?resizing_type=fit" alt="原文示意图6" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/c58d39f5-8f76-4edc-8b3f-0f7602613444?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>当你打开烘焙后的只读资产时，会注意到大多数选项呈灰色不可用。此外，你还会在编辑器窗口的右上角看到一个<strong>只读（Read-Only）</strong>标签。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/37ca7b04-7655-4590-aa26-8e760f327d63?resizing_type=fit" alt="原文示意图7" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/37ca7b04-7655-4590-aa26-8e760f327d63?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h3>预览场景设置</h3>
+<p>在只读模式下，你仍然可以更改光照和环境，以预览资产在不同设置下的外观。这不会改变资产的任何属性，但可以帮助你判断资产是否适合你的场景。</p>
+<ol>
+<li>转到<strong>窗口（Window）</strong>并勾选<strong>预览场景设置（Preview Scene Settings）</strong>。</li>
+</ol>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/f48b9be9-83ec-4387-96d2-d56dee747cd7?resizing_type=fit" alt="原文示意图8" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/f48b9be9-83ec-4387-96d2-d56dee747cd7?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ol start="2">
+<li>更改设置以自定义资产预览。</li>
+</ol>
+<p><a href="https://sketchfab.com/3d-models/mushroom-house-c98d255da98c4343b903aab07631eadd" target="_blank" rel="noopener">蘑菇屋（Mushroom House）</a>，作者 <a href="https://sketchfab.com/olivia9900" target="_blank" rel="noopener">GraphOrigin</a>，基于 <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a> 许可。</p>
+<div class="pager"><a href="32-modeling-in-unreal-editor-for-fortnite.html"><small>← 返回父教程</small>建模</a><a href="sub-index.html"><small>子教程索引 →</small>全部子教程</a></div>
+</article><nav class="doc-toc" aria-label="本页内容"><b>本页内容</b><a href="#sec-1">查看 UEFN 资产</a><a href="#sec-2">查看 Fab 资产</a><a href="#sec-3">只读编辑器的差异</a></nav></div>
+</div></div>
+</div>
+<footer class="edc-footer"><div class="inner"><img src="../assets/logo-epic.svg" alt="Epic Games"><span>Fortnite 文档中文镜像 · UE教程/ · 本地打开 index.html 阅读 · 翻译整理自 Epic 官方文档，仅供学习交流</span></div></footer>
+</body>
+</html>

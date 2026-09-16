@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UEFN 中的灯光可扩展性管理器（Lighting Scalability Manager） | Fortnite 文档中文镜像</title>
+<link rel="stylesheet" href="../assets/epic.css">
+<link rel="stylesheet" href="../assets/patch.css">
+<link rel="icon" href="../assets/logo-epic.svg">
+</head>
+<body class="theme-fortnite">
+<div class="edc-topbar"><div class="edc-topbar-inner"><img class="edc-logo" src="../assets/logo-epic.svg" alt="Epic Games"><span class="edc-brand">Epic Games <b>开发者社区</b></span><span class="edc-nav"><a href="../index.html">文档首页</a><a href="sub-index.html">子教程索引</a><a href="https://dev.epicgames.com/documentation/fortnite/lighting-scalability-manager-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">英文原文</a></span></div></div>
+<div class="site-container">
+<aside class="site-nav"><div class="documents-tree"><nav><ul class="contents-table">
+<div class="tree-sec">A · 最新动态</div><a class="tree-link" href="01-42-00-fortnite-ecosystem-updates-and-release-notes.html">01. 42.00 生态系统更新与发行说明</a><a class="tree-link" href="02-custom-items-and-inventory-overview-in-fortnite.html">02. 自定义物品与背包总览</a><a class="tree-link" href="03-in-island-transactions-in-fortnite.html">03. 岛内交易</a><a class="tree-link" href="04-mobile-development-in-fortnite.html">04. 移动端开发</a><a class="tree-link" href="05-inputs-in-fortnite.html">05. 输入系统</a><a class="tree-link" href="06-ability-system-in-unreal-editor-for-fortnite.html">06. 能力系统 Ability System</a><a class="tree-link" href="07-partybased-gameplay-using-the-social-synergy-api-in-fortnite.html">07. 社交协同 API 与小队玩法</a><a class="tree-link" href="08-scene-graph-in-unreal-editor-for-fortnite.html">08. 场景图 Scene Graph</a><div class="tree-sec">B · 入门</div><a class="tree-link" href="09-build-your-first-island-in-fortnite.html">09. 构建你的第一个岛屿</a><a class="tree-link" href="10-onboarding-guide-to-programming-with-verse-in-unreal-editor-for-fortnite.html">10. Verse 编程入门指南</a><a class="tree-link" href="11-building-basics-in-fortnite-creative.html">11. 建造基础</a><div class="tree-sec">C · 品牌合集</div><a class="tree-link" href="12-star-wars-islands-in-fortnite.html">12. 星球大战™岛屿</a><a class="tree-link" href="13-kpop-demon-hunters-islands-in-fortnite.html">13. KPop 猎魔团岛屿</a><a class="tree-link" href="14-building-lego-islands-in-fortnite.html">14. 乐高®岛屿</a><a class="tree-link" href="15-the-walking-dead-universe-islands-in-unreal-editor-for-fortnite.html">15. 行尸走肉宇宙岛屿</a><a class="tree-link" href="16-teenage-mutant-ninja-turtle-islands-in-unreal-editor-for-fortnite.html">16. 忍者神龟岛屿</a><a class="tree-link" href="17-squid-game-islands-in-fortnite.html">17. 鱿鱼游戏岛屿</a><div class="tree-sec">D · 开发者成功</div><a class="tree-link" href="18-using-creator-portal-in-fortnite-creative.html">18. 使用创作者门户</a><a class="tree-link" href="19-island-moderation-and-guidelines-in-fortnite-creative.html">19. 岛屿审核与准则</a><div class="tree-sec">E · 协作</div><a class="tree-link" href="20-creating-teams-in-creator-portal-in-unreal-editor-for-fortnite.html">20. 在创作者门户创建团队</a><a class="tree-link" href="21-adding-playtesters-in-fortnite-creative.html">21. 添加试玩测试员</a><a class="tree-link" href="22-playtesting-your-island-in-unreal-editor-for-fortnite.html">22. 试玩测试你的岛屿</a><a class="tree-link" href="23-collaborating-in-unreal-editor-for-fortnite.html">23. 在 UEFN 中协作</a><a class="tree-link" href="24-lore-version-control-in-unreal-editor-for-fortnite.html">24. Lore 版本控制</a><a class="tree-link" href="25-conflicts-in-lore-version-control-in-unreal-editor-for-fortnite.html">25. Lore 中的冲突</a><a class="tree-link" href="26-version-history-and-conflict-resolution-in-unreal-editor-for-fortnite.html">26. 分支历史与冲突解决</a><div class="tree-sec">F · 游戏示例</div><a class="tree-link" href="27-build-a-game-in-unreal-editor-for-fortnite.html">27. 构建一款游戏</a><a class="tree-link" href="28-unreal-editor-for-fortnite-starter-templates.html">28. UEFN 新手模板</a><div class="tree-sec">G · Verse</div><a class="tree-link" href="29-learn-the-basics-of-writing-code-in-verse.html">29. 从零学习 Verse 代码基础</a><div class="tree-sec">H · 专注领域</div><a class="tree-link active" href="30-lighting-in-unreal-editor-for-fortnite.html">30. 灯光</a><a class="tree-link" href="31-animation-and-cinematics-in-unreal-editor-for-fortnite.html">31. 动画与过场动画</a><a class="tree-link" href="32-modeling-in-unreal-editor-for-fortnite.html">32. 建模</a><a class="tree-link" href="33-materials-in-unreal-editor-for-fortnite.html">33. 材质</a><a class="tree-link" href="34-environments-and-landscapes-in-unreal-editor-for-fortnite.html">34. 环境与地形</a><a class="tree-link" href="35-audio-in-unreal-editor-for-fortnite.html">35. 音频</a><a class="tree-link" href="36-visual-effects-in-unreal-editor-for-fortnite.html">36. 视觉特效</a>
+</ul></nav></div></aside>
+<div class="page-content"><div class="page-document has-theme-bg">
+<header class="section-page-header"><nav><ol class="breadcrumb is-shrinkable"><li class="breadcrumb-item is-root"><img src="../assets/logo-epic.svg" alt="Epic Games"><a href="../index.html">Developer</a></li><li class="breadcrumb-item"><a href="../index.html">Fortnite 文档</a></li><li class="breadcrumb-item"><a href="30-lighting-in-unreal-editor-for-fortnite.html">灯光</a></li><li class="breadcrumb-item active" aria-current="page"><span class="text-truncate">UEFN 中的灯光可扩展性管理器（Lighting Scalability Manager）</span></li></ol></nav><h1>UEFN 中的灯光可扩展性管理器（Lighting Scalability Manager）</h1><p class="text-secondary mb-0">灯光可扩展性管理器可根据可扩展性设置（影视级、史诗、高、中、低）显示或隐藏灯光与后处理体积，帮你针对不同平台与场景定制并优化灯光。</p><p class="doc-meta">英文原标题：Lighting Scalability Manager In Unreal Editor For Fortnite · <a href="https://dev.epicgames.com/documentation/fortnite/lighting-scalability-manager-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">查看英文原文</a> · 社区翻译镜像，仅供学习</p></header>
+<div class="doc-columns"><article class="doc-article">
+
+<p>UEFN（Unreal Editor for Fortnite）中的<b>灯光可扩展性管理器（Lighting Scalability Manager）</b>用于根据特定的可扩展性设置（影视级 cinematic、史诗 epic、高 high、中 medium、低 low）来隐藏与显示灯光和后处理体积（post process volumes，PPV）。这样你就可以针对不同平台与情形，定制并优化你的灯光。</p>
+<p>在幕后，灯光可扩展性管理器一直在监听<b>全局光照质量（Global Illumination Quality）</b>的变化。</p>
+<h2 id="sec-1">使用灯光可扩展性管理器</h2>
+<p>灯光可扩展性管理器位于<b>内容浏览器（Content Browser）</b>的<b>全部（All）</b> &gt; <b>Fortnite</b> &gt; <b>灯光（Lighting）</b> &gt; <b>工具（Tools）</b>下。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/3c802322-a1af-4c3c-b0f3-2a185c3e8532?resizing_type=fit" alt="内容浏览器中的灯光可扩展性管理器原文示意图 1" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/3c802322-a1af-4c3c-b0f3-2a185c3e8532?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>使用灯光可扩展性管理器的步骤：</p>
+<ul>
+<li>在<b>内容浏览器（Content Browser）</b>搜索栏中搜索<b>灯光可扩展性管理器（Lighting Scalability Manager）</b>，将其缩略图拖入视口。缩略图会被场景中的<b>编辑器图标（Editor Icon）</b>替代。</li>
+<li>打开工具栏中的 Actor 下拉菜单，选择一个灯光 Actor 添加到场景中。</li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/e779e7bb-0c5e-4eff-8a96-54758bfc0fdb?resizing_type=fit" alt="添加灯光 Actor 原文示意图 2" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/e779e7bb-0c5e-4eff-8a96-54758bfc0fdb?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ul>
+<li>在大纲视图（Outliner）中，将你的灯光 Actor 重命名为 <b>Low</b>。</li>
+<li>在大纲视图中复制该灯光 Actor，直到你有<b>两</b>个副本，然后分别重命名为：
+<ul>
+<li><b>Medium</b></li>
+<li><b>High</b></li>
+</ul>
+</li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/9e96d417-181a-4af0-be95-6f6b6161ed49?resizing_type=fit" alt="重命名后的灯光 Actor 副本原文示意图 3" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/9e96d417-181a-4af0-be95-6f6b6161ed49?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ul>
+<li>在大纲视图中选择<b>灯光可扩展性管理器（Lighting Scalability Manager）</b>，在<b>细节（Details）</b>面板中打开可扩展性管理器选项。点击 <b>Actor 数组元素（Actor Array Element）</b>图标（加号），向 Actor 数组中添加元素。</li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/4f9bda57-4b86-4b2b-9a8c-a675f0c4ecff?resizing_type=fit" alt="细节面板中的 Actor 数组原文示意图 4" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/4f9bda57-4b86-4b2b-9a8c-a675f0c4ecff?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ul>
+<li>在细节面板中，点击 <b>数组索引（Array Index）</b>属性旁的<b>箭头</b>，打开 <b>Actor 选项（Actor Options）</b>面板。</li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/4bb00e44-774a-44ea-9ee5-6d629863d1f7?resizing_type=fit" alt="Actor 选项面板原文示意图 5" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/4bb00e44-774a-44ea-9ee5-6d629863d1f7?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ul>
+<li>选择 <b>Actor</b> 下拉菜单，从列表中选择你的一个<b>灯光 Actor</b>。</li>
+</ul>
+<p>或者，你也可以点击箭头旁的取色器（dropper），在视口中选择要载入的对象。</p>
+<ul>
+<li>根据该 Actor 适用于低、中、高还是史诗/影视级可扩展性，勾选对应的可扩展性设置，取消勾选不属于该灯光 Actor 的其他可扩展性设置。</li>
+</ul>
+<p>在下图中，PointLight_Low 与低端平台的 Low 设置配对。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/a5f033fd-ab53-4a6d-aaf0-a3bdeeeedf25?resizing_type=fit" alt="可扩展性复选框设置原文示意图 6" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/a5f033fd-ab53-4a6d-aaf0-a3bdeeeedf25?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>这些 Actor 会在使用相关可扩展性设置的平台上，在游戏中按预期工作。</p>
+<p>对另外两个灯光 Actor 重复步骤 5–7，设置各自的可扩展性。在多个平台上试玩测试，观察可扩展性管理器的实际效果。</p>
+<h2 id="sec-2">灯光可扩展性管理器选项</h2>
+<p>以下是灯光可扩展性管理器的各个选项：</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/bbcebc6a-dbf9-4a97-b333-3a26f0ac49f5?resizing_type=fit" alt="可扩展性管理器选项面板原文示意图 7" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/bbcebc6a-dbf9-4a97-b333-3a26f0ac49f5?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<table>
+<thead><tr><th>编号</th><th>选项</th><th>说明</th></tr></thead>
+<tbody>
+<tr><td>1</td><td><b>刷新可扩展性（Refresh Scalability）</b></td><td>刷新编辑器中的可扩展性设置。</td></tr>
+<tr><td>2</td><td><b>Actor 数组元素图标（Actor Array Element Icon）</b></td><td>向 Actor 选项添加一个数组字段。</td></tr>
+<tr><td>3</td><td><b>删除图标（Delete Icon）</b></td><td>从 Actor 选项中删除该 Actor 数组。</td></tr>
+<tr><td>4</td><td><b>Actor 下拉菜单（Actor Dropdown Menu）</b></td><td>将选中的 Actor 载入槽位。</td></tr>
+<tr><td>5</td><td><b>可扩展性复选框（Scalability Checkboxes）</b></td><td>选中或取消选中该 Actor 的可扩展性。</td></tr>
+<tr><td>6</td><td><b>使用所选 Actor 图标（Use Selected Actor Icon）</b></td><td>使用关卡编辑器中选中的 Actor。</td></tr>
+<tr><td>7</td><td><b>选中并聚焦 Actor 图标（Select and Frame Actor Icon）</b></td><td>在视口中选中并聚焦该 Actor。</td></tr>
+<tr><td>8</td><td><b>拾取 Actor 图标（Pick Actor Icon）</b></td><td>从视口中拾取一个 Actor。</td></tr>
+</tbody>
+</table>
+<p>你应该按打算搭配的可扩展性设置来重命名 Actor。例如 <b>PointLight_00_CineEpicHigh</b> 与 <b>PointLight_00_Medium_Low</b>，两者共享前缀 PointLight_00_，但后缀不同，用于标明各自搭配的可扩展性设置。</p>
+<h2 id="sec-3">自定义室内灯光示例</h2>
+<p>你可以按可扩展性设置隐藏或显示特定灯光，从而为每档可扩展性定制室内灯光，让不同平台的用户体验保持一致。</p>
+<p>以下可扩展性示例通过复制灯光 Actor 并使用可扩展性管理器，使灯池（light pool）与颜色保持匹配。</p>
+<h3>未使用可扩展性</h3>
+<p>该自定义室内灯光示例使用<b>斜塔小镇（Tilted Towers）地图</b>中一栋没有窗户、只有几盏灯的预制建筑，来展示可扩展性管理器的强大作用。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/8757623a-27a4-4783-8bb8-aeeeaaca6978?resizing_type=fit" alt="未使用可扩展性设置的室内灯光原文示意图 8" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/8757623a-27a4-4783-8bb8-aeeeaaca6978?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>上图展示了在管理器中未添加任何可扩展性设置时，与 Cine_Spotlight 搭配使用的灯光可扩展性管理器效果。</p>
+<h3>已使用可扩展性</h3>
+<p>低可扩展性下的场景灯光匹配无能为力。但使用灯光可扩展性管理器，可以让 <b>Medium</b> 与 <b>High</b> 设置下的场景匹配得更好。</p>
+<p>为<b>电视机（TV）</b>创建 <b>3 盏聚光灯（Spotlight）</b>：一盏用于 <b>Medium 可扩展性</b>，一盏用于 <b>High 可扩展性</b>，一盏用于 <b>史诗/影视级（Epic/Cine）可扩展性</b>。</p>
+<p>为<b>台灯（desk lamp）</b>创建 <b>2 盏点光源（Point Light）</b>：一盏用于 <b>Medium 可扩展性</b>，一盏用于 <b>High 可扩展性</b>。</p>
+<p>按如下方式为聚光灯设置灯光可扩展性管理器：</p>
+<table>
+<thead><tr><th>Actor 设置</th><th>可扩展性设置</th><th>说明</th><th>图片</th></tr></thead>
+<tbody>
+<tr><td>SpotLight_Medium<br>强度（Intensity）：<b>80.0 cd</b></td><td>Medium</td><td>该设置适合在地面上提供一些浅层灯光高光。</td><td>中档聚光灯效果图，见下图。</td></tr>
+<tr><td>SpotLight_High<br>强度（Intensity）：<b>12.0 cd</b></td><td>High</td><td>该设置适合在地面上提供一些灯光高光。</td><td>高档聚光灯效果图，见下图。</td></tr>
+<tr><td>SpotLight_Epic<br>强度（Intensity）：<b>8.0 cd</b></td><td>Epic、Cinematic</td><td>该设置适合在地面上提供一些逼真的灯光高光。</td><td>史诗/影视级聚光灯效果图，见下图。</td></tr>
+</tbody>
+</table>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/dbad189f-326f-4b79-b2c9-675cdd2a0832?resizing_type=fit" alt="Medium 聚光灯原文示意图 9" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/dbad189f-326f-4b79-b2c9-675cdd2a0832?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>图注：Medium SpotLight</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/1118f2f7-a07e-400c-a0fb-9772e9e14591?resizing_type=fit" alt="High 聚光灯原文示意图 10" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/1118f2f7-a07e-400c-a0fb-9772e9e14591?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>图注：High SpotLight</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/9588a819-f8ae-419b-b86f-dfa147bcc304?resizing_type=fit" alt="Epic/Cine 聚光灯原文示意图 11" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/9588a819-f8ae-419b-b86f-dfa147bcc304?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>图注：Epic/Cine SpotLight</p>
+<p><i>点击图片可放大。</i></p>
+<p>这样，你就可以匹配每档可扩展性下的灯光强度与颜色，让所有平台玩家的场景尽可能接近一致。</p>
+<p>按如下方式为点光源设置灯光可扩展性管理器：</p>
+<table>
+<thead><tr><th>Actor 设置</th><th>可扩展性设置</th><th>说明</th><th>图片</th></tr></thead>
+<tbody>
+<tr><td>PointLight_Medium<br>强度（Intensity）：<b>10.0 cd</b></td><td>Medium</td><td>该设置适合在墙面提供补光并呈现更深的阴影。</td><td>中档点光源效果图，见下图。</td></tr>
+<tr><td>PointLight_High<br>强度（Intensity）：<b>0.05 cd</b></td><td>High</td><td>该设置适合提供补光，并在墙面呈现雾效高光与更深的阴影。</td><td>高档点光源效果图，见下图。</td></tr>
+</tbody>
+</table>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/c1898a6f-1c74-4b09-afbd-ef71dda30a61?resizing_type=fit" alt="Medium 点光源原文示意图 12" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/c1898a6f-1c74-4b09-afbd-ef71dda30a61?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>图注：Medium PointLight</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/229a7f81-fac3-4d9c-8509-1bc37204ee0d?resizing_type=fit" alt="High 点光源原文示意图 13" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/229a7f81-fac3-4d9c-8509-1bc37204ee0d?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>图注：High PointLight</p>
+<p>下面可以看到灯光可扩展性管理器在不同可扩展性灯光 Actor 下的效果。结果展示了未使用任何可扩展性设置，以及为每个灯光 Actor 调好合适可扩展性时的对比：</p>
+<p><b>史诗（Epic）可扩展性</b>、<b>高（High）可扩展性</b>、<b>中（Medium）可扩展性</b>、<b>低（Low）可扩展性</b>。</p>
+<p>无论在灯光可扩展性管理器中使用何种设置，低可扩展性看起来都是一样的。</p>
+<p>使用灯光可扩展性管理器，你可以用自定义灯光，让场景在不同可扩展性下与 Lumen 的效果相匹配。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/b404b1aa-a1e1-40fd-a163-4b73b6c1e5c6?resizing_type=fit&width=1920&height=1080" alt="史诗可扩展性下未使用可扩展性设置的效果" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/b404b1aa-a1e1-40fd-a163-4b73b6c1e5c6?resizing_type=fit&width=1920&height=1080" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/5fab9ca9-347f-48c1-9358-ab07d76552c5?resizing_type=fit&width=1920&height=1080" alt="史诗可扩展性下使用可扩展性设置后的游戏内效果" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/5fab9ca9-347f-48c1-9358-ab07d76552c5?resizing_type=fit&width=1920&height=1080" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/f7dfdee2-3494-486b-811f-840155231c9d?resizing_type=fit&width=1920&height=1080" alt="高可扩展性下未使用可扩展性设置的效果" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/f7dfdee2-3494-486b-811f-840155231c9d?resizing_type=fit&width=1920&height=1080" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/a1be1127-721b-4ce0-9148-92884bb4ad9d?resizing_type=fit&width=1920&height=1080" alt="高可扩展性下使用可扩展性设置后的游戏内效果" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/a1be1127-721b-4ce0-9148-92884bb4ad9d?resizing_type=fit&width=1920&height=1080" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/5ac4c146-2ce1-47dd-9c40-1c16d0d897ce?resizing_type=fit&width=1920&height=1080" alt="中可扩展性下未使用可扩展性设置的效果" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/5ac4c146-2ce1-47dd-9c40-1c16d0d897ce?resizing_type=fit&width=1920&height=1080" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/6628a488-c862-43e4-9842-85d649b72109?resizing_type=fit&width=1920&height=1080" alt="中可扩展性下使用可扩展性设置后的游戏内效果" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/6628a488-c862-43e4-9842-85d649b72109?resizing_type=fit&width=1920&height=1080" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/3e2e145a-ecd0-4e45-8420-e6ce777886e6?resizing_type=fit&width=1920&height=1080" alt="低可扩展性下未使用可扩展性设置的效果" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/3e2e145a-ecd0-4e45-8420-e6ce777886e6?resizing_type=fit&width=1920&height=1080" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/91a263e6-1ee5-498e-906e-cbef36c28fa5?resizing_type=fit&width=1920&height=1080" alt="低可扩展性下使用可扩展性设置后的游戏内效果" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/91a263e6-1ee5-498e-906e-cbef36c28fa5?resizing_type=fit&width=1920&height=1080" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h2 id="sec-4">多管理器使用示例</h2>
+<p>你可以使用多个灯光可扩展性管理器，按你的想法进一步组织、分类并命名自定义灯光。</p>
+<p>例如，在下面的同一个示例中，使用了两个灯光可扩展性管理器：一个命名为 <b>_SpotLight</b>，第二个命名为 <b>_PointLight</b>。灯光的载入方式与上文相同，并为每盏灯分配可扩展性。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/6421a090-adfb-43e5-88b6-dbb3fa90cef8?resizing_type=fit&width=1920&height=1080" alt="第一个可扩展性管理器上的聚光灯设置" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/6421a090-adfb-43e5-88b6-dbb3fa90cef8?resizing_type=fit&width=1920&height=1080" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/f41e7976-f2ab-472f-af5d-44c337ab706b?resizing_type=fit&width=1920&height=1080" alt="第二个可扩展性管理器上的点光源设置" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/f41e7976-f2ab-472f-af5d-44c337ab706b?resizing_type=fit&width=1920&height=1080" target="_blank" rel="noopener">查看原图</a></div></figure>
+<div class="pager"><a href="30-lighting-in-unreal-editor-for-fortnite.html"><small>← 返回父教程</small>灯光</a><a href="sub-index.html"><small>子教程索引 →</small>全部子教程</a></div>
+</article><nav class="doc-toc" aria-label="本页内容"><b>本页内容</b><a href="#sec-1">使用灯光可扩展性管理器</a><a href="#sec-2">灯光可扩展性管理器选项</a><a href="#sec-3">自定义室内灯光示例</a><a href="#sec-4">多管理器使用示例</a></nav></div>
+</div></div>
+</div>
+<footer class="edc-footer"><div class="inner"><img src="../assets/logo-epic.svg" alt="Epic Games"><span>Fortnite 文档中文镜像 · UE教程/ · 本地打开 index.html 阅读 · 翻译整理自 Epic 官方文档，仅供学习交流</span></div></footer>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>UEFN 中的预制件与预制件实例 | Fortnite 文档中文镜像</title><link rel="stylesheet" href="../assets/epic.css"><link rel="stylesheet" href="../assets/patch.css"><link rel="icon" href="../assets/logo-epic.svg"></head><body class="theme-fortnite"><div class="edc-topbar"><div class="edc-topbar-inner"><img class="edc-logo" src="../assets/logo-epic.svg" alt="Epic Games"><span class="edc-brand">Epic Games <b>开发者社区</b></span><span class="edc-nav"><a href="../index.html">文档首页</a><a href="sub-index.html">子教程索引</a><a href="https://dev.epicgames.com/documentation/fortnite/prefabs-and-prefab-instances-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">英文原文</a></span></div></div><div class="site-container"><aside class="site-nav"><div class="documents-tree"><nav><ul class="contents-table"><div class="tree-sec">A 最新动态</div><a class="tree-link" href="01-42-00-fortnite-ecosystem-updates-and-release-notes.html">01. 42.00 生态系统更新与发行说明</a><a class="tree-link active" href="02-custom-items-and-inventory-overview-in-fortnite.html">02. 自定义物品与背包总览</a><a class="tree-link" href="03-in-island-transactions-in-fortnite.html">03. 岛内交易</a><a class="tree-link" href="04-mobile-development-in-fortnite.html">04. 移动端开发</a><a class="tree-link" href="05-inputs-in-fortnite.html">05. 输入系统</a><a class="tree-link" href="06-ability-system-in-unreal-editor-for-fortnite.html">06. 能力系统 Ability System</a><a class="tree-link" href="07-partybased-gameplay-using-the-social-synergy-api-in-fortnite.html">07. 社交协同 API 与小队玩法</a><a class="tree-link" href="08-scene-graph-in-unreal-editor-for-fortnite.html">08. 场景图 Scene Graph</a><div class="tree-sec">B 入门</div><a class="tree-link" href="09-build-your-first-island-in-fortnite.html">09. 构建你的第一个岛屿</a><a class="tree-link" href="10-onboarding-guide-to-programming-with-verse-in-unreal-editor-for-fortnite.html">10. Verse 编程入门指南</a><a class="tree-link" href="11-building-basics-in-fortnite-creative.html">11. 建造基础</a><div class="tree-sec">C 品牌合集</div><a class="tree-link" href="12-star-wars-islands-in-fortnite.html">12. 星球大战岛屿</a><a class="tree-link" href="13-kpop-demon-hunters-islands-in-fortnite.html">13. KPop 猎魔团岛屿</a><a class="tree-link" href="14-building-lego-islands-in-fortnite.html">14. 乐高岛屿</a><a class="tree-link" href="15-the-walking-dead-universe-islands-in-unreal-editor-for-fortnite.html">15. 行尸走肉宇宙岛屿</a><a class="tree-link" href="16-teenage-mutant-ninja-turtle-islands-in-unreal-editor-for-fortnite.html">16. 忍者神龟岛屿</a><a class="tree-link" href="17-squid-game-islands-in-fortnite.html">17. 鱿鱼游戏岛屿</a><div class="tree-sec">D 开发者成功</div><a class="tree-link" href="18-using-creator-portal-in-fortnite-creative.html">18. 使用创作者门户</a><a class="tree-link" href="19-island-moderation-and-guidelines-in-fortnite-creative.html">19. 岛屿审核与准则</a><div class="tree-sec">E 协作</div><a class="tree-link" href="20-creating-teams-in-creator-portal-in-unreal-editor-for-fortnite.html">20. 在创作者门户创建团队</a><a class="tree-link" href="21-adding-playtesters-in-fortnite-creative.html">21. 添加试玩测试员</a><a class="tree-link" href="22-playtesting-your-island-in-unreal-editor-for-fortnite.html">22. 试玩测试你的岛屿</a><a class="tree-link" href="23-collaborating-in-unreal-editor-for-fortnite.html">23. 在 UEFN 中协作</a><a class="tree-link" href="24-lore-version-control-in-unreal-editor-for-fortnite.html">24. Lore 版本控制</a><a class="tree-link" href="25-conflicts-in-lore-version-control-in-unreal-editor-for-fortnite.html">25. Lore 中的冲突</a><a class="tree-link" href="26-version-history-and-conflict-resolution-in-unreal-editor-for-fortnite.html">26. 分支历史与冲突解决</a><div class="tree-sec">F 游戏示例</div><a class="tree-link" href="27-build-a-game-in-unreal-editor-for-fortnite.html">27. 构建一款游戏</a><a class="tree-link" href="28-unreal-editor-for-fortnite-starter-templates.html">28. UEFN 新手模板</a><div class="tree-sec">G Verse</div><a class="tree-link" href="29-learn-the-basics-of-writing-code-in-verse.html">29. 从零学习 Verse 代码基础</a><div class="tree-sec">H 专注领域</div><a class="tree-link" href="30-lighting-in-unreal-editor-for-fortnite.html">30. 灯光</a><a class="tree-link" href="31-animation-and-cinematics-in-unreal-editor-for-fortnite.html">31. 动画与过场动画</a><a class="tree-link" href="32-modeling-in-unreal-editor-for-fortnite.html">32. 建模</a><a class="tree-link" href="33-materials-in-unreal-editor-for-fortnite.html">33. 材质</a><a class="tree-link" href="34-environments-and-landscapes-in-unreal-editor-for-fortnite.html">34. 环境与地形</a><a class="tree-link" href="35-audio-in-unreal-editor-for-fortnite.html">35. 音频</a><a class="tree-link" href="36-visual-effects-in-unreal-editor-for-fortnite.html">36. 视觉特效</a></ul></nav></div></aside><div class="page-content"><div class="page-document has-theme-bg"><header class="section-page-header"><nav><ol class="breadcrumb is-shrinkable"><li class="breadcrumb-item is-root"><img src="../assets/logo-epic.svg" alt="Epic Games"><a href="../index.html">Developer</a></li><li class="breadcrumb-item"><a href="../index.html">Fortnite 文档</a></li><li class="breadcrumb-item"><a href="02-custom-items-and-inventory-overview-in-fortnite.html">自定义物品与背包总览</a></li><li class="breadcrumb-item active" aria-current="page"><span class="text-truncate">UEFN 中的预制件与预制件实例</span></li></ol></nav><h1>UEFN 中的预制件与预制件实例</h1><p class="text-secondary mb-0">学习使用这一 Beta 功能，但在将其用于正式发布的项目时请谨慎。预制件是使用实体与组件层级来保存所有预制件实例共享的基础信息的稳定对象。</p><p class="doc-meta">英文原标题：Prefabs and Prefab Instances in Unreal Editor for Fortnite · <a href="https://dev.epicgames.com/documentation/fortnite/prefabs-and-prefab-instances-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">查看英文原文</a> · 社区翻译镜像，仅供学习</p></header><div class="doc-columns"><article class="doc-article">
+<div class="block-callout warn">注意：学习使用这一 Beta 功能，但在将其用于正式发布的项目时请谨慎。</div>
+<p>预制件 (Prefab) 是使用实体与组件层级来保存所有预制件实例共享的基础信息的稳定对象。</p>
+<p>这让你在继续搭建和设计关卡时，可以更轻松地将预制件作为整体或按部件进行编辑。你可以实例化 Scene Graph (场景图)中创建的资源并对其进行覆盖，从而创建新的游戏对象和预制件。</p>
+<p>预制件就像游戏对象的印章，你可以将预制件在场景中放置任意多次。你创建的所有实例都可以作为一个整体或单独进行编辑。</p>
+<p>要进一步了解预制件的强大功能与潜力，请参阅以下文档：</p>
+<ul>
+<li><a href="https://dev.epicgames.com/documentation/en-us/uefn/scene-graph-sample-tutorial-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">Scene Graph Sample Tutorial (场景图示例教程)</a></li>
+<li><a href="https://dev.epicgames.com/documentation/en-us/uefn/create-a-platformer-with-scene-graph-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">Create a Platformer with Scene Graph (使用场景图创建平台跳跃游戏)</a></li>
+</ul>
+<h2 id="sec-1">将实体另存为预制件</h2>
+<p>预制件应尽可能紧凑，你的预制件设计不应过于复杂。包含大量实体和组件的预制件会占用过多数据，可能给项目带来问题。</p>
+<p>一个实体一次只能使用一种组件类型。这意味着一旦选择了某种组件类型，就无法在同一实体上重复使用该组件类型。要使用相同的组件，需要添加另一个实体，然后将相同的组件添加到新实体上。</p>
+<p>要创建预制件：</p>
+<ul>
+<li>在 Outliner (大纲视图)中右键单击父实体，然后选择 <strong>Save As Prefab… (另存为预制件…)</strong>。此时会打开 <strong>Create New Prefab (创建新预制件)</strong>窗口。
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/cb3a8105-2409-4622-b98c-454b7a17b2b9?resizing_type=fit" alt="创建新预制件窗口" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/cb3a8105-2409-4622-b98c-454b7a17b2b9?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p class="img-hint">点击图片可放大。</p></li>
+<li>你可以先在 Outliner (大纲视图)中嵌套实体，也可以在之后于 Prefab Editor (预制件编辑器)中向预制件添加新实体。</li>
+<li>为预制件命名，然后选择 <strong>Create entity Class (创建实体类)</strong>。Prefab Editor (预制件编辑器)随即打开，视口中显示你创建的预制件。预制件缩略图会出现在 Content Browser (内容浏览器)中。
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/9175f83b-5502-4564-b0d5-92a5a2caec5c?resizing_type=fit" alt="预制件编辑器中的预制件" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/9175f83b-5502-4564-b0d5-92a5a2caec5c?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></li>
+</ul>
+<p>预制件可以在 Outliner (大纲视图)中嵌套和分组，以便更轻松地进行编辑。</p>
+<ul>
+<li>选中预制件缩略图，将预制件从 Content Browser (内容浏览器)拖入视口。这会创建该预制件的另一个实例。</li>
+</ul>
+<h2 id="sec-2">将更改传播到所有预制件实例</h2>
+<p>预制件实例不仅仅是原件的视觉复制品。使用<a href="prefab-editor-user-interface-in-unreal-editor-for-fortnite.html">Prefab Editor (预制件编辑器)</a>进行更改后，所有实例会自动采用所有已保存的更改。使用 Scene Graph (场景图)中的层级有助于确定子预制件和实体如何与父级交互。特别是当你使用的资源的轴心点可能偏离中心，或未使用 Unreal Units (虚幻单位)与世界中的对象对齐时，这一点非常有用。</p>
+<p>这为你节省了时间，因为你不必找到每个预制件实例并一遍又一遍地重复相同的更改。</p>
+<p>你还可以将不同的预制件组合在同一层级中，以创建更复杂的预制件。</p>
+<h3>覆盖预制件实例</h3>
+<p>你可以覆盖预制件实例中的组件，使更改仅适用于单个实例。覆盖组件后，Outliner (大纲视图)中的实体、组件卡以及 Details (详情)面板中被覆盖的组件旁边都会出现 <strong>Override (覆盖)</strong>图标。</p>
+<p>覆盖会以上级预制件设计为基础，在受影响组件的层级上，用该组件被覆盖的属性更改来替代原设计。你可以通过两种方式覆盖组件：</p>
+<ul>
+<li>在 Prefab Editor (预制件编辑器)中编辑预制件。</li>
+<li>从组件卡覆盖实体或组件。</li>
+</ul>
+<p>在<a href="prefab-editor-user-interface-in-unreal-editor-for-fortnite.html">Prefab Editor (预制件编辑器)</a>中，添加新组件或创建 Verse 组件，为预制件添加移动或交互等功能。在 Prefab Editor (预制件编辑器)中保存这些更改，可确保场景中该预制件的每个实例都发生相应更改。</p>
+<p>覆盖实体可通过添加新组件，或通过创建 Verse 组件来添加移动或交互等功能来实现。</p>
+<p>从预制件实例的组件卡覆盖实体或组件，会将独特的更改仅应用于该单个实例。如下图所示，两座木屋基于同一个原始预制件设计，但第二座房屋在关键组件的组件卡上进行了覆盖，更换了不同的网格体，或将预制件的某些部分转向不同方向，从而展示出房屋的新面貌。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/17e9873d-6049-4113-977b-c795d78ef1ec?resizing_type=fit" alt="同一预制件两个实例的不同覆盖效果对比" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/17e9873d-6049-4113-977b-c795d78ef1ec?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p class="img-hint">点击图片可放大。</p>
+<p>要覆盖组件：</p>
+<ul>
+<li>在 Content Browser (内容浏览器)中，将预制件的实例拖入视口。</li>
+<li>在 Details (详情)面板中选择该预制件实例的 <code>sphere_light_component</code> (球形光源组件)卡。
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/b32e8a8d-168e-419b-85cc-034b3b154f0a?resizing_type=fit" alt="在 Details (详情)面板中选择预制件实例的组件卡" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/b32e8a8d-168e-419b-85cc-034b3b154f0a?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p class="img-hint">点击图片可放大。</p></li>
+<li>点击 <strong>component card menu button (组件卡菜单按钮)</strong>，然后选择 <strong>Override Component (覆盖组件)</strong>。</li>
+<li>为该组件选择新属性。该实例上此组件的覆盖即与父预制件不同，即使你之后更改父预制件，该覆盖也会保持不变。</li>
+</ul>
+<h3>覆盖图标</h3>
+<p>覆盖图标是蓝色圆形，中间有一支向下的蓝色箭头。该图标表示此实体中的组件已被覆盖。当实体被覆盖后，你可以在场景中多次使用它们，这些实体在预制件中仍能一致地工作。</p>
+<p>在预制件确定后新增的实体带有绿色圆形、中间有加号，用于表示它们是后来添加的。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/22068db2-85f2-43ce-bb43-e482e9981d50?resizing_type=fit" alt="覆盖图标与新增实体标识" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/22068db2-85f2-43ce-bb43-e482e9981d50?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p class="img-hint">点击图片可放大。</p>
+<h2 id="sec-3">预制件层级</h2>
+<p>预制件层级通过将实体和预制件嵌套在一个父预制件或实体之下创建。设置父子关系可以：</p>
+<ul>
+<li>缩放预制件的组件功能，以指定预制件在场景中的工作方式。</li>
+<li>确定子实体如何与父预制件交互。</li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/a5637d01-e9e1-49ad-9db2-62feef2d9fc6?resizing_type=fit" alt="预制件层级结构示例" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/a5637d01-e9e1-49ad-9db2-62feef2d9fc6?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p class="img-hint">点击图片可放大。</p>
+<p>通过轴心点放置，层级可以将资源吸附到场景中的特定矢量上。这不仅有助于布景，也有助于使用坐标的玩法元素。</p>
+<h3>轴心点放置与网格吸附</h3>
+<p><a href="https://dev.epicgames.com/documentation/fortnite/fortnite-glossary#pivot-point" target="_blank" rel="noopener">Pivot points (轴心点)</a>和<a href="https://dev.epicgames.com/documentation/fortnite/fortnite-glossary#grid-snap" target="_blank" rel="noopener">grid snapping (网格吸附)</a>与实体的<a href="transforms-in-scene-graph-in-unreal-editor-for-fortnite.html">transform_component (变换组件)</a>配合使用，以在场景中对齐游戏对象和预制件。</p>
+<p>Prefab Editor (预制件编辑器)不使用网格来缩放预制件。请使用 Outliner (大纲视图)的右键菜单来确定预制件轴心点的偏移。</p>
+<p>网格吸附与资源的大小相关。为确保资源按预期工作，应将其缩放到 <strong>512 Unreal Units (虚幻单位)</strong>，并使用 UEFN 中设置的相同网格度量。如果不重新缩放资源，请重置资源的轴心点，并重新缩放网格吸附设置。</p>
+<p>将轴心点放在预制件中心并不适用于所有资源类型，例如楼梯。此时可以使用 <a href="modeling-mode-in-unreal-editor-for-fortnite.html">Modeling Mode (建模模式)</a>中的 <strong>Edit Transform (编辑变换)</strong>选项来偏移轴心点，以确保资源在世界中出现在你想要的位置并正确对齐。</p>
+<p>可通过<a href="https://dev.epicgames.com/documentation/en-us/uefn/leftupforward-coordinate-system-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">Left-Up-Forward Coordinate System (左-上-前坐标系)</a>文档进一步了解 3D 世界空间。</p>
+<h3>Scene Graph (场景图)中的组合</h3>
+<p>Scene Graph (场景图)中的组合提供了一种对齐资源的方法。所有子实体和预制件都围绕父对象按偏移旋转。如果你将预制件结构旋转 <strong>360 degrees (360 度)</strong>，该对象会围绕其在网格上的中心移动。</p>
+<p>在 UEFN 中旋转 actor 时，旋转由该 actor 在世界中的位置决定。这使得对齐单个 actor 以组成完整结构更加困难。</p>
+<p>使用 Scene Graph (场景图)中的层级有助于确定子预制件和实体如何与父级交互。特别是当你使用的资源的轴心点可能偏离中心，或未使用<a href="https://dev.epicgames.com/documentation/fortnite/fortnite-glossary#unreal-units" target="_blank" rel="noopener">Unreal Units (虚幻单位)</a>与世界中的对象对齐时，这一点非常有用。</p>
+<p>在场景中将装饰性资源相对于其所依附的父预制件放置时，层级也很有帮助。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/592238b5-e90e-44bc-9445-08bdea6ffc89?resizing_type=fit" alt="Scene Graph (场景图)中的组合示例" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/592238b5-e90e-44bc-9445-08bdea6ffc89?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p class="img-hint">点击图片可放大。</p>
+<p>要进一步了解 Transform (变换)组件，请参阅<a href="transforms-in-scene-graph-in-unreal-editor-for-fortnite.html">Transforms in Scene Graph (场景图中的变换)</a>文档。</p>
+<h2 id="sec-4">Verse 中的预制件类</h2>
+<p>你在项目中创建的预制件会作为类暴露给 Verse，位于项目的 <code>Assets.digest.verse</code> 文件中。你可以通过实例化 Prefab (预制件)类，并使用 Verse 将其添加到场景中的实体来生成预制件实例。</p>
+<p>要进一步学习使用预制件，请参阅<a href="creating-your-own-component-using-verse-in-unreal-editor-for-fortnite.html">Creating Your Own Component in Verse (在 Verse 中创建你自己的组件)</a>。</p>
+<ul>
+<li><a href="https://dev.epicgames.com/community/search?query=gameplay" target="_blank" rel="noopener">gameplay (玩法)</a></li>
+<li><a href="https://dev.epicgames.com/community/search?query=level%20design" target="_blank" rel="noopener">level design (关卡设计)</a></li>
+<li><a href="https://dev.epicgames.com/community/search?query=scene%20graph" target="_blank" rel="noopener">scene graph (场景图)</a></li>
+</ul>
+<hr>
+<p><strong>提出问题并帮助你的同行：</strong><a href="https://forums.unrealengine.com/categories?tag=fortnite" target="_blank" rel="noopener">Developer Forums (开发者论坛)</a></p>
+<p><strong>编写你自己的教程或阅读他人的教程：</strong><a href="https://dev.epicgames.com/community/fortnite/learning" target="_blank" rel="noopener">Learning Library (学习库)</a></p>
+<ul>
+<li><a href="#sec-1">将实体另存为预制件</a></li>
+<li><a href="#sec-2">将更改传播到所有预制件实例</a></li>
+<li><a href="#sec-2">覆盖预制件实例</a></li>
+<li><a href="#sec-2">覆盖图标</a></li>
+<li><a href="#sec-3">预制件层级</a></li>
+<li><a href="#sec-3">轴心点放置与网格吸附</a></li>
+<li><a href="#sec-3">Scene Graph (场景图)中的组合</a></li>
+<li><a href="#sec-4">Verse 中的预制件类</a></li>
+</ul><div class="pager"><a href="02-custom-items-and-inventory-overview-in-fortnite.html"><small>← 返回父教程</small>自定义物品与背包总览</a><a href="sub-index.html"><small>子教程索引 →</small>全部子教程</a></div></article><nav class="doc-toc" aria-label="本页内容"><b>本页内容</b><a href="#sec-1">将实体另存为预制件</a><a href="#sec-2">将更改传播到所有预制件实例</a><a href="#sec-3">预制件层级</a><a href="#sec-4">Verse 中的预制件类</a></nav></div></div></div></div><footer class="edc-footer"><div class="inner"><img src="../assets/logo-epic.svg" alt="Epic Games"><span>Fortnite 文档中文镜像 · UE教程/ · 本地打开 index.html 阅读 · 翻译整理自 Epic 官方文档，仅供学习交流</span></div></footer></body></html>

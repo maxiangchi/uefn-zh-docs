@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>开发者可自定义触屏控制 | Fortnite 文档中文镜像</title>
+<link rel="stylesheet" href="../assets/epic.css">
+<link rel="stylesheet" href="../assets/patch.css">
+<link rel="icon" href="../assets/logo-epic.svg">
+</head>
+<body class="theme-fortnite">
+<div class="edc-topbar"><div class="edc-topbar-inner"><img class="edc-logo" src="../assets/logo-epic.svg" alt="Epic Games"><span class="edc-brand">Epic Games <b>开发者社区</b></span><span class="edc-nav"><a href="../index.html">文档首页</a><a href="sub-index.html">子教程索引</a><a href="https://dev.epicgames.com/documentation/fortnite/developer-customizable-touchscreen-controls-in-fortnite" target="_blank" rel="noopener">英文原文</a></span></div></div>
+<div class="site-container">
+<aside class="site-nav"><div class="documents-tree"><nav><ul class="contents-table">
+<div class="tree-sec">A 最新动态</div>
+<a class="tree-link active" href="01-42-00-fortnite-ecosystem-updates-and-release-notes.html">01. 42.00 生态系统更新与发行说明</a>
+<a class="tree-link" href="02-custom-items-and-inventory-overview-in-fortnite.html">02. 自定义物品与背包总览</a>
+<a class="tree-link" href="03-in-island-transactions-in-fortnite.html">03. 岛内交易</a>
+<a class="tree-link" href="04-mobile-development-in-fortnite.html">04. 移动端开发</a>
+<a class="tree-link" href="05-inputs-in-fortnite.html">05. 输入系统</a>
+<a class="tree-link" href="06-ability-system-in-unreal-editor-for-fortnite.html">06. 能力系统 Ability System</a>
+<a class="tree-link" href="07-partybased-gameplay-using-the-social-synergy-api-in-fortnite.html">07. 社交协同 API 与小队玩法</a>
+<a class="tree-link" href="08-scene-graph-in-unreal-editor-for-fortnite.html">08. 场景图 Scene Graph</a>
+<div class="tree-sec">B 入门</div>
+<a class="tree-link" href="09-build-your-first-island-in-fortnite.html">09. 构建你的第一个岛屿</a>
+<a class="tree-link" href="10-onboarding-guide-to-programming-with-verse-in-unreal-editor-for-fortnite.html">10. Verse 编程入门指南</a>
+<a class="tree-link" href="11-building-basics-in-fortnite-creative.html">11. 建造基础</a>
+<div class="tree-sec">C 品牌合集</div>
+<a class="tree-link" href="12-star-wars-islands-in-fortnite.html">12. 星球大战™岛屿</a>
+<a class="tree-link" href="13-kpop-demon-hunters-islands-in-fortnite.html">13. KPop 猎魔团岛屿</a>
+<a class="tree-link" href="14-building-lego-islands-in-fortnite.html">14. 乐高®岛屿</a>
+<a class="tree-link" href="15-the-walking-dead-universe-islands-in-unreal-editor-for-fortnite.html">15. 行尸走肉宇宙岛屿</a>
+<a class="tree-link" href="16-teenage-mutant-ninja-turtle-islands-in-unreal-editor-for-fortnite.html">16. 忍者神龟岛屿</a>
+<a class="tree-link" href="17-squid-game-islands-in-fortnite.html">17. 鱿鱼游戏岛屿</a>
+<div class="tree-sec">D 开发者成功</div>
+<a class="tree-link" href="18-using-creator-portal-in-fortnite-creative.html">18. 使用创作者门户</a>
+<a class="tree-link" href="19-island-moderation-and-guidelines-in-fortnite-creative.html">19. 岛屿审核与准则</a>
+<div class="tree-sec">E 协作</div>
+<a class="tree-link" href="20-creating-teams-in-creator-portal-in-unreal-editor-for-fortnite.html">20. 在创作者门户创建团队</a>
+<a class="tree-link" href="21-adding-playtesters-in-fortnite-creative.html">21. 添加试玩测试员</a>
+<a class="tree-link" href="22-playtesting-your-island-in-unreal-editor-for-fortnite.html">22. 试玩测试你的岛屿</a>
+<a class="tree-link" href="23-collaborating-in-unreal-editor-for-fortnite.html">23. 在 UEFN 中协作</a>
+<a class="tree-link" href="24-lore-version-control-in-unreal-editor-for-fortnite.html">24. Lore 版本控制</a>
+<a class="tree-link" href="25-conflicts-in-lore-version-control-in-unreal-editor-for-fortnite.html">25. Lore 中的冲突</a>
+<a class="tree-link" href="26-version-history-and-conflict-resolution-in-unreal-editor-for-fortnite.html">26. 分支历史与冲突解决</a>
+<div class="tree-sec">F 游戏示例</div>
+<a class="tree-link" href="27-build-a-game-in-unreal-editor-for-fortnite.html">27. 构建一款游戏</a>
+<a class="tree-link" href="28-unreal-editor-for-fortnite-starter-templates.html">28. UEFN 新手模板</a>
+<div class="tree-sec">G Verse</div>
+<a class="tree-link" href="29-learn-the-basics-of-writing-code-in-verse.html">29. 从零学习 Verse 代码基础</a>
+<div class="tree-sec">H 专注领域</div>
+<a class="tree-link" href="30-lighting-in-unreal-editor-for-fortnite.html">30. 灯光</a>
+<a class="tree-link" href="31-animation-and-cinematics-in-unreal-editor-for-fortnite.html">31. 动画与过场动画</a>
+<a class="tree-link" href="32-modeling-in-unreal-editor-for-fortnite.html">32. 建模</a>
+<a class="tree-link" href="33-materials-in-unreal-editor-for-fortnite.html">33. 材质</a>
+<a class="tree-link" href="34-environments-and-landscapes-in-unreal-editor-for-fortnite.html">34. 环境与地形</a>
+<a class="tree-link" href="35-audio-in-unreal-editor-for-fortnite.html">35. 音频</a>
+<a class="tree-link" href="36-visual-effects-in-unreal-editor-for-fortnite.html">36. 视觉特效</a>
+
+</ul></nav></div></aside>
+<div class="page-content"><div class="page-document has-theme-bg">
+<header class="section-page-header"><nav><ol class="breadcrumb is-shrinkable"><li class="breadcrumb-item is-root"><img src="../assets/logo-epic.svg" alt="Epic Games"><a href="../index.html">Developer</a></li><li class="breadcrumb-item"><a href="../index.html">Fortnite 文档</a></li><li class="breadcrumb-item"><a href="01-42-00-fortnite-ecosystem-updates-and-release-notes.html">42.00 生态系统更新与发行说明</a></li><li class="breadcrumb-item active" aria-current="page"><span class="text-truncate">开发者可自定义触屏控制</span></li></ol></nav><h1>开发者可自定义触屏控制</h1><p class="text-secondary mb-0">默认触屏控制按钮可摆放到平视显示（HUD）任意位置，还支持多套布局切换与单个按钮隐藏，本文介绍如何用 HUD 控制器（HUD Controller）设备与 Verse 实现开发者侧的触屏布局自定义。</p><p class="doc-meta">英文原标题：Developer Customizable Touchscreen Controls in Fortnite · <a href="https://dev.epicgames.com/documentation/fortnite/developer-customizable-touchscreen-controls-in-fortnite" target="_blank" rel="noopener">查看英文原文</a> · 社区翻译镜像，仅供学习</p></header>
+<div class="doc-columns"><article class="doc-article">
+<p>默认触屏控制组合——跳跃（Jump）、射击（Shoot）、换弹（Reload）、瞄准（Aim）、蹲伏（Crouch）、疾跑（Sprint）等动作——都可以摆放到平视显示（HUD）上的任意位置。你还可以配置多套布局随时切换，并明确隐藏体验中用不到的单个控制按钮。</p>
+<p>这是由开发者控制的触屏布局自定义版本。由玩家控制的布局自定义是一套独立的、早已存在的功能，本功能不会改变它。</p>
+<p>你可以使用 HUD 控制器（HUD Controller）设备自定义触屏控制的位置。整个工作流程在虚幻编辑器 Fortnite 版（UEFN）中完成。</p>
+<h2 id="sec-1">使用 HUD 控制器（HUD Controller）设备</h2>
+<p>若要自定义游戏的触屏控制，首先把一套布局构建为 Unreal Motion Graphics（UMG）用户控件（User Widget），然后把该控件指派给岛屿上的 <a href="https://dev.epicgames.com/documentation/fortnite/using-hud-controller-devices-in-fortnite-creative" target="_blank" rel="noopener">HUD 控制器（HUD Controller）</a>设备。运行时，HUD 控制器设备会使用你控件中的布局，覆盖触屏控制的默认位置。</p>
+<h3>触屏控制（Touchscreen Controls）</h3>
+<p>以下控制均可重新摆放：</p>
+<ul>
+<li>跳跃（Jump）</li>
+<li>射击（Shoot）</li>
+<li>蹲伏（Crouch）</li>
+<li>换弹（Reload）</li>
+<li>次要技能（Secondary Ability）</li>
+<li>疾跑（Sprint）</li>
+<li>载具加速（Vehicle Boost）</li>
+<li>载具喇叭（Vehicle Horn）</li>
+<li>载具刹车（Vehicle Brake）</li>
+<li>载具瞄准（Vehicle Aim (ADS)）</li>
+<li>载具刹车 / 滑行（Vehicle Brake / Coast）</li>
+<li>载具切换座位（Vehicle Switch Seat）</li>
+<li>载具油门（Vehicle Throttle）</li>
+<li>背包（Backpack）</li>
+<li>地图标记（Map Ping）</li>
+<li>自动开火开关（Toggle Autofire）</li>
+<li>地图开关（Toggle Map）</li>
+</ul>
+<p>每个控制都会映射到 HUD 控制器设备中的一个<strong>动作（Action）</strong>选项，该选项决定触屏功能实际执行的操作。</p>
+<h3>UMG 分配与设备调整（UMG Assignment and Device Adjustments）</h3>
+<p>自定义默认触屏控制的步骤如下：</p>
+<ul>
+<li>在虚幻编辑器 Fortnite 版（UEFN）中创建一个标准<strong>用户控件（User Widget）</strong>，用来承载触屏布局。</li>
+<li>添加一个<strong>画布（Canvas）</strong>布局面板作为根控件。</li>
+<li>为每个想要重新摆放的默认控制添加一个<strong>触控布局覆盖（Touch Control Layout Override）</strong>控件。</li>
+</ul>
+<p>未添加到标准布局中的触屏控制将保持默认外观。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/28374401-c74b-4ad6-88e3-65b086d51619?resizing_type=fit" alt="触控布局覆盖（Touch Control Layout Override）按钮" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/28374401-c74b-4ad6-88e3-65b086d51619?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ul>
+<li>逐个设置以下属性：
+<ul>
+<li><strong>动作（Action）</strong>——该按钮代表的触屏动作，取值为枚举：跳跃（Jump）、瞄准（Aim）、射击（Shoot）、蹲伏（Crouch）、疾跑（Sprint）等。</li>
+</ul>
+</li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/9ce77bd3-3710-4298-af2c-b9dd1b846217?resizing_type=fit" alt="动作（Action）设置" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/9ce77bd3-3710-4298-af2c-b9dd1b846217?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ul>
+<li><strong>从布局中隐藏（Hide from Layout）</strong>——选择玩家是否可以使用该按钮。</li>
+</ul>
+<div class="block-callout warn">注意：如果隐藏了某个动作，请确保你的游戏并不需要该动作，因为触屏设备上的玩家将无法再使用被隐藏的动作。</div>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/20699e67-1dda-4bf9-95ae-d1589fd2e9c8?resizing_type=fit" alt="从布局中隐藏（Hide from Layout）设置" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/20699e67-1dda-4bf9-95ae-d1589fd2e9c8?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ul>
+<li><strong>图标覆盖（Icon Override，可选）</strong>——用于替代默认图标的纹理。</li>
+<li><strong>颜色覆盖（Color Override，可选）</strong>——应用于按钮的染色。</li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/5b906af3-3511-4b09-a5fa-33d0fb7bc197?resizing_type=fit" alt="图标覆盖与颜色覆盖设置" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/5b906af3-3511-4b09-a5fa-33d0fb7bc197?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ul>
+<li>在控件画布上摆放每个按钮的位置与大小。HUD 控制器设备会使用控件画布槽位的锚点来放置实际的触屏控制。</li>
+<li>在岛屿上放置一个<strong>HUD 控制器（HUD Controller）设备</strong>，并把新布局指派给该设备的<strong>覆盖触控布局（Override Touch Layout）</strong>属性。</li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/a4e83a6a-e809-4079-ae79-da05aed6ef0d?resizing_type=fit" alt="覆盖触控布局（Override Touch Layout）属性" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/a4e83a6a-e809-4079-ae79-da05aed6ef0d?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ul>
+<li>启用 HUD 控制器设备。设备启用后，就会用你布局中的位置替换默认触屏位置。</li>
+</ul>
+<p>若要在运行时切换布局（例如玩家进入不同游戏模式时），可以启用另一个指向不同用户控件的 HUD 控制器设备。</p>
+<p>如果没有任何带<strong>覆盖触控布局（Override Touch Layout）</strong>的 HUD 控制器设备处于启用状态，体验将回退到 Fortnite 默认触屏控制。</p>
+<h2 id="sec-2">已禁用输入的触屏控制默认隐藏</h2>
+<p>如果你在 Verse 中取消订阅了某个默认动作，引擎会自动隐藏对应的触屏按钮。</p>
+<p>当你的体验使用精简或自定义控制组合时（例如只需要跳跃的单按钮游戏），请使用该特性。引擎会识别出该动作不适用于你的游戏，并阻止显示触屏按钮，而不需要使用变通手段，例如隐藏角色，或让默认动作在后台静默运行。</p>
+<h3>输入映射上下文（Input Mapping Context (IMC)）</h3>
+<p>在 Verse 中添加或移除输入映射上下文（Input Mapping Context，IMC），会显示或隐藏该上下文关联的所有默认触屏按钮。预置的 IMC 包括<strong>遍历映射（TraversalMapping）</strong>（移动与跳跃类动作）和<strong>远程武器映射（RangedWeaponMapping）</strong>（武器类动作），两者都位于 <code>/Fortnite.com/Input/Character</code>。</p>
+<p>重新添加 IMC 或重新订阅动作，即可恢复其按钮，且不会出现重复。</p>
+<p>若要隐藏某个映射上下文中的所有按钮，可使用 <code>player_input.RemoveInputMapping</code> 移除该上下文；若要恢复，则使用 <code>player_input.AddInputMapping</code> 加回：</p>
+<pre><code>if (PlayerInput := GetPlayerInput[Player]):
+    # Hide every default touchscreen button in the ranged-weapon context
+    PlayerInput.RemoveInputMapping(RangedWeaponMapping)
+    # Later, restore them
+    PlayerInput.AddInputMapping(RangedWeaponMapping)</code></pre>
+<p>若要隐藏单个动作的按钮，不要在 <code>input_events</code> 上订阅它的事件；若要让按钮出现并响应点按，可订阅<strong>触发激活事件（TriggerActivationEvent）</strong>（或 <code>input_events</code> 上的其他事件），不再需要该按钮时取消订阅即可：</p>
+<pre><code>if (PlayerInput := GetPlayerInput[Player]):
+    InputEvents := PlayerInput.GetInputEvents(Reload)
+    # Subscribe — the Reload touchscreen button appears
+    Subscription := InputEvents.TriggerActivationEvent.Subscribe(OnReloadTriggered)
+    # Cancel — the Reload touchscreen button is hidden again
+    Subscription.Cancel()</code></pre>
+<p><code>input_events</code> 对象还提供<strong>开始检测事件（BeginDetectEvent）</strong>、<strong>持续检测事件（DetectionOngoingEvent）</strong>、<strong>结束检测事件（EndDetectEvent）</strong>和<strong>取消激活事件（CancelActivationEvent）</strong>，用于更丰富的输入处理。订阅其中任意一个，在可见性判定上都视为已订阅该动作。</p>
+<h2 id="sec-3">相关文档</h2>
+<ul>
+<li><a href="https://dev.epicgames.com/documentation/fortnite/using-hud-controller-devices-in-fortnite-creative" target="_blank" rel="noopener">HUD 控制器设备（HUD Controller Devices）</a></li>
+<li><a href="tappable-custom-hud-widgets-in-fortnite.html">可点按的自定义 HUD 控件（Tappable Custom HUD Widgets）</a></li>
+</ul>
+<div class="pager"><a href="01-42-00-fortnite-ecosystem-updates-and-release-notes.html"><small>← 返回父教程</small>42.00 生态系统更新与发行说明</a><a href="sub-index.html"><small>子教程索引 →</small>全部子教程</a></div>
+</article><nav class="doc-toc" aria-label="本页内容"><b>本页内容</b><a href="#sec-1">使用 HUD 控制器（HUD Controller）设备</a><a href="#sec-2">已禁用输入的触屏控制默认隐藏</a><a href="#sec-3">相关文档</a></nav></div>
+</div></div>
+</div>
+<footer class="edc-footer"><div class="inner"><img src="../assets/logo-epic.svg" alt="Epic Games"><span>Fortnite 文档中文镜像 · UE教程/ · 本地打开 index.html 阅读 · 翻译整理自 Epic 官方文档，仅供学习交流</span></div></footer>
+</body>
+</html>

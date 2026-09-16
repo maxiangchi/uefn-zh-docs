@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TMNT 城市起始模板视觉风格（UEFN） | Fortnite 文档中文镜像</title>
+<link rel="stylesheet" href="../assets/epic.css">
+<link rel="stylesheet" href="../assets/patch.css">
+<link rel="icon" href="../assets/logo-epic.svg">
+</head>
+<body class="theme-fortnite">
+<div class="edc-topbar"><div class="edc-topbar-inner"><img class="edc-logo" src="../assets/logo-epic.svg" alt="Epic Games"><span class="edc-brand">Epic Games <b>开发者社区</b></span><span class="edc-nav"><a href="../index.html">文档首页</a><a href="sub-index.html">子教程索引</a><a href="https://dev.epicgames.com/documentation/fortnite/tmnt-city-starter-visual-styles-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">英文原文</a></span></div></div>
+<div class="site-container">
+<aside class="site-nav"><div class="documents-tree"><nav><ul class="contents-table">
+<div class="tree-sec">A · 最新动态</div><a class="tree-link" href="01-42-00-fortnite-ecosystem-updates-and-release-notes.html">01. 42.00 生态系统更新与发行说明</a><a class="tree-link" href="02-custom-items-and-inventory-overview-in-fortnite.html">02. 自定义物品与背包总览</a><a class="tree-link" href="03-in-island-transactions-in-fortnite.html">03. 岛内交易</a><a class="tree-link" href="04-mobile-development-in-fortnite.html">04. 移动端开发</a><a class="tree-link" href="05-inputs-in-fortnite.html">05. 输入系统</a><a class="tree-link" href="06-ability-system-in-unreal-editor-for-fortnite.html">06. 能力系统 Ability System</a><a class="tree-link" href="07-partybased-gameplay-using-the-social-synergy-api-in-fortnite.html">07. 社交协同 API 与小队玩法</a><a class="tree-link" href="08-scene-graph-in-unreal-editor-for-fortnite.html">08. 场景图 Scene Graph</a><div class="tree-sec">B · 入门</div><a class="tree-link" href="09-build-your-first-island-in-fortnite.html">09. 构建你的第一个岛屿</a><a class="tree-link" href="10-onboarding-guide-to-programming-with-verse-in-unreal-editor-for-fortnite.html">10. Verse 编程入门指南</a><a class="tree-link" href="11-building-basics-in-fortnite-creative.html">11. 建造基础</a><div class="tree-sec">C · 品牌合集</div><a class="tree-link" href="12-star-wars-islands-in-fortnite.html">12. 星球大战™岛屿</a><a class="tree-link" href="13-kpop-demon-hunters-islands-in-fortnite.html">13. KPop 猎魔团岛屿</a><a class="tree-link" href="14-building-lego-islands-in-fortnite.html">14. 乐高®岛屿</a><a class="tree-link" href="15-the-walking-dead-universe-islands-in-unreal-editor-for-fortnite.html">15. 行尸走肉宇宙岛屿</a><a class="tree-link active" href="16-teenage-mutant-ninja-turtle-islands-in-unreal-editor-for-fortnite.html">16. 忍者神龟岛屿</a><a class="tree-link" href="17-squid-game-islands-in-fortnite.html">17. 鱿鱼游戏岛屿</a><div class="tree-sec">D · 开发者成功</div><a class="tree-link" href="18-using-creator-portal-in-fortnite-creative.html">18. 使用创作者门户</a><a class="tree-link" href="19-island-moderation-and-guidelines-in-fortnite-creative.html">19. 岛屿审核与准则</a><div class="tree-sec">E · 协作</div><a class="tree-link" href="20-creating-teams-in-creator-portal-in-unreal-editor-for-fortnite.html">20. 在创作者门户创建团队</a><a class="tree-link" href="21-adding-playtesters-in-fortnite-creative.html">21. 添加试玩测试员</a><a class="tree-link" href="22-playtesting-your-island-in-unreal-editor-for-fortnite.html">22. 试玩测试你的岛屿</a><a class="tree-link" href="23-collaborating-in-unreal-editor-for-fortnite.html">23. 在 UEFN 中协作</a><a class="tree-link" href="24-lore-version-control-in-unreal-editor-for-fortnite.html">24. Lore 版本控制</a><a class="tree-link" href="25-conflicts-in-lore-version-control-in-unreal-editor-for-fortnite.html">25. Lore 中的冲突</a><a class="tree-link" href="26-version-history-and-conflict-resolution-in-unreal-editor-for-fortnite.html">26. 分支历史与冲突解决</a><div class="tree-sec">F · 游戏示例</div><a class="tree-link" href="27-build-a-game-in-unreal-editor-for-fortnite.html">27. 构建一款游戏</a><a class="tree-link" href="28-unreal-editor-for-fortnite-starter-templates.html">28. UEFN 新手模板</a><div class="tree-sec">G · Verse</div><a class="tree-link" href="29-learn-the-basics-of-writing-code-in-verse.html">29. 从零学习 Verse 代码基础</a><div class="tree-sec">H · 专注领域</div><a class="tree-link" href="30-lighting-in-unreal-editor-for-fortnite.html">30. 灯光</a><a class="tree-link" href="31-animation-and-cinematics-in-unreal-editor-for-fortnite.html">31. 动画与过场动画</a><a class="tree-link" href="32-modeling-in-unreal-editor-for-fortnite.html">32. 建模</a><a class="tree-link" href="33-materials-in-unreal-editor-for-fortnite.html">33. 材质</a><a class="tree-link" href="34-environments-and-landscapes-in-unreal-editor-for-fortnite.html">34. 环境与地形</a><a class="tree-link" href="35-audio-in-unreal-editor-for-fortnite.html">35. 音频</a><a class="tree-link" href="36-visual-effects-in-unreal-editor-for-fortnite.html">36. 视觉特效</a>
+</ul></nav></div></aside>
+<div class="page-content"><div class="page-document has-theme-bg">
+<header class="section-page-header"><nav><ol class="breadcrumb is-shrinkable"><li class="breadcrumb-item is-root"><img src="../assets/logo-epic.svg" alt="Epic Games"><a href="../index.html">Developer</a></li><li class="breadcrumb-item"><a href="../index.html">Fortnite 文档</a></li><li class="breadcrumb-item"><a href="16-teenage-mutant-ninja-turtle-islands-in-unreal-editor-for-fortnite.html">忍者神龟岛屿</a></li><li class="breadcrumb-item active" aria-current="page"><span class="text-truncate">TMNT 城市起始模板视觉风格（UEFN）</span></li></ol></nav><h1>TMNT 城市起始模板视觉风格（UEFN）</h1><p class="text-secondary mb-0">城市起始模板（City Starter）展示了在 Fortnite 虚幻编辑器中设计城市外观的流程与技巧：从概念设计、资产布局，到卡通与漫画两种后期风格、自定义程序化天空盒、灯光与窗户，一步步打造忍者神龟的纽约城。</p><p class="doc-meta">英文原标题：TMNT City Starter Visual Styles in Unreal Editor for Fortnite · <a href="https://dev.epicgames.com/documentation/fortnite/tmnt-city-starter-visual-styles-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">查看英文原文</a> · 社区翻译镜像，仅供学习</p></header>
+<div class="doc-columns"><article class="doc-article">
+
+<p><strong>城市起始（City Starter）</strong>模板展示了在 Fortnite 虚幻编辑器（UEFN）中设计城市外观可用的流程与技巧。</p>
+<p>这座岛屿还原了纽约城的一角，经过灯光与风格化处理，让忍者神龟（Teenage Mutant Ninja Turtles，TMNT）仿佛回到了家！试玩该模板，可以从低处和高处两种视角体验这座城市。</p>
+<p>本指南回顾了团队构思并搭建该模板视觉效果的步骤，涵盖以下方面：</p>
+<ul>
+<li>从概念出发设计视觉效果</li>
+<li>资产布局方法</li>
+<li>后期处理技巧</li>
+<li>更多风格化技巧：自定义天空盒、灯光与窗户</li>
+<li>扩展体验的思路</li>
+</ul>
+<p>欢迎查看后期处理、天空盒与自定义灯光，学习如何打造出色的风格化视觉效果。</p>
+<p>这不是一篇玩法教程。该关卡中没有放置屏障（Barrier）。在用这些资产搭建自己的体验时，你可以自行添加，例如使用<a href="https://dev.epicgames.com/documentation/en-us/fortnite-creative/using-barrier-devices-in-fortnite-creative" target="_blank" rel="noopener">屏障设备（Barrier device）</a>。要学习如何搭建街机游戏模式（包括横版卷轴相机与自定义用户界面 UI），请参阅<a href="tmnt-arcade-template-in-unreal-editor-for-fortnite.html">TMNT 街机模板（TMNT Arcade Template）</a>。</p>
+<p>按以下步骤获取该模板：</p>
+<ul>
+<li>打开 UEFN。</li>
+<li>前往<strong>品牌模板（Brand Templates）&gt; 城市起始（City Starter）</strong>。</li>
+<li>新建项目。</li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/8e702f27-29dc-402a-97a2-40b954973cd6?resizing_type=fit" alt="城市起始模板原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/8e702f27-29dc-402a-97a2-40b954973cd6?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+
+<h2 id="sec-1">视觉风格</h2>
+<p>城市起始模板有两种突出的美学风格：<strong>卡通（cartoon）</strong>与<strong>漫画（comic）</strong>。这两种视觉风格专为 TMNT 玩法与主题设计。这两种风格在 UEFN 模板中通过后期处理体（post-process volumes）提供，在创作模式岛屿中则可通过<a href="https://dev.epicgames.com/documentation/fortnite/using-post-processing-devices-in-fortnite-creative" target="_blank" rel="noopener">后期处理设备（Post-Processing device）</a>使用。这些风格并非 TMNT 开发者工具独占，欢迎把模板中的技巧用在自己的岛屿定制中，或以该模板为基础继续搭建。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/01fcfcf6-c6fb-4a29-989b-2880772c98c9?resizing_type=fit" alt="卡通风格滤镜原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/01fcfcf6-c6fb-4a29-989b-2880772c98c9?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/5607195c-d515-4f14-ac1a-f4d8831f30ae?resizing_type=fit" alt="漫画风格滤镜原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/5607195c-d515-4f14-ac1a-f4d8831f30ae?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>卡通风格滤镜（Cartoon Style Filter）</p>
+<p>漫画风格滤镜（Comic Style Filter）</p>
+<p>这些风格是在研究了从卡通到三维动画等各类 TMNT 作品后精挑细选出来的。团队与派拉蒙（Paramount）合作，确立了能代表 TMNT 世界的标志性元素。从概念美术与其他参考资料中，团队提炼了赛璐璐着色（cel shading）、明月高悬的屋顶场景、配色方案等元素。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/94f8506e-35a4-431c-8af5-c8f92f8601e1?resizing_type=fit" alt="概念参考图原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/94f8506e-35a4-431c-8af5-c8f92f8601e1?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p><em>概念参考图（Concept References）</em></p>
+<p>美学本身就是一种游戏设计元素，需要与体验的机制和叙事相契合。这些美学涵盖色彩、灯光、资产与场景布局，帮助玩家感受到体验的氛围。</p>
+<h3>切换风格</h3>
+<p>在编辑器中，你可以用<strong>大纲视图（Outliner）</strong>在两种风格之间切换。在大纲视图中搜索“postproccess”，即可看到 <strong>PostProcessVolume_Cartoon</strong> 与 <strong>PostProcessVolume_Comic</strong> 两个体。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/3e5395b7-a6b3-4e05-aeb0-df5f56bb5379?resizing_type=fit" alt="下水道巢穴风格切换器原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/3e5395b7-a6b3-4e05-aeb0-df5f56bb5379?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p><em>下水道巢穴中的风格切换器。</em></p>
+<p>默认启用的是卡通风格。要启用漫画风格，请按以下步骤操作：</p>
+<ul>
+<li>在大纲视图中，把 <strong>PostProcessVolume_Cartoon</strong> 的眼睛图标切换为关闭。</li>
+<li>选中 <strong>PostProcessVolume_Comic</strong>，在细节面板中搜索“blendweight”。</li>
+<li>把<strong>混合权重（Blend Weight）</strong>设为 1。</li>
+</ul>
+<p>运行模板前，记得撤销上述修改。</p>
+<p>在模板玩法中，你可以在下水道巢穴里通过墙上的开关设备选择视觉模式。切换风格，然后到街道和屋顶逛逛，看看构成这座城市的 TMNT 资产。可以把该模板作为基础，打造自己的 TMNT 体验，也可以把其中的视觉技巧抽出来用到其他项目。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/b5de5d2c-1bac-4569-b147-2bf12d4c954b?resizing_type=fit" alt="风格切换效果对比原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/b5de5d2c-1bac-4569-b147-2bf12d4c954b?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>要了解如何进一步调整这些风格，请参阅本页的<a href="#sec-3">后期处理技巧（Post-Process Techniques）</a>一节。</p>
+
+<h2 id="sec-2">关卡设计</h2>
+<p>卡通与漫画滤镜都是抢眼的视觉风格，但真正把模板串起来的，是这座城市。美术师们精心布置资产，打造出一座原汁原味的 TMNT 之城。TMNT 资产与 Fortnite 资产层层叠加，让城市更有层次。用资产排布定义空间、指引玩家行进路线的做法，就叫<strong>关卡设计（level design）</strong>。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/2ecb144b-c2a5-4e49-bfa8-622142e22143?resizing_type=fit" alt="TMNT 城市剪影天际线原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/2ecb144b-c2a5-4e49-bfa8-622142e22143?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p><em>TMNT 之城，背景中的剪影天际线增加了纵深感，将玩家环抱其中。</em></p>
+<h3>以城市为中心</h3>
+<p>模板的各项选择都围绕“定义这座城市”展开。虽然模板不是完整的游戏示例，但为了帮助设计布局，模板采用了<a href="https://dev.epicgames.com/documentation/en-us/fortnite-creative/fortnite-creative-glossary#platformer" target="_blank" rel="noopener">平台跳跃（platformer）</a>主题。这一游戏类型有助于界定可玩空间。在可玩空间内，美术师放置了独特而精细的资产，以 TMNT 资产为主，并希望玩家能走进去细细探索。</p>
+<p>这些资产都服务于主题。谈风格离不开资产：它们既能成就体验的视觉效果，也能毁掉它。资产在关卡中的排布、玩家穿行场景的方式，同样举足轻重。模板还用了海报、霓虹灯、涂鸦、小道具等额外资产，为世界注入个性，进一步确立主题。完整资产列表请参阅<a href="working-with-tmnt-islands-in-fortnite.html">使用 TMNT 岛屿（Working with TMNT Islands）</a>。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/1ac379b9-30f9-428a-84a8-1c7aa75075e0?resizing_type=fit" alt="漫画风格下 6 频道资产原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/1ac379b9-30f9-428a-84a8-1c7aa75075e0?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p><em>漫画风格模式下的 6 频道（Channel 6）资产。</em></p>
+<p>可玩空间确定后，团队就知道该如何搭建地图其余部分来填满空间了。</p>
+<p>地图由前景、中景、背景构成。离中心越远，建筑和窗户就越简化。天际线充当地图的背景幕，把玩家围在城市之中。而下水道巢穴里放的都是高度精细的资产，因为那里就是要让玩家把每个角落都逛遍。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/7694cab8-580d-4473-bd2f-8591a035db24?resizing_type=fit" alt="城市关卡资产布局原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/7694cab8-580d-4473-bd2f-8591a035db24?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/e890e6a1-acb0-4978-8581-5087cf000268?resizing_type=fit" alt="下水道巢穴资产布局原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/e890e6a1-acb0-4978-8581-5087cf000268?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>城市关卡资产布局（City Level Asset Layout）</p>
+<p>下水道巢穴资产布局（Sewer Lair Asset Layout）</p>
+<p>最后，再用月亮、窗户、灯光、视觉滤镜等点睛元素，抓住城市夜生活的感觉。</p>
+
+<h2 id="sec-3">后期处理技巧</h2>
+<p>城市感之所以强烈，靠的是打造视觉风格的种种技巧，其中最突出的是后期处理体。</p>
+<p>后期处理（Post-processing）是一种视觉叠加层，可以整体或局部影响岛屿的美学。每个滤镜都调整了标准后期设置，并叠加了驱动外观的自定义材质。要了解后期处理及其标准设置，请参阅<a href="https://dev.epicgames.com/documentation/fortnite/intro-to-postprocessing-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">后期处理入门（Intro to Post-Processing）</a>。</p>
+<h3>卡通后期滤镜</h3>
+<h3>深度雾</h3>
+<p>模板通过材质实现了自定义大气雾效。雾为场景增添色彩，也为城市营造纵深。你可以用材质设置，从艺术角度控制建筑剪影与场景色彩。</p>
+<p>要了解可调控件，请参阅本页的<a href="#sec-3">自定义雾材质（Custom Fog Material）</a>一节。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/17329174-9add-4081-a955-3892323ac0c2?resizing_type=fit" alt="前景中的城市天际线原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/17329174-9add-4081-a955-3892323ac0c2?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/6c3a0805-a697-4495-84e5-9a5a5250981a?resizing_type=fit" alt="被推远的城市天际线原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/6c3a0805-a697-4495-84e5-9a5a5250981a?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>前景中的城市天际线（City Skyline in Foreground）</p>
+<p>被推远的城市天际线（City Skyline Pushed Back）</p>
+<h3>赛璐璐着色器</h3>
+<p>赛璐璐着色器（cel shader）材质会压平光照，并引入轻微的色调分离（posterization）与阈值，让场景看起来更卡通。</p>
+<p>在模板中，该效果只遮罩在前景，以免远景看起来生硬。参考的卡通和动画往往背景更柔和、像手绘的一样，加遮罩就是为了贴近这种观感。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/e722b6da-561c-43f5-bb10-8606fb28d8a9?resizing_type=fit" alt="赛璐璐着色器数值为 0 原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/e722b6da-561c-43f5-bb10-8606fb28d8a9?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/dc8ef359-3d34-4fe5-9ab9-51f4b76a4147?resizing_type=fit" alt="赛璐璐着色器数值为 1 原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/dc8ef359-3d34-4fe5-9ab9-51f4b76a4147?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>Cel Shader Value 0（赛璐璐着色器数值为 0）</p>
+<p>Cel Shader Value 1（赛璐璐着色器数值为 1）</p>
+<h3>描边</h3>
+<p>描边（Outlines）进一步风格化场景，强化卡通感。材质支持按深度控制线宽、颜色与不透明度。美术师借此加粗了前景线条，并为远去的建筑配上协调的描边。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/91e8af07-1446-46b2-bf42-40e214b0ce6c?resizing_type=fit&width=1920&height=1080" alt="描边数值为 0 原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/91e8af07-1446-46b2-bf42-40e214b0ce6c?resizing_type=fit&width=1920&height=1080" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/91c34d92-595c-419c-aa5f-d0c9fea6b55f?resizing_type=fit&width=1920&height=1080" alt="描边数值为 1 原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/91c34d92-595c-419c-aa5f-d0c9fea6b55f?resizing_type=fit&width=1920&height=1080" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>Outline Value 0（描边数值为 0）</p>
+<p>Outline Value 1（描边数值为 1）</p>
+<h3>漫画后期滤镜</h3>
+<p>漫画（黑色电影，Comic Noir）滤镜用了部分标准后期设置，以及与卡通滤镜类似的赛璐璐着色器与描边材质。描边材质经过调整，以配合灰阶影调。滤镜独有的自定义材质包括色调分离、漫画影调与画框，最终呈现出漫画 / 图像小说般强烈的平面风格。</p>
+<h3>漫画影调与画框</h3>
+<p>漫画影调（comic tone）材质会去色并应用亮度阈值，营造印刷品般的影调层次，再叠加画框（frame）材质收尾。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/969eaa0f-43a3-4b5b-8ad6-39501c4f924c?resizing_type=fit" alt="漫画影调与画框数值为 0 原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/969eaa0f-43a3-4b5b-8ad6-39501c4f924c?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/cb9bd1cf-5c69-4456-b4a4-8d69f71e97ac?resizing_type=fit" alt="漫画影调与画框数值为 1 原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/cb9bd1cf-5c69-4456-b4a4-8d69f71e97ac?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>Comic Tone and Frame Value 0（漫画影调与画框数值为 0）</p>
+<p>Comic Tone and Frame Value 1（漫画影调与画框数值为 1）</p>
+<h3>色调分离</h3>
+<p>为了让漫画效果更逼真，图像被色调分离：纯灰色带按深浅转成不同大小的圆点。影调越暗圆点越大，直到连成纯黑，再按所需强度合并回灰阶图像。该材质只用了 25% 的强度，以减轻游玩时的视觉疲劳。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/b92e7a48-d166-4436-8d1f-ce841acec24c?resizing_type=fit" alt="色调分离数值为 0 原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/b92e7a48-d166-4436-8d1f-ce841acec24c?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/3b5fc51d-4242-472d-9e4d-95d0a8260eb5?resizing_type=fit" alt="色调分离数值为 1 原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/3b5fc51d-4242-472d-9e4d-95d0a8260eb5?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>Posterization Value 0（色调分离数值为 0）</p>
+<p>Posterization Value 1（色调分离数值为 1）</p>
+<h3>编辑后期材质</h3>
+<p>材质驱动着两种风格模式下的后期效果。你可以查看每种材质的构成并调整，以适配自己的项目，也可以直接在后期处理体中替换材质，快速改变风格。</p>
+<p>查看每个后期处理体的自定义材质：</p>
+<ul>
+<li>在<strong>大纲视图（Outliner）</strong>中点击该后期处理体。</li>
+<li>前往<strong>细节面板 &gt; 渲染特性（Rendering Features）&gt; 后期处理材质（Post Process Materials）&gt; 数组（Array）</strong>。</li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/a87d1f3a-efc6-4990-b72f-f047727316f7?resizing_type=fit" alt="卡通后期材质原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/a87d1f3a-efc6-4990-b72f-f047727316f7?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/4dd6feac-6bd3-4bc0-9bac-2930685bef7e?resizing_type=fit" alt="漫画后期材质原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/4dd6feac-6bd3-4bc0-9bac-2930685bef7e?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>卡通后期材质（Cartoon Post Process Materials）</p>
+<p>漫画后期材质（Comic Post Process Materials）</p>
+<p>你可以把每个数组值在 0 到 1 之间调节，观察每种材质的效果。要打开某种材质的位置，点击文件夹图标，再点击想查看的材质，即可打开材质编辑器。材质编辑器中，部分美术向设置在细节面板里，也有的参数在材质图表（Material Graph）中。所谓美术友好型设置，就是把材质图表中的参数暴露为公开变量。要了解材质（含编辑器、函数、表达式），请参阅<a href="https://dev.epicgames.com/documentation/fortnite/material-nodes-and-settings-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">材质节点与设置（Material Nodes and Settings）</a>。</p>
+<h3>自定义雾材质</h3>
+<p>深度雾材质的参数就是材质中美术向设置的一个例子。雾的颜色值由曲线渐变（curve ramps）驱动，可以沿场景深度精确调节雾值，比编辑器内置的大气雾系统更利于打造风格化外观。</p>
+<p><em>深度雾材质的控件。</em></p>
+<p>该材质包含以下核心参数，方便美术师快速调整。在材质的细节面板中可以改这些值，也可以进材质图表调整默认值。</p>
+<table><thead><tr><th>雾参数</th><th>说明</th></tr></thead><tbody>
+<tr><td>Curve Far and Near Point（曲线远近点）</td><td>设置曲线资产渐变映射到的近 / 远距离。渐变左侧颜色对应近点，右侧对应远点。</td></tr>
+<tr><td>Curve Input（曲线输入）</td><td>提供颜色曲线，用于调整雾的渐变色。双击图标打开曲线。要了解更多信息，请参阅虚幻引擎文档<a href="https://dev.epicgames.com/documentation/en-us/unreal-engine/curve-atlases-in-unreal-engine-materials" target="_blank" rel="noopener">材质中的曲线图集（Curve Atlases in Materials）</a>。</td></tr>
+<tr><td>Global Amount（全局强度）</td><td>设置雾渐变的可见百分比。</td></tr>
+<tr><td>Range Cutoff（范围截止）</td><td>设置场景深度的阈值。可用范围值控制雾是否作用于天空盒。</td></tr>
+</tbody></table>
+<p>雾材质展示了如何打开每种材质做调整，其余材质同理。要练习新建后期材质、了解材质图表，请参阅<a href="https://dev.epicgames.com/documentation/fortnite/intro-to-postprocessing-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">使用后期材质（Using a Post Process Material）</a>。</p>
+
+<h2 id="sec-4">更多视觉技巧</h2>
+<p>本节介绍配合灯光与窗户进一步烘托氛围、强化风格的技巧。</p>
+<h3>调整程序化天空盒</h3>
+<p>另一个基于材质的技巧是天空盒，它独立于后期处理体。两种滤镜共用自定义程序化天空盒来营造风格化氛围。材质贴在一颗包住整张地图的静态网格球体上，材质的细节面板暴露了美术友好型参数，可快速调整。</p>
+<p>可从以下位置打开天空盒工具：</p>
+<ul>
+<li><strong>大纲视图（Outliner）&gt; SkySphere &gt; MI_ProceduralSkybox</strong></li>
+<li><strong>内容抽屉（Content Drawer）&gt; 项目名称 &gt; Materials &gt; MI_ProceduralSkybox</strong></li>
+</ul>
+<p>双击材质打开材质编辑器。<strong>参数组（Parameter Groups）</strong>分类下是调整天空风格的设置（见下表），其中 <strong>Global Static Switch Parameter Values（全局静态开关参数值）</strong>可切换地平线与月亮的锐利度。</p>
+<p><em>天空盒材质的控件。</em></p>
+<table><thead><tr><th>天空盒参数</th><th>说明</th><th>示例</th></tr></thead><tbody>
+<tr><td>Global Scalar Parameter Values（全局标量参数值）</td><td>调整月亮与大气属性。为美术师提供了把月亮打造成视觉中心的手段，正好呼应“神龟们在月下掠过楼顶剪影”的概念。</td><td><figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/5a62a439-ecfb-4506-899a-a2d30de4706f?resizing_type=fit" alt="月亮标量参数原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/5a62a439-ecfb-4506-899a-a2d30de4706f?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></td></tr>
+<tr><td>Global Vector Parameter Values（全局向量参数值）</td><td>调整天空属性的颜色。自定义天空盒对天空渐变色与混合偏移有更强的控制。这种颜色控制对改善摩天楼前的天际线影调至关重要，微调即可超越真实感、贴合风格化色板。</td><td><figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/d1f22082-b2f4-44db-b680-251d7b210d73?resizing_type=fit" alt="天空颜色参数原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/d1f22082-b2f4-44db-b680-251d7b210d73?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></td></tr>
+<tr><td>Stars（星星）</td><td>调整星星的变换、颜色、平铺与亮度。</td><td><figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/6b06a2dc-16f8-4f17-9f6d-8fb76730aab3?resizing_type=fit" alt="星星参数原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/6b06a2dc-16f8-4f17-9f6d-8fb76730aab3?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></td></tr>
+<tr><td>Clouds（云）</td><td>调整云的纹理贴图、云量、边缘柔和度、亮暗部颜色、轮廓光、不透明度与飘动方向。美术师借此调出更有动感、更有看点的天空。自定义天空加灯光方案确定后，记得在<strong>世界设置（World Settings）</strong>中关闭<strong>昼夜管理器（World Time of Day Manager）</strong>。</td><td></td></tr>
+</tbody></table>
+<p>你还可以在材质图表中深入研究该材质。在材质编辑器工具栏点击<strong>层级（Hierarchy）&gt; M_ProceduralSkybox</strong> 即可打开图表，节点按注释框分组，标明各自影响的参数，可自行调整节点、重定义参数。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/21ce11db-46b3-4912-89ce-5ae03ce669c5?resizing_type=fit" alt="程序化天空盒材质图表原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/21ce11db-46b3-4912-89ce-5ae03ce669c5?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p><em>程序化天空盒的材质图表（Material Graph）。</em></p>
+<h3>自定义灯光</h3>
+<p>模板的灯光与后期处理体联动，以保证美学统一。灯光负责定基调、给玩家指路，也参与定义后期滤镜的属性。先布通用灯照亮城市，再加重点灯突出建筑与道具。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/7ce7dd59-e8b1-466f-a7d5-4c2a4b2f7083?resizing_type=fit" alt="自定义灯光原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/7ce7dd59-e8b1-466f-a7d5-4c2a4b2f7083?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h3>氛围灯光</h3>
+<p>氛围灯光（Mood lighting）指为定下特定感受而精确布设的灯光。</p>
+<p>在概念阶段，美术师会翻阅参考素材（常称情绪板 mood boards）来确立情绪与灯光方向。真人电影、动画、舞台剧也都用这一套流程。</p>
+<p>场景中的氛围灯大多由以下光源构成：</p>
+<ul>
+<li><strong>天光（Skylight）：</strong>驱动场景环境色，控制阴影中最暗的照明。</li>
+<li><strong>方向光（Directional light）：</strong>控制月亮位置与月光照明。</li>
+<li><strong>点光源（Point lights）：</strong>在略显平淡的区域点缀卡通色彩（已关闭高光 Specular，避免这些灯产生亮斑）。</li>
+<li>挂在 Actor 上的灯光组件。</li>
+<li>自发光材质。</li>
+</ul>
+<p>氛围灯还有助于项目优化时保住视觉品质：风格化的灯光与资产在低端设备上依然好看。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/53a6e1dc-424e-40fa-8ac9-1dc0670f3d49?resizing_type=fit" alt="经典 Fortnite BR 风格原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/53a6e1dc-424e-40fa-8ac9-1dc0670f3d49?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/5d3f77e3-6b66-4140-9ef1-744a6e8df1f7?resizing_type=fit" alt="卡通风格原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/5d3f77e3-6b66-4140-9ef1-744a6e8df1f7?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/cfcee3d6-7a23-4359-bb9c-9dfc5e35047f?resizing_type=fit" alt="漫画风格原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/cfcee3d6-7a23-4359-bb9c-9dfc5e35047f?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>经典 Fortnite BR 风格（Classic Fortnite BR Style）</p>
+<p>卡通风格（Cartoon Style）</p>
+<p>漫画风格（Comic Style）</p>
+<p>要了解更多艺术向布光实践，请参阅<a href="https://dev.epicgames.com/documentation/fortnite/making-cinematics-2-lighting-and-color-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">灯光与色彩（Lighting and Color）</a>。</p>
+<h3>窗户</h3>
+<p>离市中心越远，场景中的窗户就越简化。如关卡设计所述，简化能增加纵深、帮助优化。窗户还用材质发光，进一步支撑风格化观感。下表介绍了窗户的各种技巧。</p>
+<p>一个<a href="https://dev.epicgames.com/documentation/fortnite/using-day-sequence-devices-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">昼夜序列设备（Day Sequence device）</a>用于把背景建筑上基于材质的灯关掉。</p>
+<p>在这个例子里，那些材质灯的颜色和样式与城市美学不搭，于是决定关掉它们，改用自定义窗户灯。</p>
+<table><thead><tr><th>技巧</th><th>说明</th><th>示例</th></tr></thead><tbody>
+<tr><td>Interior Cubemap（室内立方体贴图）</td><td>用材质营造 3D 空间的观感。用于填充玩家不会进入、但路过时能看到的建筑。可从<strong>内容抽屉 &gt; 项目名称 &gt; Materials &gt; M_Windows_Interior</strong> 获取该材质。</td><td><figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/e75c8b1c-8f87-4d17-bb49-643cb1305595?resizing_type=fit" alt="室内立方体贴图窗户原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/e75c8b1c-8f87-4d17-bb49-643cb1305595?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></td></tr>
+<tr><td>Window Mask（窗户遮罩）</td><td>随机化窗户位置，给背景建筑更多变化。可从<strong>内容抽屉 &gt; 项目名称 &gt; Materials &gt; M_WindowMask</strong> 获取该材质。</td><td><figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/a38cb03d-84e5-48c3-8d6d-c10d0ec4ca79?resizing_type=fit" alt="窗户遮罩原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/a38cb03d-84e5-48c3-8d6d-c10d0ec4ca79?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></td></tr>
+<tr><td>Random Value from World Position（按世界位置取随机值）</td><td>房间亮与不亮的外观由窗户在世界中的位置决定。每种窗户材质都按世界位置偏移调制材质颜色，偏移产生随机亮度因子，让城市活起来。这种做法减少了独特材质与内存占用。</td><td></td></tr>
+<tr><td>Cartoon Sheen Material（卡通高光材质）</td><td>在窗户上加斜线，模仿风格化的高光效果。<strong>内容抽屉 &gt; 项目名称 &gt; Materials &gt; M_Windows_Channel6</strong>。</td><td><figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/4d841253-bfde-4f94-a43e-eba38ace0139?resizing_type=fit" alt="卡通高光窗户原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/4d841253-bfde-4f94-a43e-eba38ace0139?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></td></tr>
+</tbody></table>
+
+<h2 id="sec-5">扩展体验</h2>
+<p>学完打造模板核心美学的思路与技巧，就可以着手把它升级成你自己的 TMNT 体验了！</p>
+<p>通关模板，在两种风格间切换，想想哪种玩法元素和叙事适合这种滤镜和城市。</p>
+<p>以下思路供你起步：</p>
+<ul>
+<li>以平台跳跃为底子，沿途加入敌人遭遇战。要学习如何添加遭遇战，请参阅<a href="tmnt-arcade-template-in-unreal-editor-for-fortnite.html">TMNT 街机模板</a>中的 <a href="tmnt-arcade-template-in-unreal-editor-for-fortnite.html">TMNT 敌人遭遇战与障碍（TMNT Enemy Encounters and Obstacles）</a>一节。</li>
+<li>用新闻编辑室资产搭配漫画风格做叙事过场。要了解更多信息，请参阅<a href="https://dev.epicgames.com/documentation/fortnite/making-cinematics-and-cutscenes-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">制作过场动画与片头（Making Cinematics and Cutscenes）</a>。</li>
+<li>用 Sequencer 播出的漫画星爆材质做对话框，增强效果。要了解更多信息，请参阅<a href="gameplay-events-in-sequencer-in-unreal-editor-for-fortnite.html">Sequencer 中的玩法事件（Gameplay Events in Sequencer）</a>。</li>
+</ul>
+<h3>打造晴天风格</h3>
+<p>无论是基于模板继续搭建，还是把资产抽到其他项目，都先从概念出发：什么样的叙事和玩法配得上这座城市和 TMNT 资产？想定什么基调、灯光该什么样？玩家会去地图的哪些部分？</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/ec8c551e-71b6-4610-9a52-7f9cbe1c53cf?resizing_type=fit" alt="晴天风格概念参考原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/ec8c551e-71b6-4610-9a52-7f9cbe1c53cf?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p><em>晴天风格地图的概念参考：屋顶上的 NPC 遭遇战。</em></p>
+<p>有了后期处理体和更多视觉技巧，就可以把晴天城市的概念变成现实。</p>
+<h3>天空盒调整</h3>
+<p>先用程序化天空盒提亮氛围。按以下步骤调出蓝天：</p>
+<ul>
+<li>在<strong>内容抽屉</strong>中搜索 <strong>MI_ProceduralSkybox</strong>，双击打开材质编辑器。</li>
+<li>在细节面板中调整以下值：
+<ul>
+<li><strong>Cloud Dark and Light（云暗部与亮部）：</strong>RGB 1.0、1.0、1.0</li>
+<li><strong>Horizon Colour（地平线颜色）：</strong>RGB 0.0619、0.970、1.0</li>
+<li><strong>Colour Top（顶部颜色）：</strong>RGB 0.038、0.119、0.838</li>
+<li><strong>Star Brightness（星星亮度）：</strong>0（关闭星星）</li>
+<li><strong>Moon Brightness（月亮亮度）：</strong>9.5（模拟太阳）</li>
+</ul></li>
+</ul>
+<p>不想调月亮亮度的话，也可以在材质图表中把月亮纹理换成自己的太阳贴图。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/bc1940c1-3f9d-4538-accb-5bcf74f5de6d?resizing_type=fit" alt="晴天天空盒调整原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/bc1940c1-3f9d-4538-accb-5bcf74f5de6d?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h3>灯光调整</h3>
+<p>天蓝了，太阳的位置和光照方向也要跟上。按以下步骤调整太阳位置与光照方向：</p>
+<ul>
+<li>在<strong>大纲视图</strong>中搜索并选中 <strong>DirectionalLight_Index1</strong>。</li>
+<li>向左旋转灯光，抬高位置。</li>
+<li>在<strong>细节</strong>面板中，把光照强度提高到 6。</li>
+</ul>
+<p>接下来关掉中景和前景的窗户灯，按以下步骤操作：</p>
+<ul>
+<li>点击一扇中景窗户。</li>
+<li>在菜单栏点击<strong>选择（Select）&gt; 选择所有同材质（Select All With Same Material）</strong>。</li>
+<li>删除这组窗户。</li>
+<li>对前景窗户重复上述步骤。</li>
+</ul>
+<p>不需要的窗户及时删掉，有助于优化场景。</p>
+<h3>雾效调整</h3>
+<p>晴天模式以 <strong>PostProcessVolume_Cartoon</strong> 为底。按以下步骤调整雾的深浅与颜色：</p>
+<ul>
+<li>在内容抽屉中搜索 <strong>PP_DepthFog_Inst</strong>，双击材质打开材质编辑器。</li>
+<li>在细节面板中双击<strong>曲线输入（Curve Input）</strong>颜色曲线。</li>
+<li>调整顶部颜色关键帧：
+<ul>
+<li>最右颜色关键帧：RGB 0.022、0.979、0.629</li>
+<li>中间颜色关键帧：RGB 0.0、0.140、0.307</li>
+<li>最左颜色关键帧：RGB 0.208、0.059、0.117</li>
+</ul></li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/af64186b-f9f5-4739-9170-7f3bb5504941?resizing_type=fit" alt="雾效颜色曲线调整原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/af64186b-f9f5-4739-9170-7f3bb5504941?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>在 <strong>PP_DepthFog_Inst</strong> 的<strong>细节</strong>面板中，用以下值调整颜色渐变的深度：</p>
+<ul>
+<li><strong>Curve Far Point（曲线远点）：</strong>93511</li>
+<li><strong>Curve Near Point（曲线近点）：</strong>14887</li>
+</ul>
+<h3>色调分离调整</h3>
+<p>最后加上色调分离，做出类似漫画黑白模式的圆点效果。</p>
+<ul>
+<li>在细节面板的后期材质下，点击加号新增一个材质数组元素。</li>
+<li>在新数组的下拉菜单中选择<strong>资产引用（Asset reference）</strong>，搜索并选中 <strong>PP_Posterize</strong>。</li>
+<li>要调强度，找到该材质双击打开材质编辑器。</li>
+<li>在参数面板中，把 <strong>Posterize Amount（分离强度）</strong>设为 0.05。</li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/07d83040-c79d-45b9-8e20-80ceb75abfe9?resizing_type=fit" alt="色调分离调整原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/07d83040-c79d-45b9-8e20-80ceb75abfe9?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>调调材质和灯光，城市就从沉睡中醒来，迎来蓝天！现在赶紧带神龟们回巢穴吧。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/21729529-405f-4928-8e8c-04d6214ad2d1?resizing_type=fit" alt="晴天风格成品城市原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/21729529-405f-4928-8e8c-04d6214ad2d1?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+
+<h2 id="sec-6">相关文档</h2>
+<ul>
+<li><a href="https://dev.epicgames.com/documentation/fortnite/accessing-brand-content-in-fortnite" target="_blank" rel="noopener">访问品牌内容（Accessing Brand Content）</a></li>
+<li><a href="working-with-tmnt-islands-in-fortnite.html">使用 TMNT 岛屿（Working with TMNT Islands）</a></li>
+<li><a href="34-environments-and-landscapes-in-unreal-editor-for-fortnite.html">环境与地形（Environments and Landscapes）</a></li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/6db0387a-4e88-46f4-9550-cd18b8c64b28?resizing_type=fit&width=160&height=92" alt="访问品牌内容示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/6db0387a-4e88-46f4-9550-cd18b8c64b28?resizing_type=fit&width=160&height=92" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/b51c940d-85b4-4b1a-bddd-60aa7a2d04f0?resizing_type=fit&width=160&height=92" alt="使用 TMNT 岛屿示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/b51c940d-85b4-4b1a-bddd-60aa7a2d04f0?resizing_type=fit&width=160&height=92" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/7b6bad74-ab05-4116-beaf-adb873552226?resizing_type=fit&width=160&height=92" alt="环境与地形示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/7b6bad74-ab05-4116-beaf-adb873552226?resizing_type=fit&width=160&height=92" target="_blank" rel="noopener">查看原图</a></div></figure>
+
+<div class="pager"><a href="16-teenage-mutant-ninja-turtle-islands-in-unreal-editor-for-fortnite.html"><small>← 返回父教程</small>忍者神龟岛屿</a><a href="sub-index.html"><small>子教程索引 →</small>全部子教程</a></div>
+</article><nav class="doc-toc" aria-label="本页内容"><b>本页内容</b><a href="#sec-1">视觉风格</a><a href="#sec-2">关卡设计</a><a href="#sec-3">后期处理技巧</a><a href="#sec-4">更多视觉技巧</a><a href="#sec-5">扩展体验</a><a href="#sec-6">相关文档</a></nav></div>
+</div></div>
+</div>
+<footer class="edc-footer"><div class="inner"><img src="../assets/logo-epic.svg" alt="Epic Games"><span>Fortnite 文档中文镜像 · UE教程/ · 本地打开 index.html 阅读 · 翻译整理自 Epic 官方文档，仅供学习交流</span></div></footer>
+</body>
+</html>

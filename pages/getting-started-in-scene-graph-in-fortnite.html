@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Scene Graph 入门 | Fortnite 文档中文镜像</title>
+<link rel="stylesheet" href="../assets/epic.css">
+<link rel="stylesheet" href="../assets/patch.css">
+<link rel="icon" href="../assets/logo-epic.svg">
+</head>
+<body class="theme-fortnite">
+<div class="edc-topbar"><div class="edc-topbar-inner"><img class="edc-logo" src="../assets/logo-epic.svg" alt="Epic Games"><span class="edc-brand">Epic Games <b>开发者社区</b></span><span class="edc-nav"><a href="../index.html">文档首页</a><a href="sub-index.html">子教程索引</a><a href="https://dev.epicgames.com/documentation/fortnite/getting-started-in-scene-graph-in-fortnite" target="_blank" rel="noopener">英文原文</a></span></div></div>
+<div class="site-container">
+<aside class="site-nav"><div class="documents-tree"><nav><ul class="contents-table">
+<div class="tree-sec">A 最新动态</div><a class="tree-link" href="01-42-00-fortnite-ecosystem-updates-and-release-notes.html">01. 42.00 生态系统更新与发行说明</a><a class="tree-link" href="02-custom-items-and-inventory-overview-in-fortnite.html">02. 自定义物品与背包总览</a><a class="tree-link" href="03-in-island-transactions-in-fortnite.html">03. 岛内交易</a><a class="tree-link" href="04-mobile-development-in-fortnite.html">04. 移动端开发</a><a class="tree-link" href="05-inputs-in-fortnite.html">05. 输入系统</a><a class="tree-link" href="06-ability-system-in-unreal-editor-for-fortnite.html">06. 能力系统 Ability System</a><a class="tree-link" href="07-partybased-gameplay-using-the-social-synergy-api-in-fortnite.html">07. 社交协同 API 与小队玩法</a><a class="tree-link active" href="08-scene-graph-in-unreal-editor-for-fortnite.html">08. 场景图 Scene Graph</a><div class="tree-sec">B 入门</div><a class="tree-link" href="09-build-your-first-island-in-fortnite.html">09. 构建你的第一个岛屿</a><a class="tree-link" href="10-onboarding-guide-to-programming-with-verse-in-unreal-editor-for-fortnite.html">10. Verse 编程入门指南</a><a class="tree-link" href="11-building-basics-in-fortnite-creative.html">11. 建造基础</a><div class="tree-sec">C 品牌合集</div><a class="tree-link" href="12-star-wars-islands-in-fortnite.html">12. 星球大战™岛屿</a><a class="tree-link" href="13-kpop-demon-hunters-islands-in-fortnite.html">13. KPop 猎魔团岛屿</a><a class="tree-link" href="14-building-lego-islands-in-fortnite.html">14. 乐高®岛屿</a><a class="tree-link" href="15-the-walking-dead-universe-islands-in-unreal-editor-for-fortnite.html">15. 行尸走肉宇宙岛屿</a><a class="tree-link" href="16-teenage-mutant-ninja-turtle-islands-in-unreal-editor-for-fortnite.html">16. 忍者神龟岛屿</a><a class="tree-link" href="17-squid-game-islands-in-fortnite.html">17. 鱿鱼游戏岛屿</a><div class="tree-sec">D 开发者成功</div><a class="tree-link" href="18-using-creator-portal-in-fortnite-creative.html">18. 使用创作者门户</a><a class="tree-link" href="19-island-moderation-and-guidelines-in-fortnite-creative.html">19. 岛屿审核与准则</a><div class="tree-sec">E 协作</div><a class="tree-link" href="20-creating-teams-in-creator-portal-in-unreal-editor-for-fortnite.html">20. 在创作者门户创建团队</a><a class="tree-link" href="21-adding-playtesters-in-fortnite-creative.html">21. 添加试玩测试员</a><a class="tree-link" href="22-playtesting-your-island-in-unreal-editor-for-fortnite.html">22. 试玩测试你的岛屿</a><a class="tree-link" href="23-collaborating-in-unreal-editor-for-fortnite.html">23. 在 UEFN 中协作</a><a class="tree-link" href="24-lore-version-control-in-unreal-editor-for-fortnite.html">24. Lore 版本控制</a><a class="tree-link" href="25-conflicts-in-lore-version-control-in-unreal-editor-for-fortnite.html">25. Lore 中的冲突</a><a class="tree-link" href="26-version-history-and-conflict-resolution-in-unreal-editor-for-fortnite.html">26. 分支历史与冲突解决</a><div class="tree-sec">F 游戏示例</div><a class="tree-link" href="27-build-a-game-in-unreal-editor-for-fortnite.html">27. 构建一款游戏</a><a class="tree-link" href="28-unreal-editor-for-fortnite-starter-templates.html">28. UEFN 新手模板</a><div class="tree-sec">G Verse</div><a class="tree-link" href="29-learn-the-basics-of-writing-code-in-verse.html">29. 从零学习 Verse 代码基础</a><div class="tree-sec">H 专注领域</div><a class="tree-link" href="30-lighting-in-unreal-editor-for-fortnite.html">30. 灯光</a><a class="tree-link" href="31-animation-and-cinematics-in-unreal-editor-for-fortnite.html">31. 动画与过场动画</a><a class="tree-link" href="32-modeling-in-unreal-editor-for-fortnite.html">32. 建模</a><a class="tree-link" href="33-materials-in-unreal-editor-for-fortnite.html">33. 材质</a><a class="tree-link" href="34-environments-and-landscapes-in-unreal-editor-for-fortnite.html">34. 环境与地形</a><a class="tree-link" href="35-audio-in-unreal-editor-for-fortnite.html">35. 音频</a><a class="tree-link" href="36-visual-effects-in-unreal-editor-for-fortnite.html">36. 视觉特效</a>
+</ul></nav></div></aside>
+<div class="page-content"><div class="page-document has-theme-bg">
+<header class="section-page-header"><nav><ol class="breadcrumb is-shrinkable"><li class="breadcrumb-item is-root"><img src="../assets/logo-epic.svg" alt="Epic Games"><a href="../index.html">Developer</a></li><li class="breadcrumb-item"><a href="../index.html">Fortnite 文档</a></li><li class="breadcrumb-item"><a href="08-scene-graph-in-unreal-editor-for-fortnite.html">场景图 Scene Graph</a></li><li class="breadcrumb-item active" aria-current="page"><span class="text-truncate">Scene Graph 入门</span></li></ol></nav><h1>Scene Graph 入门</h1><p class="text-secondary mb-0">借助场景图（Scene Graph），只需几个简单步骤，即可从灰盒搭建过渡到完整可玩的关卡。本页介绍实体、组件、预制体与 Verse 的基础用法。</p><p class="doc-meta">英文原标题：Getting Started In Scene Graph In Fortnite · <a href="https://dev.epicgames.com/documentation/fortnite/getting-started-in-scene-graph-in-fortnite" target="_blank" rel="noopener">查看英文原文</a> · 社区翻译镜像，仅供学习</p></header>
+<div class="doc-columns"><article class="doc-article">
+<p>学习使用这一 <strong>Beta</strong> 功能，但在正式发布作品时请谨慎使用。</p>
+<p>借助场景图（Scene Graph），你只需几个简单步骤，就能从灰盒搭建和世界构建快速过渡到完整可玩的关卡。</p>
+<p>场景图（Scene Graph）是一套 Verse 原生系统，充分利用了 Verse 语言的特性。它让你能够通过交互式、定制化的对象和玩法体验，为项目添加更多自定义内容。</p>
+<p>场景图（Scene Graph）提升了项目的稳定性，因为 Verse 会在后台承担大量繁重工作，确保实体按预期运行。Verse 还能深入访问场景实体与组件的各个部分，这意味着你可以为场景增添更丰富的多样性。</p>
+<h2 id="sec-1">启用实验性 Scene Graph 功能</h2>
+<p>在 UEFN 中新建项目时，场景图（Scene Graph）默认处于启用状态。其中一些场景图（Scene Graph）功能属于实验性访问权限。要在项目中使用这些实验性场景图（Scene Graph）功能，请执行以下操作：</p>
+<ol><li>在<strong>工具栏（Toolbar）</strong>中选择<strong>项目（Project）</strong> &gt; <strong>项目设置（Project Settings）</strong>，打开“项目设置”窗口。</li></ol>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/08c29017-d8e8-4c80-ad10-ef7c21a50b10?resizing_type=fit" alt="打开项目设置窗口的示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/08c29017-d8e8-4c80-ad10-ef7c21a50b10?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ol><li>在“项目设置”窗口的 <strong>Beta 访问权限（Beta Access）</strong> 下，启用 <strong>Scene Graph 工具（Scene Graph Tools）</strong>。Scene Graph 在 Beta 版中默认启用。</li></ol>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/14a805e5-6cd8-4d61-9fc4-1fa0fe4d33d7?resizing_type=fit" alt="启用 Scene Graph Tools 的示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/14a805e5-6cd8-4d61-9fc4-1fa0fe4d33d7?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h2 id="sec-2">元宇宙中的对象</h2>
+<p>元宇宙是一种实时在线社交娱乐体验，人们在 <a href="https://dev.epicgames.com/documentation/fortnite/leftupforward-coordinate-system-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">3D 世界</a>中游玩与交流。Epic Games 正在为 UEFN 设计场景图（Scene Graph）系统，让你能够创建这类元宇宙体验。</p>
+<p>在场景图（Scene Graph）系统中，你可以实例化并复用对象，而无需使用虚幻引擎的 <a href="https://dev.epicgames.com/documentation/fortnite/fortnite-glossary#actor" target="_blank" rel="noopener">Actor（actor）</a> 分类。场景图（Scene Graph）的核心是一组构建块，它们使用数据与逻辑来构建游戏，并在任何游戏环境中渲染与模拟对象。</p>
+<p>Actor 与实体不可互换，它们是协同工作的不同系统。</p>
+<p>借助场景图（Scene Graph），你可以建立 3D 实时仿真框架，所有设计决策与结果都会即时显示在<a href="https://dev.epicgames.com/documentation/fortnite/fortnite-glossary#viewport" target="_blank" rel="noopener">视口（viewport）</a>中。这些内容可以在<a href="https://dev.epicgames.com/documentation/fortnite/fortnite-glossary#details-panel" target="_blank" rel="noopener">细节面板（Details panel）</a>或<a href="prefab-editor-user-interface-in-unreal-editor-for-fortnite.html">预制体编辑器（Prefab Editor）</a>中编辑。</p>
+<p>你可以<a href="https://dev.epicgames.com/documentation/fortnite/importing-assets-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">导入（import）</a>自己创建或从供应商处购买的资产，并将其与场景图（Scene Graph）配合使用，制作定制对象与预制体。</p>
+<p>在场景图（Scene Graph）中构建的任何内容都可以被多次复用，且占用更少内存。场景图（Scene Graph）构建系统旨在支持复杂的内容共享与共享模拟，同时在内容之间强制执行边界。</p>
+<h2 id="sec-3">实体与组件</h2>
+<p><strong>实体与组件</strong>是场景图（Scene Graph）的支柱。它们通过控制对象的定义与行为来发挥作用。</p>
+<p>实体是组件或其他实体的容器。空实体没有任何可见效果或功能。组件为实体提供数据与行为。添加到实体上的组件组合决定了该实体在场景中的作用。</p>
+<p>一个实体可以包含任意数量的不同组件。但是，一次只能向一个实体添加一个特定组件类型的组件。例如，一个实体上只能使用一种 light_component（灯光组件）。要使用同一类型的多个组件，可以创建新实体来承载该组件的每个实例。</p>
+<p>某些组件类型由 UEFN 中创建的资产生成。资产生成的组件是根据项目中已有的内容（如网格体、声音或粒子系统资产）自动创建的组件类。这些资产还可能公开可在生成的组件上修改的属性。</p>
+<p>组件具有可编辑的属性。这些属性可以是物理属性，如静态网格体和粒子系统，也可以是逻辑属性，如 Verse 标签或自定义 Verse 代码（用于定义平台的移动）。默认情况下，所有实体都有一个变换组件（Transform Component），用于指定实体在世界中的位置。</p>
+<p>使用 Verse 构造实体时，不会<a href="https://dev.epicgames.com/documentation/en-us/uefn/working-with-entities-and-components-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">自动创建变换组件（Transform Component）</a>。</p>
+<p>借助场景图（Scene Graph），你可以通过利用网格体、声音提示等物理数据，快速拼装场景装饰与游戏机制。</p>
+<p>当你向实体添加网格体组件（Mesh Component），并在该组件的网格体槽位中选定网格体时，该实体就成为静态网格体的物理表现。这意味着你可以快速搭建建筑物或单个场景装饰，并立即在场景中使用它们。</p>
+<p>例如，在下面的视频中，一个实体被变成了一簇常青树。</p>
+<p>你可以把这簇树单独做成一个预制体，也可以将其与其他实体组合，创建森林预制体。</p>
+<p>一个实体（仿真实体）位于项目的根部，代表整个仿真。当实体嵌套在仿真实体之下时，场景即被创建。向地图添加实体时，你实际上是在自动创建仿真实体的子实体。</p>
+<p>预制体的顶部实体是该预制体的根实体，其他预制体与实体嵌套在其下方。父级预制体组合其子级的外观与行为，以便与场景中的其他对象交互。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/d58b2f90-8dbb-4281-8942-02e163035d94?resizing_type=fit" alt="预制体实体层级结构的示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/d58b2f90-8dbb-4281-8942-02e163035d94?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ul><li>预制体根实体 → WoodenHouse_Tiny_Prefab</li><li>子预制体 → WoodenHouse_RoofSmall_Prefab_C_1</li><li>子实体 → Building_WIndowCircle_Bright2</li><li>子实体 → Building_WIndowCircle_Bright4</li><li>子实体 → Building_WIndowCircle_Dark2</li><li>子实体 → Building_WIndowCircle_Dark4</li><li>子实体 → WoodenHouse_Floor</li><li>子实体 → WoodenHouse_RoofCap2</li><li>子实体 → WoodenHouse_RoofCap3</li><li>子实体 → WoodenHouse_RoofWindow2</li><li>子预制体 → WoodenHouse_SmallFloor_Prefab_C_1</li><li>子实体 → WoodenHouse_Floor</li><li>子实体 → WoodenHouse_Wall10</li><li>子实体 → WoodenHouse_WallDoor_C4</li><li>子预制体 → WoodenHouse_Windows_Prefab_C_3</li><li>子实体 → Building_WindowPlane_Bright3</li><li>子实体 → Building_WindowPlane_Bright4</li><li>子实体 → Building_WindowPlane_Dark3</li><li>子实体 → Building_WindowPlane_Dark4</li><li>子实体 → WoodenHouse_Windoows_10</li></ul>
+<p>每个子预制体都包含决定其外观以及与其他预制体对齐方式的组件。你可以使用 Verse 定位特定的预制体与实体，将子预制体替换为另一个预制体，甚至更改 Building_WindowPlane_Bright 与 Building_WindowPlane_Dark 实体的颜色。</p>
+<p>有多种组件类型决定实体部分或整体的行为。要了解场景图（Scene Graph）中可用的不同组件类型，请参阅<a href="components-in-unreal-editor-for-fortnite.html">组件（Components）</a>。</p>
+<p>有关使用实体与组件的更多信息，请参阅<a href="working-with-entities-and-components-in-unreal-editor-for-fortnite.html">使用实体与组件（Working with Entities and Components）</a>。</p>
+<h2 id="sec-4">预制体</h2>
+<p>场景图（Scene Graph）通过将实体打包为祖先与后代关系来创建预制体。祖先是指位于其他实体之上任一层级的实体，如父级、祖父级、曾祖父级等。后代是指位于子级、孙级等之下的实体层级。</p>
+<p>所有选定的实体、实体层级及其组件都会即时加入预制体中的实体树。获得预制体后，你可以在<strong><a href="prefab-editor-user-interface-in-unreal-editor-for-fortnite.html">预制体编辑器（Prefab Editor）</a></strong>中自定义该预制体的所有实例。</p>
+<p>要创建预制体的实例，可将预制体从内容浏览器拖入视口。你也可以将预制体嵌套在预制体层级中。你可以使用该层级，将所做更改应用于层级中的所有实例与预制体。</p>
+<p>在更新与改进预制体时可以节省时间，因为你无需找到该对象的所有实例并逐个更新。</p>
+<p>此外，你可以通过在层级中选择子部件并覆盖不同的组件值，来制作大量外观相似的对象。你还可以在预制体编辑器中旋转对象，并为不同的预制体实例添加新的组件值。</p>
+<p>编辑器会在细节面板中用覆盖切换图标标记各个组件属性的所有更改，还会在组件卡片下拉菜单按钮上用不同的组件图标标记。</p>
+<p>要恢复为原始预制体设计，可点击各个组件的覆盖切换按钮。对象会自动回到父级预制体的状态。你也可以点击组件卡片下拉菜单按钮并选择<strong>清除覆盖（Clear Override）</strong>。</p>
+<p>要了解有关修改预制体的更多信息，请参阅<a href="prefabs-and-prefab-instances-in-unreal-editor-for-fortnite.html">预制体与预制体实例（Prefabs and Prefab Instances）</a>。</p>
+<p>在下面的视频中，场景图（Scene Graph）被用于创建两个城堡房间预制体。</p>
+<p>房间被复制。通过选中地板网格体并替换原件来更改房间的一个元素，从而创建新的预制体。你可以继续复制与替换部件，快速搭建小型城堡乃至村庄。这同样适用于组件，因此你可以为城堡中的每个房间添加不同的行为。</p>
+<p>编辑预制体不会影响原始对象或其副本的稳定性与内存。这意味着你可以完成关卡布局、抽象设计与美术，打造岛屿的定制对象。借助场景图（Scene Graph）构建系统，你可以在项目间复用创建的预制体，在 Fortnite 中打造自己的游戏宇宙。</p>
+<h2 id="sec-5">场景图中的 Verse</h2>
+<p>Verse 是场景图（Scene Graph）使用的编程语言，用于在世界中生成与移除实体，以及创建自定义组件与行为。</p>
+<p>使用 Verse，你可以为前面示例中的房子创建一盏摇摆的户外灯笼。Verse 让你可以定义摆动、旋转与持续时间的属性，以决定灯笼如何运动。</p>
+<p>在项目中创建的预制体会作为类暴露给 Verse，位于项目的 <code>Assets.digest.verse</code> 文件中。预制体中定义的实体与组件可通过预制体上的 <code>GetEntities()</code> 与 <code>GetComponents()</code> 调用在 Verse 中访问。</p>
+<p>要开始在场景图（Scene Graph）中使用 Verse，请查看<a href="creating-your-own-component-using-verse-in-unreal-editor-for-fortnite.html">使用 Verse 创建你自己的组件（Creating Your Own Component using Verse）</a>。</p>
+<p>使用场景图（Scene Graph）创建的组件、实体与预制体，与<a href="https://dev.epicgames.com/documentation/fortnite/getting-started-with-devices-in-fortnite" target="_blank" rel="noopener">设备入门（Getting Started with Devices）</a>中介绍的设备不直接兼容。你可以在同一岛屿上使用它们，但若要连接它们的功能，必须使用自定义 Verse 代码。</p>
+<h2 id="sec-6">动手实践</h2>
+<p><strong><a href="https://dev.epicgames.com/documentation/fortnite/scene-graph-sample-tutorial-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">场景图（Scene Graph）示例模板（Scene Graph Sample Template）</a></strong>将向你介绍使用场景图（Scene Graph）功能的基本概念，并在这些基础工作流之上展示如何使用预制体与 Verse 创建项目，体现其强大之处。每个示例都展示了使用场景图（Scene Graph）迭代设计、创建有趣且实用的游戏对象与玩法的能力。</p>
+<p>打开<strong><a href="https://dev.epicgames.com/documentation/fortnite/create-a-platformer-with-scene-graph-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">使用场景图（Scene Graph）创建平台跳跃游戏（Creating a Platformer with Scene Graph）</a></strong>，进一步了解如何使用场景图（Scene Graph）创建有趣的玩法。</p>
+<p>要查看更多深入教程，请浏览<a href="scene-graph-tutorials-in-fortnite.html">场景图教程（Scene Graph Tutorials）</a>。</p>
+<div class="pager"><a href="08-scene-graph-in-unreal-editor-for-fortnite.html"><small>← 返回父教程</small>场景图 Scene Graph</a><a href="sub-index.html"><small>子教程索引 →</small>全部子教程</a></div>
+</article><nav class="doc-toc" aria-label="本页内容"><b>本页内容</b><a href="#sec-1">启用实验性 Scene Graph 功能</a><a href="#sec-2">元宇宙中的对象</a><a href="#sec-3">实体与组件</a><a href="#sec-4">预制体</a><a href="#sec-5">场景图中的 Verse</a><a href="#sec-6">动手实践</a></nav></div>
+</div></div>
+</div>
+<footer class="edc-footer"><div class="inner"><img src="../assets/logo-epic.svg" alt="Epic Games"><span>Fortnite 文档中文镜像 · UE教程/ · 本地打开 index.html 阅读 · 翻译整理自 Epic 官方文档，仅供学习交流</span></div></footer>
+</body>
+</html>

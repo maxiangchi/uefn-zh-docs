@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>预制件编辑器用户界面 | Fortnite 文档中文镜像</title>
+<link rel="stylesheet" href="../assets/epic.css">
+<link rel="stylesheet" href="../assets/patch.css">
+<link rel="icon" href="../assets/logo-epic.svg">
+</head>
+<body class="theme-fortnite">
+<div class="edc-topbar"><div class="edc-topbar-inner"><img class="edc-logo" src="../assets/logo-epic.svg" alt="Epic Games"><span class="edc-brand">Epic Games <b>开发者社区</b></span><span class="edc-nav"><a href="../index.html">文档首页</a><a href="sub-index.html">子教程索引</a><a href="https://dev.epicgames.com/documentation/fortnite/prefab-editor-user-interface-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">英文原文</a></span></div></div>
+<div class="site-container">
+<aside class="site-nav"><div class="documents-tree"><nav><ul class="contents-table">
+<div class="tree-sec">A · 最新动态</div>
+<a class="tree-link" href="01-42-00-fortnite-ecosystem-updates-and-release-notes.html">01. 42.00 生态系统更新与发行说明</a>
+<a class="tree-link active" href="02-custom-items-and-inventory-overview-in-fortnite.html">02. 自定义物品与背包总览</a>
+<a class="tree-link" href="03-in-island-transactions-in-fortnite.html">03. 岛内交易</a>
+<a class="tree-link" href="04-mobile-development-in-fortnite.html">04. 移动端开发</a>
+<a class="tree-link" href="05-inputs-in-fortnite.html">05. 输入系统</a>
+<a class="tree-link" href="06-ability-system-in-unreal-editor-for-fortnite.html">06. 能力系统 Ability System</a>
+<a class="tree-link" href="07-partybased-gameplay-using-the-social-synergy-api-in-fortnite.html">07. 社交协同 API 与小队玩法</a>
+<a class="tree-link" href="08-scene-graph-in-unreal-editor-for-fortnite.html">08. 场景图 Scene Graph</a>
+<div class="tree-sec">B · 入门</div>
+<a class="tree-link" href="09-build-your-first-island-in-fortnite.html">09. 构建你的第一个岛屿</a>
+<a class="tree-link" href="10-onboarding-guide-to-programming-with-verse-in-unreal-editor-for-fortnite.html">10. Verse 编程入门指南</a>
+<a class="tree-link" href="11-building-basics-in-fortnite-creative.html">11. 建造基础</a>
+<div class="tree-sec">C · 品牌合集</div>
+<a class="tree-link" href="12-star-wars-islands-in-fortnite.html">12. 星球大战™岛屿</a>
+<a class="tree-link" href="13-kpop-demon-hunters-islands-in-fortnite.html">13. KPop 猎魔团岛屿</a>
+<a class="tree-link" href="14-building-lego-islands-in-fortnite.html">14. 乐高®岛屿</a>
+<a class="tree-link" href="15-the-walking-dead-universe-islands-in-unreal-editor-for-fortnite.html">15. 行尸走肉宇宙岛屿</a>
+<a class="tree-link" href="16-teenage-mutant-ninja-turtle-islands-in-unreal-editor-for-fortnite.html">16. 忍者神龟岛屿</a>
+<a class="tree-link" href="17-squid-game-islands-in-fortnite.html">17. 鱿鱼游戏岛屿</a>
+<div class="tree-sec">D · 开发者成功</div>
+<a class="tree-link" href="18-using-creator-portal-in-fortnite-creative.html">18. 使用创作者门户</a>
+<a class="tree-link" href="19-island-moderation-and-guidelines-in-fortnite-creative.html">19. 岛屿审核与准则</a>
+<div class="tree-sec">E · 协作</div>
+<a class="tree-link" href="20-creating-teams-in-creator-portal-in-unreal-editor-for-fortnite.html">20. 在创作者门户创建团队</a>
+<a class="tree-link" href="21-adding-playtesters-in-fortnite-creative.html">21. 添加试玩测试员</a>
+<a class="tree-link" href="22-playtesting-your-island-in-unreal-editor-for-fortnite.html">22. 试玩测试你的岛屿</a>
+<a class="tree-link" href="23-collaborating-in-unreal-editor-for-fortnite.html">23. 在 UEFN 中协作</a>
+<a class="tree-link" href="24-lore-version-control-in-unreal-editor-for-fortnite.html">24. Lore 版本控制</a>
+<a class="tree-link" href="25-conflicts-in-lore-version-control-in-unreal-editor-for-fortnite.html">25. Lore 中的冲突</a>
+<a class="tree-link" href="26-version-history-and-conflict-resolution-in-unreal-editor-for-fortnite.html">26. 分支历史与冲突解决</a>
+<div class="tree-sec">F · 游戏示例</div>
+<a class="tree-link" href="27-build-a-game-in-unreal-editor-for-fortnite.html">27. 构建一款游戏</a>
+<a class="tree-link" href="28-unreal-editor-for-fortnite-starter-templates.html">28. UEFN 新手模板</a>
+<div class="tree-sec">G · Verse</div>
+<a class="tree-link" href="29-learn-the-basics-of-writing-code-in-verse.html">29. 从零学习 Verse 代码基础</a>
+<div class="tree-sec">H · 专注领域</div>
+<a class="tree-link" href="30-lighting-in-unreal-editor-for-fortnite.html">30. 灯光</a>
+<a class="tree-link" href="31-animation-and-cinematics-in-unreal-editor-for-fortnite.html">31. 动画与过场动画</a>
+<a class="tree-link" href="32-modeling-in-unreal-editor-for-fortnite.html">32. 建模</a>
+<a class="tree-link" href="33-materials-in-unreal-editor-for-fortnite.html">33. 材质</a>
+<a class="tree-link" href="34-environments-and-landscapes-in-unreal-editor-for-fortnite.html">34. 环境与地形</a>
+<a class="tree-link" href="35-audio-in-unreal-editor-for-fortnite.html">35. 音频</a>
+<a class="tree-link" href="36-visual-effects-in-unreal-editor-for-fortnite.html">36. 视觉特效</a>
+</ul></nav></div></aside>
+<div class="page-content"><div class="page-document has-theme-bg">
+<header class="section-page-header"><nav><ol class="breadcrumb is-shrinkable"><li class="breadcrumb-item is-root"><img src="../assets/logo-epic.svg" alt="Epic Games"><a href="../index.html">Developer</a></li><li class="breadcrumb-item"><a href="../index.html">Fortnite 文档</a></li><li class="breadcrumb-item"><a href="02-custom-items-and-inventory-overview-in-fortnite.html">自定义物品与背包总览</a></li><li class="breadcrumb-item active" aria-current="page"><span class="text-truncate">预制件编辑器用户界面</span></li></ol></nav><h1>预制件编辑器用户界面</h1><p class="text-secondary mb-0">预制件编辑器由菜单栏、两条工具栏和三个主要区域组成：逐项了解菜单、工具栏、视口、大纲视图与细节面板的用法。</p><p class="doc-meta">英文原标题：Prefab Editor User Interface in Unreal Editor for Fortnite · <a href="https://dev.epicgames.com/documentation/fortnite/prefab-editor-user-interface-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">查看英文原文</a> · 社区翻译镜像，仅供学习</p></header>
+<div class="doc-columns"><article class="doc-article">
+<p>预制件编辑器（Prefab Editor）由菜单栏、两条工具栏和三个主要区域组成。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/9361fff5-2232-4db4-ae2e-913dd1ac7b28?resizing_type=fit" alt="预制件编辑器总览的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/9361fff5-2232-4db4-ae2e-913dd1ac7b28?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure><p><em>点击图片放大。</em></p>
+<table><thead><tr><th>编号</th><th>说明</th></tr></thead><tbody>
+<tr><td>1</td><td>菜单栏（Menu Bar）</td></tr>
+<tr><td>2</td><td>工具栏（Toolbar）</td></tr>
+<tr><td>3</td><td>视口（Viewport）</td></tr>
+<tr><td>4</td><td>大纲视图面板（Outliner Panel）</td></tr>
+<tr><td>5</td><td>细节面板（Details Panel）</td></tr>
+<tr><td>6</td><td>底部工具栏（Bottom Toolbar）</td></tr>
+</tbody></table>
+<ul>
+<li>点击面板角落的 <strong>X</strong> 关闭面板；</li>
+<li>从 <strong>Window</strong> 菜单打开面板。</li>
+</ul>
+<h2 id="sec-1">菜单栏（Menu Bar）</h2>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/d253df22-2447-46e9-a035-20a7b1d6b601?resizing_type=fit" alt="菜单栏的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/d253df22-2447-46e9-a035-20a7b1d6b601?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure><p><em>点击图片放大。</em></p>
+<h3>文件（File）</h3>
+<ul>
+<li><strong>最近资产（Recent Assets）</strong>——下拉菜单列出最近打开和查看过的资产；</li>
+<li><strong>保存（Save）</strong>——保存对预制件的修改；</li>
+<li><strong>另存为（Save As…）</strong>——把预制件另存为新名称。</li>
+</ul>
+<h3>编辑（Edit）</h3>
+<ul>
+<li><strong>撤销（Undo）</strong>——撤销在预制件编辑器中的上一步操作；</li>
+<li><strong>重做（Redo）</strong>——回到撤销之前的状态；</li>
+<li><strong>撤销历史（Undo History）</strong>——查看完整撤销历史。</li>
+</ul>
+<h3>资产（Asset）</h3>
+<ul>
+<li><strong>在内容浏览器中查找（Find in Content Browser…）</strong>——定位到关联资产并在内容浏览器窗口中选中；</li>
+<li><strong>引用查看器（Reference Viewer）</strong>——启动引用查看器，显示所选资产。</li>
+</ul>
+<h3>窗口（Window）</h3>
+<ul>
+<li><strong>视口（Viewport）</strong>——开关视口窗口；</li>
+<li><strong>细节（Details）</strong>——开关细节选项卡；</li>
+<li><strong>大纲视图（Outliner）</strong>——开关大纲视图选项卡；</li>
+<li><strong>过场动画（Cinematics）</strong>——打开下拉菜单，包含：
+<ul>
+<li><strong>Take Recorder</strong>——打开 Take Recorder 主界面；</li>
+<li><strong>Takes Browser</strong>——打开 Take 浏览器界面；</li>
+<li><strong>内容浏览器（Content Browser）</strong>——打开一系列内容浏览器；</li>
+<li><strong>消息日志（Message Log）</strong>——打开消息日志选项卡；</li>
+<li><strong>输出日志（Output Log）</strong>——打开输出日志选项卡；</li>
+<li><strong>加载布局（Load Layout）</strong>——打开下拉菜单，包含：
+<ul>
+<li><strong>默认编辑器布局（Default Editor Layout）</strong>——切换为当前虚幻引擎布局；</li>
+<li><strong>UE4 经典布局（UE4 Classic Layout）</strong>——切换为虚幻引擎 4 经典布局；</li>
+<li><strong>导入布局（Import Layout）</strong>——导入编辑器布局设计；</li>
+<li><strong>保存布局（Save Layout）</strong>——打开下拉菜单，包含：
+<ul>
+<li><strong>布局另存为（Save Layout As…）</strong>——把当前布局存为新的编辑器布局；</li>
+<li><strong>导出布局（Export Layout）</strong>——导出正在使用的布局；</li>
+<li><strong>移除布局（Remove Layout）</strong>——打开下拉菜单，包含：
+<ul><li><strong>移除所有用户布局（Remove All User Layouts）</strong>——移除你自定义的所有布局。</li></ul></li>
+</ul></li>
+</ul></li>
+<li><strong>全屏（Enable Full Screen）</strong>——开关编辑器全屏视图。</li>
+</ul></li>
+</ul>
+<h3>工具（Tools）</h3>
+<ul>
+<li><strong>查看更改（View Changes）</strong>——打开对话框显示当前更改；</li>
+<li><strong>提交内容（Submit Content）</strong>——打开对话框，提供内容与关卡的签入选项；</li>
+<li><strong>同步内容（Sync Content）</strong>——把所有未保存的关卡与资产存盘，再从版本控制下载最新版；</li>
+<li><strong>连接版本控制（Connect to Revision Control）</strong>——连接到版本控制。</li>
+</ul>
+<h3>帮助（Help）</h3>
+<ul>
+<li><strong>开发者社区（Dev Community）</strong>——在浏览器中打开开发者社区链接；</li>
+<li><strong>学习库（Learning Library）</strong>——在浏览器中打开虚幻引擎视频学习库；</li>
+<li><strong>论坛（Forums）</strong>——在浏览器中打开开发者社区论坛；</li>
+<li><strong>代码片段（Snippets）</strong>——在浏览器中打开代码片段仓库；</li>
+<li><strong>关于虚幻编辑器（About Unreal Editor）</strong>——打开窗口，显示编辑器版本与你使用的平台信息；</li>
+<li><strong>致谢（Credits）</strong>——打开滚动窗口，列出参与编辑器工作的所有人；</li>
+<li><strong>访问 UnrealEngine.com（Visit UnrealEngine.com）</strong>——在浏览器中打开虚幻引擎文档站。</li>
+</ul>
+<h2 id="sec-2">工具栏（Toolbar）</h2>
+<p>工具栏收录常用工具快捷按钮，下表列出各工具及其功能。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/014b6093-352b-437d-b21e-83f95caecabd?resizing_type=fit" alt="工具栏的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/014b6093-352b-437d-b21e-83f95caecabd?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<table><thead><tr><th>图标</th><th>说明</th></tr></thead><tbody>
+<tr><td><figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/45296a9c-1172-40a5-b287-0e666f03eae4?resizing_type=fit" alt="保存按钮图标的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/45296a9c-1172-40a5-b287-0e666f03eae4?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></td><td>保存对预制件的编辑。</td></tr>
+<tr><td><figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/2ab0cc3d-c5d9-46de-8d26-1b2f00b6e824?resizing_type=fit" alt="内容浏览器按钮图标的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/2ab0cc3d-c5d9-46de-8d26-1b2f00b6e824?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></td><td>打开内容浏览器，浏览最近使用的资产。</td></tr>
+</tbody></table>
+<h2 id="sec-3">视口（Viewport）</h2>
+<p>视口显示正在编辑的预制件。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/00c81ae5-d893-4a76-bbf4-cec94c3c269d?resizing_type=fit" alt="预制件编辑器视口的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/00c81ae5-d893-4a76-bbf4-cec94c3c269d?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>预制件编辑器视口与 UEFN、UE 中的视口功能大体相同。</p>
+<h2 id="sec-4">大纲视图面板（Outliner Panel）</h2>
+<p>大纲视图面板收录组成预制件的实体层级，包括其他预制件及其实体层级。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/c1470753-8ca6-4e4a-ab6d-47096f5182bd?resizing_type=fit" alt="大纲视图面板的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/c1470753-8ca6-4e4a-ab6d-47096f5182bd?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>在大纲视图选项卡中右键实体，打开大纲视图下拉菜单。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/c115f4a5-7e72-4bb5-8fa9-7e973342cced?resizing_type=fit" alt="大纲视图下拉菜单的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/c115f4a5-7e72-4bb5-8fa9-7e973342cced?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h3>大纲视图下拉菜单（Outliner Dropdown Menu）</h3>
+<ul>
+<li><strong>Add Entity</strong>——向预制件或所选实体添加新实体；</li>
+<li><strong>Delete</strong>——从预制件删除该实体；</li>
+<li><strong>Copy</strong>——复制预制件层级中的实体；</li>
+<li><strong>Paste</strong>——把复制的实体粘贴到层级中所选资产上；</li>
+<li><strong>Duplicate</strong>——在层级中 SimulationEntity 下复制该实体；</li>
+<li><strong>Frame Selected</strong>——视口居中到所选资产。</li>
+</ul>
+<h2 id="sec-5">细节面板（Details Panel）</h2>
+<p>细节面板收录大纲视图中所选实体的全部组件卡片。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/811a2f26-504e-46d0-8686-92ebdd00b3d9?resizing_type=fit" alt="细节面板的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/811a2f26-504e-46d0-8686-92ebdd00b3d9?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<table><thead><tr><th>编号</th><th>选项</th><th>说明</th></tr></thead><tbody>
+<tr><td>1</td><td><strong>+Add Component</strong></td><td>向实体添加更多组件。</td></tr>
+<tr><td>2</td><td><strong>实体图标（Entity Icon）</strong></td><td>向预制件添加另一个实体。</td></tr>
+<tr><td>3</td><td><strong>组件卡片（Component Card）</strong></td><td>组件卡片提供该组件的可编辑选项。对组件默认选项的修改会自动把组件选项旁的覆盖开关切换为 Override。</td></tr>
+<tr><td>4</td><td><strong><a href="working-with-entities-and-components-in-unreal-editor-for-fortnite.html">组件状态（Component Status）</a></strong></td><td>组件状态有 3 种：
+<ul><li><strong>无覆盖（No Override）</strong>；</li><li><strong>内部覆盖（Override Inside）</strong>；</li><li><strong>唯一覆盖（Unique Override）</strong>。</li></ul></td></tr>
+<tr><td>5</td><td><strong>组件覆盖（Component Override）</strong></td><td>显示该组件选项的覆盖状态。</td></tr>
+</tbody></table>
+<h3>属性覆盖（Property Overrides）</h3>
+<p>可以覆盖单个组件选项：切换组件选项旁的按钮，从下拉菜单选择操作。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/7b3b283b-2220-4cfa-8200-c318927f3009?resizing_type=fit" alt="属性覆盖开关的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/7b3b283b-2220-4cfa-8200-c318927f3009?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ul>
+<li><strong>Override Property</strong>——覆盖该属性选项；</li>
+<li><strong>Clear Override</strong>——把该属性选项恢复原状。</li>
+</ul>
+<h3>组件卡片下拉菜单（Component Card Dropdown Menu）</h3>
+<p>点击组件卡片控制按钮，打开组件卡片下拉菜单。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/e25c150c-598c-4073-a5e8-3122ff7a6881?resizing_type=fit" alt="组件卡片下拉菜单的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/e25c150c-598c-4073-a5e8-3122ff7a6881?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ul>
+<li><strong>Override Component</strong>——覆盖该组件；</li>
+<li><strong>Clear Override</strong>——把该组件恢复原状；</li>
+<li><strong>Remove Component</strong>——从层级中移除该组件。</li>
+</ul>
+<h2 id="sec-6">底部工具栏（Bottom Toolbar）</h2>
+<p>该工具栏收录常用工具按钮，下表列出各工具及其功能。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/4ba57518-6457-402e-b25b-eb7c38a78c3a?resizing_type=fit" alt="底部工具栏的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/4ba57518-6457-402e-b25b-eb7c38a78c3a?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure><p><em>点击图片放大。</em></p>
+<table><thead><tr><th>图标</th><th>说明</th></tr></thead><tbody>
+<tr><td><figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/0f59b728-5edd-4f2f-98e8-3ed17e3ea010?resizing_type=fit" alt="内容抽屉按钮图标的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/0f59b728-5edd-4f2f-98e8-3ed17e3ea010?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></td><td>打开内容抽屉，访问导入或创建的资产。</td></tr>
+<tr><td><figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/fdba34a7-c06e-42cd-acc6-bf3f929ffe49?resizing_type=fit" alt="输出日志按钮图标的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/fdba34a7-c06e-42cd-acc6-bf3f929ffe49?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></td><td>输出日志（Output Log）显示预制件的稳定性。</td></tr>
+<tr><td><figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/3b34b31d-c7b4-48d2-b39a-d81df8107a48?resizing_type=fit" alt="保存状态按钮图标的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/3b34b31d-c7b4-48d2-b39a-d81df8107a48?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></td><td>显示预制件的保存状态。</td></tr>
+<tr><td><figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/72316d24-153c-4e8c-a752-88ae4a5ec4f5?resizing_type=fit" alt="版本控制按钮图标的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/72316d24-153c-4e8c-a752-88ae4a5ec4f5?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></td><td>打开版本控制（Revision Control）下拉菜单，包含：
+<ul><li><strong>View Changes</strong>——打开对话框显示所有近期更改；</li><li><strong>Submit Content</strong>——提交更改的选项；</li><li><strong>Check Out Modified Files</strong>——打开对话框签出文件；</li><li><strong>Connect to Revision Control…</strong>——连接到版本控制系统。</li></ul></td></tr>
+</tbody></table>
+<p>相关标签：<a href="https://dev.epicgames.com/community/search?query=gameplay" target="_blank" rel="noopener">gameplay</a> · <a href="https://dev.epicgames.com/community/search?query=ui" target="_blank" rel="noopener">ui</a> · <a href="https://dev.epicgames.com/community/search?query=level%20design" target="_blank" rel="noopener">level design</a> · <a href="https://dev.epicgames.com/community/search?query=scene%20graph" target="_blank" rel="noopener">scene graph</a></p>
+<p><a href="https://forums.unrealengine.com/categories?tag=fortnite" target="_blank" rel="noopener">在开发者论坛提问并帮助同伴</a></p>
+<p><a href="https://dev.epicgames.com/community/fortnite/learning" target="_blank" rel="noopener">在学习库中编写或阅读他人教程</a></p>
+<div class="pager"><a href="02-custom-items-and-inventory-overview-in-fortnite.html"><small>← 返回父教程</small>自定义物品与背包总览</a><a href="sub-index.html"><small>子教程索引 →</small>全部子教程</a></div>
+</article><nav class="doc-toc" aria-label="本页内容"><b>本页内容</b><a href="#sec-1">菜单栏</a><a href="#sec-2">工具栏</a><a href="#sec-3">视口</a><a href="#sec-4">大纲视图面板</a><a href="#sec-5">细节面板</a><a href="#sec-6">底部工具栏</a></nav></div>
+</div></div>
+</div>
+<footer class="edc-footer"><div class="inner"><img src="../assets/logo-epic.svg" alt="Epic Games"><span>Fortnite 文档中文镜像 · UE教程/ · 本地打开 index.html 阅读 · 翻译整理自 Epic 官方文档，仅供学习交流</span></div></footer>
+</body>
+</html>

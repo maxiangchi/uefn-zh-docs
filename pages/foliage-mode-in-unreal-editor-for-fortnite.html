@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UEFN 中的植被模式（Foliage Mode） | Fortnite 文档中文镜像</title>
+<link rel="stylesheet" href="../assets/epic.css">
+<link rel="stylesheet" href="../assets/patch.css">
+<link rel="icon" href="../assets/logo-epic.svg">
+</head>
+<body class="theme-fortnite">
+<div class="edc-topbar"><div class="edc-topbar-inner"><img class="edc-logo" src="../assets/logo-epic.svg" alt="Epic Games"><span class="edc-brand">Epic Games <b>开发者社区</b></span><span class="edc-nav"><a href="../index.html">文档首页</a><a href="sub-index.html">子教程索引</a><a href="https://dev.epicgames.com/documentation/fortnite/foliage-mode-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">英文原文</a></span></div></div>
+<div class="site-container">
+<aside class="site-nav"><div class="documents-tree"><nav><ul class="contents-table">
+<div class="tree-sec">A · 最新动态</div>
+<a class="tree-link" href="01-42-00-fortnite-ecosystem-updates-and-release-notes.html">01. 42.00 生态系统更新与发行说明</a>
+<a class="tree-link" href="02-custom-items-and-inventory-overview-in-fortnite.html">02. 自定义物品与背包总览</a>
+<a class="tree-link" href="03-in-island-transactions-in-fortnite.html">03. 岛内交易</a>
+<a class="tree-link" href="04-mobile-development-in-fortnite.html">04. 移动端开发</a>
+<a class="tree-link" href="05-inputs-in-fortnite.html">05. 输入系统</a>
+<a class="tree-link" href="06-ability-system-in-unreal-editor-for-fortnite.html">06. 能力系统 Ability System</a>
+<a class="tree-link" href="07-partybased-gameplay-using-the-social-synergy-api-in-fortnite.html">07. 社交协同 API 与小队玩法</a>
+<a class="tree-link" href="08-scene-graph-in-unreal-editor-for-fortnite.html">08. 场景图 Scene Graph</a>
+<div class="tree-sec">B · 入门</div>
+<a class="tree-link" href="09-build-your-first-island-in-fortnite.html">09. 构建你的第一个岛屿</a>
+<a class="tree-link" href="10-onboarding-guide-to-programming-with-verse-in-unreal-editor-for-fortnite.html">10. Verse 编程入门指南</a>
+<a class="tree-link" href="11-building-basics-in-fortnite-creative.html">11. 建造基础</a>
+<div class="tree-sec">C · 品牌合集</div>
+<a class="tree-link" href="12-star-wars-islands-in-fortnite.html">12. 星球大战™岛屿</a>
+<a class="tree-link" href="13-kpop-demon-hunters-islands-in-fortnite.html">13. KPop 猎魔团岛屿</a>
+<a class="tree-link" href="14-building-lego-islands-in-fortnite.html">14. 乐高®岛屿</a>
+<a class="tree-link" href="15-the-walking-dead-universe-islands-in-unreal-editor-for-fortnite.html">15. 行尸走肉宇宙岛屿</a>
+<a class="tree-link" href="16-teenage-mutant-ninja-turtle-islands-in-unreal-editor-for-fortnite.html">16. 忍者神龟岛屿</a>
+<a class="tree-link" href="17-squid-game-islands-in-fortnite.html">17. 鱿鱼游戏岛屿</a>
+<div class="tree-sec">D · 开发者成功</div>
+<a class="tree-link" href="18-using-creator-portal-in-fortnite-creative.html">18. 使用创作者门户</a>
+<a class="tree-link" href="19-island-moderation-and-guidelines-in-fortnite-creative.html">19. 岛屿审核与准则</a>
+<div class="tree-sec">E · 协作</div>
+<a class="tree-link" href="20-creating-teams-in-creator-portal-in-unreal-editor-for-fortnite.html">20. 在创作者门户创建团队</a>
+<a class="tree-link" href="21-adding-playtesters-in-fortnite-creative.html">21. 添加试玩测试员</a>
+<a class="tree-link" href="22-playtesting-your-island-in-unreal-editor-for-fortnite.html">22. 试玩测试你的岛屿</a>
+<a class="tree-link" href="23-collaborating-in-unreal-editor-for-fortnite.html">23. 在 UEFN 中协作</a>
+<a class="tree-link" href="24-lore-version-control-in-unreal-editor-for-fortnite.html">24. Lore 版本控制</a>
+<a class="tree-link" href="25-conflicts-in-lore-version-control-in-unreal-editor-for-fortnite.html">25. Lore 中的冲突</a>
+<a class="tree-link" href="26-version-history-and-conflict-resolution-in-unreal-editor-for-fortnite.html">26. 分支历史与冲突解决</a>
+<div class="tree-sec">F · 游戏示例</div>
+<a class="tree-link" href="27-build-a-game-in-unreal-editor-for-fortnite.html">27. 构建一款游戏</a>
+<a class="tree-link" href="28-unreal-editor-for-fortnite-starter-templates.html">28. UEFN 新手模板</a>
+<div class="tree-sec">G · Verse</div>
+<a class="tree-link" href="29-learn-the-basics-of-writing-code-in-verse.html">29. 从零学习 Verse 代码基础</a>
+<div class="tree-sec">H · 专注领域</div>
+<a class="tree-link" href="30-lighting-in-unreal-editor-for-fortnite.html">30. 灯光</a>
+<a class="tree-link" href="31-animation-and-cinematics-in-unreal-editor-for-fortnite.html">31. 动画与过场动画</a>
+<a class="tree-link" href="32-modeling-in-unreal-editor-for-fortnite.html">32. 建模</a>
+<a class="tree-link" href="33-materials-in-unreal-editor-for-fortnite.html">33. 材质</a>
+<a class="tree-link active" href="34-environments-and-landscapes-in-unreal-editor-for-fortnite.html">34. 环境与地形</a>
+<a class="tree-link" href="35-audio-in-unreal-editor-for-fortnite.html">35. 音频</a>
+<a class="tree-link" href="36-visual-effects-in-unreal-editor-for-fortnite.html">36. 视觉特效</a>
+</ul></nav></div></aside>
+<div class="page-content"><div class="page-document has-theme-bg">
+<header class="section-page-header"><nav><ol class="breadcrumb is-shrinkable"><li class="breadcrumb-item is-root"><img src="../assets/logo-epic.svg" alt="Epic Games"><a href="../index.html">Developer</a></li><li class="breadcrumb-item"><a href="../index.html">Fortnite 文档</a></li><li class="breadcrumb-item"><a href="34-environments-and-landscapes-in-unreal-editor-for-fortnite.html">环境与地形</a></li><li class="breadcrumb-item active" aria-current="page"><span class="text-truncate">UEFN 中的植被模式（Foliage Mode）</span></li></ol></nav><h1>UEFN 中的植被模式（Foliage Mode）</h1><p class="text-secondary mb-0">植被模式提供了一种在地形上快速创建森林与树林的方法，用植被工具为项目添加树木、灌木、花草，打造逼真的景观。</p><p class="doc-meta">英文原标题：Foliage Mode In Unreal Editor For Fortnite · <a href="https://dev.epicgames.com/documentation/fortnite/foliage-mode-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">查看英文原文</a> · 社区翻译镜像，仅供学习</p></header>
+<div class="doc-columns"><article class="doc-article">
+<p><strong>植被模式（Foliage Mode）</strong>提供了一种在地形上快速创建森林与树林的方法，打造逼真的景观。使用植被工具决定如何在项目中添加树木、灌木、花草等。该编辑模式与<a href="landscape-mode-in-unreal-editor-for-fortnite.html">景观模式（Landscape Mode）</a>配合使用。</p>
+<h2 id="sec-1">工作原理</h2>
+<p>要进入植被模式，点击选择模式（Selection Mode）下拉菜单并选择 Foliage Mode，视口窗口左侧会打开植被模式面板。（关于该模式的深入介绍，请参阅虚幻引擎的<a href="https://docs.unrealengine.com/foliage-mode-in-unreal-engine/" target="_blank" rel="noopener">植被模式（Foliage Mode）</a>文档。）</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/55926306-9bbc-4bb1-a46e-b9b51c7dc75a?resizing_type=fit" alt="植被模式面板" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/55926306-9bbc-4bb1-a46e-b9b51c7dc75a?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>要使用植被模式工具，先打开<a href="https://dev.epicgames.com/documentation/fortnite/unreal-editor-for-fortnite-glossary#content-browser" target="_blank" rel="noopener"><strong>内容浏览器（Content Browser）</strong></a>，然后把选中的植被<a href="https://dev.epicgames.com/documentation/fortnite/unreal-editor-for-fortnite-glossary#static-mesh" target="_blank" rel="noopener">静态网格体（static meshes）</a>从 <strong>Environment &gt; Foliage</strong> 文件夹拖入<strong>网格体列表（Mesh List）</strong>。你可以添加的不只是树木或草地——任何类型的静态网格体都可以加入网格体列表。</p>
+<p>植被模式也支持导入的静态网格体。植被模式不支持 Fortnite 道具（Props），因为这类元素带有蓝图脚本，会像被风吹动一样摇摆树木与灌木，而静态网格体则完全静止。</p>
+<p>在为关卡<a href="greyboxing-in-unreal-editor-for-fortnite.html">灰盒（greyboxing）</a>规划植被摆放位置时可以使用植被模式。先用<a href="modeling-mode-in-unreal-editor-for-fortnite.html">建模模式（Modeling Mode）</a>创建简单形体，再把形体加入网格体列表并绘制到地形上，预览植被的整体效果。</p>
+<h2 id="sec-2">植被工具</h2>
+<p>植被模式使用可缩放的工具，你可以为每个工具单独设置偏好，也可以为网格体列表中的全部植被按植被类型统一调整。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/cd53c25c-278a-4d95-8229-89f9de30efa9?resizing_type=fit" alt="植被工具栏" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/cd53c25c-278a-4d95-8229-89f9de30efa9?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h3>选择（Select）</h3>
+<p>把静态网格体拖入网格体列表以在项目中使用，或用搜索栏搜索特定的静态网格体。</p>
+<p>点击 <strong>+Foliage</strong> 按钮，从下拉菜单中选择静态网格体，或创建使用网格体实例化（mesh instancing）的新静态网格体资产，用于非交互植被。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/963f5484-361e-4f8b-ab81-af58e960331f?resizing_type=fit" alt="选择与添加植被" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/963f5484-361e-4f8b-ab81-af58e960331f?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h3>全选（All）</h3>
+<p>选中项目中全部使用植被模式工具放置的静态网格体。</p>
+<p>你可以用它创建所选植被的副本并移动副本，或直接移动全部所选植被。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/0a32570c-a405-4bc4-9465-50da770fb9c6?resizing_type=fit" alt="全选植被" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/0a32570c-a405-4bc4-9465-50da770fb9c6?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h3>取消选择（Deselect）</h3>
+<p>取消选择项目中全部使用植被模式放置的静态网格体。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/a1c3fb33-be2c-4fa5-8620-88e818aa2e21?resizing_type=fit" alt="取消选择植被" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/a1c3fb33-be2c-4fa5-8620-88e818aa2e21?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h3>无效项（Invalid）</h3>
+<p>选中无效的植被实例。</p>
+<p>这些植被网格体未与数据层对齐，悬浮在其上方。利用该工具可以避免地形上方出现漂浮的植被。</p>
+<h3>套索（Lasso）</h3>
+<p>框选一片已放置的植被或已加入网格体列表的植被，选中后可以复制或移动套索圈住的植被。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/be43ec14-560b-41f5-a136-a45c52bfaf69?resizing_type=fit" alt="套索选择植被" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/be43ec14-560b-41f5-a136-a45c52bfaf69?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h3>绘制（Paint）</h3>
+<p>用地形绘制网格体列表中选中的植被。</p>
+<p>绘制设置决定绘制时应用到地形的静态网格体的分布与数量。</p>
+<h3>重新应用（Reapply）</h3>
+<p>从网格体列表中选择一个或多个网格体，修改世界中已放置植被实例的设置：</p>
+<ul>
+<li>选择<strong>重新应用工具（Reapply tool）</strong>，然后在网格体列表中选择要应用更改的植被类型。</li>
+<li>在 <strong>Foliage Details</strong> 部分进行修改。</li>
+<li>把更改绘制到关卡中的植被实例上。</li>
+</ul>
+<h3>单个（Single）</h3>
+<p>在单个位置绘制单个植被实例。</p>
+<p>如果网格体列表中有多个静态网格体，选中单个工具时会在同一位置一次性应用全部网格体。</p>
+<h3>填充（Fill）</h3>
+<p>用选中的植被填满目标地形块，也可作用于为地形创建的其他静态网格体。</p>
+<h3>擦除（Erase）</h3>
+<p>从地形上擦除选中的植被。</p>
+<p>如果你不想擦除全部植被，可以取消勾选不希望从场景中擦除的植被。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/dc878058-397e-4e87-8699-75b02434d1d9?resizing_type=fit" alt="擦除植被" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/dc878058-397e-4e87-8699-75b02434d1d9?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h3>移除（Remove）</h3>
+<p>从地形上移除全部选中的植被。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/7ed34894-24c2-4f89-8b15-6adac7037704?resizing_type=fit" alt="移除植被" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/7ed34894-24c2-4f89-8b15-6adac7037704?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h3>移动（Move）</h3>
+<p>把选中的植被移动到当前关卡。</p>
+<p>该工具与数据层（Data Layers）配合，先识别植被所在的数据层，再提供将其移动到另一数据层的方法。</p>
+<h2 id="sec-3">绘制工具</h2>
+<p>使用绘制工具缩放、旋转植被，向项目中添加植被，功能远不止于此。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/25452039-4aea-46d8-8477-8b2e0a64e43b?resizing_type=fit" alt="绘制工具设置面板" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/25452039-4aea-46d8-8477-8b2e0a64e43b?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h3>画笔选项</h3>
+<ul>
+<li><strong>画笔大小（Brush Size）</strong>——决定画笔的大小。</li>
+<li><strong>绘制密度（Paint Density）</strong>——决定画笔范围内静态网格体实例的数量与间距。</li>
+<li><strong>擦除密度（Erase Density）</strong>——按住 Shift 键擦除植被时保留植被的密度。</li>
+<li><strong>单实例模式（Single Instance Mode）</strong>——在鼠标光标处绘制单个植被实例。</li>
+<li><strong>放置到当前关卡（Place in Current Level）</strong>——把植被网格体放置到当前关卡，还是放置到被绘制网格体所在的关卡。</li>
+</ul>
+<h3>过滤器</h3>
+<ul>
+<li><strong>景观（Landscape）</strong>——在景观上放置植被。</li>
+<li><strong>静态网格体（Static Meshes）</strong>——在静态网格体上放置植被。</li>
+<li><strong>BSP</strong>——在 BSP 上放置植被。</li>
+<li><strong>植被（Foliage）</strong>——在另一个植被网格体上放置植被。</li>
+<li><strong>半透明（Translucent）</strong>——在半透明几何体上放置植被。</li>
+<li><strong>+Foliage</strong>——选择要加入项目的静态网格体。</li>
+<li><strong>网格体（Mesh）</strong>——当前选中的静态网格体。</li>
+<li><strong>组件类（Component Class）</strong>——植被实例使用的组件类。你可以创建 FoliageInstancedStaticMeshComponent 的蓝图子类来实现自定义行为，并在此指定该类。</li>
+<li><strong>覆盖材质（Override Materials）</strong>——添加新的材质数组以覆盖植被实例。</li>
+<li><strong>Nanite 覆盖材质（Nanite Override Materials）</strong>——为植被实例添加新的 Nanite 材质覆盖数组。</li>
+</ul>
+<h3>绘制</h3>
+<ul>
+<li><strong>密度 / 1Kuu（Density / 1Kuu）</strong>——按此密度放置植被实例，单位为每 1000×1000 单位面积的实例数。</li>
+<li><strong>半径（Radius）</strong>——植被实例之间的最小距离。</li>
+<li><strong>单实例模式覆盖（Single Instance Mode Override）</strong>——在单实例模式下绘制时，用于覆盖检测与其他实例碰撞的默认设置的选项。</li>
+<li><strong>单实例模式半径（Single Instance Mode Radius）</strong>——单实例模式下用于检测与其他实例碰撞的半径。</li>
+<li><strong>缩放（Scaling）</strong>——指定绘制时植被实例的缩放行为。</li>
+<li><strong>X 缩放（Scale X）</strong>——指定应用于植被实例 X 轴缩放属性的最小到最大缩放范围。</li>
+<li><strong>Y 缩放（Scale Y）</strong>——指定应用于植被实例 Y 轴缩放属性的最小到最大缩放范围。</li>
+<li><strong>Z 缩放（Scale Z）</strong>——指定应用于植被实例 Z 轴缩放属性的最小到最大缩放范围。</li>
+<li><strong>按通道的顶点色遮罩（Vertex Color Mask by Channel）</strong>——使用颜色通道（RGBA）为植被实例创建顶点遮罩。</li>
+</ul>
+<h3>放置</h3>
+<ul>
+<li><strong>Z 偏移（Z Offset）</strong>——指定应用于植被实例 Z 轴位置偏移的最小到最大范围。</li>
+<li><strong>对齐法线（Align to Normal）</strong>——植被实例的角度是否偏离垂直方向以匹配所绘制表面的法线。勾选对齐法线且不勾选随机偏航（Random Yaw）时，实例会旋转，使 +X 轴指向下坡方向。</li>
+<li><strong>平均法线（单组件）（Average Normal Single Component）</strong>——平均法线时是否丢弃来自其他命中组件的法线。</li>
+<li><strong>随机偏航（Random Yaw）</strong>——勾选后，植被实例绕垂直轴应用随机偏航旋转。</li>
+<li><strong>随机俯仰角（Random Pitch Angle）</strong>——可为每个实例在原始角度基础上应用指定度数以内的随机俯仰调整。</li>
+<li><strong>地面坡度角（Ground Slope Angle）</strong>——仅在与水平面夹角处于指定角度范围内的表面上放置植被实例。</li>
+<li><strong>高度（Height）</strong>——放置植被实例的有效海拔范围，用世界坐标 Z 的最小值与最大值指定。</li>
+<li><strong>包含的景观图层（Inclusion Landscape Layers）</strong>——若指定图层名称，在景观上绘制时仅限绘制有指定图层的景观区域生成植被。</li>
+<li><strong>排除的景观图层（Exclusion Landscape Layers）</strong>——若指定图层名称，在景观上绘制时排除未绘制指定图层的景观区域。</li>
+<li><strong>与世界碰撞（Collision with World）</strong>——勾选后，每个实例放置前会与现有世界几何体做重叠测试。</li>
+<li><strong>平均法线采样数（Average Normal Sample Count）</strong>——平均法线时，在命中位置周围使用的射线追踪数量。</li>
+</ul>
+<h3>实例设置</h3>
+<ul>
+<li><strong>可移动性（Mobility）</strong>——应用于植被组件的可移动性属性。</li>
+<li><strong>剔除距离（Cull Distance）</strong>——使用 PerInstanceFadeAmount 材质节点时实例开始淡出的距离。设为 0 表示禁用该选项。当整个聚合超过该距离时，聚合会被完全剔除、不再渲染。</li>
+<li><strong>投射阴影（Cast Shadow）</strong>——控制植被是否投射阴影。</li>
+<li><strong>影响动态间接光照（Affect Dynamic Indirect Lighting）</strong>——控制植被是否向光传播体积注入光照。仅在 CastShadow 为 true 时使用。</li>
+<li><strong>影响距离场光照（Affect Distance Field Lighting）</strong>——控制该图元是否影响动态距离场光照。仅在 Cast Shadow 为 true 时使用。</li>
+<li><strong>投射动态阴影（Cast Dynamic Shadow）</strong>——控制在非预计算阴影下植被是否投射阴影。仅在 Cast Shadow 为 true 时使用。</li>
+<li><strong>投射静态阴影（Cast Static Shadow）</strong>——植被是否从投射阴影的光源投射静态阴影。仅在 CastShadow 为 true 时使用。</li>
+<li><strong>投射接触阴影（Cast Contact Shadow）</strong>——对象是否投射接触阴影。仅在 CastShadow 为 true 时使用。</li>
+<li><strong>光照贴图分辨率（Light Map Resolution）</strong>——覆盖静态网格体中定义的光照贴图分辨率。</li>
+<li><strong>碰撞预设（Collision Presets）</strong>——选择碰撞预设。你可以在<a href="https://dev.epicgames.com/documentation/fortnite/user-interface-reference-for-unreal-editor-for-fortnite" target="_blank" rel="noopener">项目设置（Project Settings）</a>中设置该数据。</li>
+<li><strong>自定义可导航几何体（Custom Navigable Geometry）</strong>——若图元影响导航网格，应调用 DoCustomNavigableGeometryExport() 导出该图元的可导航几何体。</li>
+<li><strong>半透明排序优先级（Translucent SortPriority）</strong>——决定半透明对象的优先级。</li>
+<li><strong>按双面投射阴影（Cast Shadow as Two Sided）</strong>——该植被是否按双面材质投射动态阴影。</li>
+<li><strong>接收贴花（Receives Decals）</strong>——植被是否接收贴花。</li>
+<li><strong>光照贴图类型（Lightmap Type）</strong>——控制该组件使用的光照贴图类型。</li>
+<li><strong>用作遮挡体（Use as Occluder）</strong>——勾选后，植被会渲染预通道以遮挡其他图元，并能正确接收 DBuffer 贴花。勾选该设置可能带来负面的性能影响。</li>
+<li><strong>光线追踪可见（Visible in Ray Tracing）</strong>——勾选后，静态网格体在光线追踪中可见。</li>
+<li><strong>计算世界位置偏移（Evaluate World Position Offset）</strong>——勾选后，在静态网格体 LOD 中计算世界位置偏移。</li>
+<li><strong>世界位置偏移禁用距离（World Position Offset Disable Distance）</strong>——设置世界位置偏移被禁用的距离。</li>
+<li><strong>光照通道（Lighting Channels）</strong>——为光照选择 0-2 的通道。</li>
+<li><strong>渲染 CustomDepth 通道（Render CustomDepth Pass）</strong>——为 true 时，植被在 CustomDepth 通道中渲染（通常用于描边）。</li>
+<li><strong>CustomDepth 模板写入掩码（Custom Depth Stencil Write Mask）</strong>——模板缓冲写入使用的掩码。</li>
+<li><strong>CustomDepth 模板值（CustomDepth Stencil Value）</strong>——在 CustomDepth 通道中向模板缓冲写入该 0-255 值。需要在项目设置中设置或 r.CustomDepth = 3。</li>
+</ul>
+<h3>可扩展性</h3>
+<ul>
+<li><strong>启用密度缩放（Enable Density Scaling）</strong>——该植被类型是否受引擎可扩展性系统中植被可扩展性设置的影响。对不影响玩法游戏的细节网格体启用，对重要的内容禁用。通常，对无碰撞的小网格体（草地）启用，对有碰撞的大网格体（树木）禁用。</li>
+<li><strong>启用加载时丢弃（Enable Discard on Load）</strong>——启用 CVarFoliageDiscardDataOnLoad 时是否丢弃该植被类型。</li>
+<li><strong>启用剔除距离缩放（Enable Cull Distance Scaling）</strong>——该植被类型是否受引擎 "foliage.CullDistanceScale" 设置的影响。</li>
+</ul>
+<h3>虚拟纹理</h3>
+<ul>
+<li><strong>绘制到虚拟纹理（Draw in Virtual Textures）</strong>——引擎将实例绘制到的运行时虚拟纹理数组。网格体材质也需要设置为输出到虚拟纹理。Draw in 控制该组件是否同时在主通道与虚拟纹理中绘制。</li>
+<li><strong>虚拟纹理跳过 Mip（Virtual Texture Skip Mips）</strong>——为该图元渲染运行时虚拟纹理时跳过的低层 mip 数量。数值越大，在运行时虚拟纹理中的有效绘制距离越短。该剔除方式不考虑图元大小与虚拟纹理尺寸。</li>
+</ul>
+<h3>HLOD</h3>
+<ul>
+<li><strong>包含在 HLOD 中（Include in HLOD）</strong>——勾选后，植被包含在 HLOD 绘制中。</li>
+</ul>
+<div class="pager"><a href="34-environments-and-landscapes-in-unreal-editor-for-fortnite.html"><small>← 返回父教程</small>环境与地形</a><a href="sub-index.html"><small>子教程索引 →</small>全部子教程</a></div>
+</article><nav class="doc-toc" aria-label="本页内容"><b>本页内容</b><a href="#sec-1">工作原理</a><a href="#sec-2">植被工具</a><a href="#sec-3">绘制工具</a></nav></div>
+</div></div>
+</div>
+<footer class="edc-footer"><div class="inner"><img src="../assets/logo-epic.svg" alt="Epic Games"><span>Fortnite 文档中文镜像 · UE教程/ · 本地打开 index.html 阅读 · 翻译整理自 Epic 官方文档，仅供学习交流</span></div></footer>
+</body>
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>在 UEFN 中修改并运行你的第一个 Verse 程序 | Fortnite 文档中文镜像</title>
+<link rel="stylesheet" href="../assets/epic.css">
+<link rel="stylesheet" href="../assets/patch.css">
+<link rel="icon" href="../assets/logo-epic.svg">
+</head>
+<body class="theme-fortnite">
+<div class="edc-topbar"><div class="edc-topbar-inner"><img class="edc-logo" src="../assets/logo-epic.svg" alt="Epic Games"><span class="edc-brand">Epic Games <b>开发者社区</b></span><span class="edc-nav"><a href="../index.html">文档首页</a><a href="sub-index.html">子教程索引</a><a href="https://dev.epicgames.com/documentation/fortnite/modify-and-run-your-first-verse-program-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">英文原文</a></span></div></div>
+<div class="site-container">
+<aside class="site-nav"><div class="documents-tree"><nav><ul class="contents-table">
+<div class="tree-sec">A · 最新动态</div>
+<a class="tree-link" href="01-42-00-fortnite-ecosystem-updates-and-release-notes.html">01. 42.00 生态系统更新与发行说明</a>
+<a class="tree-link" href="02-custom-items-and-inventory-overview-in-fortnite.html">02. 自定义物品与背包总览</a>
+<a class="tree-link" href="03-in-island-transactions-in-fortnite.html">03. 岛内交易</a>
+<a class="tree-link" href="04-mobile-development-in-fortnite.html">04. 移动端开发</a>
+<a class="tree-link" href="05-inputs-in-fortnite.html">05. 输入系统</a>
+<a class="tree-link" href="06-ability-system-in-unreal-editor-for-fortnite.html">06. 能力系统 Ability System</a>
+<a class="tree-link" href="07-partybased-gameplay-using-the-social-synergy-api-in-fortnite.html">07. 社交协同 API 与小队玩法</a>
+<a class="tree-link" href="08-scene-graph-in-unreal-editor-for-fortnite.html">08. 场景图 Scene Graph</a>
+<div class="tree-sec">B · 入门</div>
+<a class="tree-link" href="09-build-your-first-island-in-fortnite.html">09. 构建你的第一个岛屿</a>
+<a class="tree-link active" href="10-onboarding-guide-to-programming-with-verse-in-unreal-editor-for-fortnite.html">10. Verse 编程入门指南</a>
+<a class="tree-link" href="11-building-basics-in-fortnite-creative.html">11. 建造基础</a>
+<div class="tree-sec">C · 品牌合集</div>
+<a class="tree-link" href="12-star-wars-islands-in-fortnite.html">12. 星球大战™岛屿</a>
+<a class="tree-link" href="13-kpop-demon-hunters-islands-in-fortnite.html">13. KPop 猎魔团岛屿</a>
+<a class="tree-link" href="14-building-lego-islands-in-fortnite.html">14. 乐高®岛屿</a>
+<a class="tree-link" href="15-the-walking-dead-universe-islands-in-unreal-editor-for-fortnite.html">15. 行尸走肉宇宙岛屿</a>
+<a class="tree-link" href="16-teenage-mutant-ninja-turtle-islands-in-unreal-editor-for-fortnite.html">16. 忍者神龟岛屿</a>
+<a class="tree-link" href="17-squid-game-islands-in-fortnite.html">17. 鱿鱼游戏岛屿</a>
+<div class="tree-sec">D · 开发者成功</div>
+<a class="tree-link" href="18-using-creator-portal-in-fortnite-creative.html">18. 使用创作者门户</a>
+<a class="tree-link" href="19-island-moderation-and-guidelines-in-fortnite-creative.html">19. 岛屿审核与准则</a>
+<div class="tree-sec">E · 协作</div>
+<a class="tree-link" href="20-creating-teams-in-creator-portal-in-unreal-editor-for-fortnite.html">20. 在创作者门户创建团队</a>
+<a class="tree-link" href="21-adding-playtesters-in-fortnite-creative.html">21. 添加试玩测试员</a>
+<a class="tree-link" href="22-playtesting-your-island-in-unreal-editor-for-fortnite.html">22. 试玩测试你的岛屿</a>
+<a class="tree-link" href="23-collaborating-in-unreal-editor-for-fortnite.html">23. 在 UEFN 中协作</a>
+<a class="tree-link" href="24-lore-version-control-in-unreal-editor-for-fortnite.html">24. Lore 版本控制</a>
+<a class="tree-link" href="25-conflicts-in-lore-version-control-in-unreal-editor-for-fortnite.html">25. Lore 中的冲突</a>
+<a class="tree-link" href="26-version-history-and-conflict-resolution-in-unreal-editor-for-fortnite.html">26. 分支历史与冲突解决</a>
+<div class="tree-sec">F · 游戏示例</div>
+<a class="tree-link" href="27-build-a-game-in-unreal-editor-for-fortnite.html">27. 构建一款游戏</a>
+<a class="tree-link" href="28-unreal-editor-for-fortnite-starter-templates.html">28. UEFN 新手模板</a>
+<div class="tree-sec">G · Verse</div>
+<a class="tree-link" href="29-learn-the-basics-of-writing-code-in-verse.html">29. 从零学习 Verse 代码基础</a>
+<div class="tree-sec">H · 专注领域</div>
+<a class="tree-link" href="30-lighting-in-unreal-editor-for-fortnite.html">30. 灯光</a>
+<a class="tree-link" href="31-animation-and-cinematics-in-unreal-editor-for-fortnite.html">31. 动画与过场动画</a>
+<a class="tree-link" href="32-modeling-in-unreal-editor-for-fortnite.html">32. 建模</a>
+<a class="tree-link" href="33-materials-in-unreal-editor-for-fortnite.html">33. 材质</a>
+<a class="tree-link" href="34-environments-and-landscapes-in-unreal-editor-for-fortnite.html">34. 环境与地形</a>
+<a class="tree-link" href="35-audio-in-unreal-editor-for-fortnite.html">35. 音频</a>
+<a class="tree-link" href="36-visual-effects-in-unreal-editor-for-fortnite.html">36. 视觉特效</a>
+</ul></nav></div></aside>
+<div class="page-content"><div class="page-document has-theme-bg">
+<header class="section-page-header"><nav><ol class="breadcrumb is-shrinkable"><li class="breadcrumb-item is-root"><img src="../assets/logo-epic.svg" alt="Epic Games"><a href="../index.html">Developer</a></li><li class="breadcrumb-item"><a href="../index.html">Fortnite 文档</a></li><li class="breadcrumb-item"><a href="10-onboarding-guide-to-programming-with-verse-in-unreal-editor-for-fortnite.html">Verse 编程入门指南</a></li><li class="breadcrumb-item active" aria-current="page"><span class="text-truncate">在 UEFN 中修改并运行你的第一个 Verse 程序</span></li></ol></nav><h1>在 UEFN 中修改并运行你的第一个 Verse 程序</h1><p class="text-secondary mb-0">按照本页步骤，学习在 UEFN 中创建、运行、编辑和排查输出“Hello, world!”的 Verse 程序与场景图组件。</p><p class="doc-meta">英文原标题：Modify And Run Your First Verse Program In Unreal Editor For Fortnite · <a href="https://dev.epicgames.com/documentation/fortnite/modify-and-run-your-first-verse-program-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">查看英文原文</a> · 社区翻译镜像，仅供学习</p></header>
+<div class="doc-columns"><article class="doc-article">
+<p>按照本页面的步骤，你可以学习如何在<strong>虚幻编辑器 Fortnite 版（Unreal Editor for Fortnite，UEFN）</strong>中创建、运行、编辑和排查一个输出 “Hello, world!” 的 <strong>Verse</strong> 程序与 <strong>场景图（Scene Graph）</strong><a href="https://dev.epicgames.com/documentation/fortnite/component" target="_blank" rel="noopener">组件（component）</a>。</p>
+<p>关于如何打开 UEFN，请参阅<a href="https://dev.epicgames.com/documentation/en-us/uefn/launching-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">启动虚幻编辑器 Fortnite 版</a>。</p>
+<h2 id="sec-1">你的第一个 Verse 程序</h2>
+<p><strong>VKT - Verse Device Starter Games</strong> 模板是对<a href="https://dev.epicgames.com/documentation/fortnite/verse-glossary#verse-authored-device" target="_blank" rel="noopener">使用 Verse 创建的设备</a>的入门介绍，其中包含多个可供参考的设备示例。在下面的步骤中，你将在该模板中创建并修改一个新的 Verse 设备。</p>
+<ol>
+<li>在<strong>项目浏览器（Project Browser）</strong>窗口中，选择 <strong>Feature Examples</strong> 以查看全部 UEFN 功能示例。</li>
+</ol>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/b275fc70-9d55-4877-82ae-1ef1fcaf2cb8?resizing_type=fit" alt="功能示例选择界面" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/b275fc70-9d55-4877-82ae-1ef1fcaf2cb8?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ol start="2">
+<li>在功能示例列表中，点击 <strong>Verse Device</strong> 将其高亮选中。</li>
+</ol>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/c3a879d7-ecc9-4941-a6bc-9f92e50614e9?resizing_type=fit" alt="选中 Verse Device 示例" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/c3a879d7-ecc9-4941-a6bc-9f92e50614e9?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ol start="3">
+<li>在屏幕底部 <strong>Project Name</strong> 下，将你的<a href="https://dev.epicgames.com/documentation/fortnite/unreal-editor-for-fortnite-glossary#project" target="_blank" rel="noopener">项目（project）</a>命名为 <strong>MyVerseProject</strong>，然后点击 <strong>Create</strong>。</li>
+<li>在<a href="https://dev.epicgames.com/documentation/fortnite/user-interface-reference-for-unreal-editor-for-fortnite" target="_blank" rel="noopener">菜单栏（Menu Bar）</a>中，前往 <strong>Verse &gt; Verse Explorer</strong>。</li>
+<li>在<a href="https://dev.epicgames.com/documentation/fortnite/verse-explorer-user-interface-reference-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">Verse Explorer</a> 中，右键点击你的项目名称，选择 <strong>Add new Verse file to project</strong>，打开 <strong>Create Verse Script</strong> 窗口。</li>
+</ol>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/48023312-dc17-47be-8a10-702a860fdb4b?resizing_type=fit" alt="创建 Verse 脚本窗口" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/48023312-dc17-47be-8a10-702a860fdb4b?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ol start="6">
+<li>在 Create Verse Script 窗口中，点击 <strong>Verse Device</strong> 将其选为模板，然后点击 <strong>Create</strong>。</li>
+</ol>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/db17aee2-05e8-440c-ad90-d320892adefb?resizing_type=fit" alt="选择 Verse Device 模板" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/db17aee2-05e8-440c-ad90-d320892adefb?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ol start="7">
+<li>在<strong>菜单栏</strong>中，前往 <strong>Verse &gt; Build Verse Code</strong>，确保你新建的 Verse 设备出现在项目文件夹中。</li>
+<li>在<strong>内容浏览器（Content Browser）</strong>中，导航到你的项目文件夹。</li>
+</ol>
+<p>如果<a href="https://dev.epicgames.com/documentation/fortnite/unreal-editor-for-fortnite-glossary#content-browser" target="_blank" rel="noopener">内容浏览器</a>尚未打开，点击<a href="https://dev.epicgames.com/documentation/fortnite/user-interface-reference-for-unreal-editor-for-fortnite" target="_blank" rel="noopener">菜单栏</a>上的 <strong>Window</strong>，然后选择 <strong>Content Browser</strong>，或选择 UEFN 窗口左下角的 <strong>Content Drawer</strong>。</p>
+<p>路径应为 <strong>All &gt; MyVerseProject &gt; hello_world_device</strong>。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/ebb7742b-890a-464b-bd50-43fc969ff249?resizing_type=fit" alt="内容浏览器中的 hello_world_device" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/ebb7742b-890a-464b-bd50-43fc969ff249?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ol start="9">
+<li>点击并拖动 <strong>hello_world_device</strong> 到<a href="https://dev.epicgames.com/documentation/fortnite/fortnite-glossary#level" target="_blank" rel="noopener">关卡（level）</a>中。</li>
+<li>在<a href="https://dev.epicgames.com/documentation/fortnite/user-interface-reference-for-unreal-editor-for-fortnite" target="_blank" rel="noopener">工具栏（toolbar）</a>中，点击 <strong>Launch Session</strong> 以<a href="https://dev.epicgames.com/documentation/fortnite/playtesting-your-island-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">试玩测试你的岛屿</a>。</li>
+</ol>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/14d25d9b-bb69-4252-8e7f-b1bebf270e3c?resizing_type=fit" alt="点击 Launch Session 启动会话" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/14d25d9b-bb69-4252-8e7f-b1bebf270e3c?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p class="img-hint">点击图片放大。</p>
+<ol start="11">
+<li>在 <strong>Save Content</strong> 窗口中，点击 <strong>Save Selected</strong>，保存你对项目的更改。</li>
+</ol>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/32f071b8-1ea2-4d75-9d34-17824232e84c?resizing_type=fit" alt="保存内容窗口" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/32f071b8-1ea2-4d75-9d34-17824232e84c?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ol start="12">
+<li>待<a href="https://dev.epicgames.com/documentation/fortnite/fortnite-glossary#server" target="_blank" rel="noopener">服务器（server）</a>完成项目加载后，打开主菜单并点击 <strong>Start Game</strong>。</li>
+</ol>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/9c83a6a5-0435-4029-9cfb-80ac876a9022?resizing_type=fit" alt="开始游戏" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/9c83a6a5-0435-4029-9cfb-80ac876a9022?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ol start="13">
+<li>在<a href="https://dev.epicgames.com/documentation/fortnite/fortnite-glossary#client" target="_blank" rel="noopener">客户端（client）</a>中，按 <strong>Escape</strong> 打开主菜单界面并点击 <strong>Island Settings</strong>，然后点击顶部导航栏中的 <strong>Log</strong> 查看日志。</li>
+<li>在日志中找到写着 “Hello, world!” 的一行，下一行是 “2 + 2 = 4”。这两行来自 hello_world_device.verse 文件。因为你把这个用 Verse 创建的设备添加到了关卡中，所以开始游戏时它的代码随之运行。</li>
+</ol>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/a6f81f3d-1332-48ac-a811-273c11c09dee?resizing_type=fit" alt="日志中的 Hello, world! 输出" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/a6f81f3d-1332-48ac-a811-273c11c09dee?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>现在你已经运行了第一个 Verse 程序，接下来看看 <strong>hello_world_device.verse</strong> 中的代码并修改它。下一节请保持客户端运行。</p>
+<h2 id="sec-2">修改程序</h2>
+<p>按以下步骤查看上一节创建该设备的 hello_world_device.verse 文件，然后添加一行新代码。</p>
+<ol>
+<li>在<a href="https://dev.epicgames.com/documentation/fortnite/user-interface-reference-for-unreal-editor-for-fortnite" target="_blank" rel="noopener">菜单栏</a>中，点击 <strong>Verse &gt; Verse Explorer</strong>，查看项目中的全部 Verse 文件。</li>
+<li>在你的项目名称下，双击 <strong>hello_world_device.verse</strong> 打开该文件。</li>
+</ol>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/ce75b3a9-03b9-4e45-9ac0-e147446dc4ac?resizing_type=fit" alt="在 Verse Explorer 中打开 verse 文件" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/ce75b3a9-03b9-4e45-9ac0-e147446dc4ac?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>Verse 文件会在<a href="https://dev.epicgames.com/documentation/fortnite/verse-glossary#visual-studio-code" target="_blank" rel="noopener">Visual Studio Code（VS Code）</a>（用于编写程序的编辑器）中打开。如果你的电脑上没有安装 Visual Studio Code，会弹出提示请你安装。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/77221388-3f8b-4827-9ea6-8e4a76c01597?resizing_type=fit" alt="VS Code 中的 Verse 文件" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/77221388-3f8b-4827-9ea6-8e4a76c01597?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p class="img-hint">点击图片放大。</p>
+<p>Verse 代码扩展是 VS Code 的扩展，提供 Verse <a href="https://dev.epicgames.com/documentation/fortnite/verse-glossary#compiler-error" target="_blank" rel="noopener">错误（error）</a>检查与<a href="https://dev.epicgames.com/documentation/fortnite/verse-glossary#syntax" target="_blank" rel="noopener">语法（syntax）</a>高亮，还允许你直接在 VS Code 中编译 Verse 脚本并推送更改。</p>
+<p>与 UEFN 捆绑的 Verse 扩展是唯一官方支持的 Verse 语言扩展。该扩展会在你启动 UEFN 时自动启用；如果你卸载了它，下次启动 UEFN 时会重新安装。</p>
+<p>你可以通过 VS Code 窗口顶部的 Editor Focus、Build Verse Changes 与 Push Verse Change 按钮确认 Verse 代码扩展已安装。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/31316ce1-2737-4651-9db0-6ddc690d7da0?resizing_type=fit" alt="Verse 扩展按钮" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/31316ce1-2737-4651-9db0-6ddc690d7da0?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p class="img-hint">点击图片放大。</p>
+<p>这段代码其余部分的作用稍后会讲；现在只需知道，在 <code>OnBegin&lt;override&gt;()&lt;suspends&gt;:void=</code> 这一行之下输入的任何代码都会在游戏开始时运行，因此请在文件末尾添加以下代码：</p>
+<pre><code>Print("This is my first line of Verse code!")</code></pre>
+<p>你的 Verse 文件现在看起来应该是这样：</p>
+<pre><code>using { /Fortnite.com/Devices }
+using { /Verse.org/Simulation }
+using { /UnrealEngine.com/Temporary/Diagnostics }
+# See https://dev.epicgames.com/documentation/en-us/uefn/create-your-own-device-in-verse for how to create a verse device.
+# A Verse-authored creative device that can be placed in a level
+hello_world_device := class(creative_device):
+    # Runs when the device is started in a running game</code></pre>
+<p>符号 <code>#</code> 之后的任何文本都被视为代码注释，程序运行时会被计算机忽略。代码注释对你和阅读代码的其他人很有用，因为注释可以解释代码的作用。在本例中，<code># Runs when the device is started in a running game</code> 和 <code>#TODO: Replace this with your code</code> 都是代码注释。</p>
+<h3>保存更改</h3>
+<ol>
+<li>在 Visual Studio Code 中保存 <strong>hello_world_device.verse</strong> 文件。</li>
+<li>在 UEFN 工具栏中点击 <strong>Verse</strong>，然后点击 <strong>Build Verse Code</strong> 编译代码。</li>
+</ol>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/4c4ba739-3af1-4fb2-b580-ab2bee8e9edf?resizing_type=fit" alt="构建 Verse 代码" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/4c4ba739-3af1-4fb2-b580-ab2bee8e9edf?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p class="img-hint">点击图片放大。</p>
+<ol start="3">
+<li>编译成功后，<strong>Verse</strong> 按钮上会出现绿色对勾。如果编译过程中出现问题，会出现红色停止图标，在解决所有错误之前你都无法编译代码。如果发生这种情况，请参阅<a href="#sec-4">排查代码故障</a>了解修复代码的技巧。</li>
+</ol>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/6583422b-9299-4a45-8500-81e6a673fc2f?resizing_type=fit" alt="编译成功的绿色对勾" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/6583422b-9299-4a45-8500-81e6a673fc2f?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p class="img-hint">点击图片放大。</p>
+<ol start="4">
+<li>代码编译完成后，UEFN 工具栏中会出现 <strong>Push Changes</strong> 与 <strong>Push Verse Changes</strong> 选项。<strong>Push Changes</strong> 会把编辑器中的全部更改更新到客户端，例如增删道具、修改对象属性以及对 Verse 代码的任何更改；<strong>Push Verse Changes</strong> 只更新 Verse 代码，比 <strong>Push Changes</strong> 更快。当你只想对代码做小幅增量修改而不想刷新整个会话时，这很有用。点击 <strong>Push Verse Changes</strong> 更新客户端。</li>
+</ol>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/3ee331a5-1a36-4406-8618-05fdee726836?resizing_type=fit" alt="推送 Verse 更改" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/3ee331a5-1a36-4406-8618-05fdee726836?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p class="img-hint">点击图片放大。</p>
+<ol start="5">
+<li>待服务器完成项目更新后，打开主菜单并点击 <strong>Start Game</strong>。</li>
+<li>在日志中找到写着 “This is my first line of Verse code!” 的一行，那就是你刚添加到脚本中的代码的输出！</li>
+</ol>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/a6438f0d-046b-4d77-8935-e6a4e99a940e?resizing_type=fit" alt="日志中新打印的代码行" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/a6438f0d-046b-4d77-8935-e6a4e99a940e?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h2 id="sec-3">顺序执行</h2>
+<p>当你添加那行打印文本到日志的代码后，“This is my first line of Verse code!” 打印在 “2 + 2 = 4” 之后。这是因为这些代码行按它们写在 <code>OnBegin&lt;override&gt;()&lt;suspends&gt;:void=</code> 之下的顺序执行。</p>
+<p>如果你调换打印行的顺序，文本就会按新顺序打印到日志，“This is my first line of Verse code!” 会出现在 “2 + 2 = 4” 之前：</p>
+<pre><code>OnBegin&lt;override&gt;()&lt;suspends&gt;:void=
+    #TODO: Replace this with your code
+    Print("Hello, world!")
+    Print("This is my first line of Verse code!")
+    Print("2 + 2 = {2 + 2}")</code></pre>
+<p>代码通常按表达式出现的顺序逐行执行，这称为<strong>顺序执行（sequential execution）</strong>。随着你进一步学习 Verse 编程，你将学会塑造执行流程以改变程序行为。</p>
+<h2 id="sec-4">排查代码故障</h2>
+<p>既然你已经编写并运行了第一行 Verse 代码，下面介绍写代码时可能遇到的问题的排查方法。</p>
+<p>你可能遇到两类错误：<strong>编译器错误（compiler errors）</strong>与<strong>程序缺陷（bugs）</strong>。</p>
+<h3>编译器错误</h3>
+<p>和任何写作一样，你的代码中也可能有拼写错误。这些拼写错误会让编译器无法理解你想让程序做什么，因此称为编译器错误——它们会阻止程序编译，通常是语法错误，会使你无法在试玩中运行代码。</p>
+<p>VS Code 能发现部分编译器错误，并通过把文件选项卡与资源管理器面板中的文件名变为红色来提醒你。</p>
+<p>VS Code 还会在检测到问题的行下方添加红色波浪线；把鼠标悬停在波浪线上，会出现错误信息，如果 VS Code 能提供快速修复，还会一并显示。</p>
+<p>VS Code 可能无法捕获全部编译器错误，因此在尝试运行代码之前先构建代码是很好的习惯，可以及早发现错误。具体做法是：在 UEFN <a href="https://dev.epicgames.com/documentation/fortnite/user-interface-reference-for-unreal-editor-for-fortnite" target="_blank" rel="noopener">工具栏（Toolbar）</a>中点击 <strong>Verse</strong>，再点击 <strong>Build Verse Code</strong>。该选项会编译项目中的全部 Verse 文件，把你编写的代码翻译成计算机可执行的指令。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/0ed12ce0-1508-4e5d-860a-252236e9aad1?resizing_type=fit" alt="构建 Verse 代码" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/0ed12ce0-1508-4e5d-860a-252236e9aad1?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p class="img-hint">点击图片放大。</p>
+<p>输出日志会显示<strong>成功消息（success message）</strong>（代码构建成功）或<strong>错误（errors）</strong>（需修复后才能在试玩中使用代码）。</p>
+<p>选择 <strong>Build Verse Code</strong> 时，若存在编译错误，还会弹出提示消息。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/add65f57-dd3f-4406-a395-a713c03932f7?resizing_type=fit" alt="编译错误弹窗" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/add65f57-dd3f-4406-a395-a713c03932f7?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>在弹窗消息中选择 <strong>See Errors</strong>，将打开<strong>消息日志（Message Log）</strong>窗口，显示 VS Code 检测到的全部代码错误。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/937f4332-c619-41f7-8c3c-a01fe8417bd4?resizing_type=fit" alt="消息日志中的错误" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/937f4332-c619-41f7-8c3c-a01fe8417bd4?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p class="img-hint">点击图片放大。</p>
+<p>修复全部错误后，可以再次点击 UEFN 工具栏中的 <strong>Build Verse Scripts</strong> 重新编译代码，或点击弹窗消息中的 <strong>Rebuild</strong>，确认代码构建成功。</p>
+<h3>程序缺陷（Bug）</h3>
+<p>当代码构建成功，但程序行为不符合预期时，这类问题称为<strong>程序缺陷（bugs）</strong>。缺陷是代码中的逻辑问题，定位方法之一就是向日志打印。</p>
+<p><strong>hello_world_device</strong> 中的代码就是很好的例子：通过向日志打印来验证开始游戏时代码是否运行。</p>
+<pre><code>OnBegin&lt;override&gt;()&lt;suspends&gt;:void=
+    #TODO: Replace this with your code
+    Print("Hello, world!")
+    Print("This is my first line of Verse code!")
+    Print("2 + 2 = {2 + 2}")</code></pre>
+<p>你也可以打印数值来验证代码是否符合预期。运行以下代码时，日志中会出现 “2 + 2 = 4”：</p>
+<pre><code>Print("2 + 2 = {2 + 2}")</code></pre>
+<p>表达式 <code>{2 + 2}</code> 会在文本打印到日志之前先求值为 4。最后一行双引号 " " 之间的大括号 {} 表示其中的表达式应先求值再转换为文本。像这样把值注入字符串的做法就是字符串插值的例子。</p>
+<p>如果你修改大括号之间的表达式，打印的值也会变化。在下例中，表达式改为 <code>{2 + 3}</code>，日志中就会出现 “2 + 2 = 5”：</p>
+<pre><code>nBegin&lt;override&gt;()&lt;suspends&gt;:void=
+    #TODO: Replace this with your code
+    Print("Hello, world!")
+    Print("This is my first line of Verse code!")
+    Print("2 + 2 = {2 + 3}")</code></pre>
+<h2 id="sec-5">后续步骤</h2>
+<p>你已经初步了解了 Verse，以及如何运行与排查代码，接下来请前往<a href="29-learn-the-basics-of-writing-code-in-verse.html">从零学习 Verse 代码基础</a>，扩展通用编程知识，进一步学习如何驾驭这一编程工具。</p>
+<p>你也可以在出生后与控制台上的按钮交互，游玩 Verse Device Starter 迷你游戏。要了解该迷你游戏的制作方式，请参阅<a href="verse-starter-template-in-unreal-editor-for-fortnite.html">Verse 新手模板</a>。可以在 Verse Explorer 中查看该项目使用的代码文件！</p>
+<div class="pager"><a href="10-onboarding-guide-to-programming-with-verse-in-unreal-editor-for-fortnite.html"><small>← 返回父教程</small>Verse 编程入门指南</a><a href="sub-index.html"><small>子教程索引 →</small>全部子教程</a></div>
+</article><nav class="doc-toc" aria-label="本页内容"><b>本页内容</b><a href="#sec-1">你的第一个 Verse 程序</a><a href="#sec-2">修改程序</a><a href="#sec-3">顺序执行</a><a href="#sec-4">排查代码故障</a><a href="#sec-5">后续步骤</a></nav></div>
+</div></div>
+</div>
+<footer class="edc-footer"><div class="inner"><img src="../assets/logo-epic.svg" alt="Epic Games"><span>Fortnite 文档中文镜像 · UE教程/ · 本地打开 index.html 阅读 · 翻译整理自 Epic 官方文档，仅供学习交流</span></div></footer>
+</body>
+</html>

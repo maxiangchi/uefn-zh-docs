@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Scene Graph 中的变换（Transform） | Fortnite 文档中文镜像</title>
+<link rel="stylesheet" href="../assets/epic.css">
+<link rel="stylesheet" href="../assets/patch.css">
+<link rel="icon" href="../assets/logo-epic.svg">
+</head>
+<body class="theme-fortnite">
+<div class="edc-topbar"><div class="edc-topbar-inner"><img class="edc-logo" src="../assets/logo-epic.svg" alt="Epic Games"><span class="edc-brand">Epic Games <b>开发者社区</b></span><span class="edc-nav"><a href="../index.html">文档首页</a><a href="sub-index.html">子教程索引</a><a href="https://dev.epicgames.com/documentation/fortnite/transforms-in-scene-graph-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">英文原文</a></span></div></div>
+<div class="site-container">
+<aside class="site-nav"><div class="documents-tree"><nav><ul class="contents-table">
+<div class="tree-sec">A · 最新动态</div>
+<a class="tree-link" href="01-42-00-fortnite-ecosystem-updates-and-release-notes.html">01. 42.00 生态系统更新与发行说明</a>
+<a class="tree-link" href="02-custom-items-and-inventory-overview-in-fortnite.html">02. 自定义物品与背包总览</a>
+<a class="tree-link" href="03-in-island-transactions-in-fortnite.html">03. 岛内交易</a>
+<a class="tree-link" href="04-mobile-development-in-fortnite.html">04. 移动端开发</a>
+<a class="tree-link" href="05-inputs-in-fortnite.html">05. 输入系统</a>
+<a class="tree-link" href="06-ability-system-in-unreal-editor-for-fortnite.html">06. 能力系统 Ability System</a>
+<a class="tree-link" href="07-partybased-gameplay-using-the-social-synergy-api-in-fortnite.html">07. 社交协同 API 与小队玩法</a>
+<a class="tree-link active" href="08-scene-graph-in-unreal-editor-for-fortnite.html">08. 场景图 Scene Graph</a>
+<div class="tree-sec">B · 入门</div>
+<a class="tree-link" href="09-build-your-first-island-in-fortnite.html">09. 构建你的第一个岛屿</a>
+<a class="tree-link" href="10-onboarding-guide-to-programming-with-verse-in-unreal-editor-for-fortnite.html">10. Verse 编程入门指南</a>
+<a class="tree-link" href="11-building-basics-in-fortnite-creative.html">11. 建造基础</a>
+<div class="tree-sec">C · 品牌合集</div>
+<a class="tree-link" href="12-star-wars-islands-in-fortnite.html">12. 星球大战™岛屿</a>
+<a class="tree-link" href="13-kpop-demon-hunters-islands-in-fortnite.html">13. KPop 猎魔团岛屿</a>
+<a class="tree-link" href="14-building-lego-islands-in-fortnite.html">14. 乐高®岛屿</a>
+<a class="tree-link" href="15-the-walking-dead-universe-islands-in-unreal-editor-for-fortnite.html">15. 行尸走肉宇宙岛屿</a>
+<a class="tree-link" href="16-teenage-mutant-ninja-turtle-islands-in-unreal-editor-for-fortnite.html">16. 忍者神龟岛屿</a>
+<a class="tree-link" href="17-squid-game-islands-in-fortnite.html">17. 鱿鱼游戏岛屿</a>
+<div class="tree-sec">D · 开发者成功</div>
+<a class="tree-link" href="18-using-creator-portal-in-fortnite-creative.html">18. 使用创作者门户</a>
+<a class="tree-link" href="19-island-moderation-and-guidelines-in-fortnite-creative.html">19. 岛屿审核与准则</a>
+<div class="tree-sec">E · 协作</div>
+<a class="tree-link" href="20-creating-teams-in-creator-portal-in-unreal-editor-for-fortnite.html">20. 在创作者门户创建团队</a>
+<a class="tree-link" href="21-adding-playtesters-in-fortnite-creative.html">21. 添加试玩测试员</a>
+<a class="tree-link" href="22-playtesting-your-island-in-unreal-editor-for-fortnite.html">22. 试玩测试你的岛屿</a>
+<a class="tree-link" href="23-collaborating-in-unreal-editor-for-fortnite.html">23. 在 UEFN 中协作</a>
+<a class="tree-link" href="24-lore-version-control-in-unreal-editor-for-fortnite.html">24. Lore 版本控制</a>
+<a class="tree-link" href="25-conflicts-in-lore-version-control-in-unreal-editor-for-fortnite.html">25. Lore 中的冲突</a>
+<a class="tree-link" href="26-version-history-and-conflict-resolution-in-unreal-editor-for-fortnite.html">26. 分支历史与冲突解决</a>
+<div class="tree-sec">F · 游戏示例</div>
+<a class="tree-link" href="27-build-a-game-in-unreal-editor-for-fortnite.html">27. 构建一款游戏</a>
+<a class="tree-link" href="28-unreal-editor-for-fortnite-starter-templates.html">28. UEFN 新手模板</a>
+<div class="tree-sec">G · Verse</div>
+<a class="tree-link" href="29-learn-the-basics-of-writing-code-in-verse.html">29. 从零学习 Verse 代码基础</a>
+<div class="tree-sec">H · 专注领域</div>
+<a class="tree-link" href="30-lighting-in-unreal-editor-for-fortnite.html">30. 灯光</a>
+<a class="tree-link" href="31-animation-and-cinematics-in-unreal-editor-for-fortnite.html">31. 动画与过场动画</a>
+<a class="tree-link" href="32-modeling-in-unreal-editor-for-fortnite.html">32. 建模</a>
+<a class="tree-link" href="33-materials-in-unreal-editor-for-fortnite.html">33. 材质</a>
+<a class="tree-link" href="34-environments-and-landscapes-in-unreal-editor-for-fortnite.html">34. 环境与地形</a>
+<a class="tree-link" href="35-audio-in-unreal-editor-for-fortnite.html">35. 音频</a>
+<a class="tree-link" href="36-visual-effects-in-unreal-editor-for-fortnite.html">36. 视觉特效</a>
+</ul></nav></div></aside>
+<div class="page-content"><div class="page-document has-theme-bg">
+<header class="section-page-header"><nav><ol class="breadcrumb is-shrinkable"><li class="breadcrumb-item is-root"><img src="../assets/logo-epic.svg" alt="Epic Games"><a href="../index.html">Developer</a></li><li class="breadcrumb-item"><a href="../index.html">Fortnite 文档</a></li><li class="breadcrumb-item"><a href="08-scene-graph-in-unreal-editor-for-fortnite.html">场景图 Scene Graph</a></li><li class="breadcrumb-item active" aria-current="page"><span class="text-truncate">Scene Graph 中的变换（Transform）</span></li></ol></nav><h1>Scene Graph 中的变换（Transform）</h1><p class="text-secondary mb-0">Scene Graph 实体的变换定义其位置、朝向与尺寸：理解 transform 与 transform_component、局部变换与全局变换的计算，以及在编辑器与 Verse 中的用法。</p><p class="doc-meta">英文原标题：Transforms in Scene Graph in Unreal Editor for Fortnite · <a href="https://dev.epicgames.com/documentation/fortnite/transforms-in-scene-graph-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">查看英文原文</a> · 社区翻译镜像，仅供学习</p></header>
+<div class="doc-columns"><article class="doc-article">
+<p>Scene Graph 实体的<strong>变换（Transform）</strong>定义实体的<strong>平移（translation，位置）</strong>、<strong>旋转（rotation，朝向）</strong>与<strong>缩放（scale，尺寸）</strong>。要变换 Scene Graph 实体，实体必须带有 <strong>transform_component</strong>。transform_component 包含两个可通过 UEFN 或 Verse 代码操作的字段：</p>
+<ul>
+<li><strong>Origin（原点）：</strong>计算 LocalTransform 的可选原点；</li>
+<li><strong>LocalTransform（局部变换）：</strong>相对于实体父级（若设置了 Origin 字段，则相对于 Origin）的 <code>(/Verse.org/SpatialMath:)transform</code>。</li>
+</ul>
+<p>实体的原点指计算其实体 transform_component 的 LocalTransform 所依据的实体：如果 transform_component 上设置了 Origin 字段，就是该字段的值；未设置，就是实体在 Scene Graph 层级中的父级。</p>
+<p>务必区分 transform 与 transform_component。transform 是 <code>/Verse.org/SpatialMath</code> 模块定义的复合数据类型，在<strong>左-上-前（Left-Up-Forward，LUF）</strong>坐标系中存储以下量：</p>
+<ul>
+<li><strong>平移（Translation）</strong>（<code>vector3</code>）：物体的位置；</li>
+<li><strong>旋转（Rotation）</strong>（<code>rotation</code>）：物体的朝向；</li>
+<li><strong>缩放（Scale）</strong>（<code>vector3</code>）：物体的尺寸。</li>
+</ul>
+<p>transform_component 是 <code>/Verse.org/SceneGraph</code> 模块定义的 Verse 类，存储 Scene Graph 实体的 LocalTransform，以及可选的替代 Origin。可以把 transform_component 理解为配发给实体的容器，装着定义其在模拟中位置的 transform。</p>
+<h3>Verse 变换（Verse Transforms）</h3>
+<p>Scene Graph 使用 <code>/Verse.org/SpatialMath</code> 模块的 transform。Verse 模块 transform 采用右手 LUF 坐标系。构造 Verse transform 可以用类原型与创建 <code>rotation</code> 的内置方法：</p>
+<pre><code># 指定所有字段的 Transform
+MyTransform:transform = transform:
+    Translation := vector3{Left := 2.0, Up := -4.0, Forward := 8.0}
+    Rotation := MakeRotationFromEulerDegrees(-90.0, 180.0, 0.0)
+    Scale := vector3{Left := 2.0, Up := 4.0, Forward := 2.0}
+
+# 只指定 Translation 的 Transform
+MyOtherTransform:transform = transform:
+    Translation := vector3{Up := 512.0}</code></pre>
+<p>关于 UEFN 坐标系的更多信息，请参阅左-上-前坐标系页面，其中也介绍了 <code>/UnrealEngine.com/Temporary/SpatialMath</code> 模块的 XYZ transform 与 Verse 模块 transform 的互转。</p>
+<h3>用 transform_component 构造实体（Construct an Entity with a transform_component）</h3>
+<p>可以在 UEFN 大纲视图中构造实体，也可以用 Verse 构造。</p>
+<h3>在 UEFN 中（In UEFN）</h3>
+<p>通过 <strong>Place Actors</strong> 菜单可以快速向项目添加 Scene Graph 实体。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/e3940c04-ef0f-4426-adb8-fe26144c2ba8?resizing_type=fit" alt="通过 Place Actors 添加实体的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/e3940c04-ef0f-4426-adb8-fe26144c2ba8?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>通过 <strong>Place Actors</strong> 菜单向项目添加 Scene Graph 实体时，实体默认自带 transform_component。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/0295b17b-48dc-489b-8727-e0649f8ae3cb?resizing_type=fit" alt="实体默认自带 transform_component 的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/0295b17b-48dc-489b-8727-e0649f8ae3cb?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>如果愿意，可以在大纲视图面板找到刚放置的实体，定位 transform_component 并选择<strong>移除组件（Remove Component）</strong>将其移除。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/d0e501d8-6991-4faf-8dae-4215dcdacb31?resizing_type=fit" alt="移除 transform_component 的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/d0e501d8-6991-4faf-8dae-4215dcdacb31?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>如下所示，该实体已不再带有 transform_component。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/73c5c26e-2339-489f-8693-3140672cf68a?resizing_type=fit" alt="已移除 transform_component 的实体的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/73c5c26e-2339-489f-8693-3140672cf68a?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h3>在 Verse 中（In Verse）</h3>
+<p>用类原型通过 Verse 代码创建 Scene Graph 实体时：</p>
+<pre><code>MyEntity:entity = entity{}</code></pre>
+<p>该实体不会自带 transform_component，必须另行添加。推荐用 <code>SetLocalTransform</code> 与 <code>SetGlobalTransform</code> 操作变换：这两个函数会同时完成 transform_component 的创建、赋值与挂载。</p>
+<pre><code>MyEntity:entity = entity{}
+
+# 把实体加入 simulation entity，游玩开始时 MyEntity 即开始模拟
+if (SimEntity := Entity.GetSimulationEntity[]):
+    SimEntity.AddEntities(array{MyEntity})
+
+# 单位变换
+IdentityTransform:transform = transform:
+    Translation := vector3{Left := 0.0, Up := 0.0, Forward := 0.0}
+    Rotation := MakeRotationFromEulerDegrees(0.0, 0.0, 0.0)</code></pre>
+<p>也可以直接用 <code>AddComponents</code> 添加组件：</p>
+<pre><code># 把实体加入 simulation entity，游玩开始时 MyEntity 即开始模拟
+if (SimEntity := Entity.GetSimulationEntity[]):
+    SimEntity.AddEntities(array{MyEntity})
+
+# 使用 AddComponents
+MyEntity.AddComponents(array{ transform_component{ Entity := MyEntity }})
+
+# 与上同，但一次添加多个组件时可读性更好
+MyEntity.AddComponents of array:
+    transform_component{Entity := MyEntity}</code></pre>
+<p>通过 Verse 代码为 Scene Graph 实体添加 transform_component 的更多方法，见“在 Verse 中使用 transform_component”一节。</p>
+<h2 id="sec-1">实体的变换如何计算（How an Entity's Transform is Calculated）</h2>
+<p>对带 transform_component 的 Scene Graph 实体，最重要的操作就是获取或设置其实体变换。</p>
+<p>你可能关心的变换有两种：<strong>局部变换（local transform）</strong>与<strong>全局变换（global transform）</strong>。要有效操作实体变换，必须理解它们的计算方式。</p>
+<p><strong>局部变换</strong>是相对于实体原点的变换，数值就是 Scene Graph 实体 transform_component 上 LocalTransform 字段的值。</p>
+<p><strong>全局变换</strong>是相对于全局空间 LUF 坐标系原点的变换，计算方式是把实体的 LocalTransform 与以下变换复合：</p>
+<ul>
+<li>若实体 transform_component 未设置 Origin 字段，与实体父级的全局变换复合；</li>
+<li>若设置了 Origin 字段，与实体原点的全局变换复合。</li>
+</ul>
+<p>下面用平移、无旋转无缩放的例子 walk through（逐步推演），此时变换合成就是平移相加。为简便起见，假设所有变换的旋转与缩放均为单位值，直接用变换平移向量指代实体的变换。</p>
+<p>设有三个 Scene Graph 实体，LUF 坐标系下：</p>
+<ul>
+<li><strong>BaseEntity：</strong>LocalTransform (0.0, 0.0, 0.0)；</li>
+<li><strong>A：</strong>LocalTransform (750.0, 100.0, 0.0)；</li>
+<li><strong>B：</strong>LocalTransform (-250.0, 100.0, 0.0)。</li>
+</ul>
+<p>场景中三个实体如下：<strong>BaseEntity</strong> 无 mesh_component，<strong>A</strong> 为立方体，<strong>B</strong> 为圆锥体：</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/d8ed77d3-949e-4ff3-916d-c564e241ac43?resizing_type=fit" alt="三个实体场景的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/d8ed77d3-949e-4ff3-916d-c564e241ac43?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/748c195e-137d-4e8c-81b8-3ae840fed6cd?resizing_type=fit" alt="实体层级与局部变换的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/748c195e-137d-4e8c-81b8-3ae840fed6cd?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>例如要确定实体 <strong>B</strong> 的局部变换与全局变换。局部变换一目了然：就是实体 <strong>B</strong> 的 transform_component 上 LocalTransform 字段的值，如下所示：</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/e4dff2cb-0953-4419-9d6d-8e820e645d20?resizing_type=fit" alt="实体 B 局部变换字段的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/e4dff2cb-0953-4419-9d6d-8e820e645d20?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>实体 <strong>B</strong> 的局部变换为 (-250.0, 100.0, 0.0)。</p>
+<p>要计算实体 <strong>B</strong> 的全局变换，需从实体 <strong>B</strong> 沿层级回溯到 simulation entity，再从 simulation entity 向下逐级复合变换到实体 <strong>B</strong>。<strong>Simulation Entity</strong> 是当前模拟的根，其下挂着所有参与模拟的实体。</p>
+<p>计算实体 <strong>B</strong> 全局变换的步骤：</p>
+<ul>
+<li>simulation entity 是当前模拟的根；</li>
+<li>Simulation Entity 全局变换：(0.0, 0.0, 0.0)；</li>
+<li><strong>BaseEntity</strong> 是 simulation entity 的子级，局部变换为 (0.0, 0.0, 0.0)（如图 1.0）。Simulation Entity 全局变换与 BaseEntity 局部变换复合得：
+<ul><li>BaseEntity 全局变换：(0.0, 0.0, 0.0) + (0.0, 0.0, 0.0) = (0.0, 0.0, 0.0)；</li></ul></li>
+<li>实体 <strong>A</strong> 是 BaseEntity 的子级，局部变换为 (750.0, 100.0, 0.0)（如图 1.1）。BaseEntity 全局变换与实体 <strong>A</strong> 的位置变换复合得：
+<ul><li>实体 <strong>A</strong> 全局变换：(0.0, 0.0, 0.0) + (750.0, 100.0, 0.0) = (750.0, 100.0, 0.0)；</li></ul></li>
+<li>实体 B 是实体 <strong>A</strong> 的子级，局部变换为 (-250.0, 100.0, 0.0)（如图 1.2）。<strong>A</strong> 的全局变换与实体 <strong>B</strong> 的位置变换复合得：
+<ul><li>实体 <strong>B</strong> 全局变换：(750.0, 100.0, 0.0) + (-250.0, 100.0, 0.0) = (500.0, 200.0, 0.0)。</li></ul></li>
+</ul>
+<p>因此实体 <strong>B</strong> 的全局变换在 LUF 坐标系中为 (500.0, 200.0, 0.0)。</p>
+<h2 id="sec-2">在编辑器中使用 transform_component（Working with the transform_component in the Editor）</h2>
+<p>用 LocalTransform 与 Origin 可以操作实体的变换。</p>
+<h3>局部变换（Local Transform）</h3>
+<p>实体 transform_component 的 <strong>LocalTransform</strong> 字段是实体相对于其 Origin 的 <code>(/Verse.org/SpatialMath:)transform</code>。若未显式设置 Origin 字段，实体 Origin 默认为其在 Scene Graph 层级中的父级。LocalTransform 是 UEFN 中的可编辑字段，可直接编辑实体：</p>
+<ul>
+<li><strong>平移（Translation）：</strong>相对于父级或手动指定 Origin 的位置。
+<ul><li>修改实体平移可在关卡中移动它；</li></ul></li>
+<li><strong>旋转（Rotation）：</strong>相对于父级或手动指定 Origin 的朝向。
+<ul><li>修改实体旋转可绕实体轴心点旋转它；</li></ul></li>
+<li><strong>缩放（Scale）：</strong>相对于父级或手动指定 Origin 的尺寸。
+<ul><li>修改实体缩放可把它放大或缩小。</li></ul></li>
+</ul>
+<h3>原点（Origin）</h3>
+<p>实体 transform_component 的 <strong>Origin</strong> 是计算 LocalTransform 所依据的对象。该字段可选，默认依据拥有实体的父实体计算 transform_component 的 LocalTransform。你也可以设置实体 transform_component 的 Origin 字段，依据父级以外的对象计算 LocalTransform。</p>
+<p>例如可以把实体的 Origin 设为另一个完全不同的实体。该字段可设为任何实现 Verse <code>origin</code> 接口的类。要把 Origin 字段设为另一个 Scene Graph 实体，可选用 <code>entity_origin</code> 类，再选中想作为新原点的实体。</p>
+<p>注意区分 transform_component 的 Origin 与 LUF 坐标系的原点：LUF 坐标系的原点是世界空间中平移为 (0.0, 0.0, 0.0) 的点。</p>
+<p>实体 transform_component 的 Origin 是：当其实体 transform_component 的 LocalTransform 平移为 (0.0, 0.0, 0.0) 时，该实体所在的位置。</p>
+<p>下面 walk through Origin 字段与 LocalTransform 的实际配合。设有位于世界空间原点的 <strong>BaseEntity</strong>，子实体 <strong>A</strong>（立方体 mesh_component）与子实体 <strong>B</strong>（圆锥体 mesh_component）。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/ffe20027-f6d9-4fca-9881-1e357956708d?resizing_type=fit" alt="BaseEntity 与子实体示例的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/ffe20027-f6d9-4fca-9881-1e357956708d?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>如上图，<strong>BaseEntity</strong> 位于世界空间原点：其 transform_component 的 Origin 字段未设置，LocalTransform 设为世界空间原点。</p>
+<p>如下所示，实体 <strong>A</strong> 的 Origin 字段同样未设置，因此其 LocalTransform 依据父级 <strong>BaseEntity</strong> 的 transform_component 计算。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/b9194a54-a4da-4eca-8624-25c0f0f5ba33?resizing_type=fit" alt="实体 A 原点未设置的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/b9194a54-a4da-4eca-8624-25c0f0f5ba33?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>由于 <strong>BaseEntity</strong> 位于世界空间原点，实体 <strong>A</strong> 的 LocalTransform 平移设为 <code>vector3{Left := 750.0, Up := 100.0, Forward := 0.0}</code>，实体 <strong>A</strong> 就位于 <code>vector3{Left := 750.0, Up := 100.0, Forward := 0.0}</code>。实体 <strong>A</strong> 的旋转与缩放保持不变，因为 <strong>BaseEntity</strong> 上 LocalTransform 的<strong>旋转</strong>与<strong>缩放</strong>均为单位值。</p>
+<p>如下图，同样身为 <strong>BaseEntity</strong> 子级的实体 <strong>B</strong>，其 transform_component 的 Origin 字段被设为实体 <strong>A</strong>。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/89811f2f-e1b9-486a-8e27-6cc6693e8ca4?resizing_type=fit" alt="实体 B 原点设为实体 A 的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/89811f2f-e1b9-486a-8e27-6cc6693e8ca4?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>因此实体 <strong>B</strong> 的 transform_component 上 LocalTransform 字段是相对于实体 <strong>A</strong> 的计算变换。实体 <strong>B</strong> 的 LocalTransform 设为 <code>vector3{Left := -250.0, Up := 100.0, Forward := 0.0}</code>，实体 <strong>A</strong> 的 LocalTransform 设为 <code>vector3{Left := 750.0, Up := 100.0, Forward := 0.0}</code>，实体 <strong>B</strong> 的全局变换为 <code>vector3{Left := 500.0, Up := 200.0, Forward := 0.0}</code>。</p>
+<p>如果把实体 A 的 transform_component 上 LocalTransform 字段的旋转分量改为绕 Forward 轴 -90.0 度，实体 B 也会绕 Forward 轴旋转 -90.0 度，因为子级的旋转继承自父级。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/93ec813e-dec4-46be-b6d9-592817067474?resizing_type=fit" alt="子级继承父级旋转的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/93ec813e-dec4-46be-b6d9-592817067474?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h2 id="sec-3">在 Verse 中使用 transform_component（Working with the transform_component in Verse）</h2>
+<p>可用 <code>GetComponent</code> 检查实体是否带有 transform_component：</p>
+<pre><code>MyEntityNoTransform:entity = entity{}
+if (SimEntity := Entity.GetSimulationEntity[]):
+    SimEntity.AddEntities(array{MyEntityNoTransform})
+
+MyEntityWithTransform:entity = entity{}
+MyEntityWithTransform.AddComponents of array:
+    transform_component{Entity := MyEntityWithTransform}
+if (SimEntity := Entity.GetSimulationEntity[]):
+    ...</code></pre>
+<p>与其用 <code>GetComponent</code> 取出 transform_component 直接操作，推荐的方式是用<strong>实体扩展方法（entity extension methods）</strong>与 transform_component 交互。</p>
+<h3>变换（Transform）</h3>
+<p>可用实体扩展方法 <code>SetLocalTransform</code> 或 <code>SetGlobalTransform</code> 直接设置实体的局部或全局变换：</p>
+<pre><code>MyEntity:entity = entity{}
+MyTransform:transform = transform{}
+if (SimEntity := Entity.GetSimulationEntity[]):
+    SimEntity.AddEntities(array{MyEntity})
+
+# 设置局部变换
+MyEntity.SetLocalTransform(MyTransform)
+MyOtherEntity:entity = entity{}</code></pre>
+<p>这些扩展方法是 Verse 代码中设置 Scene Graph 实体变换的首选：显式设置目标实体的局部变换（相对于其父级）或全局变换（相对于世界原点）。调用任一函数时若实体尚无 transform_component，会隐式创建并挂载，调用后实体即带有 <code>transform_component</code>，随后调用 <code>GetComponent</code> 即可验证：</p>
+<pre><code>if (MyEntity.GetComponent[transform_component]):
+    # 成功，实体带有 transform_component
+else:
+    # 失败，实体没有 transform_component</code></pre>
+<p>用扩展方法还能获取实体关联 transform_component 的局部变换或全局变换。<code>GetLocalTransform</code> 返回实体相对于父实体（或已设置的 Origin 字段）的变换；若实体没有 <code>transform_component</code>，该函数返回单位变换：</p>
+<pre><code># 实体对象
+MyEntity:entity = entity{}
+if (SimEntity := Entity.GetSimulationEntity[]):
+    SimEntity.AddEntities(array{MyEntity})
+
+# 获取相对于父级或 Origin（若设置）的局部变换
+EntityLocalTransform := MyEntity.GetLocalTransform()
+# 无 transform component，返回单位变换
+MyOtherEntity:entity = entity{}</code></pre>
+<p><code>GetGlobalTransform</code> 返回实体相对于世界原点的变换；若实体没有 <code>transform_component</code>，该函数返回最近带 <code>transform_component</code> 的祖先的全局变换：</p>
+<pre><code># 实体对象
+MyEntity:entity = entity{}
+if (SimEntity := Entity.GetSimulationEntity[]):
+    SimEntity.AddEntities(array{MyEntity})
+
+# 获取全局变换
+EntityGlobalTransform := MyEntity.GetGlobalTransform()
+# 返回 Simulation Entity 的全局变换</code></pre>
+<h3>原点（Origin）</h3>
+<p>transform_component 的 Origin 字段也有对应的实体扩展方法。可用实体扩展方法 <code>SetOrigin</code> 直接设置实体 transform_component 的 Origin 字段：</p>
+<pre><code>MyEntity:entity = entity{}
+MyOtherEntity:entity = entity{}
+if (SimEntity := Entity.GetSimulationEntity[]):
+    SimEntity.AddEntities(array{MyEntity, MyOtherEntity})
+
+MyEntity.SetLocalTransform(transform{Translation := vector3{Left := 100.0}})
+
+# 构造 entity_origin 对象，把 MyEntity 的新原点设为 MyOtherEntity
+NewOrigin:entity_origin = entity_origin{Entity := MyOtherEntity}</code></pre>
+<p>要在 Verse 代码中获取实体的 Origin，用 <code>GetOrigin</code>：</p>
+<pre><code>MyEntity:entity = entity{}
+if (SimEntity := Entity.GetSimulationEntity[]):
+    SimEntity.AddEntities(array{MyEntity})
+
+if (OriginValue := MyEntity.GetOrigin[]):
+    # 不应成功
+else:
+    # 应失败，实体上没有 transform_component</code></pre>
+<p><code>GetOrigin</code> 判断实体是否设置了 Origin 字段，设置了就返回该字段值，否则调用失败。成功时 <code>GetOrigin</code> 的返回类型是 <code>origin</code> 对象——实现 <code>origin</code> 接口的 Verse 类。该接口只提供一个函数 GetTransform，用于获取实体指定原点的变换。你也可以检查替代 Origin 字段是否设为某个实体，以及是哪个实体被设为你实体的 Origin：</p>
+<pre><code>if:
+    OriginValue := MyOtherEntity.GetOrigin[]  # 获取 Origin 对象
+    OriginEntityCast := entity_origin[OriginValue]  # 转换为 entity_origin
+then:
+    # 获取设为 MyOtherEntity transform_component 上 Origin 字段的实体
+    MyOtherEntityOrigin := OriginEntityCast.Entity
+    # 获取该原点的变换
+    TransformOfOrigin := OriginEntityCast.GetTransform()</code></pre>
+<p>最后，可用 <code>ResetOrigin</code> 重置实体 transform_component 的 Origin 字段：</p>
+<pre><code>MyEntity.ResetOrigin()</code></pre>
+<p>调用 <code>ResetOrigin</code> 后，MyEntity 的 transform_component 的 Origin 字段被重置，MyEntity 的变换改按 Scene Graph 层级中的父实体计算。</p>
+<h2 id="sec-4">依赖组件（Dependent Components）</h2>
+<p>其他一些 Scene Graph 组件依赖 transform_component 才能工作，包括：</p>
+<ul>
+<li>light_component 及其子类；</li>
+<li>mesh_component；</li>
+<li>particle_system_component。</li>
+</ul>
+<p>如果把这些组件加到尚无 transform_component 的 Scene Graph 实体上，transform_component 会默认一并加入该实体。</p>
+<h2 id="sec-5">关于 XYZ 变换的说明（Note on XYZ Transforms）</h2>
+<p><code>/UnrealEngine.com/Temporary/SpatialMath</code> Verse 模块中的 XYZ 坐标系变换仍然存在。<code>/Fortnite.com</code> Verse 模块中的创意模式设备与道具仍在使用这些变换。关于这些变换的状态与 Verse 中不同变换类型的互转，请参阅<a href="https://dev.epicgames.com/documentation/fortnite/leftupforward-coordinate-system-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">左-上-前坐标系（Left-Up-Forward Coordinate System）</a>页面。</p>
+<p>相关标签：<a href="https://dev.epicgames.com/community/search?query=gameplay" target="_blank" rel="noopener">gameplay</a> · <a href="https://dev.epicgames.com/community/search?query=component" target="_blank" rel="noopener">component</a> · <a href="https://dev.epicgames.com/community/search?query=scene%20graph" target="_blank" rel="noopener">scene graph</a></p>
+<p><a href="https://forums.unrealengine.com/categories?tag=fortnite" target="_blank" rel="noopener">在开发者论坛提问并帮助同伴</a></p>
+<p><a href="https://dev.epicgames.com/community/fortnite/learning" target="_blank" rel="noopener">在学习库中编写或阅读他人教程</a></p>
+<div class="pager"><a href="08-scene-graph-in-unreal-editor-for-fortnite.html"><small>← 返回父教程</small>场景图 Scene Graph</a><a href="sub-index.html"><small>子教程索引 →</small>全部子教程</a></div>
+</article><nav class="doc-toc" aria-label="本页内容"><b>本页内容</b><a href="#sec-1">实体的变换如何计算</a><a href="#sec-2">在编辑器中使用 transform_component</a><a href="#sec-3">在 Verse 中使用 transform_component</a><a href="#sec-4">依赖组件</a><a href="#sec-5">关于 XYZ 变换的说明</a></nav></div>
+</div></div>
+</div>
+<footer class="edc-footer"><div class="inner"><img src="../assets/logo-epic.svg" alt="Epic Games"><span>Fortnite 文档中文镜像 · UE教程/ · 本地打开 index.html 阅读 · 翻译整理自 Epic 官方文档，仅供学习交流</span></div></footer>
+</body>
+</html>

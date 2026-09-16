@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>环境光照平台设备 | Fortnite 文档中文镜像</title>
+<link rel="stylesheet" href="../assets/epic.css">
+<link rel="stylesheet" href="../assets/patch.css">
+<link rel="icon" href="../assets/logo-epic.svg">
+</head>
+<body class="theme-fortnite">
+<div class="edc-topbar"><div class="edc-topbar-inner"><img class="edc-logo" src="../assets/logo-epic.svg" alt="Epic Games"><span class="edc-brand">Epic Games <b>开发者社区</b></span><span class="edc-nav"><a href="../index.html">文档首页</a><a href="sub-index.html">子教程索引</a><a href="https://dev.epicgames.com/documentation/fortnite/environment-light-rig-device-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">英文原文</a></span></div></div>
+<div class="site-container">
+<aside class="site-nav"><div class="documents-tree"><nav><ul class="contents-table">
+<div class="tree-sec">A最新动态</div><a class="tree-link" href="01-42-00-fortnite-ecosystem-updates-and-release-notes.html">01. 42.00 生态系统更新与发行说明</a><a class="tree-link" href="02-custom-items-and-inventory-overview-in-fortnite.html">02. 自定义物品与背包总览</a><a class="tree-link" href="03-in-island-transactions-in-fortnite.html">03. 岛内交易</a><a class="tree-link" href="04-mobile-development-in-fortnite.html">04. 移动端开发</a><a class="tree-link" href="05-inputs-in-fortnite.html">05. 输入系统</a><a class="tree-link" href="06-ability-system-in-unreal-editor-for-fortnite.html">06. 能力系统 Ability System</a><a class="tree-link" href="07-partybased-gameplay-using-the-social-synergy-api-in-fortnite.html">07. 社交协同 API 与小队玩法</a><a class="tree-link" href="08-scene-graph-in-unreal-editor-for-fortnite.html">08. 场景图 Scene Graph</a><div class="tree-sec">B入门</div><a class="tree-link" href="09-build-your-first-island-in-fortnite.html">09. 构建你的第一个岛屿</a><a class="tree-link" href="10-onboarding-guide-to-programming-with-verse-in-unreal-editor-for-fortnite.html">10. Verse 编程入门指南</a><a class="tree-link" href="11-building-basics-in-fortnite-creative.html">11. 建造基础</a><div class="tree-sec">C品牌合集</div><a class="tree-link" href="12-star-wars-islands-in-fortnite.html">12. 星球大战™岛屿</a><a class="tree-link" href="13-kpop-demon-hunters-islands-in-fortnite.html">13. KPop 猎魔团岛屿</a><a class="tree-link" href="14-building-lego-islands-in-fortnite.html">14. 乐高®岛屿</a><a class="tree-link" href="15-the-walking-dead-universe-islands-in-unreal-editor-for-fortnite.html">15. 行尸走肉宇宙岛屿</a><a class="tree-link" href="16-teenage-mutant-ninja-turtle-islands-in-unreal-editor-for-fortnite.html">16. 忍者神龟岛屿</a><a class="tree-link" href="17-squid-game-islands-in-fortnite.html">17. 鱿鱼游戏岛屿</a><div class="tree-sec">D开发者成功</div><a class="tree-link" href="18-using-creator-portal-in-fortnite-creative.html">18. 使用创作者门户</a><a class="tree-link" href="19-island-moderation-and-guidelines-in-fortnite-creative.html">19. 岛屿审核与准则</a><div class="tree-sec">E协作</div><a class="tree-link" href="20-creating-teams-in-creator-portal-in-unreal-editor-for-fortnite.html">20. 在创作者门户创建团队</a><a class="tree-link" href="21-adding-playtesters-in-fortnite-creative.html">21. 添加试玩测试员</a><a class="tree-link" href="22-playtesting-your-island-in-unreal-editor-for-fortnite.html">22. 试玩测试你的岛屿</a><a class="tree-link" href="23-collaborating-in-unreal-editor-for-fortnite.html">23. 在 UEFN 中协作</a><a class="tree-link" href="24-lore-version-control-in-unreal-editor-for-fortnite.html">24. Lore 版本控制</a><a class="tree-link" href="25-conflicts-in-lore-version-control-in-unreal-editor-for-fortnite.html">25. Lore 中的冲突</a><a class="tree-link" href="26-version-history-and-conflict-resolution-in-unreal-editor-for-fortnite.html">26. 分支历史与冲突解决</a><div class="tree-sec">F游戏示例</div><a class="tree-link" href="27-build-a-game-in-unreal-editor-for-fortnite.html">27. 构建一款游戏</a><a class="tree-link" href="28-unreal-editor-for-fortnite-starter-templates.html">28. UEFN 新手模板</a><div class="tree-sec">G Verse</div><a class="tree-link" href="29-learn-the-basics-of-writing-code-in-verse.html">29. 从零学习 Verse 代码基础</a><div class="tree-sec">H专注领域</div><a class="tree-link active" href="30-lighting-in-unreal-editor-for-fortnite.html">30. 灯光</a><a class="tree-link" href="31-animation-and-cinematics-in-unreal-editor-for-fortnite.html">31. 动画与过场动画</a><a class="tree-link" href="32-modeling-in-unreal-editor-for-fortnite.html">32. 建模</a><a class="tree-link" href="33-materials-in-unreal-editor-for-fortnite.html">33. 材质</a><a class="tree-link" href="34-environments-and-landscapes-in-unreal-editor-for-fortnite.html">34. 环境与地形</a><a class="tree-link" href="35-audio-in-unreal-editor-for-fortnite.html">35. 音频</a><a class="tree-link" href="36-visual-effects-in-unreal-editor-for-fortnite.html">36. 视觉特效</a>
+</ul></nav></div></aside>
+<div class="page-content"><div class="page-document has-theme-bg">
+<header class="section-page-header"><nav><ol class="breadcrumb is-shrinkable"><li class="breadcrumb-item is-root"><img src="../assets/logo-epic.svg" alt="Epic Games"><a href="../index.html">Developer</a></li><li class="breadcrumb-item"><a href="../index.html">Fortnite 文档</a></li><li class="breadcrumb-item"><a href="30-lighting-in-unreal-editor-for-fortnite.html">灯光</a></li><li class="breadcrumb-item active" aria-current="page"><span class="text-truncate">环境光照平台设备</span></li></ol></nav><h1>环境光照平台设备</h1><p class="text-secondary mb-0">环境光照平台（Environment Light Rig）让创作者可以为岛屿添加全局世界光照，从一天中的时间、阳光颜色入手，逐步打磨出独特的项目外观。</p><p class="doc-meta">英文原标题：Environment Light Rig Device in Unreal Editor for Fortnite · <a href="https://dev.epicgames.com/documentation/fortnite/environment-light-rig-device-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">查看英文原文</a> · 社区翻译镜像，仅供学习</p></header>
+<div class="doc-columns"><article class="doc-article">
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/d41c4d02-684d-4f94-ab2d-0026d95c697e?resizing_type=fill&width=1920&height=335" alt="环境光照平台设备题图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/d41c4d02-684d-4f94-ab2d-0026d95c697e?resizing_type=fill&width=1920&height=335" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p><strong>环境光照平台（Environment Light Rig）</strong>为创作者提供了一种为岛屿添加全局世界光照的方式。</p>
+<p>从最重要的调整入手，比如一天中的时间、阳光颜色、天光颜色和色温。在此之后，你可以添加更精细的更改，比如镜头光斑，或者渐晕（vignetting）和色差（chromatic aberration）等镜头效果。</p>
+<p>可以把它看作创建自定义阳光、月光、地平线、反射等效果的途径。建议进行大胆的渐进式更改，为你的自然光照确定一个中间基准。先用尽可能少的调整创建项目的基础光照，再着手打磨项目的独特外观。</p>
+<p>用最少的调整确定基础光照，意味着每次调整光照时你都不必从头开始。</p>
+<p>环境光照平台控制整个岛屿的光照，因此该设备只能放置一次。</p>
+<p>要使用此设备，请在<strong>世界设置（World Settings）</strong>中禁用<strong>一天时间管理器（Time of Day Manager）</strong>。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/78e49607-ebe5-4a79-baf7-748bd00b4924?resizing_type=fit&width=1920&height=1080" alt="添加环境光照平台前的岛屿效果" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/78e49607-ebe5-4a79-baf7-748bd00b4924?resizing_type=fit&width=1920&height=1080" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/8f97fb6d-eff8-4a82-bb37-bf0a2272277b?resizing_type=fit" alt="环境光照平台设备原文示意图1" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/8f97fb6d-eff8-4a82-bb37-bf0a2272277b?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>通过学习库（Learning Library）中的 <strong>UEFN 高级光照（UEFN Advanced Lighting）</strong>视频教程，学习如何在 UEFN 中使用光照工具为你的岛屿打造自定义环境。</p>
+<ul>
+<li><a href="https://dev.epicgames.com/community/learning/tutorials/8Xbj/fortnite-epic-for-indies-uefn-advanced-lighting-ch-1-of-3-time-of-day-manager" target="_blank" rel="noopener">UEFN 高级光照：一天时间管理器（UEFN Advanced Lighting: Time of Day Manager）</a></li>
+<li><a href="https://dev.epicgames.com/community/learning/tutorials/3XVo/fortnite-epic-for-indies-uefn-advanced-lighting-ch-2-of-3-environment-light-rig" target="_blank" rel="noopener">UEFN 高级光照：环境光照平台（UEFN Advanced Lighting: Environment Light Rig）</a></li>
+<li><a href="https://dev.epicgames.com/community/learning/tutorials/6Xn2/fortnite-uefn-advanced-lighting-ch-3-of-3-lumen-exposure-manager" target="_blank" rel="noopener">UEFN 高级光照：Lumen 曝光管理器（Fortnite UEFN Advanced Lighting Ch. 3 of 3 Lumen Exposure Manager）</a></li>
+</ul>
+<h2 id="sec-1">查找并放置设备</h2>
+<ul>
+<li>打开<strong>内容浏览器（Content Browser）</strong>。（术语可参考<a href="https://dev.epicgames.com/documentation/fortnite/unreal-editor-for-fortnite-glossary#content-browser" target="_blank" rel="noopener">UEFN 词汇表</a>与<a href="https://dev.epicgames.com/documentation/fortnite/fortnite-glossary#content-browser" target="_blank" rel="noopener">Fortnite 词汇表</a>中的“内容浏览器”词条。）</li>
+<li>打开 <strong>Fortnite</strong> 文件夹索引列表。</li>
+<li>打开 <strong>Devices</strong> 文件夹。</li>
+<li>选择<strong>环境光照平台（Environment Light Rig）</strong>设备，将其点击并拖入<strong>视口（Viewport）</strong>。</li>
+<li>在<strong>大纲视图（Outliner）</strong>面板中选择<strong>环境光照平台</strong>设备。</li>
+<li>在<strong>细节（Details）</strong>面板中为<strong>环境光照平台</strong>设备配置<strong>用户选项（User Options）</strong>。</li>
+</ul>
+<p>你可以通过将轴心点切换为旋转点，并在世界中旋转设备图标，将光照指向你想要的位置，以此控制光照的方向。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/2aa6bfa3-07fd-4334-a63b-7cbb522a7be3?resizing_type=fit" alt="旋转设备图标以控制光照方向的示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/2aa6bfa3-07fd-4334-a63b-7cbb522a7be3?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h2 id="sec-2">设备选项</h2>
+<p>该设备有许多控制光照各方面的功能，比如方向光（Directional Lighting）、天空大气（Sky Atmosphere）、天光（Sky Light）、指数高度雾（Exponential Height Fog）等。此外，还有一些高级选项，用于控制到达视口相机传感器的光量，从而生成可视化数据。</p>
+<p>你可以从<strong>细节</strong>面板的<strong>组件字段（Component Field）</strong>中选择不同的光照组件来配置此设备。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/9974f4ac-84c3-453a-836d-3d14e91d4b30?resizing_type=fit" alt="细节面板中组件字段的示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/9974f4ac-84c3-453a-836d-3d14e91d4b30?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h3>方向光选项（Directional Lighting Options）</h3>
+<p>这些选项决定岛屿上世界光照的外观和行为。你可以控制太阳和月亮的外观、阴影的反弹方式等。</p>
+<p class="opt-cat"><strong>光照（Light）</strong></p>
+<h4>强度（Intensity）</h4>
+<p><strong>10.0</strong>，选择一个强度等级。</p>
+<p>光源的最大照明量，以勒克斯（lux）为单位。</p>
+<h4>光照颜色（Light Color）</h4>
+<p>展开该选项后，从色轮中选择颜色，或在 RGB 字段中填写数值。</p>
+<p>过滤光照的颜色。这可能会改变光照的有效强度。</p>
+<h4>光源角度（Source Angle）</h4>
+<p><strong>1.5</strong>，选择一个角度。</p>
+<p>光源角度以度为单位设置（也称为角直径）。</p>
+<h4>光源柔和角度（Source Soft Angle）</h4>
+<p><strong>0.0</strong>，选择一个角度。</p>
+<p>柔光光源的角度，以度为单位。</p>
+<h4>使用色温（Use Temperature）</h4>
+<p><strong>关（Off）</strong>，开（On）</p>
+<p>设为<strong>关</strong>时，白色光将作为默认滤光颜色。将该选项切换为<strong>开</strong>，即可使用<strong>色温（Temperature）</strong>设置。</p>
+<h4>色温（Temperature）</h4>
+<p><strong>6500.0</strong>，选择一个色温数值。</p>
+<p>决定光源上使用的滤光片颜色。</p>
+<h4>影响世界（Affects World）</h4>
+<p><strong>开（On）</strong>，关（Off）</p>
+<p>决定光照是否可以影响世界。禁用的光照不会以任何方式为场景贡献光照。</p>
+<p>此设置无法在运行时更改，更改后会取消构建光照。</p>
+<p>将此效果设为 false 与删除光照的效果相同，因此它适用于非破坏性的光照测试。</p>
+<h4>投射阴影（Cast Shadows）</h4>
+<p><strong>开（On）</strong>，关（Off）</p>
+<p>决定光照是否应投射阴影。</p>
+<h4>间接光照强度（Indirect Lighting Intensity）</h4>
+<p><strong>2.0</strong>，选择一个强度。</p>
+<p>缩放该光源的光照贡献。</p>
+<h4>体积散射强度（Volumetric Scattering Intensity）</h4>
+<p><strong>0.0</strong>，选择一个强度。</p>
+<p>该光源的体积散射强度。它会缩放强度和光照颜色。</p>
+<p class="opt-cat"><strong>高级（Advanced）</strong></p>
+<p>展开该选项。</p>
+<p>展开后还有控制光照通道和体积阴影的附加光照设置。</p>
+<h4>高光缩放（Specular Scale）</h4>
+<p>选择一个高光缩放设置。</p>
+<p>高光反射的乘数。</p>
+<p>请务必谨慎使用！除 1 以外的任何值都不符合物理规律。</p>
+<p>此设置可用于艺术化地去除高光，模拟偏振滤镜或照片修饰效果。</p>
+<h4>阴影分辨率缩放（Shadow Resolution Scale）</h4>
+<p>选择一个阴影分辨率缩放值。</p>
+<p>缩放用于该光源阴影的阴影贴图分辨率。默认情况下，阴影贴图分辨率根据投射者的屏幕尺寸选择。</p>
+<p>将缩放设为零会禁用阴影贴图，但不会禁用阴影。例如，接触阴影（Contact Shadows）仍保持启用。</p>
+<p>阴影贴图分辨率仍受“r.Shadow.MaxResolution”钳制。</p>
+<h4>阴影偏移（Shadow Bias）</h4>
+<p>选择一个偏移值。</p>
+<p>控制该光源投射的整个场景阴影的自阴影精确程度。</p>
+<p>为 0 时，阴影将从投射者表面开始，但会出现许多自阴影伪影。</p>
+<p>数值越大，阴影从投射者开始的位置越远，不会出现自阴影伪影，但物体可能看起来像在飘浮。</p>
+<p>0.5 左右似乎是个不错的折中值。这也会影响阴影的柔和过渡。</p>
+<h4>阴影斜率偏移（Shadow Slope Bias）</h4>
+<p>选择一个阴影斜率偏移值。</p>
+<p>控制该光源投射的整个场景阴影的自阴影精确程度。</p>
+<p>它在阴影偏移（Shadow Bias）的基础上，根据表面斜率增加偏移量。</p>
+<p>为 0 时，阴影将从投射者表面开始，但会出现许多自阴影伪影。</p>
+<p>数值越大，阴影从投射者开始的位置越远，不会出现自阴影伪影，但物体可能看起来像在飘浮。</p>
+<p>0.5 左右似乎是个不错的折中值。这也会影响阴影的柔和过渡。</p>
+<h4>阴影滤波锐化（Shadow Filter Sharpen）</h4>
+<p>选择一个阴影滤波锐化量。</p>
+<p>锐化阴影滤波的量。</p>
+<h4>接触阴影长度（Contact Shadow Length）</h4>
+<p>选择一个接触阴影长度。</p>
+<p>用于锐利接触阴影的屏幕空间光线追踪长度。</p>
+<p>设为零可禁用此设置。</p>
+<h4>世界空间单位的接触阴影长度（Contact Shadow Length in World Space Units）</h4>
+<p>关（Off），开（On）</p>
+<p>锐利接触阴影的屏幕光线追踪长度使用世界空间单位还是屏幕空间单位。</p>
+<h4>接触阴影投射强度（Contact Shadow Casting Intensity）</h4>
+<p>选择一个接触阴影投射强度量。</p>
+<p>启用了“投射接触阴影”的图元所投射阴影的强度。</p>
+<ul><li>0 = 无阴影</li><li>1（默认值）= 完全阴影</li></ul>
+<h4>接触阴影非投射强度（Contact Shadow Non Casting Intensity）</h4>
+<p>选择一个接触阴影非投射强度量。</p>
+<p>禁用了“投射接触阴影”的图元所投射阴影的强度。</p>
+<ul><li>0 = 无阴影</li><li>1（默认值）= 完全阴影</li></ul>
+<h4>光照通道（Lighting Channels）</h4>
+<p><strong>0</strong>、1、2，展开选项可直接选择通道</p>
+<p>决定图元和光源的默认通道。</p>
+<h4>投射体积阴影（Cast Volumetric Shadow）</h4>
+<p><strong>关（Off）</strong>，开（On）</p>
+<p>决定光照是否为体积雾投射阴影。禁用此项可以节省 GPU 时间。</p>
+<p class="opt-cat"><strong>渲染（Rendering）</strong></p>
+<p class="opt-cat"><strong>可见（Visible）</strong></p>
+<h4>可见（Visible）</h4>
+<p><strong>开（On）</strong>，关（Off）</p>
+<p>是否完整绘制该图元；为 false 时，该图元不被绘制，也不投射阴影。</p>
+<h4>使用挂接父级包围盒（Use Attach Parent Bound）</h4>
+<p><strong>关（Off）</strong>，开（On）</p>
+<p>为 true 时，该组件在挂接时使用其父级的包围盒。当多个组件挂接在一起时，这可能是一项重要的优化。</p>
+<p class="opt-cat"><strong>光轴（Light Shafts）</strong></p>
+<h4>光轴遮挡（Light Shaft Occlusion）</h4>
+<p><strong>关（Off）</strong>，开（On）</p>
+<p>决定是否使用该光源经屏幕空间模糊遮挡处理后的遮挡，来遮挡雾和大气中的散射。</p>
+<p>设为开时，遮挡蒙版暗度（Occlusion Mask Darkness）和遮挡深度范围（Occlusion Depth Range）选项变为可用。</p>
+<h4>遮挡蒙版暗度（Occlusion Mask Darkness）</h4>
+<p>选择一个遮挡蒙版暗度量。</p>
+<p>控制遮挡蒙版的暗度，值为 1 时不产生变暗项。</p>
+<h4>遮挡深度范围（Occlusion Depth Range）</h4>
+<p><strong>1000000.0</strong>，选择一个遮挡深度范围量</p>
+<p>比该距离更靠近相机的所有内容都会遮挡光轴。</p>
+<h4>光轴辉光（Light Shaft Bloom）</h4>
+<p><strong>关（Off）</strong>，开（On）</p>
+<p>决定是否为该光源渲染光轴辉光。</p>
+<p>对于方向光，光源方向周围的颜色将被径向模糊并加回场景。对于点光源，比光源半径（Source radius）更近的像素上的颜色将被径向模糊并加回场景。</p>
+<p>设为开时，辉光缩放（Bloom Scale）、辉光阈值（Bloom Threshold）和辉光最大亮度（Bloom Max Brightness）选项变为可用。</p>
+<h4>辉光缩放（Bloom Scale）</h4>
+<p><strong>0.2</strong>，选择一个辉光缩放量</p>
+<p>缩放叠加颜色。</p>
+<h4>辉光阈值（Bloom Threshold）</h4>
+<p><strong>0.0</strong>，选择一个辉光阈值量。</p>
+<p>场景颜色必须大于该值，才会在光轴周围产生辉光。</p>
+<h4>辉光最大亮度（Bloom Max Brightness）</h4>
+<p><strong>100,0</strong>，选择一个辉光最大亮度量。</p>
+<p>应用曝光后，如果场景颜色亮度数值大于辉光最大亮度，场景颜色亮度将被重新缩放至辉光最大亮度。</p>
+<h4>辉光色调（Bloom Tint）</h4>
+<p><strong>白色（White）</strong>，选择一个颜色。</p>
+<p>与场景颜色相乘以生成辉光颜色。</p>
+<p>展开此选项后，你可以分别为辉光色调颜色选择 R、G、B、Y 各分量。</p>
+<p class="opt-cat"><strong>级联阴影贴图（Cascade Shadow Maps）</strong></p>
+<h4>动态阴影距离（Dynamic Shadow Distance）</h4>
+<p>选择一个动态阴影距离。</p>
+<p>可移动光源的级联阴影贴图动态阴影覆盖范围，从相机开始测量。</p>
+<p>值为 0 时禁用动态阴影。</p>
+<h4>动态阴影级联数（Num Dynamic Shadow Cascades）</h4>
+<p>选择动态阴影级联数。</p>
+<p>将整个场景动态阴影的视锥分割成的级联数量。</p>
+<p>级联越多，阴影分辨率越好，但会显著增加渲染开销。</p>
+<h4>分布指数（Distribution Exponent）</h4>
+<p>选择一个分布量。</p>
+<p>控制级联分布更靠近相机（指数大）还是更远离相机（指数小）。</p>
+<p>指数为 1 表示级联过渡发生的距离与其分辨率成正比。</p>
+<h4>过渡比例（Transition Fraction）</h4>
+<p>选择一个过渡比例量。</p>
+<p>级联之间渐隐区域的比例。</p>
+<p>位于两个级联渐隐区域内的像素，其阴影会被混合，以避免质量等级之间的生硬过渡。</p>
+<ul><li>值为零会消除渐隐区域，产生生硬过渡。</li><li>值越大，渐隐区域越大，级联之间的过渡越平缓。</li><li>该值表示为百分比比例（例如 0.1 = 10% 重叠）。</li></ul>
+<p>理想值是能隐藏过渡的最小值。增大渐隐区域可能会增加阴影渲染开销。</p>
+<h4>距离渐隐比例（Distance Fadeout Fraction）</h4>
+<p>选择一个距离渐隐比例量。</p>
+<p>控制动态阴影影响最远端的渐隐区域大小，以动态阴影距离（DynamicShadowDistance）的比例表示。</p>
+<p class="opt-cat"><strong>高级（Advanced）</strong></p>
+<p>展开该选项。</p>
+<p>展开后还有挂接父级包围盒的附加选项。</p>
+<h4>远阴影级联数（Far Shadow Cascade Count）</h4>
+<p>选择一个远阴影级联量。</p>
+<ul><li>0 = 无远阴影级联</li></ul>
+<p>其他值表示动态阴影距离（DynamicShadowDistance）与远阴影距离（FarShadowDistance）之间由远阴影级联覆盖的级联数。</p>
+<h4>远阴影距离（Far Shadow Distance）</h4>
+<p>选择一个远阴影距离量。</p>
+<p>远阴影级联应结束的距离。远阴影将覆盖“动态阴影距离”与该距离之间的范围。</p>
+<p class="opt-cat"><strong>距离场阴影（Distance Field Shadows）</strong></p>
+<p class="opt-cat"><strong>距离场阴影（Distance Field Shadows）</strong></p>
+<h4>距离场阴影（Distance Field Shadows）</h4>
+<p><strong>开（On）</strong>，关（Off）</p>
+<p>是否使用光线追踪距离场区域阴影。</p>
+<p>必须启用项目设置 bGenerateMeshDistanceFields，此项才会生效。</p>
+<p>距离场阴影支持区域光，因此可以生成接触锐利的柔和阴影。</p>
+<p>它们的锯齿伪影比标准阴影贴图少，但继承了距离场表示的所有限制（仅均匀缩放，无变形）。</p>
+<p>这些阴影的逐对象开销较低，且不依赖三角面数，因此适合用作动态太阳的远距离阴影。</p>
+<p class="opt-cat"><strong>高级（Advanced）</strong></p>
+<p>展开该选项。</p>
+<p>展开后还有挂接父级包围盒的附加选项。</p>
+<h4>光线起始偏移深度缩放（Ray Start Offset Depth Scale）</h4>
+<p>选择一个光线起始偏移深度量。</p>
+<p>控制随着相机变远，光线追踪阴影与接收表面之间的偏移量。</p>
+<p>这有助于隐藏巨大静态网格因低分辨率距离场产生的自阴影伪影。</p>
+<p class="opt-cat"><strong>光函数（Light Function）</strong></p>
+<h4>光函数材质（Light Function Material）</h4>
+<p>从下拉菜单中选择一个材质。</p>
+<p>应用于该光源的光函数材质。</p>
+<p>只有非光照贴图光源才能拥有光函数。</p>
+<p>体积雾内支持光函数，但仅限方向光、点光源和聚光灯，不支持矩形光。</p>
+<p>自发光材质在低端设备上不能用作光源，因为它们无法使用动态全局光照。</p>
+<p>应用材质后，<strong>光函数缩放（Light Fade Scale）</strong>、<strong>渐隐距离（Fade Distance）</strong>和<strong>禁用时亮度（Disabled Brightness）</strong>选项变为可用。</p>
+<h4>光函数缩放（Light Function Scale）</h4>
+<p>为 X 轴、Y 轴和 Z 轴选择光函数缩放量。</p>
+<p>缩放光函数投影。X 和 Y 在垂直于光源方向的方向上缩放，Z 沿光源方向缩放。</p>
+<h4>渐隐距离（Fade Distance）</h4>
+<p><strong>1000000.0</strong>，选择一个渐隐距离量。</p>
+<p>光函数应完全渐隐至禁用时亮度（Disabled Brightness）的距离。这有助于隐藏远处光函数产生的锯齿。</p>
+<h4>禁用时亮度（Disabled Brightness）</h4>
+<p><strong>0.5</strong>，选择一个禁用时亮度系数</p>
+<p>指定了光函数但被禁用时应用于光源的亮度系数。例如，在使用 SceneCapView_LitNoShadows 的场景捕捉中。</p>
+<p>应将其设为光函数材质自发光输入的平均亮度，取值应在 0 到 1 之间。</p>
+<p class="opt-cat"><strong>标签（Tags）</strong></p>
+<h4>组件标签（Component Tags）</h4>
+<p>为你的光照组件创建一个数组。</p>
+<p>你可以使用数组标签进行分组和分类，也可以从脚本访问这些标签。</p>
+<p class="opt-cat"><strong>性能（Performance）</strong></p>
+<h4>最大绘制距离（Max Draw Distance）</h4>
+<p><strong>2800.0</strong>，选择一个最大绘制距离。</p>
+<p>网格被渲染的最大距离。</p>
+<h4>最大距离渐隐范围（Max Distance Fade Range）</h4>
+<p><strong>2048.0</strong>，选择一个最大距离渐隐范围。</p>
+<p>为渐隐渲染而渲染网格的最大距离。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/0ba98b46-2a88-4b08-80cf-abd3ee5bde72?resizing_type=fit&width=1920&height=1080" alt="添加方向光效果后的岛屿效果" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/0ba98b46-2a88-4b08-80cf-abd3ee5bde72?resizing_type=fit&width=1920&height=1080" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h3>天空大气（Sky Atmosphere）</h3>
+<p>天空大气改变远处天空的颜色。可以把它看作绘制岛屿背景幕布。</p>
+<p class="opt-cat"><strong>行星（Planet）</strong></p>
+<h4>变换模式（Transform Mode）</h4>
+<p><strong>绝对世界原点处的行星顶部（Planet Top at Absolute World Origin）</strong>，组件变换处的行星顶部（Planet Top at Component Transform），组件变换处的行星中心（Planet Center at Component Transform）</p>
+<p>阳光在大气中反弹时为大气着色的地面反照率。仅在多次散射（MultiScattering）&gt; 0.0 时纳入计算。</p>
+<h4>地面半径（Ground Radius）</h4>
+<p><strong>6360.0</strong>，选择一个地面半径量。</p>
+<p>从行星中心到地面高度的半径，以千米为单位。</p>
+<h4>地面反照率（Ground Albedo）</h4>
+<p>选择一个颜色。</p>
+<p>阳光在大气中反弹时为大气着色的地面反照率。</p>
+<p>仅在多次散射（MultiScattering）&gt; 0.0 时纳入计算。</p>
+<p>展开地面反照率可手动控制 RGB 各分量的颜色。</p>
+<p class="opt-cat"><strong>大气（Atmosphere）</strong></p>
+<h4>大气高度（Atmosphere Height）</h4>
+<p><strong>60.0</strong>，选择一个大气高度量。</p>
+<p>地面以上大气层的高度，以千米为单位。</p>
+<h4>多次散射（Multiscattering）</h4>
+<p><strong>1.0</strong>，选择一个多次散射量。</p>
+<p>使用双重散射方法渲染多次散射，模拟阳光在大气中的反弹。</p>
+<p class="opt-cat"><strong>高级（Advanced）</strong></p>
+<p>展开该选项。</p>
+<p>展开后还有追踪样本数缩放（Trace Sample Count Scale）的附加选项。</p>
+<p>当 <code>r.SkyAtmosphere.SampleCountMax</code> 下 <code>r.Sky Atmosphere.FastSkyLUT</code> 为 0 时，样本数仍根据可扩展性设置钳制。</p>
+<h4>追踪样本数缩放（Trace Sample Count Scale）</h4>
+<p><strong>1.0</strong>，选择一个追踪样本数缩放量。</p>
+<p>缩放大气追踪样本数。质量等级可扩展。</p>
+<p>当 <code>r.SkyAtmosphere.SampleCountMax</code> 下 <code>r.Sky Atmosphere.FastSkyLUT</code> 为 0 时，样本数仍根据可扩展性设置钳制。</p>
+<p class="opt-cat"><strong>大气-瑞利（Atmosphere-Rayleigh）</strong></p>
+<h4>瑞利散射缩放（Rayleigh Scattering Scale）</h4>
+<p><strong>0.0331</strong>，选择一个瑞利散射缩放量。</p>
+<p>瑞利散射系数缩放。</p>
+<h4>瑞利散射（Rayleigh Scattering）</h4>
+<p>选择一个瑞利散射颜色。</p>
+<p>0 千米高度空气中分子产生的瑞利散射系数。</p>
+<p>展开该选项可选择 R、G、B 各分量，或点击颜色从色轮中选择颜色。</p>
+<h4>瑞利指数分布（Rayleigh Exponential Distribution）</h4>
+<p><strong>8.0</strong>，选择一个瑞利指数分布量。</p>
+<p>瑞利散射效果衰减至 40% 时的高度，以千米为单位。</p>
+<p>空中透视的样本数仍根据 <code>r.SkyAtmosphere.AerialPerspectiveLUT.SampleCountMaxPerSlice</code> 钳制。</p>
+<p class="opt-cat"><strong>大气-米氏（Atmosphere - Mie）</strong></p>
+<h4>米氏散射缩放（Mie Scattering Scale）</h4>
+<p><strong>0.003996</strong>，选择一个米氏散射缩放量。</p>
+<p>米氏散射系数缩放。</p>
+<h4>米氏散射（Mie Scattering）</h4>
+<p>选择一个颜色。</p>
+<p>0 千米高度空气中颗粒产生的米氏散射系数。数值越高，光线散射越多。</p>
+<p>展开该选项可选择 R、G、B 各分量，或点击颜色从色轮中选择颜色。</p>
+<h4>米氏吸收缩放（Mie Absorption Scale）</h4>
+<p><strong>0.000444</strong>，选择一个米氏吸收缩放量。</p>
+<p>米氏吸收系数缩放。</p>
+<h4>米氏吸收（Mie Absorption）</h4>
+<p>选择一个颜色。</p>
+<p>0 千米高度空气中颗粒产生的米氏散射系数。数值越高，光线散射越多。</p>
+<p>展开该选项可选择 R、G、B 各分量，或点击颜色从色轮中选择颜色。</p>
+<h4>米氏各向异性（Mie Anisotropy）</h4>
+<p><strong>0.8</strong>，选择一个米氏各向异性量。</p>
+<p>值为 0 表示光线均匀散射。值越接近 1，光线越向前散射，在光源周围产生光晕。</p>
+<h4>米氏指数分布（Mie Exponential Distribution）</h4>
+<p><strong>1.2</strong>，选择一个米氏指数分布量。</p>
+<p>米氏效应衰减至 40% 时的高度，以千米为单位。</p>
+<p class="opt-cat"><strong>大气-吸收（Atmosphere - Absorption）</strong></p>
+<p>展开该选项。</p>
+<p>展开后还有<strong>吸收缩放（Absorption Scale）</strong>、<strong>吸收（Absorption）</strong>和<strong>帐篷分布（Tent Distribution）</strong>的附加选项。</p>
+<h4>吸收缩放（Absorption Scale）</h4>
+<p><strong>0.001881</strong>，选择一个吸收缩放量。</p>
+<p>另一大气层的吸收系数。密度在 10 到 25 千米之间从 0 增加到 1，在 25 到 40 千米之间从 1 减小到 0。</p>
+<p>这近似于地球大气中的臭氧分子分布。</p>
+<h4>吸收（Absorption）</h4>
+<p>选择一个吸收颜色。</p>
+<p>另一大气层的吸收系数。密度在 10 到 25 千米之间从 0 增加到 1，在 25 到 40 千米之间从 1 减小到 0。</p>
+<p>默认值表示地球大气中的臭氧分子吸收。</p>
+<p>展开该选项可选择 R、G、B 各分量，或点击颜色从色轮中选择颜色。</p>
+<h4>帐篷分布（Tent Distribution）</h4>
+<p>展开该选项。</p>
+<p>展开后还有<strong>顶部高度（Tip Altitude）</strong>、<strong>顶部值（Tip Value）</strong>和<strong>宽度（Width）</strong>的附加选项。</p>
+<h4>顶部高度（Tip Altitude）</h4>
+<p><strong>25.0</strong>，选择一个顶部高度量。</p>
+<p>吸收属性顶部的高度。</p>
+<h4>顶部值（Tip Value）</h4>
+<p><strong>1.0</strong>，选择一个顶部值量。</p>
+<p>决定顶部值的吸收属性。</p>
+<h4>宽度（Width）</h4>
+<p><strong>15.0</strong>，选择一个宽度量。</p>
+<p>决定顶部吸收的宽度。</p>
+<p class="opt-cat"><strong>艺术指导（Art Direction）</strong></p>
+<h4>天空亮度系数（Sky Luminance Factor）</h4>
+<p>选择一个天空亮度系数颜色。</p>
+<p>缩放代表天空的像素（即不属于任何表面的像素）的亮度。</p>
+<p>展开该选项可选择 R、G、B 各分量，或点击颜色从色轮中选择颜色。</p>
+<h4>空中透视观察距离缩放（Aerial Perspective View Distance Scale）</h4>
+<p><strong>1.0</strong>，选择一个空中透视观察距离量。</p>
+<p>通过缩放从视图到表面（不透明到半透明）的距离，使空中透视看起来更浓厚。</p>
+<h4>高度雾贡献（Height Fog Contribution）</h4>
+<p><strong>1.0</strong>，选择一个高度雾贡献量。</p>
+<p>当地面雾支持天空大气影响（SupportSkyAtmosphereAffectsHeightFog）项目设为 true 时，缩放天空大气光照对高度雾的贡献。</p>
+<h4>透射最小光源仰角（Transmittance Min Light Elevation Angle）</h4>
+<p><strong>-90.0</strong>，选择一个透射最小光源仰角量。</p>
+<p>用于计算太阳对地面透射率的最小仰角（以度为单位）。即使太阳已开始落到地平线以下，也能保持网格上可见的阳光和阴影。这不影响空中透视。</p>
+<h4>空中透视起始深度（Aerial Perspective Start Depth）</h4>
+<p><strong>0.1</strong>，选择一个空中透视起始深度量。</p>
+<p>开始计算空中透视的距离，以千米为单位。</p>
+<p>让空中透视从远离相机的位置开始有助于提升性能。不受空中透视影响的像素会通过早期深度测试跳过计算。</p>
+<p class="opt-cat"><strong>渲染（Rendering）</strong></p>
+<h4>可见（Visible）</h4>
+<p><strong>开（On）</strong>，关（Off）</p>
+<p>是否完整绘制该图元。为 false 时，该图元不被绘制，也不投射阴影。</p>
+<p class="opt-cat"><strong>高级（Advanced）</strong></p>
+<p>展开该选项。</p>
+<p>展开后还有<strong>使用挂接父级包围盒（Use Attach Parent Bound）</strong>的附加选项。</p>
+<h4>使用挂接父级包围盒（Use Attach Parent Bound）</h4>
+<p><strong>关（Off）</strong>，开（On）</p>
+<p>设为开时，该组件在挂接时使用其父级的包围盒。</p>
+<p>当许多组件挂接在一起时，这可能是一项重要的优化。</p>
+<p class="opt-cat"><strong>标签（Tags）</strong></p>
+<h4>组件标签（Component Tags）</h4>
+<p>为你的光照组件创建一个数组。</p>
+<p>你可以使用数组标签进行分组和分类，也可以从脚本访问这些标签。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/dd972957-9017-4b26-8c4a-ce7e1d448fa6?resizing_type=fit&width=1920&height=1080" alt="编辑天空大气前的岛屿效果" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/dd972957-9017-4b26-8c4a-ce7e1d448fa6?resizing_type=fit&width=1920&height=1080" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/c795facb-b3c7-4a61-bb85-4343c8217752?resizing_type=fit&width=1920&height=1080" alt="添加天空大气效果后的岛屿效果" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/c795facb-b3c7-4a61-bb85-4343c8217752?resizing_type=fit&width=1920&height=1080" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h3>天光选项（Sky Light Options）</h3>
+<p>天光选项编辑天空中的光线如何在岛屿上的物体和云之间反弹。</p>
+<p class="opt-cat"><strong>光照（Light）</strong></p>
+<h4>实时捕捉（Real Time Capture）</h4>
+<p><strong>开（On）</strong>，关（Off）</p>
+<p>启用后，将捕捉天空并进行卷积，以实现动态漫反射和镜面环境光照。天空大气（SkyAtmosphere）、体积云（VolumetricCloud）组件以及使用天空材质的天空穹顶都会纳入计算。</p>
+<p>关闭此选项后，<strong>来源类型（Source Type）</strong>选项变为可用。</p>
+<h4>来源类型（Source Type）</h4>
+<p><strong>SLS 指定立方体贴图（SLS Specified Cubemap）</strong>，SLS 捕捉场景（SLS Capture Scene）</p>
+<p>指示从何处获取光照贡献。</p>
+<h4>立方体贴图（Cubemap）</h4>
+<p>选择一个立方体贴图以设置一天中的时间。</p>
+<p>当<strong>来源类型</strong>设为 <strong>SLS 指定立方体贴图</strong>时，有不同的立方体贴图可供选择，它们决定天光对应的一天时间。</p>
+<h4>来源立方体贴图角度（Source Cubemap Angle）</h4>
+<p><strong>0.0</strong>，为来源立方体贴图角度选择一个角度（以度为单位）。</p>
+<p>当来源类型设为 <strong>SLS 指定立方体贴图</strong>时，旋转来源立方体贴图的角度。</p>
+<h4>立方体贴图分辨率（Cubemap Resolution）</h4>
+<p><strong>128</strong>，选择一个立方体贴图分辨率量。</p>
+<p>最高层处理后立方体贴图 mipmap 的最大分辨率。必须是 2 的幂。</p>
+<h4>天空距离阈值（Sky Distance Threshold）</h4>
+<p><strong>150000.0</strong>，选择一个天空距离阈值距离。</p>
+<p>与天光的距离超过该值的几何体将被视为天空的一部分。</p>
+<p>反射捕捉也会使用该值，因此请更新反射捕捉以查看影响。</p>
+<h4>强度（Intensity）</h4>
+<p><strong>1.0</strong>，选择一个强度量。</p>
+<p>光源发射的总能量。</p>
+<h4>光照颜色（Light Color）</h4>
+<p>选择一个颜色。</p>
+<p>过滤光照的颜色。</p>
+<p>这可能会改变光照的有效强度。</p>
+<p>展开该选项可选择 R、G、B 各分量，或点击颜色从色轮中选择颜色。</p>
+<h4>影响世界（Affects World）</h4>
+<p><strong>开（On）</strong>，关（Off）</p>
+<p>决定光照是否可以影响世界，或是否被禁用。</p>
+<p>禁用的光源不会以任何方式为场景做贡献。</p>
+<p>这些设置无法在运行时更改，更改后会取消构建光照。</p>
+<p>将此项设为 false 与删除光源的效果相同，因此适用于非破坏性实验。</p>
+<h4>投射阴影（Cast Shadows）</h4>
+<p><strong>开（On）</strong>，关（Off）</p>
+<p>决定光源是否应投射阴影。</p>
+<h4>间接光照强度（Indirect Lighting Intensity）</h4>
+<p><strong>1.0</strong>，选择一个间接光照强度。</p>
+<p>缩放该光源的间接光照贡献。值为 0 会禁用该光源的任何全局光照（GI）。默认值为 1。</p>
+<h4>体积散射强度（Volumetric Scattering Intensity）</h4>
+<p><strong>1.0</strong>，选择一个体积散射强度。</p>
+<p>该光源的体积散射强度。它会缩放强度和光照颜色。</p>
+<p class="opt-cat"><strong>高级（Advanced）</strong></p>
+<p>展开该选项。</p>
+<p>展开后还有<strong>仅捕捉自发光（Capture Emissive Only）</strong>、<strong>下半球为纯色（Lower Hemisphere Is Solid Color）</strong>、<strong>下半球颜色（Lower Hemisphere Color）</strong>和<strong>投射体积阴影（Cast Volumetric Shadow）</strong>的附加选项。</p>
+<h4>仅捕捉自发光（Capture Emissive Only）</h4>
+<p><strong>关（Off）</strong>，开（On）</p>
+<p>仅捕捉自发光材质，跳过所有光照，使捕捉更省资源。</p>
+<p>使用逐帧捕捉（Capture Every Frame）时建议使用。</p>
+<h4>下半球为纯色（Lower Hemisphere Is Solid Color）</h4>
+<p><strong>开（On）</strong>，关（Off）</p>
+<p>决定是否将来自下半球的所有远距离光照设为下半球颜色（LowerHemisphereColor）。</p>
+<p>在地面遮挡天空的行星上布光时，启用此项是准确的。</p>
+<p>但禁用它有助于近似天光反弹光照（例如可移动光源）。</p>
+<h4>下半球颜色（Lower Hemisphere Color）</h4>
+<p>选择一个颜色。</p>
+<p>下半球的颜色。</p>
+<p>0 千米高度空气中分子产生的瑞利散射系数。</p>
+<p>展开该选项可选择 R、G、B 各分量，或点击颜色从色轮中选择颜色。</p>
+<h4>投射体积阴影（Cast Volumetric Shadow）</h4>
+<p><strong>开（On）</strong>，关（Off）</p>
+<p>决定光源是否为体积雾投射阴影。禁用此项可以节省 GPU 时间。</p>
+<p class="opt-cat"><strong>渲染（Rendering）</strong></p>
+<h4>可见（Visible）</h4>
+<p><strong>开（On）</strong>，关（Off）</p>
+<p>决定是否完整绘制该图元。为 false 时，该图元不被绘制，也不投射阴影。</p>
+<p class="opt-cat"><strong>标签（Tags）</strong></p>
+<h4>组件标签（Component Tags）</h4>
+<p>为你的光照组件创建一个数组。</p>
+<p>你可以使用数组标签进行分组和分类，也可以从脚本访问这些标签。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/270b9dde-84a6-41d8-9649-a22f98831a70?resizing_type=fit&width=1920&height=1080" alt="编辑天光前的岛屿效果" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/270b9dde-84a6-41d8-9649-a22f98831a70?resizing_type=fit&width=1920&height=1080" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/19d014cc-94e0-4abe-9296-8c32fdbffa06?resizing_type=fit&width=1920&height=1080" alt="添加天光效果后的岛屿效果" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/19d014cc-94e0-4abe-9296-8c32fdbffa06?resizing_type=fit&width=1920&height=1080" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h3>指数高度雾（Exponential Height Fog）</h3>
+<p>控制天空中雾的外观。</p>
+<p class="opt-cat"><strong>指数高度雾组件（Exponential Height Fog Component）</strong></p>
+<h4>雾密度（Fog Density）</h4>
+<p><strong>0.01</strong>，选择一个雾密度量。</p>
+<p>全局密度系数。</p>
+<h4>雾高度衰减（Fog Height Falloff）</h4>
+<p><strong>0.2</strong>，选择一个雾高度衰减量。</p>
+<p>高度密度系数控制密度如何随高度降低而增加。较小的值使可见过渡更大。</p>
+<h4>第二雾数据（Second Fog Data）</h4>
+<p>展开该选项。</p>
+<p>展开后还有<strong>雾密度（Fog Density）</strong>、<strong>雾高度衰减（Fog Height Falloff）</strong>和<strong>雾高度偏移（Fog Height Offset）</strong>的附加选项。</p>
+<h4>雾密度（Fog Density）</h4>
+<p><strong>0.0</strong>，选择一个雾密度量。</p>
+<p>次级雾的全局密度系数。</p>
+<h4>雾高度衰减（Fog Height Falloff）</h4>
+<p><strong>0.2</strong>，选择一个雾高度衰减量。</p>
+<p>高度密度系数控制密度如何随高度降低而增加。</p>
+<p>较小的值使可见过渡更大。</p>
+<h4>雾高度偏移（Fog Height Offset）</h4>
+<p><strong>0.0</strong>，选择一个雾高度偏移量。</p>
+<p>相对 Actor 在 Z 轴位置的高度偏移。</p>
+<h4>雾内散射颜色（Fog Inscattering Color）</h4>
+<p>选择一个颜色。</p>
+<p>散射亮度中的雾颜色。</p>
+<p>0 千米高度空气中分子产生的瑞利散射系数。</p>
+<p>展开该选项可选择 R、G、B 各分量，或点击颜色从色轮中选择颜色。</p>
+<h4>天空大气环境贡献颜色缩放（Sky Atmosphere Ambient Contribution Color Scale）</h4>
+<p>选择一个颜色。</p>
+<p>用于调制天空大气组件对雾非方向性分量贡献的颜色。</p>
+<p>仅在 <code>r.SupportSkyAtmosphereAffectsHeightFog</code> &gt; 0 时有效。</p>
+<p>展开该选项可选择 R、G、B、A 各分量，或点击颜色从色轮中选择颜色。</p>
+<h4>雾最大不透明度（Fog Max Opacity）</h4>
+<p><strong>1.0</strong>，选择一个雾最大不透明度量。</p>
+<p>雾的最大不透明度。</p>
+<p>值为 1 表示雾在远处可以变得完全不透明，完全替代场景颜色。</p>
+<p>值为 0 表示完全不计入雾颜色。</p>
+<h4>起始距离（Start Distance）</h4>
+<p><strong>0.0</strong>，选择一个起始距离量。</p>
+<p>雾开始出现的与相机的距离，以世界单位表示。</p>
+<h4>雾截止距离（Fog Cutoff Distance）</h4>
+<p><strong>0.0</strong>，选择一个雾截止距离量。</p>
+<p>超过该距离的场景元素不再应用雾。这适用于排除已烘焙雾的天空盒。</p>
+<h4>内散射纹理（Inscattering Texture）</h4>
+<p class="opt-cat"><strong>内散射颜色立方体贴图（Inscattering Color Cubemap）</strong></p>
+<p>从下拉菜单中选择一个内散射颜色立方体贴图。</p>
+<p>可为雾颜色指定的立方体贴图，有助于让远处被浓雾覆盖的场景元素与天空匹配。</p>
+<p>指定立方体贴图后，将忽略雾内散射颜色（FogInscatteringColor），并禁用方向性内散射。</p>
+<p>此外，还会出现新的选项：</p>
+<ul><li>内散射颜色立方体贴图角度（Inscattering Color Cubemap Angle）</li><li>内散射纹理色调（Inscattering Texture Tint）</li><li>完全方向性内散射颜色距离（Fully Directional Inscattering Color Distance）</li><li>非方向性内散射颜色距离（Non Directional Inscattering Color Distance）</li></ul>
+<h4>内散射颜色立方体贴图角度（Inscattering Color Cubemap Angle）</h4>
+<p>0.0，为内散射颜色立方体贴图角度选择一个角度（以度为单位）。</p>
+<p>围绕 Z 轴旋转内散射颜色立方体贴图（Inscattering ColorCubemap）的角度。</p>
+<h4>内散射纹理色调（Inscattering Texture Tint）</h4>
+<p>选择一个颜色。</p>
+<p>指定内散射颜色立方体贴图（InscatteringColorCubemap）时使用的色调颜色，便于快速编辑，无需重新导入内散射颜色立方体贴图。</p>
+<p>0 千米高度空气中分子产生的瑞利散射系数。</p>
+<p>展开该选项可选择 R、G、B 各分量，或点击颜色从色轮中选择颜色。</p>
+<h4>完全方向性内散射颜色距离（Fully Directional Inscattering Color Distance）</h4>
+<p><strong>100000.0</strong>，选择一个完全方向性内散射颜色距离量。</p>
+<p>内散射颜色立方体贴图（InscatteringColorCubemap）应直接用作内散射颜色的距离。</p>
+<h4>非方向性内散射颜色距离（Non Directional Inscattering Color Distance）</h4>
+<p><strong>1000.0</strong>，选择一个非方向性内散射颜色距离量。</p>
+<p>仅将内散射颜色立方体贴图（InscatteringColorCubemap）的平均颜色用作内散射颜色的距离。</p>
+<h4>方向性内散射（Directional Inscattering）</h4>
+<h4>方向性内散射指数（Directional Inscattering Exponent）</h4>
+<p><strong>4.0</strong>，选择一个方向性内散射指数额。</p>
+<p>控制方向性内散射锥体的大小，用于近似方向光的内散射。</p>
+<p>必须使用启用了 <code>bUsedAsAtmosphereSunLight</code> 的方向光，方向性内散射（DirectionalInscattering）才会被使用。</p>
+<h4>方向性内散射起始距离（Directional Inscattering Start Distance）</h4>
+<p><strong>10000.0</strong>，选择一个方向性内散射起始距离额。</p>
+<p>控制观察者方向性内散射的起始距离，用于近似方向光的内散射。</p>
+<p>必须使用启用了 <code>bUsedAsAtmosphereSunLight</code> 的方向光，方向性内散射（DirectionalInscattering）才会被使用。</p>
+<h4>方向性内散射颜色（Directional Inscattering Color）</h4>
+<p>选择一个颜色。</p>
+<p>控制方向性内散射的颜色，用于近似方向光的内散射。</p>
+<p>必须使用启用了 <code>bUsedAsAtmosphereSunLight</code> 的方向光，方向性内散射（DirectionalInscattering）才会被使用。</p>
+<p>0 千米高度空气中分子产生的瑞利散射系数。</p>
+<p>展开该选项可选择 R、G、B 各分量，或点击颜色从色轮中选择颜色。</p>
+<p class="opt-cat"><strong>体积雾（Volumetric Fog）</strong></p>
+<h4>体积雾（Volumetric Fog）</h4>
+<p><strong>开（On）</strong>，关（Off）</p>
+<p>决定是否启用体积雾。可扩展性设置控制雾模拟的分辨率。</p>
+<p>体积雾目前不支持起始距离（StartDistance）、雾最大不透明度（FogMaxOpacity）和雾截止距离（FogCutoffDistance）。</p>
+<p>体积雾也无法在整体上匹指数高度雾，因为指数高度雾具有非物理行为。</p>
+<h4>散射分布（Scattering Distribution）</h4>
+<p><strong>0.2</strong>，选择一个散射分布量。</p>
+<p>控制散射相函数——入射光向各个方向散射的程度。</p>
+<p>分布值为 0 时向所有方向均匀散射，0.9 时主要沿光线方向散射。</p>
+<p>要从侧面看到明显的体积雾光轴，分布值需要更接近 0。</p>
+<h4>反照率（Albedo）</h4>
+<p>选择反照率颜色。</p>
+<p>体积雾使用的高度雾粒子反射率。空气中的水粒子反照率接近白色，而尘埃的值稍暗。</p>
+<p>展开该选项可选择 R、G、B、A 各分量，或点击颜色从色轮中选择颜色。</p>
+<h4>自发光（Emissive）</h4>
+<p>选择一个自发光颜色。</p>
+<p>高度雾发出的光。这是一种密度，视线穿过的雾越浓，发出的光越多。</p>
+<p>大多数情况下天光是更好的选择，但目前体积雾不支持预计算光照，因此静态天光没有阴影，固定天光完全不影响体积雾。</p>
+<p>0 千米高度空气中分子产生的瑞利散射系数。</p>
+<p>展开该选项可选择 R、G、B 各分量，或点击颜色从色轮中选择颜色。</p>
+<h4>消光缩放（Extinction Scale）</h4>
+<p><strong>1.0</strong>，选择一个消光缩放量。</p>
+<p>缩放体积雾使用的高度雾粒子消光量。大于 1 的值会使各处的雾粒子吸收更多光线。</p>
+<h4>观察距离（View Distance）</h4>
+<p><strong>6000.0</strong>，选择一个观察距离量。</p>
+<p>起始距离之后应计算体积雾的距离。更大的值延伸得更远，但会在细节中暴露欠采样伪影。</p>
+<h4>起始距离（Start Distance）</h4>
+<p><strong>0.0</strong>，选择一个起始距离量。</p>
+<p>体积雾开始出现的与相机的距离，以世界单位表示。</p>
+<h4>近端渐入距离（Near Fade In Distance）</h4>
+<p><strong>0.0</strong>，选择一个近端渐入距离量。</p>
+<p>体积雾从起始距离开始渐入的距离。</p>
+<h4>静态光照散射强度（Static Lighting Scattering Intensity）</h4>
+<p><strong>1.0</strong>，选择一个静态光照散射强度量。</p>
+<p>决定体积雾静态光照散射强度。</p>
+<p class="opt-cat"><strong>高级（Advanced）</strong></p>
+<p>展开该选项。</p>
+<p>展开后还有<strong>用雾内散射颜色覆盖光源颜色（Override Light Colors with Fog Inscattering Colors）</strong>的附加选项。</p>
+<h4>用雾内散射颜色覆盖光源颜色（Override Light Colors with Fog Inscattering Colors）</h4>
+<p><strong>关（Off）</strong>，开（On）</p>
+<p>决定是否对天光体积散射颜色使用雾内散射颜色（fogInscatteringColor），对方向光散射颜色使用方向性内散射颜色（DirectionalInscatterigColor）。</p>
+<p>确保你的方向光启用了大气阳光（Atmosphere Sun Light）。</p>
+<p>启用此项可让体积雾在远处更好地匹配高度雾，但会产生可能与表面光照不匹配的非物理体积光照。</p>
+<p class="opt-cat"><strong>渲染（Rendering）</strong></p>
+<h4>可见（Visible）</h4>
+<p><strong>开（On）</strong>，关（Off）</p>
+<p>决定是否完整绘制该图元。为 false 时，该图元不被绘制，也不投射阴影。</p>
+<p class="opt-cat"><strong>高级（Advanced）</strong></p>
+<p>展开该选项。</p>
+<p>展开后还有<strong>使用挂接父级包围盒（Use Attach Parent Bound）</strong>的附加选项。</p>
+<h4>使用挂接父级包围盒（Use Attach Parent Bound）</h4>
+<p><strong>开（On）</strong>，关（Off）</p>
+<p>设为<strong>开</strong>时，该组件在挂接时使用其父级的包围盒。当许多组件挂接在一起时，这可能是一项重要的优化。</p>
+<p class="opt-cat"><strong>标签（Tags）</strong></p>
+<h4>组件标签（Component Tags）</h4>
+<p>为你的光照组件创建一个数组。</p>
+<p>你可以使用数组标签进行分组和分类，也可以从脚本访问这些标签。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/988f84f3-e262-4839-ab6b-32f0205a2314?resizing_type=fit&width=1920&height=1080" alt="编辑指数高度雾前的岛屿效果" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/988f84f3-e262-4839-ab6b-32f0205a2314?resizing_type=fit&width=1920&height=1080" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/a047904f-fb4a-46df-9ba3-fb6de06e2f82?resizing_type=fit&width=1920&height=1080" alt="添加指数高度雾效果后的岛屿效果" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/a047904f-fb4a-46df-9ba3-fb6de06e2f82?resizing_type=fit&width=1920&height=1080" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h3>Lumen 曝光（Lumen Exposure）</h3>
+<p>你可以从环境光照平台使用 Lumen 曝光（Lumen Exposure），也可以从<strong>内容浏览器</strong>将其单独添加到项目中。更多信息请参阅<a href="using-the-lumen-exposure-manager-in-unreal-editor-for-fortnite.html">Lumen 曝光管理器（Lumen Exposure Manager）</a>文档。</p>
+<h3>基础曝光与颜色分级（Basic Exposure and Color Grading）</h3>
+<p>这些组件拥有相同的选项，但影响光照的不同方面。你可以在后期处理体（Post Process Volume）中使用曝光设置来控制最终渲染的图像，可以使用颜色分级来校正与方向光、天空大气和天光设置配合使用的颜色。</p>
+<p class="opt-cat"><strong>后期处理体（Post Process Volume）</strong></p>
+<p class="opt-cat"><strong>镜头（Lens）</strong></p>
+<p>展开该选项。</p>
+<p>展开后还有<strong>辉光（Bloom）</strong>、<strong>曝光（Exposure）</strong>、<strong>色差（Chromatic Aberration）</strong>、<strong>相机（Camera）</strong>、<strong>局部曝光（Local Exposure）</strong>、<strong>镜头光斑（Lens Flare）</strong>和<strong>图像效果（Image Effects）</strong>的附加选项。</p>
+<h4>辉光（Bloom）</h4>
+<p>展开该选项。</p>
+<p>展开后还有<strong>强度（Intensity）</strong>和<strong>阈值（Threshold）</strong>的附加选项。</p>
+<h4>强度（Intensity）</h4>
+<p><strong>关（Off）</strong>，开（On）：0.675，选择一个强度量。</p>
+<p>辉光强度是所有辉光贡献的乘数。</p>
+<ul><li>= 0：关</li><li>1（默认值）</li><li>1 更亮</li></ul>
+<h4>阈值（Threshold）</h4>
+<p><strong>关（Off）</strong>，开（On）：-1.0，选择一个阈值量。</p>
+<p>辉光阈值是辉光开始生效的最小亮度。</p>
+<ul><li>-1：所有像素均匀辉光（物理正确，因省略阈值通道而更快）</li><li>0 = 所有像素都影响辉光，越亮越增亮</li><li>1（默认值）</li><li>1 更亮</li></ul>
+<h4>曝光（Exposure）</h4>
+<p>展开该选项。</p>
+<p>展开后还有<strong>测光模式（Metering Mode）</strong>、<strong>曝光补偿（Exposure Compensation）</strong>、<strong>应用物理相机曝光（Apply Physical Camera Exposure）</strong>、<strong>曝光测光蒙版（Exposure Metering Mask）</strong>、<strong>最小亮度（Min Brightness）</strong>、<strong>加速（Speed Up）</strong>和<strong>减速（Speed Down）</strong>的附加选项，还有附加的高级设置。</p>
+<h4>测光模式（Metering Mode）</h4>
+<p><strong>自动曝光直方图（Auto Exposure Histogram）</strong>，自动曝光基础（Auto Exposure Basic），手动（Manual）</p>
+<p>所选曝光测光模式决定低端平台的亮度计算方法。</p>
+<h4>曝光补偿（Exposure Compensation）</h4>
+<p><strong>0.5</strong>，选择一个曝光补偿量。</p>
+<p>用于确定低端平台曝光补偿的曝光对数调整。</p>
+<p>仅在指定了色调映射器时使用。调整使用 2 的幂。</p>
+<ul><li>0：无调整</li><li>-1：暗 2 倍</li><li>-2：暗 4 倍</li><li>1：亮 2 倍</li><li>2：亮 4 倍</li></ul>
+<h4>应用物理相机曝光（Apply Physical Camera Exposure）</h4>
+<p><strong>关（Off）</strong>，开（On）</p>
+<p>打开此选项以使用它。自动曝光应用物理相机曝光：仅影响手动曝光模式。</p>
+<h4>曝光补偿曲线（Exposure Compensation Curve）</h4>
+<p>打开该选项，然后选择一个材质。</p>
+<p>基于场景 EV100 的曝光补偿。</p>
+<p>用于根据平均场景亮度以不同方式校准最终曝光。</p>
+<ul><li>0 = 无调整</li><li>-1：2 倍暗</li><li>-2：4 倍暗</li><li>2：4 倍亮</li></ul>
+<p>依此类推。</p>
+<h4>曝光测光蒙版（Exposure Metering Mask）</h4>
+<p>打开该选项，然后选择一个材质。</p>
+<p>曝光测光蒙版。蒙版上的亮斑对自动曝光测光影响更大，暗斑影响更小。</p>
+<h4>最小亮度（Min Brightness）</h4>
+<p><strong>0.075</strong>，选择一个最小亮度量。</p>
+<p>自动曝光最小适配。如果最小值 = 最大值，则禁用眼睛适配。</p>
+<p>你可以通过选择一个曝光值来实现自动曝光，使平均亮度生成的像素亮度等于恒定校准值。</p>
+<p>最小/最大值以像素亮度（cd / m2）表示，或在使用扩展默认亮度范围（ExtendDefaultLuminanceRange，见项目设置）时以 EV100 表示。</p>
+<h4>最大亮度（Max Brightness）</h4>
+<p><strong>1.0</strong>，选择一个最大亮度量。</p>
+<p>自动曝光最大适配。如果最小值 = 最大值，则禁用眼睛适配。</p>
+<p>你可以通过选择一个曝光值来实现自动曝光，使平均亮度生成的像素亮度等于恒定校准值。</p>
+<p>最小/最大值以像素亮度（cd / m2）表示，或在使用扩展默认亮度范围（ExtendDefaultLuminanceRange，见项目设置）时以 EV100 表示。</p>
+<h4>加速（Speed Up）</h4>
+<p><strong>3.75</strong>，选择一个加速量。</p>
+<p>以每秒 F 档为单位，该值应 &gt; 0。</p>
+<h4>减速（Speed Down）</h4>
+<p><strong>5.5</strong>，选择一个减速量。</p>
+<p>以每秒 F 档为单位，该值应 &gt; 0。</p>
+<p class="opt-cat"><strong>高级（Advanced）</strong></p>
+<p>展开该选项。</p>
+<p>展开后还有<strong>低百分比（Low Percent）</strong>、<strong>高百分比（High Percent）</strong>、<strong>直方图对数最小值（Histogram Log Min）</strong>和<strong>直方图对数最大值（Histogram Log Max）</strong>的附加选项。</p>
+<h4>低百分比（Low Percent）</h4>
+<p><strong>关（Off）</strong>，开（On）：10.0，选择一个百分比。</p>
+<p>眼睛适配将适配从场景颜色亮度直方图中提取的值。</p>
+<p>该值定义为低于此亮度的 <strong>x</strong> 百分比。较高的值使屏幕上的亮斑具有更高优先级，但可能导致结果不够稳定。</p>
+<p>较低的值使中等和较暗值具有更高优先级，但可能导致亮斑过曝。合适的取值范围是 70–80。</p>
+<ul><li>0</li><li>100</li></ul>
+<h4>高百分比（High Percent）</h4>
+<p><strong>关（Off）</strong>，开（On）：90.0，选择一个百分比。</p>
+<p>眼睛适配将适配从场景颜色亮度直方图中提取的值。</p>
+<p>该值定义为低于此亮度的 <strong>x</strong> 百分比。较高的值使屏幕上的亮斑具有更高优先级，但可能导致结果不够稳定。</p>
+<p>较低的值使中等和较暗值具有更高优先级，但可能导致亮斑过曝。合适的取值范围是 70–80。</p>
+<ul><li>0</li><li>100</li></ul>
+<h4>直方图对数最小值（Histogram Log Min）</h4>
+<p><strong>关（Off）</strong>，开（On）：-8.0，选择一个直方图对数最小值量。</p>
+<p>直方图最小值。以 Log2（亮度）表示，或在使用扩展默认亮度范围（ExtendDefaultLuminanceRange，见项目设置）时以 EV100 表示。</p>
+<h4>直方图对数最大值（Histogram Log Max）</h4>
+<p><strong>关（Off）</strong>，开（On）：4.0，选择一个直方图对数最大值量。</p>
+<p>直方图最大值。以 Log2（亮度）表示，或在使用扩展默认亮度范围（ExtendDefaultLuminanceRange，见项目设置）时以 EV100 表示。</p>
+<h4>色差（Chromatic Aberration）</h4>
+<p>展开该选项。</p>
+<p>展开后还有<strong>强度（Intensity）</strong>和<strong>起始偏移（Start Offset）</strong>的附加选项。</p>
+<h4>强度（Intensity）</h4>
+<p><strong>关（Off）</strong>，开（On）：0.0，选择一个强度量。</p>
+<p>场景边缘强度。以百分比表示的场景色差/色彩边缘（相机缺陷），用于模拟真实镜头中出现的伪影，在图像边角最为明显。</p>
+<h4>起始偏移（Start Offset）</h4>
+<p><strong>关（Off）</strong>，开（On）：0.0，选择一个起始偏移量。</p>
+<p>色差起始偏移。效果生效处与帧缓冲中心的标准距离。</p>
+<h4>污垢蒙版（Dirt Mask）</h4>
+<p>展开该选项。</p>
+<p>展开后还有<strong>污垢蒙版纹理（Dirt Mask Texture）</strong>、<strong>污垢蒙版强度（Dirt Mask Intensity）</strong>和<strong>污垢蒙版色调（Dirt Mask Tint）</strong>的附加选项。</p>
+<h4>污垢蒙版纹理（Dirt Mask Texture）</h4>
+<p><strong>关（Off）</strong>，开（On）：从下拉菜单中选择一个纹理。</p>
+<p>下拉菜单可访问 UEFN 中的所有材质和纹理。</p>
+<h4>污垢蒙版强度（Dirt Mask Intensity）</h4>
+<p><strong>关（Off）</strong>，开（On）：为污垢蒙版选择一个强度量。</p>
+<p>辉光污垢蒙版（BloomDirtMask）滤镜强度，用于营造相机镜头上灰尘的错觉。</p>
+<h4>污垢蒙版色调（Dirt Mask Tint）</h4>
+<p><strong>关（Off）</strong>，开（On）：选择一个颜色。</p>
+<p>辉光污垢蒙版（BloomDirtMask）滤镜的颜色。</p>
+<h4>相机（Camera）</h4>
+<p>展开该选项。</p>
+<p>展开后还有<strong>快门速度（Shutter Speed）</strong>、<strong>ISO</strong>、<strong>光圈（F 值）（Aperture (F-Stop)）</strong>、<strong>最大光圈（最小 F 值）（Maximum Aperture (min F-stop)）</strong>和<strong>光圈叶片数（Number of diaphragm blades）</strong>的附加选项。</p>
+<h4>快门速度（Shutter Speed）</h4>
+<p><strong>关（Off）</strong>，开（On）：60.0，选择一个快门速度。</p>
+<p>相机快门速度。</p>
+<h4>ISO</h4>
+<p><strong>关（Off）</strong>，开（On）：100.0，选择一个感光度量。</p>
+<p>相机传感器感光度。</p>
+<h4>光圈（F 值）（Aperture (F-stop)）</h4>
+<p><strong>关（Off）</strong>，开（On）：4.0，选择一个光圈量。</p>
+<p>定义相机镜头的开孔：</p>
+<ul><li>光圈为 1 / f 值，典型镜头光圈可大至 f / 1.2（大开孔）。</li><li>较大的数值会减弱景深（DOF）效果。</li></ul>
+<h4>最大光圈（最小 F 值）（Maximum Aperture (min F-stop)）</h4>
+<p><strong>关（Off）</strong>，开（On）：1.2，选择一个最大光圈量。</p>
+<p>定义相机镜头的最大开孔，以控制光圈叶片的弯曲度。设为 0 可获得直叶片。</p>
+<h4>光圈叶片数（Number of diaphragm blades）</h4>
+<p><strong>关（Off）</strong>，开（On）：5，选择叶片数。</p>
+<p>定义镜头内光圈的叶片数（4 到 16 之间）。</p>
+<h4>局部曝光（Local Exposure）</h4>
+<p>展开该选项。</p>
+<p>展开后还有<strong>高光对比度缩放（Highlight Contrast Scale）</strong>、<strong>阴影对比度缩放（Shadow Contrast Scale）</strong>、<strong>细节强度（Detail Strength）</strong>、<strong>模糊亮度混合（Blurred Luminance Blend）</strong>、<strong>模糊亮度核尺寸百分比（Blurred Luminance Kernel Size Percentage）</strong>和<strong>中间灰偏移（Mid Grey bias）</strong>的附加选项。</p>
+<h4>高光对比度（Highlight Contrast）</h4>
+<p><strong>关（Off）</strong>，开（On）：1.0，选择一个高光对比度缩放量。</p>
+<p>局部曝光将帧亮度分解为基础层和细节层。</p>
+<h4>阴影对比度（Shadow Contrast）</h4>
+<p><strong>关（Off）</strong>，开（On）：1.0，选择一个阴影对比度缩放量。</p>
+<p>局部曝光将帧亮度分解为基础层和细节层。</p>
+<p>基础层的对比度根据此值降低。</p>
+<p>小于 1 的值将启用局部曝光。合适的取值范围通常为 0.6 - 1.0。</p>
+<h4>细节强度（Detail Strength）</h4>
+<p><strong>关（Off）</strong>，开（On）：1.0，选择一个细节强度量。</p>
+<p>局部曝光将帧亮度分解为基础层和细节层。</p>
+<p>不等于 1 的值将启用局部曝光。大多数情况下此值应设为 1。</p>
+<h4>模糊亮度混合（Blurred Luminance Blend）</h4>
+<p><strong>关（Off）</strong>，开（On）：0.6，选择一个模糊亮度混合量。</p>
+<p>局部曝光将帧亮度分解为基础层和细节层。</p>
+<p>在双边滤波与模糊亮度之间混合作为基础层。</p>
+<p>模糊亮度有助于保持图像外观和高光，并减少振铃效应。</p>
+<p>合适的取值范围通常为 0.4 - 0.6。</p>
+<h4>模糊亮度核尺寸百分比（Blurred Luminance Kernel Size Percent）</h4>
+<p><strong>关（Off）</strong>，开（On）：50.0，选择一个百分比。</p>
+<p>用于模糊帧亮度的核尺寸（屏幕百分比）。</p>
+<h4>镜头光斑（Lens Flare）</h4>
+<p>展开该选项。</p>
+<p>展开后还有<strong>强度（Intensity）</strong>的附加选项。</p>
+<h4>强度（Intensity）</h4>
+<p><strong>关（Off）</strong>，开（On）：1.0，选择一个强度量。</p>
+<p>图像式镜头光斑的亮度缩放（线性）。</p>
+<h4>色调（Tint）</h4>
+<p><strong>关（Off）</strong>，开（On）：选择一个色调颜色。</p>
+<p>基于图像的镜头光斑的色调颜色。</p>
+<h4>焦外成像尺寸（BokehSize）</h4>
+<p><strong>关（Off）</strong>，开（On）：从下拉菜单中选择一个纹理。</p>
+<p>下拉菜单可访问 UEFN 中的所有材质和纹理。</p>
+<h4>阈值（Threshold）</h4>
+<p><strong>关（Off）</strong>，开（On）：选择一个阈值量。</p>
+<p>镜头光斑开始生效的最小亮度。</p>
+<p>该值应尽可能高，以避免模糊过暗而不可见的内容所带来的性能开销。</p>
+<h4>焦外成像形状（BokehShape）</h4>
+<p><strong>关（Off）</strong>，开（On）：从下拉菜单中选择一个纹理</p>
+<p>定义基于图像的镜头光斑模糊时焦外成像的形状，不可混合。</p>
+<h4>图像效果（Image Effects）</h4>
+<p>展开该选项。</p>
+<p>展开后还有<strong>渐晕强度（Vignette Intensity）</strong>的附加选项。</p>
+<h4>渐晕强度（Vignette Intensity）</h4>
+<p><strong>关（Off）</strong>，开（On）：0.4，选择一个强度量。</p>
+<p>0 = 关/无渐晕，1 = 强渐晕</p>
+<h4>景深（Depth of Field）</h4>
+<p>展开该选项。</p>
+<p>展开后还有<strong>高级（Advanced）</strong>附加选项。</p>
+<p class="opt-cat"><strong>高级（Advanced）</strong></p>
+<p>展开该选项。</p>
+<p>展开后还有<strong>使用头发深度（Use Hair Depth）</strong>的附加选项。</p>
+<h4>使用头发深度（Use Hair Depth）</h4>
+<p><strong>关（Off）</strong>，开（On）：打开。</p>
+<p>使景深使用头发深度计算弥散圆尺寸。</p>
+<p>否则根据头发在头发深度与场景深度之间插值得到的距离计算。</p>
+<h4>颜色分级（Color Grading）</h4>
+<p>展开该选项。</p>
+<p>展开后还有<strong>色温（Temperature）</strong>、<strong>全局（Global）</strong>和<strong>杂项（Misc）</strong>的附加选项。</p>
+<h4>色温（Temperature）</h4>
+<p>展开该选项。</p>
+<p>展开后还有<strong>色温类型（Temperature Type）</strong>、<strong>温度（Temp）</strong>和<strong>色调（Tint）</strong>的附加选项。</p>
+<h4>色温类型（Temperature Type）</h4>
+<p><strong>关（Off）</strong>，开（On）：白平衡（White Balance），色温（Color Temperature）</p>
+<p>选择色温计算类型。</p>
+<p>白平衡使用温度（Temperature）值控制虚拟相机的白平衡，这是默认选项。</p>
+<p>色温使用温度（Temperature）值调整场景的色温，这是白平衡操作的逆操作。</p>
+<h4>温度（Temp）</h4>
+<p><strong>关（Off）</strong>，开（On）：650.0，选择一个温度量。</p>
+<p>白温的值。</p>
+<h4>色调（Tint）</h4>
+<p><strong>关（Off）</strong>，开（On）：0.0，选择一个色调量。</p>
+<p>白色调的值。</p>
+<h4>全局（Global）</h4>
+<p>展开该选项。</p>
+<p>展开后还有<strong>饱和度（Saturation）</strong>、<strong>对比度（Contrast）</strong>和<strong>伽马（Gamma）</strong>的附加选项。</p>
+<h4>饱和度（Saturation）</h4>
+<p><strong>关（Off）</strong>，开（On）：选择一个颜色。</p>
+<p>控制颜色饱和度。</p>
+<p>选择 R、G、B、Y 或 H、S、V 各分量，或拖动饱和度滑块，或点击色环从色轮中选择颜色。</p>
+<h4>对比度（Contrast）</h4>
+<p><strong>关（Off）</strong>，开（On）：选择一个颜色。</p>
+<p>控制颜色对比度。</p>
+<p>选择 R、G、B、Y 或 H、S、V 各分量，或拖动饱和度滑块，或点击色环从色轮中选择颜色。</p>
+<h4>伽马（Gamma）</h4>
+<p><strong>关（Off）</strong>，开（On）：选择一个颜色。</p>
+<p>控制颜色伽马。</p>
+<p>选择 R、G、B、Y 或 H、S、V 各分量，或拖动饱和度滑块，或点击色环从色轮中选择颜色。</p>
+<h4>阴影（Shadows）</h4>
+<p>展开该选项</p>
+<p>展开后还有<strong>饱和度（Saturation）</strong>、<strong>对比度（Contrast）</strong>、<strong>伽马（Gamma）</strong>、<strong>增益（Gain）</strong>、<strong>偏移（Offset）</strong>和<strong>阴影最大值（ShadowMax）</strong>的附加选项。</p>
+<h4>饱和度（Saturation）</h4>
+<p><strong>关（Off）</strong>，开（On）：选择一个颜色。</p>
+<p>控制图像阴影区域颜色（色相）的强度。</p>
+<p>值越高，颜色越鲜艳。</p>
+<h4>对比度（Contrast）</h4>
+<p><strong>关（Off）</strong>，开（On）：选择一个颜色。</p>
+<p>控制场景中明暗值的范围。</p>
+<p>值越低，亮区与暗区的差异越小；值越高，亮区与暗区的差异越大。</p>
+<h4>伽马（Gamma）</h4>
+<p><strong>关（Off）</strong>，开（On）：选择一个颜色。</p>
+<p>控制阴影区域的亮度曲线。调高或调低此值会提亮或压暗阴影区域的中间调。</p>
+<h4>增益（Gain）</h4>
+<p><strong>关（Off）</strong>，开（On）：选择一个颜色。</p>
+<p>此值与阴影区域的颜色相乘。</p>
+<p>调高或调低此值会提亮或压暗受影响的区域。</p>
+<h4>偏移（Offset）</h4>
+<p><strong>关（Off）</strong>，开（On）：选择一个颜色。</p>
+<p>此值与阴影区域的颜色相加。</p>
+<p>调高或调低此值会使阴影更通透或更浑浊。</p>
+<h4>阴影最大值（ShadowMax）</h4>
+<p><strong>关（Off）</strong>，开（On）：选择一个颜色。</p>
+<p>此值设置何为图像阴影区域的阈值。</p>
+<h4>中间调（Midtones）</h4>
+<p>展开该选项。</p>
+<p>展开后还有<strong>饱和度（Saturation）</strong>、<strong>对比度（Contrast）</strong>、<strong>伽马（Gamma）</strong>、<strong>增益（Gain）</strong>和<strong>偏移（Offset）</strong>的附加选项。</p>
+<h4>饱和度（Saturation）</h4>
+<p><strong>关（Off）</strong>，开（On）：选择一个颜色。</p>
+<p>控制图像中间调区域颜色（色相）的强度。</p>
+<p>值越高，颜色越鲜艳。</p>
+<h4>对比度（Contrast）</h4>
+<p><strong>关（Off）</strong>，开（On）：选择一个颜色。</p>
+<p>控制中间调区域的明暗值范围。</p>
+<p>值越低，亮区与暗区的差异越小；值越高，亮区与暗区的差异越大。</p>
+<h4>伽马（Gamma）</h4>
+<p><strong>关（Off）</strong>，开（On）：选择一个颜色。</p>
+<p>控制中间调区域的亮度曲线。调高或调低此值会提亮或压暗阴影区域的中间调。</p>
+<h4>增益（Gain）</h4>
+<p><strong>关（Off）</strong>，开（On）：选择一个颜色。</p>
+<p>此值与中间调区域的颜色相乘。</p>
+<p>调高或调低此值会提亮或压暗受影响的区域。</p>
+<h4>偏移（Offset）</h4>
+<p><strong>关（Off）</strong>，开（On）：选择一个颜色。</p>
+<p>此值与高光区域的颜色相加。</p>
+<p>调高或调低此值会使（原文至此截断，译文忠实保留原文现有全部内容）。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/72027031-7c7d-4d5b-9b2e-73e9d0647009?resizing_type=fit&width=1920&height=1080" alt="编辑颜色分级前的岛屿效果" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/72027031-7c7d-4d5b-9b2e-73e9d0647009?resizing_type=fit&width=1920&height=1080" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/e9b90fdc-0118-4e83-96be-224d7f065d93?resizing_type=fit&width=1920&height=1080" alt="添加颜色分级效果后的岛屿效果" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/e9b90fdc-0118-4e83-96be-224d7f065d93?resizing_type=fit&width=1920&height=1080" target="_blank" rel="noopener">查看原图</a></div></figure>
+
+
+
+
+
+<div class="pager"><a href="30-lighting-in-unreal-editor-for-fortnite.html"><small>← 返回父教程</small>灯光</a><a href="sub-index.html"><small>子教程索引 →</small>全部子教程</a></div>
+</article><nav class="doc-toc" aria-label="本页内容"><b>本页内容</b><a href="#sec-1">查找并放置设备</a><a href="#sec-2">设备选项</a></nav></div>
+</div></div>
+</div>
+<footer class="edc-footer"><div class="inner"><img src="../assets/logo-epic.svg" alt="Epic Games"><span>Fortnite 文档中文镜像 · UE教程/ · 本地打开 index.html 阅读 · 翻译整理自 Epic 官方文档，仅供学习交流</span></div></footer>
+</body>
+</html>

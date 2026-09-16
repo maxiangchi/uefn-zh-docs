@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>代码基础第 8 课练习：输入、参数与实参 | Fortnite 文档中文镜像</title>
+<link rel="stylesheet" href="../assets/epic.css">
+<link rel="stylesheet" href="../assets/patch.css">
+<link rel="icon" href="../assets/logo-epic.svg">
+</head>
+<body class="theme-fortnite">
+<div class="edc-topbar"><div class="edc-topbar-inner"><img class="edc-logo" src="../assets/logo-epic.svg" alt="Epic Games"><span class="edc-brand">Epic Games <b>开发者社区</b></span><span class="edc-nav"><a href="../index.html">文档首页</a><a href="sub-index.html">子教程索引</a><a href="https://dev.epicgames.com/documentation/fortnite/basics-of-writing-code-8-practice-time-in-verse" target="_blank" rel="noopener">英文原文</a></span></div></div>
+<div class="site-container">
+<aside class="site-nav"><div class="documents-tree"><nav><ul class="contents-table">
+<div class="tree-sec">A · 最新动态</div>
+<a class="tree-link" href="01-42-00-fortnite-ecosystem-updates-and-release-notes.html">01. 42.00 生态系统更新与发行说明</a>
+<a class="tree-link" href="02-custom-items-and-inventory-overview-in-fortnite.html">02. 自定义物品与背包总览</a>
+<a class="tree-link" href="03-in-island-transactions-in-fortnite.html">03. 岛内交易</a>
+<a class="tree-link" href="04-mobile-development-in-fortnite.html">04. 移动端开发</a>
+<a class="tree-link" href="05-inputs-in-fortnite.html">05. 输入系统</a>
+<a class="tree-link" href="06-ability-system-in-unreal-editor-for-fortnite.html">06. 能力系统 Ability System</a>
+<a class="tree-link" href="07-partybased-gameplay-using-the-social-synergy-api-in-fortnite.html">07. 社交协同 API 与小队玩法</a>
+<a class="tree-link" href="08-scene-graph-in-unreal-editor-for-fortnite.html">08. 场景图 Scene Graph</a>
+<div class="tree-sec">B · 入门</div>
+<a class="tree-link" href="09-build-your-first-island-in-fortnite.html">09. 构建你的第一个岛屿</a>
+<a class="tree-link" href="10-onboarding-guide-to-programming-with-verse-in-unreal-editor-for-fortnite.html">10. Verse 编程入门指南</a>
+<a class="tree-link" href="11-building-basics-in-fortnite-creative.html">11. 建造基础</a>
+<div class="tree-sec">C · 品牌合集</div>
+<a class="tree-link" href="12-star-wars-islands-in-fortnite.html">12. 星球大战™岛屿</a>
+<a class="tree-link" href="13-kpop-demon-hunters-islands-in-fortnite.html">13. KPop 猎魔团岛屿</a>
+<a class="tree-link" href="14-building-lego-islands-in-fortnite.html">14. 乐高®岛屿</a>
+<a class="tree-link" href="15-the-walking-dead-universe-islands-in-unreal-editor-for-fortnite.html">15. 行尸走肉宇宙岛屿</a>
+<a class="tree-link" href="16-teenage-mutant-ninja-turtle-islands-in-unreal-editor-for-fortnite.html">16. 忍者神龟岛屿</a>
+<a class="tree-link" href="17-squid-game-islands-in-fortnite.html">17. 鱿鱼游戏岛屿</a>
+<div class="tree-sec">D · 开发者成功</div>
+<a class="tree-link" href="18-using-creator-portal-in-fortnite-creative.html">18. 使用创作者门户</a>
+<a class="tree-link" href="19-island-moderation-and-guidelines-in-fortnite-creative.html">19. 岛屿审核与准则</a>
+<div class="tree-sec">E · 协作</div>
+<a class="tree-link" href="20-creating-teams-in-creator-portal-in-unreal-editor-for-fortnite.html">20. 在创作者门户创建团队</a>
+<a class="tree-link" href="21-adding-playtesters-in-fortnite-creative.html">21. 添加试玩测试员</a>
+<a class="tree-link" href="22-playtesting-your-island-in-unreal-editor-for-fortnite.html">22. 试玩测试你的岛屿</a>
+<a class="tree-link" href="23-collaborating-in-unreal-editor-for-fortnite.html">23. 在 UEFN 中协作</a>
+<a class="tree-link" href="24-lore-version-control-in-unreal-editor-for-fortnite.html">24. Lore 版本控制</a>
+<a class="tree-link" href="25-conflicts-in-lore-version-control-in-unreal-editor-for-fortnite.html">25. Lore 中的冲突</a>
+<a class="tree-link" href="26-version-history-and-conflict-resolution-in-unreal-editor-for-fortnite.html">26. 分支历史与冲突解决</a>
+<div class="tree-sec">F · 游戏示例</div>
+<a class="tree-link" href="27-build-a-game-in-unreal-editor-for-fortnite.html">27. 构建一款游戏</a>
+<a class="tree-link" href="28-unreal-editor-for-fortnite-starter-templates.html">28. UEFN 新手模板</a>
+<div class="tree-sec">G · Verse</div>
+<a class="tree-link active" href="29-learn-the-basics-of-writing-code-in-verse.html">29. 从零学习 Verse 代码基础</a>
+<div class="tree-sec">H · 专注领域</div>
+<a class="tree-link" href="30-lighting-in-unreal-editor-for-fortnite.html">30. 灯光</a>
+<a class="tree-link" href="31-animation-and-cinematics-in-unreal-editor-for-fortnite.html">31. 动画与过场动画</a>
+<a class="tree-link" href="32-modeling-in-unreal-editor-for-fortnite.html">32. 建模</a>
+<a class="tree-link" href="33-materials-in-unreal-editor-for-fortnite.html">33. 材质</a>
+<a class="tree-link" href="34-environments-and-landscapes-in-unreal-editor-for-fortnite.html">34. 环境与地形</a>
+<a class="tree-link" href="35-audio-in-unreal-editor-for-fortnite.html">35. 音频</a>
+<a class="tree-link" href="36-visual-effects-in-unreal-editor-for-fortnite.html">36. 视觉特效</a>
+</ul></nav></div></aside>
+<div class="page-content"><div class="page-document has-theme-bg">
+<header class="section-page-header"><nav><ol class="breadcrumb is-shrinkable"><li class="breadcrumb-item is-root"><img src="../assets/logo-epic.svg" alt="Epic Games"><a href="../index.html">Developer</a></li><li class="breadcrumb-item"><a href="../index.html">Fortnite 文档</a></li><li class="breadcrumb-item"><a href="29-learn-the-basics-of-writing-code-in-verse.html">从零学习 Verse 代码基础</a></li><li class="breadcrumb-item active" aria-current="page"><span class="text-truncate">代码基础第 8 课练习：输入、参数与实参</span></li></ol></nav><h1>代码基础第 8 课练习：输入、参数与实参</h1><p class="text-secondary mb-0">把 CalculateDamage() 函数体中的常量与变量改成参数，并用 GetHealth() 获取角色血量作为实参传入，修复调用处的报错。</p><p class="doc-meta">英文原标题：Basics of Writing Code 8 Practice Time in Verse · <a href="https://dev.epicgames.com/documentation/fortnite/basics-of-writing-code-8-practice-time-in-verse" target="_blank" rel="noopener">查看英文原文</a> · 社区翻译镜像，仅供学习</p></header>
+<div class="doc-columns"><article class="doc-article">
+<h3>前置知识（Prerequisite topics）</h3>
+<p>要理解和使用本页内容，请确认你已熟悉以下主题：</p>
+<ul>
+<li><a href="basics-of-writing-code-8-how-input-parameters-and-arguments-work-in-verse.html">第 8 课：输入、参数与实参的工作原理（Lesson 8: How Input, Parameters, and Arguments Work）</a></li>
+</ul>
+<p>在<a href="https://dev.epicgames.com/documentation/en-us/uefn/basics-of-writing-code-7-practice-time-in-verse" target="_blank" rel="noopener">上一个练习</a>中，你为 <code>CalculateDamage()</code> 打下了一个不错的起点，但函数体里有一些常量和变量更适合改成参数。提醒一下，该函数目前长这样：</p>
+<pre><code>CalculateDamage() : float =
+    MinHealth : float = 1.0
+    PotionDamageAmount : float = 80.0
+    var PlayerHealth : float = 100.0
+    # 如果这次伤害不会淘汰玩家，就造成该数值的伤害
+    if (PlayerHealth &gt; PotionDamageAmount):
+        return PotionDamageAmount
+    else if (PlayerHealth &gt; MinHealth):
+        # 如果玩家血量较低，再给一次机会
+        ...</code></pre>
+<p>更新后的函数将接收三个参数：</p>
+<ul>
+<li><code>PlayerHealth</code>：玩家当前生命值；</li>
+<li><code>DesiredDamageAmount</code>：可能造成的最大伤害；</li>
+<li><code>MinHealth</code>：如果 <code>DesiredDamageAmount</code> 会把玩家血量打到 <code>0.0</code> 或更低，玩家应保留的血量。</li>
+</ul>
+<p>把函数更新成下面这样：</p>
+<pre><code>CalculateDamage(PlayerHealth : float, DesiredDamageAmount : float, MinHealth : float) : float =
+    # 如果这次伤害不会淘汰玩家，就造成该数值的伤害
+    if (PlayerHealth &gt; DesiredDamageAmount):
+        return DesiredDamageAmount
+    else if (PlayerHealth &gt; MinHealth):
+        # 如果玩家血量较低，再给一次机会
+        return PlayerHealth - MinHealth
+    else:
+        # 淘汰玩家
+        return PlayerHealth</code></pre>
+<p>很好！你的函数现在接收三个参数来计算玩家应受的伤害，而不再使用函数内部声明的变量和常量了。</p>
+<p>此时，你可能会看到 <code>HurtPlayer()</code> 中调用 <code>CalculateDamage()</code> 的 <code>()</code> 下方出现了<strong>红色波浪线</strong>。这是因为你已把 <code>CalculateDamage()</code> 的声明改成需要 3 个参数，但调用时还没有传入任何实参。接下来的几步我们就来修复它。</p>
+<ul>
+<li>在给 <code>CalculateDamage()</code> 传入 <code>PlayerHealth</code> 实参之前，必须先知道角色的血量。这就要用到 <code>GetHealth()</code> 方法。它的调用方式与 <code>Damage()</code> 和 <code>Heal()</code> 相同，但它会返回一个值，你需要在 <code>HurtPlayer()</code> 函数中把这个值存下来。
+<pre><code>HurtPlayer() : void =
+    Playspace : fort_playspace = GetPlayspace()
+    AllPlayers : []player = Playspace.GetPlayers()
+    if (FirstPlayer : player = AllPlayers[0]):
+        if (FortniteCharacter : fort_character = FirstPlayer.GetFortCharacter[]):
+            MyCharacterHealth : float = FortniteCharacter.GetHealth()
+            DamageToDo : float = CalculateDamage()
+            Print("DamageToDo: {DamageToDo}")
+            FortniteCharacter.Damage(DamageToDo)</code></pre></li>
+<li><code>CalculateDamage()</code> 的第二个参数需要用到 <code>HurtPlayer()</code> 的一个参数，现在就来创建它。给 <code>HurtPlayer()</code> 添加一个名为 <code>DamageAmount</code> 的 <code>float</code> 参数。<code>HurtPlayer()</code> 现在应长这样：
+<pre><code>HurtPlayer(DamageAmount : float) : void =
+    Playspace : fort_playspace = GetPlayspace()
+    AllPlayers : []player = Playspace.GetPlayers()
+    if (FirstPlayer : player = AllPlayers[0]):
+        if (FortniteCharacter : fort_character = FirstPlayer.GetFortCharacter[]):
+            MyCharacterHealth : float = FortniteCharacter.GetHealth()
+            DamageToDo : float = CalculateDamage()
+            Print("DamageToDo: {DamageToDo}")
+            FortniteCharacter.Damage(DamageToDo)</code></pre></li>
+<li>现在，传给 <code>CalculateDamage()</code> 的三个实参都准备好了：
+<ul>
+<li><code>MyCharacterHealth</code> 对应参数 <code>PlayerHealth</code>；</li>
+<li><code>DamageAmount</code> 对应参数 <code>DesiredDamageAmount</code>；</li>
+<li><code>1.0</code> 对应参数 <code>MinHealth</code>。</li>
+</ul></li>
+</ul>
+<p><code>HurtPlayer()</code> 应如下所示，并且不应再有报错：</p>
+<pre><code>HurtPlayer(DamageAmount : float) : void =
+    Playspace : fort_playspace = GetPlayspace()
+    AllPlayers : []player = Playspace.GetPlayers()
+    if (FirstPlayer : player = AllPlayers[0]):
+        if (FortniteCharacter : fort_character = FirstPlayer.GetFortCharacter[]):
+            MyCharacterHealth : float = FortniteCharacter.GetHealth()
+            DamageToDo : float = CalculateDamage(MyCharacterHealth, DamageAmount, 1.0)
+            Print("Damage To Do: {DamageToDo}")
+            FortniteCharacter.Damage(DamageToDo)</code></pre>
+<p>多调用几次 <code>HurtPlayer()</code>，看看在不同血量下会产生什么不同效果。</p>
+<p>那 <code>HealPlayer()</code> 函数呢？现在你已经会用参数了，能想到哪些改造它的方法吗？</p>
+<p>还有一个可能有用的方法，叫 <code>SetMaxHealth()</code>，调用方式与 <code>Damage()</code>、<code>Heal()</code>、<code>GetHealth()</code> 相同。试试用 <code>SetMaxHealth()</code> 加上你学到的参数与函数知识来改造 <code>HealPlayer()</code> 函数，想想怎样对玩家来说更有趣。</p>
+<h2 id="sec-1">完整脚本（Complete Script）</h2>
+<pre><code>using { /Fortnite.com/Devices }
+using { /Fortnite.com/Characters }
+using { /Fortnite.com/Playspaces }
+using { /Verse.org/Simulation }
+using { /Verse.org/Verse }
+
+hello_world_device := class(creative_device):
+    # 设备在运行中的游戏中启动时执行
+    OnBegin&lt;override&gt;()&lt;suspends&gt;:void = ...</code></pre>
+<h2 id="sec-2">下一课（Next Lesson）</h2>
+<ul>
+<li><a href="basics-of-writing-code-9-failure-and-control-flow-in-verse.html">第 9 课：失败与控制流（Lesson 9: Failure and Control Flow）：学习如何用失败（failure）控制程序流程。</a></li>
+<li><a href="https://dev.epicgames.com/community/search?query=verse" target="_blank" rel="noopener">verse</a></li>
+<li><a href="https://dev.epicgames.com/community/search?query=input" target="_blank" rel="noopener">input</a></li>
+<li><a href="https://dev.epicgames.com/community/search?query=program" target="_blank" rel="noopener">program</a></li>
+<li><a href="https://dev.epicgames.com/community/search?query=parameters" target="_blank" rel="noopener">parameters</a></li>
+<li><a href="https://dev.epicgames.com/community/search?query=arguments" target="_blank" rel="noopener">arguments</a></li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/b9bb8d1e-d308-4314-b86b-1dad8cf5da68?resizing_type=fit&width=640&height=640" alt="第 9 课：失败与控制流的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/b9bb8d1e-d308-4314-b86b-1dad8cf5da68?resizing_type=fit&width=640&height=640" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p><a href="https://forums.unrealengine.com/categories?tag=fortnite" target="_blank" rel="noopener">在开发者论坛提问并帮助同伴</a></p>
+<p><a href="https://dev.epicgames.com/community/fortnite/learning" target="_blank" rel="noopener">在学习库中编写或阅读他人教程</a></p>
+<div class="pager"><a href="29-learn-the-basics-of-writing-code-in-verse.html"><small>← 返回父教程</small>从零学习 Verse 代码基础</a><a href="sub-index.html"><small>子教程索引 →</small>全部子教程</a></div>
+</article><nav class="doc-toc" aria-label="本页内容"><b>本页内容</b><a href="#sec-1">完整脚本</a><a href="#sec-2">下一课</a></nav></div>
+</div></div>
+</div>
+<footer class="edc-footer"><div class="inner"><img src="../assets/logo-epic.svg" alt="Epic Games"><span>Fortnite 文档中文镜像 · UE教程/ · 本地打开 index.html 阅读 · 翻译整理自 Epic 官方文档，仅供学习交流</span></div></footer>
+</body>
+</html>

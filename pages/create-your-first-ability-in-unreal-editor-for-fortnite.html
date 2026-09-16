@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>在 UEFN 中创建你的第一个能力 | Fortnite 文档中文镜像</title>
+<link rel="stylesheet" href="../assets/epic.css">
+<link rel="stylesheet" href="../assets/patch.css">
+<link rel="icon" href="../assets/logo-epic.svg">
+</head>
+<body class="theme-fortnite">
+<div class="edc-topbar"><div class="edc-topbar-inner"><img class="edc-logo" src="../assets/logo-epic.svg" alt="Epic Games"><span class="edc-brand">Epic Games <b>开发者社区</b></span><span class="edc-nav"><a href="../index.html">文档首页</a><a href="sub-index.html">子教程索引</a><a href="https://dev.epicgames.com/documentation/fortnite/create-your-first-ability-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">英文原文</a></span></div></div>
+<div class="site-container">
+<aside class="site-nav"><div class="documents-tree"><nav><ul class="contents-table">
+<div class="tree-sec">A · 最新动态</div>
+<a class="tree-link" href="01-42-00-fortnite-ecosystem-updates-and-release-notes.html">01. 42.00 生态系统更新与发行说明</a>
+<a class="tree-link" href="02-custom-items-and-inventory-overview-in-fortnite.html">02. 自定义物品与背包总览</a>
+<a class="tree-link" href="03-in-island-transactions-in-fortnite.html">03. 岛内交易</a>
+<a class="tree-link" href="04-mobile-development-in-fortnite.html">04. 移动端开发</a>
+<a class="tree-link" href="05-inputs-in-fortnite.html">05. 输入系统</a>
+<a class="tree-link active" href="06-ability-system-in-unreal-editor-for-fortnite.html">06. 能力系统 Ability System</a>
+<a class="tree-link" href="07-partybased-gameplay-using-the-social-synergy-api-in-fortnite.html">07. 社交协同 API 与小队玩法</a>
+<a class="tree-link" href="08-scene-graph-in-unreal-editor-for-fortnite.html">08. 场景图 Scene Graph</a>
+<div class="tree-sec">B · 入门</div>
+<a class="tree-link" href="09-build-your-first-island-in-fortnite.html">09. 构建你的第一个岛屿</a>
+<a class="tree-link" href="10-onboarding-guide-to-programming-with-verse-in-unreal-editor-for-fortnite.html">10. Verse 编程入门指南</a>
+<a class="tree-link" href="11-building-basics-in-fortnite-creative.html">11. 建造基础</a>
+<div class="tree-sec">C · 品牌合集</div>
+<a class="tree-link" href="12-star-wars-islands-in-fortnite.html">12. 星球大战™岛屿</a>
+<a class="tree-link" href="13-kpop-demon-hunters-islands-in-fortnite.html">13. KPop 猎魔团岛屿</a>
+<a class="tree-link" href="14-building-lego-islands-in-fortnite.html">14. 乐高®岛屿</a>
+<a class="tree-link" href="15-the-walking-dead-universe-islands-in-unreal-editor-for-fortnite.html">15. 行尸走肉宇宙岛屿</a>
+<a class="tree-link" href="16-teenage-mutant-ninja-turtle-islands-in-unreal-editor-for-fortnite.html">16. 忍者神龟岛屿</a>
+<a class="tree-link" href="17-squid-game-islands-in-fortnite.html">17. 鱿鱼游戏岛屿</a>
+<div class="tree-sec">D · 开发者成功</div>
+<a class="tree-link" href="18-using-creator-portal-in-fortnite-creative.html">18. 使用创作者门户</a>
+<a class="tree-link" href="19-island-moderation-and-guidelines-in-fortnite-creative.html">19. 岛屿审核与准则</a>
+<div class="tree-sec">E · 协作</div>
+<a class="tree-link" href="20-creating-teams-in-creator-portal-in-unreal-editor-for-fortnite.html">20. 在创作者门户创建团队</a>
+<a class="tree-link" href="21-adding-playtesters-in-fortnite-creative.html">21. 添加试玩测试员</a>
+<a class="tree-link" href="22-playtesting-your-island-in-unreal-editor-for-fortnite.html">22. 试玩测试你的岛屿</a>
+<a class="tree-link" href="23-collaborating-in-unreal-editor-for-fortnite.html">23. 在 UEFN 中协作</a>
+<a class="tree-link" href="24-lore-version-control-in-unreal-editor-for-fortnite.html">24. Lore 版本控制</a>
+<a class="tree-link" href="25-conflicts-in-lore-version-control-in-unreal-editor-for-fortnite.html">25. Lore 中的冲突</a>
+<a class="tree-link" href="26-version-history-and-conflict-resolution-in-unreal-editor-for-fortnite.html">26. 分支历史与冲突解决</a>
+<div class="tree-sec">F · 游戏示例</div>
+<a class="tree-link" href="27-build-a-game-in-unreal-editor-for-fortnite.html">27. 构建一款游戏</a>
+<a class="tree-link" href="28-unreal-editor-for-fortnite-starter-templates.html">28. UEFN 新手模板</a>
+<div class="tree-sec">G · Verse</div>
+<a class="tree-link" href="29-learn-the-basics-of-writing-code-in-verse.html">29. 从零学习 Verse 代码基础</a>
+<div class="tree-sec">H · 专注领域</div>
+<a class="tree-link" href="30-lighting-in-unreal-editor-for-fortnite.html">30. 灯光</a>
+<a class="tree-link" href="31-animation-and-cinematics-in-unreal-editor-for-fortnite.html">31. 动画与过场动画</a>
+<a class="tree-link" href="32-modeling-in-unreal-editor-for-fortnite.html">32. 建模</a>
+<a class="tree-link" href="33-materials-in-unreal-editor-for-fortnite.html">33. 材质</a>
+<a class="tree-link" href="34-environments-and-landscapes-in-unreal-editor-for-fortnite.html">34. 环境与地形</a>
+<a class="tree-link" href="35-audio-in-unreal-editor-for-fortnite.html">35. 音频</a>
+<a class="tree-link" href="36-visual-effects-in-unreal-editor-for-fortnite.html">36. 视觉特效</a>
+</ul></nav></div></aside>
+<div class="page-content"><div class="page-document has-theme-bg">
+<header class="section-page-header"><nav><ol class="breadcrumb is-shrinkable"><li class="breadcrumb-item is-root"><img src="../assets/logo-epic.svg" alt="Epic Games"><a href="../index.html">Developer</a></li><li class="breadcrumb-item"><a href="../index.html">Fortnite 文档</a></li><li class="breadcrumb-item"><a href="06-ability-system-in-unreal-editor-for-fortnite.html">能力系统 Ability System</a></li><li class="breadcrumb-item active" aria-current="page"><span class="text-truncate">在 UEFN 中创建你的第一个能力</span></li></ol></nav><h1>在 UEFN 中创建你的第一个能力</h1><p class="text-secondary mb-0">本教程将教你创建一个不可叠加的周期性治疗能力，玩家跳跃时会取消该能力，涵盖 Verse 脚本、支撑类与玩法系统。</p><p class="doc-meta">英文原标题：Create Your First Ability in Unreal Editor for Fortnite · <a href="https://dev.epicgames.com/documentation/fortnite/create-your-first-ability-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">查看英文原文</a> · 社区翻译镜像，仅供学习</p></header>
+<div class="doc-columns"><article class="doc-article">
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/f07a1465-7149-4fe8-bbce-f63e41e05bb7?resizing_type=fill&width=1920&height=335" alt="创建你的第一个能力题图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/f07a1465-7149-4fe8-bbce-f63e41e05bb7?resizing_type=fill&width=1920&height=335" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>本教程将教你创建一个不可叠加的周期性治疗能力，当玩家跳跃时该能力会被取消。</p>
+<p>你将创建定义治疗能力的 Verse 脚本、全部支撑类，以及授予该能力的玩法系统。</p>
+<h2 id="sec-1">前提条件</h2>
+<p>由于该功能目前为实验性功能，你必须在 <strong>Project Settings（项目设置）</strong>中启用 <strong>Scene Graph Experimental Features（场景图（Scene Graph）实验性功能）</strong>才能使用它。</p>
+<h2 id="sec-2">创建 Verse 脚本</h2>
+<p>在本节中，你将创建 Verse 脚本，用于存放本教程的全部代码。</p>
+<ol>
+<li>在<strong>菜单栏</strong>上选择 <strong>Verse &gt; Verse Explorer（Verse 资源管理器）</strong>。</li>
+<li>在 <strong>Verse Explorer</strong> 中右键点击你的项目，选择 <strong>Create Verse File（创建 Verse 文件）</strong>。</li>
+<li>在 <strong>Create Verse Script（创建 Verse 脚本）</strong>窗口中，将脚本命名为 <strong>ability_example</strong>，然后选择 <strong>Create Empty（创建空文件）</strong>。</li>
+<li>在<strong>菜单栏</strong>上选择 <strong>Verse &gt; Open Project in VS Code（在 VS Code 中打开项目）</strong>。</li>
+<li>输入以下代码以添加所需的模块：</li>
+</ol>
+<pre><code># Verse Ability Example
+# A channeled heal-over-time ability that cancels if the player jumps.
+using { /Fortnite.com/Characters }
+using { /Fortnite.com/Input }
+using { /Fortnite.com/Playspaces }
+using { /UnrealEngine.com/Abilities }
+using { /Verse.org/Input }
+using { /Verse.org/SceneGraph }
+using { /Verse.org/Simulation }</code></pre>
+<p>添加工具函数，用于返回目标实体的 <code>fort_character</code>。稍后把效果指派给目标时会用到它。</p>
+<pre><code>#########################################################
+# UTILITY
+#########################################################
+# Get an entity's fort_character, if available.
+(TargetEntity:entity).GetFortChar()&lt;decides&gt;&lt;transacts&gt; : fort_character = first (Component : TargetEntity.GetComponents(), FortChar := fort_character[Component]) {FortChar}</code></pre>
+<h2 id="sec-3">治疗上下文与跳跃取消</h2>
+<p>定义两个支撑类：跳跃取消原因，以及保存目标信息和额外治疗量重写的技能上下文（ability context）。</p>
+<ul>
+<li>添加 <code>jump_cancel</code> 类。这是一个简单的类型化标记，用于标识特定的取消原因。
+<pre><code>#########################################################
+# CANCEL REASON - Why did the effect end?
+#########################################################
+# A typed cancel reason so listeners can distinguish why the heal stopped.
+jump_cancel := class(cancel_reason){}</code></pre>
+</li>
+<li>添加 <code>heal_context</code> 类。基类自带目标信息，而新增的成员变量提供可选的数值重写，让你可以基于上下文创建效果变体。
+<pre><code>#########################################################
+# ABILITY CONTEXT - Data passed between layers
+#########################################################
+# Custom context carrying heal-specific data.
+# NOTE: The base ability_context already provides Instigator, Participants, and Targets.
+heal_context := class(ability_context):
+    # Optional heal effect value overrides.
+    HealPerTickOverride : ?float = false
+    TickIntervalOverride : ?float = false</code></pre>
+</li>
+</ul>
+<h2 id="sec-4">治疗效果组件</h2>
+<p>创建效果组件，其中包含周期性治疗的玩法逻辑。</p>
+<ul>
+<li>添加 <code>heal_effect_component</code> 及变量。成员变量的值可在 Prefab Editor（预制件编辑器）中编辑。
+<pre><code>#########################################################
+# EFFECT COMPONENT - Lifetime &amp; logic
+#########################################################
+# The healing effect component that is attached to the heal effect prefab entity.
+# This class handles the effect's gameplay logic and lifetime.
+heal_effect_component := class(ability_effect_component):
+    # The amount of healing to apply per TickInterval.
+    @editable</code></pre>
+</li>
+<li>添加 <code>OnJumpStateChanged()</code> 回调函数。当玩家跳跃时，它会尝试取消该效果。
+<pre><code># If the player starts jumping, cancel the channel.
+OnJumpStateChanged(FortCharacter : fort_character) : void = if (Cancel[jump_cancel{}]): return</code></pre>
+</li>
+<li>添加 <code>OnBeginUse()</code> 回调函数重写。它会应用技能上下文中指定的数值重写。
+<pre><code># Called immediately after the effect is added to the scene graph.
+# Use this for setup, caching references, etc.
+OnBeginUse&lt;override&gt;()&lt;transacts&gt; : void =
+    # Grab the context data and store what we need.
+    if (HealContext := heal_context[Context?]):
+        if (HealPerTickOverride := float[HealContext.HealPerTickOverride?]):
+            set HealPerTick = HealPerTickOverride
+        if (TickIntervalOverride := float[HealContext.TickIntervalOverride?]):</code></pre>
+</li>
+<li>添加 <code>OnSimulate()</code> 回调函数重写。它会绑定跳跃事件，并包含运行到效果结束的主更新循环。
+<pre><code># Main async logic update function. Runs after OnBeginUse completes.
+OnSimulate&lt;override&gt;()&lt;suspends&gt; : void =
+    var ElapsedTime : float = 0.0
+    # Bind the JumpedEvent that cancels the heal.
+    if:
+        InstigatorAgent := Context?.Instigator
+        FortChar := InstigatorAgent?.GetFortCharacter[]
+    then:
+        FortChar.JumpedEvent().Subscribe(OnJumpStateChanged)</code></pre>
+</li>
+<li>保存 Verse 文件。</li>
+<li>在<strong>编辑器</strong>中，点击工具栏上的 <strong>Compile Verse（编译 Verse）</strong>。</li>
+</ul>
+<h3>创建预制件</h3>
+<p>构建包含你制作的 <code>heal_effect_component</code> 的预制件。</p>
+<ol>
+<li>在 <strong>Content Browser（内容浏览器）</strong>中，点击 <strong>Add (+)（添加）</strong>按钮，然后选择 <strong>Entity Prefab（实体预制件）</strong>。</li>
+<li>在 <strong>Create Entity Prefab Definition（创建实体预制件定义）</strong>窗口中，选择 <strong>ability_effect</strong>。</li>
+<li>将预制件命名为 <strong>PF_HealEffect</strong>。</li>
+<li>双击该预制件以打开 <strong>Prefab Editor（预制件编辑器）</strong>。</li>
+<li>在 <strong>Details（详情）</strong>面板中：右键点击 <strong>ability_effect_component</strong> 并选择 <strong>Delete（删除）</strong>；点击 <strong>Add Component (+)（添加组件）</strong>按钮，搜索 <strong>heal_effect_component</strong> 并添加。</li>
+<li>保存预制件。</li>
+</ol>
+<h2 id="sec-5">治疗能力</h2>
+<p>定义 <code>heal_ability</code> 类，用于校验能力使用，并把上下文与效果绑定在一起。</p>
+<ul>
+<li>添加 <code>heal_ability</code> 类和 <code>ActiveEffects</code> 列表成员变量。
+<pre><code>#########################################################
+# ABILITY - Declaration &amp; activation logic
+#########################################################
+# Define the healing ability, its requirements, and factory overrides.
+heal_ability := class(ability(heal_context, ability_effect)):
+    # Tracks live effect instances.
+    var ActiveEffects&lt;override&gt; : []ability_effect = array{}</code></pre>
+</li>
+<li>添加 <code>CanUse()</code> 函数重写。它在 <code>Use()</code> 被调用后运行，用于检查本次使用是否被允许。本实现确保同一时间只有一个治疗效果。
+<pre><code># Gate ability activation. Current implementation restricts stacking and only allows one active heal at a time.
+CanUse&lt;override&gt;(AbilityEffectParent : entity, AbilityContext : ability_context)&lt;reads&gt;&lt;decides&gt; : void = (ActiveEffects.Length = 0)</code></pre>
+</li>
+<li>添加 <code>MakeContext()</code> 工厂函数重写。能力校验通过后，它会创建用于绑定到效果的上下文。
+<pre><code># Context factory override. Called internally by Use().
+MakeContext&lt;override&gt;()&lt;transacts&gt; : heal_context = heal_context{}</code></pre>
+</li>
+<li>添加 <code>MakeAbility()</code> 工厂函数重写。它会创建效果实体，具体来说，就是创建前面章节中制作的治疗效果预制件。
+<pre><code># Effect prefab factory override. Called internally by Use().
+MakeAbility&lt;override&gt;()&lt;transacts&gt; : ability_effect =
+    HealEffectPrefab := PF_HealEffect{}
+    if (ValidAbility := ability_effect[HealEffectPrefab]):
+        return ValidAbility
+    return ability_effect{}</code></pre>
+</li>
+</ul>
+<h2 id="sec-6">玩家能力管理组件</h2>
+<p>创建授予玩家治疗能力、绑定输入并处理效果清理的组件。</p>
+<ul>
+<li>添加 <code>player_ability_manager_component</code> 类和成员变量。
+<pre><code>#########################################################
+# PLAYER COMPONENT - Granting Abilities and Wiring Input
+#########################################################
+# Grants the owning player the heal ability and processes the related input.
+# This component is attached to the manager entity constructed by the ability_system_watcher.
+player_ability_manager_component := class&lt;final_super&gt;(component):
+    # The base heal ability.
+    HealAbility : heal_ability = heal_ability{}</code></pre>
+</li>
+<li>添加 <code>OnEffectEnded()</code> 回调函数。当效果结束时（自然结束或被取消），它会把效果从玩家和场景中移除。
+<pre><code># Called by EndUseEvent subscription when the ability is finished (naturally or cancelled).
+OnEffectEnded(EffectEntity : entity) : void =
+    # Remove the effect from the parent and the scene.
+    EffectEntity.RemoveFromParent()</code></pre>
+</li>
+<li>添加 <code>OnSecondaryFire()</code> 回调函数。一旦绑定到次要开火键，玩家输入就会触发该效果。
+<pre><code># Triggered when the player inputs secondary fire.
+OnSecondaryFire(Args : tuple(player, logic)) : void =
+    Player := Args(0)
+    IsSecondaryFirePressed := Args(1)
+    # Test if secondary fire was pressed (instead of released) and get the player agent and entity.
+    if:
+        IsSecondaryFirePressed?
+        PlayerAgent := agent[Player]
+        PlayerEntity := PlayerAgent.GetFortCharacter[].GetEntity[]</code></pre>
+</li>
+<li>添加 <code>OnSimulate()</code> 回调函数重写。它会初始化次要开火输入映射和事件回调。
+<pre><code># Called when the component begins simulating within the scene.
+OnSimulate&lt;override&gt;()&lt;suspends&gt; : void =
+    # Get the owning player's input system.
+    if:
+        PlayerInput := GetPlayerInput[OwningPlayer]
+    then:
+        # Enable the ranged weapon input mapping (contains WeaponSecondary).
+        PlayerInput.AddInputMapping(Character.RangedWeaponMapping)
+        # Bind ADS / secondary fire to activate our heal.</code></pre>
+</li>
+</ul>
+<h2 id="sec-7">能力系统观察者</h2>
+<p>创建一个观察者类，为会话中的每位玩家附加 <code>player_ability_manager_component</code>。</p>
+<ul>
+<li>添加 <code>ability_system_watcher</code> 类。
+<pre><code>##############################################################
+# ABILITY SYSTEM WATCHER - Attach Ability Managers to Players
+##############################################################
+# A component that grants player_ability_manager_components to all players.
+ability_system_watcher := class&lt;final_super&gt;(component):</code></pre>
+</li>
+<li>添加 <code>AttachAbilityManagerEntity()</code> 函数。它会创建管理实体，并将其附加到指定玩家。
+<pre><code># Creates a new entity with the manager component attached, then attaches it to the player's fort character entity.
+AttachAbilityManagerEntity(Player : player) : void =
+    if:
+        Agent := agent[Player]
+        FortCharEntity := Agent.GetFortCharacter[].GetEntity[]
+    then:
+        # Create an empty manager entity.
+        ManagerEntity := entity{}
+        # Create the manager component.</code></pre>
+</li>
+<li>添加 <code>OnSimulate()</code> 回调函数重写。它会为全部在线玩家和后续加入的玩家附加管理实体。
+<pre><code># Main async update loop.
+OnSimulate&lt;override&gt;()&lt;suspends&gt; : void =
+    loop:
+        # Get all players in the playspace and attach ability manager entities to them.
+        if (Playspace := Entity.GetPlayspaceForEntity[]):
+            for (Player : Playspace.GetPlayers()):
+                AttachAbilityManagerEntity(Player)
+        # If any players are added later, this event subscription will trigger and attach an ability manager entity.
+        Playspace.PlayerAddedEvent().Subscribe(AttachAbilityManagerEntity)</code></pre>
+</li>
+<li>保存 Verse 文件。</li>
+<li>在编辑器中，点击工具栏上的 <strong>Compile Verse（编译 Verse）</strong>。</li>
+</ul>
+<h3>创建预制件</h3>
+<p>创建能力系统观察者预制件并将其放入关卡，这样会话开始时它就会运行。</p>
+<ol>
+<li>在 <strong>Content Browser（内容浏览器）</strong>中，点击 <strong>Add (+)（添加）</strong>按钮，然后选择 <strong>Entity Prefab（实体预制件）</strong>。</li>
+<li>在 <strong>Create Entity Prefab Definition（创建实体预制件定义）</strong>窗口中，点击 <strong>New Prefab (+)（新建预制件）</strong>按钮。</li>
+<li>将预制件命名为 <strong>PF_AbilitySystemWatcher</strong>。</li>
+<li>双击该预制件以打开 <strong>Prefab Editor（预制件编辑器）</strong>。</li>
+<li>在 <strong>Details（详情）</strong>面板中，点击 <strong>Add Component (+)（添加组件）</strong>按钮，搜索 <strong>ability_system_watcher_component</strong> 并添加。</li>
+<li>保存预制件。</li>
+<li>把 <strong>PF_AbilitySystemWatcher</strong> 预制件从 <strong>Content Browser</strong> 拖入 <strong>Level（关卡）</strong>，然后保存关卡。</li>
+</ol>
+<h2 id="sec-8">伤害区域</h2>
+<p>在关卡中添加伤害区域，以便测试你的治疗能力。</p>
+<ol>
+<li>在 <strong>Content Browser（内容浏览器）</strong>中选择 <strong>All（全部）</strong>文件夹。</li>
+<li>搜索 <strong>Damage Volume（伤害体积）</strong>。</li>
+<li>把 <strong>Damage Volume</strong> 拖入你的 <strong>Level（关卡）</strong>。</li>
+<li>在 <strong>Details（详情）</strong>面板中启用 <strong>Zone Visible During Game（游戏中显示区域）</strong>。</li>
+</ol>
+<h2 id="sec-9">试玩测试</h2>
+<p>启动会话并进行试玩测试，验证一切正常工作。</p>
+<ul>
+<li>受伤后，点击右键激活能力，观察生命值周期性提升。</li>
+<li>治疗过程中跳跃，取消治疗。</li>
+<li>验证能力会在设定时长结束后自行结束。</li>
+<li>快速连续点击右键，验证能力不会叠加。</li>
+</ul>
+<h2 id="sec-10">自主拓展</h2>
+<p>想进一步探索？以下是几个可以自己尝试的方向：</p>
+<ul>
+<li>为你的效果预制件添加视觉和音频元素。</li>
+<li>试验技能上下文中的重写值。</li>
+<li>让治疗可以指向其他玩家。</li>
+</ul>
+<h2 id="sec-11">完整代码</h2>
+<p>以下是本教程的完整 Verse 示例代码起点（各章节代码按顺序拼合即为完整实现）：</p>
+<pre><code># Verse Ability Example
+# A channeled heal-over-time ability that cancels if the player jumps.
+using { /Fortnite.com/Characters }
+using { /Fortnite.com/Input }
+using { /Fortnite.com/Playspaces }
+using { /UnrealEngine.com/Abilities }
+using { /Verse.org/Input }
+using { /Verse.org/SceneGraph }
+using { /Verse.org/Simulation }</code></pre>
+<p>有问题欢迎提问，也欢迎帮助同伴：<a href="https://forums.unrealengine.com/categories?tag=fortnite" target="_blank" rel="noopener">开发者论坛（Developer Forums）</a>；你也可以编写自己的教程或阅读他人的教程：<a href="https://dev.epicgames.com/community/fortnite/learning" target="_blank" rel="noopener">学习库（Learning Library）</a>。</p>
+<div class="pager"><a href="06-ability-system-in-unreal-editor-for-fortnite.html"><small>← 返回父教程</small>能力系统 Ability System</a><a href="sub-index.html"><small>子教程索引 →</small>全部子教程</a></div>
+</article><nav class="doc-toc" aria-label="本页内容"><b>本页内容</b><a href="#sec-1">前提条件</a><a href="#sec-2">创建 Verse 脚本</a><a href="#sec-3">治疗上下文与跳跃取消</a><a href="#sec-4">治疗效果组件</a><a href="#sec-5">治疗能力</a><a href="#sec-6">玩家能力管理组件</a><a href="#sec-7">能力系统观察者</a><a href="#sec-8">伤害区域</a><a href="#sec-9">试玩测试</a><a href="#sec-10">自主拓展</a><a href="#sec-11">完整代码</a></nav></div>
+</div></div>
+</div>
+<footer class="edc-footer"><div class="inner"><img src="../assets/logo-epic.svg" alt="Epic Games"><span>Fortnite 文档中文镜像 · UE教程/ · 本地打开 index.html 阅读 · 翻译整理自 Epic 官方文档，仅供学习交流</span></div></footer>
+</body>
+</html>

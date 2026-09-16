@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UEFN 中的场景事件（Scene Events） | Fortnite 文档中文镜像</title>
+<link rel="stylesheet" href="../assets/epic.css">
+<link rel="stylesheet" href="../assets/patch.css">
+<link rel="icon" href="../assets/logo-epic.svg">
+</head>
+<body class="theme-fortnite">
+<div class="edc-topbar"><div class="edc-topbar-inner"><img class="edc-logo" src="../assets/logo-epic.svg" alt="Epic Games"><span class="edc-brand">Epic Games <b>开发者社区</b></span><span class="edc-nav"><a href="../index.html">文档首页</a><a href="sub-index.html">子教程索引</a><a href="https://dev.epicgames.com/documentation/fortnite/scene-events-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">英文原文</a></span></div></div>
+<div class="site-container">
+<aside class="site-nav"><div class="documents-tree"><nav><ul class="contents-table">
+<div class="tree-sec">A 最新动态</div>
+<a class="tree-link" href="01-42-00-fortnite-ecosystem-updates-and-release-notes.html">01. 42.00 生态系统更新与发行说明</a>
+<a class="tree-link" href="02-custom-items-and-inventory-overview-in-fortnite.html">02. 自定义物品与背包总览</a>
+<a class="tree-link" href="03-in-island-transactions-in-fortnite.html">03. 岛内交易</a>
+<a class="tree-link" href="04-mobile-development-in-fortnite.html">04. 移动端开发</a>
+<a class="tree-link" href="05-inputs-in-fortnite.html">05. 输入系统</a>
+<a class="tree-link" href="06-ability-system-in-unreal-editor-for-fortnite.html">06. 能力系统 Ability System</a>
+<a class="tree-link" href="07-partybased-gameplay-using-the-social-synergy-api-in-fortnite.html">07. 社交协同 API 与小队玩法</a>
+<a class="tree-link active" href="08-scene-graph-in-unreal-editor-for-fortnite.html">08. 场景图 Scene Graph</a>
+<div class="tree-sec">B 入门</div>
+<a class="tree-link" href="09-build-your-first-island-in-fortnite.html">09. 构建你的第一个岛屿</a>
+<a class="tree-link" href="10-onboarding-guide-to-programming-with-verse-in-unreal-editor-for-fortnite.html">10. Verse 编程入门指南</a>
+<a class="tree-link" href="11-building-basics-in-fortnite-creative.html">11. 建造基础</a>
+<div class="tree-sec">C 品牌合集</div>
+<a class="tree-link" href="12-star-wars-islands-in-fortnite.html">12. 星球大战™岛屿</a>
+<a class="tree-link" href="13-kpop-demon-hunters-islands-in-fortnite.html">13. KPop 猎魔团岛屿</a>
+<a class="tree-link" href="14-building-lego-islands-in-fortnite.html">14. 乐高®岛屿</a>
+<a class="tree-link" href="15-the-walking-dead-universe-islands-in-unreal-editor-for-fortnite.html">15. 行尸走肉宇宙岛屿</a>
+<a class="tree-link" href="16-teenage-mutant-ninja-turtle-islands-in-unreal-editor-for-fortnite.html">16. 忍者神龟岛屿</a>
+<a class="tree-link" href="17-squid-game-islands-in-fortnite.html">17. 鱿鱼游戏岛屿</a>
+<div class="tree-sec">D 开发者成功</div>
+<a class="tree-link" href="18-using-creator-portal-in-fortnite-creative.html">18. 使用创作者门户</a>
+<a class="tree-link" href="19-island-moderation-and-guidelines-in-fortnite-creative.html">19. 岛屿审核与准则</a>
+<div class="tree-sec">E 协作</div>
+<a class="tree-link" href="20-creating-teams-in-creator-portal-in-unreal-editor-for-fortnite.html">20. 在创作者门户创建团队</a>
+<a class="tree-link" href="21-adding-playtesters-in-fortnite-creative.html">21. 添加试玩测试员</a>
+<a class="tree-link" href="22-playtesting-your-island-in-unreal-editor-for-fortnite.html">22. 试玩测试你的岛屿</a>
+<a class="tree-link" href="23-collaborating-in-unreal-editor-for-fortnite.html">23. 在 UEFN 中协作</a>
+<a class="tree-link" href="24-lore-version-control-in-unreal-editor-for-fortnite.html">24. Lore 版本控制</a>
+<a class="tree-link" href="25-conflicts-in-lore-version-control-in-unreal-editor-for-fortnite.html">25. Lore 中的冲突</a>
+<a class="tree-link" href="26-version-history-and-conflict-resolution-in-unreal-editor-for-fortnite.html">26. 分支历史与冲突解决</a>
+<div class="tree-sec">F 游戏示例</div>
+<a class="tree-link" href="27-build-a-game-in-unreal-editor-for-fortnite.html">27. 构建一款游戏</a>
+<a class="tree-link" href="28-unreal-editor-for-fortnite-starter-templates.html">28. UEFN 新手模板</a>
+<div class="tree-sec">G Verse</div>
+<a class="tree-link" href="29-learn-the-basics-of-writing-code-in-verse.html">29. 从零学习 Verse 代码基础</a>
+<div class="tree-sec">H 专注领域</div>
+<a class="tree-link" href="30-lighting-in-unreal-editor-for-fortnite.html">30. 灯光</a>
+<a class="tree-link" href="31-animation-and-cinematics-in-unreal-editor-for-fortnite.html">31. 动画与过场动画</a>
+<a class="tree-link" href="32-modeling-in-unreal-editor-for-fortnite.html">32. 建模</a>
+<a class="tree-link" href="33-materials-in-unreal-editor-for-fortnite.html">33. 材质</a>
+<a class="tree-link" href="34-environments-and-landscapes-in-unreal-editor-for-fortnite.html">34. 环境与地形</a>
+<a class="tree-link" href="35-audio-in-unreal-editor-for-fortnite.html">35. 音频</a>
+<a class="tree-link" href="36-visual-effects-in-unreal-editor-for-fortnite.html">36. 视觉特效</a>
+</ul></nav></div></aside>
+<div class="page-content"><div class="page-document has-theme-bg">
+<header class="section-page-header"><nav><ol class="breadcrumb is-shrinkable"><li class="breadcrumb-item is-root"><img src="../assets/logo-epic.svg" alt="Epic Games"><a href="../index.html">Developer</a></li><li class="breadcrumb-item"><a href="../index.html">Fortnite 文档</a></li><li class="breadcrumb-item"><a href="08-scene-graph-in-unreal-editor-for-fortnite.html">场景图 Scene Graph</a></li><li class="breadcrumb-item active" aria-current="page"><span class="text-truncate">UEFN 中的场景事件（Scene Events）</span></li></ol></nav><h1>UEFN 中的场景事件（Scene Events）</h1><p class="text-secondary mb-0">使用场景事件在场景图中自上而下或自下而上传递信号，让实体与组件之间通过消息解耦通信。</p><p class="doc-meta">英文原标题：Scene Events in Unreal Editor for Fortnite · <a href="https://dev.epicgames.com/documentation/fortnite/scene-events-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">查看英文原文</a> · 社区翻译镜像，仅供学习</p></header>
+<div class="doc-columns"><article class="doc-article">
+<p>场景事件（Scene events）提供了一种沿场景图向上或向下发送信号的方式。它的核心思想是解耦场景图的各个部分，让它们通过消息而非直接绑定来相互通信。</p>
+<p>你定义一个自定义事件，从某个实体发出，沿途的任何组件都可以通过重写 <code>OnReceive</code> 来响应。</p>
+<ul>
+<li><code>SendDown</code> 把事件从一个实体开始，向下穿过它的子实体、孙实体等逐层传递（深度优先）。</li>
+<li><code>SendUp</code> 把事件向上穿过它的父实体、祖父实体等，一路传向根节点。</li>
+</ul>
+<p>多个组件可以响应同一个场景事件。实体层级中每个组件的 <code>OnReceive</code> 都会被调用。组件可以消耗（consume）该事件（返回 <code>true</code>）以停止传播，也可以放行（返回 <code>false</code>）让它继续传递。</p>
+<p>你需要的三样东西：</p>
+<ul>
+<li><strong>自定义事件</strong>：继承自 <code>scene_event</code> 的类。</li>
+<li><strong>响应组件</strong>：重写 <code>OnReceive</code>，对事件做类型转换并作出反应。</li>
+<li><strong>发送调用</strong>：<code>Entity.SendDown(Event)</code> 或 <code>Entity.SendUp(Event)</code>。</li>
+</ul>
+<p>场景事件可以在你的项目中复用，你可以通过添加额外事件，或微调一连串事件中实体与组件的行为，让它们实现略有不同的效果，从而扩展场景事件的用途。</p>
+<h2 id="sec-1">类型转换模式（Cast Pattern）</h2>
+<p><code>OnReceive</code> 调用提供了一种创建通用 <code>scene_event</code> 的方式。要弄清楚实际发送的是哪种具体类型，请使用可失败的类型转换：</p>
+<pre><code class="language-verse">if (SpecificEvent := my_event[E]):  # 转换成功 —— 可访问 SpecificEvent.Amount 等字段</code></pre>
+<p>如果该事件不是这个类型，转换会失败，<code>if</code> 代码块会被跳过。这样就能只过滤出你需要的事件。由于场景事件经过层级时，每个 <code>OnReceive</code> 都会被调用，因此这种类型转换必不可少。</p>
+<h2 id="sec-2">事件传播</h2>
+<p><code>SendDown</code> 事件按深度优先遍历：先调用起始实体上每个组件的 <code>OnReceive</code>，再递归进入第一个子实体（及其子实体），然后移向下一个兄弟实体。</p>
+<p><code>SendUp</code> 事件的遍历方向与 <code>SendDown</code> 相反：先从实体自身开始，再到父实体、祖父实体，一直到根节点。</p>
+<p>如果有任何组件消耗了事件（<code>OnReceive</code> 返回 <code>true</code>），两种事件都会立即停止传播。两者都返回 <code>logic</code>——如果事件在某处被消耗则为 true，如果走完全程未被消耗则为 false。</p>
+<h3>被消耗的事件（Consumed Events）</h3>
+<ul>
+<li>从 <code>OnReceive</code> 返回 <code>true</code>——传播停止，层级中后续实体不再响应该事件。</li>
+</ul>
+<p>当某个组件完整处理了事件、不需要层级中其他组件再响应时，这种方式很有用。例如，护盾在伤害触及下方实体之前先吸收掉它。</p>
+<pre><code class="language-verse">damage_event&lt;public&gt; := class(scene_event):
+    Amount&lt;public&gt; : int
+
+# 吸收全部伤害、阻止其传向子实体的护盾。
+shield_component := class(component):
+    var ShieldHP : int = 100
+    OnReceive&lt;override&gt;(E : scene_event) : logic =
+        if (Dmg := damage_event[E]):
+            set ShieldHP -= Dmg.Amount
+            return true
+        (super:)OnReceive(E)</code></pre>
+<p>如果护盾实体是生命值实体的祖先，<code>SendDown</code> 会先命中护盾。因为护盾返回 <code>true</code>，生命值组件不会受到该事件影响。</p>
+<h3>放行事件（Pass Through Events）</h3>
+<ul>
+<li>返回 <code>false</code>（默认值）——事件继续在层级中传递。</li>
+</ul>
+<p><code>component</code> 上的基础 <code>OnReceive</code> 返回 <code>false</code>，因此在重写末尾调用 <code>(super:)OnReceive(E)</code> 是把事件继续向下传递的标准写法。</p>
+<h2 id="sec-3">场景事件示例</h2>
+<p>以下是基础场景事件行为的代码示例。</p>
+<h3>定义事件</h3>
+<pre><code class="language-verse">my_event&lt;public&gt; := class(scene_event):
+    Amount&lt;public&gt; : int</code></pre>
+<h3>在组件中响应事件</h3>
+<pre><code class="language-verse">my_responder := class(component):
+    var Score : int = 0
+    OnReceive&lt;override&gt;(E : scene_event) : logic =
+        if (Event := my_event[E]):
+            set Score += Event.Amount
+        (super:)OnReceive(E)</code></pre>
+<h3>发送事件</h3>
+<pre><code class="language-verse">Event := my_event{Amount := 10}
+MyEntity.SendDown(Event)</code></pre>
+<h3>处理多种事件类型</h3>
+<pre><code class="language-verse">OnReceive&lt;override&gt;(E : scene_event) : logic =
+    if (DmgEvent := damage_event[E]):
+        # 处理伤害……
+    else if (HealEvent := heal_event[E]):
+        # 处理治疗……
+    (super:)OnReceive(E)</code></pre>
+<h3>用 var 字段从响应者收集信息</h3>
+<pre><code class="language-verse">my_event&lt;public&gt; := class(scene_event):
+    I&lt;public&gt; : int
+    var Activations : int = 0  # 响应者可以累加该字段
+
+# 在响应者中：
+OnReceive&lt;override&gt;(E : scene_event) : logic =
+    if (CE := my_event[E]):
+        set CE.Activations += 1
+    (super:)OnReceive(E)</code></pre>
+<h2 id="sec-4">注意事项</h2>
+<ul>
+<li>始终调用 <code>(super:)OnReceive(E)</code>，确保超类的 <code>OnReceive</code> 被执行。</li>
+<li>对于直接继承自组件的类，这一点相对不那么重要。这种情况下，在函数末尾返回 <code>false</code> 以继续传播是合理的。</li>
+<li>访问字段前务必先做类型转换。参数类型是 <code>scene_event</code>，而不是你的具体事件类。</li>
+<li>不要意外消耗事件。返回 <code>true</code> 会让层级其余部分悄无声息地收不到该事件。</li>
+<li>实体必须位于场景中，<code>SendUp/SendDown</code> 才能工作。该限制未来可能解除。</li>
+</ul>
+<h2 id="sec-5">API 速查</h2>
+<table>
+<thead><tr><th>API</th><th>作用</th></tr></thead>
+<tbody>
+<tr><td><code>scene_event</code></td><td>接口。继承它即可创建自己的事件类型。</td></tr>
+<tr><td><code>Entity.SendDown(E)</code></td><td>把事件发送给该实体及其所有后代。</td></tr>
+<tr><td><code>Entity.SendUp(E)</code></td><td>把事件发送给该实体及其所有祖先。</td></tr>
+<tr><td><code>Component.SendDown(E)</code></td><td>从该组件所在实体向下发送事件。（为保证兼容性，请尽量使用 <code>Entity.SendDown/Up</code>）</td></tr>
+<tr><td><code>OnReceive(E):logic</code></td><td>重写以响应事件。返回 <code>true</code> 表示消耗，返回 false 表示放行。</td></tr>
+</tbody>
+</table>
+<p class="doc-tags">标签：<a href="https://dev.epicgames.com/community/search?query=gameplay" target="_blank" rel="noopener">gameplay</a> · <a href="https://dev.epicgames.com/community/search?query=verse" target="_blank" rel="noopener">verse</a> · <a href="https://dev.epicgames.com/community/search?query=art" target="_blank" rel="noopener">art</a> · <a href="https://dev.epicgames.com/community/search?query=scene%20graph" target="_blank" rel="noopener">scene graph</a></p>
+<p class="doc-help">在<a href="https://forums.unrealengine.com/categories?tag=fortnite" target="_blank" rel="noopener">开发者论坛（Developer Forums）</a>提问并帮助同行；在<a href="https://dev.epicgames.com/community/fortnite/learning" target="_blank" rel="noopener">学习库（Learning Library）</a>撰写你自己的教程或阅读他人的教程。</p>
+<div class="pager"><a href="08-scene-graph-in-unreal-editor-for-fortnite.html"><small>← 返回父教程</small>场景图 Scene Graph</a><a href="sub-index.html"><small>子教程索引 →</small>全部子教程</a></div>
+</article><nav class="doc-toc" aria-label="本页内容"><b>本页内容</b><a href="#sec-1">类型转换模式（Cast Pattern）</a><a href="#sec-2">事件传播</a><a href="#sec-3">场景事件示例</a><a href="#sec-4">注意事项</a><a href="#sec-5">API 速查</a></nav></div>
+</div></div>
+</div>
+<footer class="edc-footer"><div class="inner"><img src="../assets/logo-epic.svg" alt="Epic Games"><span>Fortnite 文档中文镜像 · UE教程/ · 本地打开 index.html 阅读 · 翻译整理自 Epic 官方文档，仅供学习交流</span></div></footer>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>在 Fortnite 创意模式中建造竞技场 | Fortnite 文档中文镜像</title>
+<link rel="stylesheet" href="../assets/epic.css">
+<link rel="stylesheet" href="../assets/patch.css">
+<link rel="icon" href="../assets/logo-epic.svg">
+</head>
+<body class="theme-fortnite">
+<div class="edc-topbar"><div class="edc-topbar-inner"><img class="edc-logo" src="../assets/logo-epic.svg" alt="Epic Games"><span class="edc-brand">Epic Games <b>开发者社区</b></span><span class="edc-nav"><a href="../index.html">文档首页</a><a href="sub-index.html">子教程索引</a><a href="https://dev.epicgames.com/documentation/fortnite/building-arenas-in-fortnite-creative" target="_blank" rel="noopener">英文原文</a></span></div></div>
+<div class="site-container">
+<aside class="site-nav"><div class="documents-tree"><nav><ul class="contents-table">
+<div class="tree-sec">最新动态</div><a class="tree-link" href="01-42-00-fortnite-ecosystem-updates-and-release-notes.html">01. 42.00 生态系统更新与发行说明</a><a class="tree-link" href="02-custom-items-and-inventory-overview-in-fortnite.html">02. 自定义物品与背包总览</a><a class="tree-link" href="03-in-island-transactions-in-fortnite.html">03. 岛内交易</a><a class="tree-link" href="04-mobile-development-in-fortnite.html">04. 移动端开发</a><a class="tree-link" href="05-inputs-in-fortnite.html">05. 输入系统</a><a class="tree-link" href="06-ability-system-in-unreal-editor-for-fortnite.html">06. 能力系统 Ability System</a><a class="tree-link" href="07-partybased-gameplay-using-the-social-synergy-api-in-fortnite.html">07. 社交协同 API 与小队玩法</a><a class="tree-link" href="08-scene-graph-in-unreal-editor-for-fortnite.html">08. 场景图 Scene Graph</a><div class="tree-sec">入门</div><a class="tree-link" href="09-build-your-first-island-in-fortnite.html">09. 构建你的第一个岛屿</a><a class="tree-link" href="10-onboarding-guide-to-programming-with-verse-in-unreal-editor-for-fortnite.html">10. Verse 编程入门指南</a><a class="tree-link active" href="11-building-basics-in-fortnite-creative.html">11. 建造基础</a><div class="tree-sec">品牌合集</div><a class="tree-link" href="12-star-wars-islands-in-fortnite.html">12. 星球大战™岛屿</a><a class="tree-link" href="13-kpop-demon-hunters-islands-in-fortnite.html">13. KPop 猎魔团岛屿</a><a class="tree-link" href="14-building-lego-islands-in-fortnite.html">14. 乐高®岛屿</a><a class="tree-link" href="15-the-walking-dead-universe-islands-in-unreal-editor-for-fortnite.html">15. 行尸走肉宇宙岛屿</a><a class="tree-link" href="16-teenage-mutant-ninja-turtle-islands-in-unreal-editor-for-fortnite.html">16. 忍者神龟岛屿</a><a class="tree-link" href="17-squid-game-islands-in-fortnite.html">17. 鱿鱼游戏岛屿</a><div class="tree-sec">开发者成功</div><a class="tree-link" href="18-using-creator-portal-in-fortnite-creative.html">18. 使用创作者门户</a><a class="tree-link" href="19-island-moderation-and-guidelines-in-fortnite-creative.html">19. 岛屿审核与准则</a><div class="tree-sec">协作</div><a class="tree-link" href="20-creating-teams-in-creator-portal-in-unreal-editor-for-fortnite.html">20. 在创作者门户创建团队</a><a class="tree-link" href="21-adding-playtesters-in-fortnite-creative.html">21. 添加试玩测试员</a><a class="tree-link" href="22-playtesting-your-island-in-unreal-editor-for-fortnite.html">22. 试玩测试你的岛屿</a><a class="tree-link" href="23-collaborating-in-unreal-editor-for-fortnite.html">23. 在 UEFN 中协作</a><a class="tree-link" href="24-lore-version-control-in-unreal-editor-for-fortnite.html">24. Lore 版本控制</a><a class="tree-link" href="25-conflicts-in-lore-version-control-in-unreal-editor-for-fortnite.html">25. Lore 中的冲突</a><a class="tree-link" href="26-version-history-and-conflict-resolution-in-unreal-editor-for-fortnite.html">26. 分支历史与冲突解决</a><div class="tree-sec">游戏示例</div><a class="tree-link" href="27-build-a-game-in-unreal-editor-for-fortnite.html">27. 构建一款游戏</a><a class="tree-link" href="28-unreal-editor-for-fortnite-starter-templates.html">28. UEFN 新手模板</a><div class="tree-sec">Verse</div><a class="tree-link" href="29-learn-the-basics-of-writing-code-in-verse.html">29. 从零学习 Verse 代码基础</a><div class="tree-sec">专注领域</div><a class="tree-link" href="30-lighting-in-unreal-editor-for-fortnite.html">30. 灯光</a><a class="tree-link" href="31-animation-and-cinematics-in-unreal-editor-for-fortnite.html">31. 动画与过场动画</a><a class="tree-link" href="32-modeling-in-unreal-editor-for-fortnite.html">32. 建模</a><a class="tree-link" href="33-materials-in-unreal-editor-for-fortnite.html">33. 材质</a><a class="tree-link" href="34-environments-and-landscapes-in-unreal-editor-for-fortnite.html">34. 环境与地形</a><a class="tree-link" href="35-audio-in-unreal-editor-for-fortnite.html">35. 音频</a><a class="tree-link" href="36-visual-effects-in-unreal-editor-for-fortnite.html">36. 视觉特效</a>
+</ul></nav></div></aside>
+<div class="page-content"><div class="page-document has-theme-bg">
+<header class="section-page-header"><nav><ol class="breadcrumb is-shrinkable"><li class="breadcrumb-item is-root"><img src="../assets/logo-epic.svg" alt="Epic Games"><a href="../index.html">Developer</a></li><li class="breadcrumb-item"><a href="../index.html">Fortnite 文档</a></li><li class="breadcrumb-item"><a href="11-building-basics-in-fortnite-creative.html">建造基础</a></li><li class="breadcrumb-item active" aria-current="page"><span class="text-truncate">在 Fortnite 创意模式中建造竞技场</span></li></ol></nav><h1>在 Fortnite 创意模式中建造竞技场</h1><p class="text-secondary mb-0">竞技场是用于进行战斗的场地。本教程将教你创建结构化乱斗竞技场和弹球竞技场，并为你设计自己的竞技场提供灵感。</p><p class="doc-meta">英文原标题：Building Arenas in Fortnite Creative · <a href="https://dev.epicgames.com/documentation/fortnite/building-arenas-in-fortnite-creative" target="_blank" rel="noopener">查看英文原文</a> · 社区翻译镜像，仅供学习</p></header>
+<div class="doc-columns"><article class="doc-article">
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/c61791e7-6ee8-449c-b373-066a4da90b8e?resizing_type=fill&width=1920&height=335" alt="建造竞技场题图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/c61791e7-6ee8-449c-b373-066a4da90b8e?resizing_type=fill&width=1920&height=335" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>竞技场（Arena）是指用于进行战斗的任何场地。红蓝对战（Red vs Blue）、弹球大乱斗（Pinbrawl）和<a href="https://dev.epicgames.com/documentation/fortnite/design-a-1v1-box-fight-in-fortnite-creative" target="_blank" rel="noopener">盒子战（Box Fights）</a>等游戏模式都是在竞技场中进行的。</p>
+<p>你可以为多种玩法建造多种风格的竞技场。你可以将竞技场设计成角斗场、有屋顶和墙壁的封闭空间，或带有隐形边界的开放空间。</p>
+<p>本教程将向你展示如何创建结构化竞技场和弹球竞技场。阅读完本教程后，请发挥你的创造力，创建属于你自己的竞技场。</p>
+<h2 id="sec-1">建造结构化乱斗竞技场</h2>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/7ec88c59-f1fc-48a2-9bf3-ceec826c4b6e?resizing_type=fit" alt="结构化乱斗竞技场原文示意图1" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/7ec88c59-f1fc-48a2-9bf3-ceec826c4b6e?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>按照以下步骤建造结构化乱斗竞技场，其房间由地板、墙体和屋顶部件组成。</p>
+<p>你也可以建造开放式竞技场和体育场，供玩家在其中战斗。</p>
+<p>浏览<strong>图库（Galleries）</strong>和<strong>预制件（Prefab）</strong>选项卡，为你的竞技场构思一个主题。</p>
+<p>在<strong>图库（Galleries）</strong>选项卡中搜索<strong>角斗场（Coliseum）</strong>、<strong>珊瑚城堡（Coral Castle）</strong>和<strong>装饰艺术（Art Deco）</strong>，即可找到本示例中使用的部件。</p>
+<p>如果你想亲手组合部件、打造独一无二的竞技场，请使用<strong>图库（Galleries）</strong>选项卡。挑战一下自己，尝试混搭不同类别的部件。务必建造至少两格高、带地板和屋顶的建筑结构。</p>
+<p>如果你想使用附带装饰道具的预建结构，请使用<strong>预制件（Prefab）</strong>选项卡。</p>
+<ul>
+<li>按键盘上的 <strong>Tab</strong> 键打开创意模式物品栏（Creative inventory）。</li>
+<li>在<strong>预制件（Prefabs）</strong>和<strong>图库（Galleries）</strong>选项卡中，选择最符合你主题的地板。</li>
+<li>选择<strong>立即放置（Place Now）</strong>，用手机道具（cell phone device）装备该物品。</li>
+</ul>
+<p>对于非木材、砖块或石材制成的部件（例如<a href="#sec-2">建造弹球竞技场</a>一节中使用的部件）：</p>
+<p>按 <strong>B</strong> 键，将<strong>网格吸附（Grid Snap）</strong>设为 <strong>[2]</strong>，然后将<strong>按道具建造（Building As Prop）</strong>设为<strong>原点居中（Origin Center）</strong>或<strong>原点边缘（Orgin Edge）</strong>。现在你就可以用装饰道具部件建造结构了。</p>
+<p>对于木材、砖块或石材制成的部件：</p>
+<p>按 <strong>B</strong> 键，将<strong>按道具建造（Building As Prop）</strong>设为<strong>关闭（Off）</strong>。使用资源部件建造速度更快、精度更高。</p>
+<p>建造结构化竞技场时，每位玩家或每支队伍都需要一个房间，房间要足够大，以便玩家之间保持距离。拉开距离后，玩家才能快速购买武器、装备装配（loadouts），而不被其他玩家攻击。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/52b4eca9-d027-4f02-9a49-7066668fdd52?resizing_type=fit" alt="示例岛屿玩家出生位置原文示意图2" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/52b4eca9-d027-4f02-9a49-7066668fdd52?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p><em>本照片标注了示例岛屿中玩家的出生位置。</em></p>
+<p>你的乱斗竞技场没有固定的样子。尽情发挥创造力吧。</p>
+<p>在为枪战建造竞技场时，尽量提供可用作掩体的各种装饰道具或结构，例如柱子。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/46da9cde-8714-4e55-b90b-5e704d1e2183?resizing_type=fit" alt="可用作掩体的柱子原文示意图3" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/46da9cde-8714-4e55-b90b-5e704d1e2183?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>有些结构部件带有开放式窗户，玩家在游戏过程中可以向外观察。务必用足够的植被和地形装饰填满空间，不仅遮住岛屿的网格，还能为玩家带来赏心悦目的美感。</p>
+<p>本教程使用的示例还为玩家准备了挑战。在上面乱斗竞技场的总览照片中，你会看到竞技场被一条玻璃走道环绕。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/11916818-958e-441a-8e41-ae1ffa48e041?resizing_type=fit" alt="环绕竞技场的玻璃走道原文示意图4" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/11916818-958e-441a-8e41-ae1ffa48e041?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>在乱斗竞技场中为玩家提供可探索的隐藏秘密。在 PinBrawl 中，好奇的玩家一旦踩上轮胎，就会被立刻弹到秘密走道上。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/b912dc34-d68f-4e95-a8f7-c5b8d49717c1?resizing_type=fit" alt="轮胎弹跳秘密通道原文示意图5" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/b912dc34-d68f-4e95-a8f7-c5b8d49717c1?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>在这条走道上，玩家可以拿到狙击步枪，透过精心设计的开口射击，如下图所示。这将为岛屿体验增添额外的亮点，并奖励那些热爱冒险的玩家。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/a62930bf-1dae-4f1b-bf65-1ab4a0248740?resizing_type=fit" alt="狙击步枪射击口原文示意图6" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/a62930bf-1dae-4f1b-bf65-1ab4a0248740?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>完成竞技场建造后，使用装饰道具来设计你的玩法。</p>
+<h2 id="sec-2">建造弹球竞技场</h2>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/3e4aa951-db68-4362-816e-eb93b3d80129?resizing_type=fit" alt="弹球竞技场原文示意图7" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/3e4aa951-db68-4362-816e-eb93b3d80129?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>在本节中，你将创建一个弹球竞技场。在 Pinbrawl 中，玩家将在该区域模拟经典弹球游戏以收集金币。</p>
+<p>建造弹球竞技场时，首先需要规划一个主题。浏览<em>预制件（Prefabs）</em>或<em>图库（Galleries）</em>选项卡，找到你想使用的部件。你可以使用类别（Categories）侧边栏更轻松地导航。</p>
+<p>可以在图库（GALLERIES）搜索选项卡中输入 <strong>Structures Gallery Reflective Black</strong>，使用本示例中的倾斜地板。</p>
+<p>首先放置并修改弹球竞技场的地板。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/11a08eb8-c304-470d-a514-4ba0709513a6?resizing_type=fit" alt="弹球竞技场地板原文示意图8" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/11a08eb8-c304-470d-a514-4ba0709513a6?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p><em>点击图片可放大查看。</em></p>
+<ul>
+<li>按键盘上的 <strong>Tab</strong> 键打开创意模式物品栏（Creative inventory）。</li>
+<li>浏览<strong>预制件（Prefabs）</strong>和<strong>图库（Galleries）</strong>选项卡，选择最符合你主题的地板。</li>
+<li>选择<strong>立即放置（Place Now）</strong>，用手机道具（cell phone device）装备该物品。</li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/4bf0b675-c6c2-4e27-9c33-c492a535e82f?resizing_type=fit" alt="放置地板部件原文示意图9" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/4bf0b675-c6c2-4e27-9c33-c492a535e82f?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>按 <strong>B</strong> 键，将<strong>网格吸附（Grid Snap）</strong>设为 <strong>[4]</strong>，然后将<strong>按道具建造（Building As Prop）</strong>设为<strong>原点居中（Origin Center）</strong>。现在你可以自由放置部件，几乎没有重叠。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/f7715a89-2c2e-42ab-a157-001ee094af7a?resizing_type=fit" alt="对齐部件蓝图原文示意图10" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/f7715a89-2c2e-42ab-a157-001ee094af7a?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>接下来，将选中的部件放到岛上。利用部件的蓝图继续对齐部件。</p>
+<p>要建造这种倾斜地板，你可能需要一次放置一个部件。</p>
+<p>继续复制并对齐地板，使其宽度达到四到五个地板部件、高度达到 20 个部件。你也可以使用<a href="https://www.youtube.com/watch?v=0wceTxlUAJ4" target="_blank" rel="noopener"><strong>选择（Select）</strong>工具</a>一次复制粘贴多个部件。</p>
+<p>倾斜地板能让玩家模拟经典弹球（Pinball）游戏，并为玩家摆动<strong>滚球（Baller）</strong>设备提供高度。</p>
+<p>你完成的地板应如下图所示。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/fb9fd70d-66cb-48f3-b857-a39d5f248c58?resizing_type=fit" alt="完成的倾斜地板原文示意图11" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/fb9fd70d-66cb-48f3-b857-a39d5f248c58?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p><em>点击图片可放大查看。</em></p>
+<p>现在你将为弹球竞技场建造墙体。装备最符合你创意主题的墙体部件。</p>
+<p>可以在图库（GALLERIES）搜索选项卡中输入 <strong>Disco</strong>，使用本示例中的部件。</p>
+<p>由于本示例中的部件是一块地板，你需要像上一步那样旋转轴的俯仰角（pitch），让它立起来作为墙体。</p>
+<p>为了更快建造，按 <strong>B</strong> 打开<strong>选项（Options）</strong>，将<strong>按道具建造（Building to Prop）</strong>设为<strong>关闭（Off）</strong>。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/785bd4c2-17cd-4983-b42a-990a3d7799be?resizing_type=fit" alt="建造选项设置原文示意图12" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/785bd4c2-17cd-4983-b42a-990a3d7799be?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>使用<strong>网格吸附（Grid Snap）8</strong> 将墙体部件放置在弹球地板边缘。继续放置墙体部件，覆盖每条边缘，以免玩家掉出竞技场。</p>
+<p>若要打造无缝墙体，请使用<strong>网格吸附（Grid Snap）16</strong>。这需要更高的精度和耐心。</p>
+<p>将墙体向弹球地板后方延伸两个部件，为出生区建造墙体。你的结构应与下图类似。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/ad7971e8-0bd2-44d8-b66f-66061de21c94?resizing_type=fit" alt="墙体与出生区结构原文示意图13" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/ad7971e8-0bd2-44d8-b66f-66061de21c94?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p><em>点击图片可放大查看。</em></p>
+<h3>设计师小贴士</h3>
+<p>要使用资源墙体，请装备鹤嘴锄并按键盘上的 <strong>Z</strong> 键。左键单击可在木材、砖块和金属资源之间切换。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/97568c36-d571-415f-b2ae-406b581dd43d?resizing_type=fit" alt="资源墙体网格对齐原文示意图14" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/97568c36-d571-415f-b2ae-406b581dd43d?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p><em>注意墙体部件是如何落在网格线上的。</em></p>
+<p>如果你的地板沿网格线边缘对齐，就可以放置与墙体和地板对齐的资源墙体部件。如下图所示，先建造带缺口的墙基，以便独特地放置陷阱和墙体部件。</p>
+<p>建造资源墙体部件时，至少要有一个部件接触地面。然后可以从此向外分支，创建带缺口的墙体。</p>
+<p>你可以在资源部件上放置陷阱，例如<strong>弹跳器（Bouncer）</strong>。可以在缺口处放置来自<strong>图库（Galleries）</strong>选项卡的墙体部件。</p>
+<p>为出生区创建地板部件。装备最符合你独特主题的地板部件。</p>
+<p>可以在图库（GALLERIES）搜索选项卡中输入 <strong>MusicBlock Gallery</strong>，使用本示例中的部件。</p>
+<p>沿倾斜地板的顶部边缘放置地板部件，创建足够大的区域，以容纳<a href="https://www.epicgames.com/fortnite/en-US/creative/docs/using-player-spawn-pad-devices-in-fortnite-creative" target="_blank" rel="noopener"><strong>玩家出生点（Player Spawn Pads）</strong></a>和<a href="https://www.epicgames.com/fortnite/en-US/creative/docs/using-baller-spawner-devices-in-fortnite-creative" target="_blank" rel="noopener"><strong>滚球生成器（Baller Device）</strong></a>。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/ad9b9bd0-4f4c-47bd-82a0-fac3c853946c?resizing_type=fit" alt="出生区地板原文示意图15" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/ad9b9bd0-4f4c-47bd-82a0-fac3c853946c?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p><em>点击图片可放大查看。</em></p>
+<p>现在，为出生区建造后墙。装备最符合你主题的墙体。</p>
+<p>可以在<strong>图库（Galleries）</strong>搜索选项卡中输入 <strong>Upright Triangular Prism Gallery</strong>，使用本示例中的部件。</p>
+<p>装备后，沿地板后边缘放置墙体部件，打造无缝结构。有了这面墙，玩家就不会走下边缘。</p>
+<p>如果你使用的是本示例中的部件，需要选中部件并按 <strong>TAB</strong> 键旋转轴的翻滚（Roll）和偏航（Yaw），将其移到直立位置，平面朝向你。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/d96ac0e4-43b5-4a86-a0a3-b337548f0da3?resizing_type=fit" alt="后墙部件原文示意图16" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/d96ac0e4-43b5-4a86-a0a3-b337548f0da3?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>还需要将物品调整到最大尺寸。为此，请选中部件并按住鼠标右键，使用左侧边栏选择放大（Grow）选项。持续按 <strong>R</strong> 键，直到部件达到最大尺寸。</p>
+<p>将部件与地板边缘对齐，为出生区打造无缝后墙。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/c49d9130-ec56-4c09-9583-fe5252e862f6?resizing_type=fit" alt="对齐后墙原文示意图17" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/c49d9130-ec56-4c09-9583-fe5252e862f6?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>你完成的墙体应与下图类似。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/106bd848-eace-4d0c-9831-383ec4eb0c14?resizing_type=fit" alt="完成的后墙原文示意图18" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/106bd848-eace-4d0c-9831-383ec4eb0c14?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>从图库（Galleries）选项卡添加屋顶，帮助玩家留在竞技场内。</p>
+<p>将屋顶部件底部与墙体顶部边缘对齐。屋顶延伸不要超过出生区中部。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/a35863b7-9658-49b8-8794-9571987dbcfa?resizing_type=fit" alt="屋顶安装原文示意图19" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/a35863b7-9658-49b8-8794-9571987dbcfa?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>你的屋顶应与下图类似。你可以添加屏障（Barrier）设备，进一步将玩家围在竞技场内。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/48170b15-db9c-4430-96e8-58667d3a0cd5?resizing_type=fit" alt="完成的屋顶原文示意图20" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/48170b15-db9c-4430-96e8-58667d3a0cd5?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>至此你已完成弹球竞技场的建造。</p>
+<p>查看<a href="building-pregame-lobbies-in-fortnite-creative.html">建造赛前大厅（Building Pre-game Lobbies）</a>，为玩家创建配对房间，例如 <a href="https://dev.epicgames.com/documentation/fortnite/pinbrawl-island-tutorial-in-fortnite-creative" target="_blank" rel="noopener">Pinbrawl</a> 中的房间。</p>
+<p>标签：<a href="https://dev.epicgames.com/community/search?query=devices" target="_blank" rel="noopener">devices</a> · <a href="https://dev.epicgames.com/community/search?query=consumables" target="_blank" rel="noopener">consumables</a></p>
+<p><strong>提问并帮助同伴：<a href="https://forums.unrealengine.com/categories?tag=fortnite" target="_blank" rel="noopener">开发者论坛（Developer Forums）</a></strong></p>
+<p><strong>编写自己的教程或阅读他人的教程：<a href="https://dev.epicgames.com/community/fortnite/learning" target="_blank" rel="noopener">学习库（Learning Library）</a></strong></p>
+<div class="pager"><a href="11-building-basics-in-fortnite-creative.html"><small>← 返回父教程</small>建造基础</a><a href="sub-index.html"><small>子教程索引 →</small>全部子教程</a></div>
+</article><nav class="doc-toc" aria-label="本页内容"><b>本页内容</b><a href="#sec-1">建造结构化乱斗竞技场</a>
+<a href="#sec-2">建造弹球竞技场</a></nav></div>
+</div></div>
+</div>
+<footer class="edc-footer"><div class="inner"><img src="../assets/logo-epic.svg" alt="Epic Games"><span>Fortnite 文档中文镜像 · UE教程/ · 本地打开 index.html 阅读 · 翻译整理自 Epic 官方文档，仅供学习交流</span></div></footer>
+</body>
+</html>

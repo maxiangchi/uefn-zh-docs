@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Verse 代码基础 9：失败（Failure）与控制流 | Fortnite 文档中文镜像</title>
+<link rel="stylesheet" href="../assets/epic.css">
+<link rel="stylesheet" href="../assets/patch.css">
+<link rel="icon" href="../assets/logo-epic.svg">
+</head>
+<body class="theme-fortnite">
+<div class="edc-topbar"><div class="edc-topbar-inner"><img class="edc-logo" src="../assets/logo-epic.svg" alt="Epic Games"><span class="edc-brand">Epic Games <b>开发者社区</b></span><span class="edc-nav"><a href="../index.html">文档首页</a><a href="sub-index.html">子教程索引</a><a href="https://dev.epicgames.com/documentation/fortnite/basics-of-writing-code-9-failure-and-control-flow-in-verse" target="_blank" rel="noopener">英文原文</a></span></div></div>
+<div class="site-container">
+<aside class="site-nav"><div class="documents-tree"><nav><ul class="contents-table">
+<div class="tree-sec">A · 最新动态</div><a class="tree-link" href="01-42-00-fortnite-ecosystem-updates-and-release-notes.html">01. 42.00 生态系统更新与发行说明</a><a class="tree-link" href="02-custom-items-and-inventory-overview-in-fortnite.html">02. 自定义物品与背包总览</a><a class="tree-link" href="03-in-island-transactions-in-fortnite.html">03. 岛内交易</a><a class="tree-link" href="04-mobile-development-in-fortnite.html">04. 移动端开发</a><a class="tree-link" href="05-inputs-in-fortnite.html">05. 输入系统</a><a class="tree-link" href="06-ability-system-in-unreal-editor-for-fortnite.html">06. 能力系统 Ability System</a><a class="tree-link" href="07-partybased-gameplay-using-the-social-synergy-api-in-fortnite.html">07. 社交协同 API 与小队玩法</a><a class="tree-link" href="08-scene-graph-in-unreal-editor-for-fortnite.html">08. 场景图 Scene Graph</a><div class="tree-sec">B · 入门</div><a class="tree-link" href="09-build-your-first-island-in-fortnite.html">09. 构建你的第一个岛屿</a><a class="tree-link" href="10-onboarding-guide-to-programming-with-verse-in-unreal-editor-for-fortnite.html">10. Verse 编程入门指南</a><a class="tree-link" href="11-building-basics-in-fortnite-creative.html">11. 建造基础</a><div class="tree-sec">C · 品牌合集</div><a class="tree-link" href="12-star-wars-islands-in-fortnite.html">12. 星球大战™岛屿</a><a class="tree-link" href="13-kpop-demon-hunters-islands-in-fortnite.html">13. KPop 猎魔团岛屿</a><a class="tree-link" href="14-building-lego-islands-in-fortnite.html">14. 乐高®岛屿</a><a class="tree-link" href="15-the-walking-dead-universe-islands-in-unreal-editor-for-fortnite.html">15. 行尸走肉宇宙岛屿</a><a class="tree-link" href="16-teenage-mutant-ninja-turtle-islands-in-unreal-editor-for-fortnite.html">16. 忍者神龟岛屿</a><a class="tree-link" href="17-squid-game-islands-in-fortnite.html">17. 鱿鱼游戏岛屿</a><div class="tree-sec">D · 开发者成功</div><a class="tree-link" href="18-using-creator-portal-in-fortnite-creative.html">18. 使用创作者门户</a><a class="tree-link" href="19-island-moderation-and-guidelines-in-fortnite-creative.html">19. 岛屿审核与准则</a><div class="tree-sec">E · 协作</div><a class="tree-link" href="20-creating-teams-in-creator-portal-in-unreal-editor-for-fortnite.html">20. 在创作者门户创建团队</a><a class="tree-link" href="21-adding-playtesters-in-fortnite-creative.html">21. 添加试玩测试员</a><a class="tree-link" href="22-playtesting-your-island-in-unreal-editor-for-fortnite.html">22. 试玩测试你的岛屿</a><a class="tree-link" href="23-collaborating-in-unreal-editor-for-fortnite.html">23. 在 UEFN 中协作</a><a class="tree-link" href="24-lore-version-control-in-unreal-editor-for-fortnite.html">24. Lore 版本控制</a><a class="tree-link" href="25-conflicts-in-lore-version-control-in-unreal-editor-for-fortnite.html">25. Lore 中的冲突</a><a class="tree-link" href="26-version-history-and-conflict-resolution-in-unreal-editor-for-fortnite.html">26. 分支历史与冲突解决</a><div class="tree-sec">F · 游戏示例</div><a class="tree-link" href="27-build-a-game-in-unreal-editor-for-fortnite.html">27. 构建一款游戏</a><a class="tree-link" href="28-unreal-editor-for-fortnite-starter-templates.html">28. UEFN 新手模板</a><div class="tree-sec">G · Verse</div><a class="tree-link active" href="29-learn-the-basics-of-writing-code-in-verse.html">29. 从零学习 Verse 代码基础</a><div class="tree-sec">H · 专注领域</div><a class="tree-link" href="30-lighting-in-unreal-editor-for-fortnite.html">30. 灯光</a><a class="tree-link" href="31-animation-and-cinematics-in-unreal-editor-for-fortnite.html">31. 动画与过场动画</a><a class="tree-link" href="32-modeling-in-unreal-editor-for-fortnite.html">32. 建模</a><a class="tree-link" href="33-materials-in-unreal-editor-for-fortnite.html">33. 材质</a><a class="tree-link" href="34-environments-and-landscapes-in-unreal-editor-for-fortnite.html">34. 环境与地形</a><a class="tree-link" href="35-audio-in-unreal-editor-for-fortnite.html">35. 音频</a><a class="tree-link" href="36-visual-effects-in-unreal-editor-for-fortnite.html">36. 视觉特效</a>
+</ul></nav></div></aside>
+<div class="page-content"><div class="page-document has-theme-bg">
+<header class="section-page-header"><nav><ol class="breadcrumb is-shrinkable"><li class="breadcrumb-item is-root"><img src="../assets/logo-epic.svg" alt="Epic Games"><a href="../index.html">Developer</a></li><li class="breadcrumb-item"><a href="../index.html">Fortnite 文档</a></li><li class="breadcrumb-item"><a href="29-learn-the-basics-of-writing-code-in-verse.html">从零学习 Verse 代码基础</a></li><li class="breadcrumb-item active" aria-current="page"><span class="text-truncate">Verse 代码基础 9：失败（Failure）与控制流</span></li></ol></nav><h1>Verse 代码基础 9：失败（Failure）与控制流</h1><p class="text-secondary mb-0">失败并不可怕，它是编程的重要组成部分。本课学习 Verse 中的可失败表达式（failable expression）与失败上下文（failure context），用失败来控制程序的行为。</p><p class="doc-meta">英文原标题：Basics Of Writing Code 9 Failure And Control Flow In Verse · <a href="https://dev.epicgames.com/documentation/fortnite/basics-of-writing-code-9-failure-and-control-flow-in-verse" target="_blank" rel="noopener">查看英文原文</a> · 社区翻译镜像，仅供学习</p></header>
+<div class="doc-columns"><article class="doc-article">
+
+<div class="block-callout">前置知识：要理解和使用本页内容，请先熟悉以下主题：<a href="basics-of-writing-code-8-how-input-parameters-and-arguments-work-in-verse.html">第 8 课：输入、参数与实参的工作原理（Lesson 8: How Input, Parameters, and Arguments Work）</a>。</div>
+<p>失败（failure）可能让人害怕，但它是编程的重要组成部分。你可以利用失败来学习如何调试、找到程序的边界，或快速看清<b>不</b>该怎么做！</p>
+<h2 id="sec-1">失败也没关系</h2>
+<p>在 Verse 中，<b>失败（failure）</b>有着特定的含义，它并不总意味着“某件事没做成”，而是一种控制程序行为的方式。</p>
+<p>还记得在<a href="basics-of-writing-code-4-writing-simple-code-in-verse.html">第 4 课（Lesson 4）</a>中学过的吗？你可以编写代码来问一个<b>是</b>或<b>否</b>的问题：</p>
+<pre><code>var Tired: logic = false
+var WhatToWatch: string = "nothing"
+if (Tired?):
+    set WhatToWatch = "your eyelids"
+else:
+    set WhatToWatch = "cartoons"
+Print("You should watch {WhatToWatch}")</code></pre>
+<p>上面代码中，提出问题的那部分写成了一个<b>可失败表达式（failable expression）</b>。在上面的例子中，<code>Tired?</code> 就是一个可失败表达式。</p>
+<p>可失败表达式用于避免可能导致程序彻底停止工作的错误。例如你可能知道，除数不能为零，如果在代码里这样做，程序可能会崩溃！但下面这段 Verse 代码却可以正常运行。</p>
+<pre><code>if (5/0):
+    Print("Whoa!")
+else:
+    Print("You can't do that!")</code></pre>
+<p>为了避免这类错误，Verse 要求你把可失败表达式写在<b>失败上下文（failure context）</b>中。失败上下文为可失败表达式提供了一个可以安全失败的场所。在上面的例子中，<code>5/0</code> 是可失败表达式，而 <code>if()</code> 就是失败上下文。继续阅读，深入了解 Verse 的这两个概念。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/d86094da-d020-491e-9c65-0d25792d27df?resizing_type=fit" alt="失败与控制流原文示意图 1" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/d86094da-d020-491e-9c65-0d25792d27df?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h2 id="sec-2">可失败表达式</h2>
+<p>在 Verse 中，可失败表达式有多种写法。如果一个表达式是在问一个“是或否”的问题，那它很可能就是可失败的。</p>
+<p>以下是可失败表达式会问的几类问题：</p>
+<ul>
+<li>这两个变量谁更大、谁更小，或是否相等？</li>
+<li>这个变量是否被设为了 <code>true</code>？</li>
+<li>这个变量是否被赋了值？</li>
+<li>这个表达式是否会引发错误？</li>
+</ul>
+<p>如果其中任何问题的答案是<b>是</b>，表达式即<b>成功（succeeds）</b>；如果答案是<b>否</b>，表达式即<b>失败（fails）</b>。成功或失败之后会发生什么，取决于你如何编写代码。</p>
+<h3>比较表达式</h3>
+<p><b>比较表达式（comparison expression）</b>使用 <code>&lt;</code>（小于）、<code>&gt;</code>（大于）或 <code>&lt;&gt;</code>（不等于）等比较运算符，是可失败的。在下面的例子中，<code>5 &lt; 4</code> 是一个会失败的可失败表达式：</p>
+<pre><code>if (5 &lt; 4):
+    Print("This will never print.")</code></pre>
+<p>表达式 <code>5 &lt; 4</code> 就像在问“5 小于 4 吗？”。答案是<b>否</b>，表达式失败，代码块（缩进在 <code>if</code> 表达式下方的部分）<b>不</b>运行。</p>
+<p>再看下一个例子，可失败表达式 <code>MousetrapsSet &lt;&gt; MiceCaught</code> 在问“MousetrapsSet 和 MiceCaught 的值不相等吗？”。</p>
+<pre><code>MousetrapsSet := 3
+MiceCaught := 0
+if (MousetrapsSet&lt;&gt;MiceCaught):
+    Print("Need more cheese!")</code></pre>
+<p>这一次问题的答案是<b>是</b>，因为 <code>MousetrapsSet</code> 是 3 而 <code>MiceCaught</code> 是 0，所以表达式成功，代码块<b>会</b>运行。</p>
+<h3>判定表达式</h3>
+<p>使用 <code>and</code>、<code>or</code> 和 <code>not</code> 运算符的<b>判定表达式（decision expression）</b>也是可失败的。在下面的例子中，<code>MousetrapsForSale &gt; 0 and Coins &gt;= MousetrapCost</code> 是一个会成功的可失败表达式，因为 <code>MousetrapsForSale</code> 是 5（大于 0），<code>Coins</code> 是 30 而 <code>MousetrapCost</code> 是 20（30 大于 20）。两边的表达式各自都成功，所以整个表达式成功。</p>
+<pre><code>MousetrapsForSale := 5
+MousetrapCost := 20
+Coins := 30
+if (MousetrapsForSale &gt; 0 and Coins &gt;= MousetrapCost):
+    Print("You can buy mouse traps.")</code></pre>
+<h3>查询表达式</h3>
+<p><b>查询表达式（query expression）</b>也是可失败的。它们使用 <code>?</code> 运算符检查某些值，例如检查一个 <code>logic</code> 值是否为 <code>true</code>。在下面的例子中，<code>MousetrapStoreOpen?</code> 是一个会失败的可失败表达式，因为 <code>MousetrapStoreOpen</code> 是 <code>false</code>。</p>
+<pre><code>var MousetrapStoreOpen : logic = false
+if (MousetrapStoreOpen?):
+    Print("Come on in!")</code></pre>
+<h2 id="sec-3">失败上下文</h2>
+<p>在上面所有的代码示例中，<code>if</code> 表达式就是其 <code>()</code> 内可失败表达式的失败上下文。失败上下文为可失败表达式提供了一个可以安全失败的场所，因为它决定了失败时接下来会发生什么。</p>
+<p>从之前的课程你已经知道：当 <code>if</code> 中的表达式失败时，<code>if</code> 代码块内的代码不会运行。</p>
+<p>因为 <code>if</code> 会创建失败上下文，你可以在它的代码块中放入任意多个可失败表达式。如果其中任何一个表达式失败，代码块中排在前面的表达式会被撤销，即<b>回滚（rolled back）</b>。</p>
+<p>还有一种不使用 <code>()</code> 的 <code>if</code> 写法。当你需要写很多表达式时，这种写法更方便。示例如下：</p>
+<pre><code>MousetrapsSet:int = 5
+var MiceCaught:int = 0
+var BreakTime:logic = false
+if:
+    MousetrapsSet &gt; 0
+    set BreakTime = true
+    MiceCaught &gt; 0
+if (BreakTime?):
+    Print("Catch some mice!")</code></pre>
+<p>失败上下文中的表达式不一定都得是可失败的，但至少要有一个。在上面的例子中，<code>set BreakTime = true</code> 不是可失败的，其他表达式是。</p>
+<p>在上面的代码中，所有缩进在 <code>if</code> 下方的表达式都在失败上下文之内，三个表达式都会执行。</p>
+<ul>
+<li><code>MousetrapsSet &gt; 0</code> 会成功。</li>
+<li>表达式 <code>set BreakTime = true</code> 会执行，它不可失败，所以不做失败检查。</li>
+<li>但 <code>MiceCaught &gt; 0</code> 会失败。</li>
+</ul>
+<p>由于出现了失败，<code>if</code> 代码块中的每个表达式都会被回滚，包括 <code>set BreakTime = true</code>，就好像这段代码从未运行过一样。运行这段代码，你会看到打印出了“Catch some mice!”。</p>
+<p>编程时你会发现，很多代码只有在其他代码成功运行的前提下才能工作，这也是失败上下文如此有用的另一个原因。把相互依赖的代码放进失败上下文，可以避免一些常见 bug。还记得第 4 课中用来决定是否去看电影的代码吗？现在你已经决定和朋友们一起去了，还得给他们买票、买饮料和零食！</p>
+<pre><code>var Drinks:int = 4
+var Snacks:int = 4
+var Tickets:int = 3
+var FriendsAvailable:int = 4
+if:
+    Drinks &gt;= FriendsAvailable
+    set Drinks -= FriendsAvailable
+    Snacks &gt;= FriendsAvailable
+    set Snacks -= FriendsAvailable
+    Tickets &gt;= FriendsAvailable
+    set Tickets -= FriendsAvailable</code></pre>
+<p>运算符 <code>-=</code> 是<b>减法</b>与<b>赋值</b>结合的简写。在上面的例子中，<code>set Tickets -= FriendsAvailable</code> 等价于 <code>set Tickets = Tickets - FriendsAvailable</code>。加法（<code>+=</code>）、乘法（<code>*=</code>）和除法（<code>/=</code>）也有同样的简写。</p>
+<p>你的饮料和零食够分给到场的朋友，但票不够。这意味着你和朋友们看不成这场电影了。你也许会写一些代码来处理这种情况，但你大概不想把饮料和零食先分出去。</p>
+<p>幸运的是，当表达式 <code>Tickets &gt;= FriendsAvailable</code> 运行时会失败，<code>if</code> 代码块中的所有代码都会回滚。这意味着 <code>Drinks</code> 和 <code>Snacks</code> 变量都会回到值 <code>4</code>。</p>
+<h2 id="sec-4">总结</h2>
+<ul>
+<li>在 Verse 中，<b>失败（failure）</b>是一种控制程序的方式。</li>
+<li><b>可失败表达式（failure expression）</b>可能成功也可能失败，必须写在失败上下文中。成功或失败之后会发生什么，取决于你的代码写法。</li>
+<li><b>失败上下文（failure context）</b>为可失败表达式提供了一个可以安全失败的场所。失败上下文内的任何失败，都会导致该上下文中的所有代码<b>回滚</b>，就像从未运行过一样。</li>
+</ul>
+<h2 id="sec-5">练习时间！</h2>
+<ul>
+<li><a href="basics-of-writing-code-9-practice-time-in-verse.html">第 9 课：练习时间！练习使用可失败表达式与失败上下文（Lesson 9: Practice Time! Practice using failable expressions and failure contexts.）</a></li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/fcc46b69-bd24-4ce0-af92-2ca6b6800c72?resizing_type=fit&width=640&height=640" alt="第 9 课练习时间" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/fcc46b69-bd24-4ce0-af92-2ca6b6800c72?resizing_type=fit&width=640&height=640" target="_blank" rel="noopener">查看原图</a></div></figure>
+<div class="pager"><a href="29-learn-the-basics-of-writing-code-in-verse.html"><small>← 返回父教程</small>从零学习 Verse 代码基础</a><a href="sub-index.html"><small>子教程索引 →</small>全部子教程</a></div>
+</article><nav class="doc-toc" aria-label="本页内容"><b>本页内容</b><a href="#sec-1">失败也没关系</a><a href="#sec-2">可失败表达式</a><a href="#sec-3">失败上下文</a><a href="#sec-4">总结</a><a href="#sec-5">练习时间！</a></nav></div>
+</div></div>
+</div>
+<footer class="edc-footer"><div class="inner"><img src="../assets/logo-epic.svg" alt="Epic Games"><span>Fortnite 文档中文镜像 · UE教程/ · 本地打开 index.html 阅读 · 翻译整理自 Epic 官方文档，仅供学习交流</span></div></footer>
+</body>
+</html>

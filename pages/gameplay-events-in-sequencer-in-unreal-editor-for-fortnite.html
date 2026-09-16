@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>在 Sequencer 中使用 Gameplay 事件 | Fortnite 文档中文镜像</title>
+<link rel="stylesheet" href="../assets/epic.css">
+<link rel="stylesheet" href="../assets/patch.css">
+<link rel="icon" href="../assets/logo-epic.svg">
+</head>
+<body class="theme-fortnite">
+<div class="edc-topbar"><div class="edc-topbar-inner"><img class="edc-logo" src="../assets/logo-epic.svg" alt="Epic Games"><span class="edc-brand">Epic Games <b>开发者社区</b></span><span class="edc-nav"><a href="../index.html">文档首页</a><a href="sub-index.html">子教程索引</a><a href="https://dev.epicgames.com/documentation/fortnite/gameplay-events-in-sequencer-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">英文原文</a></span></div></div>
+<div class="site-container">
+<aside class="site-nav"><div class="documents-tree"><nav><ul class="contents-table">
+<div class="tree-sec">A · 最新动态</div>
+<a class="tree-link" href="01-42-00-fortnite-ecosystem-updates-and-release-notes.html">01. 42.00 生态系统更新与发行说明</a>
+<a class="tree-link" href="02-custom-items-and-inventory-overview-in-fortnite.html">02. 自定义物品与背包总览</a>
+<a class="tree-link" href="03-in-island-transactions-in-fortnite.html">03. 岛内交易</a>
+<a class="tree-link" href="04-mobile-development-in-fortnite.html">04. 移动端开发</a>
+<a class="tree-link" href="05-inputs-in-fortnite.html">05. 输入系统</a>
+<a class="tree-link" href="06-ability-system-in-unreal-editor-for-fortnite.html">06. 能力系统 Ability System</a>
+<a class="tree-link" href="07-partybased-gameplay-using-the-social-synergy-api-in-fortnite.html">07. 社交协同 API 与小队玩法</a>
+<a class="tree-link" href="08-scene-graph-in-unreal-editor-for-fortnite.html">08. 场景图 Scene Graph</a>
+<div class="tree-sec">B · 入门</div>
+<a class="tree-link" href="09-build-your-first-island-in-fortnite.html">09. 构建你的第一个岛屿</a>
+<a class="tree-link" href="10-onboarding-guide-to-programming-with-verse-in-unreal-editor-for-fortnite.html">10. Verse 编程入门指南</a>
+<a class="tree-link" href="11-building-basics-in-fortnite-creative.html">11. 建造基础</a>
+<div class="tree-sec">C · 品牌合集</div>
+<a class="tree-link" href="12-star-wars-islands-in-fortnite.html">12. 星球大战™岛屿</a>
+<a class="tree-link" href="13-kpop-demon-hunters-islands-in-fortnite.html">13. KPop 猎魔团岛屿</a>
+<a class="tree-link" href="14-building-lego-islands-in-fortnite.html">14. 乐高®岛屿</a>
+<a class="tree-link" href="15-the-walking-dead-universe-islands-in-unreal-editor-for-fortnite.html">15. 行尸走肉宇宙岛屿</a>
+<a class="tree-link" href="16-teenage-mutant-ninja-turtle-islands-in-unreal-editor-for-fortnite.html">16. 忍者神龟岛屿</a>
+<a class="tree-link" href="17-squid-game-islands-in-fortnite.html">17. 鱿鱼游戏岛屿</a>
+<div class="tree-sec">D · 开发者成功</div>
+<a class="tree-link" href="18-using-creator-portal-in-fortnite-creative.html">18. 使用创作者门户</a>
+<a class="tree-link" href="19-island-moderation-and-guidelines-in-fortnite-creative.html">19. 岛屿审核与准则</a>
+<div class="tree-sec">E · 协作</div>
+<a class="tree-link" href="20-creating-teams-in-creator-portal-in-unreal-editor-for-fortnite.html">20. 在创作者门户创建团队</a>
+<a class="tree-link" href="21-adding-playtesters-in-fortnite-creative.html">21. 添加试玩测试员</a>
+<a class="tree-link" href="22-playtesting-your-island-in-unreal-editor-for-fortnite.html">22. 试玩测试你的岛屿</a>
+<a class="tree-link" href="23-collaborating-in-unreal-editor-for-fortnite.html">23. 在 UEFN 中协作</a>
+<a class="tree-link" href="24-lore-version-control-in-unreal-editor-for-fortnite.html">24. Lore 版本控制</a>
+<a class="tree-link" href="25-conflicts-in-lore-version-control-in-unreal-editor-for-fortnite.html">25. Lore 中的冲突</a>
+<a class="tree-link" href="26-version-history-and-conflict-resolution-in-unreal-editor-for-fortnite.html">26. 分支历史与冲突解决</a>
+<div class="tree-sec">F · 游戏示例</div>
+<a class="tree-link" href="27-build-a-game-in-unreal-editor-for-fortnite.html">27. 构建一款游戏</a>
+<a class="tree-link" href="28-unreal-editor-for-fortnite-starter-templates.html">28. UEFN 新手模板</a>
+<div class="tree-sec">G · Verse</div>
+<a class="tree-link" href="29-learn-the-basics-of-writing-code-in-verse.html">29. 从零学习 Verse 代码基础</a>
+<div class="tree-sec">H · 专注领域</div>
+<a class="tree-link" href="30-lighting-in-unreal-editor-for-fortnite.html">30. 灯光</a>
+<a class="tree-link active" href="31-animation-and-cinematics-in-unreal-editor-for-fortnite.html">31. 动画与过场动画</a>
+<a class="tree-link" href="32-modeling-in-unreal-editor-for-fortnite.html">32. 建模</a>
+<a class="tree-link" href="33-materials-in-unreal-editor-for-fortnite.html">33. 材质</a>
+<a class="tree-link" href="34-environments-and-landscapes-in-unreal-editor-for-fortnite.html">34. 环境与地形</a>
+<a class="tree-link" href="35-audio-in-unreal-editor-for-fortnite.html">35. 音频</a>
+<a class="tree-link" href="36-visual-effects-in-unreal-editor-for-fortnite.html">36. 视觉特效</a>
+</ul></nav></div></aside>
+<div class="page-content"><div class="page-document has-theme-bg">
+<header class="section-page-header"><nav><ol class="breadcrumb is-shrinkable"><li class="breadcrumb-item is-root"><img src="../assets/logo-epic.svg" alt="Epic Games"><a href="../index.html">Developer</a></li><li class="breadcrumb-item"><a href="../index.html">Fortnite 文档</a></li><li class="breadcrumb-item"><a href="31-animation-and-cinematics-in-unreal-editor-for-fortnite.html">动画与过场动画</a></li><li class="breadcrumb-item active" aria-current="page"><span class="text-truncate">在 Sequencer 中使用 Gameplay 事件</span></li></ol></nav><h1>在 Sequencer 中使用 Gameplay 事件</h1><p class="text-secondary mb-0">用 Sequencer 中的 Gameplay 事件，在游玩过程中的精确时刻触发设备功能，无需依赖一连串设备事件的链式反应。</p><p class="doc-meta">英文原标题：Gameplay Events in Sequencer in Unreal Editor for Fortnite · <a href="https://dev.epicgames.com/documentation/fortnite/gameplay-events-in-sequencer-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">查看英文原文</a> · 社区翻译镜像，仅供学习</p></header>
+<div class="doc-columns"><article class="doc-article">
+<p>时机就是一切，尤其是当你希望设备在特定时刻执行特定功能时。通常，触发功能需要以复杂方式设置多个设备或触发器，甚至要用 channel（频道）设备把游戏机制、功能与视觉表现串起来。</p>
+<p>有了 <strong>Sequencer 中的 Gameplay 事件（Gameplay Events in Sequencer）</strong>，你可以在游玩过程中的精确时刻触发设备功能。</p>
+<p>Sequencer 中的 Gameplay 事件不支持 Verse 编写的自定义设备。该功能仅适用于内容浏览器 <strong>Device 文件夹</strong>中的设备。</p>
+<h2 id="sec-1">计时事件（Timing Events）</h2>
+<p>使用<a href="https://dev.epicgames.com/documentation/fortnite/unreal-editor-for-fortnite-glossary#sequencer" target="_blank" rel="noopener">Sequencer</a>可以简化事件计时流程，让功能准时触发，而不必依赖一连串设备事件的链式反应。这对节奏游戏很有帮助，也适合执行那些高度依赖玩家掐准时间走位避险的游戏机制。</p>
+<h3>配置触发器（Configuring the Triggers）</h3>
+<p>在 <a href="sequencer-and-control-rig-in-unreal-editor-for-fortnite.html">Sequencer</a> 中设置 gameplay 事件之前，必须先创建 <strong>Level Sequence</strong>，并把<a href="using-cinematic-sequence-device-in-unreal-editor-for-fortnite.html">Cinematic Sequence 设备</a>拖入<a href="https://dev.epicgames.com/documentation/fortnite/fortnite-glossary#viewport" target="_blank" rel="noopener">视口（viewport）</a>。</p>
+<ul>
+<li>在<a href="https://dev.epicgames.com/documentation/fortnite/content-browser" target="_blank" rel="noopener"><strong>内容浏览器（Content Browser）</strong></a>中右键，选择<strong>过场动画（Cinematics）</strong> &gt; <strong>Level Sequence</strong>。
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/87cdf5e9-e5a5-44bf-b596-09034d5828cb?resizing_type=fit" alt="在内容浏览器中新建 Level Sequence 的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/87cdf5e9-e5a5-44bf-b596-09034d5828cb?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></li>
+<li>为 Level Sequence 缩略图命名。</li>
+<li>双击缩略图打开 Sequencer。</li>
+<li>点击 <strong>+Track</strong>，选择 <strong>Actor to Sequence</strong> &gt; <strong>Add Device</strong>，或在搜索框中搜索该设备。
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/6b7efbe6-ce86-48f0-8aa4-69b798ae677d?resizing_type=fit" alt="添加设备轨道的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/6b7efbe6-ce86-48f0-8aa4-69b798ae677d?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></li>
+<li>点击设备名称旁的 <strong>+</strong> 图标，从轨道（Track）下拉菜单中选择 <strong>Gameplay Events</strong>。
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/6b40d240-fafd-461d-a85c-dc2ff498ccf6?resizing_type=fit" alt="选择 Gameplay Events 轨道的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/6b40d240-fafd-461d-a85c-dc2ff498ccf6?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></li>
+<li>在 <strong>Gameplay Event</strong> 上添加<strong>关键帧（keyframe）</strong>。
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/5444e749-a406-4706-b14d-b054e41c01cd?resizing_type=fit" alt="为 Gameplay Event 添加关键帧的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/5444e749-a406-4706-b14d-b054e41c01cd?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></li>
+<li>在时间轴上右键该关键帧，选择 <strong>Properties</strong>，打开 <strong>Key</strong> 菜单。
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/d5588917-9e50-4d8e-b96e-05c230ca1ea5?resizing_type=fit" alt="关键帧 Key 属性菜单的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/d5588917-9e50-4d8e-b96e-05c230ca1ea5?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></li>
+<li>在 <strong>Time</strong> 字段填入你希望触发设备 gameplay 功能的<strong>时间</strong>。</li>
+<li>从 <strong>Gameplay Event Function Property</strong> 下拉菜单中选择该设备的 <strong>gameplay 事件</strong>。
+<p><strong>Gameplay Event Function Property</strong> 列表中的设备功能与所选设备的功能一致。</p></li>
+<li><strong>保存</strong> Level Sequence。</li>
+</ul>
+<h3>播放 Level Sequence（Playing the Level Sequence）</h3>
+<p>当 Cinematic Sequence 设备播放 Level Sequence 时，在 Sequencer 中设置的设备事件就会在 Gameplay 事件 <strong>Time 字段</strong>设定的时刻触发。</p>
+<p>你可以决定：让 Cinematic Sequence 设备在游戏开始时自动播放 Level Sequence，或将其设为由其他设备（如<a href="https://dev.epicgames.com/documentation/en-us/fortnite-creative/using-trigger-devices-in-fortnite-creative" target="_blank" rel="noopener"><strong>触发器（Trigger）</strong></a>或<a href="https://dev.epicgames.com/documentation/en-us/fortnite-creative/using-timed-objective-devices-in-fortnite-creative" target="_blank" rel="noopener"><strong>限时目标（Timed Objective）设备</strong></a>）触发后再播放。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/bc7bed77-c352-4188-9d99-903a3d45f288?resizing_type=fit" alt="Cinematic Sequence 设备播放设置的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/bc7bed77-c352-4188-9d99-903a3d45f288?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ul>
+<li>在<a href="https://dev.epicgames.com/documentation/fortnite/outliner-panel" target="_blank" rel="noopener"><strong>大纲视图（Outliner）</strong></a>或<a href="https://dev.epicgames.com/documentation/fortnite/user-interface-reference-for-unreal-editor-for-fortnite#viewport" target="_blank" rel="noopener">视口（Viewport）</a>中选中 <strong>Cinematic Sequence 设备</strong>。</li>
+<li>点击 <strong>Sequence</strong> 选项的空白字段，选择一个 <strong>Level Sequence</strong>。
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/0331c615-de15-44f8-9a6e-f9ee5067566f?resizing_type=fit" alt="选择 Level Sequence 的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/0331c615-de15-44f8-9a6e-f9ee5067566f?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></li>
+<li>取消勾选 <strong>Autoplay</strong> 以关闭自动播放。只有当你打算用其他设备触发 Cinematic Sequence 设备的播放功能时才这样做。
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/c7fd3589-d81b-4b5e-8348-795ad287b73a?resizing_type=fit" alt="取消 Autoplay 自动播放的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/c7fd3589-d81b-4b5e-8348-795ad287b73a?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></li>
+<li>点击 <strong>Play Function</strong> 用户选项中的 <strong>Array +</strong> 图标。
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/bd3b2765-2b74-4c2f-971d-fff49ffe7d66?resizing_type=fit" alt="在 Play Function 中添加设备的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/bd3b2765-2b74-4c2f-971d-fff49ffe7d66?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></li>
+<li>从顶部 <strong>Play Function 下拉菜单</strong>中选择一个<strong>设备</strong>。</li>
+<li>从<strong>事件（Event）下拉菜单</strong>中选择一个<strong>事件</strong>。</li>
+</ul>
+<p>除非想修改 Level Sequence 的其他用户选项，否则保留默认值即可。</p>
+<p>你可以向一个 Level Sequence 添加多个设备，并为每个设备设置单个或多个错开的触发时刻。</p>
+<p>你甚至可以让一个（或多个）设备在一段时间内按固定时间间隔多次触发。</p>
+<p><strong>单个事件（Single Event）</strong></p>
+<p><strong>多个事件（Multiple Events）</strong></p>
+<p><strong>单个设备的多个事件（Multiple Events for a Single Device）</strong></p>
+<p>相关标签：<a href="https://dev.epicgames.com/community/search?query=gameplay" target="_blank" rel="noopener">gameplay</a> · <a href="https://dev.epicgames.com/community/search?query=devices" target="_blank" rel="noopener">devices</a> · <a href="https://dev.epicgames.com/community/search?query=level%20design" target="_blank" rel="noopener">level design</a> · <a href="https://dev.epicgames.com/community/search?query=sequence" target="_blank" rel="noopener">sequence</a></p>
+<p><a href="https://forums.unrealengine.com/categories?tag=fortnite" target="_blank" rel="noopener">在开发者论坛提问并帮助同伴</a></p>
+<p><a href="https://dev.epicgames.com/community/fortnite/learning" target="_blank" rel="noopener">在学习库中编写或阅读他人教程</a></p>
+<div class="pager"><a href="31-animation-and-cinematics-in-unreal-editor-for-fortnite.html"><small>← 返回父教程</small>动画与过场动画</a><a href="sub-index.html"><small>子教程索引 →</small>全部子教程</a></div>
+</article><nav class="doc-toc" aria-label="本页内容"><b>本页内容</b><a href="#sec-1">计时事件（Timing Events）</a></nav></div>
+</div></div>
+</div>
+<footer class="edc-footer"><div class="inner"><img src="../assets/logo-epic.svg" alt="Epic Games"><span>Fortnite 文档中文镜像 · UE教程/ · 本地打开 index.html 阅读 · 翻译整理自 Epic 官方文档，仅供学习交流</span></div></footer>
+</body>
+</html>

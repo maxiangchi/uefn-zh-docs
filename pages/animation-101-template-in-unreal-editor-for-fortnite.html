@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UEFN 中的 Animation 101 模板 | Fortnite 文档中文镜像</title>
+<link rel="stylesheet" href="../assets/epic.css">
+<link rel="stylesheet" href="../assets/patch.css">
+<link rel="icon" href="../assets/logo-epic.svg">
+</head>
+<body class="theme-fortnite">
+<div class="edc-topbar"><div class="edc-topbar-inner"><img class="edc-logo" src="../assets/logo-epic.svg" alt="Epic Games"><span class="edc-brand">Epic Games <b>开发者社区</b></span><span class="edc-nav"><a href="../index.html">文档首页</a><a href="sub-index.html">子教程索引</a><a href="https://dev.epicgames.com/documentation/fortnite/animation-101-template-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">英文原文</a></span></div></div>
+<div class="site-container">
+<aside class="site-nav"><div class="documents-tree"><nav><ul class="contents-table">
+<div class="tree-sec">A 最新动态</div>
+<a class="tree-link" href="01-42-00-fortnite-ecosystem-updates-and-release-notes.html">01. 42.00 生态系统更新与发行说明</a>
+<a class="tree-link" href="02-custom-items-and-inventory-overview-in-fortnite.html">02. 自定义物品与背包总览</a>
+<a class="tree-link" href="03-in-island-transactions-in-fortnite.html">03. 岛内交易</a>
+<a class="tree-link" href="04-mobile-development-in-fortnite.html">04. 移动端开发</a>
+<a class="tree-link" href="05-inputs-in-fortnite.html">05. 输入系统</a>
+<a class="tree-link" href="06-ability-system-in-unreal-editor-for-fortnite.html">06. 能力系统 Ability System</a>
+<a class="tree-link" href="07-partybased-gameplay-using-the-social-synergy-api-in-fortnite.html">07. 社交协同 API 与小队玩法</a>
+<a class="tree-link" href="08-scene-graph-in-unreal-editor-for-fortnite.html">08. 场景图 Scene Graph</a>
+<div class="tree-sec">B 入门</div>
+<a class="tree-link" href="09-build-your-first-island-in-fortnite.html">09. 构建你的第一个岛屿</a>
+<a class="tree-link" href="10-onboarding-guide-to-programming-with-verse-in-unreal-editor-for-fortnite.html">10. Verse 编程入门指南</a>
+<a class="tree-link" href="11-building-basics-in-fortnite-creative.html">11. 建造基础</a>
+<div class="tree-sec">C 品牌合集</div>
+<a class="tree-link" href="12-star-wars-islands-in-fortnite.html">12. 星球大战™岛屿</a>
+<a class="tree-link" href="13-kpop-demon-hunters-islands-in-fortnite.html">13. KPop 猎魔团岛屿</a>
+<a class="tree-link" href="14-building-lego-islands-in-fortnite.html">14. 乐高®岛屿</a>
+<a class="tree-link" href="15-the-walking-dead-universe-islands-in-unreal-editor-for-fortnite.html">15. 行尸走肉宇宙岛屿</a>
+<a class="tree-link" href="16-teenage-mutant-ninja-turtle-islands-in-unreal-editor-for-fortnite.html">16. 忍者神龟岛屿</a>
+<a class="tree-link" href="17-squid-game-islands-in-fortnite.html">17. 鱿鱼游戏岛屿</a>
+<div class="tree-sec">D 开发者成功</div>
+<a class="tree-link" href="18-using-creator-portal-in-fortnite-creative.html">18. 使用创作者门户</a>
+<a class="tree-link" href="19-island-moderation-and-guidelines-in-fortnite-creative.html">19. 岛屿审核与准则</a>
+<div class="tree-sec">E 协作</div>
+<a class="tree-link" href="20-creating-teams-in-creator-portal-in-unreal-editor-for-fortnite.html">20. 在创作者门户创建团队</a>
+<a class="tree-link" href="21-adding-playtesters-in-fortnite-creative.html">21. 添加试玩测试员</a>
+<a class="tree-link" href="22-playtesting-your-island-in-unreal-editor-for-fortnite.html">22. 试玩测试你的岛屿</a>
+<a class="tree-link" href="23-collaborating-in-unreal-editor-for-fortnite.html">23. 在 UEFN 中协作</a>
+<a class="tree-link" href="24-lore-version-control-in-unreal-editor-for-fortnite.html">24. Lore 版本控制</a>
+<a class="tree-link" href="25-conflicts-in-lore-version-control-in-unreal-editor-for-fortnite.html">25. Lore 中的冲突</a>
+<a class="tree-link" href="26-version-history-and-conflict-resolution-in-unreal-editor-for-fortnite.html">26. 分支历史与冲突解决</a>
+<div class="tree-sec">F 游戏示例</div>
+<a class="tree-link" href="27-build-a-game-in-unreal-editor-for-fortnite.html">27. 构建一款游戏</a>
+<a class="tree-link active" href="28-unreal-editor-for-fortnite-starter-templates.html">28. UEFN 新手模板</a>
+<div class="tree-sec">G Verse</div>
+<a class="tree-link" href="29-learn-the-basics-of-writing-code-in-verse.html">29. 从零学习 Verse 代码基础</a>
+<div class="tree-sec">H 专注领域</div>
+<a class="tree-link" href="30-lighting-in-unreal-editor-for-fortnite.html">30. 灯光</a>
+<a class="tree-link" href="31-animation-and-cinematics-in-unreal-editor-for-fortnite.html">31. 动画与过场动画</a>
+<a class="tree-link" href="32-modeling-in-unreal-editor-for-fortnite.html">32. 建模</a>
+<a class="tree-link" href="33-materials-in-unreal-editor-for-fortnite.html">33. 材质</a>
+<a class="tree-link" href="34-environments-and-landscapes-in-unreal-editor-for-fortnite.html">34. 环境与地形</a>
+<a class="tree-link" href="35-audio-in-unreal-editor-for-fortnite.html">35. 音频</a>
+<a class="tree-link" href="36-visual-effects-in-unreal-editor-for-fortnite.html">36. 视觉特效</a>
+</ul></nav></div></aside>
+<div class="page-content"><div class="page-document has-theme-bg">
+<header class="section-page-header"><nav><ol class="breadcrumb is-shrinkable"><li class="breadcrumb-item is-root"><img src="../assets/logo-epic.svg" alt="Epic Games"><a href="../index.html">Developer</a></li><li class="breadcrumb-item"><a href="../index.html">Fortnite 文档</a></li><li class="breadcrumb-item"><a href="28-unreal-editor-for-fortnite-starter-templates.html">UEFN 新手模板</a></li><li class="breadcrumb-item active" aria-current="page"><span class="text-truncate">UEFN 中的 Animation 101 模板</span></li></ol></nav><h1>UEFN 中的 Animation 101 模板</h1><p class="text-secondary mb-0">通过 Animation 101 模板快速学习骨骼网格体动画，了解 UEFN 中的动画设备、工具与工作流。</p><p class="doc-meta">英文原标题：Animation 101 Template in Unreal Editor for Fortnite · <a href="https://dev.epicgames.com/documentation/fortnite/animation-101-template-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">查看英文原文</a> · 社区翻译镜像，仅供学习</p></header>
+<div class="doc-columns"><article class="doc-article">
+<p><strong>Animation 101</strong> 模板是学习如何为骨骼网格体制作动画的快捷途径。</p>
+<p>该模板展示了 UEFN 中当前可用的动画设备、工具、资产与工作流全貌。</p>
+<p>它还把接入这些设备和工具所需的部分资产打包好，放在内容浏览器（Content Browser）中供你直接使用。</p>
+<p>本模板将带你开启一段博物馆之旅，学习骨骼网格体以及如何使用<a href="using-animated-mesh-device-in-unreal-editor-for-fortnite.html">动画网格体（Animated Mesh）</a>设备，或<strong><a href="https://dev.epicgames.com/documentation/fortnite/control-rig" target="_blank" rel="noopener">控制绑定（Control Rig）</a></strong>与<a href="sequencer-and-control-rig-in-unreal-editor-for-fortnite.html">定序器（Sequencer）</a>为它们制作动画。</p>
+<p>你可以在<strong>项目浏览器（Project Browser）</strong>的<strong>项目模板（Project Templates）</strong>分区找到该模板。</p>
+<p>本教程将带你走遍整个模板并讲解其中的内容。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/9109c054-b852-47eb-9fab-debd631df368?resizing_type=fit" alt="Animation 101 模板博物馆总览原文示意图1" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/9109c054-b852-47eb-9fab-debd631df368?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h2 id="sec-1">骨骼网格体（Skeletal Mesh）</h2>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/98bc2e58-6c4d-41d1-84cf-d4970fd75ca2?resizing_type=fit" alt="博物馆中的 Fortnite 人体模型骨骼网格体原文示意图2" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/98bc2e58-6c4d-41d1-84cf-d4970fd75ca2?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>进入游戏后，你会看到一个 Fortnite 人体模型的骨骼网格体。骨骼网格体是可以用动画网格体设备或定序器中的控制绑定来驱动的模型。</p>
+<p>骨骼网格体是播放动画的主要资产。</p>
+<p>在<strong>内容抽屉（Content Drawer）</strong>的 <strong>Mannequin</strong> 下，你可以找到组成人体模型的各种资产。</p>
+<p>把 FN_Mannequin 骨骼网格体拖入岛屿时，会如上图所示生成一个 FortSkeletalMeshActor。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/026c3b17-57b1-43ba-b014-57c98a1b1495?resizing_type=fit" alt="拖入骨骼网格体生成 FortSkeletalMeshActor 原文示意图3" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/026c3b17-57b1-43ba-b014-57c98a1b1495?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>在<strong>细节（Details）</strong>面板中，你可以把人体模型网格体换成其他任意骨骼网格体，也可以更换材质。</p>
+<p>在博物馆的走廊里，你会看到播放着不同动画的骨骼网格体。</p>
+<p>你可以实例化动画，这会创建一个骨骼网格体 Actor 并关联一段要播放的动画。你也可以更换骨骼网格体和动画。</p>
+<p>从 Animations 文件夹拖入一段动画序列时，会像第一个例子一样创建一个使用 FN_Mannequin 骨骼网格体的 FortSkeletalMesh，同时关联一段动画序列。</p>
+<p>为骨骼网格体应用动画后，<strong>细节（Details）</strong>面板中会显示以下设置。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/93850bae-fbe0-4287-8a8b-e917e2228629?resizing_type=fit" alt="骨骼网格体动画设置细节面板原文示意图4" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/93850bae-fbe0-4287-8a8b-e917e2228629?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ul>
+<li><strong>循环（Looping）</strong>：决定动画是否循环播放。</li>
+<li><strong>播放（Playing）</strong>：决定动画是否在游戏/编辑模式下播放。</li>
+<li><strong>初始位置（Initial Position）</strong>：未播放时动画停留在哪一帧。</li>
+<li><strong>播放速率（Play Rate）</strong>：设置动画速度，1.0 = 100%。</li>
+</ul>
+<p>为保证一致性，你可以决定实例化的动画序列是否播放。</p>
+<h2 id="sec-2">动画网格体设备（Animated Mesh Device）</h2>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/ded03b7d-9e5c-4f22-8cca-b96fe7788217?resizing_type=fit" alt="剧院中搭配动画网格体设备的骨骼网格体原文示意图5" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/ded03b7d-9e5c-4f22-8cca-b96fe7788217?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>剧院里陈列着与动画网格体设备配对的骨骼网格体。</p>
+<p>使用动画网格体设备，可以让骨骼网格体播放多种不同的动画，并通过<a href="using-button-devices-in-fortnite-creative.html"><strong>按钮（Button）</strong></a>设备等触发器暂停或倒放动画。</p>
+<p><figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/2694aef4-a566-4098-ba51-8831c654bd54?resizing_type=fit" alt="动画网格体设备的用户选项与函数原文示意图6" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/2694aef4-a566-4098-ba51-8831c654bd54?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>动画网格体设备的用户选项与函数</p>
+<p>动画网格体设备提供了与基础骨骼网格体 Actor 相同的控制选项，还可以绑定事件，告诉该设备在游戏中何时播放、暂停或倒放。</p>
+<p>你可以使用桌上的按钮设备触发这些事件进行演示。</p>
+<p>没有该设备的骨骼网格体（例如入口处那些）在游戏过程中不可更改。要在游戏过程中更精细地控制动画，请使用动画网格体设备。</p>
+<p>骨骼网格体不会与玩家、世界或其他骨骼网格体发生碰撞。</p>
+<h2 id="sec-3">过场动画序列设备（Cinematic Sequence Device）</h2>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/7109ab1c-c30a-4758-b938-6e05935edd52?resizing_type=fit" alt="楼梯处的过场动画序列设备原文示意图7" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/7109ab1c-c30a-4758-b938-6e05935edd52?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>沿楼梯而上，你会找到<a href="using-cinematic-sequence-device-in-unreal-editor-for-fortnite.html">过场动画序列（Cinematic Sequence）</a>设备，以及一个触发一小段过场动画的按钮。</p>
+<p>与按钮交互后，它会激活过场动画序列设备的播放（Play）函数，你就可以在游戏中观看这段序列。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/aeb5b67e-6f83-48e3-ba06-92cc1ed1c53b?resizing_type=fit" alt="过场动画序列设备播放演示原文示意图8" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/aeb5b67e-6f83-48e3-ba06-92cc1ed1c53b?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>你可以使用过场动画序列设备回放在定序器中构建的关卡序列（Level Sequence）。</p>
+<p>要添加自己的过场动画，必须位于项目文件夹中。</p>
+<p>要制作自己的过场动画，请在 UEFN 的<strong>内容抽屉（Content Drawer）</strong>中找到项目文件夹，点击 <strong>+添加（+Add）</strong>，滚动到<strong>过场动画（Cinematics）</strong>并点击<strong>关卡序列（Level Sequence）</strong>。</p>
+<p>双击新建的关卡序列即可打开定序器。</p>
+<p>定序器用于编辑关卡序列，可以控制过场动画播放什么、何时播放、在哪里播放以及播放多久，此外还有许多其他功能。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/3ab06827-0ec9-4fbf-b9b4-4aa5e4c0b8a5?resizing_type=fit" alt="定序器编辑界面原文示意图9" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/3ab06827-0ec9-4fbf-b9b4-4aa5e4c0b8a5?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>要体验定序器的功能，请在 UEFN <strong>内容抽屉（Content Drawer）</strong>中进入 <strong>Sequences</strong> 文件夹，选择 MuseumFlyThrough 并双击，在定序器中打开。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/562cb6e4-8663-4df6-9544-ae751018e725?resizing_type=fit" alt="MuseumFlyThrough 序列原文示意图10" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/562cb6e4-8663-4df6-9544-ae751018e725?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>你也可以通过<strong>窗口（Window）</strong>菜单的<strong>过场动画（Cinematics）</strong>选项卡访问定序器。</p>
+<h2 id="sec-4">控制绑定（Control Rig）</h2>
+<p>控制绑定（Control Rig）可以自定义动画，还能叠加道具、视觉特效等内容。</p>
+<p>双击 <strong>MuseumFlyThrough 序列</strong>缩略图打开定序器，你可以在此修改该序列、打造自己的版本。该定序器包括：</p>
+<ul>
+<li>一条运镜剪辑轨道，用于制作运镜动画和机位切换</li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/a643b3a1-1b7e-4868-85cf-b2ef5bd352b3?resizing_type=fit" alt="运镜剪辑轨道原文示意图11" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/a643b3a1-1b7e-4868-85cf-b2ef5bd352b3?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p><em>点击图片放大。</em></p>
+<p>双击<strong>控制绑定（Control Rig）</strong>缩略图可打开控制绑定编辑器。</p>
+<ul>
+<li>三个<a href="https://docs.unrealengine.com/5.1/en-US/animation-editor-mode-in-unreal-engine/" target="_blank" rel="noopener">控制绑定（Control Rigs）</a></li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/271e1f2f-ca3a-4a7d-847a-9eaf7eb57e1c?resizing_type=fit" alt="控制绑定列表原文示意图12" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/271e1f2f-ca3a-4a7d-847a-9eaf7eb57e1c?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p><em>点击图片放大。</em></p>
+<p>接下来，打开<strong>内容抽屉（Content Drawer）</strong>的 <strong>Mannequin</strong> 文件夹，选择 <strong>Meshes</strong> 文件夹，把 FN_Mannequin_ControlRig 拖到岛屿上。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/df5ded80-e0f9-411a-9e38-7d2c7a8ca779?resizing_type=fit" alt="把控制绑定拖入岛屿原文示意图13" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/df5ded80-e0f9-411a-9e38-7d2c7a8ca779?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>UEFN 随后会进入动画模式，并自动把该 Actor 加入当前激活的序列，或新建一个序列。</p>
+<p>使用控制绑定可以在控制绑定编辑器中创建新的控制器和动画来制作动画。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/93f03474-e50a-4643-bec0-bd84fb9fc012?resizing_type=fit" alt="控制绑定编辑器原文示意图14" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/93f03474-e50a-4643-bec0-bd84fb9fc012?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>在<strong>内容抽屉（Content Drawer）</strong>中双击<strong>控制绑定（Control Rig）</strong>会打开绑定图表（Rig Graph），你可以在其中按需添加或修改控制器。</p>
+<p>你也可以用控制绑定和定序器手工制作动画。</p>
+<p>按以下步骤制作一段新动画。</p>
+<ul>
+<li>从 <strong>Mannequin</strong> &gt; <strong>Meshes</strong> 文件夹把<strong>控制绑定（Control Rig）</strong>拖入项目。定序器随即打开，角色会在视口中被选中。</li>
+<li>添加一条<strong>变换轨道（Transform Track）</strong>。定序器会自动应用<strong>控制绑定控制器（Control Rig Controls）</strong>过滤器。</li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/73e07ddd-0165-46e6-bca7-b83cada54fc6?resizing_type=fit" alt="添加变换轨道原文示意图15" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/73e07ddd-0165-46e6-bca7-b83cada54fc6?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ul>
+<li>在面板中选择一个控制器，肢体上会出现一个轴心点。</li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/c47cdf46-563d-4277-bbfa-01d5ed66c483?resizing_type=fit" alt="选择控制器显示轴心点原文示意图16" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/c47cdf46-563d-4277-bbfa-01d5ed66c483?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ul>
+<li>按<strong>回车（Enter）</strong>或点击轨道上的关键帧图标创建关键帧。</li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/ea25cbbb-bd5e-4937-beb1-66e9457cf9b3?resizing_type=fit" alt="创建关键帧原文示意图17" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/ea25cbbb-bd5e-4937-beb1-66e9457cf9b3?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ul>
+<li>把肢体摆成新姿势。</li>
+<li>向前拖动播放头，重复上述操作。</li>
+<li>把动画保存为动画序列。可观看<a href="https://www.youtube.com/watch?v=FgJ1stTScxI&t=1538s" target="_blank" rel="noopener">这段</a>YouTube 视频了解更多。</li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/4983cb6d-a7c5-45bc-8603-be8df1bd69b5?resizing_type=fit" alt="保存动画序列原文示意图18" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/4983cb6d-a7c5-45bc-8603-be8df1bd69b5?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>要修改已有动画，请在<strong>定序器（Sequencer）</strong>中选择<strong>烘焙到控制绑定（Bake To Control Rig）</strong>，再选择你的绑定。</p>
+<p>可使用虚幻引擎<a href="https://dev.epicgames.com/documentation/unreal-engine/rigging-with-control-rig-in-unreal-engine?application_version=5.5" target="_blank" rel="noopener">控制绑定（Control Rig）</a>文档的这一章节，学习如何绑定角色并创建动画。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/c542b3f2-7b0f-4a4a-8a8b-adf2c5cf6778?resizing_type=fit" alt="烘焙到控制绑定原文示意图19" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/c542b3f2-7b0f-4a4a-8a8b-adf2c5cf6778?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>你甚至可以把道具附加到动画网格体上。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/15fbce26-64e9-4a48-a9e4-a35ce8689fe0?resizing_type=fit" alt="为动画网格体附加道具原文示意图20" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/15fbce26-64e9-4a48-a9e4-a35ce8689fe0?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p class="doc-tags">标签：<a href="https://dev.epicgames.com/community/search?query=animation" target="_blank" rel="noopener">animation</a> · <a href="https://dev.epicgames.com/community/search?query=control%20rig" target="_blank" rel="noopener">control rig</a> · <a href="https://dev.epicgames.com/community/search?query=sequencer" target="_blank" rel="noopener">sequencer</a> · <a href="https://dev.epicgames.com/community/search?query=skeletal%20mesh" target="_blank" rel="noopener">skeletal mesh</a></p>
+<p class="doc-help">在<a href="https://forums.unrealengine.com/categories?tag=fortnite" target="_blank" rel="noopener">开发者论坛（Developer Forums）</a>提问并帮助同行；在<a href="https://dev.epicgames.com/community/fortnite/learning" target="_blank" rel="noopener">学习库（Learning Library）</a>撰写你自己的教程或阅读他人的教程。</p>
+<div class="pager"><a href="28-unreal-editor-for-fortnite-starter-templates.html"><small>← 返回父教程</small>UEFN 新手模板</a><a href="sub-index.html"><small>子教程索引 →</small>全部子教程</a></div>
+</article><nav class="doc-toc" aria-label="本页内容"><b>本页内容</b><a href="#sec-1">骨骼网格体（Skeletal Mesh）</a><a href="#sec-2">动画网格体设备（Animated Mesh Device）</a><a href="#sec-3">过场动画序列设备（Cinematic Sequence Device）</a><a href="#sec-4">控制绑定（Control Rig）</a></nav></div>
+</div></div>
+</div>
+<footer class="edc-footer"><div class="inner"><img src="../assets/logo-epic.svg" alt="Epic Games"><span>Fortnite 文档中文镜像 · UE教程/ · 本地打开 index.html 阅读 · 翻译整理自 Epic 官方文档，仅供学习交流</span></div></footer>
+</body>
+</html>

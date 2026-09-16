@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>灯光与 Lumen 快速入门指南 | Fortnite 文档中文镜像</title>
+<link rel="stylesheet" href="../assets/epic.css">
+<link rel="stylesheet" href="../assets/patch.css">
+<link rel="icon" href="../assets/logo-epic.svg">
+</head>
+<body class="theme-fortnite">
+<div class="edc-topbar"><div class="edc-topbar-inner"><img class="edc-logo" src="../assets/logo-epic.svg" alt="Epic Games"><span class="edc-brand">Epic Games <b>开发者社区</b></span><span class="edc-nav"><a href="../index.html">文档首页</a><a href="sub-index.html">子教程索引</a><a href="https://dev.epicgames.com/documentation/fortnite/lighting-and-lumen-quick-start-guide-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">英文原文</a></span></div></div>
+<div class="site-container">
+<aside class="site-nav"><div class="documents-tree"><nav><ul class="contents-table">
+<div class="tree-sec">A · 最新动态</div>
+<a class="tree-link" href="01-42-00-fortnite-ecosystem-updates-and-release-notes.html">01. 42.00 生态系统更新与发行说明</a>
+<a class="tree-link" href="02-custom-items-and-inventory-overview-in-fortnite.html">02. 自定义物品与背包总览</a>
+<a class="tree-link" href="03-in-island-transactions-in-fortnite.html">03. 岛内交易</a>
+<a class="tree-link" href="04-mobile-development-in-fortnite.html">04. 移动端开发</a>
+<a class="tree-link" href="05-inputs-in-fortnite.html">05. 输入系统</a>
+<a class="tree-link" href="06-ability-system-in-unreal-editor-for-fortnite.html">06. 能力系统 Ability System</a>
+<a class="tree-link" href="07-partybased-gameplay-using-the-social-synergy-api-in-fortnite.html">07. 社交协同 API 与小队玩法</a>
+<a class="tree-link" href="08-scene-graph-in-unreal-editor-for-fortnite.html">08. 场景图 Scene Graph</a>
+<div class="tree-sec">B · 入门</div>
+<a class="tree-link" href="09-build-your-first-island-in-fortnite.html">09. 构建你的第一个岛屿</a>
+<a class="tree-link" href="10-onboarding-guide-to-programming-with-verse-in-unreal-editor-for-fortnite.html">10. Verse 编程入门指南</a>
+<a class="tree-link" href="11-building-basics-in-fortnite-creative.html">11. 建造基础</a>
+<div class="tree-sec">C · 品牌合集</div>
+<a class="tree-link" href="12-star-wars-islands-in-fortnite.html">12. 星球大战™岛屿</a>
+<a class="tree-link" href="13-kpop-demon-hunters-islands-in-fortnite.html">13. KPop 猎魔团岛屿</a>
+<a class="tree-link" href="14-building-lego-islands-in-fortnite.html">14. 乐高®岛屿</a>
+<a class="tree-link" href="15-the-walking-dead-universe-islands-in-unreal-editor-for-fortnite.html">15. 行尸走肉宇宙岛屿</a>
+<a class="tree-link" href="16-teenage-mutant-ninja-turtle-islands-in-unreal-editor-for-fortnite.html">16. 忍者神龟岛屿</a>
+<a class="tree-link" href="17-squid-game-islands-in-fortnite.html">17. 鱿鱼游戏岛屿</a>
+<div class="tree-sec">D · 开发者成功</div>
+<a class="tree-link" href="18-using-creator-portal-in-fortnite-creative.html">18. 使用创作者门户</a>
+<a class="tree-link" href="19-island-moderation-and-guidelines-in-fortnite-creative.html">19. 岛屿审核与准则</a>
+<div class="tree-sec">E · 协作</div>
+<a class="tree-link" href="20-creating-teams-in-creator-portal-in-unreal-editor-for-fortnite.html">20. 在创作者门户创建团队</a>
+<a class="tree-link" href="21-adding-playtesters-in-fortnite-creative.html">21. 添加试玩测试员</a>
+<a class="tree-link" href="22-playtesting-your-island-in-unreal-editor-for-fortnite.html">22. 试玩测试你的岛屿</a>
+<a class="tree-link" href="23-collaborating-in-unreal-editor-for-fortnite.html">23. 在 UEFN 中协作</a>
+<a class="tree-link" href="24-lore-version-control-in-unreal-editor-for-fortnite.html">24. Lore 版本控制</a>
+<a class="tree-link" href="25-conflicts-in-lore-version-control-in-unreal-editor-for-fortnite.html">25. Lore 中的冲突</a>
+<a class="tree-link" href="26-version-history-and-conflict-resolution-in-unreal-editor-for-fortnite.html">26. 分支历史与冲突解决</a>
+<div class="tree-sec">F · 游戏示例</div>
+<a class="tree-link" href="27-build-a-game-in-unreal-editor-for-fortnite.html">27. 构建一款游戏</a>
+<a class="tree-link" href="28-unreal-editor-for-fortnite-starter-templates.html">28. UEFN 新手模板</a>
+<div class="tree-sec">G · Verse</div>
+<a class="tree-link" href="29-learn-the-basics-of-writing-code-in-verse.html">29. 从零学习 Verse 代码基础</a>
+<div class="tree-sec">H · 专注领域</div>
+<a class="tree-link active" href="30-lighting-in-unreal-editor-for-fortnite.html">30. 灯光</a>
+<a class="tree-link" href="31-animation-and-cinematics-in-unreal-editor-for-fortnite.html">31. 动画与过场动画</a>
+<a class="tree-link" href="32-modeling-in-unreal-editor-for-fortnite.html">32. 建模</a>
+<a class="tree-link" href="33-materials-in-unreal-editor-for-fortnite.html">33. 材质</a>
+<a class="tree-link" href="34-environments-and-landscapes-in-unreal-editor-for-fortnite.html">34. 环境与地形</a>
+<a class="tree-link" href="35-audio-in-unreal-editor-for-fortnite.html">35. 音频</a>
+<a class="tree-link" href="36-visual-effects-in-unreal-editor-for-fortnite.html">36. 视觉特效</a>
+</ul></nav></div></aside>
+<div class="page-content"><div class="page-document has-theme-bg">
+<header class="section-page-header"><nav><ol class="breadcrumb is-shrinkable"><li class="breadcrumb-item is-root"><img src="../assets/logo-epic.svg" alt="Epic Games"><a href="../index.html">Developer</a></li><li class="breadcrumb-item"><a href="../index.html">Fortnite 文档</a></li><li class="breadcrumb-item"><a href="30-lighting-in-unreal-editor-for-fortnite.html">灯光</a></li><li class="breadcrumb-item active" aria-current="page"><span class="text-truncate">灯光与 Lumen 快速入门指南</span></li></ol></nav><h1>灯光与 Lumen 快速入门指南</h1><p class="text-secondary mb-0">UEFN 自带 Lumen 光照工具：按基础、中级、专家三条路线，用 Day Sequence 设备或 Environment Light Rig 为岛屿打造自定义高端光照。</p><p class="doc-meta">英文原标题：Lighting and Lumen Quick Start Guide in Unreal Editor for Fortnite · <a href="https://dev.epicgames.com/documentation/fortnite/lighting-and-lumen-quick-start-guide-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">查看英文原文</a> · 社区翻译镜像，仅供学习</p></header>
+<div class="doc-columns"><article class="doc-article">
+<p><strong>虚幻编辑器 Fortnite 版（UEFN）</strong>自带 <strong>Lumen</strong>。<a href="https://dev.epicgames.com/documentation/fortnite/fortnite-glossary#lumen" target="_blank" rel="noopener">Lumen</a> 是一套完整的光照工具，为 UEFN 创建的<a href="https://dev.epicgames.com/documentation/fortnite/fortnite-glossary#island" target="_blank" rel="noopener">岛屿（islands）</a>带来更柔和的阴影、逼真的全局光照与更好的视觉体验，就像 <strong>Fortnite 大逃杀第四章（Chapter 4）</strong>中的光照一样。</p>
+<p>本指南教你如何在项目中使用 Lumen。无论是想给已有的创意模式岛屿升级，还是在 UEFN 中从零创建带 Lumen 的新岛屿，都能做出带定制高端光照的岛屿。</p>
+<p>在岛屿上使用 Lumen 有三条路线：</p>
+<ul>
+<li><strong>基础（Basic）</strong>：现有 Fortnite 开发者；</li>
+<li><strong>中级（Intermediate）</strong>：UEFN 新手美术；</li>
+<li><strong>专家（Expert）</strong>：定制光照。</li>
+</ul>
+<p>要体验不同灯光路线的差异，可以先在 Fortnite 创意模式中用已有建筑的模板岛创建一个岛屿，再按下面各路线走一遍，对比差别。</p>
+<p>中级教程使用 Time of Day 管理器，专家教程关闭 Time of Day 管理器，改用<a href="environment-light-rig-device-in-unreal-editor-for-fortnite.html">Environment Light Rig（环境灯光装备）</a>。</p>
+<table><thead><tr><th>Time of Day 管理器</th><th>Day Sequence 设备</th><th>Environment Light Rig</th></tr></thead><tbody>
+<tr><td>开（ON）</td><td><figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/49617ab9-d19a-4e57-af6a-dc5650472dba?resizing_type=fit" alt="Time of Day 开启时的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/49617ab9-d19a-4e57-af6a-dc5650472dba?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></td><td><figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/665f16cd-5908-40ab-8d6f-1bd445c3667f?resizing_type=fit" alt="Day Sequence 设备开启时的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/665f16cd-5908-40ab-8d6f-1bd445c3667f?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></td></tr>
+<tr><td>关（OFF）</td><td><figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/20bb192a-50fb-4f09-ab05-74db03a6198b?resizing_type=fit" alt="Time of Day 关闭时的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/20bb192a-50fb-4f09-ab05-74db03a6198b?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></td><td><figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/b3c1ba65-2409-4ffb-8034-b43a302ff623?resizing_type=fit" alt="Environment Light Rig 的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/b3c1ba65-2409-4ffb-8034-b43a302ff623?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></td></tr>
+</tbody></table>
+<p>探索 Lumen 的强大，请参阅虚幻引擎文档中的<a href="https://dev.epicgames.com/documentation/unreal-engine/lumen-global-illumination-and-reflections-in-unreal-engine?application_version=5.5" target="_blank" rel="noopener">Lumen 全局光照与反射（Lumen Global Illumination and Reflections）</a>。</p>
+<h2 id="sec-1">灯光问题排查（Troubleshooting Lighting Issues）</h2>
+<p>灯光技术性很强，不好驾驭。岛上单个灯光加太多会数据臃肿、低端主机渲染吃力，而在高端主机和 PC 上却很好看。做好自定义灯光后，务必在几台不同主机上测试。</p>
+<p>如果只靠 light actor（灯光 Actor）打光，岛屿在多数平台上会一片漆黑。自定义光照只用方向光（Directional Lighting）或天空光（Skylight）。</p>
+<p>不要只靠以下 light actor 为岛屿打自定义光照：</p>
+<ul>
+<li>点光源（Point Lights）；</li>
+<li>聚光灯（Spot Lights）；</li>
+<li>矩形光（Rectangle Lights）。</li>
+</ul>
+<p>如果低端主机和手机上的光照与高端主机、PC 上看起来完全不同，用<strong>引擎可扩展性设置（Engine Scalability Settings）</strong>按以下步骤跨平台排查灯光：</p>
+<ul>
+<li>点击视口工具栏的 <strong>Project Settings</strong>，选择 <strong>Viewport Scalability</strong>，打开各项引擎设置；</li>
+<li>在 <strong>Global Illumination</strong> 设置中选择 <strong>Medium</strong>。
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/ca978e50-1c71-40e9-a6a4-b560c98839a4?resizing_type=fit" alt="引擎可扩展性设置的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/ca978e50-1c71-40e9-a6a4-b560c98839a4?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></li>
+</ul>
+<p>此时各平台的光照设置会统一为你所用的标准。下表列出不同主机档位适用的设置：</p>
+<table><thead><tr><th>全局光照设置</th><th>主机兼容性</th></tr></thead><tbody>
+<tr><td>Low</td><td>全部主机。自定义光照能力被严重限制。</td></tr>
+<tr><td>Medium</td><td>全部主机。</td></tr>
+<tr><td>High</td><td>中高端主机。</td></tr>
+<tr><td>Epic</td><td>PC。</td></tr>
+</tbody></table>
+<h2 id="sec-2">现有 Fortnite 开发者（Existing Fortnite Developer）</h2>
+<p>先按<a href="https://dev.epicgames.com/documentation/fortnite/importing-fortnite-islands-into-unreal-editor-for-fortnite" target="_blank" rel="noopener">导入 Fortnite 岛屿（Importing Fortnite Islands）</a>把现有岛屿导入并转换为 UEFN 项目。转换完成后，在 <strong>Global Illumination</strong> 设置的 <strong>Epic</strong> 与 <strong>Medium</strong> 之间切换，对比光照效果差异。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/6f29c416-ffa2-4fbc-a934-c620eb715ab7?resizing_type=fit&width=1920&height=1080" alt="全局光照中等（Medium）设置的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/6f29c416-ffa2-4fbc-a934-c620eb715ab7?resizing_type=fit&width=1920&height=1080" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/bffc07f1-f837-4101-b2ab-fc280b6d2c8c?resizing_type=fit&width=1920&height=1080" alt="全局光照史诗（Epic）设置的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/bffc07f1-f837-4101-b2ab-fc280b6d2c8c?resizing_type=fit&width=1920&height=1080" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>Lumen Exposure Manager 设备无法解锁项目的完整 Lumen 能力。要在岛上完整使用 Lumen，请按下方<strong> UEFN 新手美术</strong>一节操作。</p>
+<p>还可以用 <a href="using-day-sequence-devices-in-unreal-editor-for-fortnite.html">Day Sequence</a> 设备进一步编辑光照设置。切换 <strong>Time of Day</strong> 设置会立刻改变岛屿在视口中的渲染。Lumen 必须配合 <strong>High</strong> 或 <strong>Epic</strong> 全局光照设置使用，为次世代平台增强世界光照；低性能平台没有动态全局光照，改用天空光模拟 Lumen 效果。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/96797158-e832-432f-9f31-4329da4be8af?resizing_type=fit" alt="Day Sequence 设备光照设置的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/96797158-e832-432f-9f31-4329da4be8af?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>用 <a href="using-day-sequence-devices-in-unreal-editor-for-fortnite.html">Day Sequence</a> 设备可以编辑以下光照设置：</p>
+<ul>
+<li>云（Clouds）；</li>
+<li>雾（Fog）；</li>
+<li>天空颜色（Sky Color）；</li>
+<li>太阳（Sun）；</li>
+<li>月亮（Moon）；</li>
+<li>天空光（Skylight）。</li>
+</ul>
+<h2 id="sec-3">UEFN 新手美术（New UEFN Artist）</h2>
+<p>所有 UEFN 项目默认可用 Lumen。Lumen 会让岛屿自动走完 24 小时昼夜循环，无需用岛屿设置设备定时间。</p>
+<p>把 <strong>Day Sequence</strong> 设备加入项目视口即可用上 Lumen 系统。岛上也可以加 Lumen Exposure Manager，加上后阴影与光照会有细微差别。</p>
+<p>建议大刀阔斧、渐进调整，先定下自然光照的中间值。用尽可能少的调整先定好项目基础光照，再打磨独特观感。</p>
+<p>基础光照调整越少越好，这样每次调光照都不必从头再来。</p>
+<p>在<a href="https://dev.epicgames.com/documentation/fortnite/unreal-editor-for-fortnite-glossary#outliner-panel" target="_blank" rel="noopener"><strong>大纲视图（Outliner）</strong></a>中选中 Day Sequence 设备，即可在<strong>细节</strong>面板编辑其设置。Day Sequence 设备的所有设置可全开、全关或部分开关、自由组合。</p>
+<p>Lumen 后期处理设置沿用 Fortnite 大逃杀的默认设置，可按游戏美术风格在高端平台上微调。</p>
+<h3>编辑太阳光设置（Editing Sunlight Settings）</h3>
+<p>全岛太阳光决定阴影观感、是否有太阳耀斑，以及光线如何在世界<a href="https://dev.epicgames.com/documentation/fortnite/fortnite-glossary#material" target="_blank" rel="noopener">材质（materials）</a>上反弹，也决定摆放建筑<a href="https://dev.epicgames.com/documentation/fortnite/fortnite-glossary" target="_blank" rel="noopener">道具（props）</a>时需要多少室内外光照。</p>
+<p>按以下步骤自定义太阳光：</p>
+<ul>
+<li>打开 <strong>Sunlight</strong> 开关，编辑以下太阳光设置：
+<ul>
+<li><strong>Intensity</strong> 设为 <strong>5</strong>，减弱太阳光强度；</li>
+<li>点击 <strong>Color</strong> 打开色轮选个新颜色，点击 <strong>OK</strong>；</li>
+<li>开关 <strong>Enable Sun Component</strong>，对比太阳光差异。</li>
+</ul></li>
+</ul>
+<p>在视口中可以看到天空与地面阴影随之变化：天空变色并映到云上，阴影边缘变柔和。</p>
+<p>要把岛屿调暗以使用路灯、点光源和聚光灯，必须：</p>
+<ul>
+<li>打开 <strong>Sunlight</strong> 开关；</li>
+<li>关闭 <strong>Enabled Sun Component</strong> 开关。此时岛屿看起来像夜晚：天空仍有月亮和天空光，但点光源亮起来了。
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/c1654e03-8a99-4eaf-9a6b-d5bcee32ee9b?resizing_type=fit" alt="夜晚太阳光设置的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/c1654e03-8a99-4eaf-9a6b-d5bcee32ee9b?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></li>
+</ul>
+<h3>编辑雾设置（Editing Fog Settings）</h3>
+<p>按岛屿类型，你可能想加点雾。Lumen 的雾功能可控制雾的浓度、颜色与高度衰减。</p>
+<p>按以下雾设置给岛屿加雾：</p>
+<ul>
+<li>关闭 <strong>Sunlight</strong> 开关，回到默认太阳光；</li>
+<li>打开 <strong>Fog</strong> 开关，编辑雾设置；</li>
+<li><strong>Density</strong> 提到 <strong>2.0</strong>；</li>
+<li>点击 <strong>Color</strong> 打开色轮，为雾选个新颜色，点击 <strong>OK</strong>；</li>
+<li><strong>Height Falloff</strong> 提到 <strong>0.75</strong>；</li>
+<li>点击 <strong>Directional Inscattering Color</strong> 打开色轮选个新颜色，点击 <strong>OK</strong>；</li>
+<li><strong>Secondary Density</strong> 设为 <strong>0.25</strong>；</li>
+<li><strong>Secondary Falloff</strong> 设为 <strong>0.45</strong>；</li>
+<li><strong>Secondary Offset</strong> 设为 <strong>0.15</strong>；</li>
+<li><strong>Sunlight Volumetric Scattering</strong> 拉到 <strong>0.0</strong>，减弱太阳光，增强雾色与雾定向散射在大气中的表现；</li>
+<li><strong>Max opacity</strong> 设为 <strong>0.2</strong>，控制雾最浓处的浓度。</li>
+</ul>
+<p>这样就做出了清晨雾效（或阴森雾效，取决于选色与雾浓度）。</p>
+<p>也可以用太阳光设置改变雾观：下图中太阳光设置与雾设置并存。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/b550d67d-9189-45b9-ad2b-2087bda02281?resizing_type=fit" alt="雾效与太阳光叠加的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/b550d67d-9189-45b9-ad2b-2087bda02281?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h3>编辑天空光与天空设置（Editing Skylight and Sky Settings）</h3>
+<p>天空光设置决定天空光在材质与道具上的反弹强度，影响阴影深浅与自发光材质的受光。</p>
+<p>天空设置决定项目天空观感，可以调成特定时刻，或完全独特的 funky 天空。</p>
+<p>按以下步骤编辑天空光设置：</p>
+<ul>
+<li>点击各字段的还原箭头，把雾设置恢复默认；</li>
+<li>关闭 <strong>Fog</strong> 设置，岛屿回到默认状态；</li>
+<li>打开 <strong>Skylight</strong> 开关，编辑天空光设置；</li>
+<li><strong>Intensity</strong> 滑杆右拉提亮，像雾蒙蒙的夏日；左拉压暗、中和雾感；</li>
+<li>点击 <strong>Color</strong> 打开色轮修改天空光颜色，点击 <strong>OK</strong>。</li>
+</ul>
+<p>试试天空光颜色，注意世界物体上的反弹光如何微妙变化。</p>
+<p>再编辑天空设置：</p>
+<ul>
+<li>打开 <strong>Sky</strong> 开关，编辑天空设置；</li>
+<li><strong>Sky Gradient Blend</strong> 一路右拉，减弱 Sky Gradient Low/Medium/High 三色之间的混合；</li>
+<li><strong>Sky Gradient Blend</strong> 设为 <strong>0.5</strong>；</li>
+<li>点击 <strong>Sky Gradient Low Color</strong> 打开色轮选个新颜色，点击 <strong>OK</strong>；</li>
+<li>点击 <strong>Sky Gradient Mid Color</strong> 打开色轮选个新颜色，点击 <strong>OK</strong>；</li>
+<li>点击 <strong>Sky Gradient High Color</strong> 打开色轮选个新颜色，点击 <strong>OK</strong>；</li>
+<li>用滑杆改 <strong>Sun Size</strong>：右拉太阳变大，左拉变小；</li>
+<li>用滑杆改 <strong>Sun Intensity</strong>：右拉太阳更清晰，左拉更朦胧；</li>
+<li>点击 <strong>Sun Color</strong> 打开色轮，修改太阳晕的颜色，点击 <strong>OK</strong>。太阳颜色影响材质与云上的太阳光观感；</li>
+<li><strong>Custom Sun Color</strong> 滑杆右拉，增强关卡中的太阳颜色效果。</li>
+</ul>
+<h3>编辑云与时刻设置（Editing Cloud and Time of Day Settings）</h3>
+<p>云能营造氛围，也因遮挡改变世界光照：阴影更多更深，可见天空更少。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/75a4d44e-5f39-4783-b70b-2109d0717cde?resizing_type=fit" alt="云设置的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/75a4d44e-5f39-4783-b70b-2109d0717cde?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>编辑云：</p>
+<ul>
+<li>关闭 <strong>Sky</strong> 与 <strong>Skylight</strong> 设置；</li>
+<li>打开 <strong>Clouds</strong>，天空默认的移动云消失，开始编辑云设置；</li>
+<li>点击 <strong>Light Color</strong> 打开色轮，为云选个新颜色，点击 <strong>OK</strong>；</li>
+<li>点击 <strong>Shadow Color</strong> 打开色轮，为阴影选个新颜色，点击 <strong>OK</strong>；</li>
+<li>Light Brightness 滑杆一路右拉，提亮光色；</li>
+<li>Coverage 滑杆一路右拉，增大太阳前的云量；</li>
+<li><strong>Size</strong> 滑杆一路右拉，增大云覆盖范围；</li>
+<li><strong>Opacity</strong> 滑杆左拉，云更通透，太阳观感随之变化；</li>
+<li><strong>Speed</strong> 滑杆左拉，云在天空移动更快；</li>
+<li><strong>Direction X</strong> 与 <strong>Direction Y</strong> 滑杆左右拉，可单独或配合使用，改变云翻涌的新方向。</li>
+</ul>
+<p>在视口中编辑 <strong>Time of Day</strong> 设置即可改变岛屿起始时刻，该设置与岛上其他设置联动。</p>
+<p>要改时刻，点击<strong>视口工具栏图标</strong>再选 <strong>Time of Day</strong>，拖滑杆定时刻。</p>
+<p>要在项目中做夜景，按以下步骤：</p>
+<ul>
+<li>在<strong>视口工具栏</strong>把 <strong>Time of Day</strong> 滑杆一路拉到最左或最右，白天转入黑夜；</li>
+<li>在<strong>大纲视图</strong>中选中 <strong>Day Sequence</strong> 设备，在细节面板打开其设置；</li>
+<li>在<strong>细节面板</strong>打开 <strong>Sky</strong>，编辑月亮设置：
+<ul>
+<li><strong>Moon Size</strong> 滑杆左右拉，调整月亮大小；</li>
+<li>点击 <strong>Moon Color</strong> 打开色轮，修改月亮颜色；</li>
+<li><strong>Star Brightness</strong> 滑杆右拉，增加可见星星数量。</li>
+</ul></li>
+</ul>
+<p>现在自定义夜景就有了，还可以改天空渐变色与混合值继续打磨。要做阴森夜景，就加雾并提高雾浓度。</p>
+<h3>编辑室内光照（Editing Interior Lighting）</h3>
+<p>用 <strong>Trigger Volume</strong> 设置可以编辑室内光照：该设置把 Day Sequence 设备的影响限制在体块内部。关卡中可以用多个 Day Sequence 设备，在岛上并存多种光照观感。</p>
+<p>例如室外用一个关掉 Trigger Volume 的 Day Sequence 设备做室外光照，建筑里再放一个打开 Trigger Volume、Priority（优先级）设得更高的 Day Sequence 设备，做出黑暗洞穴风的独特室内光照。</p>
+<p>创建 Trigger Volume：</p>
+<ul>
+<li>把 <strong>Day Sequence 设备</strong>拖到岛上预制件里面；</li>
+<li>打开 Trigger Volume 设置开关；</li>
+<li>点击 <strong>Extent X</strong> 选项输入该轴尺寸，把体块撑到建筑大小；</li>
+<li>点击 <strong>Extent Y</strong> 选项输入该轴尺寸，把体块撑到建筑大小；</li>
+<li>点击 <strong>Extent Z</strong> 选项输入该轴尺寸，把体块撑到建筑大小。</li>
+</ul>
+<p>这样室外光照被覆盖，体块内保留自定义室内光照。</p>
+<p>如果有不同的光照材质，也可配合该 Actor 使用：在 <strong>Light Function Material</strong> 下拉菜单选择材质即可换光照。</p>
+<p>有时室外光照会渗进建筑内部。要挡住室外光渗入，在受影响的建筑里放一个 <strong>Day Sequence</strong> 设备，用其 <strong>Trigger Volume</strong> 设置把该设备的影响范围限住。</p>
+<h2 id="sec-4">定制光照（Bespoke Lighting）</h2>
+<p>UEFN 借助 Lumen 可定制天际线、天空光照、体积云雾。不用 Day Sequence 设备也能实现更多 Lumen 功能。</p>
+<p>要为岛屿定制光照，需关闭所有 day manager，再用 <a href="environment-light-rig-device-in-unreal-editor-for-fortnite.html">Environment Light Rig</a> 设备：它包含大量 Lumen 设置，配合<a href="https://dev.epicgames.com/documentation/fortnite/intro-to-postprocessing-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">后期处理（Post Processing）</a>体块进一步定制光照。</p>
+<p>打磨场景光照时，可用 Environment Light Rig 里的后期处理体块补偿高低端设备的不一致。</p>
+<p>从通用设置小步起步，观感大变时再继续微调。</p>
+<p>要了解 Lumen 的更多能力，请参阅虚幻引擎文档中的<a href="https://dev.epicgames.com/documentation/unreal-engine/auto-exposure-in-unreal-engine?application_version=5.5" target="_blank" rel="noopener">自动曝光（Auto Exposure）</a>。</p>
+<p>开始：</p>
+<ul>
+<li>打开<strong>世界设置（World Settings）</strong>；</li>
+<li>打开 <strong>Disable All Time of Day Managers</strong> 开关，项目中所有环境光照关闭。
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/8bd2afab-2a5f-4c6a-8c8c-8d419ca8e1ac?resizing_type=fit" alt="关闭 Time of Day 管理器的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/8bd2afab-2a5f-4c6a-8c8c-8d419ca8e1ac?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></li>
+<li>在内容浏览器点击 <strong>Fortnite &gt; Devices</strong>；</li>
+<li>搜索 <strong>Environment Light Rig</strong> 设备；</li>
+<li>把 <strong>Environment Light Rig</strong> 拖入视口，光照回到项目中。
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/f31d68bf-3c51-435b-914b-0c84427445cd?resizing_type=fit" alt="添加 Environment Light Rig 的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/f31d68bf-3c51-435b-914b-0c84427445cd?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></li>
+</ul>
+<p>要编辑不同光照设置，需在<strong>细节</strong>面板逐个选中各光照 Actor，可编辑：</p>
+<ul>
+<li>DirectionalLight；</li>
+<li>SkyAtmosphere；</li>
+<li>SkyLight；</li>
+<li>ExponentialHeightFog；</li>
+<li>LumenExposure；</li>
+<li>BasicExposure；</li>
+<li>ColorGradient。</li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/bda0f8ab-e658-4f1c-9659-d231cd85f423?resizing_type=fit" alt="Environment Light Rig 组件列表的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/bda0f8ab-e658-4f1c-9659-d231cd85f423?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h3>使用方向光（Using Directional Light）</h3>
+<p>DirectionalLight 是多面手 Actor，模拟从远处单点发出的光，类似日光或月光。用 DirectionalLight 设置决定光源如何影响世界、物体阴影如何投射。</p>
+<p>用以下 <strong>Light</strong> 设置在项目中创建单光源：</p>
+<ul>
+<li>从 <strong>Environment Light Rig</strong> 组件字段选择 <strong>DirectionalLight</strong>。
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/ad77fcd6-4b00-499f-9934-bbaf37b81c70?resizing_type=fit" alt="选择 DirectionalLight 的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/ad77fcd6-4b00-499f-9934-bbaf37b81c70?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></li>
+<li><strong>Intensity</strong> 设为 <strong>2.0</strong>，该设置影响世界其他光照，注意街灯在地面照出的光；</li>
+<li>点击 <strong>Light Color</strong> 在色轮选个新颜色，点击 <strong>OK</strong>，光照与世界染上该色调；</li>
+<li><strong>Source Angle</strong> 设为 <strong>6.0</strong>，增大光源角度与直径（默认 0.5357，即太阳角度）；</li>
+<li><strong>Source Soft Angle</strong> 设为 <strong>5.0</strong>，柔化/模糊阴影边缘，效果取决于强度、全局光照与间接光照的共同作用；</li>
+<li>打开 <strong>Use Temperature</strong> 开关，即可编辑 <strong>Temperature</strong> 滑杆；</li>
+<li><strong>Temperature</strong> 滑杆左拉，所选光色更饱和；右拉，光色饱和度降低。Temperature 设为 <strong>11640</strong> 以降低光色饱和度；</li>
+<li><strong>Indirect Lighting Intensity</strong> 滑杆左拉，所有间接光减弱；右拉增强。间接光设为 <strong>2.0</strong>；</li>
+<li><strong>Volumetric Scattering Intensity</strong> 滑杆左拉，光照减弱；右拉，光照变亮。</li>
+</ul>
+<p>可以用 <strong>Advanced</strong> 选项把方向光指派到特定光照通道，决定哪些物体受该光照影响。</p>
+<p>光照通道决定哪些物体受光照影响。</p>
+<p>该设置用于控制哪些物体受光照影响。</p>
+<p>此时项目光照像傍晚：光线与阴影柔和。</p>
+<p>拖滑杆对比岛屿起点与用 <strong>Light</strong> 设置打出的世界光照差异。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/1d7c6254-5ddd-42d9-8c3b-d53e418e28a6?resizing_type=fit&width=1920&height=1080" alt="用 Environment Light Rig 编辑世界光照前的起点效果的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/1d7c6254-5ddd-42d9-8c3b-d53e418e28a6?resizing_type=fit&width=1920&height=1080" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/d9341495-87cd-458d-8711-593d0ca4587d?resizing_type=fit&width=1920&height=1080" alt="按上述设置编辑后的光照效果的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/d9341495-87cd-458d-8711-593d0ca4587d?resizing_type=fit&width=1920&height=1080" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>方向光设置保持默认也行，默认本就高效。</p>
+<p>光照 setup 的下一步是定光照属性：决定项目中光柱（light shafts）的观感与行为，对洞穴等明暗反差大的玩法影响最大。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/7ef86c0a-c1db-49a0-99d2-2b2da53c0938?resizing_type=fit" alt="光柱属性的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/7ef86c0a-c1db-49a0-99d2-2b2da53c0938?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>上例中部分光柱属性被设到了极值。</p>
+<p>在<strong>细节</strong>面板滚动到 <strong>Light Shafts</strong> 设置并执行：</p>
+<ul>
+<li>打开 <strong>Light Shaft Occlusion</strong> 开关，即可使用 Occlusion 工具；</li>
+<li>打开 <strong>Light Shaft Bloom</strong> 开关，即可使用 Bloom 工具；</li>
+<li><strong>Bloom Scale</strong> 设为 <strong>10.0</strong>。
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/1ef967eb-fb7e-4e4f-b149-01225480b3b9?resizing_type=fit" alt="Bloom Scale 设置的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/1ef967eb-fb7e-4e4f-b149-01225480b3b9?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></li>
+</ul>
+<p>世界光照打出强力光柱。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/e6955380-2195-4e34-9f33-80ada5e72b46?resizing_type=fit" alt="光柱效果的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/e6955380-2195-4e34-9f33-80ada5e72b46?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>还可以定新的 bloom tint 颜色、降低 bloom 亮度、提高黑暗 occlusion mask，用各设置的滑杆调出最适合项目的光柱。</p>
+<h3>使用天空大气（Using Sky Atmosphere）</h3>
+<p>Sky Atmosphere 是方向光与天空光的背景：其设置决定项目背景天空观感。如果项目主题是异世界，就从 Sky Atmosphere 工具入手打造外星世界。</p>
+<p>改 Sky Atmosphere 设置前，需已用方向光设置定好项目光源与世界光源方向，再用 Sky Atmosphere 承接这些决策。</p>
+<p>开始：</p>
+<ul>
+<li>从细节面板组件字段选择 <strong>Sky Atmosphere</strong>，细节面板出现 Sky Atmosphere 设置。
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/a1fb46c1-5f59-441c-a422-5ee0ab6149d4?resizing_type=fit" alt="选择 Sky Atmosphere 的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/a1fb46c1-5f59-441c-a422-5ee0ab6149d4?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></li>
+<li>点击 <strong>Ground Albedo</strong> 在色轮选个新颜色，改变从地面弹起、影响地平线颜色的辐射色；</li>
+<li><strong>Atmosphere Height</strong> 滑杆左拉，地平线变暗；右拉，地平线变亮。设为 <strong>30.0</strong>；</li>
+<li><strong>Multiscattering</strong> 滑杆左拉，项目高层大气变暗。设为 <strong>0.5</strong>。
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/f1635938-1490-45b5-bf0a-133ca655be64?resizing_type=fit" alt="大气高度与多重散射的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/f1635938-1490-45b5-bf0a-133ca655be64?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></li>
+<li><strong>Mie Scattering Scale</strong> 滑杆右拉，背景越来越雾蒙蒙。设为 <strong>0.2</strong>，增加远景与水面的雾；</li>
+<li><strong>Mie Absorption Scale</strong> 滑杆右拉，高层大气变暗，就像天空从白天转入黑夜。设为 <strong>0.4</strong>；</li>
+<li>点击 <strong>Mie Absorption</strong> 在色轮选个新颜色，改变高层大气颜色。</li>
+</ul>
+<p>为 Mie Absorption 与 Absorption 选色时，结果会是你所选颜色在色轮对面的颜色，因为它在“吸收”你填入的颜色。</p>
+<ul>
+<li>点击 <strong>Mie Scattering</strong> 在色轮选个新颜色，改变远景低层大气颜色；</li>
+<li><strong>Mie Anisotropy</strong> 滑杆左拉，高层大气颜色变亮；右拉变暗。设为 <strong>0.75</strong>，地平线形成各色渐次交融的渐变；</li>
+<li><strong>Mie Exponential Distribution</strong> 滑杆一路左拉，地平线变成自然蓝色；一路右拉，项目淹没在 Mie Absorption 所选颜色的光里。设为 <strong>1.5</strong>，项目大气光照按 1.5 倍 Mie Absorption 色渲染地平线与世界光色。
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/b303014e-63ab-439d-b9fa-4c44364adb5c?resizing_type=fit" alt="Mie 散射设置的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/b303014e-63ab-439d-b9fa-4c44364adb5c?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></li>
+</ul>
+<p>用这些设置可以做出清晨、黄昏或午夜的地平线。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/c22c5877-4a0d-41f7-994c-bdee1cb1ab34?resizing_type=fit" alt="地平线效果的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/c22c5877-4a0d-41f7-994c-bdee1cb1ab34?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>还可以进一步改变地平线吸收、调整地平线细节：</p>
+<ul>
+<li><strong>Absorption Scale</strong> 滑杆一路右拉，世界光照变暗并染上不同色调；</li>
+<li>点击 <strong>Absorption</strong> 在色轮选个新颜色，注意地平线与项目中的光滤镜染上所选颜色；</li>
+<li>展开 <strong>Tent Distribution</strong> 查看全部设置；</li>
+<li><strong>Tip Altitude</strong> 滑杆慢慢一路右拉，地平线仿佛走完昼夜循环。设为 <strong>29.0</strong>，模拟一天清晨；</li>
+<li><strong>Tip Value</strong> 滑杆左拉，高层大气与世界光照变亮。设为 <strong>0.2</strong>；</li>
+<li><strong>Width</strong> 滑杆左拉，项目外层大气变亮；右拉变暗。
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/59297fea-c65c-4391-a9b2-4107dafa029e?resizing_type=fit" alt="Tent Distribution 设置的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/59297fea-c65c-4391-a9b2-4107dafa029e?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></li>
+<li>点击 <strong>Sky Luminance Factor</strong> 在色轮选色，改变地平线亮度颜色与项目大气光滤镜色调；</li>
+<li><strong>Aerial Perspective View Distance Scale</strong> 滑杆一路左拉，背景陆块显露更多；一路右拉，背景物体全部没入雾中。设为 <strong>0.5</strong>，远景物体在雾中若隐若现；</li>
+<li><strong>Transmittance Min Light Elevation Angle</strong> 滑杆右拉，增加主光源方向透射的光量。设为 <strong>60.0</strong>，柔化项目光线。
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/6a24d605-0397-432c-a673-064756827da1?resizing_type=fit" alt="大气透视设置的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/6a24d605-0397-432c-a673-064756827da1?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></li>
+</ul>
+<p>地平线就绪后，再用 Sky Light 里的工具控制云，以及光线如何在岛上物体间反弹。</p>
+<h3>使用天空光（Using Sky Light）</h3>
+<p>天空光（Sky Light）指项目中不归于日光/月光的补光：Sky Light 设置决定光线如何在世界物体间反弹，即全局光照。</p>
+<p>想想现实中光线反弹出的环境光，例如大峡谷中光线在岩石间反弹：站在岩壁边穿白 T 恤，白 T 恤会染上红色。用 SkyLight 控制的就是这类光。</p>
+<p>先从组件字段选择 <strong>SkyLight</strong>，细节面板可见 <strong>Real Time Capture</strong> 已选中：该设置在项目中架一台相机，捕捉岛屿周围一切对光照与反射的贡献。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/5b2fc567-488d-4f35-9100-84180ab7d087?resizing_type=fit" alt="SkyLight 实时捕捉的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/5b2fc567-488d-4f35-9100-84180ab7d087?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>若关闭 <strong>Real Time Capture</strong>，则需为项目创建 cubemap（立方体贴图）。cubemap 与 Real Time Capture 一样捕捉项目区域，但可在 Sky Light 设置中控制 cubemap 的角度来源与分辨率。</p>
+<p>要进一步了解 cubemap，请参阅虚幻引擎文档中的 <a href="https://dev.epicgames.com/documentation/unreal-engine/sky-lights-in-unreal-engine?application_version=5.5" target="_blank" rel="noopener">Sky Lights</a>。</p>
+<p>保持 Real Time Capture 开启，修改以下设置：</p>
+<ul>
+<li>撤销在 <strong>DirectionalLight</strong> 与 <strong>SkyAtmosphere</strong> 组件中的全部修改；</li>
+<li><strong>Intensity</strong> 滑杆慢慢右拉，水面与地面的反弹光增强。设为 <strong>8.0</strong>；</li>
+<li>点击 <strong>Light Color</strong> 在色轮选个新颜色，改变物体间反弹光的颜色，影响阴影颜色与岛屿周围水色。
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/f094b074-2dc9-4707-a491-b89a91073a6f?resizing_type=fit" alt="SkyLight 强度与颜色的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/f094b074-2dc9-4707-a491-b89a91073a6f?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></li>
+</ul>
+<p>若不想把改动作用于全岛，关闭 <strong>Affects World</strong>，再用 Sky Light 的其他设置在岛上打造自定义反弹光效。</p>
+<h3>使用指数高度雾（Using Exponential Height Fog）</h3>
+<p><strong>Exponential Height Fog</strong> 下的设置决定天空雾霾与地面雾量。雾给岛屿光照加一层滤镜，柔化项目平流层与对流层。</p>
+<p>雾能营造 dread（压抑）氛围，也能模拟清晨或傍晚。岛上起雾后，玩家视野受限，走位会更谨慎。</p>
+<p>按以下步骤自定义雾：</p>
+<ul>
+<li>从细节面板组件字段选择 <strong>Exponential Height Fog</strong>。
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/c3aab886-f68c-4449-8462-00ed9d166dd3?resizing_type=fit" alt="选择指数高度雾的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/c3aab886-f68c-4449-8462-00ed9d166dd3?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></li>
+<li>把视口相机对准地面最远处；</li>
+<li><strong>Fog Density</strong> 滑杆慢慢一路右拉，岛上雾浓度上升；左拉则雾变薄。设为 <strong>0.15</strong>；</li>
+<li><strong>Fog Height Falloff</strong> 滑杆慢慢右拉，雾从天空压向地面。设为 <strong>1.5</strong>；</li>
+<li>展开 <strong>Second Fog Data</strong> 设置。
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/928531df-3398-43c0-b8b3-71967cfac32e?resizing_type=fit" alt="第二雾数据设置的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/928531df-3398-43c0-b8b3-71967cfac32e?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></li>
+<li><strong>Fog Density</strong> 滑杆慢慢右拉，给高层大气加雾。设为 <strong>0.02</strong>；</li>
+<li><strong>Fog Height Falloff</strong> 滑杆慢慢右拉，天空雾霾更通透；左拉则天空雾霾更浓。设为 <strong>2.0</strong>；</li>
+<li><strong>Fog Height Offset</strong> 滑杆慢慢右拉，世界日光逐渐被雾滤掉，次高度偏移主要影响背景光过滤。设为 <strong>2.5</strong>。
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/ac9ebdec-0f22-4e6d-994a-e9e1fb4468b6?resizing_type=fit" alt="雾高度偏移的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/ac9ebdec-0f22-4e6d-994a-e9e1fb4468b6?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></li>
+</ul>
+<p>若把 <strong>Fog Height Offset</strong> 滑杆一路拉到头，数值会导致奇怪的裁剪行为。</p>
+<ul>
+<li>点击 <strong>Fog Inscattering Color</strong> 在色轮选色，改变远景雾色调；</li>
+<li><strong>Fog Max Opacity</strong> 一路左拉，雾 opacity 降到 0.0，雾彻底消失。设为 <strong>0.04</strong> 把雾调薄。</li>
+</ul>
+<p>若之前选择创建 cubemap，可在 <strong>Inscattering Texture</strong> 设置中加入 cubemap，编辑岛上雾的角度、染色与距离色。</p>
+<ul>
+<li>点击 <strong>Directional Inscattering Color</strong> 在色轮选色，把天空雾染成所选颜色；</li>
+<li><strong>Directional Inscattering Start Distance</strong> 滑杆右拉，降低背景雾 opacity。设为 <strong>15000.0</strong>；</li>
+<li><strong>Directional Inscattering Exponent</strong> 滑杆右拉，减少弹回天空的光量。设为 <strong>7.0</strong>。
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/72dd922f-bc19-417e-9d98-656f3baeaf6b?resizing_type=fit" alt="定向内散射设置的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/72dd922f-bc19-417e-9d98-656f3baeaf6b?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></li>
+<li>点击 <strong>Albedo</strong> 在色轮选个新颜色，通过地面弹回大气的光改变雾色调；</li>
+<li><strong>Extinction Scale</strong> 滑杆右拉，提高雾 opacity。设为 <strong>4.0</strong>；</li>
+<li><strong>View Distance</strong> 滑杆慢慢右拉，雾遮挡远景；左拉则看得更远。设为 <strong>4500.0</strong>；</li>
+<li><strong>Start Distance</strong> 滑杆右拉，雾从离视口相机更远处开始。设为 <strong>600.0</strong>；</li>
+<li><strong>Near Fade In Distance</strong> 滑杆右拉，体积雾从起始距离按设定距离渐显。设为 <strong>500.0</strong>。
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/de2e7771-0a02-438c-8680-b3be0aa8dc62?resizing_type=fit" alt="雾距离设置的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/de2e7771-0a02-438c-8680-b3be0aa8dc62?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></li>
+</ul>
+<p>这些雾设置在 UEFN 岛上的效果如下。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/a22dd266-07ee-4baf-9a2d-cd4ce8517c6c?resizing_type=fit" alt="雾效成品的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/a22dd266-07ee-4baf-9a2d-cd4ce8517c6c?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h3>使用 Lumen 曝光与基础曝光（Using Lumen Exposure and Basic Exposure）</h3>
+<p>Environment Light Rig 默认同时使用 Lumen Exposure 与 Basic Exposure。两种曝光都能编辑全局光照观感，但自定义光照的渲染效果取决于游玩时访问岛屿的平台。</p>
+<ul>
+<li><strong>Lumen Exposure</strong> 用 UE 的自动曝光（Auto Exposure）功能渲染光照。关于自动曝光及用法，请参阅<a href="https://dev.epicgames.com/documentation/unreal-engine/auto-exposure-in-unreal-engine?application_version=5.5" target="_blank" rel="noopener">自动曝光文档</a>。用这些曝光设置为高端平台增强岛屿观感；</li>
+<li><strong>Basic Exposure</strong> 用经典 Fortnite 创意模式曝光铺全岛。虽然基础曝光全平台渲染，但这些选项意在把基础曝光 upscale（提升）为适配低端平台的自定义观感。</li>
+</ul>
+<h4>Lumen Exposure</h4>
+<p>在支持 Lumen 的平台上，Environment Light Rig 提供自动曝光用法：自动曝光计算屏幕亮度值的直方图，再据此确定平均亮度值。</p>
+<p>该选项更吃内存，但自定义光照 setup 更好。用 Lumen 必须开自动曝光，因为其精确的全局光照会让室内比室外暗得多。</p>
+<p><strong>Min Brightness</strong> 与 <strong>Max Brightness</strong> 定义曝光值范围，决定用间接光照时的亮度量。</p>
+<h4>Basic Exposure（基础曝光）</h4>
+<p>基础曝光省内存、不算亮度直方图，支撑手机与低端平台的玩家体验：岛屿性能如常，又有自定义世界光照。</p>
+<p>用基础曝光无需自动曝光，因为不支持 Lumen 的平台上天空光没有阴影，岛屿室内依然够亮。可用 Exposure Compensation 提亮/压暗场景。</p>
+<p>用 Locked Exposure 设置改变场景亮度范围：</p>
+<ul>
+<li>Min Brightness = Max Brightness（无范围，默认值 1.0）。</li>
+</ul>
+<h3>使用色彩分级（Using Color Grading）</h3>
+<p>色彩分级决定视口相机如何观看场景，是后期处理增强器。</p>
+<p>色彩分级给岛屿加一层后期观感，决定玩家眼中的岛屿：可以定岛屿光源在天空中的样子、给视口相机镜头加色差、编辑局部曝光设置，不一而足。</p>
+<p>用以下设置营造视觉趣味：</p>
+<ul>
+<li>从细节面板组件字段选择 <strong>Color Grading</strong>。
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/4bac8a72-0084-4f3f-9353-09c691fa09d6?resizing_type=fit" alt="选择色彩分级的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/4bac8a72-0084-4f3f-9353-09c691fa09d6?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></li>
+<li>展开 <strong>Lens</strong> 类别，下面会用到其中多个 Lens 选项；</li>
+<li>展开 <strong>Bloom</strong> 选项，打开 <strong>Preferred Method</strong> 与 Intensity 开关；</li>
+<li><strong>Intensity</strong> 设为 <strong>1.0</strong>，<strong>Threshold</strong> 设为 <strong>0.4</strong>。
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/ffc28117-9d2c-497a-839f-f2dad488435e?resizing_type=fit" alt="Bloom 设置的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/ffc28117-9d2c-497a-839f-f2dad488435e?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></li>
+<li>展开 <strong>Chromatic Aberration</strong>，打开 <strong>Intensity</strong> 与 <strong>Start Offset</strong> 开关，物体的颜色仿佛分离错位，看起来不一样了；</li>
+<li><strong>Intensity</strong> 设为 <strong>5.0</strong>，<strong>Start Offset</strong> 设为 <strong>0.3</strong>。
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/6ad1509f-751f-4654-a70a-0448d83cc78a?resizing_type=fit" alt="色差设置的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/6ad1509f-751f-4654-a70a-0448d83cc78a?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></li>
+<li>展开 <strong>Local Exposure</strong> 选项，打开 <strong>Detail Strength</strong> 与 <strong>Blurred Luminance Blend</strong> 开关；</li>
+<li><strong>Detail Strength</strong> 设为 <strong>0.6</strong>，<strong>Blurred Luminance Blend</strong> 设为 <strong>0.2</strong>。
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/d5bd8222-1ff9-44f6-bf2d-fe1c2ec7ae26?resizing_type=fit" alt="局部曝光设置的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/d5bd8222-1ff9-44f6-bf2d-fe1c2ec7ae26?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></li>
+<li>展开 <strong>Lens Flare</strong>，打开 <strong>Intensity</strong> 开关；</li>
+<li><strong>Intensity</strong> 设为 <strong>16.0</strong>。
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/e7ecdafd-b523-497f-a0bd-c3337f8c95f4?resizing_type=fit" alt="镜头光斑设置的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/e7ecdafd-b523-497f-a0bd-c3337f8c95f4?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></li>
+<li>展开 <strong>Color Grading</strong> 选项，打开 <strong>Temp</strong> 与 <strong>Tint</strong> 开关；</li>
+<li><strong>Temp</strong> 设为 <strong>7740.0</strong>，<strong>Tint</strong> 设为 <strong>0.5</strong>。
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/c74f0d59-cb4d-4e06-82ee-c7c4a30b9db1?resizing_type=fit" alt="色温与色调设置的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/c74f0d59-cb4d-4e06-82ee-c7c4a30b9db1?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></li>
+<li>展开 <strong>Global</strong>，打开并展开 <strong>Saturation</strong> 与 <strong>Contrast</strong> 选项；</li>
+<li>饱和度颜色滑杆拉到 <strong>2.0</strong>；</li>
+<li>Contrast 设置选 <strong>HSV</strong>，<strong>V</strong>（明度）设为 <strong>1.17</strong>。
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/78f045d1-6d00-424e-af77-957a599cc6aa?resizing_type=fit" alt="全局饱和度与对比度的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/78f045d1-6d00-424e-af77-957a599cc6aa?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></li>
+<li>展开 <strong>Misc</strong>，打开 <strong>Scene Color Tint</strong> 开关；</li>
+<li>点击 <strong>Scene Color Tint</strong> 在色轮选个浅红，点击 <strong>OK</strong>；</li>
+<li><strong>Blend Weight</strong> 设为 <strong>0.5</strong>。
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/54e47fa1-c49a-4f05-bead-9ac1354ee0da?resizing_type=fit" alt="场景颜色 tint 的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/54e47fa1-c49a-4f05-bead-9ac1354ee0da?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></li>
+</ul>
+<p>视口有了梦幻质感：这些设置可用于短过场，或让玩家像漫步梦境。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/11115f3b-1c4f-45cc-b628-3194a9f6fac1?resizing_type=fit" alt="梦幻质感成品的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/11115f3b-1c4f-45cc-b628-3194a9f6fac1?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h4>世界光照编辑（World Light Editing）</h4>
+<p>用 Lens 与 Lens Flare 设置编辑岛屿世界光照。确保为世界选的方向光与天空光颜色不要太 washed out（发灰）。改完设置后试玩岛屿，确认改动达到了预期的世界光照效果。</p>
+<p>先为岛屿方向光定 bloom scale：Bloom 决定天空太阳观感，按所选强度与阈值，太阳周围的光环或清晰或模糊。</p>
+<ul>
+<li>把各组件设置恢复默认；</li>
+<li>在组件字段选择 <strong>Lumen Exposure</strong>，在<strong>细节</strong>面板查看 Lumen Exposure 设置；</li>
+<li><strong>Bloom Intensity</strong> 滑杆右拉，太阳周围光环变厚；左拉则光环缩小直至模糊。设为 <strong>0.1</strong>；</li>
+<li><strong>Threshold</strong> 滑杆右拉，弹回天空的光减少，地平线雾感减弱。
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/ade1a3f4-91e0-44b7-8536-5cb71c606707?resizing_type=fit" alt="Bloom 强度与阈值的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/ade1a3f4-91e0-44b7-8536-5cb71c606707?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></li>
+<li>向下滚动到 <strong>Lens Flare</strong>；</li>
+<li>打开 <strong>Intensity</strong> 开关，生成镜头光斑；</li>
+<li><strong>Intensity</strong> 滑杆右拉，光斑变大。设为 <strong>1.15</strong>。
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/5d63e74c-98fc-464c-b92c-41a0d58f758b?resizing_type=fit" alt="镜头光斑强度的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/5d63e74c-98fc-464c-b92c-41a0d58f758b?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></li>
+</ul>
+<p>这些设置在 UEFN 中营造出镜头光斑与更逼真的室外光照。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/e25351bb-434e-4964-b341-190d580c4bd3?resizing_type=fit" alt="室外光照成品的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/e25351bb-434e-4964-b341-190d580c4bd3?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h4>电影感光照与胶片颗粒（Cinematic Lighting and Film Grain）</h4>
+<p>电影感光照指光照的色彩曝光，是电影常用的后期手法：一部电影可能用蓝色调营造冷感，或黄色调营造暖意。</p>
+<p>岛上也可以用 Lumen Exposure 组件的<strong>色彩分级（Color Grading）</strong>设置实现这种电影感。</p>
+<p>如果已用方向光与天空光组件给世界光照上了色，再用色彩分级可能某种颜色过量。</p>
+<p>试玩岛屿，确保 wash（色彩冲刷）不干扰玩法，且契合你想要的观感。</p>
+<p>开始：确认组件字段已选 <strong>Lumen Exposure</strong>，此时全部色彩分级设置可用。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/56106211-63bc-47ed-b32d-0797fc018be1?resizing_type=fit" alt="Lumen Exposure 色彩分级的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/56106211-63bc-47ed-b32d-0797fc018be1?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ul>
+<li>展开 <strong>Color Grading &gt; Temperature</strong> 设置。
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/b0aa8d54-b152-46b9-b286-88523912cd5d?resizing_type=fit" alt="色温设置的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/b0aa8d54-b152-46b9-b286-88523912cd5d?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></li>
+<li>同时打开 <strong>Temp</strong> 与 <strong>Tint</strong> 选项，Temp 与 Tint 滑杆激活；</li>
+<li><strong>Temp</strong> 滑杆右拉，岛屿光照染上暖黄；左拉，染上冷蓝。设为 <strong>9000.5</strong>，岛屿光照染上浅黄；</li>
+<li><strong>Tint</strong> 滑杆一路右拉，岛屿光照染上粉色；一路左拉，染上绿色。设为 <strong>0.5</strong>。
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/1bc9d733-c78d-4241-8a56-64534b66931f?resizing_type=fit" alt="色调滑杆的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/1bc9d733-c78d-4241-8a56-64534b66931f?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></li>
+</ul>
+<p>本例 <strong>Temperature Type</strong> 保持 <strong>White Balance</strong>：用白光平衡色温设置里的颜色；也可把 Temperature Type 设为 <strong>Color Temperature</strong>，改用颜色平衡色温设置。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/505db97f-fbd3-43cc-b425-ddb031913274?resizing_type=fit" alt="色温类型设置的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/505db97f-fbd3-43cc-b425-ddb031913274?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ul>
+<li>展开 <strong>Global</strong> 设置；</li>
+<li>打开并展开 <strong>Saturation</strong> 设置，即可用饱和度色轮；</li>
+<li><strong>R</strong> 滑杆拉到 <strong>2.0</strong>，红色提亮、光照更暖。
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/430c718f-5861-4ed7-aed5-cd0ca1f628b0?resizing_type=fit" alt="饱和度 R 通道的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/430c718f-5861-4ed7-aed5-cd0ca1f628b0?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></li>
+</ul>
+<p>每个色彩分级设置都可拖 <strong>RGBY</strong> 各滑杆找合适的光饱和色，或点色轮选新颜色。</p>
+<p>也可选择 <strong>HSV</strong>，打开所选颜色的色相、饱和度、明度滑杆。</p>
+<ul>
+<li>打开并展开 <strong>Contrast</strong> 设置，即可用对比度色轮与设置；</li>
+<li>点击 <strong>HSV</strong>，<strong>Y</strong>（亮度）设为 <strong>1.45</strong>，红色开始 wash out（泛白），光照更暖。
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/2aed82b6-00fc-4ca7-bf9c-28072b11156b?resizing_type=fit" alt="对比度 Y 亮度的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/2aed82b6-00fc-4ca7-bf9c-28072b11156b?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></li>
+<li>打开 <strong>Misc &gt; Scene Color Tint</strong> 开关，即可用场景颜色 tint 设置。
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/81a70aa9-294d-4b13-b948-aeb5c05cf8a3?resizing_type=fit" alt="场景颜色 tint 开关的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/81a70aa9-294d-4b13-b948-aeb5c05cf8a3?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></li>
+<li>点击 <strong>Scene Color Tint</strong> 打开色轮；</li>
+<li>选个浅粉色，点击 <strong>OK</strong> 平衡红色 tint：岛上红色不再彻底泛白，反射光量比之前小。
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/9817a4db-3c9d-4b24-8037-2a37bb602cd1?resizing_type=fit" alt="场景颜色 tint 选色的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/9817a4db-3c9d-4b24-8037-2a37bb602cd1?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></li>
+<li>展开 <strong>Film Grain</strong>，打开 <strong>Film Grain Intensity</strong> 与 <strong>Film Grain Texel Size</strong> 开关。
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/bb0f928e-e689-4fe7-a175-8270c6d002ae?resizing_type=fit" alt="胶片颗粒开关的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/bb0f928e-e689-4fe7-a175-8270c6d002ae?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></li>
+<li><strong>Film Grain Intensity</strong> 设为 <strong>1.0</strong>；</li>
+<li><strong>Film Grain Texel Size</strong> 设为 <strong>2.5</strong>。</li>
+</ul>
+<p>视口有了老电影般的颗粒感：可为岛屿做暗角，或营造老电影般的游玩感，放在沙漠主题游戏里视觉效果最佳。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/52a3a7f1-f61e-4e05-845e-0bb782cbb56d?resizing_type=fit" alt="胶片颗粒成品的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/52a3a7f1-f61e-4e05-845e-0bb782cbb56d?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>相关标签：<a href="https://dev.epicgames.com/community/search?query=lights" target="_blank" rel="noopener">lights</a> · <a href="https://dev.epicgames.com/community/search?query=information" target="_blank" rel="noopener">information</a> · <a href="https://dev.epicgames.com/community/search?query=sky" target="_blank" rel="noopener">sky</a></p>
+<p><a href="https://forums.unrealengine.com/categories?tag=fortnite" target="_blank" rel="noopener">在开发者论坛提问并帮助同伴</a></p>
+<p><a href="https://dev.epicgames.com/community/fortnite/learning" target="_blank" rel="noopener">在学习库中编写或阅读他人教程</a></p>
+<div class="pager"><a href="30-lighting-in-unreal-editor-for-fortnite.html"><small>← 返回父教程</small>灯光</a><a href="sub-index.html"><small>子教程索引 →</small>全部子教程</a></div>
+</article><nav class="doc-toc" aria-label="本页内容"><b>本页内容</b><a href="#sec-1">灯光问题排查</a><a href="#sec-2">现有 Fortnite 开发者</a><a href="#sec-3">UEFN 新手美术</a><a href="#sec-4">定制光照</a></nav></div>
+</div></div>
+</div>
+<footer class="edc-footer"><div class="inner"><img src="../assets/logo-epic.svg" alt="Epic Games"><span>Fortnite 文档中文镜像 · UE教程/ · 本地打开 index.html 阅读 · 翻译整理自 Epic 官方文档，仅供学习交流</span></div></footer>
+</body>
+</html>

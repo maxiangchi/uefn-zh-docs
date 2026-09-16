@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>在 UEFN 中使用 Lumen 曝光管理器 | Fortnite 文档中文镜像</title>
+<link rel="stylesheet" href="../assets/epic.css">
+<link rel="stylesheet" href="../assets/patch.css">
+<link rel="icon" href="../assets/logo-epic.svg">
+</head>
+<body class="theme-fortnite">
+<div class="edc-topbar"><div class="edc-topbar-inner"><img class="edc-logo" src="../assets/logo-epic.svg" alt="Epic Games"><span class="edc-brand">Epic Games <b>开发者社区</b></span><span class="edc-nav"><a href="../index.html">文档首页</a><a href="sub-index.html">子教程索引</a><a href="https://dev.epicgames.com/documentation/fortnite/using-the-lumen-exposure-manager-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">英文原文</a></span></div></div>
+<div class="site-container">
+<aside class="site-nav"><div class="documents-tree"><nav><ul class="contents-table">
+<div class="tree-sec">A · 最新动态</div>
+<a class="tree-link" href="01-42-00-fortnite-ecosystem-updates-and-release-notes.html">01. 42.00 生态系统更新与发行说明</a>
+<a class="tree-link" href="02-custom-items-and-inventory-overview-in-fortnite.html">02. 自定义物品与背包总览</a>
+<a class="tree-link" href="03-in-island-transactions-in-fortnite.html">03. 岛内交易</a>
+<a class="tree-link" href="04-mobile-development-in-fortnite.html">04. 移动端开发</a>
+<a class="tree-link" href="05-inputs-in-fortnite.html">05. 输入系统</a>
+<a class="tree-link" href="06-ability-system-in-unreal-editor-for-fortnite.html">06. 能力系统 Ability System</a>
+<a class="tree-link" href="07-partybased-gameplay-using-the-social-synergy-api-in-fortnite.html">07. 社交协同 API 与小队玩法</a>
+<a class="tree-link" href="08-scene-graph-in-unreal-editor-for-fortnite.html">08. 场景图 Scene Graph</a>
+<div class="tree-sec">B · 入门</div>
+<a class="tree-link" href="09-build-your-first-island-in-fortnite.html">09. 构建你的第一个岛屿</a>
+<a class="tree-link" href="10-onboarding-guide-to-programming-with-verse-in-unreal-editor-for-fortnite.html">10. Verse 编程入门指南</a>
+<a class="tree-link" href="11-building-basics-in-fortnite-creative.html">11. 建造基础</a>
+<div class="tree-sec">C · 品牌合集</div>
+<a class="tree-link" href="12-star-wars-islands-in-fortnite.html">12. 星球大战™岛屿</a>
+<a class="tree-link" href="13-kpop-demon-hunters-islands-in-fortnite.html">13. KPop 猎魔团岛屿</a>
+<a class="tree-link" href="14-building-lego-islands-in-fortnite.html">14. 乐高®岛屿</a>
+<a class="tree-link" href="15-the-walking-dead-universe-islands-in-unreal-editor-for-fortnite.html">15. 行尸走肉宇宙岛屿</a>
+<a class="tree-link" href="16-teenage-mutant-ninja-turtle-islands-in-unreal-editor-for-fortnite.html">16. 忍者神龟岛屿</a>
+<a class="tree-link" href="17-squid-game-islands-in-fortnite.html">17. 鱿鱼游戏岛屿</a>
+<div class="tree-sec">D · 开发者成功</div>
+<a class="tree-link" href="18-using-creator-portal-in-fortnite-creative.html">18. 使用创作者门户</a>
+<a class="tree-link" href="19-island-moderation-and-guidelines-in-fortnite-creative.html">19. 岛屿审核与准则</a>
+<div class="tree-sec">E · 协作</div>
+<a class="tree-link" href="20-creating-teams-in-creator-portal-in-unreal-editor-for-fortnite.html">20. 在创作者门户创建团队</a>
+<a class="tree-link" href="21-adding-playtesters-in-fortnite-creative.html">21. 添加试玩测试员</a>
+<a class="tree-link" href="22-playtesting-your-island-in-unreal-editor-for-fortnite.html">22. 试玩测试你的岛屿</a>
+<a class="tree-link" href="23-collaborating-in-unreal-editor-for-fortnite.html">23. 在 UEFN 中协作</a>
+<a class="tree-link" href="24-lore-version-control-in-unreal-editor-for-fortnite.html">24. Lore 版本控制</a>
+<a class="tree-link" href="25-conflicts-in-lore-version-control-in-unreal-editor-for-fortnite.html">25. Lore 中的冲突</a>
+<a class="tree-link" href="26-version-history-and-conflict-resolution-in-unreal-editor-for-fortnite.html">26. 分支历史与冲突解决</a>
+<div class="tree-sec">F · 游戏示例</div>
+<a class="tree-link" href="27-build-a-game-in-unreal-editor-for-fortnite.html">27. 构建一款游戏</a>
+<a class="tree-link" href="28-unreal-editor-for-fortnite-starter-templates.html">28. UEFN 新手模板</a>
+<div class="tree-sec">G · Verse</div>
+<a class="tree-link" href="29-learn-the-basics-of-writing-code-in-verse.html">29. 从零学习 Verse 代码基础</a>
+<div class="tree-sec">H · 专注领域</div>
+<a class="tree-link active" href="30-lighting-in-unreal-editor-for-fortnite.html">30. 灯光</a>
+<a class="tree-link" href="31-animation-and-cinematics-in-unreal-editor-for-fortnite.html">31. 动画与过场动画</a>
+<a class="tree-link" href="32-modeling-in-unreal-editor-for-fortnite.html">32. 建模</a>
+<a class="tree-link" href="33-materials-in-unreal-editor-for-fortnite.html">33. 材质</a>
+<a class="tree-link" href="34-environments-and-landscapes-in-unreal-editor-for-fortnite.html">34. 环境与地形</a>
+<a class="tree-link" href="35-audio-in-unreal-editor-for-fortnite.html">35. 音频</a>
+<a class="tree-link" href="36-visual-effects-in-unreal-editor-for-fortnite.html">36. 视觉特效</a>
+</ul></nav></div></aside>
+<div class="page-content"><div class="page-document has-theme-bg">
+<header class="section-page-header"><nav><ol class="breadcrumb is-shrinkable"><li class="breadcrumb-item is-root"><img src="../assets/logo-epic.svg" alt="Epic Games"><a href="../index.html">Developer</a></li><li class="breadcrumb-item"><a href="../index.html">Fortnite 文档</a></li><li class="breadcrumb-item"><a href="30-lighting-in-unreal-editor-for-fortnite.html">灯光</a></li><li class="breadcrumb-item active" aria-current="page"><span class="text-truncate">在 UEFN 中使用 Lumen 曝光管理器</span></li></ol></nav><h1>在 UEFN 中使用 Lumen 曝光管理器</h1><p class="text-secondary mb-0">使用 Lumen 曝光管理器调整后期处理设置，让精心打磨的 UEFN 岛屿在高中低端平台上保持一致的外观与质感。</p><p class="doc-meta">英文原标题：Using The Lumen Exposure Manager In Unreal Editor For Fortnite · <a href="https://dev.epicgames.com/documentation/fortnite/using-the-lumen-exposure-manager-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">查看英文原文</a> · 社区翻译镜像，仅供学习</p></header>
+<div class="doc-columns"><article class="doc-article">
+<p>如果你想知道为什么你的岛屿在 PC 上与在 Nintendo Switch 上看起来差别巨大，图形质量可能并非唯一的罪魁祸首。低端平台的光照能力不同，渲染时不使用 <a href="https://dev.epicgames.com/documentation/fortnite/lumen" target="_blank" rel="noopener">Lumen</a>。</p>
+<p>光照对岛屿的视觉冲击力起着巨大作用。</p>
+<p>使用<strong> Lumen 曝光管理器（Lumen Exposure Manager）</strong>，你可以调整后期处理设置，让精心打磨的 UEFN 岛屿在全部支持平台上保持一致的外观与质感。</p>
+<p><strong>Lumen 曝光管理器</strong>允许你分别修改中低端平台（<strong>NonLumenPostProcess</strong>）与高端平台（<strong>LumenPostProcess</strong>）的后期处理，在 Fortnite 支持的设备间保持一致。</p>
+<p>默认的<strong>昼夜循环（Day Night Cycle）</strong>包含自动曝光管理。</p>
+<p>当所有时间管理（Time of Day Managers）都被禁用、由你手动控制全部光照时，才应使用 Lumen 曝光管理器。</p>
+<p>你会注意到，即使使用默认设置，Lumen 与非 Lumen 设置在局部曝光（Local Exposure）上也会有所不同。</p>
+<p>通过学习库（Learning Library）中的 <strong>UEFN 高级光照（UEFN Advanced Lighting）</strong>视频教程，学习使用 UEFN 光照工具为你的岛屿打造自定义环境：</p>
+<ul>
+<li><a href="https://dev.epicgames.com/community/learning/tutorials/8Xbj/fortnite-epic-for-indies-uefn-advanced-lighting-ch-1-of-3-time-of-day-manager" target="_blank" rel="noopener">UEFN 高级光照：时间管理器（Time of Day Manager）</a></li>
+<li><a href="https://dev.epicgames.com/community/learning/tutorials/3XVo/fortnite-epic-for-indies-uefn-advanced-lighting-ch-2-of-3-environment-light-rig" target="_blank" rel="noopener">UEFN 高级光照：环境灯光装置（Environment Light Rig）</a></li>
+<li><a href="https://dev.epicgames.com/community/learning/tutorials/6Xn2/fortnite-uefn-advanced-lighting-ch-3-of-3-lumen-exposure-manager" target="_blank" rel="noopener">UEFN 高级光照：Lumen 曝光管理器（Lumen Exposure Manager）</a></li>
+</ul>
+<p>要启用完全手动控制，前往<strong>世界设置（World Settings）</strong>选项卡，勾选 <strong>Disable All Time of Day Managers</strong>。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/5f9518f8-7a31-4ce7-b1a3-707aa31ea86c?resizing_type=fit" alt="禁用全部时间管理器" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/5f9518f8-7a31-4ce7-b1a3-707aa31ea86c?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>要在项目中放置自己的光照组件：</p>
+<ul>
+<li>打开 <strong>Place Actors</strong> 面板</li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/89db59e0-5f81-416e-bb7e-cfa0a7dc9d82?resizing_type=fit" alt="Place Actors 面板" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/89db59e0-5f81-416e-bb7e-cfa0a7dc9d82?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ul>
+<li>从 <strong>Lights</strong> 或 <strong>Visual Effects</strong> 选项卡中选择所需的 Actor，拖入视口。</li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/632c65ca-4ee4-4436-9cfc-d0d139dc81af?resizing_type=fit" alt="A：Lights Actor，B：Visual Effects Actor" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/632c65ca-4ee4-4436-9cfc-d0d139dc81af?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h2 id="sec-1">查找与放置 Lumen 曝光管理器</h2>
+<ul>
+<li>打开<strong>内容浏览器（Content Browser）</strong>。</li>
+<li>打开 <strong>Fortnite</strong> 文件夹。</li>
+<li>打开 <strong>Lighting</strong> 文件夹并选择 <strong>Tools</strong> 文件夹。</li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/7a295841-b315-455e-8017-90828bd1735b?resizing_type=fit" alt="Lighting Tools 文件夹" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/7a295841-b315-455e-8017-90828bd1735b?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ul>
+<li>选择 <strong>LumenExposureManager</strong> 并把该设备拖入<strong>视口（Viewport）</strong>。</li>
+<li>为低端平台自定义 <strong>NonLumenPostProcess</strong> 组件的选项。</li>
+<li>为高端平台自定义 <strong>LumenPostProcess</strong> 组件的选项。</li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/bb3ab7ea-757d-44db-add3-1077fa30465f?resizing_type=fit" alt="Lumen 与非 Lumen 后期处理组件" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/bb3ab7ea-757d-44db-add3-1077fa30465f?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>如果你的<strong>全局光照（Global Illumination）</strong>设置为 <strong>High</strong>、<strong>Epic</strong> 或 <strong>Cinematic</strong>，视口默认显示 <strong>LumenPostProcess</strong> 组件的设置。</p>
+<p>你可以在此处检查设置：</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/1d34cf7f-71d4-4d21-abe3-a69251dd60e1?resizing_type=fit" alt="全局光照设置" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/1d34cf7f-71d4-4d21-abe3-a69251dd60e1?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>要查看岛屿在不使用 Lumen 时的样子，把<strong>全局光照</strong>设置为 <strong>Medium</strong> 或 <strong>Low</strong>，然后编辑 <strong>NonLumenPostProcess</strong> 组件。</p>
+<p>启用 Lumen 的岛屿的曝光设置已配置为匹配最新 Fortnite 大逃杀的外观与质感。</p>
+<h2 id="sec-2">用户选项</h2>
+<p>你可以使用 Lumen 曝光管理器设置以下属性：</p>
+<h3>镜头（Lens）</h3>
+<p><strong>镜头（Lens）</strong>类别包含模拟真实相机镜头常见效果的属性与设置。</p>
+<h4>泛光（Bloom）</h4>
+<p><strong>泛光（Bloom）</strong>是真实的光学现象，能以适中的渲染性能开销显著提升渲染图像的真实感。当用肉眼观察处于深色背景上的明亮物体时可以看到泛光；更亮的物体还会引起其他效果（条纹、镜头光斑），但经典泛光不涵盖那些。更多信息请参阅 <a href="https://docs.unrealengine.com/bloom-in-unreal-engine" target="_blank" rel="noopener">Bloom</a>。</p>
+<table><thead><tr><th>属性</th><th>说明</th></tr></thead><tbody><tr><td><strong>泛光强度（Bloom Intensity）</strong></td><td>缩放整个泛光效果的颜色（线性）。用途包括随时间淡入淡出，或压暗场景。</td></tr><tr><td><strong>泛光阈值（Bloom Threshold）</strong></td><td>定义颜色需要具有多少亮度单位才会影响泛光。除阈值外还有一个线性过渡带（一个单位宽），其中颜色仅部分影响泛光。要让全部场景颜色都贡献泛光，请使用 -1。用途包括某些梦境序列的微调。</td></tr></tbody></table>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/a1cc2069-ff5a-440d-8285-9f2919f5098e?resizing_type=fit&width=1920&height=1080" alt="泛光强度为 0 时的效果" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/a1cc2069-ff5a-440d-8285-9f2919f5098e?resizing_type=fit&width=1920&height=1080" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/e1cd6a8e-1af1-4f82-95b8-2a62a88288c2?resizing_type=fit&width=1920&height=1080" alt="泛光强度为 7 时的效果" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/e1cd6a8e-1af1-4f82-95b8-2a62a88288c2?resizing_type=fit&width=1920&height=1080" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h4>曝光（Exposure）</h4>
+<p><strong>曝光（Exposure）</strong>（更常称为眼睛自适应，eye adaptation）会自动调整场景看起来有多亮或多暗。该效果重现了人眼适应不同光照条件的体验，例如从昏暗室内走到明亮室外，反之亦然。更多信息请参阅<a href="https://docs.unrealengine.com/auto-exposure-in-unreal-engine/" target="_blank" rel="noopener">自动曝光（Auto Exposure）</a>页面。</p>
+<table><thead><tr><th>属性</th><th>说明</th></tr></thead><tbody><tr><td><strong>计量模式（Metering Mode）</strong></td><td><strong>自动曝光直方图（Auto Exposure Histogram）</strong>模式通过由 64-bin 直方图构建的高级设置，提供对自动曝光的精细控制，这是虚幻引擎默认的曝光计量模式。<br><strong>自动曝光基础（Auto Exposure Basic）</strong>模式设置较少，但速度更快，通过下采样曝光计算单一数值。<br><strong>手动（Manual）</strong>模式使用后期处理与相机设置中的相机（Camera）设置控制曝光，而非仅使用曝光（Exposure）类别中的设置。</td></tr><tr><td><strong>曝光补偿（Exposure Compensation）</strong></td><td>对曝光的对数调整，仅在指定了色调映射器时使用。设为 0 表示不调整，-1 表示暗两倍，-2 表示暗四倍，1 表示亮两倍，2 表示亮四倍。</td></tr><tr><td><strong>应用物理相机曝光（Apply Physical Camera Exposure）</strong></td><td>该开关仅影响<strong>手动</strong>计量模式。启用后，场景亮度受<strong>相机</strong>设置（ISO、快门速度与光圈）影响；禁用后，相机使用 ISO 100、光圈 1.0、快门速度 1.0 的默认值。启用该标志后大多数场景会明显变暗。</td></tr><tr><td><strong>曝光补偿曲线（Exposure Compensation Curve）</strong></td><td>该槽位接受曲线（Curve）资产，用于精细控制场景的曝光补偿。曲线图中的 X、Y 轴数值分别对应<strong>平均场景 EV100</strong>与<strong>曝光补偿（曲线）</strong>值。</td></tr><tr><td><strong>曝光计量遮罩（Exposure Metering Mask）</strong></td><td>使用自定义纹理遮罩计量曝光。遮罩上的亮部对自动曝光计量影响大，暗部影响小。</td></tr><tr><td><strong>最小亮度（Min Brightness）</strong></td><td>自动曝光的最小亮度，限制相机可适应的亮度下限。该值必须大于 0，且应小于等于<strong>最大亮度</strong>。合适的值应为接近 0 的正数，并在昏暗光照下调整。若该值过小，视口图像会过亮；若过大，图像会过暗。实际取值取决于内容的 HDR 范围。若最小亮度等于最大亮度，自动曝光将被禁用。</td></tr><tr><td><strong>最大亮度（Max Brightness）</strong></td><td>自动曝光的最大亮度，限制相机可适应的亮度上限。该值必须大于 0，且应大于等于<strong>最小亮度</strong>。合适的值应为正数（2 是不错的起点），并在明亮光照下调整。若该值过小，视口图像会过亮；若过大，图像会过暗。实际取值取决于内容的 HDR 范围。若最大亮度等于最小亮度，自动曝光将被禁用。</td></tr><tr><td><strong>变亮速度（Speed Up）</strong></td><td>从暗环境到亮环境的自适应速度。</td></tr><tr><td><strong>变暗速度（Speed Down）</strong></td><td>从亮环境到暗环境的自适应速度。</td></tr><tr><td><strong>低百分位（Low Percent）</strong></td><td>自动曝光根据场景颜色亮度直方图提取的值进行自适应，该值定义为有 X% 的像素暗于该亮度。数值越高，屏幕上的亮部权重越大，但结果可能不稳定；数值越低，中暗部权重越大，但亮部可能过曝。取值应大于 0 且小于 100，70 到 80 是不错的起点。</td></tr><tr><td><strong>高百分位（High Percent）</strong></td><td>自动曝光根据场景颜色亮度直方图提取的值进行自适应，该值定义为有 X% 的像素暗于该亮度。数值越高，屏幕上的亮部权重越大，但结果可能不稳定；数值越低，中暗部权重越大，但亮部可能过曝。取值应大于 0 且小于 100，80 到 95 是不错的起点。</td></tr><tr><td><strong>直方图对数下限（Histogram Log Min）</strong></td><td>在使用 <strong>HDR（眼睛自适应）</strong>可视化模式时，定义生成直方图亮度范围的下界。</td></tr><tr><td><strong>直方图对数上限（Histogram Log Max）</strong></td><td>在使用 <strong>HDR（眼睛自适应）</strong>可视化模式时，定义生成直方图亮度范围的上界。</td></tr></tbody></table>
+<h4>色差（Chromatic Aberration）</h4>
+<p><strong>色差（Chromatic Aberration）</strong>是模拟真实相机镜头色彩偏移的效果：光线从不同位置进入镜头导致 RGB 颜色分离。更多信息请参阅<a href="https://docs.unrealengine.com/post-process-effects-in-unreal-engine/" target="_blank" rel="noopener">后期处理效果（Post Process Effects）</a>页面。</p>
+<table><thead><tr><th>属性</th><th>说明</th></tr></thead><tbody><tr><td><strong>强度（Intensity）</strong></td><td>模拟真实相机镜头中像差/边缘色散（即相机瑕疵）伪影的量。</td></tr><tr><td><strong>起始偏移（Start Offset）</strong></td><td>效果生效位置到帧缓冲中心的归一化距离。</td></tr></tbody></table>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/578e0988-f769-4f1b-b0f2-cc4b30c47ca4?resizing_type=fit&width=1920&height=1080" alt="无色差效果" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/578e0988-f769-4f1b-b0f2-cc4b30c47ca4?resizing_type=fit&width=1920&height=1080" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/2f83be30-5b02-4291-8ee4-f187e035b12c?resizing_type=fit&width=1920&height=1080" alt="有色差效果" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/2f83be30-5b02-4291-8ee4-f187e035b12c?resizing_type=fit&width=1920&height=1080" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h4>灰尘遮罩（Dirt Mask）</h4>
+<p><strong>灰尘遮罩（Dirt Mask）</strong>是应用于相机的滤镜，会在相机上形成一层灰尘般的薄膜。</p>
+<table><thead><tr><th>属性</th><th>说明</th></tr></thead><tbody><tr><td><strong>灰尘遮罩纹理（Dirt Mask Texture）</strong></td><td>从下拉菜单中选择纹理。</td></tr><tr><td><strong>灰尘遮罩强度（Dirt Mask Intensity）</strong></td><td>选择强度值，决定效果在相机上的可见程度。</td></tr><tr><td><strong>灰尘遮罩色彩（Dirt Mask Tint）</strong></td><td>从色轮中为灰尘遮罩选择颜色。</td></tr></tbody></table>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/50918966-99ca-439e-b42d-54cf83b7c563?resizing_type=fit&width=1920&height=1080" alt="灰尘遮罩强度为 0 的效果" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/50918966-99ca-439e-b42d-54cf83b7c563?resizing_type=fit&width=1920&height=1080" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/6d892a0f-6f7e-49d5-a39d-7ce9197cb16f?resizing_type=fit&width=1920&height=1080" alt="灰尘遮罩强度为 8 的效果" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/6d892a0f-6f7e-49d5-a39d-7ce9197cb16f?resizing_type=fit&width=1920&height=1080" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h4>相机（Camera）</h4>
+<p>一组控制相机快门与电影景深的属性。</p>
+<table><thead><tr><th>属性</th><th>说明</th></tr></thead><tbody><tr><td><strong>快门速度（Shutter Speed，1/s）</strong></td><td>相机快门速度，单位为秒。</td></tr><tr><td><strong>ISO</strong></td><td>相机传感器对光的灵敏度。</td></tr><tr><td><strong>光圈（Aperture，F-stop）</strong></td><td>定义相机镜头的开口。光圈 = 1/f-stop。典型镜头最小可到 f/1.2（大开口）。数值越小，开口越大，前景与背景虚化越多；数值越大，开口越小，前景与背景虚化越少。</td></tr><tr><td><strong>最大光圈（Maximum Aperture，最小 F-stop）</strong></td><td>定义相机镜头的最大开口，用于控制光圈叶片的曲率。设为 0 得到直叶片。</td></tr><tr><td><strong>光圈叶片数（Number of diaphragm blades）</strong></td><td>定义镜头内光圈的叶片数（4 到 16），决定焦外（bokeh）的形状。</td></tr></tbody></table>
+<h4>局部曝光（Local Exposure）</h4>
+<p><strong>局部曝光（Local Exposure）</strong>是在现有全局曝光系统之上，在美术可控参数内自动对曝光做局部调整的技术，用于同时保留高光与阴影细节。对于使用动态光照的高动态范围疑难场景特别有用——仅靠一次全局曝光调整不足以避免高光过曝与阴影死黑。</p>
+<table><thead><tr><th>属性</th><th>说明</th></tr></thead><tbody><tr><td><strong>高光对比度（Highlight Contrast）</strong></td><td>控制高光的对比度。局部曝光把帧亮度分解为基础层与细节层，按该值降低基础层的对比度。合适的值通常在 0.6 到 1 之间。</td></tr><tr><td><strong>阴影对比度（Shadow Contrast）</strong></td><td>控制阴影的对比度。局部曝光把帧亮度分解为基础层与细节层，按该值降低基础层的对比度。合适的值通常在 0.6 到 1 之间。</td></tr><tr><td><strong>细节强度（Detail Strength）</strong></td><td>控制应用于场景的细节强度。局部曝光把帧亮度分解为基础层与细节层；不等于 1 的值会启用局部曝光。大多数情况下该值应设为 1。</td></tr><tr><td><strong>模糊亮度混合（Blurred Luminance Blend）</strong></td><td>在双边滤波与模糊亮度之间混合作为基础层。模糊亮度有助于保持图像观感与镜面高光，减少振铃。合适的值通常在 0.4 到 0.6 之间。</td></tr><tr><td><strong>模糊亮度核尺寸百分比（Blurred Luminance Kernel Size Percent）</strong></td><td>用于模糊帧亮度的屏幕百分比（核尺寸）。</td></tr></tbody></table>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/f86b8f92-bd2b-4b11-9613-d796c2d6aceb?resizing_type=fit&width=1920&height=1080" alt="未启用局部曝光的效果" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/f86b8f92-bd2b-4b11-9613-d796c2d6aceb?resizing_type=fit&width=1920&height=1080" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/74020f5d-3652-420c-92ef-0d82d19bb09c?resizing_type=fit&width=1920&height=1080" alt="已启用局部曝光的效果" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/74020f5d-3652-420c-92ef-0d82d19bb09c?resizing_type=fit&width=1920&height=1080" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h4>镜头光斑（Lens Flares）</h4>
+<p><strong>镜头光斑（Lens Flare）</strong>效果是基于图像的技术，模拟观察明亮物体时因相机镜头瑕疵导致的光散射。</p>
+<table><thead><tr><th>属性</th><th>说明</th></tr></thead><tbody><tr><td><strong>强度（Intensity）</strong></td><td>图像式镜头光斑的亮度缩放。</td></tr><tr><td><strong>色彩（Tint）</strong></td><td>为镜头光斑的光粒子着色。</td></tr><tr><td><strong>BokehSize</strong></td><td>决定用 Bokeh 纹理产生的镜头模糊尺寸。</td></tr><tr><td><strong>阈值（Threshold）</strong></td><td>镜头光斑开始生效的最小亮度。该设置应尽量设高，以避免对暗到看不见的内容做模糊带来性能开销。</td></tr><tr><td><strong>BokehShape</strong></td><td>从下拉菜单中选择纹理形状。</td></tr></tbody></table>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/c8d25edd-9d45-482c-b9f7-52888b80d1bf?resizing_type=fit&width=1920&height=1080" alt="无镜头光斑的效果" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/c8d25edd-9d45-482c-b9f7-52888b80d1bf?resizing_type=fit&width=1920&height=1080" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/47399087-af0e-4428-b0d4-e7ed3f1fae3d?resizing_type=fit&width=1920&height=1080" alt="有镜头光斑的效果" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/47399087-af0e-4428-b0d4-e7ed3f1fae3d?resizing_type=fit&width=1920&height=1080" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h4>图像效果：暗角（Vignette）</h4>
+<p><strong>暗角（Vignette）</strong>是基于图像的效果，创建无边框窗口，使图像向边缘渐隐。</p>
+<table><thead><tr><th>属性</th><th>说明</th></tr></thead><tbody><tr><td><strong>暗角强度（Vignette Intensity）</strong></td><td>控制屏幕四角压暗的程度，从渲染图像到窗口边缘形成无边框窗口。数值越大暗角越重，0 表示无暗角。</td></tr></tbody></table>
+<h4>景深（Depth of Field）</h4>
+<p><strong>景深（Depth of Field）</strong>是模拟相机镜头对特定距离对焦、虚化近处或远处物体的视觉效果。</p>
+<table><thead><tr><th>属性</th><th>说明</th></tr></thead><tbody><tr><td><strong>使用头发深度（Use Hair Depth）</strong></td><td>景深是否使用头发深度计算弥散圆尺寸；否则按头发在头发深度与场景深度之间插值得到的距离计算。</td></tr></tbody></table>
+<h3>颜色分级（Color Grading）</h3>
+<p><strong>颜色分级（Color Grading）</strong>类别包含控制对比度、色彩、饱和度等的属性，可对场景观感做完整的艺术控制。</p>
+<h4>色温（Temperature）</h4>
+<p>本节属性用于调整场景色彩，使白色真正呈现白色，从而让场景中的其他颜色在给定光照下被正确照亮。</p>
+<table><thead><tr><th>属性</th><th>说明</th></tr></thead><tbody><tr><td><strong>色温类型（Temperature Type）</strong></td><td>选择使用的色温计算类型。<br><strong>白平衡（White Balance）</strong>：用 Temperature 值控制虚拟相机的白平衡，默认设置。<br><strong>色温（Color Temperature）</strong>：用 Temperature 值调整场景的色温，是白平衡操作的逆操作。</td></tr><tr><td><strong>色温（Temp）</strong></td><td>根据场景中光线的温度调整白平衡。当光线温度与该值匹配时光线呈现白色；若取值高于场景光线会偏“暖”（黄），反之取值偏低会偏“冷”（蓝）。</td></tr><tr><td><strong>色调（Tint）</strong></td><td>通过调整青色与品红色范围，调整场景的白平衡温度色调。理想做法是先调好白平衡 Temp 属性再用它校准色彩。在某些光温下颜色可能偏黄或偏蓝，可用它平衡到更自然的效果。</td></tr></tbody></table>
+<h4>全局（Global）</h4>
+<p>本节属性是可用于场景的一组全局色彩校正。</p>
+<table><thead><tr><th>属性</th><th>说明</th></tr></thead><tbody><tr><td><strong>饱和度（Saturation）</strong></td><td>调整颜色（色相）的强度（纯度）。饱和度越高，颜色越接近其最纯形态（红、绿、蓝）；饱和度越低，颜色越灰、越发白。</td></tr><tr><td><strong>对比度（Contrast）</strong></td><td>调整场景中亮暗色值的色调范围。降低强度会去掉高光、提亮图像，呈现发白的外观；提高强度会收紧高光、压暗整体图像。</td></tr><tr><td><strong>伽马（Gamma）</strong></td><td>调整图像中间调的亮度强度以准确还原色彩。调低或调高会分别导致图像过暗或发白。</td></tr></tbody></table>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/11493cf6-a658-4118-9ad7-35cdd549706c?resizing_type=fit&width=1920&height=1080" alt="饱和度为 0 的效果" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/11493cf6-a658-4118-9ad7-35cdd549706c?resizing_type=fit&width=1920&height=1080" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/630ec6b9-3ec9-4370-ad4b-52e80a5c7fcb?resizing_type=fit&width=1920&height=1080" alt="饱和度为 2 的效果" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/630ec6b9-3ec9-4370-ad4b-52e80a5c7fcb?resizing_type=fit&width=1920&height=1080" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h4>阴影（Shadows）</h4>
+<p>这些工具用于为阴影自定义色彩深度与形状定义。</p>
+<table><thead><tr><th>属性</th><th>说明</th></tr></thead><tbody><tr><td><strong>饱和度（Saturation）</strong></td><td>控制图像阴影区域颜色（色相）的强度。数值越高色彩越鲜艳。</td></tr><tr><td><strong>对比度（Contrast）</strong></td><td>控制场景的亮暗值范围。数值越低，亮部与暗部差异越小；数值越高，亮部与暗部差异越大。</td></tr><tr><td><strong>伽马（Gamma）</strong></td><td>控制阴影区域的亮度曲线。调高或调低会分别提亮或压暗阴影区域的中间调。</td></tr><tr><td><strong>增益（Gain）</strong></td><td>该值与阴影区域的颜色相乘。调高或调低会分别提亮或压暗受影响区域。</td></tr><tr><td><strong>偏移（Offset）</strong></td><td>这些值给阴影区域叠加颜色。调高或调低颜色值会分别使阴影更发白或更不发白。</td></tr><tr><td><strong>ShadowMax</strong></td><td>该值设置何为图像阴影区域的阈值。</td></tr></tbody></table>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/ebba9806-5390-4673-afc9-9f626b1d1466?resizing_type=fit&width=1920&height=1080" alt="未调整的阴影效果" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/ebba9806-5390-4673-afc9-9f626b1d1466?resizing_type=fit&width=1920&height=1080" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/b1b2ee0d-4a3a-49a1-9fc8-73337675309b?resizing_type=fit&width=1920&height=1080" alt="已调整的阴影效果" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/b1b2ee0d-4a3a-49a1-9fc8-73337675309b?resizing_type=fit&width=1920&height=1080" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h4>中间调（Midtones）</h4>
+<p><strong>中间调（Midtones）</strong>是关卡中介于高光（最亮区）与阴影（最暗区）之间的中间亮度范围。</p>
+<table><thead><tr><th>属性</th><th>说明</th></tr></thead><tbody><tr><td><strong>饱和度（Saturation）</strong></td><td>控制图像中间调区域颜色（色相）的强度。数值越高色彩越鲜艳。</td></tr><tr><td><strong>对比度（Contrast）</strong></td><td>控制中间调区域的亮暗值范围。数值越低，亮部与暗部差异越小；数值越高差异越大。</td></tr><tr><td><strong>伽马（Gamma）</strong></td><td>控制中间调区域的亮度曲线。调高或调低会分别提亮或压暗阴影区域的中间调。</td></tr><tr><td><strong>增益（Gain）</strong></td><td>该值与中间调区域的颜色相乘。调高或调低会分别提亮或压暗受影响区域。</td></tr><tr><td><strong>偏移（Offset）</strong></td><td>这些值给中间调区域叠加颜色。调高或调低颜色值会分别使阴影更发白或更不发白。</td></tr></tbody></table>
+<h4>高光（Highlights）</h4>
+<p>高光是关卡中较高的亮度值范围，主要关注最亮的区域。</p>
+<table><thead><tr><th>属性</th><th>说明</th></tr></thead><tbody><tr><td><strong>饱和度（Saturation）</strong></td><td>控制图像高光区域颜色（色相）的强度。数值越高色彩越鲜艳。</td></tr><tr><td><strong>对比度（Contrast）</strong></td><td>控制高光区域的亮暗值范围。数值越低，亮部与暗部差异越小；数值越高差异越大。</td></tr><tr><td><strong>伽马（Gamma）</strong></td><td>控制高光区域的亮度曲线。调高或调低会分别提亮或压暗高光区域的中间调。</td></tr><tr><td><strong>增益（Gain）</strong></td><td>该值与高光区域的颜色相乘。调高或调低会分别提亮或压暗受影响区域。</td></tr><tr><td><strong>偏移（Offset）</strong></td><td>这些值给高光区域叠加颜色。调高或调低颜色值会分别使阴影更发白或更不发白。</td></tr><tr><td><strong>HighlightsMin</strong></td><td>该值设置何为图像高光区域的下阈值。</td></tr><tr><td><strong>HighlightsMax</strong></td><td>该值设置何为图像高光区域的上阈值，应大于 HighlightsMin。默认值为 1.0（向后兼容）。</td></tr></tbody></table>
+<h4>杂项（Misc）</h4>
+<p><strong>场景色彩（Scene color tint）</strong>是应用于 HDR 场景的滤镜颜色的乘数。</p>
+<h3>Lumen 全局光照（Lumen Global Illumination）</h3>
+<p>Lumen 全局光照求解漫反射间接光照。例如，从表面漫反射反弹的光会带上该表面的颜色，再把带色光反射到附近其他表面——即颜色溢出（color bleed）效果。场景中的网格体也会阻挡间接光照，从而产生间接阴影。更多信息请参阅<a href="https://docs.unrealengine.com/lumen-global-illumination-and-reflections-in-unreal-engine/" target="_blank" rel="noopener">Lumen 全局光照</a>。</p>
+<table><thead><tr><th>属性</th><th>说明</th></tr></thead><tbody><tr><td><strong>漫反射颜色增强（Diffuse Color Boost）</strong></td><td>按 pow(DiffuseColor, 1/DiffuseColorBoost) 计算材质漫反射颜色以提亮间接光照。大于 1（原始漫反射颜色）的值不符合物理正确，但可作为美术指导手段增加场景中的反弹光。建议保持在 2 以下，否则反射会比场景还亮。</td></tr><tr><td><strong>天光泄漏（Skylight Leaking）</strong></td><td>控制允许泄漏的天空光强度占比。作为美术指导手段（非物理），可避免室内区域全黑。</td></tr><tr><td><strong>全天光泄漏距离（Full Skylight Leaking Distance）</strong></td><td>控制从接收表面起多远处天光泄漏达到全强度。数值越小泄漏越平坦，数值越大越会形成环境光遮蔽效果。</td></tr></tbody></table>
+<h3>渲染功能（Rendering Features）</h3>
+<h4>后期处理材质（Post Process Materials）</h4>
+<p><strong>后期处理材质（Post Process Materials）</strong>为域（Domain）设为 Post Process 的材质提供创建屏幕视觉效果的手段，材质能做到的、影响玩法或场景视觉观感的几乎都可以做。例如，可用于施加受伤效果，或在屏幕上创建风格化、视频特效。更多信息请参阅<a href="https://docs.unrealengine.com/5.1/en-US/post-process-materials-in-unreal-engine" target="_blank" rel="noopener">后期处理材质（Post Process Material）</a>页面。</p>
+<p>只需把一个或多个后期处理材质指定给后期处理体积：先点击 <strong>+</strong> 添加新槽位，在<strong>内容浏览器</strong>中选择材质，再点击左箭头指定。顺序不重要，未使用的槽位会被忽略。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/95ce86c3-7d3d-428d-a265-02af7bdbcecc?resizing_type=fit" alt="后期处理材质槽位" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/95ce86c3-7d3d-428d-a265-02af7bdbcecc?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h4>动态模糊（Motion Blur）</h4>
+<p><strong>动态模糊（Motion Blur）</strong>是基于物体运动的模糊。在摄影与电影（一连串帧）中，动态模糊是物体在成像完成前发生移动而产生的模糊效果。物体运动越快，动态模糊越明显。</p>
+<table><thead><tr><th>属性</th><th>说明</th></tr></thead><tbody><tr><td><strong>强度（Amount）</strong></td><td>动态模糊效果的强度。0 表示无动态模糊。</td></tr><tr><td><strong>最大值（Max）</strong></td><td>动态模糊导致的最大畸变（占屏幕宽度的百分比）。0 表示无畸变。</td></tr><tr><td><strong>目标 FPS（Target FPS）</strong></td><td>定义动态模糊的目标每秒帧数（fps）。使动态模糊与实际帧率无关，而相对于指定目标 FPS：帧越短，快门时间越短，动态模糊越少。FPS 越低动态模糊越多。0 表示动态模糊取决于实际测得的帧率。</td></tr><tr><td><strong>按对象尺寸（Per Object Size）</strong></td><td>图元在速度通道中绘制以纳入动态模糊考量的最小投影屏幕半径。半径为屏幕宽度的百分比。半径越小，绘制调用越多。默认为 4%。</td></tr></tbody></table>
+<h3>胶片颗粒（Film Grain）</h3>
+<p><strong>胶片颗粒（Film Grain）</strong>是模拟冲洗后摄影胶片观感的光学效果，呈现为微小的随机粒子，给渲染帧增添胶片质感。</p>
+<table><thead><tr><th>属性</th><th>说明</th></tr></thead><tbody><tr><td><strong>胶片颗粒强度（Film Grain Intensity）</strong></td><td>应用于场景的颗粒量。0 表示无胶片颗粒，1 表示全颗粒。</td></tr><tr><td><strong>胶片颗粒纹素尺寸（Film Grain Texel Size）</strong></td><td>屏幕上胶片颗粒纹素的尺寸。</td></tr></tbody></table>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/8e17edd2-0559-40d6-becd-9fab999b080e?resizing_type=fit&width=1920&height=1080" alt="无胶片颗粒的效果" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/8e17edd2-0559-40d6-becd-9fab999b080e?resizing_type=fit&width=1920&height=1080" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/baa9f307-00be-4285-8c10-444ba3bb1abe?resizing_type=fit&width=1920&height=1080" alt="完整胶片颗粒的效果" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/baa9f307-00be-4285-8c10-444ba3bb1abe?resizing_type=fit&width=1920&height=1080" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h2 id="sec-3">其他后期处理体积设置</h2>
+<p><strong>后期处理体积设置（Post Process Volume Settings）</strong>是 Lumen 曝光管理器的专属设置，控制它如何与场景以及可能重叠的其他后期处理体积交互。</p>
+<table><thead><tr><th>属性</th><th>说明</th></tr></thead><tbody><tr><td><strong>优先级（Priority）</strong></td><td>指定该体积的优先级。体积重叠时，优先级高的覆盖优先级低的；若两个或多个重叠体积优先级相同，顺序未定义。</td></tr><tr><td><strong>混合半径（Blend Radius）</strong></td><td>设置体积周围用于混合的半径（世界单位）。例如，走进体积时内部观感可能与外部不同，混合半径会在体积周围创建过渡区。</td></tr><tr><td><strong>混合权重（Blend Weight）</strong></td><td>体积属性的影响量。1 为完全生效，0 为不生效。</td></tr><tr><td><strong>启用（Enabled）</strong></td><td>决定该体积是否影响后期处理。启用后，体积设置参与混合。</td></tr><tr><td><strong>无界（Unbound）</strong></td><td>决定是否考虑体积边界。启用后，无论体积边界如何，该体积影响整个场景；不启用时，仅在其边界内生效。</td></tr></tbody></table>
+<h4>渲染（Rendering）</h4>
+<p><strong>渲染（Rendering）</strong>决定你用 Lumen 曝光管理器所做的更改是否可见。</p>
+<div class="pager"><a href="30-lighting-in-unreal-editor-for-fortnite.html"><small>← 返回父教程</small>灯光</a><a href="sub-index.html"><small>子教程索引 →</small>全部子教程</a></div>
+</article><nav class="doc-toc" aria-label="本页内容"><b>本页内容</b><a href="#sec-1">查找与放置 Lumen 曝光管理器</a><a href="#sec-2">用户选项</a><a href="#sec-3">其他后期处理体积设置</a></nav></div>
+</div></div>
+</div>
+<footer class="edc-footer"><div class="inner"><img src="../assets/logo-epic.svg" alt="Epic Games"><span>Fortnite 文档中文镜像 · UE教程/ · 本地打开 index.html 阅读 · 翻译整理自 Epic 官方文档，仅供学习交流</span></div></footer>
+</body>
+</html>

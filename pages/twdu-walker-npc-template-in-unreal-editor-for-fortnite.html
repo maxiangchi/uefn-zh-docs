@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Walker NPC 模板（行尸走肉宇宙） | Fortnite 文档中文镜像</title>
+<link rel="stylesheet" href="../assets/epic.css">
+<link rel="stylesheet" href="../assets/patch.css">
+<link rel="icon" href="../assets/logo-epic.svg">
+</head>
+<body class="theme-fortnite">
+<div class="edc-topbar"><div class="edc-topbar-inner"><img class="edc-logo" src="../assets/logo-epic.svg" alt="Epic Games"><span class="edc-brand">Epic Games <b>开发者社区</b></span><span class="edc-nav"><a href="../index.html">文档首页</a><a href="sub-index.html">子教程索引</a><a href="https://dev.epicgames.com/documentation/fortnite/twdu-walker-npc-template-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">英文原文</a></span></div></div>
+<div class="site-container">
+<aside class="site-nav"><div class="documents-tree"><nav><ul class="contents-table">
+<div class="tree-sec">A · 最新动态</div>
+<a class="tree-link" href="01-42-00-fortnite-ecosystem-updates-and-release-notes.html">01. 42.00 生态系统更新与发行说明</a>
+<a class="tree-link" href="02-custom-items-and-inventory-overview-in-fortnite.html">02. 自定义物品与背包总览</a>
+<a class="tree-link" href="03-in-island-transactions-in-fortnite.html">03. 岛内交易</a>
+<a class="tree-link" href="04-mobile-development-in-fortnite.html">04. 移动端开发</a>
+<a class="tree-link" href="05-inputs-in-fortnite.html">05. 输入系统</a>
+<a class="tree-link" href="06-ability-system-in-unreal-editor-for-fortnite.html">06. 能力系统 Ability System</a>
+<a class="tree-link" href="07-partybased-gameplay-using-the-social-synergy-api-in-fortnite.html">07. 社交协同 API 与小队玩法</a>
+<a class="tree-link" href="08-scene-graph-in-unreal-editor-for-fortnite.html">08. 场景图 Scene Graph</a>
+<div class="tree-sec">B · 入门</div>
+<a class="tree-link" href="09-build-your-first-island-in-fortnite.html">09. 构建你的第一个岛屿</a>
+<a class="tree-link" href="10-onboarding-guide-to-programming-with-verse-in-unreal-editor-for-fortnite.html">10. Verse 编程入门指南</a>
+<a class="tree-link" href="11-building-basics-in-fortnite-creative.html">11. 建造基础</a>
+<div class="tree-sec">C · 品牌合集</div>
+<a class="tree-link" href="12-star-wars-islands-in-fortnite.html">12. 星球大战™岛屿</a>
+<a class="tree-link" href="13-kpop-demon-hunters-islands-in-fortnite.html">13. KPop 猎魔团岛屿</a>
+<a class="tree-link" href="14-building-lego-islands-in-fortnite.html">14. 乐高®岛屿</a>
+<a class="tree-link active" href="15-the-walking-dead-universe-islands-in-unreal-editor-for-fortnite.html">15. 行尸走肉宇宙岛屿</a>
+<a class="tree-link" href="16-teenage-mutant-ninja-turtle-islands-in-unreal-editor-for-fortnite.html">16. 忍者神龟岛屿</a>
+<a class="tree-link" href="17-squid-game-islands-in-fortnite.html">17. 鱿鱼游戏岛屿</a>
+<div class="tree-sec">D · 开发者成功</div>
+<a class="tree-link" href="18-using-creator-portal-in-fortnite-creative.html">18. 使用创作者门户</a>
+<a class="tree-link" href="19-island-moderation-and-guidelines-in-fortnite-creative.html">19. 岛屿审核与准则</a>
+<div class="tree-sec">E · 协作</div>
+<a class="tree-link" href="20-creating-teams-in-creator-portal-in-unreal-editor-for-fortnite.html">20. 在创作者门户创建团队</a>
+<a class="tree-link" href="21-adding-playtesters-in-fortnite-creative.html">21. 添加试玩测试员</a>
+<a class="tree-link" href="22-playtesting-your-island-in-unreal-editor-for-fortnite.html">22. 试玩测试你的岛屿</a>
+<a class="tree-link" href="23-collaborating-in-unreal-editor-for-fortnite.html">23. 在 UEFN 中协作</a>
+<a class="tree-link" href="24-lore-version-control-in-unreal-editor-for-fortnite.html">24. Lore 版本控制</a>
+<a class="tree-link" href="25-conflicts-in-lore-version-control-in-unreal-editor-for-fortnite.html">25. Lore 中的冲突</a>
+<a class="tree-link" href="26-version-history-and-conflict-resolution-in-unreal-editor-for-fortnite.html">26. 分支历史与冲突解决</a>
+<div class="tree-sec">F · 游戏示例</div>
+<a class="tree-link" href="27-build-a-game-in-unreal-editor-for-fortnite.html">27. 构建一款游戏</a>
+<a class="tree-link" href="28-unreal-editor-for-fortnite-starter-templates.html">28. UEFN 新手模板</a>
+<div class="tree-sec">G · Verse</div>
+<a class="tree-link" href="29-learn-the-basics-of-writing-code-in-verse.html">29. 从零学习 Verse 代码基础</a>
+<div class="tree-sec">H · 专注领域</div>
+<a class="tree-link" href="30-lighting-in-unreal-editor-for-fortnite.html">30. 灯光</a>
+<a class="tree-link" href="31-animation-and-cinematics-in-unreal-editor-for-fortnite.html">31. 动画与过场动画</a>
+<a class="tree-link" href="32-modeling-in-unreal-editor-for-fortnite.html">32. 建模</a>
+<a class="tree-link" href="33-materials-in-unreal-editor-for-fortnite.html">33. 材质</a>
+<a class="tree-link" href="34-environments-and-landscapes-in-unreal-editor-for-fortnite.html">34. 环境与地形</a>
+<a class="tree-link" href="35-audio-in-unreal-editor-for-fortnite.html">35. 音频</a>
+<a class="tree-link" href="36-visual-effects-in-unreal-editor-for-fortnite.html">36. 视觉特效</a>
+</ul></nav></div></aside>
+<div class="page-content"><div class="page-document has-theme-bg">
+<header class="section-page-header"><nav><ol class="breadcrumb is-shrinkable"><li class="breadcrumb-item is-root"><img src="../assets/logo-epic.svg" alt="Epic Games"><a href="../index.html">Developer</a></li><li class="breadcrumb-item"><a href="../index.html">Fortnite 文档</a></li><li class="breadcrumb-item"><a href="15-the-walking-dead-universe-islands-in-unreal-editor-for-fortnite.html">行尸走肉宇宙岛屿</a></li><li class="breadcrumb-item active" aria-current="page"><span class="text-truncate">Walker NPC 模板（行尸走肉宇宙）</span></li></ol></nav><h1>Walker NPC 模板（行尸走肉宇宙）</h1><p class="text-secondary mb-0">用 UEFN 中的 Walker NPC 学习模板认识行尸敌人类：包含公告牌、开关与玩法示例，学习行尸设置、武器玩法与关卡设计场景。</p><p class="doc-meta">英文原标题：TWDU Walker NPC Template in Unreal Editor for Fortnite · <a href="https://dev.epicgames.com/documentation/fortnite/twdu-walker-npc-template-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">查看英文原文</a> · 社区翻译镜像，仅供学习</p></header>
+<div class="doc-columns"><article class="doc-article">
+<p>一大群致命的<strong>行尸（Walkers）</strong>正从<strong>行尸走肉宇宙（The Walking Dead Universe）</strong>蹒跚走进 Fortnite 岛屿。用虚幻编辑器 Fortnite 版（UEFN）中的 <strong>Walker NPC</strong> 学习模板来认识这种敌人类，并学习如何把它们融入岛屿关卡设计，打造独特体验。该模板包含公告牌、开关与玩法示例，可在编辑器中边学边练。</p>
+<p>把本指南作为模板的配套读物，深入学习以下内容：</p>
+<ul>
+<li>Walker NPC 设置；</li>
+<li>武器玩法；</li>
+<li>使用 Walker NPC 的关卡设计场景；</li>
+<li>镜头选择；</li>
+<li>即插即用的血量与选中武器自定义 UI；</li>
+<li>Heavy Linework（重线条）后期处理效果。</li>
+</ul>
+<h2 id="sec-1">上手（Getting Started）</h2>
+<p>按以下步骤访问该模板：</p>
+<ul>
+<li>打开 UEFN；</li>
+<li>在<strong>项目浏览器（Project Browser）</strong>中选择 <strong>品牌模板（Brand Templates）&gt; 行尸走肉宇宙（The Walking Dead Universe）&gt; Walker NPC</strong>；</li>
+<li>创建新项目。</li>
+</ul>
+<p>Walker NPC 模板仅在 UEFN 中可用。不过，你可以在 Fortnite 创意模式中使用行尸走肉宇宙的通用空岛屿及其功能集。要创建 Walker NPC，必须使用 UEFN 才能访问 <a href="https://dev.epicgames.com/documentation/fortnite/using-npc-spawner-devices-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">NPC 生成器（NPC Spawner）设备</a>和 <a href="https://dev.epicgames.com/documentation/fortnite/using-npc-character-definitions-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">NPC 角色定义（NPC Character Definition）</a>。</p>
+<p>要获得最佳模板体验，请同时使用编辑器和一个 Fortnite 游戏客户端实例（session/会话）。在 Fortnite 会话中，你可以看到行尸的实际表现、试用武器、阅读编辑器内指南。</p>
+<p>在 live edit（实时编辑）模式下工作，按公告牌说明添加物品并推送更改，而不必反复开关游戏客户端。启用 live edit 模式：在工具栏点击 <strong>Launch Session</strong> 下拉菜单，打开 <strong>Live Edit</strong> 开关。</p>
+<p>要进一步了解推送更改与 live edit 模式，请参阅<a href="https://dev.epicgames.com/documentation/fortnite/playtesting-your-island-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">试玩测试你的岛屿（Playtesting Your Island）</a>。</p>
+<h2 id="sec-2">行尸设置（Walker Setup）</h2>
+<p>第一个演示区带你认识行尸与新武器。跟随编辑器内指南，熟悉行尸独特的动画、玩法与音效，以及如何设置它们。Walker NPC 属于<a href="https://dev.epicgames.com/documentation/en-us/uefn/using-npc-spawner-devices-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">NPC 生成器设备</a>与<a href="https://dev.epicgames.com/documentation/en-us/uefn/using-npc-character-definitions-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">NPC 角色定义</a>的一部分，仅在 UEFN 中可用。</p>
+<p>要在模板中创建 Walker NPC，按以下步骤操作：</p>
+<ul>
+<li>在<strong>内容抽屉（Content Drawer）</strong>中找到 <strong>Fortnite &gt; Devices &gt; !Beta</strong>；</li>
+<li>滚动找到 <strong>NPC Spawner</strong> 设备，拖入你的岛屿；</li>
+<li>在<strong>细节（Details）</strong>面板点击 <strong>NPC Character Definition</strong> 下拉框，选择 <strong>WalkerDefinition</strong>。</li>
+</ul>
+<p><strong>WalkerDefinition</strong> 是 Epic 设计团队为该模板创建的角色定义，使用基于行尸走肉宇宙的默认行尸修正器。该 WalkerDefinition 资产位于<strong>内容抽屉 &gt; [项目名] &gt; AI</strong>。</p>
+<p>要创建自己的角色定义，按以下步骤操作：</p>
+<ul>
+<li>在<strong>内容抽屉</strong>中点击 <strong>添加（Add）&gt; 人工智能（Artificial Intelligence）&gt; 角色定义（Character Definition）</strong>；</li>
+<li>命名该资产并双击打开；</li>
+<li>点击 <strong>Type</strong> 下拉框，选择 <strong>Walker</strong> 或 <strong>Walker (Prisoner Uniform)（囚服行尸）</strong>。</li>
+</ul>
+<p>你也可以这样做：</p>
+<ul>
+<li>把角色定义直接拖入岛屿以生成行尸，该操作会自动创建一个已挂载该角色定义的 NPC 生成器设备；</li>
+<li>在 <strong>NPC 生成器</strong>的<strong>细节</strong>面板点击 <strong>NPC Character Definition</strong> 下拉框，选择 <strong>Create New Character Definition</strong>，双击图标打开角色定义。</li>
+</ul>
+<p>行尸行动缓慢，但数量庞大、铺天盖地。NPC 生成器设备的细节面板中有选项，可调整开局生成多少行尸、随时间生成多少。在角色定义中，<strong>Walker</strong> 与 <strong>Walker (Prisoner Uniform)</strong> 类型包含 <strong>Walker Gameplay Modifier（行尸玩法修正器）</strong>选项，可调整攻击与撕咬伤害等属性。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/0772edef-cd7f-4f9a-b75a-06088ef52afa?resizing_type=fit" alt="NPC 生成器设备选项的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/0772edef-cd7f-4f9a-b75a-06088ef52afa?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/31a6edc3-486f-442e-a786-f302e7e7ab30?resizing_type=fit" alt="角色定义行尸修正器的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/31a6edc3-486f-442e-a786-f302e7e7ab30?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p><strong>NPC 生成器设备选项</strong></p>
+<p><strong>角色定义 - 行尸修正器（Character Definition - Walker Modifiers）</strong></p>
+<p>试着调整各种设置并推送更改来测试效果。要进一步了解如何在自己的岛屿中创建 Walker NPC 并调整修正器，请参阅<a href="twdu-configuring-walker-npcs-in-unreal-editor-for-fortnite.html">配置行尸（Configuring Walkers）</a>。</p>
+<h2 id="sec-3">继续学习（Continue Learning）</h2>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/c6595261-43bb-41df-97a9-10bb96d6406e?resizing_type=fit" alt="Walker NPC 模板封面的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/c6595261-43bb-41df-97a9-10bb96d6406e?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>Walker NPC 模板</p>
+<p>掌握 Walker NPC 基础后，就可以进一步探索模板了：从训练室走进恐怖与动作主题的玩法示例。通过这些示例，学习可以用第一人称或第三人称镜头打造的关卡设计场景，把这种新敌人类与武器的效果发挥到极致。</p>
+<p>本系列指南针对行尸的特点讲解了具体技巧：</p>
+<ul>
+<li><a href="https://dev.epicgames.com/documentation/fortnite/the-walking-dead-universe-weapons-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">行尸走肉宇宙武器：学习把 Lucille（露西尔球棒）与 Shiva Shotgun（湿婆霰弹枪）英雄武器融入玩法。</a></li>
+<li><a href="https://dev.epicgames.com/documentation/fortnite/the-walking-dead-universe-level-design-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">行尸走肉宇宙关卡设计：了解行尸属性，学习通过关卡设计场景在岛屿中布置 NPC 的最佳实践。</a></li>
+<li><a href="https://dev.epicgames.com/documentation/fortnite/the-walking-dead-universe-cameras-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">行尸走肉宇宙镜头：设置镜头，为你的行尸走肉宇宙岛屿营造恐怖与动作氛围。</a></li>
+<li><a href="https://dev.epicgames.com/documentation/fortnite/twdu-custom-hud-vitals-and-selected-item-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">TWDU 自定义 HUD：生命与选中物品：学习用 Walker NPC 模板中的即插即用配置，为 TWDU 岛屿添加显示玩家生命与选中物品的自定义 UI。</a></li>
+<li><a href="https://dev.epicgames.com/documentation/fortnite/twdu-heavy-linework-post-process-effect-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">Heavy Linework 后期处理效果：用 Heavy Linework 后期处理效果为行尸走肉宇宙岛屿增添漫画质感。</a></li>
+<li><a href="https://dev.epicgames.com/community/search?query=gameplay" target="_blank" rel="noopener">gameplay</a></li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/f01d1f08-c94b-451f-8afb-bae03b005fd2?resizing_type=fit&width=640&height=640" alt="行尸走肉宇宙武器的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/f01d1f08-c94b-451f-8afb-bae03b005fd2?resizing_type=fit&width=640&height=640" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/01e15228-92e3-4426-ba8d-7d71836ad313?resizing_type=fit&width=640&height=640" alt="行尸走肉宇宙关卡设计的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/01e15228-92e3-4426-ba8d-7d71836ad313?resizing_type=fit&width=640&height=640" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/8de9b9e7-c7c5-4bfd-b7ce-a1679bc13ffe?resizing_type=fit&width=640&height=640" alt="行尸走肉宇宙镜头的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/8de9b9e7-c7c5-4bfd-b7ce-a1679bc13ffe?resizing_type=fit&width=640&height=640" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/f8aeb333-78e4-4e96-951a-52208863a1ad?resizing_type=fit&width=640&height=640" alt="TWDU 自定义 HUD：生命与选中物品的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/f8aeb333-78e4-4e96-951a-52208863a1ad?resizing_type=fit&width=640&height=640" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/d657d067-52bf-445c-a413-bb8851e768ad?resizing_type=fit&width=640&height=640" alt="Heavy Linework 后期处理效果的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/d657d067-52bf-445c-a413-bb8851e768ad?resizing_type=fit&width=640&height=640" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p><a href="https://forums.unrealengine.com/categories?tag=fortnite" target="_blank" rel="noopener">在开发者论坛提问并帮助同伴</a></p>
+<p><a href="https://dev.epicgames.com/community/fortnite/learning" target="_blank" rel="noopener">在学习库中编写或阅读他人教程</a></p>
+<div class="pager"><a href="15-the-walking-dead-universe-islands-in-unreal-editor-for-fortnite.html"><small>← 返回父教程</small>行尸走肉宇宙岛屿</a><a href="sub-index.html"><small>子教程索引 →</small>全部子教程</a></div>
+</article><nav class="doc-toc" aria-label="本页内容"><b>本页内容</b><a href="#sec-1">上手</a><a href="#sec-2">行尸设置</a><a href="#sec-3">继续学习</a></nav></div>
+</div></div>
+</div>
+<footer class="edc-footer"><div class="inner"><img src="../assets/logo-epic.svg" alt="Epic Games"><span>Fortnite 文档中文镜像 · UE教程/ · 本地打开 index.html 阅读 · 翻译整理自 Epic 官方文档，仅供学习交流</span></div></footer>
+</body>
+</html>

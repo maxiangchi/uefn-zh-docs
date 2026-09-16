@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Verse 代码基础 8：输入参数与实参 | Fortnite 文档中文镜像</title>
+<link rel="stylesheet" href="../assets/epic.css">
+<link rel="stylesheet" href="../assets/patch.css">
+<link rel="icon" href="../assets/logo-epic.svg">
+</head>
+<body class="theme-fortnite">
+<div class="edc-topbar"><div class="edc-topbar-inner"><img class="edc-logo" src="../assets/logo-epic.svg" alt="Epic Games"><span class="edc-brand">Epic Games <b>开发者社区</b></span><span class="edc-nav"><a href="../index.html">文档首页</a><a href="sub-index.html">子教程索引</a><a href="https://dev.epicgames.com/documentation/fortnite/basics-of-writing-code-8-how-input-parameters-and-arguments-work-in-verse" target="_blank" rel="noopener">英文原文</a></span></div></div>
+<div class="site-container">
+<aside class="site-nav"><div class="documents-tree"><nav><ul class="contents-table">
+<div class="tree-sec">A 最新动态(01-08)</div><a class="tree-link" href="01-42-00-fortnite-ecosystem-updates-and-release-notes.html">01. 42.00 生态系统更新与发行说明</a><a class="tree-link" href="02-custom-items-and-inventory-overview-in-fortnite.html">02. 自定义物品与背包总览</a><a class="tree-link" href="03-in-island-transactions-in-fortnite.html">03. 岛内交易</a><a class="tree-link" href="04-mobile-development-in-fortnite.html">04. 移动端开发</a><a class="tree-link" href="05-inputs-in-fortnite.html">05. 输入系统</a><a class="tree-link" href="06-ability-system-in-unreal-editor-for-fortnite.html">06. 能力系统 Ability System</a><a class="tree-link" href="07-partybased-gameplay-using-the-social-synergy-api-in-fortnite.html">07. 社交协同 API 与小队玩法</a><a class="tree-link" href="08-scene-graph-in-unreal-editor-for-fortnite.html">08. 场景图 Scene Graph</a><div class="tree-sec">B 入门(09-11)</div><a class="tree-link" href="09-build-your-first-island-in-fortnite.html">09. 构建你的第一个岛屿</a><a class="tree-link" href="10-onboarding-guide-to-programming-with-verse-in-unreal-editor-for-fortnite.html">10. Verse 编程入门指南</a><a class="tree-link" href="11-building-basics-in-fortnite-creative.html">11. 建造基础</a><div class="tree-sec">C 品牌合集(12-17)</div><a class="tree-link" href="12-star-wars-islands-in-fortnite.html">12. 星球大战™岛屿</a><a class="tree-link" href="13-kpop-demon-hunters-islands-in-fortnite.html">13. KPop 猎魔团岛屿</a><a class="tree-link" href="14-building-lego-islands-in-fortnite.html">14. 乐高®岛屿</a><a class="tree-link" href="15-the-walking-dead-universe-islands-in-unreal-editor-for-fortnite.html">15. 行尸走肉宇宙岛屿</a><a class="tree-link" href="16-teenage-mutant-ninja-turtle-islands-in-unreal-editor-for-fortnite.html">16. 忍者神龟岛屿</a><a class="tree-link" href="17-squid-game-islands-in-fortnite.html">17. 鱿鱼游戏岛屿</a><div class="tree-sec">D 开发者成功(18-19)</div><a class="tree-link" href="18-using-creator-portal-in-fortnite-creative.html">18. 使用创作者门户</a><a class="tree-link" href="19-island-moderation-and-guidelines-in-fortnite-creative.html">19. 岛屿审核与准则</a><div class="tree-sec">E 协作(20-26)</div><a class="tree-link" href="20-creating-teams-in-creator-portal-in-unreal-editor-for-fortnite.html">20. 在创作者门户创建团队</a><a class="tree-link" href="21-adding-playtesters-in-fortnite-creative.html">21. 添加试玩测试员</a><a class="tree-link" href="22-playtesting-your-island-in-unreal-editor-for-fortnite.html">22. 试玩测试你的岛屿</a><a class="tree-link" href="23-collaborating-in-unreal-editor-for-fortnite.html">23. 在 UEFN 中协作</a><a class="tree-link" href="24-lore-version-control-in-unreal-editor-for-fortnite.html">24. Lore 版本控制</a><a class="tree-link" href="25-conflicts-in-lore-version-control-in-unreal-editor-for-fortnite.html">25. Lore 中的冲突</a><a class="tree-link" href="26-version-history-and-conflict-resolution-in-unreal-editor-for-fortnite.html">26. 分支历史与冲突解决</a><div class="tree-sec">F 游戏示例(27-28)</div><a class="tree-link" href="27-build-a-game-in-unreal-editor-for-fortnite.html">27. 构建一款游戏</a><a class="tree-link" href="28-unreal-editor-for-fortnite-starter-templates.html">28. UEFN 新手模板</a><div class="tree-sec">G Verse(29)</div><a class="tree-link active" href="29-learn-the-basics-of-writing-code-in-verse.html">29. 从零学习 Verse 代码基础</a><div class="tree-sec">H 专注领域(30-36)</div><a class="tree-link" href="30-lighting-in-unreal-editor-for-fortnite.html">30. 灯光</a><a class="tree-link" href="31-animation-and-cinematics-in-unreal-editor-for-fortnite.html">31. 动画与过场动画</a><a class="tree-link" href="32-modeling-in-unreal-editor-for-fortnite.html">32. 建模</a><a class="tree-link" href="33-materials-in-unreal-editor-for-fortnite.html">33. 材质</a><a class="tree-link" href="34-environments-and-landscapes-in-unreal-editor-for-fortnite.html">34. 环境与地形</a><a class="tree-link" href="35-audio-in-unreal-editor-for-fortnite.html">35. 音频</a><a class="tree-link" href="36-visual-effects-in-unreal-editor-for-fortnite.html">36. 视觉特效</a>
+</ul></nav></div></aside>
+<div class="page-content"><div class="page-document has-theme-bg">
+<header class="section-page-header"><nav><ol class="breadcrumb is-shrinkable"><li class="breadcrumb-item is-root"><img src="../assets/logo-epic.svg" alt="Epic Games"><a href="../index.html">Developer</a></li><li class="breadcrumb-item"><a href="../index.html">Fortnite 文档</a></li><li class="breadcrumb-item"><a href="29-learn-the-basics-of-writing-code-in-verse.html">从零学习 Verse 代码基础</a></li><li class="breadcrumb-item active" aria-current="page"><span class="text-truncate">Verse 代码基础 8：输入参数与实参</span></li></ol></nav><h1>Verse 代码基础 8：输入参数与实参</h1><p class="text-secondary mb-0">输入（Input）是添加到程序中、供代码使用并产生变化的信息。本课学习形参（Parameter）与实参（Argument）：如何在函数签名中声明输入，以及调用函数时如何传值。</p><p class="doc-meta">英文原标题：Basics of Writing Code 8: How Input Parameters and Arguments Work in Verse · <a href="https://dev.epicgames.com/documentation/fortnite/basics-of-writing-code-8-how-input-parameters-and-arguments-work-in-verse" target="_blank" rel="noopener">查看英文原文</a> · 社区翻译镜像，仅供学习</p></header>
+<div class="doc-columns"><article class="doc-article">
+<div class="block-callout">注：前置知识——要理解和使用本页内容，请先熟悉以下主题：<a href="basics-of-writing-code-7-specifying-the-result-of-a-function-in-verse.html">第 7 课：指定函数的结果（Specifying the Result of a Function）</a>。</div>
+<p><strong>输入（Input）</strong>是添加到程序中、供代码使用并产生变化的信息。</p>
+<p>上一课中的函数示例不需要任何输入：</p>
+<pre><code>GetNumberOfMousetrapsYouCanAfford() : int</code></pre>
+<p>你之所以知道它不需要输入，是因为上面函数签名中的<strong>圆括号</strong> <code>()</code> 是空的。</p>
+<h2 id="sec-1">形参（Parameters）</h2>
+<p>你可以通过向函数签名添加<strong>形参（Parameter）</strong>，来定义函数需要的<strong>输入（Input）</strong>。</p>
+<p><strong>形参是在函数签名中、圆括号之间声明的常量</strong>。设置形参后，你就可以在函数的<strong>函数体（Body）</strong>中使用它。</p>
+<p>带形参的函数语法如下所示：</p>
+<pre><code>name(parameter : type) : type = codeblock</code></pre>
+<p>在下面的示例中，<code>CoinsPerMousetrap</code> 现在成了函数 <code>BuyMousetrap()</code> 的一个形参：</p>
+<pre><code>var Coins : int = 500
+BuyMousetrap(CoinsPerMousetrap : int) : void =
+    set Coins = Coins - CoinsPerMousetrap
+    Print("Mousetrap bought! You have {Coins} coins left.")</code></pre>
+<p>这段代码的意思是：</p>
+<ul>
+<li>你有一个名为 <code>Coins</code> 的变量，初始整数值为 500：<code>var Coins : int = 500</code>。</li>
+<li>名为 <code>BuyMousetrap()</code> 的函数接受一个形参 <code>CoinsPerMousetrap</code>。你不希望这个函数返回值，所以返回类型为 <code>void</code>。</li>
+</ul>
+<h2 id="sec-2">实参（Arguments）</h2>
+<p>当你调用一个带有形参的函数时，必须为形参赋值，就像为常量赋值一样。</p>
+<p>这些赋给函数的取值称为函数的<strong>实参（Arguments）</strong>。</p>
+<p>要调用 <code>BuyMousetrap()</code> 函数，需要在圆括号内填入实参。有几种不同的写法。</p>
+<p>例如：</p>
+<ul>
+<li>你可以写 <code>BuyMousetrap(CoinsPerMousetrap := 10)</code>，这种写法模仿了定义函数形参的方式。其中的 10 就是传给函数的实参，它会改变运算结果的取值。</li>
+<li>还记得第 2 课和第 3 课中的字面量（Literal）吗？你也可以直接使用与形参类型相同的<strong>字面量取值</strong>。</li>
+<li>第三种方式是使用之前声明过的变量或常量作为实参。你可以用不同的实参取值调用同一个函数，得到不同的结果。</li>
+</ul>
+<pre><code>var Coins : int = 500
+# 这次调用之后，Coins 变为 490
+BuyMousetrap(CoinsPerMousetrap := 10)
+# 这次调用之后，Coins 变为 485
+BuyMousetrap(5)
+CoinsPerMouseTrap : int = 20
+# 这次调用之后，Coins 变为 465
+BuyMousetrap(CoinsPerMousetrap)</code></pre>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/eae9e558-b370-4dc8-ba2e-0898d5039665?resizing_type=fit" alt="在 Verse 编辑器中以不同实参调用 BuyMousetrap 函数的示例代码截图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/eae9e558-b370-4dc8-ba2e-0898d5039665?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h2 id="sec-3">多个形参（Multiple Parameters）</h2>
+<p>只要用逗号分隔形参，你想为函数定义多少个形参都可以。</p>
+<p>带两个形参的函数语法如下所示：</p>
+<pre><code>name(parameter : type, parameter : type) : type = codeblock</code></pre>
+<p>调用该函数时，同样需要用逗号分隔实参，这种写法模仿了你定义函数形参的方式。</p>
+<h2 id="sec-4">小结（Summary）</h2>
+<ul>
+<li><strong>形参（Parameter）</strong>是在函数签名中声明的常量，写在圆括号内。</li>
+<li><strong>实参（Argument）</strong>是赋给函数形参所用常量的取值。</li>
+<li>同一个函数中的<strong>多个形参之间必须用逗号分隔</strong>。</li>
+</ul>
+<h2 id="sec-5">练习时间！（Practice Time!）</h2>
+<ul>
+<li><a href="basics-of-writing-code-8-practice-time-in-verse.html">第 8 课：练习时间！练习为函数设置形参与实参。</a></li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/8e575311-aff8-46f3-8fc3-ed3ee354236e?resizing_type=fit&width=640&height=640" alt="第 8 课练习时间示意" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/8e575311-aff8-46f3-8fc3-ed3ee354236e?resizing_type=fit&width=640&height=640" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>标签：<a href="https://dev.epicgames.com/community/search?query=verse" target="_blank" rel="noopener">verse</a> · <a href="https://dev.epicgames.com/community/search?query=input" target="_blank" rel="noopener">input</a> · <a href="https://dev.epicgames.com/community/search?query=program" target="_blank" rel="noopener">program</a> · <a href="https://dev.epicgames.com/community/search?query=parameters" target="_blank" rel="noopener">parameters</a> · <a href="https://dev.epicgames.com/community/search?query=arguments" target="_blank" rel="noopener">arguments</a></p>
+<p>欢迎在<a href="https://forums.unrealengine.com/categories?tag=fortnite" target="_blank" rel="noopener">开发者论坛（Developer Forums）</a>提问并帮助同行，或在<a href="https://dev.epicgames.com/community/fortnite/learning" target="_blank" rel="noopener">学习库（Learning Library）</a>撰写、阅读教程。</p>
+<div class="pager"><a href="29-learn-the-basics-of-writing-code-in-verse.html"><small>← 返回父教程</small>从零学习 Verse 代码基础</a><a href="sub-index.html"><small>子教程索引 →</small>全部子教程</a></div>
+</article><nav class="doc-toc" aria-label="本页内容"><b>本页内容</b><a href="#sec-1">形参</a><a href="#sec-2">实参</a><a href="#sec-3">多个形参</a><a href="#sec-4">小结</a><a href="#sec-5">练习时间！</a></nav></div>
+</div></div>
+</div>
+<footer class="edc-footer"><div class="inner"><img src="../assets/logo-epic.svg" alt="Epic Games"><span>Fortnite 文档中文镜像 · UE教程/ · 本地打开 index.html 阅读 · 翻译整理自 Epic 官方文档，仅供学习交流</span></div></footer>
+</body>
+</html>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>星战光剑与原力（Lightsabers and Force Powers） | Fortnite 文档中文镜像</title>
+<link rel="stylesheet" href="../assets/epic.css">
+<link rel="stylesheet" href="../assets/patch.css">
+<link rel="icon" href="../assets/logo-epic.svg">
+</head>
+<body class="theme-fortnite">
+<div class="edc-topbar"><div class="edc-topbar-inner"><img class="edc-logo" src="../assets/logo-epic.svg" alt="Epic Games"><span class="edc-brand">Epic Games <b>开发者社区</b></span><span class="edc-nav"><a href="../index.html">文档首页</a><a href="sub-index.html">子教程索引</a><a href="https://dev.epicgames.com/documentation/fortnite/star-wars-lightsabers-and-force-powers-in-fortnite" target="_blank" rel="noopener">英文原文</a></span></div></div>
+<div class="site-container">
+<aside class="site-nav"><div class="documents-tree"><nav><ul class="contents-table">
+<div class="tree-sec">A · 最新动态</div>
+<a class="tree-link" href="01-42-00-fortnite-ecosystem-updates-and-release-notes.html">01. 42.00 生态系统更新与发行说明</a>
+<a class="tree-link" href="02-custom-items-and-inventory-overview-in-fortnite.html">02. 自定义物品与背包总览</a>
+<a class="tree-link" href="03-in-island-transactions-in-fortnite.html">03. 岛内交易</a>
+<a class="tree-link" href="04-mobile-development-in-fortnite.html">04. 移动端开发</a>
+<a class="tree-link" href="05-inputs-in-fortnite.html">05. 输入系统</a>
+<a class="tree-link" href="06-ability-system-in-unreal-editor-for-fortnite.html">06. 能力系统 Ability System</a>
+<a class="tree-link" href="07-partybased-gameplay-using-the-social-synergy-api-in-fortnite.html">07. 社交协同 API 与小队玩法</a>
+<a class="tree-link" href="08-scene-graph-in-unreal-editor-for-fortnite.html">08. 场景图 Scene Graph</a>
+<div class="tree-sec">B · 入门</div>
+<a class="tree-link" href="09-build-your-first-island-in-fortnite.html">09. 构建你的第一个岛屿</a>
+<a class="tree-link" href="10-onboarding-guide-to-programming-with-verse-in-unreal-editor-for-fortnite.html">10. Verse 编程入门指南</a>
+<a class="tree-link" href="11-building-basics-in-fortnite-creative.html">11. 建造基础</a>
+<div class="tree-sec">C · 品牌合集</div>
+<a class="tree-link active" href="12-star-wars-islands-in-fortnite.html">12. 星球大战™岛屿</a>
+<a class="tree-link" href="13-kpop-demon-hunters-islands-in-fortnite.html">13. KPop 猎魔团岛屿</a>
+<a class="tree-link" href="14-building-lego-islands-in-fortnite.html">14. 乐高®岛屿</a>
+<a class="tree-link" href="15-the-walking-dead-universe-islands-in-unreal-editor-for-fortnite.html">15. 行尸走肉宇宙岛屿</a>
+<a class="tree-link" href="16-teenage-mutant-ninja-turtle-islands-in-unreal-editor-for-fortnite.html">16. 忍者神龟岛屿</a>
+<a class="tree-link" href="17-squid-game-islands-in-fortnite.html">17. 鱿鱼游戏岛屿</a>
+<div class="tree-sec">D · 开发者成功</div>
+<a class="tree-link" href="18-using-creator-portal-in-fortnite-creative.html">18. 使用创作者门户</a>
+<a class="tree-link" href="19-island-moderation-and-guidelines-in-fortnite-creative.html">19. 岛屿审核与准则</a>
+<div class="tree-sec">E · 协作</div>
+<a class="tree-link" href="20-creating-teams-in-creator-portal-in-unreal-editor-for-fortnite.html">20. 在创作者门户创建团队</a>
+<a class="tree-link" href="21-adding-playtesters-in-fortnite-creative.html">21. 添加试玩测试员</a>
+<a class="tree-link" href="22-playtesting-your-island-in-unreal-editor-for-fortnite.html">22. 试玩测试你的岛屿</a>
+<a class="tree-link" href="23-collaborating-in-unreal-editor-for-fortnite.html">23. 在 UEFN 中协作</a>
+<a class="tree-link" href="24-lore-version-control-in-unreal-editor-for-fortnite.html">24. Lore 版本控制</a>
+<a class="tree-link" href="25-conflicts-in-lore-version-control-in-unreal-editor-for-fortnite.html">25. Lore 中的冲突</a>
+<a class="tree-link" href="26-version-history-and-conflict-resolution-in-unreal-editor-for-fortnite.html">26. 分支历史与冲突解决</a>
+<div class="tree-sec">F · 游戏示例</div>
+<a class="tree-link" href="27-build-a-game-in-unreal-editor-for-fortnite.html">27. 构建一款游戏</a>
+<a class="tree-link" href="28-unreal-editor-for-fortnite-starter-templates.html">28. UEFN 新手模板</a>
+<div class="tree-sec">G · Verse</div>
+<a class="tree-link" href="29-learn-the-basics-of-writing-code-in-verse.html">29. 从零学习 Verse 代码基础</a>
+<div class="tree-sec">H · 专注领域</div>
+<a class="tree-link" href="30-lighting-in-unreal-editor-for-fortnite.html">30. 灯光</a>
+<a class="tree-link" href="31-animation-and-cinematics-in-unreal-editor-for-fortnite.html">31. 动画与过场动画</a>
+<a class="tree-link" href="32-modeling-in-unreal-editor-for-fortnite.html">32. 建模</a>
+<a class="tree-link" href="33-materials-in-unreal-editor-for-fortnite.html">33. 材质</a>
+<a class="tree-link" href="34-environments-and-landscapes-in-unreal-editor-for-fortnite.html">34. 环境与地形</a>
+<a class="tree-link" href="35-audio-in-unreal-editor-for-fortnite.html">35. 音频</a>
+<a class="tree-link" href="36-visual-effects-in-unreal-editor-for-fortnite.html">36. 视觉特效</a>
+</ul></nav></div></aside>
+<div class="page-content"><div class="page-document has-theme-bg">
+<header class="section-page-header"><nav><ol class="breadcrumb is-shrinkable"><li class="breadcrumb-item is-root"><img src="../assets/logo-epic.svg" alt="Epic Games"><a href="../index.html">Developer</a></li><li class="breadcrumb-item"><a href="../index.html">Fortnite 文档</a></li><li class="breadcrumb-item"><a href="12-star-wars-islands-in-fortnite.html">星球大战™岛屿</a></li><li class="breadcrumb-item active" aria-current="page"><span class="text-truncate">星战光剑与原力（Lightsabers and Force Powers）</span></li></ol></nav><h1>星战光剑与原力（Lightsabers and Force Powers）</h1><p class="text-secondary mb-0">用 Scene Graph 与 Verse 创建自定义光剑、添加原力技能：认识光剑实体与原力实体，用光剑工作台在游戏中打造专属光剑，再到试炼场测试。</p><p class="doc-meta">英文原标题：Star Wars Lightsabers and Force Powers in Fortnite · <a href="https://dev.epicgames.com/documentation/fortnite/star-wars-lightsabers-and-force-powers-in-fortnite" target="_blank" rel="noopener">查看英文原文</a> · 社区翻译镜像，仅供学习</p></header>
+<div class="doc-columns"><article class="doc-article">
+<div class="block-callout">注：这是一项 Beta 功能，欢迎学习使用，但在正式发布作品时请谨慎使用。</div>
+<p><strong>光剑与原力（Lightsabers and Force Powers）</strong>模板提供了一套完整教程，教你用 <a href="08-scene-graph-in-unreal-editor-for-fortnite.html">Scene Graph</a> 与 <a href="https://dev.epicgames.com/documentation/fortnite/verse-language-book-of-verse-reference" target="_blank" rel="noopener">Verse</a> 创建自定义光剑、添加原力（Force）技能。</p>
+<p>理解概念并做出自己的武器与技能后，可以前往训练场快速测试、迭代你的作品，真正与原力融为一体！</p>
+<p>访问该模板：</p>
+<ul>
+<li>打开 UEFN；</li>
+<li>前往<strong>品牌模板（Brand Templates）</strong> &gt; <strong>Lightsabers and Force Powers</strong>。
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/471deb3d-507f-4993-b219-ef4f383e172d?resizing_type=fit" alt="品牌模板中光剑与原力模板的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/471deb3d-507f-4993-b219-ef4f383e172d?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></li>
+<li>创建新项目。</li>
+</ul>
+<p>UEFN 中的光剑与原力模板手把手教你创建与自定义<strong><em>星球大战™（Star Wars™）</em></strong>宇宙最具代表性的元素——光剑与原力！</p>
+<p>模板分为 <strong>工坊（workshop）</strong>与<strong>试炼场（testing grounds）</strong>两部分。</p>
+<p>在工坊中，你可以学习全部新特性：用 Scene Graph 与 Verse 创建自定义光剑与原力、给玩家光剑增配原力、把原力做成可加入<em>星战</em>体验的物品。模板还有一台完全用 Verse 打造的光剑工作台，玩家可以在游戏中用它创建自定义光剑！</p>
+<p>在试炼场，你可以试用 <strong>Heal（治疗）</strong>与 <strong>Throw（投掷）</strong>等原力，看它们如何与环境互动。</p>
+<p>用 Scene Graph 与 Verse 创建的自定义光剑与原力武器组件，与标准物品生成器（Item Spawner）设备不兼容。要在物品生成器设备中使用自定义光剑与原力武器组件，必须创建 Verse 设备。</p>
+<h2 id="sec-1">Fortnite 中的光剑（Lightsabers in Fortnite）</h2>
+<p>以前，光剑只是大逃杀中玩家的<a href="https://dev.epicgames.com/documentation/fortnite/fortnite-glossary#item" target="_blank" rel="noopener">物品（items）</a>。现在，玩家可用过的所有光剑都已作为<em>星战</em>特性集中的物品提供，你还可以在 Scene Graph 与 Verse 中把光剑创建为完全自定义的实体。</p>
+<p>自定义光剑适用于多种场景：给玩家彰显个性以增强角色扮演体验、按队伍配色用于团队竞技，或做成武器成长系统——特效更华丽，还附带更强的原力。</p>
+<p>在模板中，步骤 <strong>1–1.5</strong> 带你走完制作光剑的全过程，并演示如何用 Verse 按下按钮即生成自定义光剑！</p>
+<p>Scene Graph 中创建的光剑实体在视口中不可见，但可通过大纲视图选中。未装备的光剑实体在游玩中显示为光剑剑柄。</p>
+<h3>光剑实体（The Lightsaber Entity）</h3>
+<p>光剑<a href="https://dev.epicgames.com/documentation/fortnite/fortnite-glossary#entity" target="_blank" rel="noopener">实体（entity）</a>有两个关联<a href="https://dev.epicgames.com/documentation/fortnite/fortnite-glossary#component" target="_blank" rel="noopener">组件（components）</a>：<code>lightsaber_item_component</code> 与 <code>kyber_crystal_[color]_component</code>（如 <code>kyber_crystal_yellow_component</code>）。</p>
+<p><code>lightsaber_item_component</code> 定义光剑剑柄的外观。</p>
+<p><code>kyber_crystal_[color]_component</code> 定义剑刃颜色、剑刃稳定性，以及剑刃上能量弧的强度。</p>
+<p>按以下步骤把光剑实体加入游戏：</p>
+<ul>
+<li>用工具栏添加空白实体：<strong>Place Actors</strong> &gt; <strong>Entities</strong> &gt; <strong>entity</strong>；</li>
+<li>在大纲视图中右键空白实体，把光剑实体加为其子级。光剑实体决定光剑外观。
+<p>光剑实体还自带默认 <code>kyber_crystal_[color]_component</code>，剑刃颜色与传说中的武器一致，如 <strong>LightsaberRen</strong> 对应<strong>红色（red）</strong>。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/a1ea005d-835c-4a04-9239-1ff7fa56abb6?resizing_type=fit" alt="光剑实体的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/a1ea005d-835c-4a04-9239-1ff7fa56abb6?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></li>
+<li>不喜欢光剑默认颜色？可以移除现有的 <code>kyber_crystal_[color]_component</code> 换成你喜欢的颜色。用该组件的<strong>稳定性（stability）</strong>与<strong>强度（intensity）</strong>调整剑刃电弧。</li>
+</ul>
+<p>基础光剑实体建好后，还可以通过 <code>kyber_crystal_[color]_component</code> 中的两个浮点值进一步自定义：<strong>电弧强度（Arc Intensity）</strong>与<strong>稳定性（Stability）</strong>。</p>
+<ul>
+<li>两个值范围均为 <strong>0 - 1</strong>；</li>
+<li>两个变量都在 <strong>1</strong> 时效果最强：电弧 VFX 强度最大、剑刃最稳定。</li>
+</ul>
+<p>关于光剑实体及其组件的更多信息，请参阅<a href="https://dev.epicgames.com/documentation/fortnite/star-wars-lightsaber-components-reference-in-fortnite" target="_blank" rel="noopener">光剑组件参考（Lightsaber Components Reference）</a>。</p>
+<h3>用 Verse 自定义光剑（Customizing Lightsabers Using Verse）</h3>
+<p>以下是模板中的光剑生成器设备示例：接收若干可编辑参数，玩家按下指定按钮即发放指定光剑。</p>
+<pre><code>using { /Fortnite.com/Devices }
+using { /Fortnite.com/Items/Lightsaber/StarWars }
+using { /Fortnite.com/StarWars }
+using { /Verse.org/SceneGraph }
+using { /Verse.org/Simulation }
+using { /UnrealEngine.com/Itemization }
+using { /UnrealEngine.com/Temporary/Diagnostics }
+using { /Fortnite.com/UI }
+using { /UnrealEngine.com/Temporary/UI }
+using { /Fortnite.com/Items/ForcePower/StarWars }</code></pre>
+<h2 id="sec-2">光剑工作台（The Lightsaber Workbench）</h2>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/c602f798-1431-41b2-88fb-2813c8bad4b7?resizing_type=fit" alt="光剑工作台的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/c602f798-1431-41b2-88fb-2813c8bad4b7?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>玩家可以用光剑工作台（Lightsaber Workbench）在游戏中打造自定义光剑并挂载原力。全部 Verse 代码都在模板中开放，可用于你自己的项目。搞懂原理后，不妨扩展工作台，让它真正属于你。</p>
+<p>工作台功能扩展思路：</p>
+<ul>
+<li>一键随机生成光剑：随机电弧与稳定性，并挂载随机原力；</li>
+<li>给玩家做个小测试或性格问卷，按结果决定光剑颜色甚至整体搭配！</li>
+<li>开个商店：让玩家用游戏内货币解锁新自定义选项，做出 Roguelike 那味儿！</li>
+</ul>
+<p>光剑工作台用 <a href="https://dev.epicgames.com/documentation/unreal-engine/module-4-build-a-hud-with-unreal-motion-graphics?application_version=5.5" target="_blank" rel="noopener">Unreal Motion Graphics (UMG)</a> 打造，玩家交互与实时视觉更新用 Verse 字段处理。Verse 管理自定义流程状态，按所选部件动态组装最终光剑。</p>
+<p>工作台用到以下设备，可在<a href="https://dev.epicgames.com/documentation/fortnite/verse-explorer-user-interface-reference-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">Verse Explorer</a> 中找到：</p>
+<ul>
+<li><code>menu_lightsaber_customization_device</code>——设备内分三部分：
+<ul>
+<li>处理触发器与镜头/HUD 接管、按玩家选择更新物品栏的设备；</li>
+<li>跟踪各玩家 UI 状态、处理选项卡导航与滑杆/网格输入的会话管理器；</li>
+<li>用 <a href="https://dev.epicgames.com/documentation/fortnite/creating-ui-with-verse-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">Verse UI</a> 动态构建网格、按钮与滑杆页面的 UI 助手。</li>
+</ul></li>
+<li><code>ui_config</code>——处理 UI 配置与布局，把物品与其 ID 及相关文本关联起来，还负责给玩家发放光剑并挂载指定原力；</li>
+<li><code>lightsaber_arcing_changer_device</code>——修改已装备光剑的电弧值；</li>
+<li><code>lightsaber_stability_changer_device</code>——修改已装备光剑的稳定性值；</li>
+<li><code>lightsaber_color_changer_device</code>——修改 <code>kyber_crystal_[color]_component</code>。</li>
+</ul>
+<h3>迁移光剑工作台资产（Migrating the Lightsaber Workbench Assets）</h3>
+<p>可以用 UEFN 的 Migrate（迁移）工具把光剑工作台的核心功能从模板复制到已有<em>星战</em>项目，再重新连接设备。Migrate 工具会连带依赖一起复制资产。</p>
+<p>如果你有现成的岛屿很适合改成星战岛屿，可以用编辑器内流程转换。要了解更多，请参阅<a href="https://dev.epicgames.com/documentation/fortnite/converting-your-island-into-a-brand-island-in-fortnite" target="_blank" rel="noopener">把你的岛屿转换为品牌岛屿（Converting Your Island Into a Brand Island）</a>。</p>
+<p>迁移资产：</p>
+<ul>
+<li>在内容抽屉中找到你的项目文件夹，<strong>右键</strong> <strong>UI</strong> 文件夹；</li>
+<li>点击 <strong>Migrate</strong>；</li>
+<li><strong>资产报告（Asset Report）</strong>中保持全选，点击 <strong>OK</strong>；</li>
+<li>选择要搬到的项目位置，资产必须放在新位置的项目文件夹下。</li>
+</ul>
+<p>Verse 文件与 Migrate 工具不兼容，需手动复制到新项目。</p>
+<p>迁移 Verse 文件：</p>
+<ul>
+<li>在内容抽屉中找到你的项目文件夹，右键某个不含 Verse 文件的文件夹或物品；</li>
+<li>点击 <strong>Show in Explorer</strong>，打开文件资源管理器窗口；</li>
+<li>在文件资源管理器窗口中找到 content 文件夹；</li>
+<li><strong>Ctrl + 点击</strong>选中以下内容：
+<ul>
+<li>LightsaberWorkbenchCore——内含 <code>items_utils.verse</code>；</li>
+<li><code>menu_lightsaber_customization_device.verse</code>；</li>
+<li><code>ui_config.verse</code>；</li>
+</ul></li>
+<li>复制这些内容，粘贴到目标项目的 content 文件夹。</li>
+</ul>
+<p>在新项目中使用光剑工作台：</p>
+<ul>
+<li>把 <code>menu_lightsaber_customization</code> 设备拖入场景；</li>
+<li>在场景中加一个触发器设备，玩家踩上去即打开光剑工作台菜单；</li>
+<li>在 <code>menu_lightsaber_customization</code> 设备的细节面板，把 <strong>ShowTrigger</strong> 设为刚加的触发器设备；</li>
+<li>在场景中加一个 <strong>HUD 控制器（HUD Controller）</strong>设备，把 <strong>Show HUD</strong> 设为 <strong>OFF</strong>；</li>
+<li>在 <code>menu_lightsaber_customization</code> 设备的<strong>细节</strong>面板，把 <strong>HUDController</strong> 设为刚加的 HUD 控制器设备；</li>
+<li>在场景中加一个<strong>固定角度镜头（Fixed Angle Camera）</strong>设备；</li>
+<li>在 <code>menu_lightsaber_customization</code> 设备的细节面板，把 <strong>FixedAngleCamera</strong> 设为刚加的固定角度镜头设备。</li>
+</ul>
+<p>光剑工作台需要物品化（Itemization）。请在<strong>项目设置（Project Settings）</strong>中开启 <strong>Custom Items and Inventory</strong> 设置以启用物品化。</p>
+<h2 id="sec-3">原力（Force Powers）</h2>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/7d890e30-72b7-4dc3-945d-d74eb3f6f19c?resizing_type=fit" alt="原力技能的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/7d890e30-72b7-4dc3-945d-d74eb3f6f19c?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>以前原力绑定在标志性武器上，如达斯·维达的光剑。现在你可以在 Scene Graph 中创建并自定义原力，也可以用 Verse 自定义。</p>
+<p>所有原力实体有两种主要形态：</p>
+<ul>
+<li><strong>原力武器实体类型</strong>——在游戏中显示为 Holocron（霍洛克朗/全息记录仪）拾取物，玩家可加入<a href="https://dev.epicgames.com/documentation/fortnite/fortnite-glossary#quick-bar" target="_blank" rel="noopener">快捷栏（quick bar）</a>；</li>
+<li><strong>光剑增配实体类型</strong>——仅在装备光剑并发放到玩家物品栏后可用，只能通过 Verse 配置。</li>
+</ul>
+<p>建议一次只装备一个原力增配，避免意外行为。</p>
+<h3>作为物品的原力（Force Powers as Items）</h3>
+<p>原力既可作为光剑的原力增配，也可作为无需光剑的独立物品。这些物品在游戏中显示为 Holocron，占一个快捷栏位。</p>
+<p>这些物品可以是你用 Verse 创建的自定义原力，也可以是提供的标准版本。与其他物品一样，标准原力物品也可加入物品授予器（Item Granter）等设备。</p>
+<p>要进一步了解向物品生成器设备注册物品，请参阅<a href="https://dev.epicgames.com/documentation/fortnite/using-item-granter-devices-in-fortnite-creative" target="_blank" rel="noopener">物品授予器设备（Item Granter Devices）</a>。</p>
+<h3>原力实体（The Force Power Entity）</h3>
+<p>按以下步骤把原力实体加入游戏：</p>
+<ul>
+<li>用工具栏添加空白实体：<strong>Place Actors &gt; Entities &gt; entity</strong>。
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/017ef246-8734-4c51-a429-6bfe36759267?resizing_type=fit" alt="添加空白实体的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/017ef246-8734-4c51-a429-6bfe36759267?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></li>
+<li>右键大纲视图中的空白实体，把原力实体组件加为其子级。
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/ce9cc34e-7cb8-4bf0-9288-e6970a55927a?resizing_type=fit" alt="添加原力实体组件的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/ce9cc34e-7cb8-4bf0-9288-e6970a55927a?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></li>
+</ul>
+<p>原力实体建好后，还可调整所有原力通用的属性来自定义，如 <strong>Cooldown（冷却）</strong>或 <strong>Stamina（耐力）</strong>，控制多久能再放、原力能持续多久。</p>
+<p>不同原力还有许多其他可调数值，例如原力能回多少血、能把东西推多远。</p>
+<p>也可以把原力增配加为光剑实体的子级，为光剑挂载原力。</p>
+<p>关于原力实体及其组件的更多信息，请参阅<a href="https://dev.epicgames.com/documentation/fortnite/star-wars-force-power-component-reference-in-fortnite" target="_blank" rel="noopener">原力组件参考（Force Power Component Reference）</a>。</p>
+<p>Scene Graph 中创建的原力实体在视口中不可见，但可通过大纲视图选中。原力武器实体在游玩中显示为 Holocron。</p>
+<h3>用 Verse 自定义原力（Customizing Force Powers Using Verse）</h3>
+<p>以下代码片段是原力生成器设备示例：玩家按下指定按钮即发放指定原力物品。你可以扩展该片段，发放自己定义的自定义原力物品。</p>
+<pre><code>using { /Fortnite.com/Devices }
+using { /Fortnite.com/StarWars }
+using { /Fortnite.com/Items/ForcePower/StarWars }
+using { /Verse.org/SceneGraph }
+using { /Verse.org/Simulation }
+using { /UnrealEngine.com/Itemization }
+using { /UnrealEngine.com/Temporary/Diagnostics }
+
+# 原力枚举
+# 引用特定物品实体的简写</code></pre>
+<h2 id="sec-4">试炼场（The Training Grounds）</h2>
+<p>试炼场备齐了所有原力物品，还有一台光剑工作台，玩家可以快速打造挂载原力的自定义光剑。</p>
+<p>试炼场中央还有<a href="getting-started-with-physics.html">启用物理（physics-enabled）</a>的物体，可以测试 <strong>Push（推）</strong>、<strong>Pull（拉）</strong>等技能。</p>
+<p>想看看自定义搭配在实战中的表现？按下战斗模拟按钮，生成一支风暴兵小队开打！</p>
+<p>光剑与原力组件参考：</p>
+<ul>
+<li><a href="https://dev.epicgames.com/documentation/fortnite/star-wars-lightsaber-components-reference-in-fortnite" target="_blank" rel="noopener">光剑组件参考（Lightsaber Components Reference）</a>；</li>
+<li><a href="https://dev.epicgames.com/documentation/fortnite/star-wars-force-power-component-reference-in-fortnite" target="_blank" rel="noopener">原力组件参考（Force Power Component Reference）</a>。</li>
+</ul>
+<p>想看看工具包里还有什么能帮你打造遥远的银河？其他模板：</p>
+<ul>
+<li><a href="star-wars-team-conquest-in-fortnite.html">团队征服（Team Conquest）</a>；</li>
+<li><a href="star-wars-narrative-and-roleplaying-in-fortnite.html">叙事与角色扮演（Narrative and Roleplaying）</a>。</li>
+</ul>
+<p>要纵览<em>星战</em>能带来的一切，请参阅<a href="working-with-star-wars-islands-in-fortnite.html">使用星球大战™岛屿（Working With STAR WARS™ Islands）</a>。</p>
+<p>相关文档</p>
+<ul>
+<li><a href="https://dev.epicgames.com/documentation/fortnite/star-wars-lightsaber-components-reference-in-fortnite" target="_blank" rel="noopener">光剑组件参考（Lightsaber Components Reference）</a>；</li>
+<li><a href="https://dev.epicgames.com/documentation/fortnite/star-wars-force-power-component-reference-in-fortnite" target="_blank" rel="noopener">原力组件参考（Force Power Component Reference）</a>；</li>
+<li><a href="https://dev.epicgames.com/documentation/fortnite/migrating-template-assets-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">迁移模板资产（Migrating Template Assets）</a>。</li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/da57f97d-18ca-45cb-82d6-058389d9c6f9?resizing_type=fit&width=160&height=92" alt="光剑组件参考的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/da57f97d-18ca-45cb-82d6-058389d9c6f9?resizing_type=fit&width=160&height=92" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/79657583-ce50-48a2-baea-4fd5da6c75c3?resizing_type=fit&width=160&height=92" alt="原力组件参考的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/79657583-ce50-48a2-baea-4fd5da6c75c3?resizing_type=fit&width=160&height=92" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/04073e3e-8ab9-489b-989c-3d3272bbaea0?resizing_type=fit&width=160&height=92" alt="迁移模板资产的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/04073e3e-8ab9-489b-989c-3d3272bbaea0?resizing_type=fit&width=160&height=92" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>相关标签：<a href="https://dev.epicgames.com/community/search?query=gameplay" target="_blank" rel="noopener">gameplay</a> · <a href="https://dev.epicgames.com/community/search?query=component" target="_blank" rel="noopener">component</a> · <a href="https://dev.epicgames.com/community/search?query=uefn" target="_blank" rel="noopener">uefn</a> · <a href="https://dev.epicgames.com/community/search?query=game%20design" target="_blank" rel="noopener">game design</a> · <a href="https://dev.epicgames.com/community/search?query=scene%20graph" target="_blank" rel="noopener">scene graph</a> · <a href="https://dev.epicgames.com/community/search?query=brand%20island" target="_blank" rel="noopener">brand island</a> · <a href="https://dev.epicgames.com/community/search?query=star%20wars%E2%84%A2" target="_blank" rel="noopener">star wars™</a> · <a href="https://dev.epicgames.com/community/search?query=lightsaber" target="_blank" rel="noopener">lightsaber</a> · <a href="https://dev.epicgames.com/community/search?query=lightsabers" target="_blank" rel="noopener">lightsabers</a> · <a href="https://dev.epicgames.com/community/search?query=the%20force" target="_blank" rel="noopener">the force</a> · <a href="https://dev.epicgames.com/community/search?query=force%20power" target="_blank" rel="noopener">force power</a> · <a href="https://dev.epicgames.com/community/search?query=force%20powers" target="_blank" rel="noopener">force powers</a> · <a href="https://dev.epicgames.com/community/search?query=entity" target="_blank" rel="noopener">entity</a></p>
+<p><a href="https://forums.unrealengine.com/categories?tag=fortnite" target="_blank" rel="noopener">在开发者论坛提问并帮助同伴</a></p>
+<p><a href="https://dev.epicgames.com/community/fortnite/learning" target="_blank" rel="noopener">在学习库中编写或阅读他人教程</a></p>
+<div class="pager"><a href="12-star-wars-islands-in-fortnite.html"><small>← 返回父教程</small>星球大战™岛屿</a><a href="sub-index.html"><small>子教程索引 →</small>全部子教程</a></div>
+</article><nav class="doc-toc" aria-label="本页内容"><b>本页内容</b><a href="#sec-1">Fortnite 中的光剑</a><a href="#sec-2">光剑工作台</a><a href="#sec-3">原力</a><a href="#sec-4">试炼场</a></nav></div>
+</div></div>
+</div>
+<footer class="edc-footer"><div class="inner"><img src="../assets/logo-epic.svg" alt="Epic Games"><span>Fortnite 文档中文镜像 · UE教程/ · 本地打开 index.html 阅读 · 翻译整理自 Epic 官方文档，仅供学习交流</span></div></footer>
+</body>
+</html>

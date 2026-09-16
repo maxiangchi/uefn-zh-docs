@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>物理系统入门 | Fortnite 文档中文镜像</title>
+<link rel="stylesheet" href="../assets/epic.css">
+<link rel="stylesheet" href="../assets/patch.css">
+<link rel="icon" href="../assets/logo-epic.svg">
+</head>
+<body class="theme-fortnite">
+<div class="edc-topbar"><div class="edc-topbar-inner"><img class="edc-logo" src="../assets/logo-epic.svg" alt="Epic Games"><span class="edc-brand">Epic Games <b>开发者社区</b></span><span class="edc-nav"><a href="../index.html">文档首页</a><a href="sub-index.html">子教程索引</a><a href="https://dev.epicgames.com/documentation/fortnite/getting-started-with-physics" target="_blank" rel="noopener">英文原文</a></span></div></div>
+<div class="site-container">
+<aside class="site-nav"><div class="documents-tree"><nav><ul class="contents-table">
+<div class="tree-sec">A 最新动态</div><a class="tree-link active" href="01-42-00-fortnite-ecosystem-updates-and-release-notes.html">01. 42.00 生态系统更新与发行说明</a><a class="tree-link" href="02-custom-items-and-inventory-overview-in-fortnite.html">02. 自定义物品与背包总览</a><a class="tree-link" href="03-in-island-transactions-in-fortnite.html">03. 岛内交易</a><a class="tree-link" href="04-mobile-development-in-fortnite.html">04. 移动端开发</a><a class="tree-link" href="05-inputs-in-fortnite.html">05. 输入系统</a><a class="tree-link" href="06-ability-system-in-unreal-editor-for-fortnite.html">06. 能力系统 Ability System</a><a class="tree-link" href="07-partybased-gameplay-using-the-social-synergy-api-in-fortnite.html">07. 社交协同 API 与小队玩法</a><a class="tree-link" href="08-scene-graph-in-unreal-editor-for-fortnite.html">08. 场景图 Scene Graph</a><div class="tree-sec">B 入门</div><a class="tree-link" href="09-build-your-first-island-in-fortnite.html">09. 构建你的第一个岛屿</a><a class="tree-link" href="10-onboarding-guide-to-programming-with-verse-in-unreal-editor-for-fortnite.html">10. Verse 编程入门指南</a><a class="tree-link" href="11-building-basics-in-fortnite-creative.html">11. 建造基础</a><div class="tree-sec">C 品牌合集</div><a class="tree-link" href="12-star-wars-islands-in-fortnite.html">12. 星球大战™岛屿</a><a class="tree-link" href="13-kpop-demon-hunters-islands-in-fortnite.html">13. KPop 猎魔团岛屿</a><a class="tree-link" href="14-building-lego-islands-in-fortnite.html">14. 乐高®岛屿</a><a class="tree-link" href="15-the-walking-dead-universe-islands-in-unreal-editor-for-fortnite.html">15. 行尸走肉宇宙岛屿</a><a class="tree-link" href="16-teenage-mutant-ninja-turtle-islands-in-unreal-editor-for-fortnite.html">16. 忍者神龟岛屿</a><a class="tree-link" href="17-squid-game-islands-in-fortnite.html">17. 鱿鱼游戏岛屿</a><div class="tree-sec">D 开发者成功</div><a class="tree-link" href="18-using-creator-portal-in-fortnite-creative.html">18. 使用创作者门户</a><a class="tree-link" href="19-island-moderation-and-guidelines-in-fortnite-creative.html">19. 岛屿审核与准则</a><div class="tree-sec">E 协作</div><a class="tree-link" href="20-creating-teams-in-creator-portal-in-unreal-editor-for-fortnite.html">20. 在创作者门户创建团队</a><a class="tree-link" href="21-adding-playtesters-in-fortnite-creative.html">21. 添加试玩测试员</a><a class="tree-link" href="22-playtesting-your-island-in-unreal-editor-for-fortnite.html">22. 试玩测试你的岛屿</a><a class="tree-link" href="23-collaborating-in-unreal-editor-for-fortnite.html">23. 在 UEFN 中协作</a><a class="tree-link" href="24-lore-version-control-in-unreal-editor-for-fortnite.html">24. Lore 版本控制</a><a class="tree-link" href="25-conflicts-in-lore-version-control-in-unreal-editor-for-fortnite.html">25. Lore 中的冲突</a><a class="tree-link" href="26-version-history-and-conflict-resolution-in-unreal-editor-for-fortnite.html">26. 分支历史与冲突解决</a><div class="tree-sec">F 游戏示例</div><a class="tree-link" href="27-build-a-game-in-unreal-editor-for-fortnite.html">27. 构建一款游戏</a><a class="tree-link" href="28-unreal-editor-for-fortnite-starter-templates.html">28. UEFN 新手模板</a><div class="tree-sec">G Verse</div><a class="tree-link" href="29-learn-the-basics-of-writing-code-in-verse.html">29. 从零学习 Verse 代码基础</a><div class="tree-sec">H 专注领域</div><a class="tree-link" href="30-lighting-in-unreal-editor-for-fortnite.html">30. 灯光</a><a class="tree-link" href="31-animation-and-cinematics-in-unreal-editor-for-fortnite.html">31. 动画与过场动画</a><a class="tree-link" href="32-modeling-in-unreal-editor-for-fortnite.html">32. 建模</a><a class="tree-link" href="33-materials-in-unreal-editor-for-fortnite.html">33. 材质</a><a class="tree-link" href="34-environments-and-landscapes-in-unreal-editor-for-fortnite.html">34. 环境与地形</a><a class="tree-link" href="35-audio-in-unreal-editor-for-fortnite.html">35. 音频</a><a class="tree-link" href="36-visual-effects-in-unreal-editor-for-fortnite.html">36. 视觉特效</a>
+</ul></nav></div></aside>
+<div class="page-content"><div class="page-document has-theme-bg">
+<header class="section-page-header"><nav><ol class="breadcrumb is-shrinkable"><li class="breadcrumb-item is-root"><img src="../assets/logo-epic.svg" alt="Epic Games"><a href="../index.html">Developer</a></li><li class="breadcrumb-item"><a href="../index.html">Fortnite 文档</a></li><li class="breadcrumb-item"><a href="01-42-00-fortnite-ecosystem-updates-and-release-notes.html">42.00 生态系统更新与发行说明</a></li><li class="breadcrumb-item active" aria-current="page"><span class="text-truncate">物理系统入门</span></li></ol></nav><h1>物理系统入门</h1><p class="text-secondary mb-0">在 UEFN（Beta）中模拟碰撞、爆炸与物体运动的物理受力，本文介绍启用方法、可用设备、物理参数与 Verse API。</p><p class="doc-meta">英文原标题：Getting Started With Physics · <a href="https://dev.epicgames.com/documentation/fortnite/getting-started-with-physics" target="_blank" rel="noopener">查看英文原文</a> · 社区翻译镜像，仅供学习</p></header>
+<div class="doc-columns"><article class="doc-article">
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/05db44d6-b940-421e-9e80-870ae16e87cf?resizing_type=fill&width=1920&height=335" alt="物理入门题图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/05db44d6-b940-421e-9e80-870ae16e87cf?resizing_type=fill&width=1920&height=335" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p><strong>物理系统（Physics）</strong>在<strong>虚幻编辑器 Fortnite 版（Unreal Editor for Fortnite，UEFN）</strong>中，可以模拟碰撞、爆炸、物体运动等情形下的物理受力效果。模拟会计算物体下落时的加速度，以及两个物体发生碰撞时彼此之间的相互作用。</p>
+<p>UEFN 中的物理系统<strong>目前处于 Beta 阶段</strong>。你现在已经可以发布带有物理效果的项目，但请注意，相关工具仍在频繁更新中，这些更新可能会影响你的 UEFN 岛屿。</p>
+<h2 id="sec-1">你能做什么</h2>
+<p>玩家可以通过以下方式与物理对象<strong>交互</strong>：</p>
+<ul>
+<li><strong>撞向它们</strong>——使用基于物理的玩家角色<strong>移动并撞击</strong>它们。</li>
+<li><strong>打击它们</strong>——使用十字镐<strong>敲击</strong>，或使用武器<strong>射击</strong>它们，包括投掷手雷。</li>
+<li><strong>使用道具移动器（Prop Mover）</strong>来移动或旋转它们。</li>
+<li><strong>使用设备</strong>。</li>
+</ul>
+<h2 id="sec-2">支持物理的设备</h2>
+<p>以下设备已经过与物理道具联动的测试，可以可靠工作：</p>
+<ul>
+<li><a href="https://dev.epicgames.com/documentation/fortnite/using-air-vent-devices-in-fortnite-creative" target="_blank" rel="noopener">通气口（Air Vent）</a></li>
+<li><a href="https://dev.epicgames.com/documentation/fortnite/using-barrier-devices-in-fortnite-creative" target="_blank" rel="noopener">屏障（Barrier）</a></li>
+<li><a href="https://dev.epicgames.com/documentation/fortnite/using-bouncer-gallery-devices-in-fortnite-creative" target="_blank" rel="noopener">弹跳板（Bouncer）</a></li>
+<li><a href="https://dev.epicgames.com/documentation/fortnite/bouncer-trap" target="_blank" rel="noopener">弹跳陷阱（Bouncer Trap）</a></li>
+<li><a href="https://dev.epicgames.com/documentation/fortnite/using-volume-devices-in-fortnite-creative" target="_blank" rel="noopener">体积（Volume）</a></li>
+<li><a href="https://dev.epicgames.com/documentation/fortnite/using-dlauncher-devices-in-fortnite-creative" target="_blank" rel="noopener">发射台（D-Launcher）</a></li>
+<li><a href="https://dev.epicgames.com/documentation/fortnite/using-damage-volume-devices-in-fortnite-creative" target="_blank" rel="noopener">伤害体积（Damage Volume）</a></li>
+<li><a href="https://dev.epicgames.com/documentation/fortnite/using-hover-platform-devices-in-fortnite-creative" target="_blank" rel="noopener">悬浮平台（Hover Platform）</a></li>
+<li><a href="https://dev.epicgames.com/documentation/fortnite/using-pinball-bumper-devices-in-fortnite-creative" target="_blank" rel="noopener">弹珠保险杠（Pinball Bumper）</a></li>
+<li><a href="https://dev.epicgames.com/documentation/fortnite/using-pinball-flipper-devices-in-fortnite-creative" target="_blank" rel="noopener">弹珠挡板（Pinball Flipper）</a></li>
+<li><a href="https://dev.epicgames.com/documentation/fortnite/using-prop-mover-devices-in-fortnite-creative" target="_blank" rel="noopener">道具移动器（Prop Mover）</a></li>
+<li><a href="https://dev.epicgames.com/documentation/fortnite/using-skydive-volume-devices-in-fortnite-creative" target="_blank" rel="noopener">跳伞体积（Skydive Volume）</a></li>
+<li><a href="https://dev.epicgames.com/documentation/fortnite/using-teleporter-devices-in-fortnite-creative" target="_blank" rel="noopener">传送器（Teleporter）</a></li>
+<li><a href="https://dev.epicgames.com/documentation/fortnite/using-trigger-devices-in-fortnite-creative" target="_blank" rel="noopener">触发器（Trigger）</a></li>
+<li><a href="https://dev.epicgames.com/documentation/fortnite/using-water-devices-in-fortnite-creative" target="_blank" rel="noopener">水体（Water）</a></li>
+<li><a href="https://dev.epicgames.com/documentation/fortnite/using-crash-pad-devices-in-fortnite-creative" target="_blank" rel="noopener">缓冲垫（Crash Pad）</a></li>
+<li><a href="https://dev.epicgames.com/documentation/fortnite/using-explosive-devices-in-fortnite-creative" target="_blank" rel="noopener">爆炸物（Explosives）</a></li>
+<li><a href="https://dev.epicgames.com/documentation/fortnite/using-carryable-spawner-devices-in-fortnite" target="_blank" rel="noopener"><strong>可携带物生成器（Carryable Spawner）</strong></a></li>
+</ul>
+<h2 id="sec-3">启用物理</h2>
+<p>要开启这一 Beta 功能，你需要在岛屿设置中启用物理：</p>
+<ol>
+<li>打开 UEFN，选择一个新建项目或已有项目。</li>
+<li>查看大纲视图（Outliner）。如果你的项目中已有<strong>岛屿设置（Island Settings）</strong>设备，请直接跳到第 4 步；否则请继续第 3 步。</li>
+</ol>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/925c7b30-ea81-4986-9c3d-ca9fc8eac621?resizing_type=fit" alt="大纲视图原文示意图1" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/925c7b30-ea81-4986-9c3d-ca9fc8eac621?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ol start="3">
+<li>打开内容抽屉（Content Drawer），搜索 <strong>island settings</strong>，将该设备拖入你的项目。</li>
+</ol>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/e3b1324e-2386-422c-9fb2-70ebcfdea537?resizing_type=fit" alt="内容抽屉中搜索岛屿设置原文示意图2" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/e3b1324e-2386-422c-9fb2-70ebcfdea537?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ol start="4">
+<li>在大纲视图中选中岛屿设置设备，展开 <strong>World（世界）&gt; Physics（物理）</strong> 设置，勾选 <strong>Enable Physics (Beta)（启用物理 Beta 版）</strong>旁边的复选框，然后保存项目。</li>
+</ol>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/cbb5a7bb-0fb1-4531-921f-3b2cb405fc7a?resizing_type=fit" alt="物理测试版访问选项" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/cbb5a7bb-0fb1-4531-921f-3b2cb405fc7a?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<div class="block-callout">注：目前任何品牌模板均不支持物理功能。</div>
+<h2 id="sec-4">物理运动</h2>
+<p>在游戏环境中，物理对象会受到与牛顿第二运动定律所描述的相同的自然力作用：<strong>F=ma</strong>，其中<strong>力（Force，F）</strong>等于<strong>质量（Mass，m）</strong>乘以<strong>加速度（Acceleration，a）</strong>。</p>
+<h4>力（Force）</h4>
+<p>力可以维持、改变或扭曲物体的<strong>运动</strong>状态。在电子游戏中，这种力可以由武器、其他运动物体、设备、爆炸等施加到角色和物体上。</p>
+<h4>质量（Mass）</h4>
+<p>质量是所有物质的核心属性，表示当有外力作用时，物体<strong>抵抗</strong>自身速度发生变化的程度。质量越大，外力能带来的变化就越小。在游戏中，具有物理属性的物体会带有一个设定的质量。质量大的物体更难被推动，与其他物体相互作用后移动的距离也更短。</p>
+<h4>加速度（Acceleration）</h4>
+<p>加速度是物体运动时速度发生变化的快慢，以<strong>速度</strong>和<strong>方向</strong>来衡量。在游戏中，例如弹珠保险杠给予与其相互作用的物体的加速，就是一种加速度。</p>
+<h2 id="sec-5">为道具添加物理</h2>
+<p>在启用了物理的项目中，所有 Fortnite 道具都可以设置为模拟物理。可以通过以下两种方式为道具添加物理：</p>
+<h3>使用 Fortnite 工具（Fortnite Tools）</h3>
+<ol>
+<li>在工具栏中点击<strong>选择模式（Selection Mode）</strong>下拉菜单，选择 <strong>Fortnite 工具（Fortnite Tools）</strong>。</li>
+</ol>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/56f88f1d-63e3-431b-b3ee-65ddf928de27?resizing_type=fit" alt="Fortnite 工具" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/56f88f1d-63e3-431b-b3ee-65ddf928de27?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ol start="2">
+<li>点击<strong>添加物理（Add Physics）</strong>。</li>
+<li>在视口或大纲视图中，按住 <strong>Ctrl</strong> 并点击，选中要添加物理的道具，然后点击<strong>操作（Actions）</strong>下方的 <strong>Add Physics（添加物理）</strong>按钮。按钮上方会出现一条红色确认消息。</li>
+</ol>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/e1294629-b2d8-4437-8212-5e62c785afb8?resizing_type=fit" alt="添加物理" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/e1294629-b2d8-4437-8212-5e62c785afb8?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>使用这种方法，你还可以移除物理（Remove Physics），以及选中项目中所有的物理道具或非物理道具。更多信息请查看<a href="fortnite-tools-mode-in-fortnite.html#add-physics">Fortnite 工具模式（Fortnite Tools Mode）</a>。</p>
+<h3>添加物理组件（Physics Component）</h3>
+<ol>
+<li>在该道具的细节（Details）面板中，点击 <strong>+ 添加（+ Add）</strong>并选择 <strong>Fort Physics</strong>。</li>
+</ol>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/0693809f-2c12-4c6a-a5e0-09ab9d808f30?resizing_type=fit" alt="添加 Fort Physics 组件原文示意图6" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/0693809f-2c12-4c6a-a5e0-09ab9d808f30?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ol start="2">
+<li>勾选<strong>模拟物理（Simulate Physics）</strong>，并根据需要修改其他设置。</li>
+</ol>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/8807b730-b2ba-4998-b870-907e0292bdf5?resizing_type=fit" alt="模拟物理设置原文示意图7" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/8807b730-b2ba-4998-b870-907e0292bdf5?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>关于导入自定义道具并添加碰撞的更多内容，请参阅<a href="https://dev.epicgames.com/documentation/fortnite/make-a-soccer-game" target="_blank" rel="noopener">制作足球游戏（Make a Soccer Game）</a>教程。</p>
+<h3>用户选项（User Options）</h3>
+<p><strong>质量（Mass）</strong>决定道具的重量。道具越重，外力对它的影响就越小。在下面的示例中，左侧板条箱的质量为 <strong>100</strong>，右侧的为 <strong>25</strong>。</p>
+<p><strong>启用重力（Enable Gravity）</strong>决定是否对该对象施加重力。</p>
+<p><strong>开始时唤醒（Start Awake）</strong>决定物理道具是在游戏开始时就进行模拟，还是在有物体与之接触时才开始模拟。如果不勾选，物理对象在有外力作用之前不会进行模拟。在下面的示例中，所有板条箱的 <strong>Start Awake（开始时唤醒）</strong>都<strong>未勾选</strong>，只有在被击中后才会倒下。</p>
+<p><strong>线性阻尼（Linear Damping）</strong>会让物体随时间逐渐减速。在下面的示例中，左侧气球的线性阻尼值为 <strong>0.5</strong>，右侧的为 <strong>0.01</strong>。</p>
+<p><strong>角阻尼（Angular Damping）</strong>会让物体的旋转随时间逐渐减速。更多内容请查看虚幻引擎文档中的<a href="https://dev.epicgames.com/documentation/unreal-engine/physics-damping-in-unreal-engine?application_version=5.5" target="_blank" rel="noopener">物理阻尼（Physics Damping）</a>。在下面的示例中，左侧三角形的角阻尼值为 <strong>0.6</strong>，右侧的为 <strong>0.1</strong>。</p>
+<p><strong>受击冲量倍率（Impulse on Hit Multiplier）</strong>可以放大物体被击中时受到的力。默认值为 <strong>1</strong>，可在 <strong>-5</strong> 到 <strong>5</strong> 之间任意设置。在下面的示例中，左侧足球的倍率为 <strong>1.0</strong>，右侧的为 <strong>3.0</strong>。</p>
+<p><a href="https://sketchfab.com/3d-models/soccer-ball-88590cf1e42e44bfb85ce3b6b1959648" target="_blank" rel="noopener">足球（Soccer Ball）</a>作者：Sketchfab 上的 <a href="https://sketchfab.com/tinmanjuggernaut" target="_blank" rel="noopener">tinmanjuggernaut</a>，依据<a href="https://sketchfab.com/licenses" target="_blank" rel="noopener">Sketchfab 标准许可</a>使用。</p>
+<h3>约束（Constraints）</h3>
+<p>你可以为道具添加<strong>旋转与位移约束（Rotation and Translation constraints）</strong>，阻止它们沿特定轴移动。更多内容请查看虚幻引擎文档中的<a href="https://dev.epicgames.com/documentation/unreal-engine/physics-constraint-reference-in-unreal-engine?application_version=5.5" target="_blank" rel="noopener">物理约束参考（Physical Constraint Reference）</a>。</p>
+<h2 id="sec-6">常见问题（FAQ）</h2>
+<p>以下是在试用该新功能时可能遇到的部分问题。如果你的问题未出现在本节中，可以查看最新的 Fortnite 生态系统更新与发行说明获取更新。</p>
+<h5>可以在现有项目中启用物理吗？</h5>
+<p>可以。现有项目也可以启用物理，但建议在开启物理之前先复制备份你的项目。使用了实验性功能的项目无法发布。你可以随时禁用物理实验性功能并发布你的岛屿。</p>
+<h5>用 Sequencer（过场动画编辑器）制作动画的物体能与物理对象交互吗？</h5>
+<p>不能。Sequencer 驱动的物体运行在服务器的游戏线程上，其属性与物理线程不同，无法产生物理交互所需的变更。本质上，Sequencer 并不适合与物理一起使用。我们建议使用道具移动器（Prop Mover）设备。使用道具移动器移动的道具可以与物理对象交互。</p>
+<h5>所有玩家移动模式都支持物理吗？</h5>
+<p>基本的玩家移动，如行走、跑步、疾跑、疾跑跳跃、跳跃、下落、游泳、下蹲、下蹲行走、下蹲跳跃、滑翔和跳伞，都可以正常工作。但攀爬、滑铲、滑索、滑轨和倒地未出局（DBNO）目前尚不支持。</p>
+<h5>所有武器都受支持吗？</h5>
+<p>大多数武器都支持物理 Beta 版。随着工具集日趋完善，会有更多武器支持物理。</p>
+<h5>载具能在启用物理的岛屿上工作吗？</h5>
+<p>载具不受支持，会导致岛屿不稳定。建议不要使用载具，以免破坏游戏的某些部分。</p>
+<h5>项目中可以有多少个物理对象？</h5>
+<p>你需要注意项目中物理对象的数量。超过 50 个进行物理模拟的简单形状（方块或球体）就可能影响岛屿性能。复杂物理形状比简单形状对性能的影响更大。实际结果会因环境和模拟对象的复杂度而异。</p>
+<h5>物理功能支持 Fortnite 创意模式（Fortnite Creative）吗？</h5>
+<p>目前物理功能仅支持在 UEFN 中使用。</p>
+<h2 id="sec-7">体积设备 API（Volume Device API）</h2>
+<p>为了检测物理对象的出现，设备新增了两个事件：<code>OnPhysicsEnter</code> 和 <code>OnPhysicsExit</code>。</p>
+<p>这些事件的有效负载为 <strong><code>Creative_Prop</code></strong>。</p>
+<h2 id="sec-8">Verse API</h2>
+<p>新增了 <code>PropEntersEvent</code> 和 <code>PropExitsEvent</code>。可以使用下面的代码片段跟踪特工进入和离开体积的时机：</p>
+<pre><code>volume_device&lt;public&gt; := class&lt;concrete&gt;&lt;final&gt;(creative_device_base): PropEntersEvent&lt;public&gt;:listenable(creative_prop) = external {} PropExitsEvent&lt;public&gt;:listenable(creative_prop) = external {}</code></pre>
+<p><code>fort_character</code> 类可以获取和设置线速度、获取角色质量、施加线性冲量或力。<code>creative_prop</code> 类除了上述能力外，还可以获取和设置角速度、施加角冲量和扭矩。更多信息请参阅 <a href="https://dev.epicgames.com/documentation/fortnite/verse-api/fortnitedotcom/characters/fort_character" target="_blank" rel="noopener">fort_character</a> 和 <a href="https://dev.epicgames.com/documentation/fortnite/verse-api/fortnitedotcom/devices/creative_prop" target="_blank" rel="noopener">creative_prop</a> API 页面。</p>
+<p><a href="https://dev.epicgames.com/community/search?query=physics" target="_blank" rel="noopener">physics</a> · <a href="https://dev.epicgames.com/community/search?query=quick%20start" target="_blank" rel="noopener">quick start</a> · <a href="https://dev.epicgames.com/community/search?query=faq" target="_blank" rel="noopener">faq</a></p>
+<hr>
+<p><strong>欢迎提问并帮助你的同伴：</strong><a href="https://forums.unrealengine.com/categories?tag=fortnite" target="_blank" rel="noopener">开发者论坛（Developer Forums）</a></p>
+<p><strong>编写你自己的教程，或阅读他人的教程：</strong><a href="https://dev.epicgames.com/community/fortnite/learning" target="_blank" rel="noopener">学习库（Learning Library）</a></p>
+<ul>
+<li><a href="getting-started-with-physics.html#whatyoucando">你能做什么</a></li>
+<li><a href="getting-started-with-physics.html#physics-enableddevices">支持物理的设备</a></li>
+<li><a href="getting-started-with-physics.html#enablephysics">启用物理</a></li>
+<li><a href="getting-started-with-physics.html#physicalmotion">物理运动</a></li>
+<li><a href="getting-started-with-physics.html#force">力</a></li>
+<li><a href="getting-started-with-physics.html#mass">质量</a></li>
+<li><a href="getting-started-with-physics.html#acceleration">加速度</a></li>
+<li><a href="getting-started-with-physics.html#addphysicstoprops">为道具添加物理</a></li>
+<li><a href="getting-started-with-physics.html#usingfortnitetools">使用 Fortnite 工具</a></li>
+<li><a href="getting-started-with-physics.html#addingaphysicscomponent">添加物理组件</a></li>
+<li><a href="getting-started-with-physics.html#useroptions">用户选项</a></li>
+<li><a href="getting-started-with-physics.html#constraints">约束</a></li>
+<li><a href="getting-started-with-physics.html#faq">常见问题</a></li>
+<li><a href="getting-started-with-physics.html#canienablephysicsonanexistingproject?">可以在现有项目中启用物理吗？</a></li>
+<li><a href="getting-started-with-physics.html#canobjectsanimatedwithsequencerinteractwithphysicsobjects?">用 Sequencer 制作动画的物体能与物理对象交互吗？</a></li>
+<li><a href="getting-started-with-physics.html#areallplayermovementmodesavailablewithphysics?">所有玩家移动模式都支持物理吗？</a></li>
+<li><a href="getting-started-with-physics.html#areallweaponssupported?">所有武器都受支持吗？</a></li>
+<li><a href="getting-started-with-physics.html#willvehiclesworkonmyphysics-enabledisland?">载具能在启用物理的岛屿上工作吗？</a></li>
+<li><a href="getting-started-with-physics.html#howmanyphysicsobjectscanihaveinmyproject?">项目中可以有多少个物理对象？</a></li>
+<li><a href="getting-started-with-physics.html#doesphysicsworkinfortnitecreative?">物理功能支持 Fortnite 创意模式吗？</a></li>
+<li><a href="getting-started-with-physics.html#volumedeviceapi">体积设备 API</a></li>
+<li><a href="getting-started-with-physics.html#verseapi">Verse API</a></li>
+</ul>
+<div class="pager"><a href="01-42-00-fortnite-ecosystem-updates-and-release-notes.html"><small>← 返回父教程</small>42.00 生态系统更新与发行说明</a><a href="sub-index.html"><small>子教程索引 →</small>全部子教程</a></div>
+</article><nav class="doc-toc" aria-label="本页内容"><b>本页内容</b><a href="#sec-1">你能做什么</a><a href="#sec-2">支持物理的设备</a><a href="#sec-3">启用物理</a><a href="#sec-4">物理运动</a><a href="#sec-5">为道具添加物理</a><a href="#sec-6">常见问题（FAQ）</a><a href="#sec-7">体积设备 API（Volume Device API）</a><a href="#sec-8">Verse API</a></nav></div>
+</div></div>
+</div>
+<footer class="edc-footer"><div class="inner"><img src="../assets/logo-epic.svg" alt="Epic Games"><span>Fortnite 文档中文镜像 · UE教程/ · 本地打开 index.html 阅读 · 翻译整理自 Epic 官方文档，仅供学习交流</span></div></footer>
+</body>
+</html>

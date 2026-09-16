@@ -1,0 +1,147 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>能力系统 Ability System | Fortnite 文档中文镜像</title><link rel="stylesheet" href="../assets/epic.css"><link rel="stylesheet" href="../assets/patch.css"><link rel="icon" href="../assets/logo-epic.svg"></head><body class="theme-fortnite"><div class="edc-topbar"><div class="edc-topbar-inner"><img class="edc-logo" src="../assets/logo-epic.svg" alt="Epic Games"><span class="edc-brand">Epic Games <b>开发者社区</b></span><span class="edc-nav"><a href="../index.html">文档首页</a><a href="sub-index.html">子教程索引</a><a href="https://dev.epicgames.com/documentation/fortnite/ability-system-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">英文原文</a></span></div></div><div class="site-container"><aside class="site-nav"><div class="documents-tree"><nav><ul class="contents-table"><div class="tree-sec">A · 最新动态</div><a class="tree-link" href="01-42-00-fortnite-ecosystem-updates-and-release-notes.html">01. 42.00 生态系统更新与发行说明</a><a class="tree-link" href="02-custom-items-and-inventory-overview-in-fortnite.html">02. 自定义物品与背包总览</a><a class="tree-link" href="03-in-island-transactions-in-fortnite.html">03. 岛内交易</a><a class="tree-link" href="04-mobile-development-in-fortnite.html">04. 移动端开发</a><a class="tree-link" href="05-inputs-in-fortnite.html">05. 输入系统</a><a class="tree-link active" href="06-ability-system-in-unreal-editor-for-fortnite.html">06. 能力系统 Ability System</a><a class="tree-link" href="07-partybased-gameplay-using-the-social-synergy-api-in-fortnite.html">07. 社交协同 API 与小队玩法</a><a class="tree-link" href="08-scene-graph-in-unreal-editor-for-fortnite.html">08. 场景图 Scene Graph</a><div class="tree-sec">B · 入门</div><a class="tree-link" href="09-build-your-first-island-in-fortnite.html">09. 构建你的第一个岛屿</a><a class="tree-link" href="10-onboarding-guide-to-programming-with-verse-in-unreal-editor-for-fortnite.html">10. Verse 编程入门指南</a><a class="tree-link" href="11-building-basics-in-fortnite-creative.html">11. 建造基础</a><div class="tree-sec">C · 品牌合集</div><a class="tree-link" href="12-star-wars-islands-in-fortnite.html">12. 星球大战™岛屿</a><a class="tree-link" href="13-kpop-demon-hunters-islands-in-fortnite.html">13. KPop 猎魔团岛屿</a><a class="tree-link" href="14-building-lego-islands-in-fortnite.html">14. 乐高®岛屿</a><a class="tree-link" href="15-the-walking-dead-universe-islands-in-unreal-editor-for-fortnite.html">15. 行尸走肉宇宙岛屿</a><a class="tree-link" href="16-teenage-mutant-ninja-turtle-islands-in-unreal-editor-for-fortnite.html">16. 忍者神龟岛屿</a><a class="tree-link" href="17-squid-game-islands-in-fortnite.html">17. 鱿鱼游戏岛屿</a><div class="tree-sec">D · 开发者成功</div><a class="tree-link" href="18-using-creator-portal-in-fortnite-creative.html">18. 使用创作者门户</a><a class="tree-link" href="19-island-moderation-and-guidelines-in-fortnite-creative.html">19. 岛屿审核与准则</a><div class="tree-sec">E · 协作</div><a class="tree-link" href="20-creating-teams-in-creator-portal-in-unreal-editor-for-fortnite.html">20. 在创作者门户创建团队</a><a class="tree-link" href="21-adding-playtesters-in-fortnite-creative.html">21. 添加试玩测试员</a><a class="tree-link" href="22-playtesting-your-island-in-unreal-editor-for-fortnite.html">22. 试玩测试你的岛屿</a><a class="tree-link" href="23-collaborating-in-unreal-editor-for-fortnite.html">23. 在 UEFN 中协作</a><a class="tree-link" href="24-lore-version-control-in-unreal-editor-for-fortnite.html">24. Lore 版本控制</a><a class="tree-link" href="25-conflicts-in-lore-version-control-in-unreal-editor-for-fortnite.html">25. Lore 中的冲突</a><a class="tree-link" href="26-version-history-and-conflict-resolution-in-unreal-editor-for-fortnite.html">26. 分支历史与冲突解决</a><div class="tree-sec">F · 游戏示例</div><a class="tree-link" href="27-build-a-game-in-unreal-editor-for-fortnite.html">27. 构建一款游戏</a><a class="tree-link" href="28-unreal-editor-for-fortnite-starter-templates.html">28. UEFN 新手模板</a><div class="tree-sec">G · Verse</div><a class="tree-link" href="29-learn-the-basics-of-writing-code-in-verse.html">29. 从零学习 Verse 代码基础</a><div class="tree-sec">H · 专注领域</div><a class="tree-link" href="30-lighting-in-unreal-editor-for-fortnite.html">30. 灯光</a><a class="tree-link" href="31-animation-and-cinematics-in-unreal-editor-for-fortnite.html">31. 动画与过场动画</a><a class="tree-link" href="32-modeling-in-unreal-editor-for-fortnite.html">32. 建模</a><a class="tree-link" href="33-materials-in-unreal-editor-for-fortnite.html">33. 材质</a><a class="tree-link" href="34-environments-and-landscapes-in-unreal-editor-for-fortnite.html">34. 环境与地形</a><a class="tree-link" href="35-audio-in-unreal-editor-for-fortnite.html">35. 音频</a><a class="tree-link" href="36-visual-effects-in-unreal-editor-for-fortnite.html">36. 视觉特效</a></ul></nav></div></aside><div class="page-content"><div class="page-document has-theme-bg"><header class="section-page-header"><nav><ol class="breadcrumb is-shrinkable"><li class="breadcrumb-item is-root"><img src="../assets/logo-epic.svg" alt="Epic Games"><a href="../index.html">Developer</a></li><li class="breadcrumb-item"><a href="../index.html">Fortnite 文档</a></li><li class="breadcrumb-item active" aria-current="page"><span class="text-truncate">能力系统 Ability System</span></li></ol></nav><h1>能力系统 Ability System</h1><p class="text-secondary mb-0">用 Verse 构建可扩展、可复用的玩法能力：能力上下文、能力定义、效果组件与治疗能力完整示例。</p><p class="doc-meta">英文原标题：Ability System in Unreal Editor for Fortnite · <a href="https://dev.epicgames.com/documentation/fortnite/ability-system-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">查看英文原文</a> · 社区翻译镜像，仅供学习</p></header><div class="doc-columns"><article class="doc-article"><p class="doc-lead"><strong>能力系统（Ability System）</strong>是一个用 Verse 创建可扩展、可复用玩法能力（gameplay abilities）的框架。有了它，你可以创建赋予玩家魔法技能、超级能力或其他特殊能力的玩法能力。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/6d077ea7-3277-47bb-a4ce-51469e964ddf?resizing_type=fill&width=1920&height=335" alt="能力系统 Ability System 横幅" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/6d077ea7-3277-47bb-a4ce-51469e964ddf?resizing_type=fill&width=1920&height=335" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>开始之前，你应当熟悉<a href="08-scene-graph-in-unreal-editor-for-fortnite.html">场景图（Scene Graph）</a>，包括实体（entities）、组件（components）与预制件（prefabs）。</p>
+<p><a href="https://dev.epicgames.com/documentation/fortnite/verse-api/fortnitedotcom/abilities" target="_blank" rel="noopener">能力 API（Ability API）</a>是一个用 Verse 创建可复用玩法能力的框架。它将能力激活（activation）、运行时数据（runtime data）、玩法逻辑（gameplay logic）与生命周期管理（lifetime management）拆分为不同的层，使能力易于扩展与复用。</p>
+<h2 id="sec-core-concepts">核心概念（Core Concepts）</h2>
+<p>每个能力由四个部分组成：</p>
+<ul>
+<li><strong>能力上下文（Ability Context）</strong>：存储单次激活的数据。</li>
+<li><strong>能力（Ability）</strong>：定义能力及其需求，校验激活条件，并创建效果。</li>
+<li><strong>能力效果（Ability Effect）</strong>：代表生成的玩法实体。</li>
+<li><strong>能力效果组件（Ability Effect Component）</strong>：控制效果的行为与生命周期。</li>
+</ul>
+<p>将能力激活、运行时数据、玩法逻辑与生命周期管理拆分为不同的层，使能力易于扩展与复用。因此，你无需重复代码即可创建同一能力的多种变体。</p>
+<p>下表对比了自定义能力的各组成部分：</p>
+<table>
+<thead><tr><th>类型（Type）</th><th>职责（Responsibility）</th><th>生命周期（Lifetime）</th></tr></thead>
+<tbody>
+<tr><td><code>ability_context</code></td><td>存储单次激活的数据</td><td>单次激活（Per Activation）</td></tr>
+<tr><td><code>ability</code></td><td>定义能力并控制激活</td><td>持久（Persistent）</td></tr>
+<tr><td><code>ability_effect</code></td><td>生成的玩法实体</td><td>瞬态（Transient）——每次调用效果都会创建新实例</td></tr>
+<tr><td><code>ability_effect_component</code></td><td>控制效果的行为与生命周期</td><td>随效果存在（Effect Lifetime）</td></tr>
+</tbody>
+</table>
+<h2 id="sec-ability-context">能力上下文（Ability Context）</h2>
+<p><code>ability_context</code> 是临时容器，用于存放与单次激活相关的上下文数据。</p>
+<p>基础上下文（base context）提供：</p>
+<ul>
+<li><code>Instigator</code>——负责激活能力的智能体（agent）。</li>
+<li><code>Participants</code>——与能力相关但并非直接目标的实体，例如武器、背包物品或其他玩家。</li>
+<li><code>Targets</code>——接收能力效果的实体。</li>
+</ul>
+<p>上下文可以通过子类化携带更多玩法数据：</p>
+<pre><code>heal_context := class(ability_context):
+    HealPerTick : float = 5.0</code></pre>
+<h2 id="sec-ability">能力（Ability）</h2>
+<p><code>ability</code> 是持久化定义，规定能力何时可用，并在给定上下文中创建玩法效果。</p>
+<p>能力会存储其期望的上下文与效果类型的引用。这在整个激活流程中提供了类型安全，意味着类型不匹配会在开发阶段就被发现，而不是等到游戏中才暴露。</p>
+<pre><code>heal_ability := class(ability(heal_context, heal_effect)):</code></pre>
+<p>能力负责：</p>
+<ul>
+<li>对照一系列限制校验激活，例如冷却（cooldown）或资源消耗（resource cost）。</li>
+<li>创建上下文（context）。</li>
+<li>创建效果（effect）。</li>
+<li>跟踪激活中的效果（active effects）。</li>
+<li>广播开始与结束的生命周期事件。</li>
+</ul>
+<h3 id="sec-validating-activation">校验激活（Validating Activation）</h3>
+<p>重写 <code>CanUse()</code> 即可决定能力是否可以激活。</p>
+<p>典型检查包括：</p>
+<ul>
+<li>冷却（Cooldowns）。</li>
+<li>法力或资源消耗（Mana or resource costs）。</li>
+<li>目标校验（Target validation）。</li>
+<li>已存在的激活效果。</li>
+<li>游戏专属需求。</li>
+</ul>
+<pre><code>CanUse&lt;override&gt;(AbilityEffectParent:entity, AbilityContext:heal_context)&lt;reads&gt;&lt;decides&gt;:void = (ActiveEffects.Length = 0)</code></pre>
+<p><code>Use()</code> 会在创建效果之前自动调用 <code>CanUse()</code>。</p>
+<h3 id="sec-creating-contexts-effects">创建上下文与效果（Creating Contexts and Effects）</h3>
+<p>能力通过重写两个工厂函数来创建它所使用的对象。</p>
+<p><code>MakeContext()</code> 构造传递给效果的上下文：</p>
+<pre><code>MakeContext&lt;override&gt;()&lt;transacts&gt;:heal_context = heal_context{ HealPerTick := 5.0 }</code></pre>
+<p><code>MakeAbility()</code> 构造将执行玩法逻辑的效果实体：</p>
+<pre><code>MakeAbility&lt;override&gt;()&lt;transacts&gt;:heal_effect = heal_effect{}</code></pre>
+<h3 id="sec-activating-ability">激活能力（Activating an Ability）</h3>
+<p>激活能力的步骤：</p>
+<ul>
+<li>构造上下文。</li>
+<li>填充所需数据。</li>
+<li>调用 <code>Use()</code>。</li>
+</ul>
+<pre><code>HealContext := heal_context{ Instigator := option{PlayerAgent} Participants := array{} Targets := array{PlayerEntity} HealPerTick := 10.0 }</code></pre>
+<p><code>Use()</code> 会校验请求、创建效果、绑定上下文、将效果添加到父实体（Parent entity），若激活成功则返回新创建的效果实体。</p>
+<h3 id="sec-ending-ability">结束能力（Ending an Ability）</h3>
+<p>当能力正常完成时调用 <code>EndUse()</code>：</p>
+<pre><code>EndUse(false)</code></pre>
+<p>重写 <code>OnEndUse()</code> 即可执行清理：</p>
+<pre><code>OnEndUse&lt;override&gt;(Reason : ?cancel_reason)&lt;transacts&gt; : void =
+    # Cleanup: unbind events, remove visual effects, etc.
+    return</code></pre>
+<h3 id="sec-cancelling-ability">取消能力（Cancelling an Ability）</h3>
+<p>能力也可以通过取消来结束。</p>
+<p>通过子类化 <code>cancel_reason</code> 创建自定义取消原因：</p>
+<pre><code>sprint_cancel := class(cancel_reason):</code></pre>
+<p>外部系统可以通过 <code>Cancel()</code> 请求取消。</p>
+<p>重写 <code>CanCancel()</code> 即可决定能力是否可以被取消：</p>
+<pre><code>CanCancel&lt;override&gt;(Reason : cancel_reason)&lt;transacts&gt;&lt;decides&gt; : void = true?</code></pre>
+<p>治疗示例中，玩家一旦开始疾跑（sprinting），治疗能力就会自行取消。</p>
+<h3 id="sec-ability-events">能力事件（Ability Events）</h3>
+<p>能力暴露了事件，允许外部系统观察其生命周期：</p>
+<ul>
+<li><code>BeginUseEvent</code></li>
+<li><code>EndUseEvent</code></li>
+</ul>
+<p>能力还维护一个 <code>ActiveEffects</code> 列表，其中包含每个正在运行的效果实例。可利用它实现诸如限制同时存在的效果数量等行为。</p>
+<h2 id="sec-ability-effect-component">能力效果与效果组件（Ability Effect and Effect Component）</h2>
+<p><code>ability_effect</code> 是瞬态生成的玩法实体。该效果通常定义为预制件（prefab），并挂载合适的视觉、音频及其他支撑组件。</p>
+<p><code>ability_effect_component</code> 挂载在 <code>ability_effect</code> 实体上，控制效果的运行时行为与生命周期。效果组件还可以访问相关的能力与上下文。</p>
+<p>该组件可以访问：</p>
+<ul>
+<li>激活上下文（activation context）。</li>
+<li>来源能力（originating ability）。</li>
+<li>效果生命周期（effect's lifecycle）。</li>
+</ul>
+<pre><code>heal_effect_component := class(ability_effect_component):</code></pre>
+<h3 id="sec-effect-lifetime">效果生命周期（Effect Lifetime）</h3>
+<p>重写 <code>OnBeginUse()</code> 即可在玩法开始前执行初始化：</p>
+<pre><code>OnBeginUse&lt;override&gt;()&lt;transacts&gt;:void = if (HealContext := heal_context[Context?]): set HealPerTick = HealContext.HealPerTick</code></pre>
+<p><code>OnBeginUse()</code> 要求目标 <code>ability_effect</code> 已被添加到模拟（simulation）中的父实体，才能在游戏中运行。</p>
+<p>长期运行的行为通常在 <code>OnSimulate()</code> 中执行：</p>
+<pre><code>OnSimulate&lt;override&gt;()&lt;suspends&gt;:void = loop: Sleep(TickInterval) # Gameplay logic.</code></pre>
+<p>治疗示例会周期性地为每个目标回血，直到持续时间结束。</p>
+<h2 id="sec-complete-example-heal">完整示例——治疗能力（Complete Example - Heal Ability）</h2>
+<p>以下示例实现了一个引导型持续治疗能力，演示了：</p>
+<ul>
+<li>自定义上下文。</li>
+<li>自定义效果组件。</li>
+<li>自定义能力。</li>
+<li>能力激活。</li>
+<li>运行时玩法逻辑。</li>
+<li>取消。</li>
+<li>清理。</li>
+</ul>
+<pre><code># Verse Ability Workflow - Working Example
+# A channeled heal-over-time ability that cancels if the player sprints.
+using { /Verse.org/Input }
+using { /UnrealEngine.com/Abilities }
+using { /Fortnite.com/Characters }
+using { /Fortnite.com/Game }
+using { /Fortnite.com/Input }
+using { /Fortnite.com/Playspaces }
+using { /Fortnite.com/Input/Character }
+# 完整 Verse 示例见英文原文页，本镜像保留模块引用与关键类名原文。</code></pre>
+<h2 id="sec-learn-more">了解更多（Learn More）</h2>
+<p>通过以下页面进一步学习能力系统：</p>
+<ul>
+<li><a href="create-your-first-ability-in-unreal-editor-for-fortnite.html"><strong>创建你的第一个能力（Create Your First Ability）</strong></a>——学习创建简单的周期性治疗能力。</li>
+<li><a href="fortnite-template-abilities-in-unreal-editor-for-fortnite.html"><strong>Fortnite 模板能力（Fortnite Template Abilities）</strong></a>——创建简单、响应迅速、时间轴驱动的 Fortnite 能力。</li>
+<li><a href="fortnite-template-ability-quickstart-in-unreal-editor-for-fortnite.html"><strong>Fortnite 模板能力快速上手（Fortnite Template Ability Quickstart）</strong></a>——构建你的第一个 Fortnite 模板能力。</li>
+<li><a href="https://dev.epicgames.com/documentation/fortnite/verse-api/unrealenginedotcom/abilities" target="_blank" rel="noopener"><strong>Verse 能力 API（Verse Abilities API）</strong></a>——了解 Abilities 模块的技术细节。</li>
+<li><a href="ability-and-effect-lifecycle-in-unreal-editor-for-fortnite.html"><strong>能力与效果生命周期（Ability and Effect Lifecycle）</strong></a>——查看能力与效果生命周期的参考说明。</li>
+</ul>
+<h3 id="sec-help">获取帮助</h3>
+<ul>
+<li><a href="https://forums.unrealengine.com/categories?tag=fortnite" target="_blank" rel="noopener">开发者论坛（Developer Forums）</a>：提问并帮助同行。</li>
+<li><a href="https://dev.epicgames.com/community/fortnite/learning" target="_blank" rel="noopener">学习库（Learning Library）</a>：编写你自己的教程，或阅读他人的教程。</li>
+</ul><h2 id="sec-sub">本页包含的子教程</h2><div class="child-grid"><a class="doc-card" href="ability-and-effect-lifecycle-in-unreal-editor-for-fortnite.html"><span class="doc-card-thumb"><img src="https://dev.epicgames.com/community/api/documentation/image/f3608286-7f77-45a9-aa02-3d182133b6d0?resizing_type=fill&width=1920&height=335" alt="能力与效果生命周期" loading="lazy"></span><span class="doc-card-body"><b>能力与效果生命周期</b><i>激活、模拟、停用各阶段与各对象存活期拆解。</i></span></a><a class="doc-card" href="create-your-first-ability-in-unreal-editor-for-fortnite.html"><span class="doc-card-thumb"><img src="https://dev.epicgames.com/community/api/documentation/image/f07a1465-7149-4fe8-bbce-f63e41e05bb7?resizing_type=fill&width=1920&height=335" alt="在 UEFN 中创建你的第一个能力" loading="lazy"></span><span class="doc-card-body"><b>在 UEFN 中创建你的第一个能力</b><i>创建不可叠加的周期性治疗能力，跳跃取消，含 Verse 脚本与玩法系统。</i></span></a><a class="doc-card" href="fortnite-template-abilities-in-unreal-editor-for-fortnite.html"><span class="doc-card-thumb"><img src="https://dev.epicgames.com/community/api/documentation/image/902f9f44-3dc4-4586-a055-3aa27e4b7bb0?resizing_type=fill&width=1920&height=335" alt="Fortnite 模板能力" loading="lazy"></span><span class="doc-card-body"><b>Fortnite 模板能力</b><i>时间轴驱动的简单能力构建方式。</i></span></a><a class="doc-card" href="fortnite-template-ability-quickstart-in-unreal-editor-for-fortnite.html"><span class="doc-card-thumb"><img src="https://dev.epicgames.com/community/api/documentation/image/1c66eac2-7fe8-4a0b-8e6d-a8d0dce6dc92?resizing_type=fill&width=1920&height=335" alt="Fortnite 模板能力快速入门" loading="lazy"></span><span class="doc-card-body"><b>Fortnite 模板能力快速入门</b><i>构建 Spicy Sprint 香辣疾跑模板能力，持续伤害加移速提升。</i></span></a></div><div class="pager"><a class="pager-prev" href="05-inputs-in-fortnite.html">← 上一篇：输入系统</a><a class="pager-next" href="07-partybased-gameplay-using-the-social-synergy-api-in-fortnite.html">下一篇：社交协同 API 与小队玩法 →</a></div></article><nav class="doc-toc" aria-label="本页内容"><b>本页内容</b><ul><li><a href="#sec-core-concepts">核心概念</a></li><li><a href="#sec-ability-context">能力上下文</a></li><li><a href="#sec-ability">能力</a></li><li><a href="#sec-validating-activation">校验激活</a></li><li><a href="#sec-creating-contexts-effects">创建上下文与效果</a></li><li><a href="#sec-activating-ability">激活能力</a></li><li><a href="#sec-ending-ability">结束能力</a></li><li><a href="#sec-cancelling-ability">取消能力</a></li><li><a href="#sec-ability-events">能力事件</a></li><li><a href="#sec-ability-effect-component">能力效果与效果组件</a></li><li><a href="#sec-effect-lifetime">效果生命周期</a></li><li><a href="#sec-complete-example-heal">完整示例——治疗能力</a></li><li><a href="#sec-learn-more">了解更多</a></li><li><a href="#sec-help">获取帮助</a></li><li><a href="#sec-sub">本页包含的子教程</a></li></ul></nav></div></div></div></div><footer class="edc-footer"><div class="inner"><img src="../assets/logo-epic.svg" alt="Epic Games"><span>Fortnite 文档中文镜像 · UE教程/ · 本地打开 index.html 阅读 · 翻译整理自 Epic 官方文档，仅供学习交流</span></div></footer></body></html>

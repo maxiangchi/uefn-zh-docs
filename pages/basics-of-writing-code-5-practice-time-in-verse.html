@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>编写代码基础 5：练习时间（Practice Time） | Fortnite 文档中文镜像</title>
+<link rel="stylesheet" href="../assets/epic.css">
+<link rel="stylesheet" href="../assets/patch.css">
+<link rel="icon" href="../assets/logo-epic.svg">
+</head>
+<body class="theme-fortnite">
+<div class="edc-topbar"><div class="edc-topbar-inner"><img class="edc-logo" src="../assets/logo-epic.svg" alt="Epic Games"><span class="edc-brand">Epic Games <b>开发者社区</b></span><span class="edc-nav"><a href="../index.html">文档首页</a><a href="sub-index.html">子教程索引</a><a href="https://dev.epicgames.com/documentation/fortnite/basics-of-writing-code-5-practice-time-in-verse" target="_blank" rel="noopener">英文原文</a></span></div></div>
+<div class="site-container">
+<aside class="site-nav"><div class="documents-tree"><nav><ul class="contents-table">
+<li class="toc-group"><span class="toc-group-title">A · 最新动态</span><ul><li><a href="01-42-00-fortnite-ecosystem-updates-and-release-notes.html">01. 42.00 生态系统更新与发行说明</a></li><li><a href="02-custom-items-and-inventory-overview-in-fortnite.html">02. 自定义物品与背包总览</a></li><li><a href="03-in-island-transactions-in-fortnite.html">03. 岛内交易</a></li><li><a href="04-mobile-development-in-fortnite.html">04. 移动端开发</a></li><li><a href="05-inputs-in-fortnite.html">05. 输入系统</a></li><li><a href="06-ability-system-in-unreal-editor-for-fortnite.html">06. 能力系统 Ability System</a></li><li><a href="07-partybased-gameplay-using-the-social-synergy-api-in-fortnite.html">07. 社交协同 API 与小队玩法</a></li><li><a href="08-scene-graph-in-unreal-editor-for-fortnite.html">08. 场景图 Scene Graph</a></li></ul></li>
+<li class="toc-group"><span class="toc-group-title">B · 入门指南</span><ul><li><a href="09-build-your-first-island-in-fortnite.html">09. 构建你的第一个岛屿</a></li><li><a href="10-onboarding-guide-to-programming-with-verse-in-unreal-editor-for-fortnite.html">10. Verse 编程入门指南</a></li><li><a href="11-building-basics-in-fortnite-creative.html">11. 建造基础</a></li></ul></li>
+<li class="toc-group"><span class="toc-group-title">C · 品牌合集</span><ul><li><a href="12-star-wars-islands-in-fortnite.html">12. 星球大战™岛屿</a></li><li><a href="13-kpop-demon-hunters-islands-in-fortnite.html">13. KPop 猎魔团岛屿</a></li><li><a href="14-building-lego-islands-in-fortnite.html">14. 乐高®岛屿</a></li><li><a href="15-the-walking-dead-universe-islands-in-unreal-editor-for-fortnite.html">15. 行尸走肉宇宙岛屿</a></li><li><a href="16-teenage-mutant-ninja-turtle-islands-in-unreal-editor-for-fortnite.html">16. 忍者神龟岛屿</a></li><li><a href="17-squid-game-islands-in-fortnite.html">17. 鱿鱼游戏岛屿</a></li></ul></li>
+<li class="toc-group"><span class="toc-group-title">D · 开发者成功</span><ul><li><a href="18-using-creator-portal-in-fortnite-creative.html">18. 使用创作者门户</a></li><li><a href="19-island-moderation-and-guidelines-in-fortnite-creative.html">19. 岛屿审核与准则</a></li></ul></li>
+<li class="toc-group"><span class="toc-group-title">E · 协作与版本控制</span><ul><li><a href="20-creating-teams-in-creator-portal-in-unreal-editor-for-fortnite.html">20. 在创作者门户创建团队</a></li><li><a href="21-adding-playtesters-in-fortnite-creative.html">21. 添加试玩测试员</a></li><li><a href="22-playtesting-your-island-in-unreal-editor-for-fortnite.html">22. 试玩测试你的岛屿</a></li><li><a href="23-collaborating-in-unreal-editor-for-fortnite.html">23. 在 UEFN 中协作</a></li><li><a href="24-lore-version-control-in-unreal-editor-for-fortnite.html">24. Lore 版本控制</a></li><li><a href="25-conflicts-in-lore-version-control-in-unreal-editor-for-fortnite.html">25. Lore 中的冲突</a></li><li><a href="26-version-history-and-conflict-resolution-in-unreal-editor-for-fortnite.html">26. 分支历史与冲突解决</a></li></ul></li>
+<li class="toc-group"><span class="toc-group-title">F · 游戏示例</span><ul><li><a href="27-build-a-game-in-unreal-editor-for-fortnite.html">27. 构建一款游戏</a></li><li><a href="28-unreal-editor-for-fortnite-starter-templates.html">28. UEFN 新手模板</a></li></ul></li>
+<li class="toc-group"><span class="toc-group-title">G · Verse编程</span><ul><li><a href="29-learn-the-basics-of-writing-code-in-verse.html" class="active">29. 从零学习 Verse 代码基础</a></li></ul></li>
+<li class="toc-group"><span class="toc-group-title">H · 专注领域</span><ul><li><a href="30-lighting-in-unreal-editor-for-fortnite.html">30. 灯光</a></li><li><a href="31-animation-and-cinematics-in-unreal-editor-for-fortnite.html">31. 动画与过场动画</a></li><li><a href="32-modeling-in-unreal-editor-for-fortnite.html">32. 建模</a></li><li><a href="33-materials-in-unreal-editor-for-fortnite.html">33. 材质</a></li><li><a href="34-environments-and-landscapes-in-unreal-editor-for-fortnite.html">34. 环境与地形</a></li><li><a href="35-audio-in-unreal-editor-for-fortnite.html">35. 音频</a></li><li><a href="36-visual-effects-in-unreal-editor-for-fortnite.html">36. 视觉特效</a></li></ul></li>
+</ul></nav></div></aside>
+<div class="page-content"><div class="page-document has-theme-bg">
+<header class="section-page-header"><nav><ol class="breadcrumb is-shrinkable"><li class="breadcrumb-item is-root"><img src="../assets/logo-epic.svg" alt="Epic Games"><a href="../index.html">Developer</a></li><li class="breadcrumb-item"><a href="../index.html">Fortnite 文档</a></li><li class="breadcrumb-item"><a href="29-learn-the-basics-of-writing-code-in-verse.html">从零学习 Verse 代码基础</a></li><li class="breadcrumb-item active" aria-current="page"><span class="text-truncate">编写代码基础 5：练习时间（Practice Time）</span></li></ol></nav><h1>编写代码基础 5：练习时间（Practice Time）</h1><p class="text-secondary mb-0">你的 Verse 代码还开着吗？太好了！在本练习中，你将调用真正能伤害 Fortnite 角色的函数，一步步逐行理解代码在做什么。</p><p class="doc-meta">英文原标题：Basics Of Writing Code 5 Practice Time In Verse · <a href="https://dev.epicgames.com/documentation/fortnite/basics-of-writing-code-5-practice-time-in-verse" target="_blank" rel="noopener">查看英文原文</a> · 社区翻译镜像，仅供学习</p></header>
+<div class="doc-columns"><article class="doc-article">
+<h3>前置主题（Prerequisite topics）</h3>
+<p>要理解和使用本页内容，请确保你熟悉以下主题：</p>
+<ul>
+<li><a href="basics-of-writing-code-5-calling-functions-in-verse.html">第 5 课：调用函数（Lesson 5: Calling Functions）</a></li>
+</ul>
+<p>你的 Verse 代码还开着吗？太好了！</p>
+<p>在本练习中，你将调用真正能伤害你的 Fortnite 角色的函数，正如早在<a href="basics-of-writing-code-3-practice-time-in-verse.html">第 3 课：练习时间（Lesson 3: Practice Time）</a>中所承诺的那样！</p>
+<p>在开始编码之前，你需要在 UEFN 岛屿中添加一个<a href="https://dev.epicgames.com/documentation/fortnite/unreal-editor-for-fortnite-glossary#device" target="_blank" rel="noopener">设备（device）</a>。它叫<a href="https://dev.epicgames.com/documentation/en-us/fortnite-creative/using-player-spawn-pad-devices-in-fortnite-creative" target="_blank" rel="noopener">玩家生成器（Player Spawner）</a>，它会让你的玩家角色在设备所在位置生成，而不是默认的 Fortnite 空中生成位置。本练习中的代码要正常工作，必须放置玩家生成器。</p>
+<p>要学习如何放置玩家生成器设备，请参阅<a href="https://dev.epicgames.com/documentation/fortnite/guide-to-uefn-controls-for-creative-users-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">《UEFN 创意用户控制指南（UEFN Controls for Creative Users）》</a>中的对象放置（Object Placement）。你可以把它放在岛屿上的任何位置。</p>
+<p>本练习中用到的部分代码对你来说是新的，但你会有机会回顾每一行在做什么。如果你现在还不能完全理解，也不用担心，本次练习只关乎调用函数。</p>
+<p>确保 Verse 文件的最顶部包含以下所有行。它们告诉 Verse 编译器，你将在自己编写的 Verse 设备中使用 Verse 与 Fortnite 内置代码的哪些部分（<strong>using</strong>）。</p>
+<pre><code>using { /Fortnite.com/Devices }
+using { /Fortnite.com/Characters }
+using { /Fortnite.com/Playspaces }
+using { /Verse.org/Simulation }
+using { /Verse.org/Verse }</code></pre>
+<p>接下来，你要编写伤害 Fortnite 角色的代码行。我们逐行来看。</p>
+<ol>
+<li>调用名为 <code>GetPlayspace()</code> 的函数。它返回一个 <code>fort_playspace</code> 类型的值，你将其保存到名为 <code>Playspace</code> 的常量中。你需要它来获取玩家。</li>
+<li>在常量 <code>Playspace</code> 上调用名为 <code>GetPlayers()</code> 的方法。该方法返回一个 <code>player</code> 类型的数组。<strong>数组（array）</strong>是一种容器，可以容纳多个 Verse 中同类型的变量。在本例中，<code>AllPlayers</code> 数组容纳了关卡中的所有玩家。</li>
+<li>你已经学过可以用 <code>if</code> 在代码中提问是非问题。在本例中，你用 <code>if</code> 询问 <code>AllPlayers</code> 数组的第一个位置是否存在变量。如果存在，表达式 <code>AllPlayers[0]</code> 将返回该位置变量的值，常量 <code>FirstPlayer</code> 将被初始化为该返回值。</li>
+<li>嵌套在第一个 <code>if</code> 中的第二个 <code>if</code> 询问：通过调用 <code>FirstPlayer</code> 常量的方法 <code>GetFortCharacter[]</code>，该常量是否有 Fortnite 角色。注意调用时使用的<strong>方括号</strong>，它们用于调用可能失败的函数，这就是为什么这里用 <code>if</code> 来调用该函数。如果 <code>GetFortCharacter[]</code> 成功返回 <code>fort_character</code> 类型的值，常量 FortniteCharacter 将被初始化为该值。</li>
+<li>最后，既然你已经有了 <code>fort_character</code> 类型的常量，就可以调用它的方法 <code>Damage()</code>。该方法接受一个 <code>float</code> 类型的参数，也就是角色将受到的伤害量。关于参数，你将在下一课学到更多。</li>
+</ol>
+<pre><code>Playspace: fort_playspace = GetPlayspace()
+AllPlayers: []player = Playspace.GetPlayers()
+if (FirstPlayer : player = AllPlayers[0]):
+    if (FortniteCharacter : fort_character = FirstPlayer.GetFortCharacter[]):
+        FortniteCharacter.Damage(50.0)</code></pre>
+<p>如果你运行这段代码，游戏开始时应该会看到你的 Fortnite 角色受到 <code>50.0</code> 点伤害！</p>
+<p>很酷，对吧？</p>
+<h2 id="sec-1">完整脚本</h2>
+<pre><code>using { /Fortnite.com/Devices }
+using { /Fortnite.com/Characters }
+using { /Fortnite.com/Playspaces }
+using { /Verse.org/Simulation }
+using { /Verse.org/Verse }
+hello_world_device := class(creative_device):
+    # Runs when the device is started in a running game
+    OnBegin&lt;override&gt;()&lt;suspends&gt;:void=</code></pre>
+<h2 id="sec-2">下一课</h2>
+<ul>
+<li><a href="basics-of-writing-code-6-defining-a-function-in-verse.html"><strong>第 6 课：定义函数（Lesson 6: Defining a Function）</strong></a>——了解函数由哪些部分组成、如何把它们组装起来。<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/31548e28-112d-4a9e-b291-9fa7cc6486bd?resizing_type=fit&width=640&height=640" alt="第 6 课：定义函数。" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/31548e28-112d-4a9e-b291-9fa7cc6486bd?resizing_type=fit&width=640&height=640" target="_blank" rel="noopener">查看原图</a></div></figure></li>
+</ul>
+<div class="pager"><a href="29-learn-the-basics-of-writing-code-in-verse.html"><small>← 返回父教程</small>从零学习 Verse 代码基础</a><a href="sub-index.html"><small>子教程索引 →</small>全部子教程</a></div>
+</article><nav class="doc-toc" aria-label="本页内容"><b>本页内容</b><a href="#sec-1">完整脚本</a><a href="#sec-2">下一课</a></nav></div>
+</div></div>
+</div>
+<footer class="edc-footer"><div class="inner"><img src="../assets/logo-epic.svg" alt="Epic Games"><span>Fortnite 文档中文镜像 · UE教程/ · 本地打开 index.html 阅读 · 翻译整理自 Epic 官方文档，仅供学习交流</span></div></footer>
+</body>
+</html>

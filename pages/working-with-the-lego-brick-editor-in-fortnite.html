@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>在 Fortnite 中使用乐高积木编辑器 | Fortnite 文档中文镜像</title>
+<link rel="stylesheet" href="../assets/epic.css">
+<link rel="stylesheet" href="../assets/patch.css">
+<link rel="icon" href="../assets/logo-epic.svg">
+</head>
+<body class="theme-fortnite">
+<div class="edc-topbar"><div class="edc-topbar-inner"><img class="edc-logo" src="../assets/logo-epic.svg" alt="Epic Games"><span class="edc-brand">Epic Games <b>开发者社区</b></span><span class="edc-nav"><a href="../index.html">文档首页</a><a href="sub-index.html">子教程索引</a><a href="https://dev.epicgames.com/documentation/fortnite/working-with-the-lego-brick-editor-in-fortnite" target="_blank" rel="noopener">英文原文</a></span></div></div>
+<div class="site-container">
+<aside class="site-nav"><div class="documents-tree"><nav><ul class="contents-table">
+<div class="tree-sec">A最新动态</div><a class="tree-link" href="01-42-00-fortnite-ecosystem-updates-and-release-notes.html">01. 42.00 生态系统更新与发行说明</a><a class="tree-link" href="02-custom-items-and-inventory-overview-in-fortnite.html">02. 自定义物品与背包总览</a><a class="tree-link" href="03-in-island-transactions-in-fortnite.html">03. 岛内交易</a><a class="tree-link" href="04-mobile-development-in-fortnite.html">04. 移动端开发</a><a class="tree-link" href="05-inputs-in-fortnite.html">05. 输入系统</a><a class="tree-link" href="06-ability-system-in-unreal-editor-for-fortnite.html">06. 能力系统 Ability System</a><a class="tree-link" href="07-partybased-gameplay-using-the-social-synergy-api-in-fortnite.html">07. 社交协同 API 与小队玩法</a><a class="tree-link" href="08-scene-graph-in-unreal-editor-for-fortnite.html">08. 场景图 Scene Graph</a><div class="tree-sec">B入门</div><a class="tree-link" href="09-build-your-first-island-in-fortnite.html">09. 构建你的第一个岛屿</a><a class="tree-link" href="10-onboarding-guide-to-programming-with-verse-in-unreal-editor-for-fortnite.html">10. Verse 编程入门指南</a><a class="tree-link" href="11-building-basics-in-fortnite-creative.html">11. 建造基础</a><div class="tree-sec">C品牌合集</div><a class="tree-link" href="12-star-wars-islands-in-fortnite.html">12. 星球大战™岛屿</a><a class="tree-link" href="13-kpop-demon-hunters-islands-in-fortnite.html">13. KPop 猎魔团岛屿</a><a class="tree-link active" href="14-building-lego-islands-in-fortnite.html">14. 乐高®岛屿</a><a class="tree-link" href="15-the-walking-dead-universe-islands-in-unreal-editor-for-fortnite.html">15. 行尸走肉宇宙岛屿</a><a class="tree-link" href="16-teenage-mutant-ninja-turtle-islands-in-unreal-editor-for-fortnite.html">16. 忍者神龟岛屿</a><a class="tree-link" href="17-squid-game-islands-in-fortnite.html">17. 鱿鱼游戏岛屿</a><div class="tree-sec">D开发者成功</div><a class="tree-link" href="18-using-creator-portal-in-fortnite-creative.html">18. 使用创作者门户</a><a class="tree-link" href="19-island-moderation-and-guidelines-in-fortnite-creative.html">19. 岛屿审核与准则</a><div class="tree-sec">E协作</div><a class="tree-link" href="20-creating-teams-in-creator-portal-in-unreal-editor-for-fortnite.html">20. 在创作者门户创建团队</a><a class="tree-link" href="21-adding-playtesters-in-fortnite-creative.html">21. 添加试玩测试员</a><a class="tree-link" href="22-playtesting-your-island-in-unreal-editor-for-fortnite.html">22. 试玩测试你的岛屿</a><a class="tree-link" href="23-collaborating-in-unreal-editor-for-fortnite.html">23. 在 UEFN 中协作</a><a class="tree-link" href="24-lore-version-control-in-unreal-editor-for-fortnite.html">24. Lore 版本控制</a><a class="tree-link" href="25-conflicts-in-lore-version-control-in-unreal-editor-for-fortnite.html">25. Lore 中的冲突</a><a class="tree-link" href="26-version-history-and-conflict-resolution-in-unreal-editor-for-fortnite.html">26. 分支历史与冲突解决</a><div class="tree-sec">F游戏示例</div><a class="tree-link" href="27-build-a-game-in-unreal-editor-for-fortnite.html">27. 构建一款游戏</a><a class="tree-link" href="28-unreal-editor-for-fortnite-starter-templates.html">28. UEFN 新手模板</a><div class="tree-sec">G Verse</div><a class="tree-link" href="29-learn-the-basics-of-writing-code-in-verse.html">29. 从零学习 Verse 代码基础</a><div class="tree-sec">H专注领域</div><a class="tree-link" href="30-lighting-in-unreal-editor-for-fortnite.html">30. 灯光</a><a class="tree-link" href="31-animation-and-cinematics-in-unreal-editor-for-fortnite.html">31. 动画与过场动画</a><a class="tree-link" href="32-modeling-in-unreal-editor-for-fortnite.html">32. 建模</a><a class="tree-link" href="33-materials-in-unreal-editor-for-fortnite.html">33. 材质</a><a class="tree-link" href="34-environments-and-landscapes-in-unreal-editor-for-fortnite.html">34. 环境与地形</a><a class="tree-link" href="35-audio-in-unreal-editor-for-fortnite.html">35. 音频</a><a class="tree-link" href="36-visual-effects-in-unreal-editor-for-fortnite.html">36. 视觉特效</a>
+</ul></nav></div></aside>
+<div class="page-content"><div class="page-document has-theme-bg">
+<header class="section-page-header"><nav><ol class="breadcrumb is-shrinkable"><li class="breadcrumb-item is-root"><img src="../assets/logo-epic.svg" alt="Epic Games"><a href="../index.html">Developer</a></li><li class="breadcrumb-item"><a href="../index.html">Fortnite 文档</a></li><li class="breadcrumb-item"><a href="14-building-lego-islands-in-fortnite.html">乐高®岛屿</a></li><li class="breadcrumb-item active" aria-current="page"><span class="text-truncate">在 Fortnite 中使用乐高积木编辑器</span></li></ol></nav><h1>在 Fortnite 中使用乐高积木编辑器</h1><p class="text-secondary mb-0">使用乐高®积木编辑器（LEGO® Brick Editor）像在客厅里一样一块一块地搭建，在岛上创建独特的积木体验。本指南介绍编辑器面板、拼搭、旋转、吸附与 Kragle 固化成静态网格体的完整工作流。</p><p class="doc-meta">英文原标题：Working With the LEGO Brick Editor in Fortnite · <a href="https://dev.epicgames.com/documentation/fortnite/working-with-the-lego-brick-editor-in-fortnite" target="_blank" rel="noopener">查看英文原文</a> · 社区翻译镜像，仅供学习</p></header>
+<div class="doc-columns"><article class="doc-article">
+
+<p>你可以使用乐高®积木编辑器（LEGO® Brick Editor），像在客厅里一样一块一块地拼搭，在岛上创建独特的积木体验！乐高积木编辑器提供大量乐高积木，颜色鲜艳且为正宗不透明乐高颜色。无论是构建自定义乐高资产，还是打造自己的积木小镇，乐高积木编辑器都能实现。</p>
+<p>开始搭建自己的乐高作品没有错误的方式：你可以一次性从画廊中取出所有需要的积木，也可以一块一块地取；或者先取出几块，跟着直觉拼搭。最适合你的搭建风格就是正确的方式！</p>
+<p>按以下步骤打开<strong>乐高积木编辑器（LEGO Brick Editor）</strong>：</p>
+<ul><li>在工具栏中找到<strong>选择模式（Selection Mode）</strong>下拉菜单，选择 <strong>LEGO® 积木编辑器（LEGO® Brick Editor）</strong>。</li></ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/aa36cd37-f5cb-4f76-8ab7-ca57e8e61fe3?resizing_type=fit" alt="打开乐高积木编辑器原文示意图1" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/aa36cd37-f5cb-4f76-8ab7-ca57e8e61fe3?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>你也可以使用键盘快捷键 <strong>Shift+6</strong> 切换到乐高积木编辑器。</p>
+<p>乐高积木编辑器是用于拼搭自己的乐高静态网格体的工具，可用作道具等。它是一个包含固定数量乐高积木的画廊，你可以为积木应用官方提供的一套原始乐高颜色。你不能用乐高积木编辑器创建自己的积木，也不能放大缩小积木，必须使用积木默认的颗粒（stud）尺寸。关于乐高积木的更多信息，请参阅<strong><a href="lego-brand-rules-in-fortnite.html">乐高®品牌规则（LEGO® Brand Rules）</a></strong>与<strong><a href="working-with-lego-islands-in-fortnite-creative.html">使用乐高岛屿（Working with LEGO Islands）</a></strong>。</p>
+<h2 id="sec-1">乐高积木编辑器概览</h2>
+<p>乐高积木编辑器会在视口左侧添加一个 UI 面板，包含构建独特积木资产所需的全部功能与工具。在该面板中，你将选择积木与积木颜色，准备好后将积木 Kragle 固化粘合，需要编辑已固化作品时再将其分离。</p>
+<p>乐高积木编辑器使用 UEFN 的常规编辑器功能，如大纲（Outliner）、细节面板与内容浏览器。乐高积木编辑器也适用于项目浏览器品牌模板选项卡中所有基于乐高模板的岛屿。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/044f4352-f4dd-45a6-8353-94c7d7350077?resizing_type=fit" alt="乐高积木编辑器面板原文示意图2" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/044f4352-f4dd-45a6-8353-94c7d7350077?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>乐高积木编辑器面板有三个主要部分：</p>
+<ul><li><strong>乐高积木编辑器工具（LEGO Brick Editor Tools）</strong></li><li><strong>积木颜色（Brick Color）</strong></li><li><strong>积木搜索与索引（Brick Search and Index）</strong></li></ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/b664a1cc-6fb8-4dbc-a840-3ff79b57c28d?resizing_type=fit" alt="编辑器面板三大部分原文示意图3" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/b664a1cc-6fb8-4dbc-a840-3ff79b57c28d?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h3>乐高积木编辑器工具</h3>
+<p>乐高积木编辑器工具有三个主要功能：</p>
+<ul>
+<li><strong>吸附（Snap）</strong>——使用选定的吸附模式设置将积木拼在一起。</li>
+<li><strong>Kragle 固化</strong>——将作品粘合为可在项目中使用的乐高静态网格体。</li>
+<li><strong>分离（Separate）</strong>——分离乐高静态网格体的部件，以便编辑设计并重新保存更新后的静态网格体。</li>
+</ul>
+<p>关于 Kragle 的更多信息，请参阅下文 Kragle 一节。</p>
+<h3>积木颜色</h3>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/0d0dead0-5d1a-4b24-9804-a35ac524fd96?resizing_type=fit" alt="积木颜色功能原文示意图4" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/0d0dead0-5d1a-4b24-9804-a35ac524fd96?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>积木颜色包含以下功能：</p>
+<ul>
+<li><strong>颜色（Color）</strong>——该下拉菜单显示当前激活的颜色选择，可用于选择即将放入视口的积木颜色，或应用于已选积木。</li>
+<li><strong>读取积木颜色（Read Brick Color）</strong>——读取视口中所选积木的颜色，并将其应用到颜色下的激活颜色选择。选中某块积木的颜色进行复制，再粘贴到另一块积木上。</li>
+<li><strong>应用积木颜色（Apply Brick Color）</strong>——将所选积木的颜色更改为激活颜色选择中的颜色，下一块取出的积木将使用相同颜色。</li>
+</ul>
+<p>放置积木后，还可以从<strong>细节</strong>面板更改其颜色。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/78cd7e87-c619-477a-86e9-364ed7a1ed9e?resizing_type=fit" alt="在细节面板更改颜色原文示意图5" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/78cd7e87-c619-477a-86e9-364ed7a1ed9e?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h3>乐高积木搜索与索引</h3>
+<p>乐高积木编辑器索引列出所有可用积木。滚动索引找到合适的积木，或在搜索栏输入积木名称缩小搜索范围。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/336b9057-f7f9-4722-b641-32871f2a9c73?resizing_type=fit" alt="积木搜索与索引原文示意图6" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/336b9057-f7f9-4722-b641-32871f2a9c73?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>乐高积木有两个限制条件：</p>
+<ul>
+<li>索引中的积木只有固定的颜色集。为保持 UEFN 中乐高积木的真实性，不允许更改其材质（Material）。</li>
+<li>索引中的积木不能在项目中缩放。在乐高积木编辑器模式下该功能被禁用，项目验证器会确保遵守此规则。</li>
+</ul>
+<p>你可能会问，为什么不能缩放积木？乐高积木必须在整个项目中保持统一缩放，颗粒与管状结构才能对接。关于乐高积木尺寸的更多信息，请参阅<strong><a href="working-with-lego-islands-in-fortnite-creative.html">使用乐高岛屿（Working With LEGO Islands）</a></strong>。</p>
+<p>搭建时，你可能想复制已选的一块或一组积木。按下键盘 <strong>Ctrl+D</strong>，副本将出现在所选内容旁边。搭建过程中你会经常用到这个快捷键。</p>
+<p>要查看积木编辑器中的全部积木，请参阅<strong><a href="https://dev.epicgames.com/documentation/fortnite/lego-brick-index-in-fortnite" target="_blank" rel="noopener">乐高®积木索引（LEGO® Brick Index）</a></strong>。</p>
+<h2 id="sec-2">拼搭积木</h2>
+<p>准备好成为建筑大师开始拼搭了吗？以下是上手的基本步骤：</p>
+<ul>
+<li>为积木选择一种<strong>颜色</strong>。</li>
+<li>将选定的<strong>积木</strong>从积木画廊拖入视口。</li>
+<li>重复以上步骤，创造你梦想中的乐高建筑或物品。</li>
+</ul>
+<p>要练习使用乐高积木编辑器，请打开<strong><a href="https://dev.epicgames.com/documentation/fortnite/lego-brick-editor-template-in-fortnite" target="_blank" rel="noopener">乐高积木编辑器模板（LEGO Brick Editor Template）</a></strong>岛屿，并跟随乐高积木编辑器模板文档学习编辑器工具的用法。</p>
+<p>要拆解积木，请选中已 Kragle 的积木，再从乐高积木编辑器工具中选择<strong>分离（Separate）</strong>，积木会立即解除粘合，但不会散架。</p>
+<h2 id="sec-3">积木旋转</h2>
+<p>积木使用标准旋转 gizmo 旋转。在旋转模式下选中积木时，积木内部会出现一个菱形，菱形随乐高积木被 gizmo 旋转，让你了解积木的 3D 朝向。每块积木上的每个颗粒与连接点都是不同的轴心点，因此可以将旋转 gizmo 设置到顶部轴心点与底部轴心点。</p>
+<p>默认情况下，积木围绕每根轴以 90 度为步进吸附旋转，你也可以用键盘旋转积木。</p>
+<p>点击积木时会出现黄色菱形，编辑器会找到离光标最近的连接区域并将其作为旋转轴心。连接区域如同传感器与磁铁，能感应附近的另一块积木，并引导积木朝积木或底板上最近的颗粒吸附连接。</p>
+<p>使用乐高积木时，务必在乐高积木编辑器工具中操作。该工具激活后，会用自己的选择、位移与旋转 gizmo 覆盖工具栏。在该工具之外使用这些 gizmo 将无法保持乐高连接关系。</p>
+<h2 id="sec-4">将积木吸附拼接</h2>
+<p>在乐高积木编辑器模式下，积木相互靠近时会自动吸附拼接。为获得最佳吸附效果，使用乐高积木编辑器时请确保 <strong>UEFN 吸附位置（UEFN Snapping Location）</strong>设置为 <strong>16</strong>。</p>
+<p>乐高积木使用 16 的倍数吸附到网格上的颗粒区域（Stud Region）。关于乐高颗粒、积木尺寸、吸附等的更多信息，请参阅<a href="working-with-lego-islands-in-fortnite-creative.html">使用乐高岛屿（Working With LEGO Islands）</a>。</p>
+<p>乐高®积木吸附仅在乐高积木编辑器模式下生效。乐高积木编辑器吸附设置使用的吸附尺寸与默认 UEFN 编辑器不同。在乐高积木编辑器模式下，以下 Fortnite 吸附设置不可用：</p>
+<ul>
+<li>吸附开关（Snapping Toggle）</li>
+<li>吸附到网格（Snap to Grid）</li>
+<li>吸附到当前角度（Snap to Present Angle）</li>
+<li>缩放调整比率（Scaling Resize Ratios）</li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/333835f1-7c3c-47b9-988a-7ee9137bfef6?resizing_type=fit&width=1920&height=1080" alt="默认 UEFN 编辑器" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/333835f1-7c3c-47b9-988a-7ee9137bfef6?resizing_type=fit&width=1920&height=1080" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/52eac276-6607-4c13-ba64-2e9797f9e279?resizing_type=fit&width=1920&height=1080" alt="乐高积木编辑器" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/52eac276-6607-4c13-ba64-2e9797f9e279?resizing_type=fit&width=1920&height=1080" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h3>高级吸附设置</h3>
+<p>你可以在视口工具栏的<strong>网格体元素选择（Mesh Element Selection）</strong>设置中找到高级吸附设置。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/9e728729-f4fc-44fb-8bc1-59b2183d8534?resizing_type=fit" alt="高级吸附设置原文示意图7" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/9e728729-f4fc-44fb-8bc1-59b2183d8534?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<table><thead><tr><th>设置</th><th>功能</th></tr></thead><tbody>
+<tr><td><strong>点击结束拖拽（Click to End Drag）</strong></td><td>积木跟随鼠标移动，直到点击放置到另一块积木或网格上。该设置默认关闭，在视口中选中未固化的积木即可启用。</td></tr>
+<tr><td><strong>启用边缘吸附（Enable Edge Snapping）</strong></td><td>使积木在相邻放置时尝试相互吸附。</td></tr>
+<tr><td><strong>最大吸附距离（Max Snapping Distance）</strong></td><td>使用 gizmo 时，为完成吸附而移动所选内容的最大距离。</td></tr>
+<tr><td><strong>单区域放置（Single Field Placement）</strong></td><td>拖拽积木时，决定单个颗粒或管状结构是否应与另一个单个颗粒或管状结构连接。</td></tr>
+</tbody></table>
+<p>你可以通过配置按积木表面、旋转等选择吸附的方式来自定义吸附。点击视口工具栏的<strong>磁铁（Magnet）</strong>图标，选择新的<strong>吸附（Snapping）</strong>设置。</p>
+<p>在乐高积木编辑器中，积木像现实世界一样拼接，只能上下叠搭，不能相互穿插。如果无法拼接，请检查视口中是否有东西挡住积木的吸附目标，也可以退出再回到乐高积木编辑器，看软重置是否有帮助。</p>
+<h2 id="sec-5">Kragle 固化你的乐高作品</h2>
+<p>就像《乐高大电影》中一样，你的乐高积木可以被“胶水”粘合为一个优化后的静态网格体，还不用担心手上沾到胶水。Kragle 工具如同数字内容创作工具，可用于构建在项目中多次使用的模块化部件。</p>
+<p>将大型物体拆分为多个较小的子集并分别固化。</p>
+<p>例如，创建建筑时，可以将不同的墙体部件固化为一个可复用部件，继续固化建筑的不同部分：地板、屋顶等。</p>
+<p>为体验创建物品时，先固化基础结构，再添加不同的积木进行装饰，让物品各具特色。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/438d1e21-723a-4ed0-a578-1b205ec67dc5?resizing_type=fit" alt="Kragle 固化示例原文示意图8" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/438d1e21-723a-4ed0-a578-1b205ec67dc5?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>固化资产后，所有固化网格体都会收集到内容浏览器中。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/8a3129f2-ad7c-4086-94cd-7ccbd56d94c6?resizing_type=fit&width=1920&height=1080" alt="未使用 Kragle 固化" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/8a3129f2-ad7c-4086-94cd-7ccbd56d94c6?resizing_type=fit&width=1920&height=1080" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/618309d0-9ada-4f39-b959-f9417570caac?resizing_type=fit&width=1920&height=1080" alt="使用 Kragle 固化后" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/618309d0-9ada-4f39-b959-f9417570caac?resizing_type=fit&width=1920&height=1080" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>在选择模式下，双击一块乐高积木或网格体会选中该物品以及通过颗粒与之连接的所有其他物品，该过程会自动延续，直到所有相连的上级与下级都被选中。当你想选中一组积木进行固化时，这非常方便。</p>
+<p>固化时有以下限制与技巧需要注意：</p>
+<ul>
+<li>结构固化后，不能再为固化积木应用新颜色。要添加新颜色，必须先分离积木再重新固化。</li>
+<li>固化作用于所选积木，无论它们是实际拼接在一起还是仅彼此靠近。固化可能需要一些时间，请耐心等待。</li>
+<li>撤销 Kragle 操作会返回原始积木，但不会撤销对已固化网格体的更改。出于内存考虑这样设计，因为将整个网格体保留在撤销历史中不可行。</li>
+<li>如果在现有固化网格体之上固化，场景中该网格体的所有实例都会更新。操作时要小心，形状改动过大可能意外产生穿插或破坏现有连接。</li>
+<li>固化网格体的轴心位于生成网格体的底部中心。如果不符合需求，可在生成后使用<strong>建模模式（Modeling Mode）</strong>/<strong>编辑轴心（Edit Pivot）</strong>工具编辑。重新固化后更改的轴心不会保留。</li>
+<li>你可能还想微调生成的碰撞体，只要保留乐高/乐高穿插检测即可。重新固化后更改不会保留。</li>
+<li>为优化网格体，固化会尝试判断某个三角形是否能从外部看到，若完全不可见则移除这些三角形。这大幅降低最终三角形数量，但也影响建模方式：不要把打算走入的复杂空间做成一个固化网格体，应将其拆分为组成部件。</li>
+</ul>
+<h3>固化时的内存管理</h3>
+<p>固化积木被编辑器视为自定义构建资产。根据乐高结构的大小，可能占用大量内存。这时将关键部件固化在一起就很有用，这是控制内存上限的有效方式。</p>
+<p>固化模型的内存占用大于未固化模型。未固化模型会对重复部件进行实例化，甚至精确到积木级别。当模型固化为一个物体后，无法再对单个积木实例化，因此占用更多内存。</p>
+<p>那为什么还要固化积木资产？固化让搭建过程更快！将设计的关键部件固化在一起，就创建出可拼接成更大物体的重复图案，移动已搭建结构时也不必逐块拖入视口。</p>
+<p>资产固化后会成为<a href="https://dev.epicgames.com/documentation/fortnite/fortnite-glossary#static-mesh" target="_blank" rel="noopener">静态网格体（static mesh）</a>。该静态网格体经过高度优化，比单个积木运行效率更高。同一静态网格体可在项目中多次使用而不增加内存需求，因为副本引用原始静态网格体实例及其信息，无额外内存开销。</p>
+<p>乐高积木编辑器也适用于 UEFN 的内存管理工具。要优化项目，请参阅<strong><a href="https://dev.epicgames.com/documentation/fortnite/memory-and-optimization-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">内存与优化（Memory and Optimization）</a></strong>一节中的文档。</p>
+<p>你可以向已固化的网格体添加新的乐高积木，继续打造你的精美作品。</p>
+<h2 id="sec-6">常见问题</h2>
+<h3>乐高积木编辑器能与乐高组装设备配合使用吗？</h3>
+<p>不能，用乐高积木编辑器创建的物品不能用于组装设备。组装设备使用的乐高资产是几何体集合（geometry collections），而乐高积木编辑器使用静态网格体。由于乐高积木编辑器导出的是静态网格体，组装设备无法将其识别为可组装对象。</p>
+<h3>单个积木与固化网格体如何与现有乐高内容画廊中的资产交互？</h3>
+<p>在第一个版本中，我们在编辑器模式层面将它们分开。在编辑器模式下，你只能选中单个积木或固化网格体，连接规则不考虑画廊物品。</p>
+<h3>如何获得更多积木与积木颜色？</h3>
+<p>首个版本保持精简，旨在向社区介绍该编辑器，了解哪些功能对开发者有价值。你不能创建新积木，也不能应用预设以外的颜色。未来可能向乐高积木编辑器添加新积木与颜色。关于乐高积木的允许与禁止事项，请参阅<strong><a href="lego-brand-rules-in-fortnite.html">乐高®品牌规则（LEGO® Brand Rules）</a></strong>。</p>
+<h3>编辑器缺少关键功能，什么时候推出？</h3>
+<p>首个版本保持精简，旨在向社区介绍该编辑器，了解哪些功能对开发者有价值。请在<a href="https://forums.unrealengine.com/categories?tag=fortnite" target="_blank" rel="noopener">论坛（forums）</a>中反馈你想看到的功能。</p>
+<h3>乐高积木编辑器能与 BuildingProp 一起使用吗？</h3>
+<p>能，你可以在 Fortnite 建筑道具（Building Prop）与建筑静态网格体 Actor 中使用固化静态网格体。</p>
+<h3>乐高积木编辑器能与场景图（Scene Graph）一起使用吗？</h3>
+<p>能，一旦通过固化创建静态网格体，生成的网格体就可以用网格体组件（Mesh Component）引用。注意场景图同样适用相同规则：不得更改材质、不得更改缩放、避免乐高/乐高穿插。前两项受验证保护，但我们尚未对网格体组件的物体重叠进行验证，这将在未来版本中加入。</p>
+<h3>积木被击中时会散架吗？</h3>
+<p>在第一个版本中，我们暂不支持几何体集合（Geometry Collections），它是可破坏乐高内容画廊物品的底层对象格式。同样，组装设备需要几何体集合才能工作，因此首个版本不支持。建议暂时使用冒险模板中的技术，让 BuildingProps 在死亡时消失并生成单个货币颗粒。</p>
+<p>标签：art、mesh、level design、art pipeline</p>
+<div class="block-callout">在<a href="https://forums.unrealengine.com/categories?tag=fortnite" target="_blank" rel="noopener">开发者论坛（Developer Forums）</a>提问并帮助同行。在<a href="https://dev.epicgames.com/community/fortnite/learning" target="_blank" rel="noopener">学习库（Learning Library）</a>编写自己的教程或阅读他人的教程。</div>
+
+<div class="pager"><a href="14-building-lego-islands-in-fortnite.html"><small>← 返回父教程</small>乐高®岛屿</a><a href="sub-index.html"><small>子教程索引 →</small>全部子教程</a></div>
+</article><nav class="doc-toc" aria-label="本页内容"><b>本页内容</b><a href="#sec-1">乐高积木编辑器概览</a><a href="#sec-2">拼搭积木</a><a href="#sec-3">积木旋转</a><a href="#sec-4">将积木吸附拼接</a><a href="#sec-5">Kragle 固化你的乐高作品</a><a href="#sec-6">常见问题</a></nav></div>
+</div></div>
+</div>
+<footer class="edc-footer"><div class="inner"><img src="../assets/logo-epic.svg" alt="Epic Games"><span>Fortnite 文档中文镜像 · UE教程/ · 本地打开 index.html 阅读 · 翻译整理自 Epic 官方文档，仅供学习交流</span></div></footer>
+</body>
+</html>

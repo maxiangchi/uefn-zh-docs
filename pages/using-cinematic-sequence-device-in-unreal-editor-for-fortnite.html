@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>使用影视级过场（Cinematic Sequence）设备 | Fortnite 文档中文镜像</title>
+<link rel="stylesheet" href="../assets/epic.css">
+<link rel="stylesheet" href="../assets/patch.css">
+<link rel="icon" href="../assets/logo-epic.svg">
+</head>
+<body class="theme-fortnite">
+<div class="edc-topbar"><div class="edc-topbar-inner"><img class="edc-logo" src="../assets/logo-epic.svg" alt="Epic Games"><span class="edc-brand">Epic Games <b>开发者社区</b></span><span class="edc-nav"><a href="../index.html">文档首页</a><a href="sub-index.html">子教程索引</a><a href="https://dev.epicgames.com/documentation/fortnite/using-cinematic-sequence-device-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">英文原文</a></span></div></div>
+<div class="site-container">
+<aside class="site-nav"><div class="documents-tree"><nav><ul class="contents-table">
+<div class="tree-sec">A 最新动态</div>
+<a class="tree-link" href="01-42-00-fortnite-ecosystem-updates-and-release-notes.html">01. 42.00 生态系统更新与发行说明</a>
+<a class="tree-link" href="02-custom-items-and-inventory-overview-in-fortnite.html">02. 自定义物品与背包总览</a>
+<a class="tree-link" href="03-in-island-transactions-in-fortnite.html">03. 岛内交易</a>
+<a class="tree-link" href="04-mobile-development-in-fortnite.html">04. 移动端开发</a>
+<a class="tree-link" href="05-inputs-in-fortnite.html">05. 输入系统</a>
+<a class="tree-link" href="06-ability-system-in-unreal-editor-for-fortnite.html">06. 能力系统 Ability System</a>
+<a class="tree-link" href="07-partybased-gameplay-using-the-social-synergy-api-in-fortnite.html">07. 社交协同 API 与小队玩法</a>
+<a class="tree-link" href="08-scene-graph-in-unreal-editor-for-fortnite.html">08. 场景图 Scene Graph</a>
+<div class="tree-sec">B 入门</div>
+<a class="tree-link" href="09-build-your-first-island-in-fortnite.html">09. 构建你的第一个岛屿</a>
+<a class="tree-link" href="10-onboarding-guide-to-programming-with-verse-in-unreal-editor-for-fortnite.html">10. Verse 编程入门指南</a>
+<a class="tree-link" href="11-building-basics-in-fortnite-creative.html">11. 建造基础</a>
+<div class="tree-sec">C 品牌合集</div>
+<a class="tree-link" href="12-star-wars-islands-in-fortnite.html">12. 星球大战™岛屿</a>
+<a class="tree-link" href="13-kpop-demon-hunters-islands-in-fortnite.html">13. KPop 猎魔团岛屿</a>
+<a class="tree-link" href="14-building-lego-islands-in-fortnite.html">14. 乐高®岛屿</a>
+<a class="tree-link" href="15-the-walking-dead-universe-islands-in-unreal-editor-for-fortnite.html">15. 行尸走肉宇宙岛屿</a>
+<a class="tree-link" href="16-teenage-mutant-ninja-turtle-islands-in-unreal-editor-for-fortnite.html">16. 忍者神龟岛屿</a>
+<a class="tree-link" href="17-squid-game-islands-in-fortnite.html">17. 鱿鱼游戏岛屿</a>
+<div class="tree-sec">D 开发者成功</div>
+<a class="tree-link" href="18-using-creator-portal-in-fortnite-creative.html">18. 使用创作者门户</a>
+<a class="tree-link" href="19-island-moderation-and-guidelines-in-fortnite-creative.html">19. 岛屿审核与准则</a>
+<div class="tree-sec">E 协作</div>
+<a class="tree-link" href="20-creating-teams-in-creator-portal-in-unreal-editor-for-fortnite.html">20. 在创作者门户创建团队</a>
+<a class="tree-link" href="21-adding-playtesters-in-fortnite-creative.html">21. 添加试玩测试员</a>
+<a class="tree-link" href="22-playtesting-your-island-in-unreal-editor-for-fortnite.html">22. 试玩测试你的岛屿</a>
+<a class="tree-link" href="23-collaborating-in-unreal-editor-for-fortnite.html">23. 在 UEFN 中协作</a>
+<a class="tree-link" href="24-lore-version-control-in-unreal-editor-for-fortnite.html">24. Lore 版本控制</a>
+<a class="tree-link" href="25-conflicts-in-lore-version-control-in-unreal-editor-for-fortnite.html">25. Lore 中的冲突</a>
+<a class="tree-link" href="26-version-history-and-conflict-resolution-in-unreal-editor-for-fortnite.html">26. 分支历史与冲突解决</a>
+<div class="tree-sec">F 游戏示例</div>
+<a class="tree-link" href="27-build-a-game-in-unreal-editor-for-fortnite.html">27. 构建一款游戏</a>
+<a class="tree-link" href="28-unreal-editor-for-fortnite-starter-templates.html">28. UEFN 新手模板</a>
+<div class="tree-sec">G Verse</div>
+<a class="tree-link" href="29-learn-the-basics-of-writing-code-in-verse.html">29. 从零学习 Verse 代码基础</a>
+<div class="tree-sec">H 专注领域</div>
+<a class="tree-link" href="30-lighting-in-unreal-editor-for-fortnite.html">30. 灯光</a>
+<a class="tree-link active" href="31-animation-and-cinematics-in-unreal-editor-for-fortnite.html">31. 动画与过场动画</a>
+<a class="tree-link" href="32-modeling-in-unreal-editor-for-fortnite.html">32. 建模</a>
+<a class="tree-link" href="33-materials-in-unreal-editor-for-fortnite.html">33. 材质</a>
+<a class="tree-link" href="34-environments-and-landscapes-in-unreal-editor-for-fortnite.html">34. 环境与地形</a>
+<a class="tree-link" href="35-audio-in-unreal-editor-for-fortnite.html">35. 音频</a>
+<a class="tree-link" href="36-visual-effects-in-unreal-editor-for-fortnite.html">36. 视觉特效</a>
+
+</ul></nav></div></aside>
+<div class="page-content"><div class="page-document has-theme-bg">
+<header class="section-page-header"><nav><ol class="breadcrumb is-shrinkable"><li class="breadcrumb-item is-root"><img src="../assets/logo-epic.svg" alt="Epic Games"><a href="../index.html">Developer</a></li><li class="breadcrumb-item"><a href="../index.html">Fortnite 文档</a></li><li class="breadcrumb-item"><a href="31-animation-and-cinematics-in-unreal-editor-for-fortnite.html">动画与过场动画</a></li><li class="breadcrumb-item active" aria-current="page"><span class="text-truncate">使用影视级过场（Cinematic Sequence）设备</span></li></ol></nav><h1>使用影视级过场（Cinematic Sequence）设备</h1><p class="text-secondary mb-0">影视级过场（Cinematic Sequence）设备可在关卡中播放预先制作的关卡过场（Level Sequence），在非线性时间轴上添加自定义关键帧动画，本文介绍设备的放置、用户选项与直接事件绑定。</p><p class="doc-meta">英文原标题：Using Cinematic Sequence Device in Unreal Editor for Fortnite · <a href="https://dev.epicgames.com/documentation/fortnite/using-cinematic-sequence-device-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">查看英文原文</a> · 社区翻译镜像，仅供学习</p></header>
+<div class="doc-columns"><article class="doc-article">
+<p><strong>影视级过场（Cinematic Sequence）</strong>设备提供了一种向关卡添加<a href="https://dev.epicgames.com/documentation/fortnite/fortnite-glossary#cinematic-sequence" target="_blank" rel="noopener">影视级过场（cinematic sequence）</a>的方法，让你可以在非线性时间轴上添加自定义<a href="https://dev.epicgames.com/documentation/fortnite/fortnite-glossary#keyframe" target="_blank" rel="noopener">关键帧（keyframe）</a>动画。</p>
+<p>你可以把它理解为制作一段过场动画：展示敌人的能力、演示如何完成某项任务的重要剧情，或通过角色之间的对话推动故事发展。</p>
+<p>有关如何在设备中配合关卡过场使用的更多信息，请参阅 <a href="https://dev.epicgames.com/documentation/en-us/uefn/sequencer-and-control-rig-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">Sequencer 与 Control Rig</a>。</p>
+<p>该设备会占用较多<a href="https://dev.epicgames.com/documentation/fortnite/memory-used-bar" target="_blank" rel="noopener">内存（memory）</a>，添加动画时也需要较强的算力。在岛屿上加载一个影视级过场设备需要几秒钟，因此在同一岛屿上放置多个该设备时请谨慎。</p>
+<p>设备占用的内存量很大程度上取决于其播放资产的复杂度。请试玩测试你的过场，确保它们在 Fortnite 创意模式（Fortnite Creative）中流畅运行。</p>
+<h2 id="sec-1">查找并放置设备</h2>
+<ul>
+<li>打开<strong><a href="https://dev.epicgames.com/documentation/fortnite/fortnite-glossary#content-browser" target="_blank" rel="noopener">内容浏览器（Content Browser）</a></strong>。</li>
+<li>打开 <strong>Fortnite</strong> 文件夹索引列表。</li>
+<li>打开 <strong>Devices</strong> 文件夹。</li>
+<li>选中<strong>影视级过场（Cinematic Sequence）</strong>设备，按住拖入<strong>视口（viewport）</strong>。</li>
+<li>在<strong>大纲（Outliner）</strong>面板中选中<strong>影视级过场（Cinematic Sequence）</strong>设备。</li>
+<li>在<strong>细节（Details）</strong>面板中配置<strong>影视级过场（Cinematic Sequence）</strong>设备的<strong>用户选项（User Options）</strong>。</li>
+</ul>
+<p>如果在同一岛屿上使用了同一设备的多个副本，为它们<a href="https://www.fortnite.com/en-US/creative/docs/fortnite-creative-glossary#rename-a-device" target="_blank" rel="noopener">重命名（rename）</a>会很有帮助。你可以选用与每个设备用途相关的<a href="https://dev.epicgames.com/documentation/fortnite/outliner-tips-and-tricks-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">名称（names）</a>，这样更容易记住每个设备的作用。</p>
+<h2 id="sec-2">用户选项（User Options）</h2>
+<p>该设备被其他设备触发时，会播放预先制作的<a href="https://dev.epicgames.com/documentation/en-us/unreal-engine/level-sequence-settings-in-the-unreal-engine-project-settings?application_version=5.5" target="_blank" rel="noopener">关卡过场（Level Sequence）</a>。把设备拖入<strong>视口（viewport）</strong>后，可以更改设备的缩放、<a href="https://dev.epicgames.com/documentation/fortnite/unreal-editor-for-fortnite-glossary#axis" target="_blank" rel="noopener">坐标轴（axis）</a>（X、Y、Z）与旋转。沿 Z 轴提拉设备可以让底座可见，并让它落在关卡平面上。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/5b97f6f7-7c8b-4f26-9d2c-bfff05ef4581?resizing_type=fit" alt="视口中编辑状态下的影视级过场设备外观" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/5b97f6f7-7c8b-4f26-9d2c-bfff05ef4581?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>上图是该设备在编辑时于视口中的显示效果，并非试玩时在岛屿上的显示效果。</p>
+<p>你可以通过以下选项配置该设备。</p>
+<p>默认值已加粗显示。</p>
+<table>
+<thead><tr><th>选项</th><th>取值</th><th>说明</th></tr></thead>
+<tbody>
+<tr><td><strong>过场（Sequence）</strong></td><td>从下拉菜单中选择一个过场。</td><td>你希望用该设备播放的动画。</td></tr>
+<tr><td><strong>循环播放（Loop Playback）</strong></td><td>打开开关即启用。</td><td>循环播放<strong>关卡过场（Level Sequence）</strong>，直到被停止。</td></tr>
+<tr><td><strong>完成状态覆盖（Finish Completion State Override）</strong></td><td><strong>无（None）</strong>、强制保持状态（Force Keep State）、强制还原状态（Force Restore State）</td><td>决定<strong>关卡过场（Level Sequence）</strong>播放完成后如何处理轨道状态。<ul><li><strong>强制保持状态（Force Keep State）</strong>：强制关卡过场在轨道结束时保持其状态。</li><li><strong>强制还原状态（Force Restore State）</strong>：强制关卡过场在轨道结束时还原其状态。</li></ul></td></tr>
+<tr><td><strong>自动播放（Auto Play）</strong></td><td>打开开关即启用。</td><td>游戏开始时即开始播放<strong>关卡过场（Level Sequence）</strong>。打开该选项后，按阶段启用（Enabled on Phase）选项会高亮显示。</td></tr>
+<tr><td><strong>按阶段启用（Enabled on Phase）</strong></td><td><strong>仅游玩阶段（Gameplay Only）</strong>、始终（Always）、仅游戏前（Pre-Game Only）、仅创建时（Create Only）</td><td>如果勾选了自动播放，决定在小游戏的哪个阶段播放过场。<ul><li><strong>仅游玩阶段（Gameplay Only）：</strong>关卡过场在游玩期间播放。</li><li><strong>始终（Always）：</strong>在任何游戏状态下都播放。</li><li><strong>仅游戏前（Pre-Game Only）：</strong>在游戏开始前播放关卡过场。</li><li><strong>仅创建时（Create Only）：</strong>在岛屿处于只读状态、游戏开始前播放。</li></ul></td></tr>
+<tr><td><strong>可见性（Visibility）</strong></td><td><strong>所有人（Everyone）</strong>、仅触发者（Instigator Only）、触发者队伍（Instigator's Team）</td><td>指定谁可以看到设备播放效果。</td></tr>
+<tr><td><strong>关卡过场 Actor 始终相关（Level Sequence Actor Always Relevant）</strong></td><td><strong>开（On）</strong>、关（Off）</td><td>指定该设备在网络层面是否始终相关。关闭后，设备播放只会按距离就近复制到客户端。例如，如果播放期间在一定距离外看不到某些物体，应打开该选项。</td></tr>
+</tbody>
+</table>
+<h2 id="sec-3">直接事件绑定（Direct Event Binding）</h2>
+<p>UEFN 中的设备使用<strong>直接事件绑定（Direct Event Binding）</strong>相互通信。为设备设置事件绑定的步骤如下：</p>
+<ul>
+<li>在<strong>大纲（Outliner）</strong>面板中选中该设备。</li>
+<li>打开<strong>细节（Details）</strong>面板。</li>
+<li>找到<strong>用户选项-函数（User Options-Function）</strong>。</li>
+<li>选择一个要交互的<strong>设备（device）</strong>。</li>
+<li>设置当影视级过场触发该设备时，该设备执行的<strong>函数（function）</strong>。</li>
+</ul>
+<h3>函数（Functions）</h3>
+<p><a href="https://dev.epicgames.com/documentation/fortnite/unreal-editor-for-fortnite-glossary#function" target="_blank" rel="noopener">函数（function）</a>告诉被选中的设备：当触发设备执行动作时，它需要做什么。</p>
+<table>
+<thead><tr><th>选项</th><th>取值</th><th>说明</th></tr></thead>
+<tbody>
+<tr><td><strong>播放函数（Play Function）</strong></td><td>点击<strong>添加（Add）</strong>图标，从下拉菜单中选择函数，再选择要触发函数的设备。</td><td>当所选设备与事件触发影视级过场设备时，播放过场动画。</td></tr>
+<tr><td><strong>暂停函数（Pause Function）</strong></td><td>点击<strong>添加（Add）</strong>图标，从下拉菜单中选择函数，再选择要触发函数的设备。</td><td>当所选设备与事件触发影视级过场设备时，暂停过场动画。</td></tr>
+<tr><td><strong>停止函数（Stop Function）</strong></td><td>点击<strong>添加（Add）</strong>图标，从下拉菜单中选择函数，再选择要触发函数的设备。</td><td>当所选设备与事件触发影视级过场设备时，停止过场动画。</td></tr>
+<tr><td><strong>暂停切换函数（Toggle Pause Function）</strong></td><td>点击<strong>添加（Add）</strong>图标，从下拉菜单中选择函数，再选择要触发函数的设备。</td><td>当影视级过场被所选设备与事件触发时，在播放与暂停之间切换<strong>关卡过场（Level Sequence）</strong>。</td></tr>
+</tbody>
+</table>
+<h3>事件（Events）</h3>
+<p><a href="https://dev.epicgames.com/documentation/fortnite/unreal-editor-for-fortnite-glossary#event" target="_blank" rel="noopener">事件（event）</a>描述被选中设备执行的一个动作，被选中的事件会触发一个函数。</p>
+<table>
+<thead><tr><th>选项</th><th>取值</th><th>说明</th></tr></thead>
+<tbody>
+<tr><td><strong>影视级过场设备（Cinematic Sequence device）</strong></td><td>停止时事件（On Stopped Event）</td><td>当<strong>关卡过场（Level Sequence）</strong>停止时发送事件。</td></tr>
+</tbody>
+</table>
+<div class="pager"><a href="31-animation-and-cinematics-in-unreal-editor-for-fortnite.html"><small>← 返回父教程</small>动画与过场动画</a><a href="sub-index.html"><small>子教程索引 →</small>全部子教程</a></div>
+</article><nav class="doc-toc" aria-label="本页内容"><b>本页内容</b><a href="#sec-1">查找并放置设备</a><a href="#sec-2">用户选项（User Options）</a><a href="#sec-3">直接事件绑定（Direct Event Binding）</a></nav></div>
+</div></div>
+</div>
+<footer class="edc-footer"><div class="inner"><img src="../assets/logo-epic.svg" alt="Epic Games"><span>Fortnite 文档中文镜像 · UE教程/ · 本地打开 index.html 阅读 · 翻译整理自 Epic 官方文档，仅供学习交流</span></div></footer>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>在 Fortnite 创意模式中使用 HUD 消息设备 | Fortnite 文档中文镜像</title>
+<link rel="stylesheet" href="../assets/epic.css">
+<link rel="stylesheet" href="../assets/patch.css">
+<link rel="icon" href="../assets/logo-epic.svg">
+</head>
+<body class="theme-fortnite">
+<div class="edc-topbar"><div class="edc-topbar-inner"><img class="edc-logo" src="../assets/logo-epic.svg" alt="Epic Games"><span class="edc-brand">Epic Games <b>开发者社区</b></span><span class="edc-nav"><a href="../index.html">文档首页</a><a href="sub-index.html">子教程索引</a><a href="https://dev.epicgames.com/documentation/fortnite/using-hud-message-devices-in-fortnite-creative" target="_blank" rel="noopener">英文原文</a></span></div></div>
+<div class="site-container">
+<aside class="site-nav"><div class="documents-tree"><nav><ul class="contents-table">
+<div class="tree-sec">A最新动态</div>
+<a class="tree-link" href="01-42-00-fortnite-ecosystem-updates-and-release-notes.html">01. 42.00 生态系统更新与发行说明</a>
+<a class="tree-link" href="02-custom-items-and-inventory-overview-in-fortnite.html">02. 自定义物品与背包总览</a>
+<a class="tree-link" href="03-in-island-transactions-in-fortnite.html">03. 岛内交易</a>
+<a class="tree-link" href="04-mobile-development-in-fortnite.html">04. 移动端开发</a>
+<a class="tree-link" href="05-inputs-in-fortnite.html">05. 输入系统</a>
+<a class="tree-link" href="06-ability-system-in-unreal-editor-for-fortnite.html">06. 能力系统 Ability System</a>
+<a class="tree-link active" href="07-partybased-gameplay-using-the-social-synergy-api-in-fortnite.html">07. 社交协同 API 与小队玩法</a>
+<a class="tree-link" href="08-scene-graph-in-unreal-editor-for-fortnite.html">08. 场景图 Scene Graph</a>
+<div class="tree-sec">B入门</div>
+<a class="tree-link" href="09-build-your-first-island-in-fortnite.html">09. 构建你的第一个岛屿</a>
+<a class="tree-link" href="10-onboarding-guide-to-programming-with-verse-in-unreal-editor-for-fortnite.html">10. Verse 编程入门指南</a>
+<a class="tree-link" href="11-building-basics-in-fortnite-creative.html">11. 建造基础</a>
+<div class="tree-sec">C品牌合集</div>
+<a class="tree-link" href="12-star-wars-islands-in-fortnite.html">12. 星球大战™岛屿</a>
+<a class="tree-link" href="13-kpop-demon-hunters-islands-in-fortnite.html">13. KPop 猎魔团岛屿</a>
+<a class="tree-link" href="14-building-lego-islands-in-fortnite.html">14. 乐高®岛屿</a>
+<a class="tree-link" href="15-the-walking-dead-universe-islands-in-unreal-editor-for-fortnite.html">15. 行尸走肉宇宙岛屿</a>
+<a class="tree-link" href="16-teenage-mutant-ninja-turtle-islands-in-unreal-editor-for-fortnite.html">16. 忍者神龟岛屿</a>
+<a class="tree-link" href="17-squid-game-islands-in-fortnite.html">17. 鱿鱼游戏岛屿</a>
+<div class="tree-sec">D开发者成功</div>
+<a class="tree-link" href="18-using-creator-portal-in-fortnite-creative.html">18. 使用创作者门户</a>
+<a class="tree-link" href="19-island-moderation-and-guidelines-in-fortnite-creative.html">19. 岛屿审核与准则</a>
+<div class="tree-sec">E协作</div>
+<a class="tree-link" href="20-creating-teams-in-creator-portal-in-unreal-editor-for-fortnite.html">20. 在创作者门户创建团队</a>
+<a class="tree-link" href="21-adding-playtesters-in-fortnite-creative.html">21. 添加试玩测试员</a>
+<a class="tree-link" href="22-playtesting-your-island-in-unreal-editor-for-fortnite.html">22. 试玩测试你的岛屿</a>
+<a class="tree-link" href="23-collaborating-in-unreal-editor-for-fortnite.html">23. 在 UEFN 中协作</a>
+<a class="tree-link" href="24-lore-version-control-in-unreal-editor-for-fortnite.html">24. Lore 版本控制</a>
+<a class="tree-link" href="25-conflicts-in-lore-version-control-in-unreal-editor-for-fortnite.html">25. Lore 中的冲突</a>
+<a class="tree-link" href="26-version-history-and-conflict-resolution-in-unreal-editor-for-fortnite.html">26. 分支历史与冲突解决</a>
+<div class="tree-sec">F游戏示例</div>
+<a class="tree-link" href="27-build-a-game-in-unreal-editor-for-fortnite.html">27. 构建一款游戏</a>
+<a class="tree-link" href="28-unreal-editor-for-fortnite-starter-templates.html">28. UEFN 新手模板</a>
+<div class="tree-sec">G Verse</div>
+<a class="tree-link" href="29-learn-the-basics-of-writing-code-in-verse.html">29. 从零学习 Verse 代码基础</a>
+<div class="tree-sec">H专注领域</div>
+<a class="tree-link" href="30-lighting-in-unreal-editor-for-fortnite.html">30. 灯光</a>
+<a class="tree-link" href="31-animation-and-cinematics-in-unreal-editor-for-fortnite.html">31. 动画与过场动画</a>
+<a class="tree-link" href="32-modeling-in-unreal-editor-for-fortnite.html">32. 建模</a>
+<a class="tree-link" href="33-materials-in-unreal-editor-for-fortnite.html">33. 材质</a>
+<a class="tree-link" href="34-environments-and-landscapes-in-unreal-editor-for-fortnite.html">34. 环境与地形</a>
+<a class="tree-link" href="35-audio-in-unreal-editor-for-fortnite.html">35. 音频</a>
+<a class="tree-link" href="36-visual-effects-in-unreal-editor-for-fortnite.html">36. 视觉特效</a>
+</ul></nav></div></aside>
+<div class="page-content"><div class="page-document has-theme-bg">
+<header class="section-page-header"><nav><ol class="breadcrumb is-shrinkable"><li class="breadcrumb-item is-root"><img src="../assets/logo-epic.svg" alt="Epic Games"><a href="../index.html">Developer</a></li><li class="breadcrumb-item"><a href="../index.html">Fortnite 文档</a></li><li class="breadcrumb-item"><a href="07-partybased-gameplay-using-the-social-synergy-api-in-fortnite.html">社交协同 API 与小队玩法</a></li><li class="breadcrumb-item active" aria-current="page"><span class="text-truncate">在 Fortnite 创意模式中使用 HUD 消息设备</span></li></ol></nav><h1>在 Fortnite 创意模式中使用 HUD 消息设备</h1><p class="text-secondary mb-0">HUD 消息设备可通过其他设备触发或回合开始计时器，向所有玩家或特定玩家显示消息，支持样式、位置、图层与动画的完整配置。</p><p class="doc-meta">英文原标题：Using HUD Message Devices in Fortnite Creative · <a href="https://dev.epicgames.com/documentation/fortnite/using-hud-message-devices-in-fortnite-creative" target="_blank" rel="noopener">查看英文原文</a> · 社区翻译镜像，仅供学习</p></header>
+<div class="doc-columns"><article class="doc-article">
+<p><strong>HUD 消息（HUD Message）</strong>设备可以向所有玩家或特定玩家显示消息，触发方式可以是其他设备的触发，也可以是回合（round）开始后的计时器，回合相关术语见<a href="https://dev.epicgames.com/documentation/fortnite/fortnite-glossary" target="_blank" rel="noopener">术语表（round）</a>。</p>
+<p>如果岛屿上放了同一设备的多个副本，给它们<a href="https://dev.epicgames.com/documentation/fortnite/fortnite-glossary" target="_blank" rel="noopener">重命名（rename）</a>会很有帮助。起一个和设备用途相关的名字，既方便记住每个设备是干嘛的，在用<a href="https://dev.epicgames.com/documentation/fortnite/event-browser-in-fortnite-creative" target="_blank" rel="noopener">事件浏览器（Event Browser）</a>找特定设备时也更容易。</p>
+<h2 id="sec-1">上下文过滤</h2>
+<p>有些设备受一项名为“上下文过滤（Contextual Filtering）”的功能影响。该功能会根据某些相关选项的取值，隐藏或显示另一些选项，减少自定义面板的杂乱，让选项更易于管理和浏览。</p>
+<p>但哪些选项或取值会触发上下文过滤并不总是显而易见。为了帮你识别，在设备文档中我们会用<em>斜体</em>标出会触发上下文过滤的取值。所有选项都会列出，包括受上下文过滤影响的选项；如果某个选项会根据另一个选项的取值隐藏或显示，其<strong>说明</strong>栏里会有备注。</p>
+<h2 id="sec-2">设备选项</h2>
+<p>可以用以下选项配置该设备。</p>
+<p>默认值用<strong>加粗</strong>表示，会触发上下文过滤的取值用<em>斜体</em>表示。</p>
+<table><thead><tr><th>选项</th><th>取值</th><th>说明</th></tr></thead><tbody>
+<tr><td><strong>消息（Message）</strong></td><td>输入文本并设置文本格式</td><td>点击<strong>格式样式（Format Styles）</strong>页签，为文本选择样式，右侧是可用样式列表。每个单词必须逐个点击选中，再次点击则取消选中。想应用样式时，把要应用该样式的每个单词都点一遍；如果一部分单词用一种样式、另一部分用另一种样式，记得先取消之前选中的单词，再选中新的单词应用下一种样式。</td></tr>
+</tbody></table>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/8a4bd14f-812d-4a06-88d9-e65ce054e633?resizing_type=fit" alt="消息格式样式设置示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/8a4bd14f-812d-4a06-88d9-e65ce054e633?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<table><thead><tr><th>选项</th><th>取值</th><th>说明</th></tr></thead><tbody>
+<tr><td><strong>回合开始时显示（Show on Round Start）</strong></td><td><strong>关闭（Off）</strong>、<em>开启（On）</em></td><td>决定消息是否在回合开始时自动出现。设为<strong>开启（On）</strong>后，该选项下方会显示另一个选项。</td></tr>
+<tr><td><strong>距回合开始时间（Time From Round Start）</strong></td><td>关闭（Off）、<strong>10 秒（10 seconds）</strong>、选择时长</td><td>该选项仅在<strong>回合开始时显示（Show on Round Start）</strong>设为<strong>开启（On）</strong>时显示。按回合开始后的经过时长显示消息。</td></tr>
+<tr><td><strong>背景不透明度（Background Opacity）</strong></td><td><strong>0%</strong>、选择或输入百分比</td><td>决定消息背景的不透明度，默认背景透明。</td></tr>
+<tr><td><strong>背景颜色（Background Color）</strong></td><td><strong>2600CEFF</strong>、选择颜色色板</td><td>在<strong>背景不透明度（Background Opacity）</strong>中设置了不透明度后，该选项决定背景颜色。点击色板打开取色器，每个色板旁都标有十六进制色值，也可以在搜索栏输入十六进制色值查找特定颜色。选好颜色后点击对勾。</td></tr>
+</tbody></table>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/b914cb2b-8d64-477c-a5f7-f4be63c3a92c?resizing_type=fit" alt="背景颜色取色器示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/b914cb2b-8d64-477c-a5f7-f4be63c3a92c?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<table><thead><tr><th>选项</th><th>取值</th><th>说明</th></tr></thead><tbody>
+<tr><td><strong>消息接收者（Message Recipient）</strong></td><td>全部（All）、<a href="https://dev.epicgames.com/documentation/fortnite/fortnite-glossary" target="_blank" rel="noopener">友方（Friendlies）</a>、<a href="https://dev.epicgames.com/documentation/fortnite/fortnite-glossary" target="_blank" rel="noopener">敌方（Enemies）</a>、触发玩家（Triggering Player）、选择或输入队伍编号</td><td>决定哪些玩家会收到 HUD 消息。</td></tr>
+<tr><td><strong>显示时长类型（Show for Duration）</strong></td><td><em>定时（Timed）</em>、永久（Permanent）</td><td>决定消息显示固定时长还是常驻。选择定时后，该选项下方会显示显示时长选项。</td></tr>
+<tr><td><strong>显示时长（Display Time）</strong></td><td>5 秒（5 seconds）、永久（Permanent）、选择时长</td><td>该选项仅在显示时长类型设为定时时显示，决定消息显示多久。</td></tr>
+<tr><td><strong>播放音效（Play Sound）</strong></td><td>消息 - 重要（Message - Important）、选择音效</td><td>决定显示消息时搭配播放哪段音效。</td></tr>
+<tr><td><strong>位置（Placement）</strong></td><td>底部居中（Bottom Center）、顶部居中（Top Center）、右侧居中（Center Right）、<em>自定义（Custom）</em></td><td>选择消息在 HUD 中的显示位置。选择自定义后，该选项下方会显示几个附加选项。</td></tr>
+<tr><td><strong>屏幕锚点（Screen Anchor）</strong></td><td>左上（Top Left）、顶部居中（Top Center）、右上（Top Right）、左侧居中（Center Left）、居中（Center）、右侧居中（Center Right）、左下（Bottom Left）、底部居中（Bottom Center）、右下（Bottom Right）</td><td>该选项仅在位置（Placement）设为自定义时显示，决定消息在屏幕上的锚点位置，以及消息本身的对齐方式。</td></tr>
+<tr><td><strong>水平偏移（Placement Horizontal）</strong></td><td><strong>0</strong>、选择正数或负数</td><td>该选项仅在位置（Placement）设为自定义时显示，决定消息距离屏幕锚点选项所设锚点的水平像素距离。正数向右移，负数向左移。</td></tr>
+<tr><td><strong>垂直偏移（Placement Vertical）</strong></td><td><strong>0</strong>、选择正数或负数</td><td>该选项仅在位置（Placement）设为自定义时显示，决定消息距离屏幕锚点选项所设锚点的垂直像素距离。正数向上移，负数向下移。</td></tr>
+<tr><td><strong>HUD 控件（HUD Widget）</strong></td><td>基础（Basic）、关键（Critical）</td><td>决定 HUD 消息的视觉样式。</td></tr>
+<tr><td><strong>图层（Layer）</strong></td><td><strong>0</strong>、选择图层编号</td><td>决定消息显示在哪个图层。一个图层一次只显示一条消息，同一图层的其他消息会排队；把消息放到不同图层可以同时显示多条消息。</td></tr>
+<tr><td><strong>优先级（Priority）</strong></td><td><strong>5</strong>、立即显示（Display Immediately）、选择或输入优先级数字</td><td>决定本消息的优先级。数字越小（如 1）优先级越高，会把同一图层正在显示的消息挤到队列里；选择立即显示则无视其他消息、立即显示。</td></tr>
+<tr><td><strong>队列允许多条（Allow Multiple in Queue）</strong></td><td><strong>关闭（Off）</strong>、开启（On）</td><td>默认情况下，只有当该设备没有排队消息、也没有正在显示的消息时，新消息才会排队；选择开启后，该设备可以排多条消息。</td></tr>
+<tr><td><strong>显示中再次触发（Show Behavior If Showing）</strong></td><td><strong>重置显示时长（Reset Display Time）</strong>、重播（Replay）、忽略（Ignore）</td><td>决定消息正在显示时又收到一次显示指令会发生什么。</td></tr>
+<tr><td><strong>队列超时（Queue Timeout）</strong></td><td><strong>不排队（Don't Queue）</strong>、选择时长</td><td>当高优先级消息正在显示、导致本消息排队时，该选项决定消息在队列里保留多久。</td></tr>
+<tr><td><strong>为中途加入玩家排队（Queue Message for Join In Progress Players）</strong></td><td><strong>开启（On）</strong>、关闭（Off）</td><td>决定是否把消息排队并显示给对局中途加入的玩家，同时会考虑队列超时选项的取值。</td></tr>
+<tr><td><strong>显示前重新评估（Re-Evaluate Messages On Show）</strong></td><td><strong>关闭（Off）</strong>、开启（On）</td><td>决定消息即将显示时是否重新检查它是否仍然有效。如果玩家在游戏中可能更换职业或队伍，或因其他原因不再符合查看条件，这个选项很有用。</td></tr>
+<tr><td><strong>入场动画（Intro Animation）</strong></td><td><strong>无（None）</strong>、缩放（Zoom）、淡入缩放（Fade and Zoom）、淡入（Fade）、反向缩放（Reverse Zoom）、弹跳（Bounce）、慢速缩放（Slow Zoom）、慢速淡入缩放（Slow Fade and Zoom）、慢速淡入（Slow Fade）、慢速反向缩放（Slow Reverse Zoom）、从顶部滑入（Slide From Top）、从底部滑入（Slide From Bottom）、从左侧滑入（Slide From Left）、从右侧滑入（Slide From Right）</td><td>决定 HUD 消息出现时的动画。</td></tr>
+<tr><td><strong>退场动画（Outro Animation）</strong></td><td><strong>无（None）</strong>、缩放（Zoom）、淡入缩放（Fade and Zoom）、淡入（Fade）、反向缩放（Reverse Zoom）、弹跳（Bounce）、慢速缩放（Slow Zoom）、慢速淡入缩放（Slow Fade and Zoom）、慢速淡入（Slow Fade）、慢速反向缩放（Slow Reverse Zoom）、从顶部滑入（Slide From Top）、从底部滑入（Slide From Bottom）、从左侧滑入（Slide From Left）、从右侧滑入（Slide From Right）</td><td>决定 HUD 消息移除时的动画。</td></tr>
+<tr><td><strong>文本样式集（Text Style Set）</strong></td><td>关闭（Off）、开启（On）</td><td>决定文本的样式集，从下拉菜单选择文本样式。</td></tr>
+<tr><td><strong>覆盖默认文本样式（Override Default Text Style）</strong></td><td><strong>开启（On）</strong>、关闭（Off）</td><td>提供手动覆盖文本样式的选项（未添加样式时生效）。保存更改后，对预览的修改才会应用。</td></tr>
+<tr><td><strong>文本颜色（Text Color）</strong></td><td><strong>白色（White）</strong>、选择颜色色板</td><td>该选项仅在覆盖默认文本样式设为开启时显示，决定 HUD 消息中文本的颜色。点击色板打开取色器，用法与背景颜色的取色器类似，只是这里用的是颜色名而非十六进制色值。选好颜色后点击对勾关闭取色器。</td></tr>
+<tr><td><strong>文本对齐（Text Justification）</strong></td><td>左对齐（Left）、居中（Center）、右对齐（Right）、固定左对齐（Invariant Left）、固定右对齐（Invariant Right）</td><td>决定文本靠哪边对齐。选择<strong>固定左对齐（Invariant Left）</strong>或<strong>固定右对齐（Invariant Right）</strong>后，无论文本以哪种语言显示，都固定按该侧对齐。</td></tr>
+<tr><td><strong>Verse 文本样式（Verse Text Style）</strong></td><td><strong>关闭（Off）</strong>、开启（On）</td><td>来自 Verse 脚本的消息会自动对整条消息应用所选样式。</td></tr>
+<tr><td><strong>阴影偏移（Shadow Offset）</strong></td><td><strong>1</strong>、选择或输入数字</td><td>该选项仅在覆盖默认文本样式设为开启时显示，决定投影偏移量。</td></tr>
+<tr><td><strong>描边强度（Outline Strength）</strong></td><td>1、选择或输入数字</td><td>该选项仅在覆盖默认文本样式设为开启时显示，决定文本描边强度。</td></tr>
+<tr><td><strong>字号（Size）</strong></td><td><strong>18</strong>、选择或输入字号</td><td>该选项仅在覆盖默认文本样式设为开启时显示，决定文本字号。</td></tr>
+</tbody></table>
+<h2 id="sec-3">直接事件绑定</h2>
+<p><strong>直接事件绑定（Direct event binding）</strong>让设备之间可以直接通信，工作流更直观，也让你能更专注于设计创意。</p>
+<p>下面是该设备的函数与事件。</p>
+<h3>函数</h3>
+<p>函数会监听设备上的事件，然后执行动作。</p>
+<ul>
+<li>对于任意函数，点击<strong>选项（option）</strong>，再点击<strong>选择设备（Select Device）</strong>，从<strong>设备下拉菜单（Device dropdown menu）</strong>访问并选择。</li>
+<li>选好设备后，点击<strong>选择事件（Select Event）</strong>，把设备绑定到会触发该设备函数的事件上。</li>
+<li>如果有多个设备或事件要触发同一个函数，点击<strong>添加（Add）</strong>按钮新增一行并重复上述步骤。</li>
+</ul>
+<table><thead><tr><th>选项</th><th>说明</th></tr></thead><tbody>
+<tr><td><strong>接收时显示（Show When Receiving From）</strong></td><td>事件发生时显示 HUD 消息。如果有多个设备或事件可以显示消息，可以点击该选项的<strong>添加（Add）</strong>按钮新增一行。</td></tr>
+<tr><td><strong>接收时隐藏（Hide When Receiving From）</strong></td><td>隐藏消息。如果有多个设备或事件可以隐藏消息，可以点击该选项的<strong>添加（Add）</strong>按钮新增一行。</td></tr>
+<tr><td><strong>接收时清空图层（Clear Layer When Receiving From）</strong></td><td>事件发生时清空所有文本图层。如果有多个设备或事件可以清空所有图层，点击<strong>添加（Add）</strong>按钮新增一行。</td></tr>
+</tbody></table>
+<h3>事件</h3>
+<p>该设备没有事件。</p>
+<ul>
+<li><a href="https://dev.epicgames.com/community/search?query=device" target="_blank" rel="noopener">device</a></li>
+<li><a href="https://dev.epicgames.com/community/search?query=trigger" target="_blank" rel="noopener">trigger</a></li>
+<li><a href="https://dev.epicgames.com/community/search?query=informational" target="_blank" rel="noopener">informational</a></li>
+<li><a href="https://dev.epicgames.com/community/search?query=timer" target="_blank" rel="noopener">timer</a></li>
+</ul>
+<div class="pager"><a href="07-partybased-gameplay-using-the-social-synergy-api-in-fortnite.html"><small>← 返回父教程</small>社交协同 API 与小队玩法</a><a href="sub-index.html"><small>子教程索引 →</small>全部子教程</a></div>
+</article><nav class="doc-toc" aria-label="本页内容"><b>本页内容</b><a href="#sec-1">上下文过滤</a><a href="#sec-2">设备选项</a><a href="#sec-3">直接事件绑定</a></nav></div>
+</div></div>
+</div>
+<footer class="edc-footer"><div class="inner"><img src="../assets/logo-epic.svg" alt="Epic Games"><span>Fortnite 文档中文镜像 · UE教程/ · 本地打开 index.html 阅读 · 翻译整理自 Epic 官方文档，仅供学习交流</span></div></footer>
+</body>
+</html>

@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fortnite 工具模式 | Fortnite 文档中文镜像</title>
+<link rel="stylesheet" href="../assets/epic.css">
+<link rel="stylesheet" href="../assets/patch.css">
+<link rel="icon" href="../assets/logo-epic.svg">
+</head>
+<body class="theme-fortnite">
+<div class="edc-topbar"><div class="edc-topbar-inner"><img class="edc-logo" src="../assets/logo-epic.svg" alt="Epic Games"><span class="edc-brand">Epic Games <b>开发者社区</b></span><span class="edc-nav"><a href="../index.html">文档首页</a><a href="sub-index.html">子教程索引</a><a href="https://dev.epicgames.com/documentation/fortnite/fortnite-tools-mode-in-fortnite" target="_blank" rel="noopener">英文原文</a></span></div></div>
+<div class="site-container">
+<aside class="site-nav"><div class="documents-tree"><nav><ul class="contents-table">
+<li class="toc-group"><span class="toc-group-title">A · 最新动态</span><ul>
+<li><a href="01-42-00-fortnite-ecosystem-updates-and-release-notes.html">01. 42.00 生态系统更新与发行说明</a></li>
+<li><a href="02-custom-items-and-inventory-overview-in-fortnite.html">02. 自定义物品与背包总览</a></li>
+<li><a href="03-in-island-transactions-in-fortnite.html">03. 岛内交易</a></li>
+<li><a href="04-mobile-development-in-fortnite.html">04. 移动端开发</a></li>
+<li><a href="05-inputs-in-fortnite.html">05. 输入系统</a></li>
+<li><a href="06-ability-system-in-unreal-editor-for-fortnite.html">06. 能力系统 Ability System</a></li>
+<li><a href="07-partybased-gameplay-using-the-social-synergy-api-in-fortnite.html">07. 社交协同 API 与小队玩法</a></li>
+<li><a href="08-scene-graph-in-unreal-editor-for-fortnite.html">08. 场景图 Scene Graph</a></li>
+</ul></li>
+<li class="toc-group"><span class="toc-group-title">B · 入门指南</span><ul>
+<li><a href="09-build-your-first-island-in-fortnite.html">09. 构建你的第一个岛屿</a></li>
+<li><a href="10-onboarding-guide-to-programming-with-verse-in-unreal-editor-for-fortnite.html">10. Verse 编程入门指南</a></li>
+<li><a href="11-building-basics-in-fortnite-creative.html">11. 建造基础</a></li>
+</ul></li>
+<li class="toc-group"><span class="toc-group-title">C · 品牌合集</span><ul>
+<li><a href="12-star-wars-islands-in-fortnite.html">12. 星球大战™岛屿</a></li>
+<li><a href="13-kpop-demon-hunters-islands-in-fortnite.html">13. KPop 猎魔团岛屿</a></li>
+<li><a href="14-building-lego-islands-in-fortnite.html">14. 乐高®岛屿</a></li>
+<li><a href="15-the-walking-dead-universe-islands-in-unreal-editor-for-fortnite.html">15. 行尸走肉宇宙岛屿</a></li>
+<li><a href="16-teenage-mutant-ninja-turtle-islands-in-unreal-editor-for-fortnite.html">16. 忍者神龟岛屿</a></li>
+<li><a href="17-squid-game-islands-in-fortnite.html">17. 鱿鱼游戏岛屿</a></li>
+</ul></li>
+<li class="toc-group"><span class="toc-group-title">D · 开发者成功</span><ul>
+<li><a href="18-using-creator-portal-in-fortnite-creative.html">18. 使用创作者门户</a></li>
+<li><a href="19-island-moderation-and-guidelines-in-fortnite-creative.html">19. 岛屿审核与准则</a></li>
+</ul></li>
+<li class="toc-group"><span class="toc-group-title">E · 协作与版本控制</span><ul>
+<li><a href="20-creating-teams-in-creator-portal-in-unreal-editor-for-fortnite.html">20. 在创作者门户创建团队</a></li>
+<li><a href="21-adding-playtesters-in-fortnite-creative.html">21. 添加试玩测试员</a></li>
+<li><a href="22-playtesting-your-island-in-unreal-editor-for-fortnite.html">22. 试玩测试你的岛屿</a></li>
+<li><a href="23-collaborating-in-unreal-editor-for-fortnite.html">23. 在 UEFN 中协作</a></li>
+<li><a href="24-lore-version-control-in-unreal-editor-for-fortnite.html">24. Lore 版本控制</a></li>
+<li><a href="25-conflicts-in-lore-version-control-in-unreal-editor-for-fortnite.html">25. Lore 中的冲突</a></li>
+<li><a href="26-version-history-and-conflict-resolution-in-unreal-editor-for-fortnite.html">26. 分支历史与冲突解决</a></li>
+</ul></li>
+<li class="toc-group"><span class="toc-group-title">F · 游戏示例</span><ul>
+<li><a href="27-build-a-game-in-unreal-editor-for-fortnite.html">27. 构建一款游戏</a></li>
+<li><a href="28-unreal-editor-for-fortnite-starter-templates.html">28. UEFN 新手模板</a></li>
+</ul></li>
+<li class="toc-group"><span class="toc-group-title">G · Verse 编程</span><ul>
+<li><a href="29-learn-the-basics-of-writing-code-in-verse.html">29. 从零学习 Verse 代码基础</a></li>
+</ul></li>
+<li class="toc-group"><span class="toc-group-title">H · 专注领域</span><ul>
+<li><a href="30-lighting-in-unreal-editor-for-fortnite.html">30. 灯光</a></li>
+<li><a href="31-animation-and-cinematics-in-unreal-editor-for-fortnite.html">31. 动画与过场动画</a></li>
+<li><a href="32-modeling-in-unreal-editor-for-fortnite.html">32. 建模</a></li>
+<li><a href="33-materials-in-unreal-editor-for-fortnite.html">33. 材质</a></li>
+<li><a href="34-environments-and-landscapes-in-unreal-editor-for-fortnite.html" class="active">34. 环境与地形</a></li>
+<li><a href="35-audio-in-unreal-editor-for-fortnite.html">35. 音频</a></li>
+<li><a href="36-visual-effects-in-unreal-editor-for-fortnite.html">36. 视觉特效</a></li>
+</ul></li>
+</ul></nav></div></aside>
+<div class="page-content"><div class="page-document has-theme-bg">
+<header class="section-page-header"><nav><ol class="breadcrumb is-shrinkable"><li class="breadcrumb-item is-root"><img src="../assets/logo-epic.svg" alt="Epic Games"><a href="../index.html">Developer</a></li><li class="breadcrumb-item"><a href="../index.html">Fortnite 文档</a></li><li class="breadcrumb-item"><a href="34-environments-and-landscapes-in-unreal-editor-for-fortnite.html">环境与地形</a></li><li class="breadcrumb-item active" aria-current="page"><span class="text-truncate">Fortnite 工具模式</span></li></ol></nav><h1>Fortnite 工具模式</h1><p class="text-secondary mb-0">Fortnite 工具（Fortnite Tools）编辑器模式提供多种实用工具，可在 UEFN（Unreal Editor for Fortnite）中加速岛屿创建。</p><p class="doc-meta">英文原标题：Fortnite Tools Mode In Fortnite · <a href="https://dev.epicgames.com/documentation/fortnite/fortnite-tools-mode-in-fortnite" target="_blank" rel="noopener">查看英文原文</a> · 社区翻译镜像，仅供学习</p></header>
+<div class="doc-columns"><article class="doc-article">
+<p><strong>Fortnite 工具（Fortnite Tools）</strong>编辑器模式，也称为 <strong>Fortnite 工具（Fortnite Tools）</strong>，提供多种实用工具，可在 UEFN 中工作时加速岛屿创建。</p>
+<p>这些工具改编自 Epic 技术美术师编写、供 Fortnite 开发团队内部使用的工具。</p>
+<p>按以下方式开始使用 <strong>Fortnite 工具（Fortnite Tools）</strong>：</p>
+<ul><li>在工具栏中找到<strong>选择模式（Selection Mode）</strong>下拉菜单，然后选择 <strong>Fortnite 工具（Fortnite Tools）</strong>。</li></ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/d9fb3a81-e75c-4317-9aa0-03fd4bdda3f9?resizing_type=fit" alt="原文示意图1：从选择模式下拉菜单打开 Fortnite 工具" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/d9fb3a81-e75c-4317-9aa0-03fd4bdda3f9?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>你也可以使用键盘快捷键 <strong>Shift+6</strong> 切换到 Fortnite 工具（Fortnite Tools）。要了解各种模式的更多信息，请参阅<strong><a href="https://dev.epicgames.com/documentation/unreal-engine/BlueprintAPI/LevelEditor?application_version=5.6" target="_blank" rel="noopener">关卡编辑器模式（Level Editor Mode）</a></strong>。</p>
+<h2 id="sec-1">Fortnite 工具概述</h2>
+<p>选中 Fortnite 工具（Fortnite Tools）模式后，用户界面（UI）会显示在视口左侧的选项卡中，其中提供多种可用工具。</p>
+<p>Fortnite 工具（Fortnite Tools）包含一系列关卡设计工具，提供以下能力：</p>
+<ul><li>查看关卡中资产的缩放比例与颜色。</li><li>在视口中快速复制或删除资产。</li><li>将资产精准吸附到位，实现严丝合缝的搭建。</li><li>测算玩家走完你的岛屿所需的时间。</li></ul>
+<p>使用 Fortnite 工具（Fortnite Tools）时，需要重新聚焦轨道相机，才能再次使用视口热键。</p>
+<p>按 <strong>Alt</strong> 聚焦，或按住 <strong>Shift</strong> 并点击对象以重新激活热键。</p>
+<h2 id="sec-2">Fortnite 工具核心概念</h2>
+<p>所有 Fortnite 工具（Fortnite Tools）都遵循一些共同的核心概念，在使用各工具时带来一致的体验，例如：</p>
+<ul><li><strong>消息（Messages）</strong></li><li><strong>工具信息（Tool Information）</strong></li><li><strong>快捷键（Short Cuts）</strong></li><li><strong>操作（Actions）</strong></li><li><strong>工具专属属性（Tool Specific Properties）</strong></li></ul>
+<h3>消息</h3>
+<p>所有信息、错误或警告消息都会显示在工具界面的顶部，例如：当关卡中没有任何辅助资产（Helper Asset）时，点击“移除所有已放置资产（Remove All Placed Assets）”，辅助资产（Helper Asset）工具就会显示类似这样的示例消息。</p>
+<p>并非所有工具都有消息。</p>
+<p>这些消息会在几秒钟后自动清除。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/25c7296b-ef4f-4e07-9642-362568b38aa8?resizing_type=fit" alt="原文示意图2：工具界面顶部的消息示例" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/25c7296b-ef4f-4e07-9642-362568b38aa8?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h3>工具信息</h3>
+<p>提供信息的工具会在“工具信息（Tool Information）”分区中显示信息。例如，3D 选择（3D Select）工具会显示选中对象的数量，以及鼠标指针下方 Actor 的名称与类。</p>
+<p>有些工具没有“工具信息（Tool Information）”分区。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/7c32e772-e902-41c7-81ac-6257d81e711a?resizing_type=fit" alt="原文示意图3：3D 选择工具的工具信息示例" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/7c32e772-e902-41c7-81ac-6257d81e711a?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h3>快捷键</h3>
+<p>所有工具都有“快捷键（Shortcuts）”分区，显示热键或鼠标操作方式。快捷键（Shortcuts）会显示在属性面板顶部、“工具信息（Tool Information）”分区之后。上文所示的 3D 选择（3D Select）工具示例中即可看到。</p>
+<h3>操作</h3>
+<p>有些工具带有执行特定操作的按钮。如果有，这些按钮会位于“操作（Actions）”分区中。</p>
+<h3>工具专属属性</h3>
+<p>每个工具都有特定于该工具的多种属性。这些属性位于“工具信息（Tool Information）”、“快捷键（Shortcuts）”和“操作（Actions）”之后的一个或多个分区中。每个工具属性的具体含义，请查看其悬浮提示，或下文对应工具的文档。</p>
+<h2 id="sec-3">创建体积</h2>
+<p><strong>创建体积（Create Volume）</strong>工具集可在选中对象周围创建一个包围盒。创建体积（Create Volume）提供选项，用于确定在视口中放置的体积类型及其缩放。</p>
+<p>按以下步骤使用创建体积（Create Volume）工具：</p>
+<ol><li>选择<strong>创建体积（Create Volume）</strong> &gt; <strong>体积类型（Volume Type）</strong>。</li><li>拖动<strong>缩放（Scale）</strong>滑块，将体积设为所需的百分比。</li><li>在视口中点击使体积出现，然后将其拖放到位。</li><li>点击<strong>确认（Confirm）</strong>以确认体积的放置。</li></ol>
+<p>编辑体积属性时，无需切换回选择模式（Select Mode）。</p>
+<p>创建体积（Create Volume）有五个主要选项：</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/a29c25df-0a63-406c-b23f-ede0ea96569f?resizing_type=fit" alt="原文示意图4：创建体积工具选项" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/a29c25df-0a63-406c-b23f-ede0ea96569f?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ul><li><strong>操作（Actions）</strong>——提供创建体积的方式。</li><li><strong>创建体积（Create Volume）</strong>——按体积类型（Volume Type）中指定的类型，在选中资产周围创建体积。</li><li><strong>常规（General）</strong>——提供创建体积的常规选项。</li><li><strong>体积类型（Volume Type）</strong>——下拉菜单，包含全部体积类型，包括设备类体积。</li><li><strong>缩放（Scale）</strong>——按百分比选择体积的缩放。生成的体积会比包围盒大或小相应的百分比。</li><li><strong>外观（Appearance）</strong>——提供让体积包围盒更醒目的工具。</li><li><strong>包围盒线宽（Bounding Box Line Thickness）</strong>——决定包围盒线条的粗细。</li><li><strong>包围盒颜色（Bounding Box Color）</strong>——决定包围盒线条的颜色。</li></ul>
+<h3>体积类型</h3>
+<p>下拉菜单包含以下体积：</p>
+<table><thead><tr><th>体积类型</th><th>说明</th><th>示意图</th></tr></thead><tbody>
+<tr><td><strong>AI 导航体积（AI Navigation Volume）</strong></td><td>限制 AI 角色移动范围的体积。</td><td><figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/eddec637-f705-4955-8bf7-89d5df3188e8?resizing_type=fit" alt="原文示意图：AI 导航体积" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/eddec637-f705-4955-8bf7-89d5df3188e8?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></td></tr>
+<tr><td><strong>阻挡体积（Barrier Volume）</strong></td><td>可包含或阻挡以下对象的屏障：玩家进入、武器开火、野生动物、NPC。</td><td><figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/1fd4412b-cf10-400b-905c-8d59cb89477d?resizing_type=fit" alt="原文示意图：阻挡体积" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/1fd4412b-cf10-400b-905c-8d59cb89477d?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></td></tr>
+<tr><td><strong>人群体积（Crowd Volume）</strong></td><td>放置一群 NPC 角色。</td><td><figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/4285f0cc-2353-4659-8981-ac2d3173f489?resizing_type=fit" alt="原文示意图：人群体积" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/4285f0cc-2353-4659-8981-ac2d3173f489?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></td></tr>
+<tr><td><strong>伤害体积（Damage Volume）</strong></td><td>对玩家、野生动物、NPC 等造成伤害。</td><td><figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/b27cd50f-06fe-4ba2-8daf-2841da7c729b?resizing_type=fit" alt="原文示意图：伤害体积" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/b27cd50f-06fe-4ba2-8daf-2841da7c729b?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></td></tr>
+<tr><td><strong>表情体积（Emote Volume）</strong></td><td>使玩家做出表情动作的体积。</td><td><figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/6021be8e-83d5-42a5-8547-f979e524508e?resizing_type=fit" alt="原文示意图：表情体积" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/6021be8e-83d5-42a5-8547-f979e524508e?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></td></tr>
+<tr><td><strong>火焰体积（Fire Volume）</strong></td><td>带有火焰并造成火焰伤害的体积。</td><td><figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/2fd4decc-c8e8-44fb-8071-3839623031a0?resizing_type=fit" alt="原文示意图：火焰体积" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/2fd4decc-c8e8-44fb-8071-3839623031a0?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></td></tr>
+<tr><td><strong>突变体积（Mutator Volume）</strong></td><td>使设备改变状态的体积。</td><td><figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/88acc6e0-d04d-488f-a634-f4e8d98fec4c?resizing_type=fit" alt="原文示意图：突变体积" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/88acc6e0-d04d-488f-a634-f4e8d98fec4c?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></td></tr>
+<tr><td><strong>跳伞体积（Skydive Volume）</strong></td><td>玩家在此体积内使用各自的跳伞设置。</td><td><figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/0c361b76-331d-4850-838f-a85594b48bc4?resizing_type=fit" alt="原文示意图：跳伞体积" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/0c361b76-331d-4850-838f-a85594b48bc4?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></td></tr>
+<tr><td><strong>体积（Volume）</strong></td><td>可包含玩家、野生动物和 NPC 的体积。</td><td><figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/976c2393-6eac-4c70-b118-270371e14573?resizing_type=fit" alt="原文示意图：体积" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/976c2393-6eac-4c70-b118-270371e14573?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></td></tr>
+<tr><td><strong>阻挡体积（Blocking Volume）</strong></td><td>阻挡玩家、野生动物和 NPC 的体积。</td><td><figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/9c9e4b60-4a72-4299-b61b-fe32d3119f78?resizing_type=fit" alt="原文示意图： blocking 体积" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/9c9e4b60-4a72-4299-b61b-fe32d3119f78?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></td></tr>
+<tr><td><strong>后期处理体积（Post Process Volume）</strong></td><td>对其占据区域生效的后期处理效果。</td><td><figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/9d552621-3b16-47d1-ad7a-c760e36d5195?resizing_type=fit" alt="原文示意图：后期处理体积" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/9d552621-3b16-47d1-ad7a-c760e36d5195?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></td></tr>
+<tr><td><strong>Fort 地下体积（Fort Underground Volume）</strong></td><td>创建可改造成洞穴、位于地形之下的空间。</td><td><figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/bd431b3f-2379-4184-8e8e-32fb4f09fa4d?resizing_type=fit" alt="原文示意图：Fort 地下体积" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/bd431b3f-2379-4184-8e8e-32fb4f09fa4d?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></td></tr>
+<tr><td><strong>Fort 水体排除（Fort Water Body Exclusion）</strong></td><td>一种体积。</td><td><figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/520fbd02-a2c6-4c80-a933-be9eb10a516d?resizing_type=fit" alt="原文示意图：Fort 水体排除" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/520fbd02-a2c6-4c80-a933-be9eb10a516d?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></td></tr>
+</tbody></table>
+<h2 id="sec-4">查找重叠</h2>
+<p>查找重叠（Find Overlap）工具可找出堆叠在一起的完全相同的对象，这些对象会浪费项目内存与包体大小。</p>
+<p>按以下步骤使用创建体积（Create Volume）工具：</p>
+<ol><li>选择<strong>查找重叠（Find Overlap）</strong> &gt; <strong>查找所有重叠对象（Find All Overlapping Objects）</strong>。</li><li>点击<strong>查找所有重叠对象（Find All Overlapping Objects）</strong>，工具会显示簇的数量。每个簇是工具认为重叠的一对资产。</li><li>点击<strong>聚焦下一个重叠（Focus Next Overlap）</strong>（或使用热键 <code>C</code>），将视口聚焦到可能重叠的资产上。</li><li>点击<strong>完成（Complete）</strong>。</li></ol>
+<p>所有重叠的资产都应在视口中显示出来。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/fec484c1-16ed-4bf7-9c3b-effe804dc352?resizing_type=fit" alt="原文示意图18：查找重叠工具在视口中显示结果" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/fec484c1-16ed-4bf7-9c3b-effe804dc352?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>查找重叠（Find Overlap）有四个主要操作：</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/451f58e3-d090-44e0-822a-a3ad436f4b8e?resizing_type=fit" alt="原文示意图19：查找重叠工具的操作选项" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/451f58e3-d090-44e0-822a-a3ad436f4b8e?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ul><li><strong>操作（Actions）</strong>——聚焦重叠资产的视口视图。</li><li><strong>查找所有重叠对象（Find All Overlapping Objects）</strong>——高亮所有与自身副本重叠的资产。</li><li><strong>重置视图（Reset View）</strong>——将视口相机恢复到使用该工具之前的位置。</li><li><strong>聚焦下一个重叠（Focus Next Overlap）</strong>——将视口相机移动到下一个可能重叠的资产处聚焦。</li><li><strong>选中所有重叠项（Select All Overlapping）</strong>——高亮所有与自身副本重叠的资产。</li><li><strong>常规（General）</strong>——决定操作（Action）类工具行为的工具。</li><li><strong>重叠阈值（Overlap Threshold）</strong>——决定重叠资产检测的精度。</li><li><strong>精确（Precise）</strong>可精确高亮重叠的资产。</li><li><strong>粗略（Rough）</strong>可高亮 10 厘米内重叠的资产。建议先用精确（Precise）过一遍，再用粗略（Rough）过第二遍。</li><li><strong>忽略设备（Ignore Devices）</strong>——决定是否忽略与其他资产重叠的设备。</li><li><strong>仅显示重叠项（Show Only Overlapping）</strong>——仅在包围盒中显示重叠的资产。</li><li><strong>退出时重置视图（Reset View on Exit）</strong>——开关选项，决定退出工具时是否将视口相机恢复到原来的位置。</li></ul>
+<p>可使用各种现有的编辑器工具，例如大纲视图（Outliner）的<strong>仅选中（Only Selected）</strong>过滤选项，帮助判断对象是否真的重叠。如果同一位置有超过两个重叠对象，只会选中并隔离其中两个。这是“查找所有重叠对象（Find All Overlapping Objects）”功能出于速度优化所致。</p>
+<p>建议手动判断是否存在超过两个的重叠对象，不过在删除重叠对象后，可以多次运行查找重叠对象（Find Overlapping Objects），找出之前遗漏的其他重叠对象。</p>
+<h3>重叠阈值</h3>
+<p>重叠阈值（Overlap Threshold）的过滤器可与<strong>查找所有重叠对象（Find All Overlapping Objects）</strong>和<strong>选中所有重叠项（Select All Overlapping）</strong>按钮配合使用。使用<strong>精确（Precise）</strong>设置时，操作按钮会标出重叠资产簇。选择<strong>聚焦下一个重叠（Focus Next Overlap）</strong>会跳转到下一个可能重叠的簇。</p>
+<p>每次“清理”后使用“查找所有重叠对象（Find All Overlapping Objects）”按钮都是较慢的操作。用聚焦下一个重叠（Focus Next Overlap）遍历所有已找到的重叠会更快。</p>
+<p>使用精确（Precise）重叠阈值后，再使用粗略（Rough）并重复上述过程。粗略（Rough）更容易给出“误报”，即把靠得很近但实际没有问题的对象也显示出来。</p>
+<p>不过，粗略（Rough）能检测出“意外复制”的对象。例如，团队成员工作时按了 Ctrl-D 复制对象，却忘记处理或没注意到已被复制，“粗略（Rough）”精度应能找到这些副本，帮助用户将其删除。</p>
+<h3>仅显示重叠项</h3>
+<p>使用“仅显示重叠项（Show Only Overlapping）”会将视口切换为无光照（Unlit）模式（之后可自行改回喜欢的模式），以确保即使隐藏所有灯光也能看清对象。</p>
+<h3>退出时重置视图</h3>
+<p>重置视图（Reset View）应能将视口恢复到启动该工具时的模式，并取消隐藏工具启动时未隐藏的对象。如果更喜欢这种方式，可以用复选框关闭“退出时重置视图（Reset View on Exit）”。</p>
+<h2 id="sec-5">辅助资产</h2>
+<p><strong>辅助资产（Helper Asset）</strong>工具包含<strong>参考资产（Reference Assets）</strong>，可在关卡中选择并放置，用来把握缩放比例与颜色准确性。这些资产同样可以在内容浏览器中找到，但该工具提供更快、更便捷的查找与放置方式，还提供一键清理关卡的功能，移除用该工具放置的全部资产。</p>
+<p>放置的资产不会保存在项目中，也不会上传到服务器，不会改变关卡的内存或文件预算。</p>
+<p>使用辅助资产（Helper Asset）工具的方法：</p>
+<ol><li>从<strong>要放置的资产（Asset to Place）</strong>下拉菜单中选择一个<strong>参考资产（Reference Asset）</strong>。</li><li>点击视口中想要放置资产的位置。</li><li>用完资产后，点击<strong>移除所有已放置资产（Remove All Placed Assets）</strong>。</li></ol>
+<p>辅助资产（Helper Asset）工具有三个主要工具：</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/e5ecb0eb-f07d-4095-b639-4c79d0319f43?resizing_type=fit" alt="原文示意图20：辅助资产工具选项" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/e5ecb0eb-f07d-4095-b639-4c79d0319f43?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ul><li><strong>快捷键（Shortcuts）</strong>——提供一个热键：在关卡中左键点击即可放置辅助资产（Helper Asset）。</li><li><strong>操作（Actions）</strong>——提供移除用辅助资产（Helper Asset）工具放置的资产的工具“移除所有已放置资产（Remove All Placed Assets）”。点击后会移除用辅助资产（Helper Asset）工具放置的全部资产。</li><li><strong>常规（General）</strong>——访问参考资产（Reference Assets）：</li><li><strong>要放置的资产（Asset To Place）</strong>——选择在关卡中点击时要放置的辅助资产（Helper Asset）。</li><li><strong>玩家身高参照（Player Height Reference）</strong>——平均玩家身高的人体模型。不会播放动画，也不会保存在项目中。</li><li><strong>颜色校准器（Color Calibrator）</strong>——用于测试光照的标准颜色校准器（Color Calibrator）资产。不会保存在项目中。</li></ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/76d2ca06-c664-4624-8365-755728cc0fd1?resizing_type=fit" alt="原文示意图21：颜色校准器资产" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/76d2ca06-c664-4624-8365-755728cc0fd1?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h2 id="sec-6">添加物理</h2>
+<p>添加物理（Add Physics）工具可为选中的道具添加和移除物理（Physics）组件，并在一组选中的道具中分离出有物理和没有物理的资产。虽然也可以通过细节（Details）面板添加物理（Physics），但添加物理（Add Physics）工具提供一种方式，可在 Fortnite 工具（Fortnite Tools）模式下编辑时即时加速添加与修改物理属性的过程。</p>
+<p>在物理（Physics）中，物理对象（Physics Object）是指带有物理组件（Physics Component）的物品。这样对象就可以被视为物理道具，并在服务器上模拟。物理组件（Physics Component）是物理（Physics）系统固有的，是其核心部分。然而，在有数十个对象的地图中工作时，管理这些对象和组件并不容易，非常繁琐。</p>
+<p>添加物理（Add Physics）工具有助于轻松快速地管理物理对象。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/82eb2c15-e9f5-4f0a-abb9-1d1edc5740e4?resizing_type=fit" alt="原文示意图22：添加物理工具" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/82eb2c15-e9f5-4f0a-abb9-1d1edc5740e4?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>使用添加物理（Add Physics）工具的步骤：</p>
+<ol><li>在视口中选择要添加物理的道具。</li><li>点击 <strong>AddPhysics</strong>。</li></ol>
+<p>添加物理（Add Physics）工具有四个主要工具：</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/e782064a-3f09-4021-955d-5329516934ef?resizing_type=fit" alt="原文示意图23：添加物理工具的四个按钮" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/e782064a-3f09-4021-955d-5329516934ef?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ul><li><strong>添加物理（Add Physics）</strong>——此按钮为选中的道具添加物理（Physics）组件。</li></ul>
+<p>此工具只能为被识别为道具的对象添加物理。</p>
+<ul><li><strong>移除物理（Remove Physics）</strong>——此按钮从选中的道具上移除物理（Physics）组件。</li><li><strong>选中物理项（Select Physics）</strong>——点击后，从当前选择中移除所有非物理对象。仅影响编辑器中的当前选择。如果未选中任何内容，则不发生任何变化。</li><li><strong>选中非物理项（Select Non Physics）</strong>——点击后，从当前选择中移除所有物理对象。仅影响编辑器中的当前选择。如果未选中任何内容，则不发生任何变化。</li></ul>
+<h2 id="sec-7">散布</h2>
+<p><strong>散布（Scatter）工具</strong>可在目标区域内生成静态网格体的多个实例。该工具适用于你在 Fab 中创建、导入或购买的静态网格体资产。静态网格体的材质必须启用<strong>与实例化静态网格体配合使用（Used with Instanced Static Meshes）</strong>，否则散布（Scatter）工具会拒绝该静态网格体。</p>
+<p>散布（Scatter）工具不适用于 Fortnite 资产。</p>
+<p>使用散布（Scatter）工具的步骤：</p>
+<ol><li>在<strong>要散布的对象（Objects to Scatter）</strong>数组元素中指定一个或多个静态网格体，或从内容浏览器将静态网格体拖入该数组元素。<p>如果网格体无效，工具会显示警告，并拒绝将该资产加入散布（Scatter）数组。</p></li><li>设置<strong>散布数量（Scatter Amount）</strong>。<p>如果散布数量（Scatter Amount）为 <strong>10</strong>，而要散布的对象（Objects To Scatter）有 <strong>3</strong> 个，则每次点击会创建 <strong>30</strong> 个散布对象。</p><p>如果允许重叠（Allow Overlap）为关，此数量可能更少，因为防止对象重叠的优先级高于散布数量（Scatter Amount）。</p></li><li>在视口中左键点击，开始散布静态网格体。</li></ol>
+<p>散布（Scatter）有以下工具：</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/c96b5482-120f-447b-9fb6-4fc3e927805b?resizing_type=fit" alt="原文示意图24：散布工具选项" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/c96b5482-120f-447b-9fb6-4fc3e927805b?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ul><li><strong>默认（Default）</strong>——控制资产散布方式的散布（Scatter）工具。</li><li><strong>要散布的对象（Objects to Scatter）</strong>——加入散布（Scatter）工具的静态网格体资产数组。</li><li><strong>散布数量（Scatter Amount）</strong>——创建的资产数量乘以不同待散布对象（Objects To Scatter）的数量。</li><li><strong>Actor 类型（Actor Type）</strong>——散布网格体时使用的 Actor 类型。在大多数情况下使用默认（Default）选项，此时玩家经常能同时看到散布的资产。分层（Hierarchical）选项适用于玩家可能看不到大多数散布资产的情况。</li><li><strong>基础形状（Base Shape）</strong>——决定散布形状包围盒。</li><li>正方形（Square）</li><li>圆形（Circle）</li><li>噪声圆（Noisy Circle）</li><li><strong>散布形状大小（Scatter Shape Size）</strong>——按 X 和 Y 坐标决定散布（Scatter）包围盒的边界。</li><li><strong>旋转范围（Rotation Range）</strong>——按 X 和 Y 坐标决定包围盒内资产的旋转。每个散布的资产都会在该范围内随机取值。如果不想要随机范围，将两个坐标字段设为相同值。</li><li><strong>缩放范围（Scale Range）</strong>——按 X 和 Y 坐标决定包围盒的缩放。每个散布的资产都会在该范围内随机取值。如果不想要随机范围，将两个坐标字段设为相同值。</li><li><strong>垂直偏移（Vertical Offset）</strong>——决定散布资产时的垂直偏移。此选项适用于散布树木等应陷入地面、或应悬浮的资产。</li><li><strong>散布形状颜色（Scatter Shape Color）</strong>——决定散布形状包围盒的颜色。</li><li><strong>允许重叠（Allow Overlap）</strong>——开关包围盒内散布资产的重叠。如果设为关，散布资产的数量可能减少。</li><li><strong>标签前缀（Label Prefix）</strong>——设置要添加到散布资产标签的前缀。</li></ul>
+<h3>散布热键</h3>
+<p><strong>添加要散布的对象（Add Objects To Scatter）</strong>——按住热键 <strong>C</strong> 并点击关卡中的对象，即可使用该资产的静态网格体。散布（Scatter）工具会显示图标，指示鼠标光标下资产的静态网格体是否可用于散布。</p>
+<p><strong>散布（Scatter）</strong>——按住散布（Scatter）热键 <strong>X</strong> 可查看将要散布的区域。按住该热键并点击，即可将对象散布到该区域中。</p>
+<h3>要散布的对象</h3>
+<p>有几个属性可用于改变散布行为。“每个待散布对象的权重（Weight per Object To Scatter）”使用该网格体被散布到的百分比概率。例如，如果<strong>散布数量（Scatter Amount）</strong>设为 <strong>10</strong>，<strong>要散布的对象（Objects to Scatter）</strong>数组中有 <strong>3</strong> 个资产，且<strong>允许重叠（Allow Overlap）</strong>为<strong>开</strong>，则每次点击会创建 <strong>30</strong> 个<strong>资产</strong>，此时每个网格体的默认<strong>权重（Weight）为 100</strong>。</p>
+<p>但是，如果其中一个网格体设为 <strong>50 权重（Weight）</strong>，该对象只有 <strong>50% 的概率</strong>出现，因此每次点击大约只散布 <strong>25 个资产</strong>。这是基于取整和函数中其他因素的近似值。可以将其设为零，以确保该网格体绝不会被散布，而不必将其从数组中移除。</p>
+<h3>Actor 类型</h3>
+<p><strong>默认（Default）</strong>设置会为每个待散布对象（Object to Scatter）创建一个实例化静态网格体（ISM）组件。这适用于大多数散布用途。</p>
+<p>可以选择<strong>分层实例化静态网格体（HISM）</strong>，它看起来与 ISM 相同。区别在于它会自动分区，使游戏中玩家看不到的实例“簇”不被加载，从而节省运行时内存。</p>
+<p>大多数情况使用 ISM；如果要在岛屿的很大一片区域内、在单个 Actor 中散布，请使用 HISM。</p>
+<p>请自行将 ISM 和 HISM 组件放在不同的 Actor 中。混用不会“出错”，只是会失去 HISM 分层特性的好处。</p>
+<h3>基础形状</h3>
+<p><strong>噪声圆（Noisy Circle）</strong>能得到更自然的“随机”结果。<strong>圆形（Circle）</strong>或<strong>正方形（Square）</strong>则在合适的场合使用。</p>
+<h3>散布形状大小</h3>
+<p>散布形状大小（Scatter Shape Size）使用厘米作为散布形状的单位。按住 <strong>X</strong> 再交互式调整该值，可在视口中看到形状缩放。改变大小会改变噪声圆（Noisy Circle）的随机特性。</p>
+<h3>旋转范围</h3>
+<p><strong>旋转范围（Rotation Range）</strong>控制应用到每个散布资产的随机旋转。每个资产的旋转都会在最小值和最大值之间随机取值。如果不想要随机旋转，将旋转范围（Rotation Range）的两个值设为相同的数字。</p>
+<h3>缩放范围</h3>
+<p><strong>缩放范围（Scale Range）</strong>与旋转范围（Rotation Range）类似，只是它是网格体默认大小的百分比。每个散布资产都会在最小值和最大值之间随机缩放。例如，如果值为 0.5 和 2，每个对象会随机变为原始网格体缩放的 50% 到 200%（两倍）之间。</p>
+<p>默认不进行随机缩放。</p>
+<h3>垂直偏移</h3>
+<p><strong>垂直偏移（Vertical Offset）</strong>选项按厘米整体偏移所有散布对象。适用于让散布对象“陷入”地面或“悬浮”。</p>
+<h3>散布形状颜色</h3>
+<p><strong>散布形状颜色（Scattered Shape Color）</strong>控制基础形状（Base Shape）的颜色与不透明度。此选项对散布本身没有影响，仅用于可视化。</p>
+<h3>允许重叠</h3>
+<p>当<strong>允许重叠（Allow Overlap）</strong>设为<strong>开（On）</strong>时，每个散布资产都可能与其他资产相交。当此选项设为<strong>关（Off）</strong>时，尺寸最大的对象决定每个散布资产之间的最小距离。这会考虑缩放范围（Scale Range）。</p>
+<p>例如，如果有 2 个要散布的资产，一个包围盒为 25x25，另一个为 125x200，那么任何对象的中心都不会进入另一个对象 400 单位以内，即最大资产最大“边”长度的两倍。这是按每次点击计算的，所以即使关闭了允许重叠（Allow Overlap），如果在同一位置点击两次，一些对象仍可能重叠。</p>
+<h3>标签前缀</h3>
+<p>这仅控制所创建 Actor 的标签。在首次使用散布（Scatter）工具之前设置标签，可确保创建的所有散布（Scatter）Actor 具有相同的前缀。</p>
+<h2 id="sec-8">吸附到目标</h2>
+<p><strong>吸附到目标（Snap to Target）</strong>适用于将道具和建筑吸附到场景中的目标对象。这对瞄准建筑的屋檐下方、以及将墙体资产并排放置特别有帮助，只靠肉眼判断吸附会很难。</p>
+<p>吸附到目标（Snap to Target）有四个主要部分：</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/06ad51ca-f6da-43ad-bb64-34c79f371479?resizing_type=fit" alt="原文示意图25：吸附到目标工具" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/06ad51ca-f6da-43ad-bb64-34c79f371479?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ul><li><strong>工具信息（Tool Information）</strong>——基于<strong>距离（Distance）</strong>和<strong>旋转角度（Angle Rotated）</strong>报告信息。</li><li><strong>距离（Distance）</strong>——目标与选中资产之间的距离。</li><li><strong>旋转角度（Angle Rotated）</strong>——选中资产的旋转角度。</li><li><strong>快捷键（Shortcuts）</strong>——为以下<strong>吸附到目标（Snap to Target）</strong>工具提供热键：</li><li><strong>吸附（Snap）</strong>——尝试放置选中对象时使用选择吸附轴（Selection Snaps Axis）选项。</li><li><strong>放置（Place）</strong>——在关卡中放置选中对象。</li><li><strong>旋转（Rotate）</strong>——旋转选中对象。</li><li><strong>复制（Duplicate）</strong>——复制选中对象。</li><li><strong>上移/下移（Move Up/Down）</strong>——将选中对象上移和下移。</li><li><strong>操作（Actions）</strong>——提供操作选中对象的方式：</li><li><strong>复制所选（Duplicate Selection）</strong>——复制选中对象。</li><li><strong>吸附每个对象（Snap Each Object）</strong>——开关吸附对象的选项。</li><li><strong>常规（General）</strong>——决定吸附到目标（Snap to Target）行为的工具设置，基于以下选项：</li><li><strong>沿轴吸附每个对象（Snap Each Object Along Axis）</strong>——开关选项。</li><li><strong>忽略复制项（Ignore Duplicate）</strong>——开关选项。</li><li><strong>吸附到隐藏项（Snap to Hidden）</strong>——开关选项。</li><li><strong>复制偏移量（Duplicate Offset Amount）</strong></li><li><strong>垂直偏移（Vertical Offset）</strong></li><li><strong>垂直偏移增量（Vertical Offset Increment）</strong></li><li><strong>吸附轴（Snap Axis）</strong>——提供吸附到轴的工具：</li><li><strong>选择吸附轴（Selection Snap Axis）</strong></li><li><strong>显示吸附轴平面（Show Snap Axis Plane）</strong>——开关选项。</li><li><strong>显示吸附平面颜色（Show Snap Plane Color）</strong></li><li><strong>网格吸附（Grid Snapping）</strong>——提供开关网格吸附（Grid Snapping）的选项。</li></ul>
+<p>由于对象的构造方式，吸附到树木等某些目标对象时并不能完美吸附。</p>
+<h3>沿轴吸附每个对象</h3>
+<p><strong>沿轴吸附每个对象（Snap Each Object Along Axis）</strong>提供一种沿<strong>选择吸附轴（Select Snap Axis）</strong>吸附对象的方式。当沿轴吸附每个对象（Snap Each Object Along Axis）选项为开，且选择吸附轴（Select Snap Axis）设为底部（Bottom）时，对象会吸附到地面上。如果是其他轴，则会沿该轴“投射”对象，直到碰到关卡中的物体。</p>
+<p>如果将沿轴吸附每个对象（Snap Each Object Along Axis）设为关，但放置完对象后又想吸附，可以使用<strong>吸附每个对象（Snap Each Object）</strong>按钮执行一次性<strong>沿轴吸附（Snap Along Axis）</strong>，依据当前的<strong>选择吸附轴（Selection Snap Axis）</strong>设置。</p>
+<p>由于对象的构造方式（例如树木），使用此选项时可能仍需微调对象的位置。</p>
+<h3>忽略复制项</h3>
+<p><strong>忽略复制项（Ignore Duplicated）</strong>决定吸附（Snap）工具是否忽略之前复制过的 Actor。此工具用于紧密放置多个对象（例如树木），使它们不会吸附到视口中已有树木的位置。</p>
+<h3>吸附到隐藏项</h3>
+<p><strong>吸附到隐藏项（Snap to Hidden）</strong>控制吸附到目标（Snap To Target）工具，以避免将对象吸附到编辑器中临时隐藏的对象（例如大纲视图中的“眼睛”图标）。虽然此设置的默认选项是避免吸附到编辑器中隐藏的对象，但可以打开“吸附到隐藏项（Snap To Hidden）”来吸附所有对象，不论其隐藏状态。</p>
+<h3>复制偏移量</h3>
+<p><strong>复制偏移量（Duplicated Offset Amount）</strong>提供一种调整视口中复制对象偏移的方式。此设置还会提高复制对象的可见性，使其在视口中更加突出。</p>
+<h3>垂直偏移</h3>
+<p><strong>垂直偏移（Vertical Offset）</strong>提供一种让对象悬浮或陷入地面（如树木）的方式。输入的偏移量会在工具调用之间被“记住”，但重启 UEFN 后会重置。有一个垂直偏移（Vertical Offset）属性，可以用热键加鼠标滚轮交互式调整，也可以手动输入。</p>
+<p>如果选择吸附轴（Selection Snap Axis）为底部（Bottom），例如将对象吸附到地面时，沿轴吸附每个对象（Snap Each Object Along Axis）会覆盖垂直偏移（Vertical Offset）。</p>
+<h3>垂直偏移增量</h3>
+<p>垂直偏移增量（Vertical Offset Increment）决定鼠标滚轮将选中对象上移或下移的幅度。</p>
+<h3>选择吸附轴</h3>
+<p><strong>选择吸附轴（Selection Snap Axis）</strong>提供一种自信地吸附选中对象（如建筑或道具）、实现严丝合缝搭建的方式。视口左下角的 LUF 小部件有助于确定选中对象包围盒上的吸附位置。</p>
+<p>有些道具（如海报）有一面应该朝外展示的面。为确保选中对象以正确的一面朝外吸附到目标，请旋转对象的包围盒，使想要的一面朝外。</p>
+<p>包围盒位置由选中对象的包围盒边决定：</p>
+<ul><li>左（Left）</li><li>右（Right）</li><li>前（Front）</li><li>后（Back）</li><li>顶（Top）</li><li>底（Bottom）</li><li>中心（Center）</li></ul>
+<p>使用选择吸附轴（Selection Snap Axis）工具的方法：</p>
+<ol><li>从边列表中选择对象的<strong>包围盒方向</strong>：左、右、前、后、顶、底或中心。</li><li>在视口中选择一个对象。<p>此时可以通过选择<strong>复制所选（Duplicate Selected）</strong>来复制该对象。</p></li><li>按住 <strong>X</strong>。</li><li>将鼠标移向想要吸附对象的区域。对象会自动跟随鼠标。</li><li>松开 <strong>X</strong> 并点击<strong>完成（Complete）</strong>。</li></ol>
+<p>当复制所选（Duplicate Selected）为开时，每次按住 X 左键点击都会在场景中放置副本。</p>
+<h4>吸附位置</h4>
+<table><thead><tr><th>吸附位置</th><th>说明</th></tr></thead><tbody>
+<tr><td><strong>左（Left）</strong></td><td>按选中对象的左侧吸附。</td></tr>
+<tr><td><strong>右（Right）</strong></td><td>按选中对象的右侧吸附。</td></tr>
+<tr><td><strong>前（Front）</strong></td><td>按选中对象的前侧吸附。</td></tr>
+<tr><td><strong>后（Back）</strong></td><td>按选中对象的后侧吸附。</td></tr>
+<tr><td><strong>顶（Top）</strong></td><td>按选中对象的顶侧吸附。</td></tr>
+<tr><td><strong>底（Bottom）</strong></td><td>按选中对象的底侧吸附。</td></tr>
+<tr><td><strong>中心（Center）</strong></td><td>中心（Center）选项通过选择要吸附的目标，将选中对象吸附到其上。</td></tr>
+</tbody></table>
+<h3>显示吸附轴平面</h3>
+<p>显示吸附轴平面（Show Snap Axis Plane）提供一种开关包围盒上吸附轴平面显示的方式。</p>
+<h3>吸附轴平面颜色</h3>
+<p>吸附轴平面颜色（Snap Axis Plane Color）提供一种为选中对象吸附到的平面添加颜色的方式。中心（Center）选项没有可见颜色。</p>
+<h3>网格吸附</h3>
+<p>网格吸附（Grid Snapping）可以打开或关闭。启用后，鼠标指针会吸附到世界网格，网格也会变为可见，从而可以预判吸附发生的位置。其中包括“径向渐隐（Radial Fade）”属性，可使可见网格在边缘淡出，更容易看清最近的网格点。吸附网格的颜色、不透明度和线宽都可以自定义。</p>
+<p>网格的大小和吸附目前与视口的吸附（Snap）控件没有关联。必须使用吸附到目标（Snap To Target）工具中的网格吸附（Grid Snapping）属性来控制。</p>
+<h2 id="sec-9">3D 选择</h2>
+<p><strong>3D 选择（3D Select）</strong>提供一种快速对岛屿进行大范围更改的方式：将多个选中对象包裹在一个包围盒中——完全位于包围盒内的任何对象都会被选中。包围盒出现在视口中后，可以快速编辑。</p>
+<p>使用 3D 选择（3D Selection）工具的方法：</p>
+<ol><li>选择资产的一侧，作为包围盒的第一条边。</li><li>选择资产的对侧，形成包围盒。</li><li>用鼠标滚轮或箭头小部件缩放包围盒，使其覆盖所有想要选中的资产。</li></ol>
+<p>有方便的热键驱动视口快捷操作，可快速查看<strong>仅选中（only selected）</strong>、<strong>隐藏仅选中（hiding only selected）</strong>或<strong>显示全部（showing all）</strong>。</p>
+<p>3D 选择（3D Select）包围盒包含所有资产，即使是建筑内部的资产，并会报告包围盒内选中了多少个对象。</p>
+<p>3D 选择（3D Select）有四个主要部分：</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/82ccbaed-cc34-423b-8cb5-8330f3ba084e?resizing_type=fit" alt="原文示意图26：3D 选择工具" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/82ccbaed-cc34-423b-8cb5-8330f3ba084e?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ul><li><strong>工具信息（Tool Information）</strong>——将包围盒内的信息按<strong>选中对象（Selected Objects）</strong>、<strong>Actor</strong> 或<strong>类（Class）</strong>分类。</li><li><strong>快捷键（Shortcuts）</strong>——为<strong>调整体积大小（Resize Volume）</strong>、<strong>均匀缩放体积（Scale Volume Uniformly）</strong>和<strong>循环对象可见性（Cycle Object Visibility）</strong>提供热键。</li><li><strong>常规（General）</strong>——该工具的常规使用选项，包括<strong>对象可见性（Object Visibility）</strong>、<strong>使用边缘缩放（Use Edge Scaling）</strong>和<strong>变换 gizmo 灵敏度（Transform Gizmo Sensitivity）</strong>。</li><li><strong>外观（Appearance）</strong>——通过以下选项控制包围盒的可见性：<strong>显示网格体包围盒（Show Mesh Bounding Box）</strong>、<strong>包围盒线宽（Bounding Box Line Thickness）</strong>和<strong>包围盒线颜色（Bounding Box Line Color）</strong>。</li></ul>
+<h3>调整体积大小</h3>
+<p>在至少选中一个对象的情况下，按住<strong>调整体积大小（Resize Volume）</strong>快捷键（<strong>X</strong>）。视口中会出现调整尺寸的小部件。按住调整体积大小（Resize Volume）快捷键并拖动小部件来调整体积大小。用鼠标滚轮可按左、右、上、下、前、后位置快速整体缩放整个盒体。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/e761a030-7622-4e2f-9fa6-6a49ceab2130?resizing_type=fit" alt="原文示意图27：调整体积大小小部件" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/e761a030-7622-4e2f-9fa6-6a49ceab2130?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h3>均匀缩放体积</h3>
+<p>按住 <strong>X</strong> 并滚动鼠标滚轮，可在所有方向上均匀缩放包围盒。</p>
+<p>不要尝试使用变换小部件的中间来缩放包围盒。那样会让盒体朝鼠标方向移动，而不是增大或减小包围盒尺寸。</p>
+<h3>循环对象可见性</h3>
+<p>按 <strong>V</strong> 可循环切换不同的对象可见性（Object Visibility）选项，而不必从下拉菜单中手动选择可见性选项。</p>
+<h3>对象可见性</h3>
+<p><strong>对象可见性（Object Visibility）</strong>提供一种按设置查看包围盒及其内容的方式。</p>
+<h4>显示全部</h4>
+<p><strong>显示全部（Show All）</strong>确保工具启动时可见的所有对象重新可见。3D 选择（3D Select）工具中的显示全部（Show All）会记住工具启动时的可见状态。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/58d73440-21c9-40f1-9e4d-b7df65aabaa8?resizing_type=fit" alt="原文示意图28：显示全部模式" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/58d73440-21c9-40f1-9e4d-b7df65aabaa8?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>这与视口菜单项<strong>显示所有 Actor（Show All Actors）</strong>（Ctrl+H）不同，后者会显示所有 Actor。</p>
+<h4>隔离选中对象</h4>
+<p><strong>隔离选中对象（Isolate Selected Objects）</strong>仅显示选中的对象。这通常是初次调整包围盒时最有用的模式。它会随包围盒的调整以及对象的选中/取消选中动态更新。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/f5173bf3-c82f-4651-b420-60fc4ed3dab0?resizing_type=fit" alt="原文示意图29：隔离选中对象模式" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/f5173bf3-c82f-4651-b420-60fc4ed3dab0?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h4>隐藏选中对象</h4>
+<p><strong>隐藏选中对象（Hide Selected Objects）</strong>隐藏所有选中的对象。可以用它查看是否还有未选中的东西。它会随包围盒的调整以及对象的选中/取消选中动态更新。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/f909fee1-332e-4ad1-a3b3-ec846f08fb03?resizing_type=fit" alt="原文示意图30：隐藏选中对象模式" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/f909fee1-332e-4ad1-a3b3-ec846f08fb03?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h3>边缘缩放</h3>
+<p><strong>边缘缩放（Edge Scaling）</strong>提供一种拖动包围盒每条边而不影响其他边的方式。可以关闭此设置，换成更传统的缩放和平移小部件。使用边缘缩放（Edge Scaling）时，提高变换 gizmo 灵敏度（Transform Gizmo Sensitivity）可以用鼠标滚轮快速扩大选择框。</p>
+<p>尺寸越大，进入选择范围的对象越多，工具的性能会越慢。</p>
+<p>更多信息请参阅上文<strong>均匀缩放体积（Scale Volume Uniformly）</strong>。</p>
+<p>目前无法旋转包围盒。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/f2769a10-3c26-4c05-be58-0cf684b54f81?resizing_type=fit" alt="原文示意图31：调整包围盒选择对象" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/f2769a10-3c26-4c05-be58-0cf684b54f81?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>调整包围盒大小时，完全被包围的对象会在视口和<a href="https://dev.epicgames.com/documentation/fortnite/fortnite-glossary#outliner-panel" target="_blank" rel="noopener">大纲视图（Outliner）</a>中被选中并高亮。</p>
+<p>选中完毕后，按 <strong>Esc</strong> 或点击视口中的<strong>完成（Complete）</strong>退出工具。包围盒中的资产全被选中后，可以对其执行其他资产操作，例如<strong>编组（Grouping）</strong>，或使用<a href="fortnite-tools-mode-in-fortnite.html">吸附到目标（Snap To Target）</a>工具在关卡中快速复制和放置资产。</p>
+<p>使用 <strong>吸附到目标（Snap To Target）</strong>工具复制资产稍快一些。更多信息请参阅<strong>选择吸附轴（Selection Snap Axis）</strong>一节。</p>
+<h3>变换 Gizmo 灵敏度</h3>
+<p>决定用鼠标滚轮缩放包围盒时，包围盒增大和减小的速度。</p>
+<h3>显示网格体包围盒</h3>
+<p>显示包围盒网格（Show Bounding box Mesh）可视化包围盒内外的物体。它在包围盒内添加雾效盒以提高视觉清晰度，但不影响工具的工作方式。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/e45a967a-4b7c-4c26-9be8-70b9f2da5d74?resizing_type=fit" alt="原文示意图32：包围盒内雾效可视化" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/e45a967a-4b7c-4c26-9be8-70b9f2da5d74?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h3>包围盒线宽与包围盒线颜色</h3>
+<p>如果难以看清，可以调整<strong>包围盒边界线</strong>。这些选项仅用于视觉清晰度，不影响工具的工作方式。</p>
+<h3>过滤器</h3>
+<p><strong>过滤器（Filter）</strong>工具提供多种过滤选项，用于聚焦资产类型。第一个过滤工具是<strong>过滤模式（Filter Mode）</strong>。过滤模式（Filter Mode）有四个选项：<strong>无（None）</strong>、标签（Label）、类（Class）和排除（Exclude，默认值）。将过滤模式（Filter Mode）设为无（None）表示不使用过滤。</p>
+<p><strong>排除（Exclude）</strong>使包围盒过滤掉资产：</p>
+<ul><li><strong>包含标签（Include Label）</strong>——包含在数组元素中定义了该标签的资产。</li><li><strong>包含类（Include Class）</strong>——包含在数组元素中定义了该类的资产。</li><li><strong>排除标签（Exclude Label）</strong>——排除在数组元素中定义了该标签的资产。</li><li><strong>排除类（Exclude Class）</strong>——排除在数组元素中定义了该类的资产。</li></ul>
+<p><strong>标签（Label）</strong>和<strong>类（Class）</strong>名称用于包含和排除资产：</p>
+<ul><li><strong>包含标签（Include Label）</strong>——包含在数组元素中定义了该标签的资产。</li><li><strong>包含类（Include Class）</strong>——包含在数组元素中定义了该类的资产。</li><li><strong>排除标签（Exclude Label）</strong>——排除在数组元素中定义了该标签的资产。</li><li><strong>排除类（Exclude Class）</strong>——排除在数组元素中定义了该类的资产。</li></ul>
+<p>如果将过滤模式（Filter mode）改为包含（Include），而包含（Include）数组为空，则不会选中任何内容。建议将过滤模式（Filter Mode）设为<strong>无（None）</strong>或<strong>排除（Exclude）</strong>，再填写包含（Include）过滤字段。</p>
+<p>在数组元素中搜索对象时，部分单词也能匹配。例如，在<strong>包含标签（Include Label）</strong>中输入“landscape”，可匹配任何带有 landscape 一词的对象。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/53b8db4b-0b98-4bec-b244-a411ae2fd1b0?resizing_type=fit" alt="仅选中包含标签中含有 FastFood 一词的对象。" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/53b8db4b-0b98-4bec-b244-a411ae2fd1b0?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>同样，在<strong>包含类（Include Class）字段</strong>中输入“hedge”，可匹配类名中包含“hedge”的任何类。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/51a16d62-9039-436e-b854-e9911544ea1d?resizing_type=fit" alt="仅类名中含有 Hedge 一词的对象可被选中。" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/51a16d62-9039-436e-b854-e9911544ea1d?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p><strong>热键</strong>可以填充各种<strong>过滤器（Filter）</strong>字段，详见工具属性的<strong>快捷键（Shortcuts）</strong>分区。热键会填入完整的<strong>标签（Label）</strong>或<strong>类（Class）</strong>名称。要让匹配更宽泛，可在热键填入标签名后编辑该字符串。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/cdafbc8c-25c2-45a7-a910-2f60ae6262d8?resizing_type=fit" alt="原文示意图35：过滤器排除示例" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/cdafbc8c-25c2-45a7-a910-2f60ae6262d8?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>上例中，属于 <strong>CP_BP_Apollo_Hedge_Straight_C 类</strong>的对象会被排除，<strong>标记为 landscape 和 Ground 的</strong>对象也会被排除。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/d000ed41-5719-4498-91c3-5d3ead75455a?resizing_type=fit" alt="原文示意图36：过滤器包含示例" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/d000ed41-5719-4498-91c3-5d3ead75455a?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>上例中，属于 <strong>CP_BP_Apollo_Hedge_Straight_C</strong> 和 <strong>CP_Apollo_Street_UrbanLight_01_C 类</strong>的对象会被选中，无论选择包围盒变得多大。</p>
+<h2 id="sec-10">静态网格体优化</h2>
+<p><strong>优化静态网格体（Optimize Static Mesh）</strong>工具是性能与内存分析工具，可高亮特定的静态网格体资产，并解释它们性能较差的原因。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/edb3ec04-78d3-428a-9846-547fe9a360a0?resizing_type=fit" alt="原文示意图37：优化静态网格体工具" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/edb3ec04-78d3-428a-9846-547fe9a360a0?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>使用优化静态网格体（Optimize Static Mesh）工具的方法：</p>
+<ol><li>选择<strong>运行测试（Run Tests）</strong>。将在 <strong>StaticMesh_Health</strong> 下创建一系列集合。</li><li>选择<strong>下一个静态网格体（Next Static Mesh）</strong>，有问题的资产会在内容浏览器中被选中。</li><li>在<strong>工具信息（Tool Information）</strong>面板中，会列出资产名称及相关问题。</li></ol>
+<p>优化静态网格体（Optimize Static Mesh）工具有两个主要工具：</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/b744bc5d-f1fe-4a27-a5ad-cb3f7b0c6adf?resizing_type=fit" alt="原文示意图38：运行测试与下一个静态网格体" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/b744bc5d-f1fe-4a27-a5ad-cb3f7b0c6adf?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ul><li><strong>运行测试（RunTests）</strong>——此工具搜索主项目文件夹中你创建或导入的资产，但不搜索 Fortnite 资产或 UEFN 自带的资产。</li><li><strong>下一个静态网格体（Next Static Mesh）</strong>——将内容浏览器同步到下一个有问题的资产。</li></ul>
+<h3>运行测试</h3>
+<p>选择<strong>运行测试（Run Tests）</strong>会使优化工具搜索并检查静态网格体资产。发现问题后，会在内容浏览器 <strong>StaticMesh_Health</strong> 下创建一系列集合，受影响的网格体会按问题严重程度类型分组。工具运行后会自动先显示严重程度最高的集合。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/dc645962-d0a2-4bc8-9854-466d540d5d6c?resizing_type=fit" alt="原文示意图39：按严重程度分组的集合" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/dc645962-d0a2-4bc8-9854-466d540d5d6c?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>集合按问题的严重程度标记：<strong>轻微（Minor）</strong>、<strong>中等（Moderate）</strong>或<strong>严重（Severe）</strong>。严重程度指资产上发现的问题数量。只有一个问题的资产为轻微（Minor），有两个问题的资产为主要（Major），有三个或更多问题的资产为严重（Severe）。</p>
+<p>从<strong>要循环的集合（Collection To Cycle Through）</strong>下拉菜单中选择严重程度类型，可先过滤并定位影响最大的问题。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/1d69990d-4534-45bc-a2dc-cefda8405628?resizing_type=fit" alt="原文示意图40：选择严重程度类型" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/1d69990d-4534-45bc-a2dc-cefda8405628?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>如果没有检测到问题，会显示“No problems found”消息，工具也不会创建任何集合。</p>
+<p>在 <strong>StaticMesh_Health</strong> 下，会创建问题严重程度列表，以及按命名严重程度分组的资产的问题数量。</p>
+<h3>下一个静态网格体</h3>
+<p>选择<strong>下一个静态网格体（Next Static Mesh）</strong>会聚焦到看完第一个集合后的下一个严重程度集合。将鼠标悬停在问题旁的工具提示上可查看问题详情。工具提示会给出可能的修复建议，并说明为什么应该修复该资产。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/d872a3bc-ae25-4a68-a4a3-eff6811f5d6c?resizing_type=fit" alt="原文示意图41：问题工具提示" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/d872a3bc-ae25-4a68-a4a3-eff6811f5d6c?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>修复工具信息（Tool Information）中列出的问题，然后重新测试网格体，确保问题已解决。更多资产优化知识，请参阅 <strong><a href="https://dev.epicgames.com/documentation/fortnite/memory-and-optimization-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">内存与优化（Memory and Optimization）</a></strong>文档。</p>
+<h2 id="sec-11">优化纹理</h2>
+<p><strong>优化纹理（Optimize Texture）</strong>工具是性能与内存分析工具，可高亮特定的纹理资产，并解释它们性能较差的原因。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/76d060ee-44d5-4833-9b7f-38298420e161?resizing_type=fit" alt="原文示意图42：优化纹理工具" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/76d060ee-44d5-4833-9b7f-38298420e161?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>使用优化纹理（Optimize Texture）工具的方法：</p>
+<ol><li>选择<strong>运行测试（Run Tests）</strong>。将在 <strong>Texture_Health</strong> 下创建一系列集合。</li><li>选择<strong>下一个纹理（Next Texture）</strong>，有问题的资产会在内容浏览器中被选中。</li><li>在<strong>工具信息（Tool Information）</strong>面板中，会列出资产名称及相关问题。</li></ol>
+<p>优化纹理（Optimize Texture）工具有两个主要工具：</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/95c62278-d95f-4018-9d7a-b1c3516d97fe?resizing_type=fit" alt="原文示意图43：运行测试与下一个纹理" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/95c62278-d95f-4018-9d7a-b1c3516d97fe?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ul><li><strong>运行测试（RunTests）</strong>——此工具搜索主项目文件夹中你创建或导入的资产，但不搜索 Fortnite 资产或 UEFN 自带的资产。</li><li><strong>下一个纹理（Next Texture）</strong>——将内容浏览器同步到下一个有问题的资产。</li></ul>
+<h3>运行测试</h3>
+<p>选择<strong>运行测试（Run Tests）</strong>会使优化工具搜索并检查纹理资产。发现问题后，会在内容浏览器 <strong>Texture_Health</strong> 下创建一系列集合，受影响的纹体会按问题严重程度类型分组。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/fd54f2cc-ca7b-4216-ab5f-9fc4767f258b?resizing_type=fit" alt="原文示意图44：按严重程度分组的纹理集合" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/fd54f2cc-ca7b-4216-ab5f-9fc4767f258b?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>集合按问题的严重程度标记：<strong>轻微（Minor）</strong>、<strong>中等（Moderate）</strong>或<strong>严重（Severe）</strong>。严重程度指资产上发现的问题数量。只有一个问题的资产为轻微（Minor），有两个问题的资产为主要（Major），有三个或更多问题的资产为严重（Severe）。</p>
+<p>从<strong>要循环的集合（Collection To Cycle Through）</strong>下拉菜单中选择严重程度类型，可先过滤并定位影响最大的问题。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/612a6eda-3fd1-4e89-ba32-0a2203438ac1?resizing_type=fit" alt="原文示意图45：纹理严重程度选择" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/612a6eda-3fd1-4e89-ba32-0a2203438ac1?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>如果没有检测到问题，会显示“No problems found”消息，工具也不会创建任何集合。</p>
+<p>在 <strong>Texture_Health</strong> 下，会创建问题严重程度列表，以及按命名严重程度分组的资产的问题数量。</p>
+<h3>下一个纹理</h3>
+<p>选择<strong>下一个纹理（Next Texture）</strong>会聚焦内容浏览器中的某个资产，并在<strong>工具信息（Tool Information）</strong>下列出该资产的全部问题。将鼠标悬停在问题旁的工具提示上可查看问题详情。工具提示会给出可能的修复建议，并说明为什么应该修复该资产。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/abcaec1e-4ee3-4bd0-a180-ec5c7752c847?resizing_type=fit" alt="原文示意图46：纹理问题工具提示" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/abcaec1e-4ee3-4bd0-a180-ec5c7752c847?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>修复工具信息（Tool Information）中列出的问题，然后重新测试纹理，确保问题已解决。更多资产优化知识，请参阅 <strong><a href="https://dev.epicgames.com/documentation/fortnite/memory-and-optimization-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">内存与优化（Memory and Optimization）</a></strong>文档。</p>
+<h2 id="sec-12">行程时间</h2>
+<p><strong>行程时间（Travel Time）</strong>工具可测量在关卡中放置的两个或多个点之间的距离与行程时间。行程时间（Travel Time）有多种选项，可调整工具提供的行程信息。一组<strong>移动预设（Movement Presets）</strong>可快速选择用于计算点间时间的速度。</p>
+<p>放置的<strong>行程时间样条（Travel Time Spline）</strong>Actor 不会保存在项目中，也不会上传到服务器，不会改变关卡的内存或文件预算。</p>
+<p>使用行程时间（Travel Time）工具的方法：</p>
+<ol><li>选择<strong>行程时间（Travel Time）</strong>，然后在视口中左键点击，放置第一个行程时间样条（Travel Time Spline）。</li><li>在视口中点击另一个位置，放置第二个<strong>行程时间样条（Travel Time Spline）</strong>。两点之间会出现一个片段，显示这两点之间的距离与行程时间。</li><li>继续点击其他行程位置，放置<strong>行程时间样条（Travel Time Splines）</strong>。</li></ol>
+<p>总距离与总时间也会显示在属性面板的工具信息（Tool Information）分区中。</p>
+<p>如果启动该工具时已选中一个行程时间样条（Travel Time spline）Actor，可以继续编辑它。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/0e9b039b-bfac-4810-9d12-37459ab396e6?resizing_type=fit" alt="原文示意图47：放置行程时间样条" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/0e9b039b-bfac-4810-9d12-37459ab396e6?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/a88b0bf8-3539-4570-bc60-0c77afb31604?resizing_type=fit" alt="原文示意图48：两点间的距离与时间片段" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/a88b0bf8-3539-4570-bc60-0c77afb31604?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>行程时间（Travel Time）有六个主要选项：</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/7430f0db-f367-4c2d-b83f-6696f6269d89?resizing_type=fit" alt="原文示意图49：行程时间工具选项" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/7430f0db-f367-4c2d-b83f-6696f6269d89?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ul><li><strong>工具信息（Tool Information）</strong>——基于<strong>总距离（Total Distance）</strong>和<strong>总时间（Total Time）</strong>报告信息。</li><li><strong>快捷键（Shortcuts）</strong>——为以下行程时间（Travel Time）工具提供快捷键：</li><li><strong>移动片段（Move Segment）</strong>——在所有主要行程时间样条（Travel Time Splines）处显示变换小部件。</li></ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/4dffd09e-8179-460b-83da-7369477edae1?resizing_type=fit" alt="原文示意图50：移动片段变换小部件" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/4dffd09e-8179-460b-83da-7369477edae1?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ul><li><strong>分割片段（Divide Segment）</strong>——分割所选行程时间样条（Travel Time Spline）上记录的时间。</li><li><strong>删除片段（Delete Segment）</strong>——删除所选片段。</li><li><strong>向前追加片段（Add Segment to Beginning）</strong>——在第一个行程时间样条（Travel Time Spline）之前添加行程时间样条（Travel Time Spline）和片段。</li><li><strong>操作（Actions）</strong>——提供处理片段和样条的工具：</li><li><strong>清除当前片段（Clear Current Segment）</strong>——从当前样条对象中移除所有片段。</li><li><strong>清除其他样条（Clear Other Spline）</strong>——移除除当前样条对象之外的所有其他行程时间（Travel Time）样条。</li><li><strong>位移（Locomotion）</strong>——提供一组基于以下内容表示行程数据的工具：</li><li><strong>移动预设（Movement Presets）</strong>——下拉菜单，包含 Fortnite 中的全部移动模式。</li><li><strong>移动速度（Movement Speed）</strong>——用于计算各片段行程时间的工具。移动预设（Movement Presets）会设置此速度，也可以通过拖动字段中的速度条手动更改速度。</li><li><strong>移动速度倍率（Movement Speed Multiplier）</strong>——此值与移动速度（Movement Speed）属性相乘。小于 1 的数字使玩家移动更慢，大于 1 的数字使玩家移动更快。</li><li><strong>常规（General）</strong>——决定行程时间样条（Travel Time Splines）在视口中排列方式的一组工具，基于：</li><li><strong>跟随表面（Follow Surface）</strong>——决定<strong>行程时间样条（Travel Time Splines）</strong>跟随何种表面区域的一组选项。</li><li><strong>网格吸附（Grid Snapping）</strong>——决定放置时片段是否吸附到网格的开关。</li><li><strong>网格吸附大小（Grid Snap Size）</strong>——决定网格片段吸附到的大小。</li><li><strong>距离单位（Distance Units）</strong>——在每片段卡片和工具信息（Tool Information）中显示距离所用的单位。</li><li><strong>时间单位（Time Units）</strong>——在每片段卡片和工具信息（Tool Information）中显示时间所用的单位。</li><li><strong>可配置单位（Configurable Units）</strong>——提供更改<strong>距离（Distance）</strong>和<strong>时间（Time）</strong>度量方式的途径。</li><li><strong>外观（Appearance）</strong>——使用以下控件控制片段在视口中的外观：</li><li><strong>文本大小（Text Size）</strong>——决定行程时间（Travel Time）文本的大小。</li><li><strong>文本颜色（Text Color）</strong>——决定行程时间（Travel Time）文本的颜色。</li><li><strong>文本背景（Text Background）</strong>——决定行程时间（Travel Time）文本背景的不透明度。</li><li><strong>使用直线（Use Straight Lines）</strong>——将片段变为直线。</li><li><strong>片段 1 颜色（Segment 1 Color）</strong>——更改每个奇数片段的颜色。</li><li><strong>片段 2 颜色（Segment 2 Color）</strong>——更改每个偶数片段的颜色。</li><li><strong>片段线宽（Segment Line Thickness）</strong>——更改片段线宽。</li></ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/9ca579c0-9a9a-40ec-bb07-60e34226c6b8?resizing_type=fit" alt="原文示意图51：片段颜色设置" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/9ca579c0-9a9a-40ec-bb07-60e34226c6b8?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p><strong>网格距离单位（Grids Distance Unit）</strong>设置使用行程时间（Travel Time）工具中的<strong>网格吸附大小（Grid Snap Size）属性</strong>，而不是视口的网格设置。</p><figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/c26cca3e-b830-4b69-b553-7be6b8dfa911?resizing_type=fit" alt="行程时间工具选项示例。" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/c26cca3e-b830-4b69-b553-7be6b8dfa911?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h3>移动预设</h3>
+<p>行程时间（Travel Time）工具的核心功能是<strong>移动预设（Movement Presets）</strong>属性。此选项包含多种常见角色移动速度，在行程时间（Travel Time）工具中更改此设置会更新行程时间（Travel Time）工具本身的结果。</p>
+<p>移动预设（Movement Presets）的默认预设是<strong>跑步（Run）</strong>，即 Fortnite 中角色在没有任何其他修正时的移动方式。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/2258d2c1-d22d-4285-ac60-ac954e6bdbe5?resizing_type=fit" alt="原文示意图52：移动预设为跑步" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/2258d2c1-d22d-4285-ac60-ac954e6bdbe5?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>将此选项改为战术冲刺（Tactical Sprint）会缩短片段之间的时间，因为角色移动得更快。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/44ecc1c3-a22a-408e-800e-029e6dfae3bf?resizing_type=fit" alt="原文示意图53：移动预设为战术冲刺" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/44ecc1c3-a22a-408e-800e-029e6dfae3bf?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h3>移动速度</h3>
+<p><strong>移动速度（Movement Speed）</strong>设置用于根据移动预设（Movement Presets）和移动速度倍率（Movement Speed Multiplier）提供的行程信息，确定样条之间行程时间的方法，并据此计算玩家按该数据在样条点之间行程所需的时间。</p>
+<p>默认计算的速度可能（源文档此处截断）。</p><figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/0e08f648-03b6-42c5-b176-50000cb04b35?resizing_type=fit" alt="原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/0e08f648-03b6-42c5-b176-50000cb04b35?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure><figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/caa44f30-4bb6-472a-8936-0fd9411f3a57?resizing_type=fit" alt="原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/caa44f30-4bb6-472a-8936-0fd9411f3a57?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure><figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/608d87e7-a737-4b48-b7c0-733dc7f12c6e?resizing_type=fit" alt="原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/608d87e7-a737-4b48-b7c0-733dc7f12c6e?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure><figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/3ebaa4e0-6419-46f8-876b-1499c78f97be?resizing_type=fit" alt="原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/3ebaa4e0-6419-46f8-876b-1499c78f97be?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<div class="pager"><a href="34-environments-and-landscapes-in-unreal-editor-for-fortnite.html"><small>← 返回父教程</small>环境与地形</a><a href="sub-index.html"><small>子教程索引 →</small>全部子教程</a></div>
+</article><nav class="doc-toc" aria-label="本页内容"><b>本页内容</b><a href="#sec-1">Fortnite 工具概述</a><a href="#sec-2">Fortnite 工具核心概念</a><a href="#sec-3">创建体积</a><a href="#sec-4">查找重叠</a><a href="#sec-5">辅助资产</a><a href="#sec-6">添加物理</a><a href="#sec-7">散布</a><a href="#sec-8">吸附到目标</a><a href="#sec-9">3D 选择</a><a href="#sec-10">静态网格体优化</a><a href="#sec-11">优化纹理</a><a href="#sec-12">行程时间</a></nav></div>
+</div></div>
+</div>
+<footer class="edc-footer"><div class="inner"><img src="../assets/logo-epic.svg" alt="Epic Games"><span>Fortnite 文档中文镜像 · UE教程/ · 本地打开 index.html 阅读 · 翻译整理自 Epic 官方文档，仅供学习交流</span></div></footer>
+</body>
+</html>
+
+
+
+

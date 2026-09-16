@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>使用实体与组件（Scene Graph） | Fortnite 文档中文镜像</title>
+<link rel="stylesheet" href="../assets/epic.css">
+<link rel="stylesheet" href="../assets/patch.css">
+<link rel="icon" href="../assets/logo-epic.svg">
+</head>
+<body class="theme-fortnite">
+<div class="edc-topbar"><div class="edc-topbar-inner"><img class="edc-logo" src="../assets/logo-epic.svg" alt="Epic Games"><span class="edc-brand">Epic Games <b>开发者社区</b></span><span class="edc-nav"><a href="../index.html">文档首页</a><a href="sub-index.html">子教程索引</a><a href="https://dev.epicgames.com/documentation/fortnite/working-with-entities-and-components-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">英文原文</a></span></div></div>
+<div class="site-container">
+<aside class="site-nav"><div class="documents-tree"><nav><ul class="contents-table">
+<div class="tree-sec">A · 最新动态</div>
+<a class="tree-link" href="01-42-00-fortnite-ecosystem-updates-and-release-notes.html">01. 42.00 生态系统更新与发行说明</a>
+<a class="tree-link active" href="02-custom-items-and-inventory-overview-in-fortnite.html">02. 自定义物品与背包总览</a>
+<a class="tree-link" href="03-in-island-transactions-in-fortnite.html">03. 岛内交易</a>
+<a class="tree-link" href="04-mobile-development-in-fortnite.html">04. 移动端开发</a>
+<a class="tree-link" href="05-inputs-in-fortnite.html">05. 输入系统</a>
+<a class="tree-link" href="06-ability-system-in-unreal-editor-for-fortnite.html">06. 能力系统 Ability System</a>
+<a class="tree-link" href="07-partybased-gameplay-using-the-social-synergy-api-in-fortnite.html">07. 社交协同 API 与小队玩法</a>
+<a class="tree-link" href="08-scene-graph-in-unreal-editor-for-fortnite.html">08. 场景图 Scene Graph</a>
+<div class="tree-sec">B · 入门</div>
+<a class="tree-link" href="09-build-your-first-island-in-fortnite.html">09. 构建你的第一个岛屿</a>
+<a class="tree-link" href="10-onboarding-guide-to-programming-with-verse-in-unreal-editor-for-fortnite.html">10. Verse 编程入门指南</a>
+<a class="tree-link" href="11-building-basics-in-fortnite-creative.html">11. 建造基础</a>
+<div class="tree-sec">C · 品牌合集</div>
+<a class="tree-link" href="12-star-wars-islands-in-fortnite.html">12. 星球大战™岛屿</a>
+<a class="tree-link" href="13-kpop-demon-hunters-islands-in-fortnite.html">13. KPop 猎魔团岛屿</a>
+<a class="tree-link" href="14-building-lego-islands-in-fortnite.html">14. 乐高®岛屿</a>
+<a class="tree-link" href="15-the-walking-dead-universe-islands-in-unreal-editor-for-fortnite.html">15. 行尸走肉宇宙岛屿</a>
+<a class="tree-link" href="16-teenage-mutant-ninja-turtle-islands-in-unreal-editor-for-fortnite.html">16. 忍者神龟岛屿</a>
+<a class="tree-link" href="17-squid-game-islands-in-fortnite.html">17. 鱿鱼游戏岛屿</a>
+<div class="tree-sec">D · 开发者成功</div>
+<a class="tree-link" href="18-using-creator-portal-in-fortnite-creative.html">18. 使用创作者门户</a>
+<a class="tree-link" href="19-island-moderation-and-guidelines-in-fortnite-creative.html">19. 岛屿审核与准则</a>
+<div class="tree-sec">E · 协作</div>
+<a class="tree-link" href="20-creating-teams-in-creator-portal-in-unreal-editor-for-fortnite.html">20. 在创作者门户创建团队</a>
+<a class="tree-link" href="21-adding-playtesters-in-fortnite-creative.html">21. 添加试玩测试员</a>
+<a class="tree-link" href="22-playtesting-your-island-in-unreal-editor-for-fortnite.html">22. 试玩测试你的岛屿</a>
+<a class="tree-link" href="23-collaborating-in-unreal-editor-for-fortnite.html">23. 在 UEFN 中协作</a>
+<a class="tree-link" href="24-lore-version-control-in-unreal-editor-for-fortnite.html">24. Lore 版本控制</a>
+<a class="tree-link" href="25-conflicts-in-lore-version-control-in-unreal-editor-for-fortnite.html">25. Lore 中的冲突</a>
+<a class="tree-link" href="26-version-history-and-conflict-resolution-in-unreal-editor-for-fortnite.html">26. 分支历史与冲突解决</a>
+<div class="tree-sec">F · 游戏示例</div>
+<a class="tree-link" href="27-build-a-game-in-unreal-editor-for-fortnite.html">27. 构建一款游戏</a>
+<a class="tree-link" href="28-unreal-editor-for-fortnite-starter-templates.html">28. UEFN 新手模板</a>
+<div class="tree-sec">G · Verse</div>
+<a class="tree-link" href="29-learn-the-basics-of-writing-code-in-verse.html">29. 从零学习 Verse 代码基础</a>
+<div class="tree-sec">H · 专注领域</div>
+<a class="tree-link" href="30-lighting-in-unreal-editor-for-fortnite.html">30. 灯光</a>
+<a class="tree-link" href="31-animation-and-cinematics-in-unreal-editor-for-fortnite.html">31. 动画与过场动画</a>
+<a class="tree-link" href="32-modeling-in-unreal-editor-for-fortnite.html">32. 建模</a>
+<a class="tree-link" href="33-materials-in-unreal-editor-for-fortnite.html">33. 材质</a>
+<a class="tree-link" href="34-environments-and-landscapes-in-unreal-editor-for-fortnite.html">34. 环境与地形</a>
+<a class="tree-link" href="35-audio-in-unreal-editor-for-fortnite.html">35. 音频</a>
+<a class="tree-link" href="36-visual-effects-in-unreal-editor-for-fortnite.html">36. 视觉特效</a>
+</ul></nav></div></aside>
+<div class="page-content"><div class="page-document has-theme-bg">
+<header class="section-page-header"><nav><ol class="breadcrumb is-shrinkable"><li class="breadcrumb-item is-root"><img src="../assets/logo-epic.svg" alt="Epic Games"><a href="../index.html">Developer</a></li><li class="breadcrumb-item"><a href="../index.html">Fortnite 文档</a></li><li class="breadcrumb-item"><a href="02-custom-items-and-inventory-overview-in-fortnite.html">自定义物品与背包总览</a></li><li class="breadcrumb-item active" aria-current="page"><span class="text-truncate">使用实体与组件（Scene Graph）</span></li></ol></nav><h1>使用实体与组件（Scene Graph）</h1><p class="text-secondary mb-0">学习向项目添加实体、组件与预制件的工作流：创建实体、嵌套组织层级、挂载组件、覆盖与清除覆盖，搭建复杂对象。</p><p class="doc-meta">英文原标题：Working with Entities and Components in Unreal Editor for Fortnite · <a href="https://dev.epicgames.com/documentation/fortnite/working-with-entities-and-components-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">查看英文原文</a> · 社区翻译镜像，仅供学习</p></header>
+<div class="doc-columns"><article class="doc-article">
+<div class="block-callout">注：这是一项 Beta 功能，欢迎学习使用，但在正式发布作品时请谨慎使用。</div>
+<p>以下是向项目添加实体、<a href="https://dev.epicgames.com/documentation/fortnite/component" target="_blank" rel="noopener">组件（components）</a>与<a href="prefabs-and-prefab-instances-in-unreal-editor-for-fortnite.html">预制件（prefabs）</a>的工作流。用这些工作流创建复杂对象并加入你的体验。</p>
+<h2 id="sec-1">创建实体（Creating an Entity）</h2>
+<p>要创建实体：</p>
+<ul>
+<li>打开 <strong>放置 Actor（Place Actors）</strong>面板；</li>
+<li>选择 <strong>Entity</strong> 图标。
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/6238221c-031b-4e26-ace8-55bd72c50576?resizing_type=fit" alt="Place Actors 面板中 Entity 图标的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/6238221c-031b-4e26-ace8-55bd72c50576?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></li>
+<li>把空实体拖入<a href="https://dev.epicgames.com/documentation/en-us/uefn/user-interface-reference-for-unreal-editor-for-fortnite#Viewport" target="_blank" rel="noopener">视口（viewport）</a>。</li>
+</ul>
+<p>然后就可以在<a href="https://dev.epicgames.com/documentation/fortnite/fortnite-glossary" target="_blank" rel="noopener">细节（Details）面板</a>为实体添加组件了。</p>
+<h2 id="sec-2">通过大纲视图添加更多实体（Adding More Entities Through the Outliner）</h2>
+<p>场景中有实体后，可以通过大纲视图（Outliner）添加更多实体。</p>
+<p>复制该实体即可在大纲视图中创建更多实体。</p>
+<p>也可以在大纲视图中右键实体，选择以下选项：</p>
+<ul>
+<li><strong>Add Entity（添加实体）</strong>：在所选实体下嵌套一个新实体；</li>
+<li><strong>Group Under New Entity（成组到新实体下）</strong>：新建一个实体作为所选实体的父级。如果原实体已嵌套在其他实体下，结构保持不变，新实体插入到原父子实体之间。</li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/998a626d-8cfb-47ab-8cc0-dfda4137af35?resizing_type=fit" alt="原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/998a626d-8cfb-47ab-8cc0-dfda4137af35?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h2 id="sec-3">嵌套与组织实体（Nesting and Structuring Entities）</h2>
+<p>把实体组织成层级结构，就在层级中的实体间建立了关系。嵌套结构有四个层级：</p>
+<ul>
+<li><strong>祖先（Ancestor）</strong>：父级以上的任何层级（父、祖父、曾祖父……）；</li>
+<li><strong>后代（Descendent）</strong>：当前选中实体以下的任何层级（子、孙……）；</li>
+<li><strong>父级（Parent）</strong>：当前选中实体向上仅一层的祖先；</li>
+<li><strong>子级（Child）</strong>：向下仅一层的后代。</li>
+</ul>
+<p>在该结构中，祖先实体掌管其下所有嵌套实体的生命周期。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/6a387086-9e6c-4187-beef-a538cd2a22dd?resizing_type=fit" alt="实体嵌套层级结构的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/6a387086-9e6c-4187-beef-a538cd2a22dd?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>以下示例中，<strong>路灯柱（lamp post）</strong>单独看只是一个简单的游戏对象，只能做其组件设定的一件事：作为路灯柱的静态网格体。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/e3afb049-8283-407b-a249-49cb07ac5e49?resizing_type=fit" alt="路灯柱实体的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/e3afb049-8283-407b-a249-49cb07ac5e49?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>当 <strong>Rotation_Point</strong> 实体、<strong>Dock_Lantern</strong> 实体与 <strong>SpotLight</strong> 实体嵌套到 <strong>Default_Wooden_LightPost_Prefab_C</strong> 实体之下，路灯柱就兼具了子实体的特性，成为更复杂的游戏对象。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/d0f53264-744f-461d-8d67-7c5806068e66?resizing_type=fit" alt="嵌套后的路灯柱实体的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/d0f53264-744f-461d-8d67-7c5806068e66?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>这样做的理由：</p>
+<ul>
+<li>按实体在场景中的用途，缩放其组件功能；</li>
+<li>确定子/后代实体与父/祖先实体的交互方式；</li>
+<li>层级结构代表游戏中的对象生命周期：祖先对象被销毁，其下所有子与后代对象一并销毁。</li>
+</ul>
+<p>实体成组后，请重命名父实体，方便辨认。</p>
+<p>嵌套是个值得利用的概念。例如对齐建筑资产，降低建筑出现缝隙的概率。</p>
+<p>后代实体可相对祖先在世界中的位置偏移，让你设定一个中央轴心点，在场景中复制或移动建筑的墙、地板等部件时统一控制摆放。</p>
+<h2 id="sec-4">添加组件（Adding a Component）</h2>
+<p>为实体添加组件，决定项目中游戏对象的行为。</p>
+<p>要在实体的<strong>细节</strong>面板添加组件并自定义：</p>
+<ul>
+<li>在视口或大纲视图中选中实体；</li>
+<li>在实体的<strong>细节</strong>面板选择 <strong>Add Component</strong>。
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/bbbad025-4f5c-4062-8194-d6cdcd9d6f5e?resizing_type=fit" alt="添加组件的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/bbbad025-4f5c-4062-8194-d6cdcd9d6f5e?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></li>
+<li>在<strong>组件下拉菜单（Component dropdown menu）</strong>中搜索并选择组件。实体上会出现该组件，细节面板会出现该组件的字段；</li>
+<li>在<strong>细节</strong>面板的<strong>组件选项（component options）</strong>中自定义组件。
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/20b5ac3f-2d41-4864-bfdf-b39954535a45?resizing_type=fit" alt="自定义组件选项的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/20b5ac3f-2d41-4864-bfdf-b39954535a45?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></li>
+</ul>
+<p>组件可简可繁：简单的如网格体，复杂的如自定义 Verse 脚本。一个实体可挂载多个组件来定义其在项目中的行为，但同一实体上每种组件类型只能用一次。</p>
+<p>也就是说，选定某种组件类型后，不能在同一实体上重复使用该类型。要复用同类组件，需新建实体再挂载。Scene Graph 可用组件请参阅<a href="components-in-unreal-editor-for-fortnite.html">组件（Components）</a>。</p>
+<p>找不到需要的组件？自己做一个试试！了解<a href="creating-your-own-component-using-verse-in-unreal-editor-for-fortnite.html">如何用 Verse 创建自己的组件</a>。</p>
+<p>目前同一组件子类只能添加一个。例如一个实体只能挂一个 <code>point_light_component</code>，但可以同时挂一个 <code>point_light_component</code> 和一个 <code>rect_light_component</code>。自己用 Verse 写的自定义组件同样受此限制。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/b19104e9-523e-46c5-9d46-8e98729683b6?resizing_type=fit" alt="原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/b19104e9-523e-46c5-9d46-8e98729683b6?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h3>资产生成的组件（Asset-Generated Components）</h3>
+<p>资产生成的组件是基于项目中已有内容（如网格体、声音或粒子系统资产）自动创建的组件类。这些资产还可能暴露可在生成组件上修改的属性。</p>
+<h2 id="sec-5">覆盖组件（Overriding Components）</h2>
+<p>你可以在<a href="prefab-editor-user-interface-in-unreal-editor-for-fortnite.html">预制件编辑器（Prefab Editor）</a>或场景的<strong>细节</strong>面板中覆盖组件：无需新建实体或移除当前组件，就能添加新功能或更换组件关联资产，改变组件性质。</p>
+<p>组件有 4 种覆盖状态，显示在组件卡片上：</p>
+<table><thead><tr><th>图标</th><th>名称</th><th>说明</th></tr></thead><tbody>
+<tr><td><figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/61670da0-51c1-4adc-b3a8-18ed23656e5a?resizing_type=fit" alt="无覆盖状态图标的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/61670da0-51c1-4adc-b3a8-18ed23656e5a?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></td><td><strong>无覆盖（No Override）</strong></td><td>该组件没有覆盖。</td></tr>
+<tr><td><figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/267cc5d8-d086-42e5-8c87-2bd3b7ef71b3?resizing_type=fit" alt="在此覆盖状态图标的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/267cc5d8-d086-42e5-8c87-2bd3b7ef71b3?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></td><td><strong>在此覆盖（Override Here）</strong></td><td>该组件在此层级被覆盖。</td></tr>
+<tr><td><figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/c4429c2b-62a7-476f-9f24-ca14c0521b20?resizing_type=fit" alt="内部覆盖状态图标的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/c4429c2b-62a7-476f-9f24-ca14c0521b20?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></td><td><strong>内部覆盖（Override Inside）</strong></td><td>该组件的某个选项存在覆盖状态。</td></tr>
+<tr><td><figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/4d31646c-6741-4c05-aeaf-00fcd182d294?resizing_type=fit" alt="唯一覆盖状态图标的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/4d31646c-6741-4c05-aeaf-00fcd182d294?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></td><td><strong>唯一覆盖（Unique Override）</strong></td><td>该覆盖仅属于此预制件实例。</td></tr>
+</tbody></table>
+<p>要覆盖组件，请执行：</p>
+<ul>
+<li>在该组件的<strong>细节</strong>面板点击<strong>组件卡片下拉菜单按钮</strong>，即加号（<strong>+</strong>）。
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/ae18720b-f16f-4c63-8c54-9f185470c1ba?resizing_type=fit" alt="组件卡片下拉菜单按钮的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/ae18720b-f16f-4c63-8c54-9f185470c1ba?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></li>
+<li>在下拉菜单中选择 <strong>Override Component</strong>。
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/77560ccb-74c8-4328-b842-59ef6b079b28?resizing_type=fit" alt="选择 Override Component 的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/77560ccb-74c8-4328-b842-59ef6b079b28?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></li>
+</ul>
+<p>如下图所示，细节面板中各组件旁的空白图标都已变为覆盖图标。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/203bbca4-5d2d-4f2d-a451-0833d6973926?resizing_type=fit" alt="组件覆盖图标的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/203bbca4-5d2d-4f2d-a451-0833d6973926?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>修改组件选项的默认值同样会覆盖该组件功能，例如调大灯光组件的默认值。修改默认值后，组件控制按钮会出现 <strong>+ 图标</strong>，表示默认值已被修改。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/f27e28a3-d49f-48dd-b356-903a818234ac?resizing_type=fit" alt="默认值被修改提示的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/f27e28a3-d49f-48dd-b356-903a818234ac?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h2 id="sec-6">清除覆盖（Clear Overrides）</h2>
+<p>要回到预制件的原始设计，请执行：</p>
+<ul>
+<li>在<strong>细节</strong>面板点击<strong>组件卡片下拉菜单按钮</strong>。
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/2089aa7e-cef9-4e82-99b7-47f38901b020?resizing_type=fit" alt="清除覆盖下拉菜单的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/2089aa7e-cef9-4e82-99b7-47f38901b020?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></li>
+<li>选择 <strong>Clear Override</strong>，预制件回到原始状态。
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/1a4393ee-db89-455e-be43-92e541fbe124?resizing_type=fit" alt="回到原始状态的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/1a4393ee-db89-455e-be43-92e541fbe124?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></li>
+</ul>
+<h2 id="sec-7">移除组件（Removing a Component）</h2>
+<p>要从实体移除组件：</p>
+<ul>
+<li>在<strong>细节</strong>面板点击该组件的<strong>组件卡片下拉菜单按钮</strong>，即加号（<strong>+</strong>）。
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/86367f46-d1cf-44be-b1e2-02fb83f5267f?resizing_type=fit" alt="移除组件下拉菜单的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/86367f46-d1cf-44be-b1e2-02fb83f5267f?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></li>
+<li>在下拉菜单中选择 <strong>Remove Component</strong>，该组件即从实体移除。
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/a31bd657-2fbe-4cc4-9daf-d3eb82ae334c?resizing_type=fit" alt="选择 Remove Component 的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/a31bd657-2fbe-4cc4-9daf-d3eb82ae334c?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/fcba2e1d-c4cc-4999-9a1e-241cae6cd0b9?resizing_type=fit" alt="预制件编辑器中同样流程的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/fcba2e1d-c4cc-4999-9a1e-241cae6cd0b9?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>该流程在预制件编辑器中同样适用。</p>
+<h2 id="sec-8">把实体存为预制件（Saving Entities as Prefabs）</h2>
+<p>创建实体并添加组件后，可以把特定实体存为预制件：同一实体与组件结构可创建多个实例，修改会即时同步到所有实例。要学习创建预制件与同步修改，请参阅<a href="prefabs-and-prefab-instances-in-unreal-editor-for-fortnite.html">预制件与预制件实例（Prefabs and Prefab Instances）</a>。</p>
+<h2 id="sec-9">在 Fortnite 创意模式中使用 Scene Graph（Working with Scene Graph in Fortnite Creative）</h2>
+<p><strong>Scene Graph 实体</strong>在 Fortnite 创意模式中也受支持。用<a href="https://dev.epicgames.com/documentation/fortnite/fortnite-glossary#phone" target="_blank" rel="noopener"><strong>手机工具（Phone Tool）</strong></a>可以在 <a href="https://dev.epicgames.com/documentation/fortnite/fortnite-glossary#edit-mode" target="_blank" rel="noopener"><strong>编辑模式（Edit Mode）</strong></a>中对 Scene Graph 做基础编辑，操作与反馈都沿用你熟悉的方式。该支持还意味着可以用手机工具同时与场景中的所有实体和 Actor 交互。</p>
+<p>Fortnite 创意模式与 Scene Graph 能这样互通，是因为手机工具把整个实体层级视为一个对象来选中。</p>
+<p>Scene Graph 实体无法在创意模式编辑模式中创建。</p>
+<p>相关标签：<a href="https://dev.epicgames.com/community/search?query=gameplay" target="_blank" rel="noopener">gameplay</a> · <a href="https://dev.epicgames.com/community/search?query=level%20design" target="_blank" rel="noopener">level design</a> · <a href="https://dev.epicgames.com/community/search?query=level" target="_blank" rel="noopener">level</a> · <a href="https://dev.epicgames.com/community/search?query=scene%20graph" target="_blank" rel="noopener">scene graph</a></p>
+<p><a href="https://forums.unrealengine.com/categories?tag=fortnite" target="_blank" rel="noopener">在开发者论坛提问并帮助同伴</a></p>
+<p><a href="https://dev.epicgames.com/community/fortnite/learning" target="_blank" rel="noopener">在学习库中编写或阅读他人教程</a></p>
+<div class="pager"><a href="02-custom-items-and-inventory-overview-in-fortnite.html"><small>← 返回父教程</small>自定义物品与背包总览</a><a href="sub-index.html"><small>子教程索引 →</small>全部子教程</a></div>
+</article><nav class="doc-toc" aria-label="本页内容"><b>本页内容</b><a href="#sec-1">创建实体</a><a href="#sec-2">通过大纲视图添加更多实体</a><a href="#sec-3">嵌套与组织实体</a><a href="#sec-4">添加组件</a><a href="#sec-5">覆盖组件</a><a href="#sec-6">清除覆盖</a><a href="#sec-7">移除组件</a><a href="#sec-8">把实体存为预制件</a><a href="#sec-9">在 Fortnite 创意模式中使用 Scene Graph</a></nav></div>
+</div></div>
+</div>
+<footer class="edc-footer"><div class="inner"><img src="../assets/logo-epic.svg" alt="Epic Games"><span>Fortnite 文档中文镜像 · UE教程/ · 本地打开 index.html 阅读 · 翻译整理自 Epic 官方文档，仅供学习交流</span></div></footer>
+</body>
+</html>

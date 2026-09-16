@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>42.00 生态系统更新与发行说明 | Fortnite 文档中文镜像</title>
+<meta name="description" content="v42.00 生态更新：Unreal MCP 接入 UEFN、触屏手势转正、实验性能力系统、Telekineticon 物理道具与问题修复汇总。">
+<link rel="stylesheet" href="../assets/epic.css">
+<link rel="stylesheet" href="../assets/patch.css">
+<link rel="icon" href="../assets/logo-epic.svg">
+</head>
+<body class="theme-fortnite">
+<div class="edc-topbar"><div class="edc-topbar-inner"><img class="edc-logo" src="../assets/logo-epic.svg" alt="Epic Games"><span class="edc-brand">Epic Games <b>开发者社区</b></span><span class="edc-nav"><a href="../index.html">文档首页</a><a href="sub-index.html">子教程索引</a><a href="https://dev.epicgames.com/documentation/fortnite/42-00-fortnite-ecosystem-updates-and-release-notes" target="_blank" rel="noopener">英文原文</a></span></div></div>
+<div class="site-container">
+<aside class="site-nav"><div class="documents-tree"><nav><ul class="contents-table">
+<div class="tree-sec">A 最新动态</div><a class="tree-link active" href="01-42-00-fortnite-ecosystem-updates-and-release-notes.html">01. 42.00 生态系统更新与发行说明</a><a class="tree-link" href="02-custom-items-and-inventory-overview-in-fortnite.html">02. 自定义物品与背包总览</a><a class="tree-link" href="03-in-island-transactions-in-fortnite.html">03. 岛内交易</a><a class="tree-link" href="04-mobile-development-in-fortnite.html">04. 移动端开发</a><a class="tree-link" href="05-inputs-in-fortnite.html">05. 输入系统</a><a class="tree-link" href="06-ability-system-in-unreal-editor-for-fortnite.html">06. 能力系统 Ability System</a><a class="tree-link" href="07-partybased-gameplay-using-the-social-synergy-api-in-fortnite.html">07. 社交协同 API 与小队玩法</a><a class="tree-link" href="08-scene-graph-in-unreal-editor-for-fortnite.html">08. 场景图 Scene Graph</a><div class="tree-sec">B 入门</div><a class="tree-link" href="09-build-your-first-island-in-fortnite.html">09. 构建你的第一个岛屿</a><a class="tree-link" href="10-onboarding-guide-to-programming-with-verse-in-unreal-editor-for-fortnite.html">10. Verse 编程入门指南</a><a class="tree-link" href="11-building-basics-in-fortnite-creative.html">11. 建造基础</a><div class="tree-sec">C 品牌合集</div><a class="tree-link" href="12-star-wars-islands-in-fortnite.html">12. 星球大战™岛屿</a><a class="tree-link" href="13-kpop-demon-hunters-islands-in-fortnite.html">13. KPop 猎魔团岛屿</a><a class="tree-link" href="14-building-lego-islands-in-fortnite.html">14. 乐高®岛屿</a><a class="tree-link" href="15-the-walking-dead-universe-islands-in-unreal-editor-for-fortnite.html">15. 行尸走肉宇宙岛屿</a><a class="tree-link" href="16-teenage-mutant-ninja-turtle-islands-in-unreal-editor-for-fortnite.html">16. 忍者神龟岛屿</a><a class="tree-link" href="17-squid-game-islands-in-fortnite.html">17. 鱿鱼游戏岛屿</a><div class="tree-sec">D 开发者成功</div><a class="tree-link" href="18-using-creator-portal-in-fortnite-creative.html">18. 使用创作者门户</a><a class="tree-link" href="19-island-moderation-and-guidelines-in-fortnite-creative.html">19. 岛屿审核与准则</a><div class="tree-sec">E 协作</div><a class="tree-link" href="20-creating-teams-in-creator-portal-in-unreal-editor-for-fortnite.html">20. 在创作者门户创建团队</a><a class="tree-link" href="21-adding-playtesters-in-fortnite-creative.html">21. 添加试玩测试员</a><a class="tree-link" href="22-playtesting-your-island-in-unreal-editor-for-fortnite.html">22. 试玩测试你的岛屿</a><a class="tree-link" href="23-collaborating-in-unreal-editor-for-fortnite.html">23. 在 UEFN 中协作</a><a class="tree-link" href="24-lore-version-control-in-unreal-editor-for-fortnite.html">24. Lore 版本控制</a><a class="tree-link" href="25-conflicts-in-lore-version-control-in-unreal-editor-for-fortnite.html">25. Lore 中的冲突</a><a class="tree-link" href="26-version-history-and-conflict-resolution-in-unreal-editor-for-fortnite.html">26. 分支历史与冲突解决</a><div class="tree-sec">F 游戏示例</div><a class="tree-link" href="27-build-a-game-in-unreal-editor-for-fortnite.html">27. 构建一款游戏</a><a class="tree-link" href="28-unreal-editor-for-fortnite-starter-templates.html">28. UEFN 新手模板</a><div class="tree-sec">G Verse</div><a class="tree-link" href="29-learn-the-basics-of-writing-code-in-verse.html">29. 从零学习 Verse 代码基础</a><div class="tree-sec">H 专注领域</div><a class="tree-link" href="30-lighting-in-unreal-editor-for-fortnite.html">30. 灯光</a><a class="tree-link" href="31-animation-and-cinematics-in-unreal-editor-for-fortnite.html">31. 动画与过场动画</a><a class="tree-link" href="32-modeling-in-unreal-editor-for-fortnite.html">32. 建模</a><a class="tree-link" href="33-materials-in-unreal-editor-for-fortnite.html">33. 材质</a><a class="tree-link" href="34-environments-and-landscapes-in-unreal-editor-for-fortnite.html">34. 环境与地形</a><a class="tree-link" href="35-audio-in-unreal-editor-for-fortnite.html">35. 音频</a><a class="tree-link" href="36-visual-effects-in-unreal-editor-for-fortnite.html">36. 视觉特效</a>
+</ul></nav></div></aside>
+<div class="page-content"><div class="page-document has-theme-bg">
+<header class="section-page-header"><nav><ol class="breadcrumb is-shrinkable"><li class="breadcrumb-item is-root"><img src="../assets/logo-epic.svg" alt="Epic Games"><a href="../index.html">Developer</a></li><li class="breadcrumb-item"><a href="../index.html">Fortnite 文档</a></li><li class="breadcrumb-item active" aria-current="page"><span class="text-truncate">42.00 生态系统更新与发行说明</span></li></ol></nav><h1>42.00 生态系统更新与发行说明</h1><p class="text-secondary mb-0">v42.00 生态更新：Unreal MCP 接入 UEFN、触屏手势转正、实验性能力系统、Telekineticon 物理道具与问题修复汇总。</p><p class="doc-meta">英文原标题：42.00 Fortnite Ecosystem Updates and Release Notes · <a href="https://dev.epicgames.com/documentation/fortnite/42-00-fortnite-ecosystem-updates-and-release-notes" target="_blank" rel="noopener">查看英文原文</a> · 社区翻译镜像，仅供学习</p></header>
+<div class="doc-columns"><article class="doc-article">
+<p>v42.00 生态系统更新将 Unreal MCP 带入 UEFN（Unreal Editor for Fortnite），你可以把 Claude Code、Codex 或 Cursor 等智能体编码工具直连到编辑器。经由虚拟指针（Virtual Pointer）的触屏输入手势已结束实验状态——点击（tap）与拖拽（drag）已可用于正式游戏，全新的实验性能力系统（Ability System）则为 Verse 可复用玩法能力提供了框架。快来看看 Telekineticon 物理道具（<a href="https://dev.epicgames.com/documentation/fortnite/fortnite-glossary#experimental" target="_blank" rel="noopener">实验性</a>）与 Heatwave Harbor 预制件和画廊吧！</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/711cf169-9b09-415b-915f-b135ba232426?resizing_type=fill&amp;width=1920&amp;height=335" alt="42.00 Fortnite 生态系统更新与发行说明横幅" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><figcaption>42.00 Fortnite 生态系统更新与发行说明横幅</figcaption><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/711cf169-9b09-415b-915f-b135ba232426?resizing_type=fill&width=1920&height=335" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h2 id="sec-unreal-mcp">Unreal MCP 现已登陆 UEFN</h2>
+<p>随 <a href="https://www.unrealengine.com/news/unreal-engine-5-8-is-now-available" target="_blank" rel="noopener">UE 5.8</a> 一同发布的 <strong>模型上下文协议（Model Context Protocol，MCP）</strong>插件 Unreal MCP，现已登陆虚幻编辑器 Fortnite 版（UEFN）。</p>
+<p>UEFN 在编辑器内部嵌入了 MCP 服务器（MCP server），因此 Claude Code、Codex 或 Cursor 等智能体编码工具可以与你协同工作，降低技术门槛，帮你更快搭建、更快迭代。这包括编写与编译 Verse、放置与配置设备、创建 Scene Graph 实体、用 UMG 搭建 UI，以及运行试玩会话来测试成果等能力。智能体产出的每一样东西都是项目中真实、可编辑的一部分：可以打开的 Verse 文件、可以在细节面板中调整的设备、可以在大纲视图中选中的实体。MCP 是开放标准，任何支持它的智能体编码工具都可以在本地连接，协助你在 UEFN 中开发体验。</p>
+<p>本次发布的 Unreal MCP 附带专为 UEFN 打造的工具集（toolsets），通过同一套 <a href="https://dev.epicgames.com/documentation/unreal-engine/unreal-mcp-in-unreal-editor#toolsets-and-the-toolset-registry" target="_blank" rel="noopener">Toolset Registry</a> 分发——在<a href="https://www.unrealengine.com/news/the-road-to-ue-6" target="_blank" rel="noopener">通往 UE6 的路上</a>，随着我们统一开发管线，UEFN 功能也将由该机制驱动。</p>
+<p>详情请参阅<a href="https://www.fortnite.com/news/unreal-mcp-is-now-available-in-uefn" target="_blank" rel="noopener">官方博客</a>。完整设置与配置请参阅 <strong><a href="uefn-mcp.html">UEFN MCP</a></strong> 文档。</p>
+<h3 id="sec-touch-gestures">移动端控制：触屏输入手势（经由虚拟指针）结束实验状态</h3>
+<p>虚拟指针（Virtual Pointer）让玩家能以兼容所有受支持输入设备的方式与屏幕元素交互，现已可集成到正式游戏中。这为移动设备解锁了更多触屏控制，包括点击（tap）与拖拽（drag）。反投影 API（De-projection API）也已结束实验状态，开发者可以知道玩家在世界空间中触碰的是什么。</p>
+<p>捏合（pinch）操作（用于镜头缩放与对象缩放等功能）目前仍处于实验阶段。</p>
+<p>更多信息请参阅 <strong><a href="virtual-pointer-in-fortnite.html">Virtual Pointer 文档</a></strong>。</p>
+<h4>更多工具，助力你的岛屿移动端体验</h4>
+<p>用 41.00 中发布的其他移动端工具，进一步提升岛屿的移动端体验：</p>
+<ul>
+<li><a href="developer-customizable-touchscreen-controls-in-fortnite.html"><strong>开发者可自定义触屏控制（Developer Customizable Touchscreen Controls）</strong></a>：把触屏布局构建为 UMG 用户挂件（UMG User Widget），为每个动作（跳跃、射击、换弹、瞄准、下蹲、疾跑等）使用触屏控制布局覆盖（Touch Control Layout Override）挂件，再将其指派给 HUD 控制器（HUD Controller）设备，即可重排、换肤或隐藏单个按钮。</li>
+<li><strong><a href="tappable-custom-hud-widgets-in-fortnite.html">可点击自定义 HUD 挂件（Tappable Custom HUD Widgets）</a></strong>：自定义 HUD 挂件如今可充当触屏按钮。用宝石计数器、奖励通知、背包图标等 HUD 元素驱动逻辑，还可以把体验中用不上的默认动作挪作他用。</li>
+<li><strong><a href="player-input-device-info-in-fortnite.html">平台控制查询（Platform Controls Query）</a></strong>：全新的 Verse API 可检测玩家是否在使用支持触屏的设备，以及该平台相关的控制方案，从而把玩家引导到适合其设备的体验。</li>
+</ul>
+<p>另请查看 <strong><a href="designing-for-mobile-in-fortnite.html">为移动端设计（Designing for Mobile）</a></strong>指南，其中包含在 Fortnite 与 UEFN 中设计移动端游戏的原则与最佳实践。</p>
+<h2 id="sec-mobile-perf">移动端性能优化：资产健康工具改进</h2>
+<p>在频繁崩溃的岛屿上，不少内存不足（out-of-memory）问题来自不符合内存规范的资产——这在移动端影响尤为显著。42.00 的资产检查覆盖面更广，包括缺失 <a href="https://dev.epicgames.com/documentation/fortnite/fortnite-glossary#lod" target="_blank" rel="noopener">LOD</a> 与 Min LOD for Quality 设置不正确等问题，风险会在搭建过程中以资产警告的形式浮现，而不是等玩家踩坑后才暴露。没有 LOD，低配设备就只能加载全精度几何体；而 Min LOD for Quality 正是让它们降到低细节 LOD 的开关。网格导入现在默认采用对移动端友好的设置，资产离“可发布”更近了一步。检查还会标出问题并指向可选的一键修复。</p>
+<h2 id="sec-profiling">性能分析工具改进</h2>
+<p>我们正在把 <strong><a href="timing-insights-in-fortnite.html">Timing Insights</a></strong> 引入 UEFN，它能像 UE 开发者所依赖的那样，拆解你的岛屿每一帧的时间开销。适合正在追查卡顿（hitching）或低帧率、此前只能靠逐个关闭系统来定位元凶的开发者——现在可以直接找到最耗时的部分。Timing Insights 度量的是帧时间而非内存，分析的是实时会话。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/ff254432-d74a-4adf-9dad-ceed6a7df0ef?resizing_type=fit" alt="UEFN 中的 Timing Insights 性能分析示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><figcaption>UEFN 中的 Timing Insights 性能分析示意图</figcaption><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/ff254432-d74a-4adf-9dad-ceed6a7df0ef?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h2 id="sec-ui-example">用户界面功能示例更新</h2>
+<p>UEFN 的用户界面（User Interfaces）功能示例已更新，便于在五大分类中查找内容：</p>
+<ul>
+<li>Verse UI。</li>
+<li>场景图 UI（Scene Graph UI）。</li>
+<li>用设备搭建的 UI。</li>
+<li>UI 美术（UI Art）。</li>
+<li>完整功能 UI 示例。</li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/d0ab559f-2f6f-48f4-a7ed-dd802c0589fb?resizing_type=fit" alt="用户界面功能示例新增站点示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><figcaption>用户界面功能示例新增站点示意图</figcaption><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/d0ab559f-2f6f-48f4-a7ed-dd802c0589fb?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>此外还新增了多个站点，演示 UEFN 的新 UI 功能，快去看看吧！</p>
+<h2 id="sec-ability-system">能力系统（Ability System，实验性）</h2>
+<p>全新的实验性代码原生能力系统（code-native Ability System）现已可用。能力系统（Ability System）是用 Verse 创建可扩展、可复用玩法能力的框架，可用来创建赋予玩家魔法技能、超级能力或其他特殊能力的玩法。</p>
+<p>你可以通过两种方式创建能力——结构化模板，或用 Verse API 做更深度的自定义。</p>
+<div class="block-callout">注：本节为早期实验性（Experimental）版本，API 仍可能随开发推进而变化。我们正在朝结束实验状态努力，现在就可以开始搭建，以便正式发布时做好准备！</div>
+<p>更多信息请参阅 <strong><a href="06-ability-system-in-unreal-editor-for-fortnite.html">能力系统 Ability System</a></strong> 文档。</p>
+<h3 id="sec-template-abilities">Fortnite 模板能力（Fortnite Template Abilities，实验性）</h3>
+<p>Fortnite 模板能力（Fortnite Template Abilities）为你提供了实用的能力搭建与自定义方式：在时间轴的特定时刻放置动画、音频与玩法效果。它为创建与迭代玩法动作提供了结构化框架，支持可配置的激活、目标选择、时序与执行。</p>
+<p>更多信息请参阅 <strong><a href="fortnite-template-abilities-in-unreal-editor-for-fortnite.html">Fortnite Template Abilities</a></strong> 文档。</p>
+<h3 id="sec-verse-abilities-api">Verse 能力 API（Verse Abilities API，实验性）</h3>
+<p>完全用 Verse 定义、激活与管理玩法能力，全面掌控激活条件、目标选择与生命周期。这是需要超越模板能力的自定义逻辑时的正确起点。</p>
+<p>更多信息请参阅 <strong><a href="https://dev.epicgames.com/documentation/fortnite/verse-api/verse-api/unrealenginedotcom/abilities" target="_blank" rel="noopener">Verse Abilities API 参考</a></strong>。</p>
+<h3 id="sec-camera-modifiers">Verse 镜头修正器（Verse Camera Modifiers，实验性）</h3>
+<p>我们开放了一组通用镜头修正器（Camera Modifiers），与实验性镜头 API（Camera API）相辅相成。这些修正器上的属性与开发者今天可用的设备类似，但可在 Verse 中于运行时管理。每个镜头修正器都经过精心调校，响应灵敏且高度参数化，支持高质量、精雕细琢的玩法：</p>
+<ul>
+<li><strong>环绕镜头修正器（Orbit Camera Modifier）</strong>：跟随并环绕目标实体的第三人称摇臂镜头。适用于第三人称角色镜头，或镜头需跟随目标并保持可调距离与高度的其他配置。</li>
+<li><strong>固定角度镜头修正器（Fixed Angle Camera Modifier）</strong>：以恒定视角跟随目标，适用于等距、俯视、侧视及类似固定视角配置。</li>
+<li><strong>固定点镜头修正器（Fixed Point Camera Modifier）</strong>：静止镜头，原地旋转以保持一个或多个目标实体在画面中，适用于监控镜头、观战视角、演出桥段等位于固定世界位置的镜头。</li>
+</ul>
+<p>镜头 API 与这些修正器仍处于实验阶段，该功能正在积极开发中。</p>
+<h2 id="sec-telekineticon">全新念力工具 Telekineticon，物理操控工具（实验性）</h2>
+<div class="block-callout warn">注意：Telekineticon 在 v42.00 中以实验性（Experimental）发布，使用它的岛屿暂不可发布。</div>
+<p>我们新增了一个物理（Physics）物品 <strong>Telekineticon</strong>，开发者可用它构建玩家可拾取、放下与移动物理 <code>creative_props</code> 的游戏。使用前需要启用 Physics 与物品化（Itemization）。</p>
+<p>基于 Verse 与全新物品化架构，Telekineticon 是可在编辑时配置的物品，你可以基于它的函数与事件构建玩法。</p>
+<p>更多信息请查看 <a href="telekineticon-in-fortnite.html">Telekineticon</a> 文档页。</p>
+<h2 id="sec-youtube">社区帖子支持嵌入 YouTube 视频</h2>
+<p>在 Fortnite Communities 的帖子正文中嵌入 YouTube 视频。视频仅在 Web 端完整帖子（<a href="http://communities.epicgames.com" target="_blank" rel="noopener">communities.epicgames.com</a>）中显示，不在客户端内显示。</p>
+<p>在 Fortnite Communities 的帖子编辑器中点击 Video 按钮即可添加 YouTube 视频。玩家无需离开帖子即可点击观看嵌入的 YouTube 播放器。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/23b26a0e-049d-4435-838a-5fcd529ee860?resizing_type=fit" alt="在社区帖子编辑器中点击 Video 按钮添加 YouTube 视频" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><figcaption>在社区帖子编辑器中点击 Video 按钮添加 YouTube 视频</figcaption><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/23b26a0e-049d-4435-838a-5fcd529ee860?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>玩家可以直接在 Fortnite Communities 的帖子中点击内嵌的 YouTube 播放器播放视频。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/968fd583-3f3f-464d-a1d0-45bfbb46a480?resizing_type=fit" alt="帖子内嵌的 YouTube 播放器，可直接点击播放" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><figcaption>帖子内嵌的 YouTube 播放器，可直接点击播放</figcaption><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/968fd583-3f3f-464d-a1d0-45bfbb46a480?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h2 id="sec-content">内容浏览器与物品库更新</h2>
+<p>看看本版本新增的设备与物品吧！</p>
+<h3 id="sec-device-fixes">设备更新与修复</h3>
+<p><strong>修复：</strong></p>
+<ul>
+<li>修复了 Midas Flopper 有时无法将以下武器升级为传奇版本的问题：<ul><li>战术霰弹枪（Tactical Shotgun）。</li><li>步兵步枪（Infantry Rifle）。</li><li>冲击波发射器（Shockwave Launcher）。</li><li>清扫者霰弹枪（Sweeper Shotgun）。</li><li>南瓜发射器（Pumpkin Launcher）。</li></ul></li>
+<li>修复了使用 Prop-O-Matic 变身并在短时间内多次结束变身，可能导致 Prop-O-Matic 停止工作的问题。</li>
+</ul>
+<h3 id="sec-weapons">新武器</h3>
+<ul>
+<li>8-Bit 霰弹枪（8-Bit Shotgun）<ul><li>普通（Common）至传奇（Legendary）。</li></ul></li>
+<li>Midas 的杰作（Midas’ Masterpiece）<ul><li>泵动霰弹枪（Pump Shotgun）。</li><li>新增史诗（Epic）与传奇（Legendary）。</li></ul></li>
+<li>鼓枪（Drum Gun）<ul><li>新增普通（Common）与非普通（Uncommon）。</li></ul></li>
+</ul>
+<div class="block-callout">注：在 Verse 中，8-Bit Shotgun 的名称拼写为 <code>EightBit</code> 而非 <code>8Bit</code>。</div>
+<h3 id="sec-prefabs">新预制件与画廊</h3>
+<p><strong>Heatwave Harbor 套装</strong></p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/ee5a416f-294b-465a-8b34-0a890b696b18?resizing_type=fit" alt="Heatwave Harbor Mucho Macho Hotel 预制件" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><figcaption>Heatwave Harbor Mucho Macho Hotel 预制件</figcaption><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/ee5a416f-294b-465a-8b34-0a890b696b18?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ul><li>Heatwave Harbor Mucho Macho Hotel。</li></ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/c9218013-08c0-4924-baf8-f9245cb40dba?resizing_type=fit" alt="Heatwave Harbor Sandy Buttes Hotel 预制件" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><figcaption>Heatwave Harbor Sandy Buttes Hotel 预制件</figcaption><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/c9218013-08c0-4924-baf8-f9245cb40dba?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ul><li>Heatwave Harbor Sandy Buttes Hotel。</li></ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/76d4dba1-50cd-46a2-b5b2-f1aeefda6285?resizing_type=fit" alt="Heatwave Harbor Side Kickin' It 预制件" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><figcaption>Heatwave Harbor Side Kickin' It 预制件</figcaption><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/76d4dba1-50cd-46a2-b5b2-f1aeefda6285?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ul><li>Heatwave Harbor Side Kickin' It。</li></ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/7f4df3be-a93e-4771-a454-83e80ca52065?resizing_type=fit" alt="Heatwave Harbor Wall Gallery 画廊" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><figcaption>Heatwave Harbor Wall Gallery 画廊</figcaption><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/7f4df3be-a93e-4771-a454-83e80ca52065?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ul><li>Heatwave Harbor Wall Gallery。</li><li>Heatwave Harbor Foundation Gallery。</li><li>Heatwave Harbor Prop Gallery。</li></ul>
+<h2 id="sec-docs">新增或更新的文档</h2>
+<ul>
+<li><a href="getting-started-with-physics.html">UEFN Physics</a>（Beta）现改用<strong>岛屿设置（Island Settings）</strong>设备启用，而非项目设置（Project Settings）。</li>
+<li><a href="scene-graph-known-issues-in-fortnite.html">Scene Graph Known Issues</a> 已更新至最新已知问题。</li>
+</ul>
+<h2 id="sec-community-fixes">社区 Bug 修复</h2>
+<p>以下修复来自你们在论坛提交的问题，感谢耐心等待与反馈！</p>
+<ul>
+<li>修复了大纲视图（Outliner）的多处点击问题。（<a href="https://forums.unrealengine.com/t/multiple-issues-with-the-outliner-now/2731682" target="_blank" rel="noopener">论坛报告</a>）</li>
+<li>修复了 <code>FindCreativeObjectsWithTag</code> 检索不到任何内容的问题。（<a href="https://forums.unrealengine.com/t/entity-findcreativeobjectswithtag-fails-to-retrieve-anything/2550531" target="_blank" rel="noopener">论坛报告</a>）</li>
+<li>修复了运行时世界空间挂件（runtime world space widgets）携带智能体消息时导致 Fortnite 客户端崩溃的问题。（<a href="https://forums.unrealengine.com/t/runtime-world-space-widgets-with-agent-messages-crash-the-fortnite-client/2736111" target="_blank" rel="noopener">论坛报告</a>）</li>
+<li>修复了弹道侦察手雷（Ballistic Recon Grenade）扫描时不勾勒玩家轮廓的问题。（<a href="https://forums.unrealengine.com/t/ballistic-recon-grenade-does-not-outline-players-when-scanned/2727281" target="_blank" rel="noopener">论坛报告</a>）</li>
+<li>修复了将守卫（Guard）队伍设为 neutral 仍具攻击性的问题。（<a href="https://forums.unrealengine.com/t/guards-set-to-team-neutral-are-aggressive-for-seemingly-no-reason/2694271" target="_blank" rel="noopener">论坛报告</a>）</li>
+<li>修复了丢弃物品实体会破坏其子实体变换的问题。（<a href="https://forums.unrealengine.com/t/dropping-an-item-entity-breaks-its-child-entities-transform/2727736" target="_blank" rel="noopener">论坛报告</a>）</li>
+<li>修复了 <code>possessable_component</code> 在玩家被淘汰时销毁、重生后不再挂回角色实体的问题。（<a href="https://forums.unrealengine.com/t/scenegraph-player-loses-possessable-component-if-they-are-eliminated-respawn/2734626" target="_blank" rel="noopener">论坛报告</a>）</li>
+<li>修复了嵌套在 <code>creative_devices</code> 内对象上的可编辑字段不显示分类的问题。（<a href="https://forums.unrealengine.com/t/the-categories-editable-field-doesnt-work-on-non-creative-device-classes/2601583" target="_blank" rel="noopener">论坛报告</a>）</li>
+</ul>
+<p>42.00 全部计划修复列表，请在 <a href="https://forums.unrealengine.com/categories?tag=fortnite" target="_blank" rel="noopener">Epic 开发者社区论坛</a>查看该搜索。</p>
+<h2 id="sec-ecosystem-fixes">Fortnite 生态系统更新与修复</h2>
+<p><strong>修复：</strong></p>
+<ul>
+<li>修复了岛屿小地图上出现黑色地形的问题。</li>
+<li>修复了使用手机工具（phone tool）时 <code>RootComponent</code> 崩溃的问题。</li>
+<li>修复了物理岛屿上玩家从边缘滑落时因回滚导致的卡顿。</li>
+<li>修复了史诗步兵步枪与史诗战术霰弹枪无法用 Midas Flopper 升级为传奇版本的问题。</li>
+<li>修复了 Prop-O-Matic 快速多次变身/结束变身后失效的问题。</li>
+<li>修复了禁用跌落伤害时玩家仍进入 Splat 动画的问题。</li>
+<li>修复了可通过好友列表 <strong>Join Game</strong> 按钮加入私人比赛的问题。</li>
+<li><strong>HLT Fire and Look Stick</strong> 在玩家使用复活包后不再卡住持续开火。</li>
+<li>修复了丢弃或添加部分背包物品时的崩溃。</li>
+<li>修复了在 Creative 岛屿进行中后期加入比赛的问题。</li>
+<li>修复了大厅中 <strong>Join</strong> 按钮不可见的问题。</li>
+<li>修复了开局后立即进入设置界面会导致设置分类被忽略的问题。</li>
+</ul>
+<h3 id="sec-performance">性能（Performance）</h3>
+<p><strong>新增：</strong></p>
+<ul>
+<li>改进了性能模式下低配 PC 的 PSO 预缓存（precaching）行为，卡顿更少、占位替换更快。</li>
+<li>降低了 Windows 上键盘输入的 CPU 开销。</li>
+</ul>
+<p><strong>修复：</strong></p>
+<ul>
+<li>修复了非 Nanite 实例化网格以高于预期的 LOD 绘制的问题，提升 GPU 性能。</li>
+<li>修复了全新启动时已保存的纹理质量（Textures quality）设置被忽略的问题。</li>
+</ul>
+<h2 id="sec-uefn-fixes">UEFN 更新与修复</h2>
+<p><strong>新增：</strong></p>
+<ul>
+<li>为 LOD 校验失败的 <code>StaticMesh</code> 资产新增自动修复选项。</li>
+<li>新增 <code>StaticMesh</code> 资产校验：<ul><li>校验复杂静态网格是否拥有超过一个 LOD。</li><li>校验静态网格是否为 Low 与 Medium 质量设置了 <code>MinLODQuality</code>。</li></ul></li>
+<li>新增导入后处理：为导入的静态网格将 Low 与 Medium 的 Minimum LOD for Quality 设为 2，以保障移动端与掌机性能。</li>
+</ul>
+<p><strong>修复：</strong></p>
+<ul>
+<li>修复了成组 actor 时 Live Edit 失步的问题。</li>
+<li>修复了小游戏 Live Edit 会话期间设置的设备上事件与函数不工作的问题。</li>
+<li>修复了放置多个对象意外触发编辑列表中 Push Changes 的问题。</li>
+<li>修复了 Message Log 中烘焙失败显示两个重复 Platform Cook 页面的问题。</li>
+<li>修复了受家长控制拦截的受限账户打开 UEFN 后崩溃的问题。</li>
+</ul>
+<h3 id="sec-editor">编辑器（Editor）</h3>
+<p><strong>新增：</strong></p>
+<ul>
+<li>新增客户端退出行为选项：<strong>none</strong>（不做任何事、留在游戏中）、<strong>return to main menu</strong> 与 <strong>exit/close</strong>。</li>
+<li>默认值调整为 <code>bKeepSessionOnProjectChange=true</code> 与 <code>ClientExitSessionBehavior=ReturnToMainMenu</code>。</li>
+<li>在无意义场景下切换项目时不再弹出警告对话框。</li>
+<li>网格边（Mesh Edges）子菜单新增 <strong>Show Backface Edges</strong> 开关：开启后背面线框边以橙色渲染，位于正面蓝色边之后。</li>
+<li><strong>Toggle Auto Push Verse Changes</strong> 命令现可绑定按键。</li>
+<li><strong>Teleport Players</strong> 与 <strong>Set Editor Viewport to Player</strong> 现可绑定按键。</li>
+<li>视口叠加层中的高亮棋盘格颜色替换为正确的遮挡剔除（occlusion culling）。</li>
+<li>Live Link Hub 中的 StereoVideoIngest 设备从文件主干名（不含扩展名）派生组件名。</li>
+<li>改进了静态与骨骼网格 UV 可视化；平铺范围选择现可显示哪些 UV 超出范围；按槽位隔离 UV 时三角面不再重叠。</li>
+</ul>
+<p><strong>修复：</strong></p>
+<ul>
+<li>修复了静态网格 actor 上 <strong>Browse to Asset</strong> 不工作的问题。</li>
+<li>远程在 UEFN 实例上执行控制台命令现被禁止。</li>
+<li>修复了 <strong>Custom Inventory</strong> 设置看似勾选实则未生效的问题，开关时场景现会保存。</li>
+<li>修复了 Gizmo 设置 AllowLists 透传问题；优化了滑动时间手势与 Gizmo 的优先级。</li>
+<li>修复了内容浏览器（Content Browser）删除含同包多资产的文件夹失败的问题（资产计数与已加载对象不一致导致）。</li>
+</ul>
+<h3 id="sec-editor-ui">编辑器 UI（Editor UI）</h3>
+<p><strong>新增：</strong></p>
+<ul>
+<li><strong>F</strong> 命令：大纲视图聚焦时，在视口聚焦对象并滚动到大纲视图选中项。</li>
+<li>UMG 细节面板暴露 <code>ScrollBox</code> 滚动条样式。</li>
+<li>移除了迭代时自动保存通知。</li>
+</ul>
+<p><strong>修复：</strong></p>
+<ul>
+<li>修复了将物品拖到视口上时被拖对象跳到光标处的问题。</li>
+<li>修复了大纲视图文件夹与世界右键菜单（Duplicate Folder Hierarchy 与 Select）。</li>
+<li>修复了回车后 <strong>Select All</strong> 对搜索匹配行不生效的问题；修复了视口选中对象时按 <strong>F2</strong> 重命名的问题；修复了 LUF 模式下 Landscape 与 Modeling 面板命名。</li>
+</ul>
+<h3 id="sec-landscapes">环境与地形（Environments and Landscapes）</h3>
+<p><strong>新增：</strong></p>
+<ul>
+<li>调整了地形（legacy）植被吸附设置；地形编辑器新增 <strong>No Tool</strong> 选择模式，可在不离开 Landscape 模式的情况下选择并修改 actor 与组件，细节面板大纲视图支持选择任意 actor 类型。</li>
+</ul>
+<p><strong>修复：</strong></p>
+<ul>
+<li>修复了地形草地因加载/卸载时组件部分未注册导致的崩溃；修复了 Landscape Layer Blend 材质表达式在高度输入接错节点时的断言；修复了加载未弃用地形且草地类型重复时的断言；修复了应用关闭后退出地形编辑器模式的崩溃；修复了 5.8 回退的地形样条切线操作；修复了 Layer Blend 的多处权重/高度混合与着色模型主层判定问题（可通过 <code>landscape.UseLegacyLayerBlendMaterialExpressionBehavior</code> CVar 切回旧行为，需重启，着色器 DDC 影响经评估较小）。</li>
+<li>修复了 <code>FortWaterBodyExclusionVolume</code> 未考虑排除模式、导致玩法不支持默认 <strong>Remove Water Bodies List From Exclusion</strong> 的问题；修复了加载未升级可见层的地形流送代理 actor 时的误报 map check；修复了删除地形组件时的潜在死循环；修复了 Smooth/Flatten 工具导致的非法地形纹理；修复了组件删除后 Nanite 地形未更新；修复了绘制模式下 Smooth/Flatten/Noise 丢失目标层；修复了 Flatten 工具在部分地形渲染器上的目标类型支持；UEFN <strong>Show</strong> 视口菜单暴露 <strong>Advanced</strong> &gt; <strong>Bounds</strong> 以查看建筑周围草地排除区；修复了 UEFN 中水体与地形碰撞显示。</li>
+</ul>
+<h3 id="sec-scene-graph">场景图（Scene Graph）</h3>
+<p><strong>新增：</strong></p>
+<ul>
+<li>大纲视图覆盖图标（override icon）现仅反映用户有意义的覆盖，实体图标聚合其后代（任一子级有真实覆盖即点亮）；重算使用 <code>FOverridableManager::GetOverriddenState</code>，抑制放置噪声；同步观察者与翻转门控处理器通过 <code>FEntityOverrideAggregateDirtyTag</code> 弄脏祖先行并重聚合；悬停图标现列出覆盖项，与图标及细节面板一致。</li>
+<li>更新 <code>SubobjectEditor</code> 提示以显示预制件来源并移除无关的 Mobility 与 Editor Only 信息；预制件编辑器新增最大化/还原视口选项；底部新增计数挂件 <strong>X items: Y prefabs, Z entities (I selected)</strong>；修复预制件编辑器 Tag 的 <strong>Show Tag Hierarchy</strong> 选择跨会话不持久；修复客户端收到 <code>OnRep_LocalTransformInternal()</code> 且设置原点时未调用 UpdateTransform()；恢复缺失的世界右键菜单（含 <strong>Save Entities as External/Internal Files</strong>，可选择加入/退出 OFPE）。</li>
+</ul>
+<h3 id="sec-ingame-ui">游戏内 UI（In-Game UI）</h3>
+<p><strong>修复：</strong></p>
+<ul>
+<li>修复了输入吞噬菜单弹出时 Verse UI 无法获焦的问题。</li>
+</ul>
+<h3 id="sec-materials">材质（Materials）</h3>
+<p><strong>修复：</strong></p>
+<ul>
+<li>修复了材质编辑器中 <code>TextureCubeArraySample</code> 被门控在 SM5 及以上、导致移动端不生成着色器源码的问题；修复了条件表达式被材质翻译器译为 lerp 而非 select 的问题；修复了强制删除材质及相关资产时偶发编辑器崩溃。</li>
+</ul>
+<h2 id="sec-verse">Verse 更新与修复</h2>
+<p><strong>新增：</strong></p>
+<ul>
+<li>VE 2.0 支持未烘焙编辑器；基于 CVar <code>verse.ShowBuiltInSource</code> 显示源码 <code>.verse</code> 文件（未烘焙 UEFN 与 VersePrototypes 默认开启）。</li>
+<li>弃用 <code>FTextInspector::GetSourceString</code>（返回 const <code>FString*</code> 实则永不为空），改用返回 const <code>FString&amp;</code> 的 <code>GetSourceStringRef</code> 并更新调用。</li>
+<li><code>VerseLocalizationHelper</code> 本地化失败时返回未本地化字符串，便于诊断而非显示空串。</li>
+<li><code>TwinSiphonShotguns_BR_CH7S2_Exotic</code> 现已可在 Verse 中使用。</li>
+</ul>
+<p><strong>修复：</strong></p>
+<ul>
+<li>将刷屏警告 <strong>GetOrCreateAgentFromController: Can't get a verse::player before their unique net id is valid</strong> 降为 Verbose 日志，缓解启动日志刷屏。</li>
+<li>修复了此前合法、如今非法的 Verse 语法导致的编译错误：<code>scoped</code> 限定的接口中 <code>internal</code> 成员不再对 <code>scoped</code> 目标模块可见，需将 <code>internal</code> 访问器改为 <code>public</code> 或 <code>protected</code>。详见 <a href="https://verselang.github.io/book/12_access/?h=scoped#scoped" target="_blank" rel="noopener">Scoped specifiers</a>。</li>
+</ul>
+<p><strong>不再允许</strong>：</p>
+<pre><code>A := module:
+    base&lt;scoped{B}&gt; := interface:
+        Func():void = {}
+B := module:
+    using{A}
+    some_class := class(base):
+        Func&lt;override&gt;():void = {}</code></pre>
+<p>或</p>
+<pre><code>A := module:
+    base&lt;scoped{B}&gt; := interface:
+        Func&lt;internal&gt;():void = {}
+B := module:
+    using{A}
+    some_class := class(base):
+        Func&lt;override&gt;():void = {}</code></pre>
+<p><strong>允许</strong>：</p>
+<pre><code>A := module:
+    base&lt;scoped{B}&gt; := interface:
+        Func&lt;public&gt;():void = {}
+B := module:
+    using{A}
+    some_class := class(base):
+        Func&lt;override&gt;():void = {}</code></pre>
+<h3 id="sec-language">语言（Language）</h3>
+<p><strong>新增：</strong></p>
+<ul>
+<li>弃用 <code>fort_vehicle</code> 中的 <code>GetPassengers()</code>，请改用 <code>GetOccupants()</code>。</li>
+<li>移除跨模块 concrete/abstract 限制：concrete 类型现可继承另一模块的 abstract 基类型。典型场景是<strong>标签（tags）</strong>：基类型 <code>tag</code> 为 abstract，此前无法以其为基定义 concrete 子类型，现在可以这样写：</li>
+</ul>
+<pre><code>my_tag := class&lt;concrete&gt;(tag):</code></pre>
+<p>并在字段中使用：</p>
+<pre><code>@editable selected_tag_type:castable_concrete_subtype(tag) = my_tag</code></pre>
+<p><strong>修复：</strong></p>
+<ul>
+<li>当名称解析到版本门控定义时，改进了未知标识符错误提示。</li>
+</ul>
+<h3 id="sec-tools">工具（Tools）</h3>
+<p><strong>新增：</strong></p>
+<ul>
+<li><code>@deprecated/@discontinued/@experimental</code> 的传播来源现显示警告文本：当标记来自外层容器（module、class、struct、interface 或 enum）而非叶子引用本身时，分析器会在警告文本后追加“（via enclosing <code>&lt;kind&gt;</code> '<code>&lt;source&gt;</code>'）”，让作者直观看到真正的标记来源。</li>
+</ul>
+<p><strong>示例</strong>：之前：</p>
+<pre><code>'(/Verse.org/A/MyClass:)Foo' is deprecated: Use NewClass.</code></pre>
+<p>之后（<code>Foo</code> 未直接标记，<code>@deprecated</code> 在 <code>MyClass</code> 上）：</p>
+<pre><code>'(/Verse.org/A/MyClass:)Foo' (via enclosing class '(/Verse.org/A:)MyClass') is deprecated: Use NewClass.</code></pre>
+<p><strong>修复：</strong></p>
+<ul>
+<li>修复了 UEFN 中默认 <code>creative_prop_asset @editable</code> 的 Browse-to 不工作的问题。</li>
+</ul>
+<h2 id="sec-lore">Lore（原 URC）更新与修复</h2>
+<p><strong>新增：</strong></p>
+<ul>
+<li>分支浏览器（Branch Explorer）新增归档/恢复分支功能，支持合并时与事后操作。</li>
+<li>版本控制设置面板新增选项，可关闭每次保存时的自动备份。</li>
+<li>设置面板行为更新：本地关闭版本控制不再改变项目全局设置；如需更改全局 provider，请使用 Project 下拉菜单中的新选项。</li>
+<li>大纲视图新增 <code>In Conflict</code> 与 <code>Has Merged Changes</code> 过滤，确保主要版本控制状态均可过滤。</li>
+<li>资产因被他人锁定或非最新而不可编辑时的提示包含更多信息（资产名、用户名）。</li>
+<li>分支历史（Branch History）改为滚动时分页加载，而非一次拉取全部修订。</li>
+<li>优化资产复制工作流：复制后不再未经用户交互立即保存。</li>
+<li>优化本地删除 /.urc 或 /.lore 后重建数据目录，不再一次请求全部修订列表。</li>
+<li>改进锁定状态同步（原地更新而非轮询服务器）。</li>
+<li>场景大纲视图版本控制过滤新增 <strong>Newly Added</strong>。</li>
+</ul>
+<p><strong>修复：</strong></p>
+<ul>
+<li>修复了部分 Verse 冲突缺失 <code>Resolve</code> 选项；修复了分支历史面板 <code>Focus on Actor</code> 有时需点两次；修复了分支历史对话框图标在修改后未变为 <code>Check In Changes</code>；修复了提交对话框中 Verse 文件显示 UNKNOWN 类型；修复了 Lore VS Code 插件内存泄漏导致的崩溃。</li>
+</ul>
+<p class="doc-tags">标签：<a href="https://dev.epicgames.com/community/search?query=verse" target="_blank" rel="noopener">verse</a> · <a href="https://dev.epicgames.com/community/search?query=release%20notes" target="_blank" rel="noopener">release notes</a> · <a href="https://dev.epicgames.com/community/search?query=uefn" target="_blank" rel="noopener">uefn</a> · <a href="https://dev.epicgames.com/community/search?query=bugs" target="_blank" rel="noopener">bugs</a> · <a href="https://dev.epicgames.com/community/search?query=unreal%20editor%20for%20fortnite" target="_blank" rel="noopener">unreal editor for fortnite</a> · <a href="https://dev.epicgames.com/community/search?query=fixes" target="_blank" rel="noopener">fixes</a> · <a href="https://dev.epicgames.com/community/search?query=creative" target="_blank" rel="noopener">creative</a></p>
+<p>有问题想提问，或想帮助同伴？请前往 <a href="https://forums.unrealengine.com/categories?tag=fortnite" target="_blank" rel="noopener">Developer Forums（开发者论坛）</a>。</p>
+<p>想自己写教程，或阅读他人的教程？请访问 <a href="https://dev.epicgames.com/community/fortnite/learning" target="_blank" rel="noopener">Learning Library（学习库）</a>。</p>
+<h2 id="sec-sub">本页包含的子教程</h2>
+<div class="child-grid"><a class="doc-card" href="designing-for-mobile-in-fortnite.html"><span class="doc-card-thumb"><img src="https://dev.epicgames.com/community/api/documentation/image/c5deaed7-7628-487d-a198-25fe7dbed99a?resizing_type=fill&width=1920&height=335" alt="面向移动端的 Fortnite 游戏设计" loading="lazy"></span><span class="doc-card-body"><b>面向移动端的 Fortnite 游戏设计</b><i>移动端游戏是 UEFN 开发者触达全新广泛受众的机遇，介绍优秀移动端游戏的样貌与共有设计原则。</i></span></a><a class="doc-card" href="developer-customizable-touchscreen-controls-in-fortnite.html"><span class="doc-card-thumb"><img src="https://dev.epicgames.com/community/api/documentation/image/ed0710f5-8bbb-4e13-9ffa-c8fc253a0e5a?resizing_type=fill&width=1920&height=335" alt="开发者可自定义触屏控制" loading="lazy"></span><span class="doc-card-body"><b>开发者可自定义触屏控制</b><i>用 HUD 控制器设备与 Verse 实现触屏布局自定义，多套布局切换与单个按钮隐藏。</i></span></a><a class="doc-card" href="fortnite-template-abilities-in-unreal-editor-for-fortnite.html"><span class="doc-card-thumb"><img src="https://dev.epicgames.com/community/api/documentation/image/902f9f44-3dc4-4586-a055-3aa27e4b7bb0?resizing_type=fill&width=1920&height=335" alt="Fortnite 模板能力" loading="lazy"></span><span class="doc-card-body"><b>Fortnite 模板能力</b><i>时间轴驱动的简单能力构建方式，无需自定义激活逻辑，减少网络延迟影响。</i></span></a><a class="doc-card" href="getting-started-with-physics.html"><span class="doc-card-thumb"><img src="https://dev.epicgames.com/community/api/documentation/image/05db44d6-b940-421e-9e80-870ae16e87cf?resizing_type=fill&width=1920&height=335" alt="物理系统入门" loading="lazy"></span><span class="doc-card-body"><b>物理系统入门</b><i>在 UEFN 中模拟碰撞、爆炸与物体运动的物理受力，含启用方法、设备、参数与 Verse API。</i></span></a><a class="doc-card" href="player-input-device-info-in-fortnite.html"><span class="doc-card-thumb"><img src="https://dev.epicgames.com/community/api/documentation/image/f6f2cb5d-f994-44c4-a815-1ba1a860c2a6?resizing_type=fill&width=1920&height=335" alt="玩家输入设备信息" loading="lazy"></span><span class="doc-card-body"><b>玩家输入设备信息</b><i>用 Player Input Device Info API 读取玩家设备输入能力，打造自适应玩法与界面。</i></span></a><a class="doc-card" href="scene-graph-known-issues-in-fortnite.html"><span class="doc-card-thumb"><img src="https://dev.epicgames.com/community/api/documentation/image/671d727d-3dd5-4c7e-8ba0-9f95bcf49c69?resizing_type=fill&width=1920&height=335" alt="场景图已知问题" loading="lazy"></span><span class="doc-card-body"><b>场景图已知问题</b><i>汇总场景图 Beta 功能的已知问题与限制，以及旧项目更新说明。</i></span></a><a class="doc-card" href="tappable-custom-hud-widgets-in-fortnite.html"><span class="doc-card-thumb"><img src="https://dev.epicgames.com/community/api/documentation/image/554a6623-56fe-44d9-ba8c-bccecabc5039?resizing_type=fill&width=1920&height=335" alt="可点击的自定义 HUD 控件" loading="lazy"></span><span class="doc-card-body"><b>可点击的自定义 HUD 控件</b><i>让自定义 HUD 控件响应触屏点击，同时兼容手柄与键盘按键。</i></span></a><a class="doc-card" href="telekineticon-in-fortnite.html"><span class="doc-card-thumb"><img src="https://dev.epicgames.com/community/api/documentation/image/bce56d9c-e057-4bd5-85cc-3d8ec86ed7db?resizing_type=fill&width=1920&height=335" alt="Telekineticon 念力抓取器" loading="lazy"></span><span class="doc-card-body"><b>Telekineticon 念力抓取器</b><i>可悬浮并移动道具的物理道具，制作农场收集、搬运与物理解谜玩法。</i></span></a><a class="doc-card" href="timing-insights-in-fortnite.html"><span class="doc-card-thumb"><img src="https://dev.epicgames.com/community/api/documentation/image/ee31de61-1c67-4f3e-a82c-6598372b852d?resizing_type=fill&width=1920&height=335" alt="Fortnite 计时分析" loading="lazy"></span><span class="doc-card-body"><b>Fortnite 计时分析</b><i>UEFN 内置性能剖析工具，逐帧拆解定位卡顿成因。</i></span></a><a class="doc-card" href="uefn-mcp.html"><span class="doc-card-thumb"><img src="https://dev.epicgames.com/community/api/documentation/image/b3272d99-d375-4f28-b061-157629845da9?resizing_type=fit" alt="UEFN MCP" loading="lazy"></span><span class="doc-card-body"><b>UEFN MCP</b><i>UEFN 内嵌 MCP 服务器，让 AI 智能体通过本地 HTTP 连接驱动编辑器。</i></span></a><a class="doc-card" href="virtual-pointer-in-fortnite.html"><span class="doc-card-thumb"><img src="https://dev.epicgames.com/community/api/documentation/image/83cd9041-65fe-45d5-93df-037f3791b5b7?resizing_type=fill&width=1920&height=335" alt="Fortnite 虚拟指针" loading="lazy"></span><span class="doc-card-body"><b>Fortnite 虚拟指针</b><i>全输入设备一致的屏幕指向交互，含启用、捏合缩放与 Verse 示例。</i></span></a></div>
+<div class="pager"><a class="pager-next" href="02-custom-items-and-inventory-overview-in-fortnite.html">下一篇：自定义物品与背包总览 →</a></div>
+</article><nav class="doc-toc" aria-label="本页内容"><b>本页内容</b><ul><li><a href="#sec-unreal-mcp">Unreal MCP 现已登陆 UEFN</a></li><li><a href="#sec-touch-gestures">移动端控制：触屏输入手势转正</a></li><li><a href="#sec-mobile-perf">移动端性能优化：资产健康工具改进</a></li><li><a href="#sec-profiling">性能分析工具改进</a></li><li><a href="#sec-ui-example">用户界面功能示例更新</a></li><li><a href="#sec-ability-system">能力系统（实验性）</a></li><li><a href="#sec-template-abilities">Fortnite 模板能力（实验性）</a></li><li><a href="#sec-verse-abilities-api">Verse 能力 API（实验性）</a></li><li><a href="#sec-camera-modifiers">Verse 镜头修正器（实验性）</a></li><li><a href="#sec-telekineticon">全新念力工具 Telekineticon（实验性）</a></li><li><a href="#sec-youtube">社区帖子支持嵌入 YouTube 视频</a></li><li><a href="#sec-content">内容浏览器与物品库更新</a></li><li><a href="#sec-device-fixes">设备更新与修复</a></li><li><a href="#sec-weapons">新武器</a></li><li><a href="#sec-prefabs">新预制件与画廊</a></li><li><a href="#sec-docs">新增或更新的文档</a></li><li><a href="#sec-community-fixes">社区 Bug 修复</a></li><li><a href="#sec-ecosystem-fixes">Fortnite 生态系统更新与修复</a></li><li><a href="#sec-performance">性能</a></li><li><a href="#sec-uefn-fixes">UEFN 更新与修复</a></li><li><a href="#sec-editor">编辑器</a></li><li><a href="#sec-editor-ui">编辑器 UI</a></li><li><a href="#sec-landscapes">环境与地形</a></li><li><a href="#sec-scene-graph">场景图</a></li><li><a href="#sec-ingame-ui">游戏内 UI</a></li><li><a href="#sec-materials">材质</a></li><li><a href="#sec-verse">Verse 更新与修复</a></li><li><a href="#sec-language">语言</a></li><li><a href="#sec-tools">工具</a></li><li><a href="#sec-lore">Lore（原 URC）更新与修复</a></li><li><a href="#sec-sub">本页包含的子教程</a></li></ul></nav></div>
+</div></div>
+</div>
+<footer class="edc-footer"><div class="inner"><img src="../assets/logo-epic.svg" alt="Epic Games"><span>Fortnite 文档中文镜像 · UE教程/ · 本地打开 index.html 阅读 · 翻译整理自 Epic 官方文档，仅供学习交流</span></div></footer>
+</body>
+</html>

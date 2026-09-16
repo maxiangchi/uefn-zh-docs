@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>迁移角色动画（IK 重定向） | Fortnite 文档中文镜像</title>
+<link rel="stylesheet" href="../assets/epic.css">
+<link rel="stylesheet" href="../assets/patch.css">
+<link rel="icon" href="../assets/logo-epic.svg">
+</head>
+<body class="theme-fortnite">
+<div class="edc-topbar"><div class="edc-topbar-inner"><img class="edc-logo" src="../assets/logo-epic.svg" alt="Epic Games"><span class="edc-brand">Epic Games <b>开发者社区</b></span><span class="edc-nav"><a href="../index.html">文档首页</a><a href="sub-index.html">子教程索引</a><a href="https://dev.epicgames.com/documentation/fortnite/transfer-character-animations-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">英文原文</a></span></div></div>
+<div class="site-container">
+<aside class="site-nav"><div class="documents-tree"><nav><ul class="contents-table">
+<div class="tree-sec">A · 最新动态</div>
+<a class="tree-link" href="01-42-00-fortnite-ecosystem-updates-and-release-notes.html">01. 42.00 生态系统更新与发行说明</a>
+<a class="tree-link" href="02-custom-items-and-inventory-overview-in-fortnite.html">02. 自定义物品与背包总览</a>
+<a class="tree-link" href="03-in-island-transactions-in-fortnite.html">03. 岛内交易</a>
+<a class="tree-link" href="04-mobile-development-in-fortnite.html">04. 移动端开发</a>
+<a class="tree-link" href="05-inputs-in-fortnite.html">05. 输入系统</a>
+<a class="tree-link" href="06-ability-system-in-unreal-editor-for-fortnite.html">06. 能力系统 Ability System</a>
+<a class="tree-link" href="07-partybased-gameplay-using-the-social-synergy-api-in-fortnite.html">07. 社交协同 API 与小队玩法</a>
+<a class="tree-link" href="08-scene-graph-in-unreal-editor-for-fortnite.html">08. 场景图 Scene Graph</a>
+<div class="tree-sec">B · 入门</div>
+<a class="tree-link" href="09-build-your-first-island-in-fortnite.html">09. 构建你的第一个岛屿</a>
+<a class="tree-link" href="10-onboarding-guide-to-programming-with-verse-in-unreal-editor-for-fortnite.html">10. Verse 编程入门指南</a>
+<a class="tree-link" href="11-building-basics-in-fortnite-creative.html">11. 建造基础</a>
+<div class="tree-sec">C · 品牌合集</div>
+<a class="tree-link" href="12-star-wars-islands-in-fortnite.html">12. 星球大战™岛屿</a>
+<a class="tree-link" href="13-kpop-demon-hunters-islands-in-fortnite.html">13. KPop 猎魔团岛屿</a>
+<a class="tree-link" href="14-building-lego-islands-in-fortnite.html">14. 乐高®岛屿</a>
+<a class="tree-link" href="15-the-walking-dead-universe-islands-in-unreal-editor-for-fortnite.html">15. 行尸走肉宇宙岛屿</a>
+<a class="tree-link" href="16-teenage-mutant-ninja-turtle-islands-in-unreal-editor-for-fortnite.html">16. 忍者神龟岛屿</a>
+<a class="tree-link" href="17-squid-game-islands-in-fortnite.html">17. 鱿鱼游戏岛屿</a>
+<div class="tree-sec">D · 开发者成功</div>
+<a class="tree-link" href="18-using-creator-portal-in-fortnite-creative.html">18. 使用创作者门户</a>
+<a class="tree-link" href="19-island-moderation-and-guidelines-in-fortnite-creative.html">19. 岛屿审核与准则</a>
+<div class="tree-sec">E · 协作</div>
+<a class="tree-link" href="20-creating-teams-in-creator-portal-in-unreal-editor-for-fortnite.html">20. 在创作者门户创建团队</a>
+<a class="tree-link" href="21-adding-playtesters-in-fortnite-creative.html">21. 添加试玩测试员</a>
+<a class="tree-link" href="22-playtesting-your-island-in-unreal-editor-for-fortnite.html">22. 试玩测试你的岛屿</a>
+<a class="tree-link" href="23-collaborating-in-unreal-editor-for-fortnite.html">23. 在 UEFN 中协作</a>
+<a class="tree-link" href="24-lore-version-control-in-unreal-editor-for-fortnite.html">24. Lore 版本控制</a>
+<a class="tree-link" href="25-conflicts-in-lore-version-control-in-unreal-editor-for-fortnite.html">25. Lore 中的冲突</a>
+<a class="tree-link" href="26-version-history-and-conflict-resolution-in-unreal-editor-for-fortnite.html">26. 分支历史与冲突解决</a>
+<div class="tree-sec">F · 游戏示例</div>
+<a class="tree-link" href="27-build-a-game-in-unreal-editor-for-fortnite.html">27. 构建一款游戏</a>
+<a class="tree-link" href="28-unreal-editor-for-fortnite-starter-templates.html">28. UEFN 新手模板</a>
+<div class="tree-sec">G · Verse</div>
+<a class="tree-link" href="29-learn-the-basics-of-writing-code-in-verse.html">29. 从零学习 Verse 代码基础</a>
+<div class="tree-sec">H · 专注领域</div>
+<a class="tree-link" href="30-lighting-in-unreal-editor-for-fortnite.html">30. 灯光</a>
+<a class="tree-link active" href="31-animation-and-cinematics-in-unreal-editor-for-fortnite.html">31. 动画与过场动画</a>
+<a class="tree-link" href="32-modeling-in-unreal-editor-for-fortnite.html">32. 建模</a>
+<a class="tree-link" href="33-materials-in-unreal-editor-for-fortnite.html">33. 材质</a>
+<a class="tree-link" href="34-environments-and-landscapes-in-unreal-editor-for-fortnite.html">34. 环境与地形</a>
+<a class="tree-link" href="35-audio-in-unreal-editor-for-fortnite.html">35. 音频</a>
+<a class="tree-link" href="36-visual-effects-in-unreal-editor-for-fortnite.html">36. 视觉特效</a>
+</ul></nav></div></aside>
+<div class="page-content"><div class="page-document has-theme-bg">
+<header class="section-page-header"><nav><ol class="breadcrumb is-shrinkable"><li class="breadcrumb-item is-root"><img src="../assets/logo-epic.svg" alt="Epic Games"><a href="../index.html">Developer</a></li><li class="breadcrumb-item"><a href="../index.html">Fortnite 文档</a></li><li class="breadcrumb-item"><a href="31-animation-and-cinematics-in-unreal-editor-for-fortnite.html">动画与过场动画</a></li><li class="breadcrumb-item active" aria-current="page"><span class="text-truncate">迁移角色动画（IK 重定向）</span></li></ol></nav><h1>迁移角色动画（IK 重定向）</h1><p class="text-secondary mb-0">用 IK Rig 定义角色骨骼、用 IK Retargeter 映射动画，把动画从一个骨骼网格体转移到另一个，可在 Sequencer 与 Animated Mesh 设备中使用。</p><p class="doc-meta">英文原标题：Transfer Character Animations in Unreal Editor for Fortnite · <a href="https://dev.epicgames.com/documentation/fortnite/transfer-character-animations-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">查看英文原文</a> · 社区翻译镜像，仅供学习</p></header>
+<div class="doc-columns"><article class="doc-article">
+<p><strong>IK Rig</strong> 定义角色，<strong>IK Retargeter</strong> 定义动画映射。创建 IK Rig <a href="https://dev.epicgames.com/documentation/fortnite/fortnite-glossary#asset" target="_blank" rel="noopener">资产（asset）</a>的过程称为<strong>角色化（Characterization）</strong>，即把<a href="https://dev.epicgames.com/documentation/fortnite/fortnite-glossary#skeletal-mesh" target="_blank" rel="noopener">骨骼网格体（skeletal mesh）</a>定义为肢体与接触点，确保动画贴合接收资产的骨骼。</p>
+<p>用这些工具可以轻松把动画从一个骨骼网格体转移到另一个。IK Rig 用于选定源骨骼网格体的骨骼组，把该<a href="https://dev.epicgames.com/documentation/fortnite/fortnite-glossary#mesh" target="_blank" rel="noopener">网格体（mesh）</a>的动画投射（graph）到 IK Retargeter 资产上。</p>
+<p>转移流程从新建 IK Rig 资产开始，因为该资产用于定义运动骨骼；骨骼定义好后，就可以为新动画资产映射运动。</p>
+<p>该流程会为目标角色基于源动画生成新的动画资产。不走这个流程，就无法把源角色上的动画直接指派给目标角色。</p>
+<p>跟随本教程，你将用 UEFN 中的 FN_Mannequin 资产练习重定向工作流，该资产位于<a href="animation-101-template-in-unreal-editor-for-fortnite.html">动画新手（Animation Starter）模板</a>中。</p>
+<p>打开 UEFN 并创建新项目，务必在<strong>特性示例（Feature Examples）</strong>中选择 <strong>Animation Starter 模板</strong>。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/7bf5bff1-454a-459a-a8d1-c753984d2f49?resizing_type=fit" alt="选择 Animation Starter 模板的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/7bf5bff1-454a-459a-a8d1-c753984d2f49?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure><p><em>点击图片放大。</em></p>
+<p>要让流程顺畅，必须确保：</p>
+<ul>
+<li>IK Rig 目标资产与源骨骼网格体尺寸大致相当；</li>
+<li>开始时目标资产与源资产使用相同姿势；</li>
+<li>在目标资产上<a href="https://dev.epicgames.com/documentation/fortnite/fortnite-glossary#playtest" target="_blank" rel="noopener">试玩（playtest）</a>动画，确保播放流畅、无需进一步编辑。</li>
+</ul>
+<p>在<a href="https://dev.epicgames.com/documentation/fortnite/fortnite-glossary#content-browser" target="_blank" rel="noopener">内容浏览器（Content Browser）</a>中创建文件夹存放动画资产，建好后即可导入自定义动画。</p>
+<p>要进一步了解 IK Rig 与 IK 重定向，请参阅虚幻引擎文档中的 <a href="https://docs.unrealengine.com/unreal-engine-ik-rig/" target="_blank" rel="noopener">IK Rig</a>。</p>
+<h2 id="sec-1">创建 IK Rig 资产（Create an IK Rig Asset）</h2>
+<p>打开在内容浏览器中创建的文件夹，点击内容浏览器导航栏的 <strong>Import（导入）</strong>导入动画，从文件中选中动画并点击<strong>打开（Open）</strong> &gt; <strong>全部导入（Import All）</strong>。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/c415a6d2-935e-44d8-af65-734040f1cab5?resizing_type=fit" alt="导入动画的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/c415a6d2-935e-44d8-af65-734040f1cab5?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure><p><em>点击图片放大。</em></p>
+<p>与动画相关的所有文件都会导入该文件夹：</p>
+<ul>
+<li>骨骼网格体；</li>
+<li><a href="https://dev.epicgames.com/documentation/fortnite/unreal-editor-for-fortnite-glossary#material" target="_blank" rel="noopener">材质（Materials）</a>；</li>
+<li>动画。</li>
+</ul>
+<p>用 IK Rig 选中源骨骼网格体的骨骼，创建<strong>重定向链（Retarget Chain）</strong>与新的可选 IK Rig 资产。IK Rig 资产建好后，就可以把动画投射到 IK Rig Retarget 资产上，在 <a href="https://dev.epicgames.com/documentation/fortnite/fortnite-glossary#sequencer" target="_blank" rel="noopener">Sequencer</a> 中使用自定义动画。</p>
+<ul>
+<li>在内容浏览器中右键，选择<strong>动画（Animation）</strong> &gt; <strong>重定向（Retargeting）</strong> &gt; <strong>IK Rig</strong>，创建 IK Rig 资产与重定向链的缩略图；也可以右键已导入的骨骼网格体缩略图来创建 IK Rig。
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/65212e37-4b06-48af-aa44-4516fd78436c?resizing_type=fit" alt="创建 IK Rig 资产的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/65212e37-4b06-48af-aa44-4516fd78436c?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></li>
+<li>重命名该缩略图。
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/08a1d9f9-9c99-458f-a153-c955cc68917e?resizing_type=fit" alt="重命名 IK Rig 缩略图的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/08a1d9f9-9c99-458f-a153-c955cc68917e?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></li>
+<li>双击缩略图打开 <strong>IK Rig 编辑器</strong>；</li>
+<li>在 <strong>Preview Skeletal Mesh</strong> 下拉菜单搜索已导入的骨骼网格体，把骨骼加入编辑器。
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/cca4ed71-c1c4-45a0-8aad-5de559184ba7?resizing_type=fit" alt="选择预览骨骼网格体的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/cca4ed71-c1c4-45a0-8aad-5de559184ba7?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></li>
+<li>在 <strong>Rig Element 列表</strong>中选中髋部/骨盆骨骼，右键选择 <strong>Set Retarget Root</strong>。这块骨骼承载角色的主要运动；</li>
+<li>在 <strong>Rig Element 列表</strong>中选中骨骼，右键选择 <strong>New Retarget Chain</strong>，在弹窗中按需重命名骨骼组。
+<p>可以一次多选骨骼，按组而非逐块选中。按 Rig Element 列表中的分支分组：手臂只需从肩膀抓到拇指，就能选中整条手臂。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/3b669efa-8b77-49a3-8eff-ff96162e5b4d?resizing_type=fit" alt="新建重定向链的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/3b669efa-8b77-49a3-8eff-ff96162e5b4d?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></li>
+</ul>
+<p>双足网格体的骨骼组应按以下顺序创建：</p>
+<ul>
+<li>重定向根（Retarget Root）——髋部与骨盆区域；</li>
+<li>脊柱（Spine）；</li>
+<li>颈与头（Neck and Head）；</li>
+<li>右锁骨（Right Clavicle）；</li>
+<li>左锁骨（Left Clavicle）；</li>
+<li>手臂与手（左右）；</li>
+<li>腿与脚（左右）。</li>
+</ul>
+<ul>
+<li>点击 <strong>ADD CHAIN</strong> 把骨骼组加入 IK 重定向链列表，重定向列表应如下图所示。
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/b1e0d0c7-98c3-46bb-ba79-e85496a324ba?resizing_type=fit" alt="IK 重定向链列表的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/b1e0d0c7-98c3-46bb-ba79-e85496a324ba?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></li>
+<li>所有骨骼加入 IK 重定向链列表后点击 <strong>Save</strong>。</li>
+</ul>
+<p>接下来要把动画投射到 IK Retarget 资产上，才能在其他骨骼网格体上使用自定义动画。</p>
+<h2 id="sec-2">创建 IK Retargeter 资产（Create an IK Retargeter Asset）</h2>
+<p><strong>IK Retargeter</strong> 资产用于把自定义动画投射到目标网格体上生成新动画。新资产可用于：</p>
+<ul>
+<li><a href="sequencer-and-control-rig-in-unreal-editor-for-fortnite.html">Sequencer</a>——用该资产录制动画；</li>
+<li><a href="import-and-play-mesh-animations-in-unreal-editor-for-fortnite.html">Animated Mesh 设备</a>——创建可触发的动画序列。</li>
+</ul>
+<p>用 IK 重定向工作流创建新动画资产：</p>
+<ul>
+<li>在内容浏览器中右键，选择<strong>动画</strong> &gt; <strong>重定向</strong> &gt; <strong>IK Retargeter</strong>，创建 IK Rig Retargeter 资产缩略图；也可以右键已导入的骨骼网格体缩略图来创建。
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/8994467f-20be-4a54-9dfa-06b72ef88c87?resizing_type=fit" alt="创建 IK Retargeter 资产的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/8994467f-20be-4a54-9dfa-06b72ef88c87?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></li>
+<li>重命名该缩略图。
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/2dfa0d97-6b6e-41ce-a48c-bca74d32f4d5?resizing_type=fit" alt="重命名 IK Retargeter 缩略图的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/2dfa0d97-6b6e-41ce-a48c-bca74d32f4d5?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></li>
+<li>双击缩略图打开 <strong>IK Retargeter 编辑器</strong>；</li>
+<li>从 <strong>Source IK Rig Asset</strong> 下拉菜单选择刚创建的 <strong>IK Rig 资产</strong>，UEFN 会自动把源资产填入 <strong>Source Preview Mesh</strong> 字段与<a href="https://dev.epicgames.com/documentation/fortnite/fortnite-glossary#viewport" target="_blank" rel="noopener">视口（viewport）</a>。
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/3a0439a5-84c1-4210-baa2-f492fe05f6c9?resizing_type=fit" alt="选择源 IK Rig 资产的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/3a0439a5-84c1-4210-baa2-f492fe05f6c9?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></li>
+<li>从 <strong>Target IK Rig Asset</strong> 下拉菜单选择 <strong>IK_FN_Mannequin</strong>，UEFN 会自动把 FN_Mannequin 资产填入 <strong>Target Preview Mesh</strong> 字段与视口。
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/0bd9d5f0-ba49-4d00-8926-174de8dbc0a7?resizing_type=fit" alt="选择目标 IK Rig 资产的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/0bd9d5f0-ba49-4d00-8926-174de8dbc0a7?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></li>
+<li>在 <strong>Target Mesh Offset</strong> 字段中向右拖动，把 <strong>FN_Mannequin</strong> 资产<a href="https://dev.epicgames.com/documentation/fortnite/fortnite-glossary#translate" target="_blank" rel="noopener">平移（translate）</a>到所创建 IK Rig 资产旁边。你会发现源资产与目标资产姿势略有偏差，锁骨区域可能多了一块骨骼；</li>
+<li>在 Chain Mapping 面板下的 <strong>Auto-Map Chains</strong> 下拉菜单选择 <strong>Clear Mapping</strong> &gt; <strong>Map All (Exact)</strong>，清除目标网格体多余的骨骼。
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/35c8511f-9821-48d1-9f60-6aee6a1d537a?resizing_type=fit" alt="自动映射骨骼链的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/35c8511f-9821-48d1-9f60-6aee6a1d537a?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></li>
+<li>选择 <strong>Asset browser 面板</strong> &gt; <strong>你导入的动画</strong>，即可看到目标资产播放该动画。
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/c1c5f385-1ea3-4c01-a464-d1b88f2a90d3?resizing_type=fit" alt="在资产浏览器中预览动画的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/c1c5f385-1ea3-4c01-a464-d1b88f2a90d3?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></li>
+</ul>
+<p>此时动画可能已经在目标网格体上播得很好了：好的话保存并导出动画；还差一点的话，可能需要先把目标网格体的重定向姿势调到与源网格体一致，再投射动画。</p>
+<h3>修改网格体姿势（Change the Mesh Pose）</h3>
+<p>让源姿势匹配，目标网格体更容易把动画准确投射到骨骼上。</p>
+<p>要修改目标网格体姿势，需下载与源资产默认姿势匹配的姿势；没有的话，就自己做一个匹配源资产的默认姿势动画。</p>
+<p>姿势准备好后，继续修改目标资产的网格体姿势：</p>
+<ul>
+<li>从 <strong>Show Retarget Pose</strong> 菜单选择 <strong>Showing Retarget Pose</strong>，两个网格体都会回到默认姿势。
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/4319f5f9-9355-4e69-bcd7-b8d4f54a7aa2?resizing_type=fit" alt="显示重定向姿势的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/4319f5f9-9355-4e69-bcd7-b8d4f54a7aa2?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></li>
+<li>选择 <strong>Create</strong> &gt; <strong>Import From an Animation Sequence</strong>，从下拉菜单选择 <strong>FN_Mannequin_TPose</strong>。FN_Mannequin 资产仅 Animation Starter 模板提供。
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/bd602ec7-b300-4169-8bdf-6cf7398b5f2e?resizing_type=fit" alt="从动画序列导入姿势的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/bd602ec7-b300-4169-8bdf-6cf7398b5f2e?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></li>
+<li>把姿势重命名为 <strong>Tpose</strong>，<strong>Sequence Frame</strong> 选 <strong>0</strong>；</li>
+<li>选择 <strong>Import As Retarget Pose</strong>，FN_Mannequin 会以 Tpose 站在源网格体旁边。
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/85b277a2-16a8-420d-9a0a-2669c3edf497?resizing_type=fit" alt="导入为重定向姿势的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/85b277a2-16a8-420d-9a0a-2669c3edf497?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></li>
+<li>在摆好姿势的目标资产上重新播放重定向动画，应该流畅了；</li>
+<li>选择 <strong>Export Selected Animations</strong> 导出动画，打开 <strong>Batch Export Retargeted Animations</strong> 窗口。
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/6ec4ec25-87a6-4229-8649-b68d7fe1752c?resizing_type=fit" alt="导出选中动画的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/6ec4ec25-87a6-4229-8649-b68d7fe1752c?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></li>
+<li>在 <strong>Add Prefix</strong> 字段填写重定向动画的新名称，点击 <strong>Export</strong>。其他字段可填可不填。
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/19930e55-8a5d-4651-84b4-07018826ffe8?resizing_type=fit" alt="填写前缀并导出的原文示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/19930e55-8a5d-4651-84b4-07018826ffe8?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></li>
+</ul>
+<p>动画会导出到所选文件夹。现在你可以在 Animated Mesh 设备与 Sequencer 中使用该动画了。</p>
+<p>相关标签：<a href="https://dev.epicgames.com/community/search?query=animation" target="_blank" rel="noopener">animation</a> · <a href="https://dev.epicgames.com/community/search?query=cinematics" target="_blank" rel="noopener">cinematics</a> · <a href="https://dev.epicgames.com/community/search?query=retargeting" target="_blank" rel="noopener">retargeting</a> · <a href="https://dev.epicgames.com/community/search?query=sequence" target="_blank" rel="noopener">sequence</a> · <a href="https://dev.epicgames.com/community/search?query=ik%20rig" target="_blank" rel="noopener">ik rig</a> · <a href="https://dev.epicgames.com/community/search?query=ik%20retargeter" target="_blank" rel="noopener">ik retargeter</a></p>
+<p><a href="https://forums.unrealengine.com/categories?tag=fortnite" target="_blank" rel="noopener">在开发者论坛提问并帮助同伴</a></p>
+<p><a href="https://dev.epicgames.com/community/fortnite/learning" target="_blank" rel="noopener">在学习库中编写或阅读他人教程</a></p>
+<div class="pager"><a href="31-animation-and-cinematics-in-unreal-editor-for-fortnite.html"><small>← 返回父教程</small>动画与过场动画</a><a href="sub-index.html"><small>子教程索引 →</small>全部子教程</a></div>
+</article><nav class="doc-toc" aria-label="本页内容"><b>本页内容</b><a href="#sec-1">创建 IK Rig 资产</a><a href="#sec-2">创建 IK Retargeter 资产</a></nav></div>
+</div></div>
+</div>
+<footer class="edc-footer"><div class="inner"><img src="../assets/logo-epic.svg" alt="Epic Games"><span>Fortnite 文档中文镜像 · UE教程/ · 本地打开 index.html 阅读 · 翻译整理自 Epic 官方文档，仅供学习交流</span></div></footer>
+</body>
+</html>

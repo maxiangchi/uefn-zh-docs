@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fortnite 中的星球大战远景与生物群系环境 | Fortnite 文档中文镜像</title>
+<link rel="stylesheet" href="../assets/epic.css">
+<link rel="stylesheet" href="../assets/patch.css">
+<link rel="icon" href="../assets/logo-epic.svg">
+</head>
+<body class="theme-fortnite">
+<div class="edc-topbar"><div class="edc-topbar-inner"><img class="edc-logo" src="../assets/logo-epic.svg" alt="Epic Games"><span class="edc-brand">Epic Games <b>开发者社区</b></span><span class="edc-nav"><a href="../index.html">文档首页</a><a href="sub-index.html">子教程索引</a><a href="https://dev.epicgames.com/documentation/fortnite/star-wars-vistas-and-biome-environments-in-fortnite" target="_blank" rel="noopener">英文原文</a></span></div></div>
+<div class="site-container">
+<aside class="site-nav"><div class="documents-tree"><nav><ul class="contents-table">
+<div class="tree-sec">A最新动态</div><a class="tree-link" href="01-42-00-fortnite-ecosystem-updates-and-release-notes.html">01. 42.00 生态系统更新与发行说明</a><a class="tree-link" href="02-custom-items-and-inventory-overview-in-fortnite.html">02. 自定义物品与背包总览</a><a class="tree-link" href="03-in-island-transactions-in-fortnite.html">03. 岛内交易</a><a class="tree-link" href="04-mobile-development-in-fortnite.html">04. 移动端开发</a><a class="tree-link" href="05-inputs-in-fortnite.html">05. 输入系统</a><a class="tree-link" href="06-ability-system-in-unreal-editor-for-fortnite.html">06. 能力系统 Ability System</a><a class="tree-link" href="07-partybased-gameplay-using-the-social-synergy-api-in-fortnite.html">07. 社交协同 API 与小队玩法</a><a class="tree-link" href="08-scene-graph-in-unreal-editor-for-fortnite.html">08. 场景图 Scene Graph</a><div class="tree-sec">B入门</div><a class="tree-link" href="09-build-your-first-island-in-fortnite.html">09. 构建你的第一个岛屿</a><a class="tree-link" href="10-onboarding-guide-to-programming-with-verse-in-unreal-editor-for-fortnite.html">10. Verse 编程入门指南</a><a class="tree-link" href="11-building-basics-in-fortnite-creative.html">11. 建造基础</a><div class="tree-sec">C品牌合集</div><a class="tree-link active" href="12-star-wars-islands-in-fortnite.html">12. 星球大战™岛屿</a><a class="tree-link" href="13-kpop-demon-hunters-islands-in-fortnite.html">13. KPop 猎魔团岛屿</a><a class="tree-link" href="14-building-lego-islands-in-fortnite.html">14. 乐高®岛屿</a><a class="tree-link" href="15-the-walking-dead-universe-islands-in-unreal-editor-for-fortnite.html">15. 行尸走肉宇宙岛屿</a><a class="tree-link" href="16-teenage-mutant-ninja-turtle-islands-in-unreal-editor-for-fortnite.html">16. 忍者神龟岛屿</a><a class="tree-link" href="17-squid-game-islands-in-fortnite.html">17. 鱿鱼游戏岛屿</a><div class="tree-sec">D开发者成功</div><a class="tree-link" href="18-using-creator-portal-in-fortnite-creative.html">18. 使用创作者门户</a><a class="tree-link" href="19-island-moderation-and-guidelines-in-fortnite-creative.html">19. 岛屿审核与准则</a><div class="tree-sec">E协作</div><a class="tree-link" href="20-creating-teams-in-creator-portal-in-unreal-editor-for-fortnite.html">20. 在创作者门户创建团队</a><a class="tree-link" href="21-adding-playtesters-in-fortnite-creative.html">21. 添加试玩测试员</a><a class="tree-link" href="22-playtesting-your-island-in-unreal-editor-for-fortnite.html">22. 试玩测试你的岛屿</a><a class="tree-link" href="23-collaborating-in-unreal-editor-for-fortnite.html">23. 在 UEFN 中协作</a><a class="tree-link" href="24-lore-version-control-in-unreal-editor-for-fortnite.html">24. Lore 版本控制</a><a class="tree-link" href="25-conflicts-in-lore-version-control-in-unreal-editor-for-fortnite.html">25. Lore 中的冲突</a><a class="tree-link" href="26-version-history-and-conflict-resolution-in-unreal-editor-for-fortnite.html">26. 分支历史与冲突解决</a><div class="tree-sec">F游戏示例</div><a class="tree-link" href="27-build-a-game-in-unreal-editor-for-fortnite.html">27. 构建一款游戏</a><a class="tree-link" href="28-unreal-editor-for-fortnite-starter-templates.html">28. UEFN 新手模板</a><div class="tree-sec">G Verse</div><a class="tree-link" href="29-learn-the-basics-of-writing-code-in-verse.html">29. 从零学习 Verse 代码基础</a><div class="tree-sec">H专注领域</div><a class="tree-link" href="30-lighting-in-unreal-editor-for-fortnite.html">30. 灯光</a><a class="tree-link" href="31-animation-and-cinematics-in-unreal-editor-for-fortnite.html">31. 动画与过场动画</a><a class="tree-link" href="32-modeling-in-unreal-editor-for-fortnite.html">32. 建模</a><a class="tree-link" href="33-materials-in-unreal-editor-for-fortnite.html">33. 材质</a><a class="tree-link" href="34-environments-and-landscapes-in-unreal-editor-for-fortnite.html">34. 环境与地形</a><a class="tree-link" href="35-audio-in-unreal-editor-for-fortnite.html">35. 音频</a><a class="tree-link" href="36-visual-effects-in-unreal-editor-for-fortnite.html">36. 视觉特效</a>
+</ul></nav></div></aside>
+<div class="page-content"><div class="page-document has-theme-bg">
+<header class="section-page-header"><nav><ol class="breadcrumb is-shrinkable"><li class="breadcrumb-item is-root"><img src="../assets/logo-epic.svg" alt="Epic Games"><a href="../index.html">Developer</a></li><li class="breadcrumb-item"><a href="../index.html">Fortnite 文档</a></li><li class="breadcrumb-item"><a href="12-star-wars-islands-in-fortnite.html">星球大战™岛屿</a></li><li class="breadcrumb-item active" aria-current="page"><span class="text-truncate">Fortnite 中的星球大战远景与生物群系环境</span></li></ol></nav><h1>Fortnite 中的星球大战远景与生物群系环境</h1><p class="text-secondary mb-0">通过地形与环境设计增强 Fortnite 体验的沉浸感。本指南介绍星球大战™功能集中的四套特色环境设计：三套生物群系主题与一套太空主题，以及远景、材质与氛围特效的工作流。</p><p class="doc-meta">英文原标题：Star Wars Vistas and Biome Environments in Fortnite · <a href="https://dev.epicgames.com/documentation/fortnite/star-wars-vistas-and-biome-environments-in-fortnite" target="_blank" rel="noopener">查看英文原文</a> · 社区翻译镜像，仅供学习</p></header>
+<div class="doc-columns"><article class="doc-article">
+
+<p>你可以通过地形与环境设计，为你的 Fortnite 体验注入沉浸感。<strong>星球大战™（Star Wars™）</strong>功能集的美术模板包含四套风格鲜明的环境设计：三套基于生物群系、一套太空主题。这些模板采用了相似的设计工作流：使用远景（Vista）与画廊（Gallery）资产，配合地形（Landscape）Actor，构建出宏大而沉浸的世界。</p>
+<p>本指南将重点介绍为你的银河世界构建打基础的工作流与资产：</p>
+<ul>
+<li>创建远景（Vista）</li>
+<li>使用地形<a href="33-materials-in-unreal-editor-for-fortnite.html">材质（Materials）</a>与环境生物群系资产</li>
+<li>利用氛围视觉特效（VFX）添加细节</li>
+</ul>
+<p>虽然本页重点介绍品牌专属新手岛屿，但其中的信息可用于为任何体验构建环境。</p>
+<h2 id="sec-1">环境模板</h2>
+<p>这些虚幻编辑器 Fortnite 版（UEFN，Unreal Editor for Fortnite）新手岛屿模板，展现了<strong>星球大战</strong>中所描绘的广袤、充满生活气息的银河。</p>
+<p>它们旨在捕捉<strong>星球大战</strong>银河的规模感、奇观感与文化厚重感。<strong>星球大战</strong>中的不同场景强化了一个观念：银河是无数文明的家园，每种文明都适应着各自独特的世界。这些新手岛屿使用<strong>星球大战</strong>功能集资产与通用 Fortnite 资产构建而成。</p>
+<p>你可以将这些模板作为体验设计的起点，在其上继续构建；也可以学习后面章节的技术，替换其中的环境资产。</p>
+<p>要了解如何访问这些模板，请参阅<a href="https://dev.epicgames.com/documentation/fortnite/accessing-brand-content-in-fortnite" target="_blank" rel="noopener">访问品牌内容（Accessing Brand Content）</a>。</p>
+<table><thead><tr><th>模板</th><th>说明</th><th>图片</th></tr></thead><tbody>
+<tr><td><strong>内瓦罗（Nevarro）灵感新手岛屿</strong></td><td>探索内瓦罗灵感城市。利用火山地形，开始打造你的下一次冒险。该模板包含：<ul><li>内瓦罗城市预制件与画廊资产</li><li>带有可替换材质层的城市道路</li><li>漫游 NPC</li><li>远景资产</li><li>火山环境道具</li><li>烟雾 VFX</li></ul></td><td><figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/b8a1a8c6-082a-43bb-8b40-35e845a6d262?resizing_type=fit" alt="内瓦罗灵感新手岛屿原文示意图1" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/b8a1a8c6-082a-43bb-8b40-35e845a6d262?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></td></tr>
+<tr><td><strong>塔图因（Tatooine）灵感新手岛屿</strong></td><td>追随双子太阳，前往塔图因灵感小镇。用这座新手岛屿创建你的下一款沙漠主题游戏。该模板包含：<ul><li>塔图因风格预制件与画廊资产</li><li>双子太阳天空盒（Binary Suns Skybox）</li><li>沙漠爬行者样条轨道（Sandcrawler spline tracks）</li><li>漫游 NPC</li><li>远景资产</li><li>沙漠环境道具</li><li>沙尘 VFX</li></ul></td><td><figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/bdc2341f-dd58-4f5d-9836-8cbdf6181e92?resizing_type=fit" alt="塔图因灵感新手岛屿原文示意图2" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/bdc2341f-dd58-4f5d-9836-8cbdf6181e92?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></td></tr>
+<tr><td><strong>霍斯（Hoth）灵感新手岛屿</strong></td><td>使用这座霍斯灵感新手岛屿开始构建。以冰雪远景地形与隐藏基地为灵感，打造你的下一次体验。该模板包含：<ul><li>霍斯基地预制件与画廊资产</li><li>冰洞远景资产</li><li>漫游 NPC</li><li>雪地环境道具</li><li>可骑乘汤汤兽（Tauntaun）</li><li>Control Rig 版 AT-AT</li><li>降雪 VFX</li></ul></td><td><figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/a04ddfe8-7e1a-4da1-99d6-0d13b80dc65c?resizing_type=fit" alt="霍斯灵感新手岛屿原文示意图3" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/a04ddfe8-7e1a-4da1-99d6-0d13b80dc65c?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></td></tr>
+<tr><td><strong>太空新手岛屿</strong></td><td>在太空中开启冒险，构建你自己的银河。该模板包含：<ul><li>死星预制件与画廊资产</li><li>超空间（Hyperspace）特效</li><li>太空天空盒（Space Skybox）</li><li>塔图因行星背景资产</li><li>歼星舰背景资产</li><li>漫游 NPC</li><li>太空战斗 VFX</li></ul></td><td><figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/0a422a7c-ad44-4ad5-b76a-f1814254c91a?resizing_type=fit" alt="太空新手岛屿原文示意图4" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/0a422a7c-ad44-4ad5-b76a-f1814254c91a?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure></td></tr>
+</tbody></table>
+<p>在<strong>大纲（Outliner）</strong>中右键点击某资产，然后点击<strong>浏览至资产（Browse to the Asset）</strong>，即可在<strong>内容浏览器（Content Browser）</strong>中查看其位置。</p>
+<h2 id="sec-2">远景（Vista）工作流</h2>
+<p>远景是指玩家在远处看到的大型环境特征，例如山脉。它们通常是大型资产，用于填充岛屿空间、增强沉浸感。对于<strong>星球大战</strong>，设计团队考虑了各场景的规模，以及宇宙可以显得多么浩瀚。</p>
+<p>另一个重要元素是使用飞行载具穿越行星。基于这一考虑，设计团队不希望玩家到达某个位置时，因视野尽头穿帮而打破“身处巨大行星”的错觉。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/3d93e591-8652-4045-a86b-de14ad2d5910?resizing_type=fit" alt="霍斯灵感远景原文示意图5" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/3d93e591-8652-4045-a86b-de14ad2d5910?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>使用远景资产打造辽阔的开放世界，呈现玩家对<strong>星球大战</strong>主题体验所期待的广阔环境。它们让环境更像一颗行星，而不是一座岛屿，还能避免地平线上出现海水。</p>
+<p>远景资产与地形结合，共同构成世界。你可以用类似的工作流搭建环境布局，再将其打磨至符合你的岛屿风格。</p>
+<h3>远景资产</h3>
+<p>为实现这一目标，设计团队创建了远景静态网格体，并使用分层技术进行组合，呈现出行星主题新手岛屿中的效果。几何体位于<strong>全部 &gt; Fortnite &gt; 网格体 &gt; 背景资产（All &gt; Fortnite &gt; Meshes &gt; Background Assets）</strong>。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/c592fd26-3b23-4fc4-b468-588ccdd9fc65?resizing_type=fit" alt="远景静态网格体原文示意图6" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/c592fd26-3b23-4fc4-b468-588ccdd9fc65?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>每种生物群系都有专用材质，确保远景资产适用于多种场景。这些材质专为匹配各网格体的 UV 而设计，也可以自定义以适配更多生物群系。</p>
+<p>材质位于<strong>全部 &gt; Fortnite &gt; 材质 &gt; 远景 &gt; 材质实例（All &gt; Fortnite &gt; Materials &gt; Vistas &gt; Material Instances）</strong>。将材质拖到关联网格体上，或创建实例来自定义外观。更多信息请参阅下文<a href="#sec-3">使用材质调整外观</a>。</p>
+<p>下表列出了可用的远景资产。</p>
+<table><thead><tr><th>远景资产类型</th><th>资产</th></tr></thead><tbody>
+<tr><td><strong>远景静态网格体</strong></td><td><ul><li>FNEC Biome VistaDunes A</li><li>FNEC Biome VistaOutcrop A</li><li>FNEC Biome VistaHills A</li><li>FNEC Biome VistaVolcano A</li></ul></td></tr>
+<tr><td><strong>雪地材质</strong></td><td><ul><li>FNEC MI Biome VistaDunes A Snowy</li><li>FNEC MI Biome_VistaOutcrop A Snowy</li><li>FNEC MI Biome Vista Hill A Snowy</li><li>FNEC MI Biome Volcano A Snowy</li></ul></td></tr>
+<tr><td><strong>沙漠材质</strong></td><td><ul><li>FNEC MI Biome VistaDunes A Desert</li><li>FNEC MI Biome VistaOutcrop A Desert</li><li>FNEC MI Biome Vista Hill A Desert</li><li>FNEC MI Biome Volcano A Desert</li></ul></td></tr>
+<tr><td><strong>火山材质</strong></td><td><ul><li>FNEC MI Biome VistaDunes A Volcanic</li><li>FNEC MI Biome VistaOutcrop A Volcanic</li><li>FNEC MI Biome Vista Hill A Volcanic</li><li>FNEC MI Biome Volcano A Volcanic</li></ul></td></tr>
+</tbody></table>
+<p>你也可以使用其他数字内容创作（DCC，Digital Content Creation）软件，基于高度图创建自己的远景网格体并导入 UEFN。更多信息请参阅教程<a href="https://dev.epicgames.com/community/learning/tutorials/B9RD/fortnite-creating-large-worlds-in-uefn" target="_blank" rel="noopener">在 UEFN 中创建大型世界（Creating Large Landscapes in UEFN）</a>。</p>
+<h3>地形与远景分层</h3>
+<p>远景充当玩法的背景，即背景层。体验的主要区域应包含环境细节，为玩法定下基调。</p>
+<p>新手岛屿按以下方式分层：</p>
+<ul>
+<li><strong>前景：</strong>地形资产承载核心玩法与主要移动区域，即<strong>可玩空间</strong>。</li>
+<li><strong>中景：</strong>填充画廊与几何体资产，也包含部分远景资产。</li>
+<li><strong>背景：</strong>填充远景资产，通常以更大的缩放值填满背景。</li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/7b2b296b-18c3-41c6-835f-6c3589bc9933?resizing_type=fit" alt="前景与背景分层原文示意图7" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/7b2b296b-18c3-41c6-835f-6c3589bc9933?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/b0ff4bcc-49e9-44e4-a86e-ae291d515a48?resizing_type=fit" alt="前景与背景对比原文示意图8" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/b0ff4bcc-49e9-44e4-a86e-ae291d515a48?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>地形资产使用<a href="landscape-mode-in-unreal-editor-for-fortnite.html">地形模式（Landscape Mode）</a>创建。你可以用该工具构建地形，添加道路、洞穴用洞口等细节，甚至可以绘制多层地表材质以确立外观，并与远景背景融合。更多内容请参阅下文<a href="#sec-3">使用材质调整外观</a>一节。</p>
+<p>要了解地形创建的更多信息，请参阅<a href="create-a-custom-landscape-in-unreal-editor-for-fortnite.html">创建自定义地形（Create a Custom Landscape）</a>。</p>
+<h3>生物群系套件</h3>
+<p>生物群系是指具有独特气候、植被与动物群落的特定地理区域。远景静态网格体是通用 Fortnite 资产中生物群系套件的一部分，帮你快速上手主题环境创作。</p>
+<p>附加资产包括一系列生物群系悬崖与岩石道具、砾石与远景材质、多种生物群系相关 VFX 以及少量纹理。你可以搜索关键词 <strong>biome</strong> 查看所有可用资产，或按以下表格中的名称搜索。</p>
+<p>这些资产最初为打造<strong>星球大战</strong>新手岛屿模板而引入。</p>
+<table><thead><tr><th>套件</th><th>资产</th></tr></thead><tbody>
+<tr><td><strong>画廊</strong></td><td><ul><li>沙漠生物群系自然画廊（Desert Biome Nature Gallery）</li><li>雪地生物群系自然画廊（Snow Biome Nature Gallery）</li><li>火山生物群系自然画廊（Volcanic Biome Nature Gallery）</li><li>生物群系自然画廊（Biome Nature Gallery）</li></ul></td></tr>
+<tr><td><strong>地形材质</strong></td><td><ul><li>FNEC M Biome Landscape Parent</li><li>FNEC MI Biome Desert Landscape A</li><li>FNEC MI Biome Volcanic Landscape A</li><li>FNEC MI Biome Snow Landscape A</li></ul></td></tr>
+<tr><td><strong>纹理</strong></td><td><ul><li>FNEC T Biome RockyGround A A D</li><li>FNEC T Biome RockyGround A A N</li><li>FNEC T Biome_RockyGround A A S</li></ul></td></tr>
+<tr><td><strong>植被材质</strong></td><td><ul><li>FNEC MI Biome Gravel A A</li><li>FNEC MI Biome Gravel A B</li><li>FNEC MI Biome_Gravel A C</li></ul></td></tr>
+<tr><td><strong>Niagara 系统（VFX）</strong></td><td><ul><li>NS Sand Drift A | NS Snow Drift A</li><li>NS Sand Drift B | NS Snow Drift B</li><li>NS Sand Drift C | NS Snow Drift C</li></ul></td></tr>
+</tbody></table>
+<p>该套件为每种生物群系提供了同一资产的变体，便于混合搭配、快速构建生物群系，而不必担心错位。更多环境画廊位于<strong>全部 &gt; Fortnite &gt; 画廊 &gt; 自然（All &gt; Fortnite &gt; Galleries &gt; Nature）</strong>。</p>
+<p>这些画廊来自 <strong>Fortnite</strong> 文件夹，因此可用于创建任何类型岛屿的生物群系。</p>
+<h2 id="sec-3">使用材质调整外观</h2>
+<p>为了进一步设计地形、打造独特外观，我们提供了材质实例。你可以用这些材质调整远景设计，并融合地形与环境道具。由于远景资产是静态网格体，你可以为其应用预设材质或自定义材质。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/4eb596ad-cee2-458f-bdf2-7d3014941518?resizing_type=fit" alt="相同远景静态网格体使用不同材质的效果对比" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/4eb596ad-cee2-458f-bdf2-7d3014941518?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h3>远景材质实例参数</h3>
+<p>远景材质实例包含可调整外观的设置。这些设置是父材质<strong>材质图表（Material Graph）</strong>中的参数，在<strong>材质编辑器（Material Editor）</strong>中作为公开变量暴露。更多信息请参阅 Unreal Engine 页面<a href="https://dev.epicgames.com/documentation/unreal-engine/unreal-engine-material-editor-user-guide?application_version=5.5" target="_blank" rel="noopener">材质编辑器指南（Material Editor Guide）</a>。</p>
+<p>要调整材质属性，必须先为你的项目复制一份材质：</p>
+<ul>
+<li>右键点击材质并选择<strong>创建材质实例（Create Material Instance）</strong>。</li>
+<li><strong>保存</strong>该材质。</li>
+<li>双击以在<strong>材质编辑器</strong>中打开。</li>
+</ul>
+<p>UEFN 中的远景材质参数如下。你可以在<strong>材质编辑器</strong>的<strong>细节（Details）</strong>面板中访问这些值。</p>
+<p><strong>基础着色（Base Coloration）</strong>参数组用于调整材质的基础颜色。这些颜色由 Splatmap 纹理值驱动。Splatmap 的红色通道是一张通用噪点纹理，用于驱动资产的大部分着色。</p>
+<table><thead><tr><th>基础着色参数</th><th>说明</th></tr></thead><tbody>
+<tr><td><strong>基础颜色 A 与 B（Base Color A and B）</strong></td><td>更改材质颜色的基础。这些是基础颜色，随后会被叠加的其他图层修改。</td></tr>
+<tr><td><strong>流动颜色 A 与 B（Flow Color A and B）</strong></td><td>使用流向贴图（Splatmap 的蓝色通道）更改漫反射着色。</td></tr>
+<tr><td><strong>高区颜色 A（High Range Color A）</strong></td><td>专门更改 Splatmap 噪点纹理高区（白色值区域，红色通道）中的漫反射着色。主要用于更改远景资产特定区域的颜色（例如山顶的深色或浅色区域）。</td></tr>
+<tr><td>高区容差（High Range Tolerance）</td><td>调整红色通道（土壤纹理）的值，控制高区着色出现在远景资产上的位置（Splatmap 中）。</td></tr>
+<tr><td><strong>低区颜色 A（Low Range Color A）</strong></td><td>专门更改 Splatmap 噪点纹理低区（黑色值区域，红色通道）中的漫反射着色。</td></tr>
+<tr><td><strong>低区容差（Low Range Tolerance）</strong></td><td>调整红色通道（土壤纹理）的值，控制低区着色出现在远景资产上的位置（Splatmap 中）。</td></tr>
+<tr><td><strong>中区颜色 A（Mid Range Color A）</strong></td><td>专门更改 Splatmap 噪点纹理中区（灰色值区域，红色通道）中的漫反射着色。</td></tr>
+<tr><td><strong>中区容差（Mid Range Tolerance）</strong></td><td>调整红色通道（土壤纹理）的值，控制中区着色出现在远景资产上的位置（Splatmap 中）。</td></tr>
+<tr><td><strong>坡度颜色 A 与 B（Slope Color A and B）</strong></td><td>更改材质的坡度颜色（Splatmap 的绿色通道）。</td></tr>
+</tbody></table>
+<p><strong>悬崖（Cliff）</strong>参数组用于调整悬崖图层的外观与纹理，该图层由坡度遮罩决定。这些值基于 Splatmap 纹理中的打包通道，特别是用作悬崖出现位置遮罩的绿色通道。</p>
+<table><thead><tr><th>悬崖参数</th><th>说明</th></tr></thead><tbody>
+<tr><td><strong>悬崖材质混合量（Cliff Material Blend Amount）</strong></td><td>设置悬崖图层的混合量。</td></tr>
+<tr><td><strong>悬崖法线强度（Cliff Normal Intensity）</strong></td><td>设置法线材质通道的值。法线通道控制每个像素的光照反射，以产生凹凸、凹陷等表面细节。纹理中的像素表示切线空间中的归一化方向。</td></tr>
+<tr><td><strong>悬崖粗糙度（Cliff Roughness）</strong></td><td>设置悬崖效果的粗糙或光滑程度。值越低外观越亮。</td></tr>
+<tr><td><strong>悬崖缩放（Cliff Scale）</strong></td><td>设置悬崖纹理的平铺量。</td></tr>
+<tr><td><strong>悬崖染色（Cliff Tint）</strong></td><td>设置悬崖效果的染色颜色。</td></tr>
+<tr><td><strong>启用悬崖（Enable Cliff）</strong></td><td>切换悬崖纹理的可见性。禁用该参数会移除网格体上的纹理细节，使外观更扁平。该值目前位于<strong>全局静态开关参数值（Global Static Switch Parameter Value）</strong>参数组中。</td></tr>
+<tr><td>坡度混合量（Slope Blend Amount）</td><td>调整坡度着色的混合，该混合独立于悬崖图层。</td></tr>
+<tr><td>坡度遮罩调整（Slope Mask Adjust）</td><td>调整驱动坡度着色外观的坡度遮罩，增大或减小其强度（Splatmap 的蓝色通道）。</td></tr>
+</tbody></table>
+<p><strong>细节颜色（Detail Color）</strong>参数组会添加一层基于世界的额外噪点，以应对资产缩放可能带来的问题。</p>
+<table><thead><tr><th>细节颜色参数</th><th>说明</th></tr></thead><tbody>
+<tr><td><strong>细节颜色 A 与 B（Detail Color A and B）</strong></td><td>设置资产的细节颜色。在参数 A 与 B 之间混合取值。</td></tr>
+<tr><td><strong>细节噪点缩放（Detail Noise Scale）</strong></td><td>设置细节颜色噪点图案的尺寸。</td></tr>
+<tr><td><strong>微观颜色细节噪点混合（Micro Color Detail Noise Blend）</strong></td><td>设置颜色值与噪点图案的混合方式。</td></tr>
+<tr><td><strong>微观颜色细节噪点对比度（Micro Color Detail Noise Contrast）</strong></td><td>设置噪点图案相对远景资产的对比度缩放。</td></tr>
+</tbody></table>
+<p><strong>纹理输入（Texture Inputs）</strong>参数组包含驱动材质与远景资产整体外观的纹理贴图，以及悬崖专用纹理。</p>
+<table><thead><tr><th>纹理输入参数</th><th>说明</th></tr></thead><tbody>
+<tr><td><strong>悬崖漫反射（Cliff Diffuse）</strong></td><td>设置悬崖效果漫反射通道的纹理。</td></tr>
+<tr><td><strong>悬崖法线（Cliff Normal）</strong></td><td>设置悬崖效果法线通道的纹理。</td></tr>
+<tr><td><strong>细节法线（Detail Normal）</strong></td><td>设置细节法线效果的纹理，为表面添加额外的缩放细节。</td></tr>
+<tr><td><strong>宏观法线（Macro Normal）</strong></td><td>设置远景法线贴图的纹理。应在创建远景资产时生成或烘焙。</td></tr>
+<tr><td><strong>Splat 贴图（Splat Map）</strong></td><td>设置 Splat 贴图的纹理，用于驱动远景资产的着色与遮罩。</td></tr>
+</tbody></table>
+<p><strong>法线（Normal）</strong>参数组用于调整远景资产的法线贴图与法线细节外观。</p>
+<table><thead><tr><th>法线参数</th><th>说明</th></tr></thead><tbody>
+<tr><td><strong>基础法线强度（Base Normal Intensity）</strong></td><td>设置基础远景网格体的法线值。</td></tr>
+<tr><td><strong>细节法线强度（Detail Normal Intensity）</strong></td><td>设置远景网格体细节范围的法线值。</td></tr>
+<tr><td><strong>细节法线缩放（Detail Normal Scale）</strong></td><td>设置远景网格体上细节区域的尺寸。</td></tr>
+</tbody></table>
+<p><strong>粗糙度（Roughness）</strong>参数组用于调整粗糙度，取值源自基础着色所用的相同信息。</p>
+<table><thead><tr><th>粗糙度参数</th><th>说明</th></tr></thead><tbody>
+<tr><td><strong>基础粗糙度 A 与 B（Base Roughness A and B）</strong></td><td>设置主远景网格体的粗糙度。</td></tr>
+<tr><td><strong>流动粗糙度（Flow Roughness）</strong></td><td>设置流向贴图的粗糙度值。</td></tr>
+</tbody></table>
+<p><strong>高光（Specular）</strong>参数组用于调整资产上的光线反射强度。</p>
+<table><thead><tr><th>高光参数</th><th>说明</th></tr></thead><tbody>
+<tr><td><strong>坡度高光（Slope Specular）</strong></td><td>设置坡度的高光值（Splatmap 的蓝色通道）。</td></tr>
+<tr><td><strong>高光值（Specular Value）</strong></td><td>设置远景资产的整体基础高光值。</td></tr>
+</tbody></table>
+<p><strong>顶层（Top Layer）</strong>参数组会添加一层基于垂直方向的颜色层，用于在资产旋转与调整时模拟积雪、沙地、草地等效果。</p>
+<table><thead><tr><th>顶层参数</th><th>说明</th></tr></thead><tbody>
+<tr><td><strong>顶层颜色 A 与 B（Top Layer Color A and B）</strong></td><td>设置顶层效果的主颜色。参数 A 与 B 相互混合。</td></tr>
+<tr><td><strong>顶层对比度（Top Layer Contrast）</strong></td><td>控制顶层遮罩的对比度，可以锐化或模糊顶层的出现位置。</td></tr>
+<tr><td><strong>顶层过渡阶段（Top Layer Transition Phase）</strong></td><td>控制顶层出现在远景资产上位置的遮罩。</td></tr>
+</tbody></table>
+<h3>用于地形绘制与混合的材质层</h3>
+<p>在创建与雕刻地形时，你可以使用套件中的地形材质确立生物群系设计，再放置生物群系画廊资产以增添视觉吸引力。你可以直接将地形材质应用于几何体，但可能会注意到生物群系几何体与地形材质之间存在生硬过渡。</p>
+<p>使用<strong>地形模式（Landscape Mode）</strong>中<strong>雕刻（Sculpt）</strong>与<strong>绘制（Paint）</strong>选项卡下的工具，统一生物群系画廊资产与地形。</p>
+<p>通过<strong>绘制工具（Paint tools）</strong>，你可以使用材质层为地形添加细节并混合资产。这是一种设计实践，可以减少资产之间的清晰边界，为环境设计增添视觉多样性。</p>
+<p>该方法要求图层中至少有一种材质有助于混合几何体与地形材质的主基底，通常包括噪点感材质（如砾石外观），以营造更自然的过渡。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/735d7c7f-ca76-4567-b44a-d468a709c78f?resizing_type=fit" alt="材质层混合前原文示意图10" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/735d7c7f-ca76-4567-b44a-d468a709c78f?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/7c22c5d1-cd9c-4e38-9b54-8986cc9781c8?resizing_type=fit" alt="材质层混合后原文示意图11" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/7c22c5d1-cd9c-4e38-9b54-8986cc9781c8?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>每个生物群系地形材质实例包含 6 层不同的表面材质，可绘制在基础层之上。各图层按顺序叠加。你可以使用不同的绘制工具（如<strong>噪点（Noise）</strong>）进一步调整外观。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/f52acda8-245e-4780-a109-1d319e7c484a?resizing_type=fit" alt="沙漠塔图因图层原文示意图12" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/f52acda8-245e-4780-a109-1d319e7c484a?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/74099a04-a603-422c-86f8-d57eb1300b96?resizing_type=fit" alt="雪地霍斯图层原文示意图13" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/74099a04-a603-422c-86f8-d57eb1300b96?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/dabf2348-40b2-4859-a819-4aded9a383d1?resizing_type=fit" alt="火山内瓦罗图层原文示意图14" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/dabf2348-40b2-4859-a819-4aded9a383d1?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>要了解该工作流的更多信息，请参阅<a href="editing-landscape-material-in-unreal-editor-for-fortnite.html">编辑地形材质（Editing Landscape Material）</a>与<a href="https://dev.epicgames.com/documentation/fortnite/painting-the-terrain-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">绘制地形（Painting the Terrain）</a>。</p>
+<h2 id="sec-4">添加更多环境细节</h2>
+<p>环境设计并不止于雕刻地形与添加背景远景资产。使用<a href="https://dev.epicgames.com/documentation/fortnite/using-prefabs-and-galleries-in-fortnite-creative" target="_blank" rel="noopener">预制件与建筑画廊资产</a>构建结构、打造兴趣点。<strong>太空新手岛屿</strong>模板没有地形，而是使用死星预制件确立起始位置。</p>
+<p>漫游 NPC 可以让环境生机勃勃。<strong>星球大战</strong>功能集包含多种角色，契合浩瀚银河的氛围。添加<a href="https://dev.epicgames.com/documentation/fortnite/using-npc-spawner-devices-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">NPC 生成器（NPC Spawners）</a>与<a href="https://dev.epicgames.com/documentation/fortnite/using-ai-patrol-path-node-devices-in-fortnite-creative" target="_blank" rel="noopener">AI 巡逻路径节点设备（AI Patrol Path Node Devices）</a>，展现有人居住的环境。</p>
+<p>你可以使用画廊资产围绕地形构建，也可以使用地形模式中的<a href="https://dev.epicgames.com/documentation/fortnite/creating-roads-and-pathways-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">样条线工具（Spline tool）</a>创建道路与小径，进一步确立环境氛围并引导玩家移动。</p>
+<p>在<strong>塔图因灵感新手岛屿</strong>模板中，额外细节是将<strong>沙漠爬行者（Sandcrawler）</strong>车辙<strong>静态网格体与样条线工具结合，模拟沙漠爬行者穿越地形的痕迹。</strong></p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/645184bb-03b0-4924-884b-52515261a7ea?resizing_type=fit" alt="沙漠爬行者车辙原文示意图15" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/645184bb-03b0-4924-884b-52515261a7ea?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>新手岛屿模板不含屏障，供你自由探索并按玩法需求构建。你可以使用<a href="https://dev.epicgames.com/documentation/fortnite/user-interface-reference-for-unreal-editor-for-fortnite#5-place-actors" target="_blank" rel="noopener">阻挡体（Blocking Volume）</a>与<a href="using-barrier-devices-in-fortnite-creative.html">屏障设备（Barrier device）</a>等功能，设定玩家可到达的边界。</p>
+<h3>使用植被工具快速放置资产</h3>
+<p>使用<a href="foliage-mode-in-unreal-editor-for-fortnite.html">植被模式（Foliage Mode）</a>优化在岛屿上放置环境静态网格体的工作流。例如，如果你在地形上雕刻了道路，可以用该工具沿路缘添加砾石、植物等细节，让道路看起来更自然。</p>
+<p>对植被进行抖动（Dithering，即柔化边缘）处理，也有助于植被与地形更好地融合。该方法需要调整<strong>剔除距离（Cull Distance）</strong>绘制设置，让植被随镜头拉远逐渐淡出。</p>
+<p>你可以在<strong>全部 &gt; Fortnite &gt; 环境 &gt; 植被（All &gt; Fortnite &gt; Environment &gt; Foliage）</strong>下找到植物、树木、鹅卵石等植被资产。要将资产加入工具，必须先将其保存到项目文件。具体做法是将资产从<strong>内容浏览器</strong>拖入<strong>植被列表（Foliage list）</strong>。</p>
+<p>使用植被绘制工具放置岩石。</p>
+<h3>背景资产</h3>
+<p>除远景资产外，还有其他填充环境的方式。Fortnite 内容包含专为远距离放置设计的附加资产，用于确立主题、设定环境规模，通常设计为玩家无法近距离观看，这就是背景资产。</p>
+<p><strong>星球大战</strong>功能集包含多种背景资产：</p>
+<ul>
+<li>行星</li>
+<li>离子炮（Ion Cannon）</li>
+<li>死星（Death Star）</li>
+<li>歼星舰（Star Destroyer）</li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/aebc1519-7654-4927-aefb-ed1b7e7af32d?resizing_type=fit" alt="作为背景细节的行星原文示意图16" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/aebc1519-7654-4927-aefb-ed1b7e7af32d?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h3>可见性与优化技巧</h3>
+<p>放置背景资产后，试玩时可能看不到它。默认情况下，远距离 Actor 在游戏中通常会被<a href="https://dev.epicgames.com/documentation/fortnite/fortnite-glossary#cull" target="_blank" rel="noopener">剔除（culled）</a>以优化渲染。请务必对该 Actor 禁用距离剔除，使其始终可见。</p>
+<p>要调整可见性：</p>
+<ul>
+<li>点击该网格体，前往<strong>细节</strong>面板。</li>
+<li>搜索<strong>从不距离剔除（Never Distance Cull）</strong>并勾选启用。</li>
+</ul>
+<p>你也可以使用<a href="using-day-sequence-devices-in-unreal-editor-for-fortnite.html">白昼序列（Day Sequence）</a>设备的设置（如天空参数）调整其在天空中的外观。</p>
+<p>为进一步优化项目，请确保资产没有不必要地计算<strong>世界位置偏移（WPO，World Position Offset）</strong>。WPO 使用材质逻辑创建程序化动画，例如迎风飘扬的旗帜。计算 WPO 会包含成本更高的阴影渲染通道。任何没有 WPO 效果的静态网格体 Actor 都不应计算它。</p>
+<p>你可以在 Actor 的<strong>细节</strong>面板中<strong>渲染 &gt; 高级 &gt; 计算世界位置偏移（Rendering &gt; Advanced &gt; Evaluate World Position Offset）</strong>下禁用该计算。</p>
+<p>要搜索启用了该功能的 Actor：</p>
+<ul>
+<li>从视图模式下拉菜单点击 <strong>Nanite 可视化 &gt; 计算 WPO（Nanite Visualization &gt; Evaluate WPO）</strong>。</li>
+<li>选中不应计算 WPO 的绿色 Actor（如歼星舰），在细节面板中禁用该功能，Actor 应变为红色。</li>
+<li>切换回光照模式（<strong>Alt+4</strong>）。</li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/afa55115-ac76-4a4a-a92e-b6b6340ab726?resizing_type=fit" alt="世界位置偏移计算可视化原文示意图17" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/afa55115-ac76-4a4a-a92e-b6b6340ab726?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>如果 Actor 没有暴露计算 WPO 的开关，请在细节面板中选中所有静态网格体组件，开关即会出现。</p>
+<h3>行星材质</h3>
+<p>行星资产包含 4 种设计：<strong>D'Qar</strong>、<strong>霍斯</strong>、<strong>内瓦罗</strong>与<strong>塔图因</strong>。你也可以使用<strong>星球大战™内容 &gt; 材质（Star Wars™ Content &gt; Materials）</strong>文件夹中的行星材质设计自己的行星（记得创建实例）。该文件夹包含行星设计基础材质与大气层材质。</p>
+<p>你可以使用<a href="modeling-mode-in-unreal-editor-for-fortnite.html">建模模式（Modeling Mode）</a>中的工具创建行星网格体并定义 UV，以均匀应用材质。材质包含调整大气颜色、纹理、熔岩强度等属性的参数。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/965229b9-0648-4b72-b45a-af852bc468a8?resizing_type=fit" alt="行星材质自定义原文示意图18" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/965229b9-0648-4b72-b45a-af852bc468a8?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h3>氛围视觉效果</h3>
+<p>你可以用氛围视觉特效进一步确立环境氛围。下表重点介绍了新手岛屿中使用的部分特效。</p>
+<h3>云雾漂移</h3>
+<p>生物群系套件包含可直接拖入环境的漂移视觉特效。</p>
+<p>该资产包含可在细节面板调整的参数，如生成速率与粒子缩放。如霍斯与塔图因灵感模板所示。</p>
+<h3>热浪扭曲</h3>
+<p>塔图因还带有热浪扭曲特效，以表现沙漠的酷热。</p>
+<p>该特效使用 <strong>FNEC_MI_PPV_HeatRipple_Day</strong> 材质的实例，并将其应用于<a href="https://dev.epicgames.com/documentation/fortnite/post-process-volume" target="_blank" rel="noopener">后期处理体（Post Process Volume）</a>。你可以在<strong>全部 &gt; Fortnite &gt; 材质 &gt; 后期处理（All &gt; Fortnite &gt; Materials &gt; PostProcess）</strong>文件夹中找到该材质。</p>
+<p>要将材质应用于你的环境：</p>
+<ul>
+<li>右键点击 <strong>FNEC_MI_PPV_HeatRipple_Day</strong>，然后点击<strong>创建材质实例（Create Material Instance）</strong>。在项目文件夹中命名并保存该材质实例。</li>
+<li>在主工具栏点击<a href="https://dev.epicgames.com/documentation/fortnite/user-interface-reference-for-unreal-editor-for-fortnite#5-place-actors" target="_blank" rel="noopener">放置 Actor（Place Actors）</a>图标，打开 Actor 下拉菜单。</li>
+<li>在菜单中前往并点击<strong>体 &gt; 后期处理体（Volumes &gt; Post Process Volume）</strong>。该体将出现在视口与大纲中。</li>
+<li>缩放该体以覆盖你期望的效果区域。</li>
+<li>在该体的<strong>细节</strong>面板中前往<strong>后期处理材质（Post Process Materials）</strong>。</li>
+<li>点击加号图标，搜索并添加你的材质实例。</li>
+</ul>
+<p>你可以在该体的细节面板中调整材质的可见强度。材质实例包含涟漪强度、速度等可调参数，还包含调试功能以查看效果应用位置。要编辑参数，请双击材质实例以打开材质编辑器。</p>
+<h3>天空盒</h3>
+<p><strong>星球大战</strong>品牌岛屿在<strong>世界昼夜管理器（World Time of Day Manager）</strong>中有两个白昼序列 Actor 新增项：<strong>双子太阳（Binary Suns）</strong>与<strong>太空（Space）</strong>。</p>
+<p>该天空效果在<strong>世界设置（World Settings）</strong>面板的<strong>昼夜 &gt; 世界昼夜管理器（Time of Day &gt; World Time of Day Manager）</strong>设置中指定。如果编辑器中未激活该面板，可以从<strong>菜单栏 &gt; 窗口 &gt; 世界设置（Menu Bar &gt; Window &gt; World Settings）</strong>打开。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/0a795336-26d5-4461-ad00-af27cfcb602a?resizing_type=fit" alt="天空盒设置原文示意图19" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/0a795336-26d5-4461-ad00-af27cfcb602a?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>你可以用<a href="using-day-sequence-devices-in-unreal-editor-for-fortnite.html">白昼序列（Day Sequence）</a>设备进一步微调外观。为契合预设主题，部分设置无效，例如更改太阳尺寸与添加云层。</p>
+<div class="block-callout"><strong>已知问题：</strong>对于双子太阳（Binary Suns）白昼序列 Actor，请添加一个白昼序列设备并将不透明度设为 0，以避免电影级质量下的错误。</div>
+<h3>超空间</h3>
+<p>太空新手岛屿模板展示了超空间特效，营造出玩家瞬间传送进激烈战斗场景的错觉。</p>
+<p>星球大战功能集包含进入与退出两套 Niagara 系统资产，位于<strong>星球大战™内容 &gt; VFX &gt; 超空间（Star Wars™ Content &gt; VFX &gt; Hyperspace）</strong>。</p>
+<p>超空间 VFX 镜头使用 Verse 设备 <code>hyperspace_sequence_device</code> 触发关卡序列，并将一块曲面平面置于玩家前方（随玩家移动重新定位）。关卡序列驱动材质与 Niagara 参数，营造进出超空间的错觉。这些关卡序列通过<a href="using-cinematic-sequence-device-in-unreal-editor-for-fortnite.html">过场动画序列（Cinematic Sequencer）</a>设备访问。</p>
+<p>设计团队使用数据层在超空间 VFX 激活时卸载死星预制件，以降低内存占用。你可以使用数据层动态加载与卸载资产。要正常查看数据层，必须通过<strong>窗口 &gt; 世界分区 &gt; 数据层大纲（Window &gt; World Partition &gt; Data Layer Outliner）</strong>启用数据层大纲。更多信息请参阅 Unreal Engine 页面<a href="https://dev.epicgames.com/documentation/unreal-engine/world-partition---data-layers-in-unreal-engine?application_version=5.5" target="_blank" rel="noopener">世界分区 - 数据层（World Partition - Data Layers）</a>。</p>
+<p>模板中用于创建该效果的附加资产（含音频）位于<strong>全部 &gt; [你的项目名] &gt; 超空间（All &gt; [Your Project Name] &gt; Hyperspace）</strong>，以及顶层项目文件夹中的 <code>hyperspace_sequence_device</code> Verse 设备。</p>
+<pre><code>using { /Fortnite.com/Devices } using { /Verse.org/Simulation } using { /UnrealEngine.com/Temporary/Diagnostics } using { /Fortnite.com/Characters } # using { /Verse.org/SpatialMath } using { /UnrealEngine.com/Temporary/SpatialMath } # A Verse-authored creative device that can be placed in a level hyperspace_sequence_device := class(creative_device):</code></pre>
+<p>你可以通过迁移资产，在自己的项目中重现该镜头：</p>
+<ul>
+<li>右键点击 <strong>Hyperspace</strong> 文件夹并点击<strong>迁移（Migrate）</strong>。这会激活迁移工具，选中该文件夹中的内容及其所有依赖。</li>
+<li>取消勾选 NPC 与 UI 文件夹以及项目关卡文件，点击<strong>确定（Ok）</strong>。</li>
+<li>在资源管理器中选择要移入的项目位置，必须将资产放入项目的 Content 文件夹。</li>
+<li>打开你的另一个项目查看这些文件。</li>
+<li>将 <strong>BP_Hyperspace</strong> 资产放入关卡，作为效果的起点。该蓝图类代表静态网格体平面、材质实例与 Niagara 系统资产的组合。</li>
+</ul>
+<p>如果迁移的资产未出现在文件夹中，请尝试以下任一方法：</p>
+<ul>
+<li>右键点击文件夹中已出现的资产，选择<strong>资产操作 &gt; 修复验证问题（Asset Actions &gt; Fix Validation Issues）</strong>。</li>
+<li>如果使用<strong>版本控制（Revision Control）</strong>，请确保已同步最新版本并尝试刷新文件。</li>
+<li>重启 UEFN。</li>
+</ul>
+<p>要添加 Verse 设备：</p>
+<ul>
+<li>创建名为 <code>hyperspace_sequence_device</code> 的新 <strong>Verse 设备</strong>。要了解如何在 Verse 中创建新设备，请参阅<a href="create-your-own-device-using-verse-in-unreal-editor-for-fortnite.html">使用 Verse 创建自己的设备（Create Your Own Device Using Verse）</a>。</li>
+<li>打开 <strong>Verse 资源管理器（Verse Explorer）</strong>，双击 <code>hyperspace_sequence_device.verse</code> 以在 Visual Studio Code 中打开脚本。</li>
+<li>粘贴上述代码，编译，并将设备拖到你的岛屿上。</li>
+<li>在<strong>内容抽屉（Content Drawer）</strong>中搜索并添加三个<strong>过场动画序列（Cinematic Sequence）</strong>设备到岛屿。为设备命名并为每个设备连接一个关卡序列。</li>
+<li>搜索并添加一个<strong>体（Volume）</strong>设备，该设备触发超空间效果的开始。</li>
+<li>在大纲中选中你的 Verse 设备。</li>
+<li>在设备的细节面板中指定对象引用。你可以使用取色器在视口中选择设备，或使用下拉菜单搜索。</li>
+<li>保存你的项目。</li>
+</ul>
+<p>在关卡序列中重新连接曲面平面与超空间 Niagara 系统资产。关卡序列还控制机库房间、歼星舰等资产的可见性。可按需替换为你的环境资产或删除。要了解 Sequencer 的更多用法，请参阅<a href="gameplay-events-in-sequencer-in-unreal-editor-for-fortnite.html">Sequencer 中的玩法事件（Gameplay Events in Sequencer）</a>。</p>
+<p>Sequencer 中的红色资产表示连接丢失，多因场景中没有该 Actor 或名称不匹配。你可以：</p>
+<ul>
+<li>重命名 Actor 以匹配 Sequencer 中的名称。在 Sequencer 工具栏点击<strong>扳手图标 &gt; 高级 &gt; 修复 Actor 引用（Wrench icon &gt; Advanced &gt; Fix Actor Reference）</strong>，或尝试<strong>重新绑定可绑定引用（Rebind Possessable References）</strong>。</li>
+<li>移除现有轨道并重新添加该资产。</li>
+</ul>
+<p>你可以使用<a href="https://dev.epicgames.com/documentation/fortnite/migrating-assets-from-unreal-engine-to-unreal-editor-for-fortnite" target="_blank" rel="noopener">迁移工具</a>将其他非 Verse 模板专属资产添加到你的其他星球大战品牌岛屿项目。要复制 Verse 文件而不是新建，可打开资源管理器窗口手动将文件复制到另一个 Content 文件夹。</p>
+<p>要了解可用的<strong>星球大战</strong>资产与玩法模板，请参阅<a href="working-with-star-wars-islands-in-fortnite.html">使用星球大战™岛屿（Working With STAR WARS™ Islands）</a>。</p>
+<p>标签：资产、landscape、品牌岛屿、环境设计、star wars™、hyperspace、biome</p>
+<div class="block-callout">在<a href="https://forums.unrealengine.com/categories?tag=fortnite" target="_blank" rel="noopener">开发者论坛（Developer Forums）</a>提问并帮助同行。在<a href="https://dev.epicgames.com/community/fortnite/learning" target="_blank" rel="noopener">学习库（Learning Library）</a>编写自己的教程或阅读他人的教程。</div>
+<h3>相关文档</h3>
+<ul>
+<li><a href="34-environments-and-landscapes-in-unreal-editor-for-fortnite.html">环境与地形（Environments and Landscapes）</a></li>
+<li><a href="https://dev.epicgames.com/documentation/fortnite/memory-and-optimization-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">内存与优化（Memory and Optimization）</a></li>
+<li><a href="working-with-star-wars-islands-in-fortnite.html">使用星球大战™岛屿（Working With STAR WARS™ Islands）</a></li>
+<li><a href="https://dev.epicgames.com/documentation/fortnite/migrating-assets-from-unreal-engine-to-unreal-editor-for-fortnite" target="_blank" rel="noopener">在 UEFN 与虚幻引擎之间迁移资产（Migrating Assets in UEFN and Unreal Engine）</a></li>
+<li><a href="create-your-own-device-using-verse-in-unreal-editor-for-fortnite.html">使用 Verse 创建自己的设备（Create Your Own Device Using Verse）</a></li>
+</ul>
+
+<div class="pager"><a href="12-star-wars-islands-in-fortnite.html"><small>← 返回父教程</small>星球大战™岛屿</a><a href="sub-index.html"><small>子教程索引 →</small>全部子教程</a></div>
+</article><nav class="doc-toc" aria-label="本页内容"><b>本页内容</b><a href="#sec-1">环境模板</a><a href="#sec-2">远景（Vista）工作流</a><a href="#sec-3">使用材质调整外观</a><a href="#sec-4">添加更多环境细节</a></nav></div>
+</div></div>
+</div>
+<footer class="edc-footer"><div class="inner"><img src="../assets/logo-epic.svg" alt="Epic Games"><span>Fortnite 文档中文镜像 · UE教程/ · 本地打开 index.html 阅读 · 翻译整理自 Epic 官方文档，仅供学习交流</span></div></footer>
+</body>
+</html>

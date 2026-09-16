@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>移动端优化 | Fortnite 文档中文镜像</title>
+<link rel="stylesheet" href="../assets/epic.css">
+<link rel="stylesheet" href="../assets/patch.css">
+<link rel="icon" href="../assets/logo-epic.svg">
+</head>
+<body class="theme-fortnite">
+<div class="edc-topbar"><div class="edc-topbar-inner"><img class="edc-logo" src="../assets/logo-epic.svg" alt="Epic Games"><span class="edc-brand">Epic Games <b>开发者社区</b></span><span class="edc-nav"><a href="../index.html">文档首页</a><a href="sub-index.html">子教程索引</a><a href="https://dev.epicgames.com/documentation/fortnite/mobile-optimization-in-fortnite" target="_blank" rel="noopener">英文原文</a></span></div></div>
+<div class="site-container">
+<aside class="site-nav"><div class="documents-tree"><nav><ul class="contents-table">
+<li class="toc-group"><span class="toc-group-title">A · 最新动态</span><ul>
+<li><a href="01-42-00-fortnite-ecosystem-updates-and-release-notes.html">01. 42.00 生态系统更新与发行说明</a></li>
+<li><a href="02-custom-items-and-inventory-overview-in-fortnite.html">02. 自定义物品与背包总览</a></li>
+<li><a href="03-in-island-transactions-in-fortnite.html">03. 岛内交易</a></li>
+<li><a href="04-mobile-development-in-fortnite.html" class="active">04. 移动端开发</a></li>
+<li><a href="05-inputs-in-fortnite.html">05. 输入系统</a></li>
+<li><a href="06-ability-system-in-unreal-editor-for-fortnite.html">06. 能力系统 Ability System</a></li>
+<li><a href="07-partybased-gameplay-using-the-social-synergy-api-in-fortnite.html">07. 社交协同 API 与小队玩法</a></li>
+<li><a href="08-scene-graph-in-unreal-editor-for-fortnite.html">08. 场景图 Scene Graph</a></li>
+</ul></li>
+<li class="toc-group"><span class="toc-group-title">B · 入门指南</span><ul>
+<li><a href="09-build-your-first-island-in-fortnite.html">09. 构建你的第一个岛屿</a></li>
+<li><a href="10-onboarding-guide-to-programming-with-verse-in-unreal-editor-for-fortnite.html">10. Verse 编程入门指南</a></li>
+<li><a href="11-building-basics-in-fortnite-creative.html">11. 建造基础</a></li>
+</ul></li>
+<li class="toc-group"><span class="toc-group-title">C · 品牌合集</span><ul>
+<li><a href="12-star-wars-islands-in-fortnite.html">12. 星球大战™岛屿</a></li>
+<li><a href="13-kpop-demon-hunters-islands-in-fortnite.html">13. KPop 猎魔团岛屿</a></li>
+<li><a href="14-building-lego-islands-in-fortnite.html">14. 乐高®岛屿</a></li>
+<li><a href="15-the-walking-dead-universe-islands-in-unreal-editor-for-fortnite.html">15. 行尸走肉宇宙岛屿</a></li>
+<li><a href="16-teenage-mutant-ninja-turtle-islands-in-unreal-editor-for-fortnite.html">16. 忍者神龟岛屿</a></li>
+<li><a href="17-squid-game-islands-in-fortnite.html">17. 鱿鱼游戏岛屿</a></li>
+</ul></li>
+<li class="toc-group"><span class="toc-group-title">D · 开发者成功</span><ul>
+<li><a href="18-using-creator-portal-in-fortnite-creative.html">18. 使用创作者门户</a></li>
+<li><a href="19-island-moderation-and-guidelines-in-fortnite-creative.html">19. 岛屿审核与准则</a></li>
+</ul></li>
+<li class="toc-group"><span class="toc-group-title">E · 协作与版本控制</span><ul>
+<li><a href="20-creating-teams-in-creator-portal-in-unreal-editor-for-fortnite.html">20. 在创作者门户创建团队</a></li>
+<li><a href="21-adding-playtesters-in-fortnite-creative.html">21. 添加试玩测试员</a></li>
+<li><a href="22-playtesting-your-island-in-unreal-editor-for-fortnite.html">22. 试玩测试你的岛屿</a></li>
+<li><a href="23-collaborating-in-unreal-editor-for-fortnite.html">23. 在 UEFN 中协作</a></li>
+<li><a href="24-lore-version-control-in-unreal-editor-for-fortnite.html">24. Lore 版本控制</a></li>
+<li><a href="25-conflicts-in-lore-version-control-in-unreal-editor-for-fortnite.html">25. Lore 中的冲突</a></li>
+<li><a href="26-version-history-and-conflict-resolution-in-unreal-editor-for-fortnite.html">26. 分支历史与冲突解决</a></li>
+</ul></li>
+<li class="toc-group"><span class="toc-group-title">F · 游戏示例</span><ul>
+<li><a href="27-build-a-game-in-unreal-editor-for-fortnite.html">27. 构建一款游戏</a></li>
+<li><a href="28-unreal-editor-for-fortnite-starter-templates.html">28. UEFN 新手模板</a></li>
+</ul></li>
+<li class="toc-group"><span class="toc-group-title">G · Verse编程</span><ul>
+<li><a href="29-learn-the-basics-of-writing-code-in-verse.html">29. 从零学习 Verse 代码基础</a></li>
+</ul></li>
+<li class="toc-group"><span class="toc-group-title">H · 专注领域</span><ul>
+<li><a href="30-lighting-in-unreal-editor-for-fortnite.html">30. 灯光</a></li>
+<li><a href="31-animation-and-cinematics-in-unreal-editor-for-fortnite.html">31. 动画与过场动画</a></li>
+<li><a href="32-modeling-in-unreal-editor-for-fortnite.html">32. 建模</a></li>
+<li><a href="33-materials-in-unreal-editor-for-fortnite.html">33. 材质</a></li>
+<li><a href="34-environments-and-landscapes-in-unreal-editor-for-fortnite.html">34. 环境与地形</a></li>
+<li><a href="35-audio-in-unreal-editor-for-fortnite.html">35. 音频</a></li>
+<li><a href="36-visual-effects-in-unreal-editor-for-fortnite.html">36. 视觉特效</a></li>
+</ul></li>
+</ul></nav></div></aside>
+<div class="page-content"><div class="page-document has-theme-bg">
+<header class="section-page-header"><nav><ol class="breadcrumb is-shrinkable"><li class="breadcrumb-item is-root"><img src="../assets/logo-epic.svg" alt="Epic Games"><a href="../index.html">Developer</a></li><li class="breadcrumb-item"><a href="../index.html">Fortnite 文档</a></li><li class="breadcrumb-item"><a href="04-mobile-development-in-fortnite.html">移动端开发</a></li><li class="breadcrumb-item active" aria-current="page"><span class="text-truncate">移动端优化</span></li></ol></nav><h1>移动端优化</h1><p class="text-secondary mb-0">所有 UEFN 岛屿都要适配从高端 PC 到移动设备的多种硬件。本页介绍为移动端设计时的关键考量，帮你从一开始就兼顾优化与内存效率。</p><p class="doc-meta">英文原标题：Mobile Optimization In Fortnite · <a href="https://dev.epicgames.com/documentation/fortnite/mobile-optimization-in-fortnite" target="_blank" rel="noopener">查看英文原文</a> · 社区翻译镜像，仅供学习</p></header>
+<div class="doc-columns"><article class="doc-article">
+<p>所有 <strong>Unreal Editor for Fortnite（UEFN）</strong>岛屿都要支持多种硬件，从高端 PC 到移动设备，但要打造在移动端表现出色的岛屿，必须从一开始就考虑优化与内存效率。</p>
+<p>本页将带你了解为移动端设计时的关键考量。</p>
+<h2 id="sec-1">可扩展性设置</h2>
+<p>UEFN 在设计上支持平台可扩展性。由于硬件限制，一些功能在较低画质级别会被禁用或降级。使用编辑器内的 Visual Scalability（视觉可扩展性）工具，可以在不同可扩展性组下预览你的岛屿。强烈建议在多个级别下测试。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/2659cc29-90d3-4cf1-9566-0b5401bd433b?resizing_type=fit" alt="性能与可扩展性工具菜单" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/2659cc29-90d3-4cf1-9566-0b5401bd433b?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>下表展示了在不同画质级别下会缩放或被禁用的关键功能：</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/74041116-0d5e-40ad-b1a5-e883216fb6b6?resizing_type=fit" alt="不同画质级别下关键功能的可扩展性" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/74041116-0d5e-40ad-b1a5-e883216fb6b6?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>让岛屿与资源具备可扩展性，才能在任何设备上都呈现尽可能好的性能与画面。需要考虑的关键方面有：</p>
+<ul>
+<li><strong>网格体 LOD</strong>：为自定义静态或骨骼网格体使用<a href="https://dev.epicgames.com/documentation/fortnite/level-of-detail-lod-best-practices-in-fortnite" target="_blank" rel="noopener">网格体 LOD（Mesh LODs）</a>，降低多边形数量，提高每秒帧数（FPS）。</li>
+<li><strong>世界与 HLOD</strong>：使用<a href="https://dev.epicgames.com/documentation/fortnite/streaming-and-hlods-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">HLOD 与 World Partition</a>对地图进行流送，减少渲染内容，减轻 GPU 负担，提高 FPS。</li>
+<li><strong>纹理组与 Mipmap</strong>：通过 MIP 贴图启用运行时材质缩放。确保纹理位于正确的组中，并按<a href="https://dev.epicgames.com/documentation/fortnite/textures-best-practices-in-fortnite" target="_blank" rel="noopener">2 的幂（powers of two）</a>创建，以保证平滑缩放与视觉质量。不符合 2 的幂的纹理将无法流送。</li>
+<li><strong>材质质量</strong>：复杂材质在低端平台上可能开销过大。我们创建了材质函数包装器，帮你针对不同平台层级进一步自定义材质的各个方面。<br>导航到 <strong>Fortnite</strong> &gt; <strong>Materials</strong> &gt; <strong>Functions</strong>，你会找到 <code>MF_QualitySwitch_MaterialAttributes</code>、<code>MF_QualitySwitch_Scalar</code> 和 <code>MF_QualitySwitch_Vector</code>。使用这些质量切换包装器精简低画质设置下的材质函数，可以提高性能。更多信息请参阅<a href="https://dev.epicgames.com/documentation/fortnite/material-functions-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">材质函数（Material Functions）</a>页面。</li>
+</ul>
+<h3>针对移动端优化美术与资源的技巧</h3>
+<ul>
+<li>从一开始就注意移动端的限制。</li>
+<li>避免过度绘制（overdraw）。压平图层、限制透明、修剪重叠的杂物。</li>
+<li>简化纹理。使用压缩工具。</li>
+<li>在移动设备上充分测试你的岛屿。注意 UI 冲突，以及与 gameplay 操作重叠的元素。你可以使用 Amazon Luna 或 Xbox Cloud Gaming 来试玩移动端体验。</li>
+<li>运行内存计算（Memory Calculation）工具，获取关卡中最耗资源的详细列表。</li>
+</ul>
+<h2 id="sec-2">更多优化技巧</h2>
+<p>虽然 UEFN 的引擎可扩展性非常出色，但你仍然需要精简和优化内容。硬件过载会导致 FPS 过低、加载缓慢和体验不佳。请参考以下指南提高性能：</p>
+<ul>
+<li><strong>优化网格体</strong>：多边形数量保持尽可能低。多边形数量预算请参阅<a href="https://dev.epicgames.com/documentation/fortnite/fortniteready-assets-best-practices-in-fortnite" target="_blank" rel="noopener">Fortnite 就绪资源最佳实践（Fortnite-Ready Assets Best Practices）</a>。</li>
+<li><strong>材质数量</strong>：使用尽可能少的材质。理想情况下每个网格体只使用一个材质分段。</li>
+<li><strong>纹理分辨率</strong>：移动设备的纹理内存有限。使用 512x512 像素纹理，尽可能避免更大的尺寸。</li>
+<li><strong><a href="https://dev.epicgames.com/documentation/fortnite/reducing-draw-calls-in-fortnite" target="_blank" rel="noopener">减少绘制调用（Reduce Draw Calls）</a></strong>：避免同时渲染太多独特的物体和纹理。使用<a href="https://youtu.be/k9fAXZ4U4XA?si=1yMgPdEa4aK8Zxi4&amp;t=1275" target="_blank" rel="noopener">实例（Instances）</a>和<a href="https://youtu.be/k9fAXZ4U4XA?si=n1vCkI2x2Sy0dyyy&amp;t=1323" target="_blank" rel="noopener">分层实例化静态网格体（Hierarchical Instanced Static Meshes，HISM）</a>，并在可行时将小物体合并为更大的道具。</li>
+<li><strong>World Partition 与数据层（Data Layers）</strong>：减少屏幕上的资源与加载时间。参阅<a href="https://dev.epicgames.com/documentation/fortnite/memory-management-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">内存管理（Memory Management）</a>文档页了解 World Partition。</li>
+<li><strong>优化光照</strong>：使用尽可能小的光照半径，避免光照重叠，并将光照的 Mobility（可移动性）设为<strong>固定（Stationary）</strong>。</li>
+<li>对不需要锐利阴影的灯光<strong>关闭投射阴影（Turn off Cast Shadows）</strong>，特别是在天光已提供足够环境光的室外区域。</li>
+<li><strong>使用<a href="lighting-scalability-manager-in-unreal-editor-for-fortnite.html">光照可扩展性管理器（Lighting Scalability Manager）</a></strong>：为每个 ESS 级别创建不同的光照方案。你可以为低、中级别（移动端和旧主机）设置更简化、性能更高的光照方案。</li>
+</ul>
+<h2 id="sec-3">Mipmap 及其作用</h2>
+<p>可以把 Mipmap 理解为纹理的 LOD。纹理分辨率会根据相机距离和朝向切换。</p>
+<p>虽然使用无 Mipmap 的纹理看起来更清晰很诱人，但这类纹理会一直占用设备内存，并绕过 UEFN 的流送流程。</p>
+<p>下图展示了不同尺寸的纹理内存占用。例如，1024x512 纹理的内存占用是 1024x1024 纹理的一半。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/d47c9b3e-01e0-41f8-b17d-f8b2f60b2336?resizing_type=fit" alt="按尺寸划分的纹理内存占用" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/d47c9b3e-01e0-41f8-b17d-f8b2f60b2336?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>单个纹理看似占用不大，但屏幕上会同时加载许多纹理，且相机移开后不会立即从内存清除。这种累积可能因超出内存上限而导致设备崩溃。</p>
+<h2 id="sec-4">移动端故障排除</h2>
+<p>以下是一些常见问题及优化岛屿移动端表现的解决方法。</p>
+<h3>移动设备上帧数（FPS）过低</h3>
+<p><strong>问题</strong>：<a href="https://dev.epicgames.com/documentation/fortnite/fortnite-glossary#draw-call" target="_blank" rel="noopener">绘制调用（draw calls）</a>过多，显卡过载。</p>
+<ul>
+<li><strong>解决方法</strong>：减少同一时间可见的内容。使用 World Partition 划分关卡，减少渲染内容。</li>
+<li><strong>解决方法</strong>：使用 HLOD 和网格体 LOD 降低资源复杂度与多边形数量，让 GPU 更快地渲染物体。</li>
+<li><strong>解决方法</strong>：在较低画质设置下简化复杂材质，或减少独特材质的数量——独特材质越多，每帧需要的 GPU 计算越多。尽可能复用材质。</li>
+<li><strong>解决方法</strong>：尽可能将小物体合并为一个更大的资源。这样显卡可以把它们作为单个物品或单个绘制调用来渲染。</li>
+</ul>
+<p><strong>问题</strong>：一次加载的资源过多。</p>
+<ul>
+<li><strong>解决方法</strong>：使用 World Partition 划分关卡，减少加载内容的数量。</li>
+<li><strong>解决方法</strong>：使用 HISM 和实例（Instances）减少独特资源的数量。</li>
+<li><strong>解决方法</strong>：尽可能复用材质，减少每帧的 GPU 计算。</li>
+</ul>
+<h3>岛屿内存占用过高</h3>
+<p><strong>问题</strong>：内容未经优化。</p>
+<ul>
+<li><strong>解决方法</strong>：尽可能使用 512x512 纹理，分配正确的纹理组（Texture Group），并确保启用流送。</li>
+<li><strong>解决方法</strong>：对于自定义网格体，使用尽可能小的多边形数量，以获得有效的 LOD 并减小烘焙体积。</li>
+</ul>
+<p><strong>问题</strong>：独特网格体过多。</p>
+<ul>
+<li><strong>解决方法</strong>：尽可能使用 HISM 和实例（Instances）。以不同方式复用同一资源可以减少内存中存储的独特资源数量。</li>
+<li><strong>解决方法</strong>：尽可能将小物体合并为一个更大的资源。</li>
+</ul>
+<h2 id="sec-5">支持的移动设备</h2>
+<p>下表列出了测试移动端体验时应考虑的设备与规格。</p>
+<h3>安卓</h3>
+<table><thead><tr><th>类别</th><th>最低要求</th></tr></thead><tbody>
+<tr><td><strong>操作系统（Operating System）</strong></td><td>Android OS 10.0 或更高</td></tr>
+<tr><td><strong>架构（Architecture）</strong></td><td>ARM64 处理器上的 64 位 Android</td></tr>
+<tr><td><strong>内存（RAM）</strong></td><td>4GB RAM</td></tr>
+<tr><td><strong>GPU</strong></td><td>Adreno 530 或更高，Mali-G71 MP20、Mali-G72 MP12 或更高</td></tr>
+</tbody></table>
+<h3>苹果</h3>
+<table><thead><tr><th>设备</th><th>型号</th></tr></thead><tbody>
+<tr><td><strong>iPhone</strong></td><td>11、11 Pro、11 Pro Max、12、12 mini、12 Pro、12 Pro Max、13、13 mini、13 Pro、13 Pro Max、14、14 Plus、14 Pro、14 Pro Max、15、15 Plus、15 Pro、15 Pro Max、16、16 Plus、16 Pro、16 Pro Max</td></tr>
+<tr><td><strong>iPhone SE</strong></td><td>3rd gen 2022</td></tr>
+<tr><td><strong>iPad Pro</strong></td><td>12.9 英寸 2 代或更新、11 英寸 1 代或更新、10.5 英寸</td></tr>
+<tr><td><strong>iPad Air</strong></td><td>4th gen 2020、5th gen 2022</td></tr>
+<tr><td><strong>iPad</strong></td><td>10th gen 2022</td></tr>
+<tr><td><strong>iPad mini</strong></td><td>6th gen 2021</td></tr>
+</tbody></table>
+<h2 id="sec-6">更多资源</h2>
+<p>查看以下资源，深入学习：</p>
+<ul>
+<li>Fortnite 文档中的<a href="https://dev.epicgames.com/documentation/fortnite/memory-and-optimization-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">内存与优化（Memory and Optimization）</a>章节</li>
+<li><a href="https://youtu.be/k9fAXZ4U4XA?si=o6PxvXbcYwq5YOfh" target="_blank" rel="noopener">UEFN 中的项目优化（Project Optimization in UEFN）</a>YouTube 视频</li>
+<li><a href="https://youtu.be/gtX0gPOSkbU?si=rbI7JaQBUi2PrEha" target="_blank" rel="noopener">UEFN 中的内存管理（Memory Management in UEFN）</a>YouTube 视频</li>
+</ul>
+<div class="pager"><a href="04-mobile-development-in-fortnite.html"><small>← 返回父教程</small>移动端开发</a><a href="sub-index.html"><small>子教程索引 →</small>全部子教程</a></div>
+</article><nav class="doc-toc" aria-label="本页内容"><b>本页内容</b><a href="#sec-1">可扩展性设置</a><a href="#sec-2">更多优化技巧</a><a href="#sec-3">Mipmap 及其作用</a><a href="#sec-4">移动端故障排除</a><a href="#sec-5">支持的移动设备</a><a href="#sec-6">更多资源</a></nav></div>
+</div></div>
+</div>
+<footer class="edc-footer"><div class="inner"><img src="../assets/logo-epic.svg" alt="Epic Games"><span>Fortnite 文档中文镜像 · UE教程/ · 本地打开 index.html 阅读 · 翻译整理自 Epic 官方文档，仅供学习交流</span></div></footer>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>编写代码基础 2：Verse 基本编程概念 | Fortnite 文档中文镜像</title>
+<link rel="stylesheet" href="../assets/epic.css">
+<link rel="stylesheet" href="../assets/patch.css">
+<link rel="icon" href="../assets/logo-epic.svg">
+</head>
+<body class="theme-fortnite">
+<div class="edc-topbar"><div class="edc-topbar-inner"><img class="edc-logo" src="../assets/logo-epic.svg" alt="Epic Games"><span class="edc-brand">Epic Games <b>开发者社区</b></span><span class="edc-nav"><a href="../index.html">文档首页</a><a href="sub-index.html">子教程索引</a><a href="https://dev.epicgames.com/documentation/fortnite/basics-of-writing-code-2-basic-programming-concepts-in-verse" target="_blank" rel="noopener">英文原文</a></span></div></div>
+<div class="site-container">
+<aside class="site-nav"><div class="documents-tree"><nav><ul class="contents-table">
+<div class="tree-sec">A · 最新动态</div><a class="tree-link" href="01-42-00-fortnite-ecosystem-updates-and-release-notes.html">01. 42.00 生态系统更新与发行说明</a><a class="tree-link" href="02-custom-items-and-inventory-overview-in-fortnite.html">02. 自定义物品与背包总览</a><a class="tree-link" href="03-in-island-transactions-in-fortnite.html">03. 岛内交易</a><a class="tree-link" href="04-mobile-development-in-fortnite.html">04. 移动端开发</a><a class="tree-link" href="05-inputs-in-fortnite.html">05. 输入系统</a><a class="tree-link" href="06-ability-system-in-unreal-editor-for-fortnite.html">06. 能力系统 Ability System</a><a class="tree-link" href="07-partybased-gameplay-using-the-social-synergy-api-in-fortnite.html">07. 社交协同 API 与小队玩法</a><a class="tree-link" href="08-scene-graph-in-unreal-editor-for-fortnite.html">08. 场景图 Scene Graph</a><div class="tree-sec">B · 入门指南</div><a class="tree-link" href="09-build-your-first-island-in-fortnite.html">09. 构建你的第一个岛屿</a><a class="tree-link" href="10-onboarding-guide-to-programming-with-verse-in-unreal-editor-for-fortnite.html">10. Verse 编程入门指南</a><a class="tree-link" href="11-building-basics-in-fortnite-creative.html">11. 建造基础</a><div class="tree-sec">C · 品牌合集</div><a class="tree-link" href="12-star-wars-islands-in-fortnite.html">12. 星球大战™岛屿</a><a class="tree-link" href="13-kpop-demon-hunters-islands-in-fortnite.html">13. KPop 猎魔团岛屿</a><a class="tree-link" href="14-building-lego-islands-in-fortnite.html">14. 乐高®岛屿</a><a class="tree-link" href="15-the-walking-dead-universe-islands-in-unreal-editor-for-fortnite.html">15. 行尸走肉宇宙岛屿</a><a class="tree-link" href="16-teenage-mutant-ninja-turtle-islands-in-unreal-editor-for-fortnite.html">16. 忍者神龟岛屿</a><a class="tree-link" href="17-squid-game-islands-in-fortnite.html">17. 鱿鱼游戏岛屿</a><div class="tree-sec">D · 开发者成功</div><a class="tree-link" href="18-using-creator-portal-in-fortnite-creative.html">18. 使用创作者门户</a><a class="tree-link" href="19-island-moderation-and-guidelines-in-fortnite-creative.html">19. 岛屿审核与准则</a><div class="tree-sec">E · 协作与版本控制</div><a class="tree-link" href="20-creating-teams-in-creator-portal-in-unreal-editor-for-fortnite.html">20. 在创作者门户创建团队</a><a class="tree-link" href="21-adding-playtesters-in-fortnite-creative.html">21. 添加试玩测试员</a><a class="tree-link" href="22-playtesting-your-island-in-unreal-editor-for-fortnite.html">22. 试玩测试你的岛屿</a><a class="tree-link" href="23-collaborating-in-unreal-editor-for-fortnite.html">23. 在 UEFN 中协作</a><a class="tree-link" href="24-lore-version-control-in-unreal-editor-for-fortnite.html">24. Lore 版本控制</a><a class="tree-link" href="25-conflicts-in-lore-version-control-in-unreal-editor-for-fortnite.html">25. Lore 中的冲突</a><a class="tree-link" href="26-version-history-and-conflict-resolution-in-unreal-editor-for-fortnite.html">26. 分支历史与冲突解决</a><div class="tree-sec">F · 游戏示例</div><a class="tree-link" href="27-build-a-game-in-unreal-editor-for-fortnite.html">27. 构建一款游戏</a><a class="tree-link" href="28-unreal-editor-for-fortnite-starter-templates.html">28. UEFN 新手模板</a><div class="tree-sec">G · Verse 编程</div><a class="tree-link active" href="29-learn-the-basics-of-writing-code-in-verse.html">29. 从零学习 Verse 代码基础</a><div class="tree-sec">H · 专注领域</div><a class="tree-link" href="30-lighting-in-unreal-editor-for-fortnite.html">30. 灯光</a><a class="tree-link" href="31-animation-and-cinematics-in-unreal-editor-for-fortnite.html">31. 动画与过场动画</a><a class="tree-link" href="32-modeling-in-unreal-editor-for-fortnite.html">32. 建模</a><a class="tree-link" href="33-materials-in-unreal-editor-for-fortnite.html">33. 材质</a><a class="tree-link" href="34-environments-and-landscapes-in-unreal-editor-for-fortnite.html">34. 环境与地形</a><a class="tree-link" href="35-audio-in-unreal-editor-for-fortnite.html">35. 音频</a><a class="tree-link" href="36-visual-effects-in-unreal-editor-for-fortnite.html">36. 视觉特效</a>
+</ul></nav></div></aside>
+<div class="page-content"><div class="page-document has-theme-bg">
+<header class="section-page-header"><nav><ol class="breadcrumb is-shrinkable"><li class="breadcrumb-item is-root"><img src="../assets/logo-epic.svg" alt="Epic Games"><a href="../index.html">Developer</a></li><li class="breadcrumb-item"><a href="../index.html">Fortnite 文档</a></li><li class="breadcrumb-item"><a href="29-learn-the-basics-of-writing-code-in-verse.html">从零学习 Verse 代码基础</a></li><li class="breadcrumb-item active" aria-current="page"><span class="text-truncate">编写代码基础 2：Verse 基本编程概念</span></li></ol></nav><h1>编写代码基础 2：Verse 基本编程概念</h1><p class="text-secondary mb-0">本课介绍表达式、值、结果、求值、运算符、关键字、类型与字面量等 Verse 基本编程概念。</p><p class="doc-meta">英文原标题：Basics Of Writing Code 2 Basic Programming Concepts In Verse · <a href="https://dev.epicgames.com/documentation/fortnite/basics-of-writing-code-2-basic-programming-concepts-in-verse" target="_blank" rel="noopener">查看英文原文</a> · 社区翻译镜像，仅供学习</p></header>
+<div class="doc-columns"><article class="doc-article">
+<div class="block-callout"><b>前置主题</b>：要理解和使用本页内容，请确保你已熟悉以下主题：<ul><li><a href="basics-of-writing-code-1-basic-programming-terms-in-verse.html">第 1 课：基本编程术语</a></li></ul></div>
+<p>准备好再来一份编程知识大餐了吗？接下来的内容会更有嚼劲！</p>
+<h2 id="sec-1">代码由什么组成</h2>
+<h3>表达式</h3>
+<p><strong>表达式（expression）</strong>是能产生结果的最小代码单元。例如，<code>1+2</code> 就是一个表达式，程序运行时会输出 <code>3</code>。</p>
+<pre><code>Print(&quot;{1 + 2}&quot;)</code></pre>
+<p><code>Print</code> 是一个内置函数，告诉程序把括号里的东西显示出来。在这里，<code>"{1 + 2}"</code> 告诉程序先计算 1 + 2 等于多少，打开日志时就会打印出这个和。</p>
+<h3>值</h3>
+<p><strong>值（value）</strong>是程序运行时所用的信息。比如数字或文本都是值。</p>
+<h3>结果</h3>
+<p>当表达式执行并输出一个值时，这个值就是<strong>结果（result）</strong>。</p>
+<h3>求值</h3>
+<p><strong>求值（evaluate）</strong>指执行表达式以产生值的过程。注意 <strong>evaluate</strong> 和 <strong>value</strong> 来自同一个词根。</p>
+<h3>运算符</h3>
+<p><strong>运算符（operator）</strong>是表示<strong>运算（operation）</strong>的符号，比如加法（<strong>+</strong>）或大于（<strong>&gt;</strong>）。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/319f6e4b-d5a3-41eb-ac02-7604c668d983?resizing_type=fit" alt="运算符概念示意图1" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/319f6e4b-d5a3-41eb-ac02-7604c668d983?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p><em>一只猫加一只猫大于一只老鼠。</em></p>
+<h2 id="sec-2">表达式的组成部分</h2>
+<p>前面你学过：<strong>表达式是能产生结果的最小代码单元</strong>。</p>
+<p>进一步展开：<strong>表达式是由运算和值组合而成、求值后输出结果的东西</strong>。</p>
+<p>下面是名为 <code>if .. else</code> 的表达式的用法。</p>
+<pre><code>if (MiceCaught &gt; 0):
+    Print(&quot;Win!&quot;)
+else:
+    Print(&quot;Lose!&quot;)</code></pre>
+<p>结果是“Win!”或“Lose!”。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/2834c1cc-e87d-42e4-a2f8-38ea20a547e4?resizing_type=fit" alt="if else 表达式示例图2" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/2834c1cc-e87d-42e4-a2f8-38ea20a547e4?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>意思是：<strong>如果（if）</strong>抓到了一只或多只老鼠，玩家就赢了——<strong>否则（else）</strong>，一只没抓到，玩家就输了。</p>
+<h3>关键字</h3>
+<p>有些词是 Verse（Verse）语言内置的，附带着非常具体的动作，它们叫<strong>关键字（keyword）</strong>。</p>
+<p>在上面的例子里，<code>if</code> 是一个<strong>关键字</strong>，表示必须满足某个条件（如果抓到一只老鼠……）。另一个关键字 <code>else</code> 表示如果条件不满足，就产生另一个结果。</p>
+<p>Verse 使用关键字让写程序更轻松，因为每个关键字里都浓缩了大量“程序应该做什么”的信息。</p>
+<p>关键字在 Verse 中是<strong>保留</strong>给其特定内置用途的，所以你不能用这些词给其他东西命名。下一课会细讲这一点！</p>
+<h3>运算</h3>
+<p><strong>运算（operation）</strong>是可以对数据执行的操作或过程。这些运算用<strong>符号</strong>表示，叫<strong>运算符</strong>。运算符操作的数据（比如数字）叫<strong>操作数（operand）</strong>。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/6374fa3b-01ca-47c4-a68c-5e41e1281fea?resizing_type=fit" alt="运算与操作数关系示意图3" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/6374fa3b-01ca-47c4-a68c-5e41e1281fea?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>常见运算符举例：</p>
+<table><thead><tr><th>运算符</th><th>作用</th></tr></thead><tbody><tr><td><strong>加法</strong> <code>+</code></td><td><strong>+</strong> 把两个数字加在一起。</td></tr><tr><td><strong>减法</strong> <code>-</code></td><td><strong>-</strong> 用第一个数减去第二个数。</td></tr><tr><td><strong>乘法</strong> <code>*</code></td><td><strong>*</strong> 把两个数相乘。</td></tr><tr><td><strong>除法</strong> <code>/</code></td><td><strong>/</strong> 用第一个数除以第二个数。</td></tr><tr><td><strong>相等</strong> <code>=</code></td><td><strong>=</strong> 检查两边是否相等。例如：<pre><code>if (MiceCaught = MiceInArea):
+    Nap()
+else:
+    LookForMice()</code></pre></td></tr><tr><td><strong>查询</strong> <code>?</code></td><td><strong>?</strong> 检查某种特定类型的值是否为真。</td></tr></tbody></table>
+<p>运算符还有很多，这里先从这些入门！</p>
+<h3>类型与值</h3>
+<p>到目前为止，你已经知道：值是程序做事所需的信息，而运算可以作用于这些信息（数据）。</p>
+<p><strong>类型（type）</strong>说明程序可以对存储的值做哪种运算。</p>
+<p>每种类型都有特定的<strong>运算</strong>与之关联，而这些运算又要求特定种类的<strong>值</strong>。</p>
+<p>类型有很多种，下面是最常见的几种。</p>
+<table><thead><tr><th>类型</th><th>作用</th><th>值</th></tr></thead><tbody><tr><td><code>logic</code></td><td>这种类型的值只能是<strong>真或假</strong>，不能取中间值，也不能两者都是。如果你听说过布尔逻辑（开/关或 0/1），这就是 Verse 中的等价物。</td><td>true / false</td></tr><tr><td><code>int</code></td><td><strong>整数（integer）</strong>是<strong>整数（whole number）</strong>（不是分数），<code>int</code> 就是 integer 的缩写。所以 <code>int</code> 类型的值必须是整数（正数或负数），比如 1、-30 或 777。带小数的值请用 <code>float</code>。</td><td>整数</td></tr><tr><td><code>float</code></td><td>这种类型用于非整数的值，比如<strong>小数</strong>。例如 1.25 就是 <code>float</code> 类型。之所以叫 float（浮动），是因为小数点位置不固定，可以在数字串中“浮动”到需要的位置。例如 10.25、1.375、12.0 都是 float。注意 12.0 表示的是一个整数值。所有整数都可以写成 float——1 写成 1.0，777 写成 777.0——但 float 只有是整数时才能写成 int。</td><td>带小数点的数字</td></tr><tr><td><code>string</code></td><td>这种类型用于任何<strong>文本</strong>，可以是字母、数字、标点、空格，甚至表情符号 😻。例如在<a href="https://dev.epicgames.com/documentation/fortnite/run-your-first-verse-program-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">修改并运行你的第一个 Verse 程序</a>中，<code>Print("Hello, world!")</code> 就是打印一个内容为 "Hello, world!" 的字符串。</td><td>字母、数字、标点、空格、表情符号</td></tr></tbody></table>
+<h3>字面量</h3>
+<p><strong>字面量（literal）</strong>是 Verse 编程语言中不变的值，比如数字或其他字符。只有当你确定某个值永远不变时，才适合用字面量。</p>
+<p>例如对于 <strong>logic</strong> 类型，只有两种可能字面量：<strong>true</strong> 和 <strong>false</strong>，因为它们的值不会变。真永远是真，假永远是假。</p>
+<p>下一课会进一步学习字面量及其用法。</p>
+<h2 id="sec-3">总结</h2>
+<ul><li>代码<strong>执行（运行）</strong>时，其中的<strong>表达式</strong>会被<strong>求值</strong>。</li><li>求值会产生<strong>结果</strong>。</li><li><strong>关键字</strong>是 Verse 中附带特定动作的特殊单词。</li><li><strong>值</strong>是程序做事所用的信息。</li><li><strong>类型</strong>说明程序可以对值做哪种运算。</li><li><strong>字面量</strong>是不会变化的值。</li></ul>
+<h2 id="sec-4">练习时间！</h2>
+<ul><li><a href="basics-of-writing-code-2-practice-time-in-verse.html">第 2 课：练习时间！来用 Verse 写一些简单的代码吧。</a></li></ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/2d9d14dc-2c80-460c-bd67-38f67036ccb3?resizing_type=fit&width=640&height=640" alt="第 2 课：练习时间示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/2d9d14dc-2c80-460c-bd67-38f67036ccb3?resizing_type=fit&width=640&height=640" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>标签：<a href="https://dev.epicgames.com/community/search?query=verse" target="_blank" rel="noopener">verse</a> · <a href="https://dev.epicgames.com/community/search?query=language" target="_blank" rel="noopener">language</a> · <a href="https://dev.epicgames.com/community/search?query=expressions" target="_blank" rel="noopener">expressions</a> · <a href="https://dev.epicgames.com/community/search?query=operators" target="_blank" rel="noopener">operators</a> · <a href="https://dev.epicgames.com/community/search?query=types" target="_blank" rel="noopener">types</a> · <a href="https://dev.epicgames.com/community/search?query=values" target="_blank" rel="noopener">values</a> · <a href="https://dev.epicgames.com/community/search?query=results" target="_blank" rel="noopener">results</a> · <a href="https://dev.epicgames.com/community/search?query=evaluations" target="_blank" rel="noopener">evaluations</a> · <a href="https://dev.epicgames.com/community/search?query=operations" target="_blank" rel="noopener">operations</a> · <a href="https://dev.epicgames.com/community/search?query=keywords" target="_blank" rel="noopener">keywords</a> · <a href="https://dev.epicgames.com/community/search?query=literals" target="_blank" rel="noopener">literals</a></p>
+<div class="doc-more"><p><strong>提问并帮助你的同伴：</strong><a href="https://forums.unrealengine.com/categories?tag=fortnite" target="_blank" rel="noopener">开发者论坛（Developer Forums）</a></p><p><strong>编写你自己的教程或阅读他人的教程：</strong><a href="https://dev.epicgames.com/community/fortnite/learning" target="_blank" rel="noopener">学习库（Learning Library）</a></p></div>
+<div class="pager"><a href="29-learn-the-basics-of-writing-code-in-verse.html"><small>← 返回父教程</small>从零学习 Verse 代码基础</a><a href="sub-index.html"><small>子教程索引 →</small>全部子教程</a></div>
+</article><nav class="doc-toc" aria-label="本页内容"><b>本页内容</b><a href="#sec-1">代码由什么组成</a><a href="#sec-2">表达式的组成部分</a><a href="#sec-3">总结</a><a href="#sec-4">练习时间！</a></nav></div>
+</div></div>
+</div>
+<footer class="edc-footer"><div class="inner"><img src="../assets/logo-epic.svg" alt="Epic Games"><span>Fortnite 文档中文镜像 · UE教程/ · 本地打开 index.html 阅读 · 翻译整理自 Epic 官方文档，仅供学习交流</span></div></footer>
+</body>
+</html>

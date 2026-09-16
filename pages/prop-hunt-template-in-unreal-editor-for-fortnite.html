@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>道具猎手（Prop Hunt）模板 | Fortnite 文档中文镜像</title>
+<link rel="stylesheet" href="../assets/epic.css">
+<link rel="stylesheet" href="../assets/patch.css">
+<link rel="icon" href="../assets/logo-epic.svg">
+</head>
+<body class="theme-fortnite">
+<div class="edc-topbar"><div class="edc-topbar-inner"><img class="edc-logo" src="../assets/logo-epic.svg" alt="Epic Games"><span class="edc-brand">Epic Games <b>开发者社区</b></span><span class="edc-nav"><a href="../index.html">文档首页</a><a href="sub-index.html">子教程索引</a><a href="https://dev.epicgames.com/documentation/fortnite/prop-hunt-template-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">英文原文</a></span></div></div>
+<div class="site-container">
+<aside class="site-nav"><div class="documents-tree"><nav><ul class="contents-table">
+<div class="tree-sec">A最新动态</div>
+<a class="tree-link" href="01-42-00-fortnite-ecosystem-updates-and-release-notes.html">01. 42.00 生态系统更新与发行说明</a>
+<a class="tree-link" href="02-custom-items-and-inventory-overview-in-fortnite.html">02. 自定义物品与背包总览</a>
+<a class="tree-link" href="03-in-island-transactions-in-fortnite.html">03. 岛内交易</a>
+<a class="tree-link" href="04-mobile-development-in-fortnite.html">04. 移动端开发</a>
+<a class="tree-link" href="05-inputs-in-fortnite.html">05. 输入系统</a>
+<a class="tree-link" href="06-ability-system-in-unreal-editor-for-fortnite.html">06. 能力系统 Ability System</a>
+<a class="tree-link" href="07-partybased-gameplay-using-the-social-synergy-api-in-fortnite.html">07. 社交协同 API 与小队玩法</a>
+<a class="tree-link" href="08-scene-graph-in-unreal-editor-for-fortnite.html">08. 场景图 Scene Graph</a>
+<div class="tree-sec">B入门</div>
+<a class="tree-link" href="09-build-your-first-island-in-fortnite.html">09. 构建你的第一个岛屿</a>
+<a class="tree-link" href="10-onboarding-guide-to-programming-with-verse-in-unreal-editor-for-fortnite.html">10. Verse 编程入门指南</a>
+<a class="tree-link" href="11-building-basics-in-fortnite-creative.html">11. 建造基础</a>
+<div class="tree-sec">C品牌合集</div>
+<a class="tree-link" href="12-star-wars-islands-in-fortnite.html">12. 星球大战™岛屿</a>
+<a class="tree-link" href="13-kpop-demon-hunters-islands-in-fortnite.html">13. KPop 猎魔团岛屿</a>
+<a class="tree-link" href="14-building-lego-islands-in-fortnite.html">14. 乐高®岛屿</a>
+<a class="tree-link" href="15-the-walking-dead-universe-islands-in-unreal-editor-for-fortnite.html">15. 行尸走肉宇宙岛屿</a>
+<a class="tree-link" href="16-teenage-mutant-ninja-turtle-islands-in-unreal-editor-for-fortnite.html">16. 忍者神龟岛屿</a>
+<a class="tree-link" href="17-squid-game-islands-in-fortnite.html">17. 鱿鱼游戏岛屿</a>
+<div class="tree-sec">D开发者成功</div>
+<a class="tree-link" href="18-using-creator-portal-in-fortnite-creative.html">18. 使用创作者门户</a>
+<a class="tree-link" href="19-island-moderation-and-guidelines-in-fortnite-creative.html">19. 岛屿审核与准则</a>
+<div class="tree-sec">E协作</div>
+<a class="tree-link" href="20-creating-teams-in-creator-portal-in-unreal-editor-for-fortnite.html">20. 在创作者门户创建团队</a>
+<a class="tree-link" href="21-adding-playtesters-in-fortnite-creative.html">21. 添加试玩测试员</a>
+<a class="tree-link" href="22-playtesting-your-island-in-unreal-editor-for-fortnite.html">22. 试玩测试你的岛屿</a>
+<a class="tree-link" href="23-collaborating-in-unreal-editor-for-fortnite.html">23. 在 UEFN 中协作</a>
+<a class="tree-link" href="24-lore-version-control-in-unreal-editor-for-fortnite.html">24. Lore 版本控制</a>
+<a class="tree-link" href="25-conflicts-in-lore-version-control-in-unreal-editor-for-fortnite.html">25. Lore 中的冲突</a>
+<a class="tree-link" href="26-version-history-and-conflict-resolution-in-unreal-editor-for-fortnite.html">26. 分支历史与冲突解决</a>
+<div class="tree-sec">F游戏示例</div>
+<a class="tree-link active" href="27-build-a-game-in-unreal-editor-for-fortnite.html">27. 构建一款游戏</a>
+<a class="tree-link" href="28-unreal-editor-for-fortnite-starter-templates.html">28. UEFN 新手模板</a>
+<div class="tree-sec">G Verse</div>
+<a class="tree-link" href="29-learn-the-basics-of-writing-code-in-verse.html">29. 从零学习 Verse 代码基础</a>
+<div class="tree-sec">H专注领域</div>
+<a class="tree-link" href="30-lighting-in-unreal-editor-for-fortnite.html">30. 灯光</a>
+<a class="tree-link" href="31-animation-and-cinematics-in-unreal-editor-for-fortnite.html">31. 动画与过场动画</a>
+<a class="tree-link" href="32-modeling-in-unreal-editor-for-fortnite.html">32. 建模</a>
+<a class="tree-link" href="33-materials-in-unreal-editor-for-fortnite.html">33. 材质</a>
+<a class="tree-link" href="34-environments-and-landscapes-in-unreal-editor-for-fortnite.html">34. 环境与地形</a>
+<a class="tree-link" href="35-audio-in-unreal-editor-for-fortnite.html">35. 音频</a>
+<a class="tree-link" href="36-visual-effects-in-unreal-editor-for-fortnite.html">36. 视觉特效</a>
+</ul></nav></div></aside>
+<div class="page-content"><div class="page-document has-theme-bg">
+<header class="section-page-header"><nav><ol class="breadcrumb is-shrinkable"><li class="breadcrumb-item is-root"><img src="../assets/logo-epic.svg" alt="Epic Games"><a href="../index.html">Developer</a></li><li class="breadcrumb-item"><a href="../index.html">Fortnite 文档</a></li><li class="breadcrumb-item"><a href="27-build-a-game-in-unreal-editor-for-fortnite.html">构建一款游戏</a></li><li class="breadcrumb-item active" aria-current="page"><span class="text-truncate">道具猎手（Prop Hunt）模板</span></li></ol></nav><h1>道具猎手（Prop Hunt）模板</h1><p class="text-secondary mb-0">在 Verse 道具猎手中，猎人必须找出并淘汰伪装成道具躲藏起来的玩家队伍。本教程将演示玩家加入/离开事件、循环、类、非对称队伍与自定义事件等基础功能。</p><p class="doc-meta">英文原标题：Prop Hunt Template in Unreal Editor for Fortnite · <a href="https://dev.epicgames.com/documentation/fortnite/prop-hunt-template-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">查看英文原文</a> · 社区翻译镜像，仅供学习</p></header>
+<div class="doc-columns"><article class="doc-article">
+<p>在 <strong>Verse 道具猎手（Verse Prop Hunt）</strong>中，猎人必须找出并淘汰一支伪装成道具（Prop）躲藏起来的玩家队伍。</p>
+<p>每一回合开始时，玩家都会出生在大厅中。游戏开始后随机分配队伍。在游戏开始后的前 15 秒，猎人队伍会在赛前大厅中等待，道具队伍则去躲藏。</p>
+<p>被猎人队伍的玩家射中后，道具会受到伤害并被淘汰。被淘汰的道具将在大厅中重生为猎人。</p>
+<p>15 秒未移动的道具会发出心跳视觉特效与音效（VFX 与 SFX），向猎人暴露自己的位置。为避免被发现，道具需要持续移动。</p>
+<p>道具每存活一秒即可得分，猎人每次淘汰也可得分。猎人获得的分数会随着被淘汰道具数量的增加而提高。最后一个道具的分值最高，玩法也因此更加刺激。</p>
+<p>输入岛屿代码 <strong>0259-6053-5824</strong> 即可游玩并体验 <strong>Verse 道具猎手（Verse Prop Hunt）</strong>模板的玩法机制。该模板位于 UEFN（Unreal Editor for Fortnite，Fortnite 虚幻编辑器）的 <strong>精选示例（Featured Examples）</strong>分区中。</p>
+<p>本教程将演示以下基础功能：</p>
+<ul>
+<li>玩家加入/离开事件</li>
+<li>循环：for 与 loop</li>
+<li>类（Classes）</li>
+<li>非对称队伍</li>
+<li>自定义事件</li>
+</ul>
+<p>与创意模式（Creative）的 <a href="https://dev.epicgames.com/documentation/en-us/fortnite-creative/design-a-prop-hunt-game-in-fortnite-creative" target="_blank" rel="noopener">道具猎手（Prop Hunt）</a>教程不同，本教程使用 Verse（Verse）来实现某些功能。</p>
+<p>在本教程中使用 Verse（Verse），你可以：</p>
+<ul>
+<li>处理玩家加入与离开游戏。</li>
+<li>按玩家总数定义猎人数量。</li>
+<li>统计道具数量，并在所有道具都被摧毁时结束回合。</li>
+<li>遍历游戏内所有玩家的信息。</li>
+<li>根据剩余道具数量，提高猎人每次淘汰获得的分数。</li>
+<li>通过脚本阅读逻辑，而不必在 UI 中追踪多个设备之间抽象的事件/频道关联。</li>
+<li>在场景中使用更少的设备。</li>
+<li>查看 <code>@editable</code> 属性，无需理解 Verse（Verse）即可调整脚本行为。</li>
+</ul>
+<p>按以下步骤学习如何使用 Verse（Verse）关联设备，创建多轮轮换的非对称队伍多人道具猎手游戏。</p>
+<ul>
+<li><a href="https://dev.epicgames.com/documentation/fortnite/prop-hunt-01-creating-a-new-project-in-unreal-editor-for-fortnite" target="_blank" rel="noopener"><strong>1. 创建新项目</strong></a>——学习如何创建新项目并修改岛屿设置。</li>
+<li><a href="https://dev.epicgames.com/documentation/fortnite/prop-hunt-02-playing-visual-effects-on-players-in-unreal-editor-for-fortnite" target="_blank" rel="noopener"><strong>2. 在玩家身上播放视觉特效</strong></a>——学习如何为 VFX 生成器（VFX Spawner）设备添加自定义视觉特效。</li>
+<li><a href="https://dev.epicgames.com/documentation/fortnite/prop-hunt-03-playing-effects-on-idle-players-in-unreal-editor-for-fortnite" target="_blank" rel="noopener"><strong>3. 在静止玩家身上播放特效</strong></a>——使用本节的 Verse（Verse）代码为静止不动的玩家添加特效。</li>
+<li><a href="https://dev.epicgames.com/documentation/fortnite/prop-hunt-04-setting-up-teams-and-classes-in-unreal-editor-for-fortnite" target="_blank" rel="noopener"><strong>4. 设置队伍与职业</strong></a>——组合使用多种设备，为玩家指定队伍与职业。</li>
+<li><a href="https://dev.epicgames.com/documentation/fortnite/prop-hunt-05-game-loop-and-round-management-in-unreal-editor-for-fortnite" target="_blank" rel="noopener"><strong>5. 游戏循环与回合管理</strong></a>——使用本节的 Verse（Verse）代码添加游戏循环与回合管理系统。</li>
+<li><a href="https://dev.epicgames.com/documentation/fortnite/prop-hunt-06-adding-the-full-script-in-unreal-editor-for-fortnite" target="_blank" rel="noopener"><strong>6. 添加完整脚本</strong></a>——使用这些设备自定义 Unreal Editor for Fortnite 中的游玩体验。</li>
+<li><a href="https://dev.epicgames.com/documentation/fortnite/prop-hunt-07-designing-your-island-in-unreal-editor-for-fortnite" target="_blank" rel="noopener"><strong>7. 设计你的岛屿</strong></a>——发挥创意，设计你的岛屿。</li>
+<li><a href="https://dev.epicgames.com/documentation/fortnite/prop-hunt-08-customizing-player-spawns-in-unreal-editor-for-fortnite" target="_blank" rel="noopener"><strong>8. 自定义玩家出生</strong></a>——学习如何用 VFX 生成与传送玩家。</li>
+<li><a href="https://dev.epicgames.com/documentation/fortnite/prop-hunt-09-configuring-the-informative-devices-in-unreal-editor-for-fortnite" target="_blank" rel="noopener"><strong>9. 配置信息类设备</strong></a>——设置向玩家与游戏发送信息的设备。</li>
+<li><a href="https://dev.epicgames.com/documentation/fortnite/prop-hunt-10-customizing-the-gameplay-in-unreal-editor-for-fortnite" target="_blank" rel="noopener"><strong>10. 自定义玩法</strong></a>——使用这些设备自定义游玩体验。</li>
+</ul>
+<p class="doc-tags">标签：<a href="https://dev.epicgames.com/community/search?query=gameplay" target="_blank" rel="noopener">gameplay</a> · <a href="https://dev.epicgames.com/community/search?query=setup" target="_blank" rel="noopener">setup</a> · <a href="https://dev.epicgames.com/community/search?query=device" target="_blank" rel="noopener">device</a> · <a href="https://dev.epicgames.com/community/search?query=vfx" target="_blank" rel="noopener">vfx</a> · <a href="https://dev.epicgames.com/community/search?query=art" target="_blank" rel="noopener">art</a> · <a href="https://dev.epicgames.com/community/search?query=programming" target="_blank" rel="noopener">programming</a> · <a href="https://dev.epicgames.com/community/search?query=level%20design" target="_blank" rel="noopener">level design</a> · <a href="https://dev.epicgames.com/community/search?query=verse%20language" target="_blank" rel="noopener">verse language</a></p>
+<p><strong>欢迎提问并帮助你的同行：</strong><a href="https://forums.unrealengine.com/categories?tag=fortnite" target="_blank" rel="noopener">开发者论坛（Developer Forums）</a></p>
+<p><strong>编写你自己的教程，或阅读他人的教程：</strong><a href="https://dev.epicgames.com/community/fortnite/learning" target="_blank" rel="noopener">学习库（Learning Library）</a></p>
+<div class="pager"><a href="27-build-a-game-in-unreal-editor-for-fortnite.html"><small>← 返回父教程</small>构建一款游戏</a><a href="sub-index.html"><small>子教程索引 →</small>全部子教程</a></div>
+</article><nav class="doc-toc" aria-label="本页内容"><b>本页内容</b></nav></div>
+</div></div>
+</div>
+<footer class="edc-footer"><div class="inner"><img src="../assets/logo-epic.svg" alt="Epic Games"><span>Fortnite 文档中文镜像 · UE教程/ · 本地打开 index.html 阅读 · 翻译整理自 Epic 官方文档，仅供学习交流</span></div></footer>
+</body>
+</html>

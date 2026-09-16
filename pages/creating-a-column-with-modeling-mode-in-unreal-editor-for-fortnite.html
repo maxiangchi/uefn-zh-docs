@@ -1,0 +1,314 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>在 UEFN 中使用建模模式创建柱子 | Fortnite 文档中文镜像</title><link rel="stylesheet" href="../assets/epic.css"><link rel="stylesheet" href="../assets/patch.css"><link rel="icon" href="../assets/logo-epic.svg"></head><body class="theme-fortnite"><div class="edc-topbar"><div class="edc-topbar-inner"><img class="edc-logo" src="../assets/logo-epic.svg" alt="Epic Games"><span class="edc-brand">Epic Games <b>开发者社区</b></span><span class="edc-nav"><a href="../index.html">文档首页</a><a href="sub-index.html">子教程索引</a><a href="https://dev.epicgames.com/documentation/fortnite/creating-a-column-with-modeling-mode-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">英文原文</a></span></div></div><div class="site-container"><aside class="site-nav"><div class="documents-tree"><nav><ul class="contents-table"><div class="tree-sec">A 最新动态</div><a class="tree-link" href="01-42-00-fortnite-ecosystem-updates-and-release-notes.html">01. 42.00 生态系统更新与发行说明</a><a class="tree-link" href="02-custom-items-and-inventory-overview-in-fortnite.html">02. 自定义物品与背包总览</a><a class="tree-link" href="03-in-island-transactions-in-fortnite.html">03. 岛内交易</a><a class="tree-link" href="04-mobile-development-in-fortnite.html">04. 移动端开发</a><a class="tree-link" href="05-inputs-in-fortnite.html">05. 输入系统</a><a class="tree-link" href="06-ability-system-in-unreal-editor-for-fortnite.html">06. 能力系统 Ability System</a><a class="tree-link" href="07-partybased-gameplay-using-the-social-synergy-api-in-fortnite.html">07. 社交协同 API 与小队玩法</a><a class="tree-link" href="08-scene-graph-in-unreal-editor-for-fortnite.html">08. 场景图 Scene Graph</a><div class="tree-sec">B 入门</div><a class="tree-link" href="09-build-your-first-island-in-fortnite.html">09. 构建你的第一个岛屿</a><a class="tree-link" href="10-onboarding-guide-to-programming-with-verse-in-unreal-editor-for-fortnite.html">10. Verse 编程入门指南</a><a class="tree-link" href="11-building-basics-in-fortnite-creative.html">11. 建造基础</a><div class="tree-sec">C 品牌合集</div><a class="tree-link" href="12-star-wars-islands-in-fortnite.html">12. 星球大战岛屿</a><a class="tree-link" href="13-kpop-demon-hunters-islands-in-fortnite.html">13. KPop 猎魔团岛屿</a><a class="tree-link" href="14-building-lego-islands-in-fortnite.html">14. 乐高岛屿</a><a class="tree-link" href="15-the-walking-dead-universe-islands-in-unreal-editor-for-fortnite.html">15. 行尸走肉宇宙岛屿</a><a class="tree-link" href="16-teenage-mutant-ninja-turtle-islands-in-unreal-editor-for-fortnite.html">16. 忍者神龟岛屿</a><a class="tree-link" href="17-squid-game-islands-in-fortnite.html">17. 鱿鱼游戏岛屿</a><div class="tree-sec">D 开发者成功</div><a class="tree-link" href="18-using-creator-portal-in-fortnite-creative.html">18. 使用创作者门户</a><a class="tree-link" href="19-island-moderation-and-guidelines-in-fortnite-creative.html">19. 岛屿审核与准则</a><div class="tree-sec">E 协作</div><a class="tree-link" href="20-creating-teams-in-creator-portal-in-unreal-editor-for-fortnite.html">20. 在创作者门户创建团队</a><a class="tree-link" href="21-adding-playtesters-in-fortnite-creative.html">21. 添加试玩测试员</a><a class="tree-link" href="22-playtesting-your-island-in-unreal-editor-for-fortnite.html">22. 试玩测试你的岛屿</a><a class="tree-link" href="23-collaborating-in-unreal-editor-for-fortnite.html">23. 在 UEFN 中协作</a><a class="tree-link" href="24-lore-version-control-in-unreal-editor-for-fortnite.html">24. Lore 版本控制</a><a class="tree-link" href="25-conflicts-in-lore-version-control-in-unreal-editor-for-fortnite.html">25. Lore 中的冲突</a><a class="tree-link" href="26-version-history-and-conflict-resolution-in-unreal-editor-for-fortnite.html">26. 分支历史与冲突解决</a><div class="tree-sec">F 游戏示例</div><a class="tree-link" href="27-build-a-game-in-unreal-editor-for-fortnite.html">27. 构建一款游戏</a><a class="tree-link" href="28-unreal-editor-for-fortnite-starter-templates.html">28. UEFN 新手模板</a><div class="tree-sec">G Verse</div><a class="tree-link" href="29-learn-the-basics-of-writing-code-in-verse.html">29. 从零学习 Verse 代码基础</a><div class="tree-sec">H 专注领域</div><a class="tree-link" href="30-lighting-in-unreal-editor-for-fortnite.html">30. 灯光</a><a class="tree-link" href="31-animation-and-cinematics-in-unreal-editor-for-fortnite.html">31. 动画与过场动画</a><a class="tree-link active" href="32-modeling-in-unreal-editor-for-fortnite.html">32. 建模</a><a class="tree-link" href="33-materials-in-unreal-editor-for-fortnite.html">33. 材质</a><a class="tree-link" href="34-environments-and-landscapes-in-unreal-editor-for-fortnite.html">34. 环境与地形</a><a class="tree-link" href="35-audio-in-unreal-editor-for-fortnite.html">35. 音频</a><a class="tree-link" href="36-visual-effects-in-unreal-editor-for-fortnite.html">36. 视觉特效</a></ul></nav></div></aside><div class="page-content"><div class="page-document has-theme-bg"><header class="section-page-header"><nav><ol class="breadcrumb is-shrinkable"><li class="breadcrumb-item is-root"><img src="../assets/logo-epic.svg" alt="Epic Games"><a href="../index.html">Developer</a></li><li class="breadcrumb-item"><a href="../index.html">Fortnite 文档</a></li><li class="breadcrumb-item"><a href="32-modeling-in-unreal-editor-for-fortnite.html">建模</a></li><li class="breadcrumb-item active" aria-current="page"><span class="text-truncate">在 UEFN 中使用建模模式创建柱子</span></li></ol></nav><h1>在 UEFN 中使用建模模式创建柱子</h1><p class="text-secondary mb-0">本教程将带你入门建模模式中的数学建模工具，使用创建、变换、建模、烘焙与 UV 工具，从零开始制作并编辑一根柱子网格体。</p><p class="doc-meta">英文原标题：Creating a Column with Modeling Mode in Unreal Editor for Fortnite · <a href="https://dev.epicgames.com/documentation/fortnite/creating-a-column-with-modeling-mode-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">查看英文原文</a> · 社区翻译镜像，仅供学习</p></header><div class="doc-columns"><article class="doc-article">
+<p><a href="modeling-mode-in-unreal-editor-for-fortnite.html">建模模式（Modeling Mode）</a>工具是基于数学的工具，也就是说它们用数学来创建、编辑形状及其 UV。本教程专门为入门介绍这些工具而设计。</p>
+<p>你将使用建模模式中的基本形状，创建并编辑一个网格体。</p>
+<p>你将用到以下工具：</p>
+<ul>
+<li>创建（Create）</li>
+<li>变换（XForm / Transform）</li>
+<li>模型（Model）</li>
+<li>网格体（Mesh）</li>
+<li>烘焙（Bake）</li>
+<li>UV</li>
+<li>属性（Attribs / Attributes）</li>
+</ul>
+<p>学完本教程，你应该能基本理解如何配合使用这些工具来构建、编辑网格体与 UV。</p>
+<h2 id="sec-1">准备工作（Getting Started）</h2>
+<p>先在内容浏览器中为项目创建文件夹，做好准备。</p>
+<ul>
+<li>打开<strong>内容浏览器（Content Browser）</strong>，右键点击并选择<strong>新建文件夹（New Folder）</strong>。</li>
+<li>将该文件夹命名为 <strong>Meshes</strong>。你搭建的网格体将保存在这个文件夹中。</li>
+<li>再为柱子材质创建一个文件夹。</li>
+</ul>
+<p>你甚至可以<a href="https://dev.epicgames.com/documentation/fortnite/project-organization-in-unreal-editor-for-fortnite#Color-CodeFoldersInTheBrowser" target="_blank" rel="noopener">按颜色整理</a>文件夹，让资产各归其位、井井有条。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/147b9770-509c-481c-9ea6-811add98577d?resizing_type=fit" alt="在内容浏览器中创建文件夹示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/147b9770-509c-481c-9ea6-811add98577d?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ul>
+<li>文件夹建好后，从<strong>模式（Mode）</strong>下拉菜单中选择<strong>建模模式（Modeling Mode）</strong>。<strong>模式工具栏（Mode toolbar）</strong>会打开在视口左侧，同时打开<strong>建模（Modeling）</strong>选项卡。创建和塑造柱子所需的工具都在这里。</li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/7dd1c4c3-5927-4e41-9917-690ff29eae47?resizing_type=fit" alt="建模模式工具栏示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/7dd1c4c3-5927-4e41-9917-690ff29eae47?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ul>
+<li>在<strong>建模（Modeling）</strong>选项卡的<strong>新资产路径（New Asset Path）</strong>字段中，点击<strong>文件夹图标</strong>，从弹出窗口选择你为网格体创建的文件夹，点击<strong>确定（OK）</strong>保存选择。</li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/ee718691-00a4-4976-8ca7-d03830e8fb9c?resizing_type=fit" alt="设置新资产路径示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/ee718691-00a4-4976-8ca7-d03830e8fb9c?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>本项目创建的所有网格体都会自动保存到该文件夹。现在可以开始搭建柱子了。</p>
+<h2 id="sec-2">创建基本形状（Creating the Basic Shapes）</h2>
+<p>柱子由两种基本形状构成：圆柱体和方体。你将用两个圆柱体制作柱子的柱身部分，用一个方体制作柱子的底座和顶部。</p>
+<p>先创建圆柱体。</p>
+<ul>
+<li>从<strong>创建（Create）</strong>工具中选择<strong>圆柱体（Cylinder）</strong>。</li>
+<li>将<strong>半径（Radius）</strong>设为 <strong>50</strong>，<strong>高度（Height）</strong>设为 <strong>225</strong>。</li>
+<li>点击<strong>接受（Accept）</strong>。</li>
+</ul>
+<p>其余设置保持默认。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/edaf063e-a9b9-4607-9d42-514f672870dd?resizing_type=fit" alt="创建第一个圆柱体示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/edaf063e-a9b9-4607-9d42-514f672870dd?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>第一个圆柱体将成为柱子的柱身。重复上述步骤创建第二个圆柱体，但按以下调整半径和高度：</p>
+<ul>
+<li>从<strong>创建（Create）</strong>工具中选择<strong>圆柱体（Cylinder）</strong>。</li>
+<li>将<strong>半径（Radius）</strong>设为 <strong>15</strong>，<strong>高度（Height）</strong>设为 <strong>175</strong>。</li>
+<li>点击<strong>接受（Accept）</strong>。</li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/54a06517-5944-40e9-a097-bf53f07fc688?resizing_type=fit" alt="创建第二个圆柱体示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/54a06517-5944-40e9-a097-bf53f07fc688?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p class="doc-hint">点击图片可放大。</p>
+<p>你将用第二个圆柱体在更大的柱身中刻出凹槽图案。</p>
+<h2 id="sec-3">生成图案（Generating a Pattern）</h2>
+<p><strong>图案（Pattern）</strong>工具可以控制图案的造型与呈现方式，它以所选网格体作为图案的模型。</p>
+<p><strong>图案（Pattern）</strong>工具沿直线、网格或圆形重复所选网格体。你可以将图案保存为整体网格体，也可以保存为多个独立网格体。在本例中，图案保存为一个整体网格体，用于在另一个网格体上压印出造型。</p>
+<p>在视口中选中较小的圆柱体（高亮显示），然后：</p>
+<ul>
+<li>从<strong>变换（XForm）</strong>工具中选择<strong>图案（Pattern）</strong>。</li>
+<li>将<strong>形状（Shape）</strong>设为<strong>圆形（Circle）</strong>。</li>
+<li>将圆形图案的<strong>半径（Radius）</strong>设为 <strong>58</strong>。</li>
+<li>启用<strong>转为动态（Convert to Dynamic）</strong>。这会把图案中的所有小柱子视为一个网格体。</li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/bc7817d7-91e6-46c1-8594-9f89b01b5248?resizing_type=fit" alt="图案工具设置示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/bc7817d7-91e6-46c1-8594-9f89b01b5248?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p class="doc-hint">点击可放大图片。</p>
+<ul>
+<li>平移图案，使其居于大圆柱体中心，让图案中的每个小圆柱体环绕在大圆柱体周围。</li>
+<li>点击<strong>接受（Accept）</strong>。</li>
+</ul>
+<p>大圆柱体此时应被一圈小圆柱体环绕，如上图所示。</p>
+<p>如果图案显示不正确，点击重置箭头，检查该工具其余设置是否均为默认。</p>
+<h2 id="sec-4">居中图案（Centering the Pattern）</h2>
+<p>为确保图案稳稳居于圆柱体中心，且与地面和顶部的距离相等，请使用<strong>变换（Transform）</strong>工具中的<strong>对齐（Align）</strong>。该工具按你启用的轴，把一个网格体移动到与另一个所选网格体对齐的位置。</p>
+<p>同时选中大圆柱体网格体与图案网格体，然后：</p>
+<ul>
+<li>从<strong>变换（Transform）</strong>中点击<strong>对齐（Align）</strong>工具。</li>
+<li>从<strong>对齐类型（Align Type）</strong>下拉菜单选择<strong>包围盒（Bounding Boxes）</strong>。这会在两个网格体周围创建包围盒。</li>
+<li>启用以下对齐轴：
+<ul>
+<li><strong>对齐 X（Align X）</strong></li>
+<li><strong>对齐 Y（Align Y）</strong></li>
+<li><strong>对齐 Z（Align Z）</strong></li>
+</ul>
+</li>
+</ul>
+<p>这样图案就与柱身圆柱体完美居中对齐了。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/b1d2993e-1268-4f4d-83a8-7f2bc84f2c2a?resizing_type=fit" alt="对齐图案与柱身示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/b1d2993e-1268-4f4d-83a8-7f2bc84f2c2a?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ul>
+<li>点击<strong>接受（Accept）</strong>。</li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/b5ac584d-4e6f-4c72-a0af-46b9b9040044?resizing_type=fit" alt="对齐后的效果示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/b5ac584d-4e6f-4c72-a0af-46b9b9040044?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>两个网格体现已在所有选定轴向上均匀分布，可以开始在柱身中成形凹槽了。</p>
+<h2 id="sec-5">制作柱身凹槽（Forming the Column Flutes）</h2>
+<p>要在柱子中做出凹槽，需要用到 PolyEdit 工具<strong>布尔（Boolean）</strong>。该工具执行布尔运算，也就是通过判断点 x 是否位于每个网格体内部，来组合两个或多个实心形状。</p>
+<p>点 x 就是一个网格体与另一个网格体重叠的位置，这个点用于从所选网格体中雕刻出网格体形状。在本例中，你用小圆柱体组成的图案执行布尔运算，在大圆柱体上雕刻出凹槽。</p>
+<p>创建凹槽的步骤：</p>
+<ul>
+<li>确保两个网格体仍处于选中状态。</li>
+<li>从<strong>模型（Model）</strong>中点击<strong>布尔（Boolean）</strong>工具。</li>
+<li>点击<strong>接受（Accept）</strong>。</li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/d1711cd8-6cc4-472f-8c60-7ede3aa7197b?resizing_type=fit" alt="布尔运算后的柱身凹槽示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/d1711cd8-6cc4-472f-8c60-7ede3aa7197b?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>在视口中，大圆柱体上必须出现图案环绕的阴影，如上图所示。</p>
+<p>如果圆柱体看起来与上图不符，轮流尝试<strong>运算（Operation）</strong>选项，直到圆柱体被阴影图案环绕。先选哪个网格体会影响该用哪个选项：</p>
+<ul>
+<li><strong>差集 A - B（Difference A - B）：</strong>A 是第一个选中的网格体，B 是第二个选中的网格体。布尔运算用 B 网格体从 A 网格体中减去。</li>
+<li><strong>差集 B - A（Difference B - A）：</strong>A 是第一个选中的网格体，B 是第二个选中的网格体。布尔运算用 A 网格体从 B 网格体中减去。</li>
+<li><strong>交集（Intersection）：</strong>只保留两个网格体相交的部分。</li>
+<li><strong>并集（Union）：</strong>将两个网格体合并在一起。</li>
+</ul>
+<p>本教程只需要其中一个选项：差集 A - B 或差集 B - A。</p>
+<p>凹槽做好后，就可以搭建柱子的底座了。</p>
+<h2 id="sec-6">构建底座（Constructing the Base）</h2>
+<p>柱子的底座和顶部用方体制作。本教程将先做一个方体作为底座网格体，再编辑其表面，做出柱子底座和顶部。先执行以下操作：</p>
+<ul>
+<li>从<strong>创建（Create）</strong>工具中选择<strong>方体（Box）</strong>。</li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/d4a895bf-1906-4699-a710-dd576ff9fda2?resizing_type=fit" alt="创建方体示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/d4a895bf-1906-4699-a710-dd576ff9fda2?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ul>
+<li>将<strong>宽度（Width）</strong>和<strong>深度（Depth）</strong>设为 <strong>120</strong>。</li>
+<li>将<strong>高度（Height）</strong>设为 <strong>20</strong>。</li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/3b58bf46-2e0d-407d-a338-cde514fa021c?resizing_type=fit" alt="设置方体尺寸示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/3b58bf46-2e0d-407d-a338-cde514fa021c?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>平移方体到柱身下方，查看方体高度与柱身高度组合的效果。</p>
+<ul>
+<li>点击<strong>接受（Accept）</strong>。</li>
+<li>点击柱身网格体，然后按住 <strong>Ctrl</strong> 左键点击方体网格体，同时选中两个网格体。</li>
+<li>从<strong>变换（Transform）</strong>工具中选择<strong>对齐（Align）</strong>，自动把底座网格体纳入柱身网格体的包围盒。</li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/dcdbf5a1-9ddc-4967-af28-e33c7b1e45e9?resizing_type=fit" alt="对齐底座示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/dcdbf5a1-9ddc-4967-af28-e33c7b1e45e9?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ul>
+<li>取消勾选<strong>对齐 Z（Align Z）</strong>，把方体移到柱身底部中央。</li>
+<li>点击<strong>接受（Accept）</strong>。</li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/9f35c4ef-08e6-4183-8d21-f697b1ec21dd?resizing_type=fit" alt="底座居中效果示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/9f35c4ef-08e6-4183-8d21-f697b1ec21dd?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>方体成形并居中后，就可以为网格体底座添加精致的细节了。</p>
+<h2 id="sec-7">添加细节（Adding Detail）</h2>
+<p>要编辑网格体的多边形，请使用 <strong>PolyEdit</strong> 工具。要制作柱子底座，你一次只处理方体的一个面。</p>
+<p>使用<strong>PolyGroup 编辑（PolyGroup Edit）</strong>工具，通过面、边或顶点调整网格体。你可以用<strong>选择过滤器（Selection Filter）</strong>调整这些选项。</p>
+<p>要给柱子底座加细节，只会用到三种 PolyGroup 编辑面编辑：<strong>倒角（Bevel）</strong>、<strong>内嵌（Inset）</strong>与<strong>拉伸（Extrude）</strong>。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/eba87f6c-2a5a-4289-b255-623be825a38f?resizing_type=fit" alt="PolyGroup 编辑类型示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/eba87f6c-2a5a-4289-b255-623be825a38f?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h3>倒角（Bevel）</h3>
+<p>给方体顶部加一条倒角边。</p>
+<ul>
+<li>选中该方体。</li>
+<li>从<strong>模型（Model）</strong>工具中点击 <strong>PolyGroup 编辑（PolyGroup Edit）</strong>。</li>
+<li>选中方体的顶面，高亮该面。</li>
+<li>在<strong>建模（Modeling）</strong>选项卡中点击<strong>倒角（Bevel）</strong>。方体顶部就有了倒角边。</li>
+<li>点击<strong>接受（Accept）</strong>。</li>
+</ul>
+<h3>内嵌（Inset）</h3>
+<p>给刚做好的倒角边加一个内嵌角度。内嵌（Inset）会在倒角边上做出有角度的凹陷。</p>
+<ul>
+<li>选中该方体。</li>
+<li>从 <strong>PolyEdit</strong> 工具中点击 <strong>PolyGroup 编辑（PolyGroup Edit）</strong>。</li>
+<li>选中一个倒角面。</li>
+<li>从<strong>建模（Modeling）</strong>中点击<strong>内嵌（Inset）</strong>。光标处出现十字线。</li>
+<li>把十字线放在倒角中心，大约是方体中间数进去五个格子的位置。</li>
+</ul>
+<p>随着给方体添加越来越多细节，方体线框上会出现越来越多浅蓝色线条。线框可以帮你判断所加细节上的 UV 岛位置。</p>
+<ul>
+<li>点击倒角面，放置内嵌角度。倒角面上就有了内嵌角度。</li>
+<li>点击<strong>接受（Accept）</strong>。</li>
+<li>对方体的每条倒角边重复上述步骤。</li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/d6fda489-e616-489b-862f-6f107b79ba5e?resizing_type=fit" alt="内嵌效果示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/d6fda489-e616-489b-862f-6f107b79ba5e?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h3>拉伸（Extrude）</h3>
+<p>把方体顶部抬高，使其与柱身底部凹槽齐平。拉伸（Extrude）会沿某个轴向拉动网格体的面。本例中，你将沿 Z 轴拉伸方体的顶面。</p>
+<ul>
+<li>选中该方体。</li>
+<li>从 <strong>PolyEdit</strong> 工具中点击 <strong>PolyGroup 编辑（PolyGroup Edit）</strong>。</li>
+<li>选中方体顶部，高亮方体的顶面。</li>
+<li>从<strong>建模（Modeling）</strong>中点击<strong>拉伸（Extrude）</strong>。方体顶部会跟随光标沿不同轴向移动。</li>
+<li>沿 <strong>Z 轴</strong>缓慢移动光标，直到方体顶部与柱身底部凹槽相接。</li>
+<li>当方体顶部到达想要的高度时，在视口中点击，确定方体高度。</li>
+<li>点击<strong>接受（Accept）</strong>。</li>
+</ul>
+<p>柱子底座可以做得任意高、任意华丽。你可以用建议的编辑，也可以发挥自己的设计想法。</p>
+<p>拉伸工具还可以缩放以做出角度。</p>
+<h2 id="sec-8">制作柱顶（Making the Column Top）</h2>
+<p>底座设计满意后，复制底座并翻转 180 度，做出柱子的顶部。</p>
+<ul>
+<li>选中该方体。</li>
+<li>从<strong>变换（XForm）</strong>工具中点击<strong>复制（Duplicate）</strong>。</li>
+<li>将复制体重新命名为<strong>柱顶（Column Top）</strong>。</li>
+<li>从<strong>处理输入（Handle Inputs）</strong>下拉菜单选择<strong>保留输入（Keep Inputs）</strong>。</li>
+<li>点击<strong>接受（Accept）</strong>。</li>
+<li>沿 <strong>Z 轴</strong>平移复制的方体到柱子顶部。</li>
+<li>选中该方体并旋转 <strong>180</strong> 度。</li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/4e346299-68b5-49ed-a99b-e070d9ee2b01?resizing_type=fit" alt="复制底座示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/4e346299-68b5-49ed-a99b-e070d9ee2b01?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ul>
+<li>点击柱身网格体，然后按住 <strong>Ctrl</strong> 左键点击顶部方体网格体，同时选中两个网格体。</li>
+<li>从<strong>变换（Transform）</strong>工具中选择<strong>对齐（Align）</strong>，自动把底座网格体纳入柱身网格体的包围盒。</li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/c3b47786-2d22-4f4a-a5c5-31788735c6d9?resizing_type=fit" alt="对齐柱顶示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/c3b47786-2d22-4f4a-a5c5-31788735c6d9?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ul>
+<li>确保取消勾选<strong>对齐 Z（Align Z）</strong>，使方体移到柱身顶部中央。</li>
+<li>点击<strong>接受（Accept）</strong>。</li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/ab4f7adb-2e82-452a-ab08-7a0d7244d0b4?resizing_type=fit" alt="柱顶就位效果示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/ab4f7adb-2e82-452a-ab08-7a0d7244d0b4?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h2 id="sec-9">烘焙柱顶变换（Baking the Column Top）</h2>
+<p>接下来烘焙网格体，把物体旋转与缩放的 3D 网格体信息存下来（归零），并直接应用到该物体的几何体上。旋转值将变为 <strong>0</strong>，缩放值变为 <strong>1</strong>。</p>
+<ul>
+<li>选中顶部的方体。</li>
+<li>从<strong>变换（Transform）</strong>工具中点击<strong>烘焙变换（Bake Transform）</strong>。</li>
+<li>启用<strong>重定轴心（Recenter Pivot）</strong>。这会按方体的新朝向，重新对齐顶部方体的轴点。</li>
+<li>点击<strong>接受（Accept）</strong>。</li>
+</ul>
+<p>顶部方体的缩放与旋转信息现已烘焙进其纹理文件。</p>
+<h2 id="sec-10">编辑 UV（Editing the UVs）</h2>
+<p>此时，内嵌角度的 UV 与方体顶部、侧面的 UV 还没有对齐。这些需要编辑，尽量对齐，否则材质在某些地方会被拉伸或挤压得不自然，还会重复图案。</p>
+<p>仔细看方体，可以看到内嵌部分的 UV 岛与应有位置略有偏差。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/4a6e4100-1cd7-45fb-b01a-78165b9b8835?resizing_type=fit" alt="未对齐的 UV 岛示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/4a6e4100-1cd7-45fb-b01a-78165b9b8835?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>修复内嵌部分的 UV 岛并正确对齐：</p>
+<ul>
+<li>选中底部方体。</li>
+<li>从 <strong>UV</strong> 工具中点击 <strong>UV 展开（UV Unwrap）</strong>。方体上覆盖了棋盘格图案。</li>
+<li>点击<strong>接受（Accept）</strong>。</li>
+<li>对顶部方体重复上述步骤。</li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/f677f389-93f5-4aec-8ee8-c39dca7a0d31?resizing_type=fit" alt="UV 展开后的棋盘格示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/f677f389-93f5-4aec-8ee8-c39dca7a0d31?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>这些方格可以帮你判断 UV 是否对齐。</p>
+<h2 id="sec-11">创建柱子材质（Creating the Column Material）</h2>
+<p>快速为柱子创建大理石纹理：</p>
+<ul>
+<li>在浏览器中搜索大理石纹理。</li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/f18c9625-7070-4a8d-b4dd-9fd4a37527b8?resizing_type=fit" alt="搜索大理石纹理示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/f18c9625-7070-4a8d-b4dd-9fd4a37527b8?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ul>
+<li>把大理石纹理图片保存为 PNG 或 JPEG 文件。</li>
+<li>将图片文件<a href="https://dev.epicgames.com/documentation/fortnite/importing-assets-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">导入（Import）</a>到材质文件夹。</li>
+<li>在材质文件夹的内容浏览器中右键点击，从菜单选择<strong>材质（Material）</strong>。出现一个材质缩略图。</li>
+<li>给材质缩略图起个名字。</li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/e14e8985-e3f7-4bdb-9f32-bc40bb45c09c?resizing_type=fit" alt="新建材质缩略图示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/e14e8985-e3f7-4bdb-9f32-bc40bb45c09c?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ul>
+<li>双击材质缩略图，打开<a href="https://docs.unrealengine.com/5.1/en-US/unreal-engine-material-editor-ui/" target="_blank" rel="noopener">材质编辑器（Material Editor）</a>。</li>
+<li>创建一个<a href="material-nodes-and-settings-in-unreal-editor-for-fortnite.html">纹理采样（Texture Sample）</a>材质节点，在<strong>细节（Details）</strong>面板的<strong>纹理（Texture）</strong>中添加大理石图片。</li>
+<li>从 <strong>RGB 引脚</strong>拖出连线，接到<a href="https://docs.unrealengine.com/5.1/en-US/using-the-main-material-node-in-unreal-engine/" target="_blank" rel="noopener">主材质节点（Main Material Node）</a>上的<strong>基础颜色（Base Color）输入</strong>。大理石材质随即覆盖材质编辑器预览窗口中的球体。</li>
+<li>点击<strong>应用（Apply）</strong>&gt;<strong>保存（Save）</strong>。</li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/9b85ae9b-3b06-4fcc-ab9e-27b2236a31f4?resizing_type=fit" alt="材质编辑器中的大理石材质示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/9b85ae9b-3b06-4fcc-ab9e-27b2236a31f4?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>现在可以把材质加到柱子上，看看它在网格体上的效果。</p>
+<ul>
+<li>在视口中选中网格体。</li>
+<li>把材质拖到<strong>细节（Details）</strong>面板的<strong>材质（Materials）</strong>字段。材质随即覆盖所选网格体。</li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/07ded9e8-8c31-4cad-81c1-296c84acfaf2?resizing_type=fit" alt="拉伸的材质效果示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/07ded9e8-8c31-4cad-81c1-296c84acfaf2?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>如果材质被拉伸、看起来不对（像上图这样），可以用<strong>属性（Attribute）</strong>与 <strong>UV</strong> 工具组合进一步编辑 UV。它们能帮你创建 PolyGroup 并对齐网格体上的 UV。</p>
+<h2 id="sec-12">绘制 PolyGroup（Painting PolyGroups）</h2>
+<p>要修复上图中的拉伸，可以用<strong>属性（Attributes）</strong>工具编辑多边形组。这些工具适合用可视化分组信息整理网格体。</p>
+<p>使用<strong>绘制 PolyGroup（Paint PolyGroups）</strong>绘制网格体侧面。这样可以在部分 UV 工具中快速创建 UV 岛。</p>
+<p>创建 UV 岛可以防止 UV 拉伸，但可能仍需用 <strong>UV 展开（UV Unwrap）</strong>或<strong>自动 UV（AutoUV）</strong>编辑 UV。</p>
+<ul>
+<li>在视口中选中网格体。</li>
+<li>从<strong>属性（Attributes）</strong>工具中点击<strong>绘制 PolyGroup（Paint PolyGroups）</strong>。</li>
+<li>开始点击网格体一侧的所有面。完成后，这一面的所有部分应为同一颜色。</li>
+<li>点击<strong>接受（Accept）</strong>。</li>
+<li>对网格体的每一侧重复上述步骤，再对顶部方体重复这些步骤。</li>
+</ul>
+<p>按以下步骤清理柱身上的 UV 接缝：</p>
+<ul>
+<li>选中柱身网格体。</li>
+<li>从 <strong>UV</strong> 工具中点击<strong>投影 UV（Project UVs）</strong>。</li>
+<li>从<strong>投影类型（Projection type）</strong>下拉菜单选择<strong>圆柱体（Cylinder）</strong>。</li>
+<li>从<strong>材质模式（Material mode）</strong>下拉菜单选择<strong>棋盘格（Checkerboard）</strong>。</li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/21beb4b4-03c9-4b81-a1c8-2e5bdad259d4?resizing_type=fit" alt="投影 UV 设置示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/21beb4b4-03c9-4b81-a1c8-2e5bdad259d4?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<ul>
+<li>点击<strong>接受（Accept）</strong></li>
+</ul>
+<p>创建好 UV 岛后，就可以用 <strong>UV</strong> 工具中的<strong>自动 UV（AutoUV）</strong>为每一侧自动创建 UV。</p>
+<ul>
+<li>在视口中选中底部方体网格体。</li>
+<li>从 <strong>UV</strong> 工具中点击<strong>自动 UV（AutoUV）</strong>。</li>
+<li>从<strong>材质模式（Material Mode）</strong>下拉菜单选择<strong>棋盘格（Checkerboard）</strong>。棋盘格图案覆盖网格体。</li>
+<li>启用<strong>约束到 PolyGroup（Constrain to PolyGroups）</strong>，使用用绘制 PolyGroup 创建的 UV 岛。</li>
+<li>点击<strong>接受（Accept）</strong>。</li>
+</ul>
+<p>纹理贴图不应有任何扭曲，每个表面纹理应均匀。注意下图中棋盘格图案对齐均匀、没有扭曲。要让材质外观一致，就应尽量减少扭曲与可见接缝。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/7261cc2b-5544-43f2-97ed-ce3140c6b6bf?resizing_type=fit" alt="均匀的棋盘格纹理示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/7261cc2b-5544-43f2-97ed-ce3140c6b6bf?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h2 id="sec-13">合并与转换网格体（Combining and Converting Meshes）</h2>
+<p>现在你有三个独立的网格体，柱子的每一节都可单独选中。要把独立网格体做成一个静态网格体：</p>
+<ul>
+<li>选中柱子的每一部分。</li>
+<li>从<strong>网格体（Mesh）</strong>工具中点击<strong>合并（Union）</strong>。</li>
+<li>在<strong>模型（Model）</strong>选项卡中启用<strong>修剪襟翼（Trim Flaps）</strong>与<strong>尝试修复孔洞（Try Fix Holes）</strong>。这些工具可防止网格体出现缝隙或质量问题，避免材质看起来奇怪。</li>
+<li>从<strong>输出类型（Output Type）</strong>下拉菜单选择<strong>静态网格体（Static Mesh）</strong>。这会把三个网格体转为一个完整的静态网格体，可用作岛上的道具。</li>
+<li>将<strong>名称（Name）</strong>改为<strong>柱子（Column）</strong>。这会为网格体命名。</li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/7c8797e9-c7fb-448a-b62d-c2cfde57ed3b?resizing_type=fit" alt="合并网格体设置示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/7c8797e9-c7fb-448a-b62d-c2cfde57ed3b?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p class="doc-hint">点击图片可放大。</p>
+<ul>
+<li>点击<strong>接受（Accept）</strong>。</li>
+</ul>
+<p>柱子现在是一个完整的静态网格体，但轴点位置不对。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/86e19e80-c4c0-40b3-be09-d77d0daa60a6?resizing_type=fit" alt="轴点位置不正确示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/86e19e80-c4c0-40b3-be09-d77d0daa60a6?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>按以下步骤移动轴点：</p>
+<ul>
+<li>在视口中选中柱子。</li>
+<li>从<strong>变换（XForm）</strong>工具中点击<strong>轴点（Pivot）</strong>。</li>
+<li>沿 <strong>Z 轴</strong>平移轴点到柱子底部。</li>
+<li>点击<strong>接受（Accept）</strong>。</li>
+</ul>
+<p>现在柱子可以像 <strong>Fortnite</strong> 文件夹中的其他道具或建筑道具一样使用了。</p>
+<h2 id="sec-14">成果展示（Result）</h2>
+<p>你搭建的柱子应能与 UEFN 中的其他道具和建筑资产搭配使用。下图是柱子与银行建筑资产搭配的效果。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/4c447306-e6fa-48cf-a022-c24461a1cde0?resizing_type=fit" alt="完成后的柱子示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/4c447306-e6fa-48cf-a022-c24461a1cde0?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>你创建的网格体可以随心所欲、独一无二。自定义道具让你的岛屿别具一格，而且你创建的网格体可以像 Fortnite 创意模式道具一样，在 UEFN 中使用和编辑。</p>
+<p class="doc-tags">标签：<a href="https://dev.epicgames.com/community/search?query=art" target="_blank" rel="noopener">art</a> · <a href="https://dev.epicgames.com/community/search?query=tutorial" target="_blank" rel="noopener">tutorial</a></p>
+<hr>
+<p><strong>提问并帮助同行：</strong><a href="https://forums.unrealengine.com/categories?tag=fortnite" target="_blank" rel="noopener">开发者论坛（Developer Forums）</a></p>
+<p><strong>编写自己的教程或阅读他人的教程：</strong><a href="https://dev.epicgames.com/community/fortnite/learning" target="_blank" rel="noopener">学习库（Learning Library）</a></p>
+<p>本页章节：<a href="#sec-1">准备工作</a> · <a href="#sec-2">创建基本形状</a> · <a href="#sec-3">生成图案</a> · <a href="#sec-4">居中图案</a> · <a href="#sec-5">制作柱身凹槽</a> · <a href="#sec-6">构建底座</a> · <a href="#sec-7">添加细节</a>（<a href="#sec-7">倒角</a> · <a href="#sec-7">内嵌</a> · <a href="#sec-7">拉伸</a>） · <a href="#sec-8">制作柱顶</a> · <a href="#sec-9">烘焙柱顶变换</a> · <a href="#sec-10">编辑 UV</a> · <a href="#sec-11">创建柱子材质</a> · <a href="#sec-12">绘制 PolyGroup</a> · <a href="#sec-13">合并与转换网格体</a> · <a href="#sec-14">成果展示</a></p>
+<div class="pager"><a href="32-modeling-in-unreal-editor-for-fortnite.html"><small>← 返回父教程</small>建模</a><a href="sub-index.html"><small>子教程索引 →</small>全部子教程</a></div></article><nav class="doc-toc" aria-label="本页内容"><b>本页内容</b><a href="#sec-1">准备工作</a><a href="#sec-2">创建基本形状</a><a href="#sec-3">生成图案</a><a href="#sec-4">居中图案</a><a href="#sec-5">制作柱身凹槽</a><a href="#sec-6">构建底座</a><a href="#sec-7">添加细节</a><a href="#sec-8">制作柱顶</a><a href="#sec-9">烘焙柱顶变换</a><a href="#sec-10">编辑 UV</a><a href="#sec-11">创建柱子材质</a><a href="#sec-12">绘制 PolyGroup</a><a href="#sec-13">合并与转换网格体</a><a href="#sec-14">成果展示</a></nav></div></div></div></div><footer class="edc-footer"><div class="inner"><img src="../assets/logo-epic.svg" alt="Epic Games"><span>Fortnite 文档中文镜像 · UE教程/ · 本地打开 index.html 阅读 · 翻译整理自 Epic 官方文档，仅供学习交流</span></div></footer></body></html>

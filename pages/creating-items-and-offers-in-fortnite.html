@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>创建物品与商品 | Fortnite 文档中文镜像</title>
+<link rel="stylesheet" href="../assets/epic.css">
+<link rel="stylesheet" href="../assets/patch.css">
+<link rel="icon" href="../assets/logo-epic.svg">
+</head>
+<body class="theme-fortnite">
+<div class="edc-topbar"><div class="edc-topbar-inner"><img class="edc-logo" src="../assets/logo-epic.svg" alt="Epic Games"><span class="edc-brand">Epic Games <b>开发者社区</b></span><span class="edc-nav"><a href="../index.html">文档首页</a><a href="sub-index.html">子教程索引</a><a href="https://dev.epicgames.com/documentation/fortnite/creating-items-and-offers-in-fortnite" target="_blank" rel="noopener">英文原文</a></span></div></div>
+<div class="site-container">
+<aside class="site-nav"><div class="documents-tree"><nav><ul class="contents-table">
+<div class="tree-sec">A · 最新动态</div>
+<a class="tree-link" href="01-42-00-fortnite-ecosystem-updates-and-release-notes.html">01. 42.00 生态系统更新与发行说明</a>
+<a class="tree-link" href="02-custom-items-and-inventory-overview-in-fortnite.html">02. 自定义物品与背包总览</a>
+<a class="tree-link active" href="03-in-island-transactions-in-fortnite.html">03. 岛内交易</a>
+<a class="tree-link" href="04-mobile-development-in-fortnite.html">04. 移动端开发</a>
+<a class="tree-link" href="05-inputs-in-fortnite.html">05. 输入系统</a>
+<a class="tree-link" href="06-ability-system-in-unreal-editor-for-fortnite.html">06. 能力系统 Ability System</a>
+<a class="tree-link" href="07-partybased-gameplay-using-the-social-synergy-api-in-fortnite.html">07. 社交协同 API 与小队玩法</a>
+<a class="tree-link" href="08-scene-graph-in-unreal-editor-for-fortnite.html">08. 场景图 Scene Graph</a>
+<div class="tree-sec">B · 入门</div>
+<a class="tree-link" href="09-build-your-first-island-in-fortnite.html">09. 构建你的第一个岛屿</a>
+<a class="tree-link" href="10-onboarding-guide-to-programming-with-verse-in-unreal-editor-for-fortnite.html">10. Verse 编程入门指南</a>
+<a class="tree-link" href="11-building-basics-in-fortnite-creative.html">11. 建造基础</a>
+<div class="tree-sec">C · 品牌合集</div>
+<a class="tree-link" href="12-star-wars-islands-in-fortnite.html">12. 星球大战™岛屿</a>
+<a class="tree-link" href="13-kpop-demon-hunters-islands-in-fortnite.html">13. KPop 猎魔团岛屿</a>
+<a class="tree-link" href="14-building-lego-islands-in-fortnite.html">14. 乐高®岛屿</a>
+<a class="tree-link" href="15-the-walking-dead-universe-islands-in-unreal-editor-for-fortnite.html">15. 行尸走肉宇宙岛屿</a>
+<a class="tree-link" href="16-teenage-mutant-ninja-turtle-islands-in-unreal-editor-for-fortnite.html">16. 忍者神龟岛屿</a>
+<a class="tree-link" href="17-squid-game-islands-in-fortnite.html">17. 鱿鱼游戏岛屿</a>
+<div class="tree-sec">D · 开发者成功</div>
+<a class="tree-link" href="18-using-creator-portal-in-fortnite-creative.html">18. 使用创作者门户</a>
+<a class="tree-link" href="19-island-moderation-and-guidelines-in-fortnite-creative.html">19. 岛屿审核与准则</a>
+<div class="tree-sec">E · 协作</div>
+<a class="tree-link" href="20-creating-teams-in-creator-portal-in-unreal-editor-for-fortnite.html">20. 在创作者门户创建团队</a>
+<a class="tree-link" href="21-adding-playtesters-in-fortnite-creative.html">21. 添加试玩测试员</a>
+<a class="tree-link" href="22-playtesting-your-island-in-unreal-editor-for-fortnite.html">22. 试玩测试你的岛屿</a>
+<a class="tree-link" href="23-collaborating-in-unreal-editor-for-fortnite.html">23. 在 UEFN 中协作</a>
+<a class="tree-link" href="24-lore-version-control-in-unreal-editor-for-fortnite.html">24. Lore 版本控制</a>
+<a class="tree-link" href="25-conflicts-in-lore-version-control-in-unreal-editor-for-fortnite.html">25. Lore 中的冲突</a>
+<a class="tree-link" href="26-version-history-and-conflict-resolution-in-unreal-editor-for-fortnite.html">26. 分支历史与冲突解决</a>
+<div class="tree-sec">F · 游戏示例</div>
+<a class="tree-link" href="27-build-a-game-in-unreal-editor-for-fortnite.html">27. 构建一款游戏</a>
+<a class="tree-link" href="28-unreal-editor-for-fortnite-starter-templates.html">28. UEFN 新手模板</a>
+<div class="tree-sec">G · Verse</div>
+<a class="tree-link" href="29-learn-the-basics-of-writing-code-in-verse.html">29. 从零学习 Verse 代码基础</a>
+<div class="tree-sec">H · 专注领域</div>
+<a class="tree-link" href="30-lighting-in-unreal-editor-for-fortnite.html">30. 灯光</a>
+<a class="tree-link" href="31-animation-and-cinematics-in-unreal-editor-for-fortnite.html">31. 动画与过场动画</a>
+<a class="tree-link" href="32-modeling-in-unreal-editor-for-fortnite.html">32. 建模</a>
+<a class="tree-link" href="33-materials-in-unreal-editor-for-fortnite.html">33. 材质</a>
+<a class="tree-link" href="34-environments-and-landscapes-in-unreal-editor-for-fortnite.html">34. 环境与地形</a>
+<a class="tree-link" href="35-audio-in-unreal-editor-for-fortnite.html">35. 音频</a>
+<a class="tree-link" href="36-visual-effects-in-unreal-editor-for-fortnite.html">36. 视觉特效</a>
+</ul></nav></div></aside>
+<div class="page-content"><div class="page-document has-theme-bg">
+<header class="section-page-header"><nav><ol class="breadcrumb is-shrinkable"><li class="breadcrumb-item is-root"><img src="../assets/logo-epic.svg" alt="Epic Games"><a href="../index.html">Developer</a></li><li class="breadcrumb-item"><a href="../index.html">Fortnite 文档</a></li><li class="breadcrumb-item"><a href="03-in-island-transactions-in-fortnite.html">岛内交易</a></li><li class="breadcrumb-item active" aria-current="page"><span class="text-truncate">创建物品与商品</span></li></ol></nav><h1>创建物品与商品</h1><p class="text-secondary mb-0">岛内交易让你能够使用 Verse，在岛屿上营销物品、商品与捆绑包商品。本指南将教你设置自己的物品、商品与捆绑包，并使用 Verse API 的市场模块处理游戏内物品的销售。</p><p class="doc-meta">英文原标题：Creating Items and Offers in Fortnite · <a href="https://dev.epicgames.com/documentation/fortnite/creating-items-and-offers-in-fortnite" target="_blank" rel="noopener">查看英文原文</a> · 社区翻译镜像，仅供学习</p></header>
+<div class="doc-columns"><article class="doc-article">
+<p>岛内交易让你能够使用 Verse，在你的岛屿上营销物品、商品与捆绑包商品。</p>
+<p>在本指南中，你将学习如何设置自己的物品、商品与捆绑包商品，并使用 Verse API 中的<a href="https://dev.epicgames.com/documentation/fortnite/verse-api/fortnitedotcom/marketplace" target="_blank" rel="noopener">市场(Marketplace)模块</a>处理游戏内物品的销售。</p>
+<h2 id="sec-1">物品(Items)</h2>
+<p>在 Verse 中，物品被定义为权益(entitlement)，分为两类：<b>消耗型物品(consumable items)</b>，使用后会从玩家物品栏中移除；<b>耐久型物品(durable items)</b>，玩家可以反复使用而不会从物品栏中移除。</p>
+<p>每个 Verse 权益都包含以下属性：</p>
+<ul>
+<li><b>名称(Name)</b>：权益名称，最多 50 个字符。</li>
+<li><b>描述(Description)</b>：与权益一同展示的长描述，最多 500 个字符。</li>
+<li><b>短描述(ShortDescription)</b>：在较小对话框中概述权益的短描述，最多 100 个字符。</li>
+<li><b>图标(Icon)</b>：权益的图片。</li>
+</ul>
+<p>如果你的权益是<b>付费随机物品(paid random item)</b>，必须在描述中包含玩家可能获得内容的准确数字概率。更多信息请参阅<a href="creating-items-and-offers-in-fortnite.html#paid-random-items-nbsp">付费随机物品</a>。</p>
+<p>Verse 权益还可以包含以下可选属性：</p>
+<ul>
+<li><b>最大数量(MaxCount)</b>：玩家在同一时间可拥有的该权益的最大数量。</li>
+<li><b>消耗品(Consumable)</b>：若设为<b>true</b>，该权益可被消耗，每使用一次总次数减一；若为<b>false</b>，该权益为永久物品，使用时不会被消耗。</li>
+<li><b>付费区域(PaidArea)</b>：若设为<b>true</b>，该权益提供付费墙后区域的访问权限。</li>
+<li><b>付费随机物品(PaidRandomItem)</b>：若设为<b>true</b>，这些权益通过购买或兑换内容来获得随机奖励。</li>
+<li><b>对玩法有实质影响(ConsequentialToGameplay)</b>：若设为<b>true</b>，该物品为你的岛屿带来有意义的优势。详情请参阅<a href="creating-items-and-offers-in-fortnite.html#consequential-to-gameplay">对玩法有实质影响</a>。</li>
+</ul>
+<p>如果你有未使用的有效权益，却未在 IARC 问卷中确认应用内购买，你的岛屿将无法通过审核。</p>
+<p>变通方法是：在 Verse 中将权益注释掉，直到你准备好在正式游戏中启用。注释掉权益后，就无需在 IARC 问卷中申报应用内购买。</p>
+<h3>在 Verse 中创建消耗型权益</h3>
+<p>权益在 Verse 中定义，派生自权益(entitlement)<a href="https://dev.epicgames.com/documentation/fortnite/fortnite-glossary#base-class" target="_blank" rel="noopener">基类(base class)</a>。以下代码片段演示了消耗型物品的创建。在本例中，你将创建玉米种子作为消耗型物品，种子图标附在下方供你使用。</p>
+<pre><code># The base entitlement you should define for ALL of your entitlements in your experience. my_island_entitlement := class&lt;abstract&gt;&lt;castable&gt;(entitlement){} CornSeedPacket&lt;public&gt; := module: Name&lt;public&gt;&lt;localizes&gt; : message = "Corn seed pack" Description&lt;public&gt;&lt;localizes&gt; : message = "A pack of corn seeds. Opening a pack yields 10 corn seeds for planting." ShortDescription&lt;public&gt;&lt;localizes&gt; : message = "Contains 10 corn seeds for planting." cornseedpacket&lt;public&gt; := class&lt;concrete&gt;(my_island_entitlement): var Name&lt;override&gt;:message = CornSeedPacket.Name</code></pre>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/4dd96e26-5cf4-4c42-bbf7-88ee9cb0da3e?resizing_type=fit" alt="玉米种子包图标示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/4dd96e26-5cf4-4c42-bbf7-88ee9cb0da3e?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>创建权益时，必须在 Verse 代码中包含有效图标纹理的路径，否则 Verse 代码无法成功编译。玉米种子包及本指南中的其他图标可免费使用！</p>
+<p>为保证店面中的图片质量，请确保权益图标使用<a href="https://dev.epicgames.com/documentation/fortnite/textures-best-practices-in-fortnite" target="_blank" rel="noopener">方形 2 的幂次方纹理</a>。关于如何将纹理导入 UEFN 用作图标，请参阅<a href="https://dev.epicgames.com/documentation/fortnite/importing-assets-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">导入资产(Importing Assets)</a>；关于如何在 Verse 中公开纹理等资产，请参阅<a href="https://dev.epicgames.com/documentation/fortnite/exposing-assets-with-asset-reflection-to-verse-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">公开资产(Exposing Assets)</a>。</p>
+<h3>在 Verse 中创建耐久型权益</h3>
+<p>Verse 中的耐久型权益与消耗型权益格式相同，但有一个关键区别——<code>Consumable</code>设为<code>false</code>而非<code>true</code>。耐久型权益玩家只能购买一次，且每种耐久型权益只能拥有一个。</p>
+<p>本例将创建一把铲子作为耐久型权益，铲子纹理图标附在代码片段之后。</p>
+<pre><code>Shovel&lt;public&gt; := module: Name&lt;public&gt;&lt;localizes&gt;: message = "Shovel" Description&lt;public&gt;&lt;localizes&gt;: message = "An unbreakable shovel used to dig holes for planting." ShortDescription&lt;public&gt;&lt;localizes&gt;: message = "Digs holes." shovel&lt;public&gt; := class&lt;concrete&gt;(my_island_entitlement): var Name&lt;override&gt;:message = Shovel.Name var Description&lt;override&gt;:message = Shovel.Description var ShortDescription&lt;override&gt;:message = Shovel.ShortDescription var Icon&lt;override&gt;:texture = # path to your texture here</code></pre>
+<p>默认情况下，物品不是<code>Consumable</code>（消耗品），且<code>MaxCount</code>（最大数量）为<code>1</code>。如果物品属于付费区域、付费随机物品，或带来有意义的、对玩法有实质影响的优势，必须在代码中定义相关字段。</p>
+<h3>权益验证规则</h3>
+<p>Verse 中的有效权益必须遵循以下准则，不符合的权益购买将会失败。</p>
+<p>定义有效权益的规则如下：</p>
+<ul>
+<li><b>名称(Name)</b>字符上限为<b>50</b>。</li>
+<li><b>描述(Description)</b>字符上限为<b>500</b>。</li>
+<li><b>短描述(ShortDescription)</b>字符上限为<b>100</b>。</li>
+<li>当<b>Consumable=false</b>时，<b>MaxCount</b>必须为<b>1</b>。</li>
+<li><b>MaxCount</b>最大值为<b>10,000,000</b>。</li>
+</ul>
+<p>将<b>MaxCount &lt; 1</b>不会被强制拦截，但会失败，因为你无法向玩家授予少于一件的物品。</p>
+<h3>权益目录</h3>
+<p>你可以使用权益目录(Entitlement Catalog)查看向玩家提供的所有权益。</p>
+<p>在 UEFN 中点击<b>工具(Tools)</b> &gt; <b>权益目录(Entitlement Catalog)</b>，即可查看列出权益的报告；也可直接在创作者门户(Creator Portal)中对应岛屿的目录里查看。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/2164229d-43ef-4911-b6d5-309d7362f9c7?resizing_type=fit" alt="原文示意图2：权益目录" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/2164229d-43ef-4911-b6d5-309d7362f9c7?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h2 id="sec-2">商品(Offers)</h2>
+<p>商品(Offer)规定了某件物品或资产以<b>V-Bucks</b>计价的价格。每个商品都有独立于权益规格的名称、描述与图标。商品在 Verse 中定义。</p>
+<p>每个商品包含以下属性：</p>
+<ul>
+<li><b>名称(Name)</b>：商品名称。</li>
+<li><b>描述(Description)</b>：与商品一同展示的长描述。</li>
+<li><b>短描述(ShortDescription)</b>：在较小对话框中概述商品的短描述。</li>
+<li><b>图标(Icon)</b>：商品的图片。</li>
+<li><b>权益类型(EntitlementType)</b>：商品所含权益的声明。</li>
+<li><b>价格(Price)</b>：以 V-Bucks 计价的价格，不得低于 50 V-Bucks，不得高于 5000 V-Bucks，且必须为 50 的倍数。</li>
+</ul>
+<p>不要对物品使用 Fortnite 物品商店术语，也不要使用 “XP” 等进度标记。玩家绝不能混淆：他们购买的物品是全 Fortnite 通用，还是仅限你的岛屿使用。</p>
+<p>关于岛内变现的条款与命名指南的更多细节，请参阅<a href="guidelines-for-in-island-monetization-in-fortnite.html#terms-and-naming">条款与命名</a>。</p>
+<h3>创建简单商品</h3>
+<p>以下代码片段为简单商品定义了基本商品——<b>玉米种子包</b>。你可以复用权益示例中的玉米种子图标作为该商品的图标。</p>
+<pre><code>CornSeedPacket&lt;public&gt; := module: Name&lt;public&gt;&lt;localizes&gt; : message = "Corn seed pack" Description&lt;public&gt;&lt;localizes&gt; : message = "A pack of corn seeds. Opening a pack yields 10 corn seeds for planting." ShortDescription&lt;public&gt;&lt;localizes&gt; : message = "Contains 10 corn seeds for planting." corn_seed_pack&lt;public&gt; := class(entitlement_offer): var Name&lt;override&gt; : message = CornSeedPacket.Name var Description&lt;override&gt; : message = CornSeedPacket.Description var ShortDescription&lt;override&gt; : message = CornSeedPacket.ShortDescription</code></pre>
+<p>V-Bucks 价格必须为 50 的倍数，且在 50 至 5000 V-Bucks 之间。</p>
+<p>必须确保玩家在购买前能看到每件付费随机物品的准确数字概率，否则将被视为违反 Fortnite 开发者规则，你与你的岛屿将受到相应处罚。</p>
+<p>更多信息请参阅<a href="https://dev.epicgames.com/documentation/fortnite/in-island-transactions-restrictions-in-fortnite" target="_blank" rel="noopener">岛内交易限制(In-Island Transactions Restrictions)</a>。</p>
+<h3>创建与修改固定商品和备选商品</h3>
+<p>你可以为同一权益制作备选商品，用于节假日特价、新手奖励，或按区域浮动价格；也可用于权益测试——创建完全相同的商品但使用不同图标，观察哪种更受玩家欢迎。以这枚图标为例。</p>
+<pre><code>CornSeedPacketAlternate&lt;public&gt; := module: Name&lt;public&gt;&lt;localizes&gt; : message = "Corn seed pack" Description&lt;public&gt;&lt;localizes&gt; : message = "Special price! Only today!" ShortDescription&lt;public&gt;&lt;localizes&gt; : message = "Special offer half price!" corn_seed_pack_alternate&lt;public&gt; := class(entitlement_offer): var Name&lt;override&gt; : message = CornSeedPacketAlternate.Name var Description&lt;override&gt; : message = CornSeedPacketAlternate.Description var ShortDescription&lt;override&gt; : message = CornSeedPacketAlternate.ShortDescription var Icon&lt;override&gt; : texture = # Your texture here</code></pre>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/eacd0877-d7e8-47c6-8fee-bbe0fb90f530?resizing_type=fit" alt="备选玉米种子包图标示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/eacd0877-d7e8-47c6-8fee-bbe0fb90f530?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h2 id="sec-3">捆绑包商品(Bundle Offers)</h2>
+<p>捆绑包在 Verse 中定义，可包含不同商品的组合、同一商品的叠加，或两者混合。与简单商品一样，捆绑包商品有自己独立的价格、名称、描述，以及与权益和商品不同的图标。你还可以嵌套商品，即在捆绑包中包含捆绑包，例如限时捆绑包中同时包含一把铲子与一捆玉米种子包。这样你就能把小捆绑包当作积木，拼出更大的组合捆绑包。</p>
+<p>标准捆绑包类型有：</p>
+<ul>
+<li><b>堆叠捆绑包(Stacked bundle)</b>：包含同一权益多个商品的捆绑包，通常为折扣价。</li>
+<li><b>多商品捆绑包(Multi-offer bundle)</b>：组合多个权益商品的捆绑包，也可混合堆叠商品与普通商品。</li>
+</ul>
+<p>嵌套商品的深度不得超过 5，否则交易将失败。请尽量减少商品嵌套。</p>
+<h3>创建堆叠捆绑包</h3>
+<p>以下代码片段定义了玉米种子的堆叠捆绑包。捆绑包包含商品的元组数组，每个元素为已定义的商品与一个表示数量的 <code>int</code>。本例中该捆绑包包含两个 <code>corn_seed_pack</code> 商品。本例附有图标。</p>
+<pre><code>CornSeedPacketBundle&lt;public&gt; := module: Name&lt;public&gt;&lt;localizes&gt; : message = "Corn seed pack bundle" Description&lt;public&gt;&lt;localizes&gt; : message = "Two packs of corn seeds. Opening a pack yields 10 corn seeds for planting." ShortDescription&lt;public&gt;&lt;localizes&gt; : message = "Two packs of corn seeds containing 10 corn seeds for planting." corn_seed_pack_bundle&lt;public&gt; := class(bundle_offer): var Name&lt;override&gt; : message = CornSeedPacketBundle.Name var Description&lt;override&gt; : message = CornSeedPacketBundle.Description var ShortDescription&lt;override&gt; : message = CornSeedPacketBundle.ShortDescription var Icon&lt;override&gt; : texture = # your texture here</code></pre>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/fd6c8a7e-1419-4017-90e1-7baef1170f80?resizing_type=fit" alt="玉米种子捆绑包图标示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/fd6c8a7e-1419-4017-90e1-7baef1170f80?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h3>创建多商品捆绑包</h3>
+<p>玩家可能希望避免多次交易，因此你可以制作包含多个不同权益商品的捆绑包。以下代码片段创建了一个多商品捆绑包，为玩家提供最大数量的玉米包与一把铲子。</p>
+<pre><code>StarterBundle&lt;public&gt; := module: Name&lt;public&gt;&lt;localizes&gt; : message = "Starter bundle" Description&lt;public&gt;&lt;localizes&gt; : message = "Everything a new player needs. Get fully stocked to start quickly! A shovel that digs holes, and ten packs of corn seeds each containing 10 corn seeds for planting." ShortDescription&lt;public&gt;&lt;localizes&gt; : message = "A shovel that digs holes, and ten packs of corn seeds each containing 10 corn seeds for planting." starter_bundle&lt;public&gt; := class(bundle_offer): var Name&lt;override&gt; : message = StarterBundle.Name var Description&lt;override&gt; : message = StarterBundle.Description var ShortDescription&lt;override&gt; : message = StarterBundle.ShortDescription var Icon&lt;override&gt; : texture = # your texture here</code></pre>
+<p>在 Verse 中，捆绑包不直接包含权益，而是包含本身带有权益定义的商品。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/9d196a30-b20d-46fb-97e1-e876b53caedf?resizing_type=fit" alt="多商品捆绑包图标示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/9d196a30-b20d-46fb-97e1-e876b53caedf?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h3>动态创建的商品</h3>
+<p>动态创建的商品是指在 Verse 运行时生成的商品或捆绑包商品。动态商品的常见用例包括：</p>
+<ul>
+<li>为采集建造类游戏出售玩家可持有的最大数量木材。</li>
+<li>为地牢爬行类游戏在地牢入口出售回满生命与魔法药水的捆绑包。</li>
+</ul>
+<p>为简单起见，可将其绑定到按钮或告示牌等简单对象上。在 Verse 代码中流程为：交互时(On Interaction) &gt; 调用 BuyOffer。</p>
+<p>以下代码片段展示了出售玩家可持有上限的玉米种子捆绑包的一种写法，购买失败时会打印错误信息。</p>
+<pre><code>TryBuyOffer(Player : player)&lt;suspends&gt;:void = Purchases := GetPurchasedEntitlements(Player, Entitlements.corn_seed_pack) var NumPlayerCornSeedPacks : int = 0 if (Purchase := Purchases[0]): set NumPlayerCornSeedPacks = Purchase(1) # Limit to at least 1 packet. # If the player has the maximum amount, the offer displays with a disabled purchase button. NumCornSeedPacks := Max(1, Entitlements.corn_seed_pack{}.MaxCount - NumPlayerCornSeedPacks)</code></pre>
+<h2 id="sec-4">商品验证规则</h2>
+<p>有效的商品或捆绑包商品必须遵循以下准则，不符合的购买将无法通过审核。定义有效商品的规则如下：</p>
+<ul>
+<li>嵌套商品深度不得超过<b>5</b>。</li>
+<li>每个商品的权益标识符总数不得超过<b>每个商品 100 个</b>，即一次出售的不同权益最多 <b>100</b> 种。</li>
+<li>商品价格必须在<b>50</b>至<b>5000</b> V-Bucks 之间，且只能为<b>50</b> 的倍数。</li>
+<li>商品<code>Name</code>（名称）默认文本不得超过<b>50</b>个字符。</li>
+<li>商品<code>Description</code>（描述）默认文本不得超过<b>500</b>个字符。</li>
+<li>商品<code>ShortDescription</code>（短描述）默认文本不得超过<b>100</b>个字符。</li>
+<li>商品必须至少包含 1 项权益。</li>
+<li>商品所含某权益的数量不得超过该权益的<code>MaxCount</code>。</li>
+<li>商品不得包含<code>MaxCount</code> &gt; 1 的耐久型权益。</li>
+</ul>
+<p>你可以选择限制商品的展示位置与可见人群。更多信息请参阅<a href="https://dev.epicgames.com/documentation/fortnite/in-island-transactions-restrictions-in-fortnite" target="_blank" rel="noopener">岛内交易限制(In-Island Transactions Restrictions)</a>。</p>
+<h2 id="sec-5">创建店面</h2>
+<p>权益及其商品与捆绑包都已就绪，现在你需要一个出售它们的地方！</p>
+<h3>默认 UI</h3>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/d96138b6-cca4-4f47-8b41-1b012d2dc172?resizing_type=fit" alt="原文示意图6：默认店面 UI" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/d96138b6-cca4-4f47-8b41-1b012d2dc172?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>默认店面 UI 打开后会列出你添加的所有权益与商品，列表中第一项高亮，并在旁边的窗口中展示该权益的概览。</p>
+<ul>
+<li>店面可以有多页。</li>
+<li>超过五项的列表可滚动。</li>
+</ul>
+<p>玩家通过调用<code>BuyOffer</code>方法，或使用带<code>ShowOffersDialog</code>方法的默认店面来触发购买流程。以下是可用于将店面购买流程融入游戏设计的部分设备示例：</p>
+<ul>
+<li>区域(Volumes)设备</li>
+<li>场景图计时器(Scene Graph Timer)设备</li>
+<li>NPC</li>
+<li>对话(Conversation)设备</li>
+</ul>
+<p>设计店面时的最佳实践是：由玩家主动选择打开购买流程。跳过这一步、强行向玩家弹出购买流程，会剥夺玩家自主权，容易引起不满。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/236eb35e-4d3d-4bd6-8a75-d1275f67d931?resizing_type=fit" alt="原文示意图7：商品购买与查看按钮" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/236eb35e-4d3d-4bd6-8a75-d1275f67d931?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>所有商品都有<b>购买(Purchase)</b>与<b>查看(Inspect)</b>按钮，可打开市场窗口购买物品或查看商品内容。只有捆绑包才有<b>查看捆绑包(Inspect Bundle)</b>按钮。</p>
+<p>选择<b>关闭(Close)</b>按钮可关闭市场。</p>
+<p>商店体验完全由开发者掌控：</p>
+<ul>
+<li>由你决定向玩家提供哪些物品或玩法属性。</li>
+<li>由你为每个商品或捆绑包商品定价。</li>
+<li>你可以展示自己的店面，也可以使用 Fortnite 预制店面 UI。</li>
+</ul>
+<h3>店面 UI</h3>
+<p>以下代码片段定义了一个通用事件回调，用于打开 Fortnite 预制店面 UI。该回调可来自订阅、按钮按下、对话事件等。</p>
+<pre><code>OnEvent(Agent:agent):void= if(Player:= player[Agent]): spawn{ShowOffersDialog(Player, array{ ExampleOffers.shovel{}, ExampleOffers.cornseedpacket{} })}OnEvent(Agent:agent):void= if(Player:= player[Agent]): spawn{ShowOffersDialog(Player, array{ ExampleOffers.shovel{}, ExampleOffers.cornseedpacket{} })}</code></pre><figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/52b17783-7d8a-403b-b0e4-d4d6b518fb6e?resizing_type=fit&width=1920&height=1080" alt="玉米种子包捆绑包商品面板示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/52b17783-7d8a-403b-b0e4-d4d6b518fb6e?resizing_type=fit&width=1920&height=1080" target="_blank" rel="noopener">查看原图</a></div></figure><figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/91cdbc9e-f10f-4cd0-9478-0013f1df7c9b?resizing_type=fit&width=1920&height=1080" alt="玉米种子包捆绑包商品查看面板示意图" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/91cdbc9e-f10f-4cd0-9478-0013f1df7c9b?resizing_type=fit&width=1920&height=1080" target="_blank" rel="noopener">查看原图</a></div></figure>
+<h2 id="sec-6">处理购买</h2>
+<p>以下代码片段包含一次通用商品购买，购买失败时会打印错误信息。</p>
+<p>为便于调试失败的购买，请在错误信息中加入可识别是哪笔购买失败的信息，例如在上例的错误信息中包含商品名称。</p>
+<pre><code># Track which players you're listening for entitlement changes for var EntitlementChangeSubscription:[player]?cancelable = map{} # Track Player Join subscription var PlayerJoinSubscription:?cancelable = false # Track Player Left subscription var PlayerLeftSubscription:?cancelable = false # Runs when the device is started in a running game, register to listen for players joining &amp; leaving the experience</code></pre>
+<p>不要使用 <code>BuyOffer</code>、<code>ShowOffersDialog</code>、<code>ConsumeEntitlement</code> 或 <code>GrantEntitlement</code> 的购买成功条件来驱动与权益相关的变更，而应使用 <code>GetEntitlementChangedEvent</code>。</p>
+<h3>验证购买</h3>
+<p>最佳实践是在玩家加入时验证其购买情况。以下代码片段包含通用商品验证逻辑。</p>
+<pre><code>OnPlayerJoin(InPlayer:player):void = # Run the validation check to ensure the Player's data in your experience matches what the Marketplace API says they own. spawn{ ValidatePreviousPurchases(InPlayer) } ValidatePreviousPurchases(Player:player)&lt;suspends&gt;:void= Purchases := GetPurchasedEntitlements(Player, Entitlements.example_entitlement) # Perform any checks to ensure your saved data matches what the Marketplace says the player owns.OnPlayerJoin(InPlayer:player):void = # Run the validation check to ensure the Player's data in your experience matches what the Marketplace says they own. spawn{ ValidatePreviousPurchases(InPlayer) } ValidatePreviousPurchases(Player:player)&lt;suspends&gt;:void= Purchases := GetPurchasedEntitlements(Player, Entitlements.example_entitlement) # Perform any checks to ensure your saved data matches what the Marketplace says the player owns.</code></pre>
+<h2 id="sec-7">其他功能</h2>
+<h3>付费随机物品</h3>
+<p>在岛屿中提供付费随机物品有两种方式：</p>
+<ul>
+<li>直接以 V-Bucks 出售。</li>
+<li>允许玩家购买可用 V-Bucks 购买的权益，再兑换随机奖励或影响获得随机奖励的概率（间接提供）。</li>
+</ul>
+<p>当创建直接授予随机奖励、或只能兑换随机奖励的物品时，必须将该权益的<code>PaidRandomItem</code>设为 true，并在购买前披露每种可能随机物品的准确数字概率。可直接在商品描述中披露准确数字概率，或在商品描述中说明概率查看位置。</p>
+<p>示例如下：</p>
+<ul>
+<li>如果你以 V-Bucks 出售“神秘物品箱”，必须将该权益的<code>PaidRandomItem</code>设为<code>true</code>，并披露每种可能物品的准确数字概率。</li>
+<li>如果你以 V-Bucks 出售“幸运加成”，可提高玩家在玩法中获得随机物品的概率，必须将该权益的<code>PaidRandomItem</code>设为<code>true</code>，并披露每种可能物品的准确数字概率。</li>
+<li>如果你以 V-Bucks 出售只能兑换随机物品的“代币”，必须使用<code>RestrictPaidRandomItems</code>函数，防止无权限玩家获得随机奖励。</li>
+<li>如果你以 V-Bucks 出售可兑换多种物品（含随机物品）的“代币”，必须使用<code>RestrictPaidRandomItems</code>函数，防止无权限玩家获得随机奖励。</li>
+</ul>
+<p>如果你提供可兑换多种物品（含随机奖励）的内容，必须使用<code>RestrictPaidRandomItems</code>函数，防止无权限玩家获得随机奖励，且必须在玩家获得随机奖励前披露每种可能物品的准确数字概率。</p>
+<pre><code>OnEvent(Agent:agent):void= if (Player := player[Agent]): if (RestrictPaidRandomItems[Player]): Print("Player is not allowed to purchase PaidRandomItems.") else: Print("Player is allowed to purchase PaidRandomItems.")OnEvent(Agent:agent):void= if (Player := player[Agent]): if (RestrictPaidRandomItems[Player]): Print("Player is not allowed to purchase PaidRandomItems.") else: Print("Player is allowed to purchase PaidRandomItems.")</code></pre>
+<h3>直接购买提示</h3>
+<p>如果你的岛屿有直接购买提示，必须使用<code>RestrictDirectPromptsToPurchase</code>函数判断玩家是否有资格接收该提示。</p>
+<pre><code>OnEvent(Agent:agent):void= if (Player:= player[Agent]): if (RestrictDirectPromptsToPurchase[Player]): Print("Player is not allowed to receive direct purchase prompts.") else: Print("Player is allowed to receive direct purchase prompts.")OnEvent(Agent:agent):void= if (Player:= player[Agent]): if (RestrictDirectPromptsToPurchase[Player]): Print("Player is not allowed to receive direct purchase prompts.") else: Print("Player is allowed to receive direct purchase prompts.")</code></pre>
+<h3>对玩法有实质影响</h3>
+<p>如果你出售的物品能让玩家在岛屿中获得有意义的优势，必须将<code>ConsequentialToGameplay</code>设为<b>true</b>。</p>
+<p>对玩法有实质影响的物品包括：购买后能为玩家带来有意义优势的一切情形，可能是直接的（如提升玩家游戏进度速度、强度或能力的物品），也可能是间接的（如授予可显著影响玩家通关速度或胜率的物品的访问权）。</p>
+<p>如果你出售的物品另有免费替代品，所有玩家在商品展示的同时、无需任何条件即可获得同样优势，则无需将<code>ConsequentialToGameplay</code>设为<code>true</code>。这意味着玩家无需完成特定任务或满足玩法要求即可获得该物品。</p>
+<p>如果物品对玩法仅有附带的、微不足道的影响，例如颜色不同但玩法相同、仅在不同环境中可见度略有差异，则无需将<code>ConsequentialToGameplay</code>设为 true。</p>
+<pre><code># The base entitlement you should define for ALL of your entitlements in your experience. my_island_entitlement := class&lt;abstract&gt;&lt;castable&gt;(entitlement){} CornSeedPacket&lt;public&gt; := module: Name&lt;public&gt;&lt;localizes&gt; : message = "Corn seed pack" Description&lt;public&gt;&lt;localizes&gt; : message = "A pack of corn seeds. Opening a pack yields 10 corn seeds for planting." ShortDescription&lt;public&gt;&lt;localizes&gt; : message = "Contains 10 corn seeds for planting." cornseedpacket&lt;public&gt; := class&lt;concrete&gt;(my_island_entitlement): var Name&lt;override&gt;:message = CornSeedPacket.Name</code></pre>
+<p class="doc-tags">标签：<a href="https://dev.epicgames.com/community/search?query=monetization" target="_blank" rel="noopener">变现(monetization)</a> · <a href="https://dev.epicgames.com/community/search?query=developer%20operations" target="_blank" rel="noopener">开发者运营(developer operations)</a> · <a href="https://dev.epicgames.com/community/search?query=transactions" target="_blank" rel="noopener">交易(transactions)</a></p>
+<hr>
+<p><b>在开发者论坛(Developer Forums)提问并帮助同伴：</b><a href="https://forums.unrealengine.com/categories?tag=fortnite" target="_blank" rel="noopener">开发者论坛</a></p>
+<p><b>编写你自己的教程或阅读他人的教程：</b><a href="https://dev.epicgames.com/community/fortnite/learning" target="_blank" rel="noopener">学习库(Learning Library)</a></p>
+<nav class="doc-endnav"><p><b>本文小节</b></p><ul>
+<li><a href="creating-items-and-offers-in-fortnite.html#items">物品</a></li>
+<li><a href="creating-items-and-offers-in-fortnite.html#creating-a-consumable-entitlement-in-verse">在 Verse 中创建消耗型权益</a></li>
+<li><a href="creating-items-and-offers-in-fortnite.html#creatingdurableentitlementsinverse">在 Verse 中创建耐久型权益</a></li>
+<li><a href="creating-items-and-offers-in-fortnite.html#entitlementvalidationrules">权益验证规则</a></li>
+<li><a href="creating-items-and-offers-in-fortnite.html#theentitlementcatalog">权益目录</a></li>
+<li><a href="creating-items-and-offers-in-fortnite.html#offers">商品</a></li>
+<li><a href="creating-items-and-offers-in-fortnite.html#createasimpleoffer">创建简单商品</a></li>
+<li><a href="creating-items-and-offers-in-fortnite.html#createandmodifyfixedandalternateoffers">创建与修改固定商品和备选商品</a></li>
+<li><a href="creating-items-and-offers-in-fortnite.html#bundleoffers">捆绑包商品</a></li>
+<li><a href="creating-items-and-offers-in-fortnite.html#creatingastackedbundle">创建堆叠捆绑包</a></li>
+<li><a href="creating-items-and-offers-in-fortnite.html#creatingmulti-offerbundles">创建多商品捆绑包</a></li>
+<li><a href="creating-items-and-offers-in-fortnite.html#dynamicallycreatedoffers">动态创建的商品</a></li>
+<li><a href="creating-items-and-offers-in-fortnite.html#offervalidationrules">商品验证规则</a></li>
+<li><a href="creating-items-and-offers-in-fortnite.html#createastorefront">创建店面</a></li>
+<li><a href="creating-items-and-offers-in-fortnite.html#thedefaultui">默认 UI</a></li>
+<li><a href="creating-items-and-offers-in-fortnite.html#thestorefrontui">店面 UI</a></li>
+<li><a href="creating-items-and-offers-in-fortnite.html#handlingpurchases">处理购买</a></li>
+<li><a href="creating-items-and-offers-in-fortnite.html#validatingpurchases">验证购买</a></li>
+<li><a href="creating-items-and-offers-in-fortnite.html#additional-functions">其他功能</a></li>
+<li><a href="creating-items-and-offers-in-fortnite.html#paid-random-items-nbsp">付费随机物品</a></li>
+<li><a href="creating-items-and-offers-in-fortnite.html#directpromptstopurchase">直接购买提示</a></li>
+<li><a href="creating-items-and-offers-in-fortnite.html#consequential-to-gameplay">对玩法有实质影响</a></li>
+</ul><p><b>相关文档</b></p><ul>
+<li><a href="03-in-island-transactions-in-fortnite.html">岛内交易(In-Island Transactions)</a></li>
+<li><a href="in-island-transactions-overview-in-fortnite.html">岛内交易总览(In-Island Transactions Overview)</a></li>
+<li><a href="https://dev.epicgames.com/documentation/fortnite/in-island-transactions-restrictions-in-fortnite" target="_blank" rel="noopener">岛内交易限制(In-Island Transactions Restrictions)</a></li>
+</ul></nav>
+<div class="pager"><a href="03-in-island-transactions-in-fortnite.html"><small>← 返回父教程</small>岛内交易</a><a href="sub-index.html"><small>子教程索引 →</small>全部子教程</a></div>
+</article><nav class="doc-toc" aria-label="本页内容"><b>本页内容</b><a href="#sec-1">物品(Items)</a><a href="#sec-2">商品(Offers)</a><a href="#sec-3">捆绑包商品(Bundle Offers)</a><a href="#sec-4">商品验证规则</a><a href="#sec-5">创建店面</a><a href="#sec-6">处理购买</a><a href="#sec-7">其他功能</a></nav></div>
+</div></div>
+</div>
+<footer class="edc-footer"><div class="inner"><img src="../assets/logo-epic.svg" alt="Epic Games"><span>Fortnite 文档中文镜像 · UE教程/ · 本地打开 index.html 阅读 · 翻译整理自 Epic 官方文档，仅供学习交流</span></div></footer>
+</body>
+</html>

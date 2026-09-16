@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Verse 程序化建筑模板 | Fortnite 文档中文镜像</title>
+<link rel="stylesheet" href="../assets/epic.css">
+<link rel="stylesheet" href="../assets/patch.css">
+<link rel="icon" href="../assets/logo-epic.svg">
+</head>
+<body class="theme-fortnite">
+<div class="edc-topbar"><div class="edc-topbar-inner"><img class="edc-logo" src="../assets/logo-epic.svg" alt="Epic Games"><span class="edc-brand">Epic Games <b>开发者社区</b></span><span class="edc-nav"><a href="../index.html">文档首页</a><a href="sub-index.html">子教程索引</a><a href="https://dev.epicgames.com/documentation/fortnite/procedural-building-template-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">英文原文</a></span></div></div>
+<div class="site-container">
+<aside class="site-nav"><div class="documents-tree"><nav><ul class="contents-table">
+<li class="toc-group"><span class="toc-group-title">A · 最新动态</span><ul><li><a href="01-42-00-fortnite-ecosystem-updates-and-release-notes.html">01. 42.00 生态系统更新与发行说明</a></li><li><a href="02-custom-items-and-inventory-overview-in-fortnite.html">02. 自定义物品与背包总览</a></li><li><a href="03-in-island-transactions-in-fortnite.html">03. 岛内交易</a></li><li><a href="04-mobile-development-in-fortnite.html">04. 移动端开发</a></li><li><a href="05-inputs-in-fortnite.html">05. 输入系统</a></li><li><a href="06-ability-system-in-unreal-editor-for-fortnite.html">06. 能力系统 Ability System</a></li><li><a href="07-partybased-gameplay-using-the-social-synergy-api-in-fortnite.html">07. 社交协同 API 与小队玩法</a></li><li><a href="08-scene-graph-in-unreal-editor-for-fortnite.html">08. 场景图 Scene Graph</a></li></ul></li>
+<li class="toc-group"><span class="toc-group-title">B · 入门指南</span><ul><li><a href="09-build-your-first-island-in-fortnite.html">09. 构建你的第一个岛屿</a></li><li><a href="10-onboarding-guide-to-programming-with-verse-in-unreal-editor-for-fortnite.html">10. Verse 编程入门指南</a></li><li><a href="11-building-basics-in-fortnite-creative.html">11. 建造基础</a></li></ul></li>
+<li class="toc-group"><span class="toc-group-title">C · 品牌合集</span><ul><li><a href="12-star-wars-islands-in-fortnite.html">12. 星球大战™岛屿</a></li><li><a href="13-kpop-demon-hunters-islands-in-fortnite.html">13. KPop 猎魔团岛屿</a></li><li><a href="14-building-lego-islands-in-fortnite.html">14. 乐高®岛屿</a></li><li><a href="15-the-walking-dead-universe-islands-in-unreal-editor-for-fortnite.html">15. 行尸走肉宇宙岛屿</a></li><li><a href="16-teenage-mutant-ninja-turtle-islands-in-unreal-editor-for-fortnite.html">16. 忍者神龟岛屿</a></li><li><a href="17-squid-game-islands-in-fortnite.html">17. 鱿鱼游戏岛屿</a></li></ul></li>
+<li class="toc-group"><span class="toc-group-title">D · 开发者成功</span><ul><li><a href="18-using-creator-portal-in-fortnite-creative.html">18. 使用创作者门户</a></li><li><a href="19-island-moderation-and-guidelines-in-fortnite-creative.html">19. 岛屿审核与准则</a></li></ul></li>
+<li class="toc-group"><span class="toc-group-title">E · 协作与版本控制</span><ul><li><a href="20-creating-teams-in-creator-portal-in-unreal-editor-for-fortnite.html">20. 在创作者门户创建团队</a></li><li><a href="21-adding-playtesters-in-fortnite-creative.html">21. 添加试玩测试员</a></li><li><a href="22-playtesting-your-island-in-unreal-editor-for-fortnite.html">22. 试玩测试你的岛屿</a></li><li><a href="23-collaborating-in-unreal-editor-for-fortnite.html">23. 在 UEFN 中协作</a></li><li><a href="24-lore-version-control-in-unreal-editor-for-fortnite.html">24. Lore 版本控制</a></li><li><a href="25-conflicts-in-lore-version-control-in-unreal-editor-for-fortnite.html">25. Lore 中的冲突</a></li><li><a href="26-version-history-and-conflict-resolution-in-unreal-editor-for-fortnite.html">26. 分支历史与冲突解决</a></li></ul></li>
+<li class="toc-group"><span class="toc-group-title">F · 游戏示例</span><ul><li><a href="27-build-a-game-in-unreal-editor-for-fortnite.html">27. 构建一款游戏</a></li><li><a href="28-unreal-editor-for-fortnite-starter-templates.html" class="active">28. UEFN 新手模板</a></li></ul></li>
+<li class="toc-group"><span class="toc-group-title">G · Verse编程</span><ul><li><a href="29-learn-the-basics-of-writing-code-in-verse.html">29. 从零学习 Verse 代码基础</a></li></ul></li>
+<li class="toc-group"><span class="toc-group-title">H · 专注领域</span><ul><li><a href="30-lighting-in-unreal-editor-for-fortnite.html">30. 灯光</a></li><li><a href="31-animation-and-cinematics-in-unreal-editor-for-fortnite.html">31. 动画与过场动画</a></li><li><a href="32-modeling-in-unreal-editor-for-fortnite.html">32. 建模</a></li><li><a href="33-materials-in-unreal-editor-for-fortnite.html">33. 材质</a></li><li><a href="34-environments-and-landscapes-in-unreal-editor-for-fortnite.html">34. 环境与地形</a></li><li><a href="35-audio-in-unreal-editor-for-fortnite.html">35. 音频</a></li><li><a href="36-visual-effects-in-unreal-editor-for-fortnite.html">36. 视觉特效</a></li></ul></li>
+</ul></nav></div></aside>
+<div class="page-content"><div class="page-document has-theme-bg">
+<header class="section-page-header"><nav><ol class="breadcrumb is-shrinkable"><li class="breadcrumb-item is-root"><img src="../assets/logo-epic.svg" alt="Epic Games"><a href="../index.html">Developer</a></li><li class="breadcrumb-item"><a href="../index.html">Fortnite 文档</a></li><li class="breadcrumb-item"><a href="28-unreal-editor-for-fortnite-starter-templates.html">UEFN 新手模板</a></li><li class="breadcrumb-item active" aria-current="page"><span class="text-truncate">Verse 程序化建筑模板</span></li></ol></nav><h1>Verse 程序化建筑模板</h1><p class="text-secondary mb-0">Verse - Procedural Building 模板用纯 Verse 实现了一套程序化建筑系统。本页介绍体素编辑、形状文法与波函数坍缩等玩法的实现原理。</p><p class="doc-meta">英文原标题：Procedural Building Template In Unreal Editor For Fortnite · <a href="https://dev.epicgames.com/documentation/fortnite/procedural-building-template-in-unreal-editor-for-fortnite" target="_blank" rel="noopener">查看英文原文</a> · 社区翻译镜像，仅供学习</p></header>
+<div class="doc-columns"><article class="doc-article">
+<p><strong>Verse - Procedural Building</strong> 模板是 <strong>Unreal Editor for Fortnite（UEFN）</strong>（Fortnite 虚幻编辑器）的示例项目，出自<a href="https://create.fortnite.com/news/fortnite-s-re-imagine-london-bringing-london-to-life-in-uefn?team=personal" target="_blank" rel="noopener"><strong>Re: Imagine London</strong></a>(<strong>岛屿代码（Island Code）：</strong><strong>1442-4257-4418</strong>)，展示了用 Verse 编写的程序化建筑（Procedural Building）系统。</p>
+<p>程序化建筑系统完全用 Verse 实现、创建，而非在 Fortnite 中搭建。有了这套系统，你可以更精细地控制项目中网格体的拼装方式。</p>
+<p>在 Fortnite 中，你可以用预置建筑构件（地板、天花板、墙体）设计玩法。程序化建筑系统扩展了你的可能性：你可以创建带分类的体素（voxel），分类决定了底层系统，系统放置网格体的同时，你可以快速放置更多体素。</p>
+<p>要在 UEFN <strong>项目浏览器（Project Browser）</strong>中打开该模板，请前往<strong>功能示例（Feature Examples）</strong> &gt; <strong>游戏示例（Game Examples）</strong> &gt; <strong>Verse - Procedural Building</strong>。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/de58ec69-21b7-4c98-a793-ff6048a28661?resizing_type=fit" alt="原文示意图1" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><figcaption>原文示意图1</figcaption><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/de58ec69-21b7-4c98-a793-ff6048a28661?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>程序化建筑系统分两个阶段工作：</p>
+<ul>
+<li>第一阶段，你编辑<a href="#sec-2">体素（voxel）</a>网格——一个三维网格，每个单元格是一个盒子——通过添加或移除体素来编辑。</li>
+<li>第二阶段在体素网格每次被修改后运行。修改体素网格后，系统会取得体素信息并执行一套流程，在正确的位置生成正确的网格体。</li>
+</ul>
+<p>你可以添加、移除 <strong>Building</strong> 与 <strong>Park</strong> 体素分类。每个分类有不同的<a href="#sec-3">规则</a>，决定网格体如何生成。这些规则指的是从放置的体素到实际网格体之间要执行的操作图（或操作树）。</p>
+<h2 id="sec-1">使用模板</h2>
+<p>项目中的每个关卡都有一个顶层类，即 <code>root_device</code> 类。玩家加入游戏时，<code>root_device</code> 类会为其创建 <code>global_player_data</code>，设置其 UI 信息。</p>
+<p>每个建筑区都有一个 <code>build_zone</code> 设备，以体素单位定义场地尺寸。该设备的位置定义场地的原点。建筑区使用 <code>build_system</code> 对象处理建筑机制，用 <code>spawner_device</code> 生成建筑道具网格体。建筑区还持有 <code>voxel_grid</code>、<code>mesh_grid</code> 与 <code>wfc_system</code>。</p>
+<p>每个建筑区包含以下内容：</p>
+<ul>
+<li><code>build_zone</code>（设备）——以体素单位定义场地尺寸。</li>
+<li><code>build_system</code>——处理建筑机制。</li>
+<li><code>spawner_device</code>（设备）——生成建筑道具网格体。</li>
+<li><code>spawner_asset_references</code>（设备）——引用所有生成的道具。</li>
+</ul>
+<p>当玩家进入 <code>build_zone</code>（由<a href="https://dev.epicgames.com/documentation/en-us/fortnite-creative/using-volume-devices-in-fortnite-creative" target="_blank" rel="noopener"><strong>Volume</strong></a>设备触发）时，会创建 <code>player_data</code> 来处理该玩家的输入与体素编辑。</p>
+<h2 id="sec-2">使用体素构建</h2>
+<p>该模板引入 <code>vector3i [type]()</code>，用 <code>X</code>、<code>Y</code>、<code>Z</code> <code>[integer]()</code> 坐标表示体素。</p>
+<p>下面是使用 <code>vector3i</code> 的示例脚本：</p>
+<pre><code>vector3i&lt;public&gt; := struct&lt;computes&gt;&lt;concrete&gt;: @editable X&lt;public&gt;:int = 0 @editable Y&lt;public&gt;:int = 0 @editable Z&lt;public&gt;:int = 0</code></pre>
+<h3>体素网格</h3>
+<p>体素网格是每个建筑区的三维单元格网格，存储每种建筑体素的类型信息。它在 <code>voxel_grid</code> 类中实现为一维数组，元素是对 <code>voxel_cell [objects]()</code> 的可选引用，如下所示：</p>
+<pre><code># Main array representing the 3D grid of voxels var Cells&lt;public&gt; : []?voxel_cell = array{}</code></pre>
+<p>默认情况下，体素单元格对象只包含体素类型的 <code>[enum]()</code>，如下所示：</p>
+<pre><code># Category of voxel in our build grid build_category&lt;public&gt; := enum: Building Park NewBuildingType # Structure stored for each occupied voxel voxel_cell&lt;public&gt; := struct&lt;computes&gt;: Category&lt;public&gt;:build_category</code></pre>
+<p>你可以按上面所示扩展该枚举，添加更多建筑体素分类。</p>
+<p>下面的代码把三维体素坐标转换为一维<code>[index]()</code>：</p>
+<pre><code># Gets the 1D array index from a 3D location in grid GetVoxelIndex&lt;public&gt;(X:int, Y:int, Z:int)&lt;transacts&gt;:int= return (X * (Size.Y*Size.Z)) + (Y * Size.Z) + Z</code></pre>
+<p><code>SetVoxel</code> 与 <code>ClearVoxel</code> 是修改体素网格的关键函数。</p>
+<h3>射线检测</h3>
+<p>体素网格设置好后，系统执行射线碰撞检查，检查射线命中的体素面，即体素被射线命中的一侧。每个体素有六个面，类似骰子。做射线检测时，既要知道命中了哪个体素，也要知道命中了哪个面，才能绘制高亮并沿该面生成新体素。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/4143dd46-6a4e-446e-86df-26749fb165b3?resizing_type=fit" alt="原文示意图2" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><figcaption>原文示意图2</figcaption><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/4143dd46-6a4e-446e-86df-26749fb165b3?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>射线碰撞检查主要在 <code>ray_caster</code> 类中处理。首先把摄像机位置变换到网格的局部空间，确定射线起始于哪个体素，再除以体素尺寸，如下所示：</p>
+<pre><code>CurrentVoxel := vector3i: X := Floor[InitialPosition.X / GridSize.X] Y := Floor[InitialPosition.Y / GridSize.Y] Z := Floor[InitialPosition.Z / GridSize.Z]</code></pre>
+<p><code>[Next]()</code> 函数会被反复调用，判断射线接下来会穿过哪个体素，每次都检查该体素是否被视为实心。</p>
+<h3>建筑系统输入</h3>
+<p><code>player_data</code> 中的 <code>SelectModeTick_Trace</code> 函数逐帧运行，处理大部分体素编辑与光标更新逻辑。两个<code>[Input Trigger]()</code>设备用于感知<strong>开火（Fire）</strong>与<strong>瞄准（Aim）</strong>按钮何时按下，并设置 <code>PlacePiece</code> 与 <code>DeletePiece</code> 逻辑变量。</p>
+<p>该函数需要额外逻辑，因为 <strong>Park</strong> 体素被视为仅表面（surface only）：它们不阻挡射线，只能存在于实心体素（地面或建筑）之上。当你添加希望设为仅表面的新分类时，可以更新 <code>CategoryIsSurfaceOnly</code> 函数。</p>
+<p>按住<strong>开火（Fire）</strong>按钮还能<strong>涡轮建造（turbo building）</strong>，在平面上快速放置多个体素。该函数还会用 <code>CheckPlayerOverlapsVoxel</code> 函数检查体素添加前玩家是否在体素内部。</p>
+<h3>生成道具</h3>
+<p>该示例项目依赖在<code>[runtime]()</code>生成道具。<code>creative_prop_asset</code> 目前不会自动反映在 Verse 清单文件中，因此你需要用代理对象（<code>piece_type_dir</code> 类中 <code>piece_type</code> 的实例）来引用 Verse 中的特定道具。</p>
+<p><code>spawner_asset_references</code> 设备再为每个道具使用一个 <code>@editable</code> 字段，以及从代理到实际资产的映射表。要添加新网格体，必须先为其创建 <code>BuildingProp</code>，添加新代理，给设备添加新属性，再更新映射表（如下所示），最后重新编译并更新设备上的新属性，使其指向新道具：</p>
+<pre><code>Building1_corner:piece_type := piece_type{}</code></pre>
+<pre><code>@editable BP_Building1_corner : creative_prop_asset = DefaultCreativePropAsset</code></pre>
+<pre><code>PT.Building1_corner =&gt; BP_Building1_corner</code></pre>
+<h2 id="sec-3">Verse 中的程序化生成</h2>
+<p>该示例在 Verse 中实现了两种程序化生成：<strong>形状文法（Shape Grammar）</strong>与<strong>波函数坍缩（Wave Function Collapse）</strong>。形状文法应用于三维建筑，波函数坍缩用于二维（平面）区域。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/73d0ff21-eef1-45f1-8f1a-1512a72b8d87?resizing_type=fit" alt="上图为生成的建筑（Building）道具示例。" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><figcaption>上图为生成的建筑（Building）道具示例。</figcaption><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/73d0ff21-eef1-45f1-8f1a-1512a72b8d87?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/39020c0d-31fa-4c90-9a76-ecfa353fe75e?resizing_type=fit" alt="上图为生成的公园（Park）道具示例。" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><figcaption>上图为生成的公园（Park）道具示例。</figcaption><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/39020c0d-31fa-4c90-9a76-ecfa353fe75e?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>两种技术都要求你先创建一套模块化建筑类道具，再由 Verse 在运行时生成。这段代码是确定性的，只按需删除、生成道具。</p>
+<h3>形状文法</h3>
+<p>为应用形状文法（Shape Grammar），某分类的所有体素会被转换为更大的凸包盒（convex box）。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/f3a0464d-af3c-438a-9881-035677848100?resizing_type=fit" alt="原文示意图5" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><figcaption>原文示意图5</figcaption><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/f3a0464d-af3c-438a-9881-035677848100?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>形状文法由简单规则组成，每条规则接受一个盒子，为后续规则生成一个或多个子盒。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/3fb825c0-e3c2-45c4-a891-2fb826ded96a?resizing_type=fit" alt="原文示意图6" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><figcaption>原文示意图6</figcaption><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/3fb825c0-e3c2-45c4-a891-2fb826ded96a?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>例如，一条规则可能把高盒切出一块一层体素高的楼板，把边角与墙体分配给不同规则。特殊规则可以在与盒子相同大小、相同位置生成道具。</p>
+<p>每条规则定义为独立的 Verse 类，派生自 <code>vo_base</code>（体操作，volume operator）类。这些规则在派生自 <code>rs_base</code>（规则集，rule set）的类内部组装成规则集树。</p>
+<p>这种方式简化了新规则的创建，便于尝试不同想法，能为每种建筑类型指定不同风格。同一组体素应用不同规则会得到不同结果。</p>
+<p>下面是 <code>vo_sizecheck</code> 体操作的简单示例：</p>
+<pre><code># Check all dimensions of a box are &gt;= a certain size vo_sizecheck := class(vo_base): Size:vector3i = vector3i{X:=0, Y:=0, Z:=0} VO_Pass:vo_base = vo_base{} VO_Fail:vo_base = vo_base{} Operate&lt;override&gt;(Box:voxel_box, Rot:prop_yaw, BuildSystem:build_system):void= if(Box.Size.X &gt;= Size.X and Box.Size.Y &gt;= Size.Y and Box.Size.Z &gt;= Size.Z): VO_Pass.Operate(Box, Rot, BuildSystem) else: VO_Fail.Operate(Box, Rot, BuildSystem)</code></pre>
+<p>它重写基类中定义的 <code>Operate</code> 函数，检查输入盒子的尺寸，决定调用接下来的哪条规则（<code>vo_pass</code> 或 <code>vo_fail</code>）。</p>
+<p>在 Verse 中很容易搭建包含多个体操作（volume operator）的规则集。你可以重写 <code>setupRules</code> 函数，声明你的<code>[operator]()</code>与<code>[parameter]()</code>，起点（根操作）赋给 <code>VO_root</code>，如下所示：</p>
+<pre><code># Rules for 'Building1' style rs_building1&lt;public&gt; := class(rs_base): RuleSetName&lt;override&gt;:string = "Building1" SetupRules&lt;override&gt;(PT:piece_type_dir):void= [...] # Rules for one floor of the building FloorRules := vo_cornerwallsplit: VO_CornerLength1 := vo_corner: VO_Corner := vo_prop: Prop := PT.Building1_corner</code></pre>
+<p>这种方式便于为不同建筑分类创建新操作与规则集。规则集在 <code>build_system</code> 的 <code>InitRuleSets</code> 中分配，在 <code>SelectRuleSet</code> 中为特定分类选择规则集。</p>
+<h2 id="sec-4">波函数坍缩</h2>
+<p>波函数坍缩（Wave Function Collapse，WFC）是一种基于拼合规则随机生成区域的技术，规则决定哪些块可以相邻。</p>
+<p>在这套实现中，你可以使用一组贴片（tile），指定其中哪些可以相邻。每条边都标注标签，只有标签匹配的贴片才能相邻放置。</p>
+<p>下面是 <code>wfc_mode_factory</code> 类中的边标签示例：</p>
+<pre><code>WaterEL:wfc_edge_label := wfc_edge_label: Name:="Water" Symmetric := true</code></pre>
+<p>下面是上例的网格体定义示例：</p>
+<pre><code>Park_Grass_Water_InCorn:wfc_mesh := wfc_mesh: Props := array: PT.Park_Grass_Water_Incorn Name := "Park_Grass_Water_Incorn" Edges := array: WaterEL WaterEL WaterToGrassEL GrassToWaterEL</code></pre>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/c68dd59e-a113-484f-bf72-25b3eec4b8c2?resizing_type=fit" alt="原文示意图7" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><figcaption>原文示意图7</figcaption><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/c68dd59e-a113-484f-bf72-25b3eec4b8c2?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>你可以按顺时针方向指定标签，从 <strong>+Y</strong> 方向开始。</p>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/b9be6c2c-404f-41d8-aab7-a98ad740ba53?resizing_type=fit" alt="原文示意图8" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><figcaption>原文示意图8</figcaption><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/b9be6c2c-404f-41d8-aab7-a98ad740ba53?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>本例的底边是“水到草地（water-to-grass）”，因为每条边都按顺时针考虑。有了这套系统，为玩法添加新标签、网格体或新 WFC 模型都很方便。</p>
+<p>WFC 算法在网格上选一个位置，从可能选项中随机选择（坍缩）一个，再把这次选择的影响传播到其他位置的可能选项。这一过程持续到整个区域生成完毕。</p>
+<p><code>wfc_system</code> 类持有所有贴片的当前状态。特殊体操作 <code>vo_wfc</code> 读取状态并生成正确的网格体。</p>
+<h2 id="sec-5">潜在扩展</h2>
+<p>下面是把该示例项目改造成新体验的几种方式：</p>
+<p><strong>添加新体素分类 / 形状文法</strong></p>
+<ul>
+<li>扩展 <code>build_category</code> 枚举</li>
+<li>更新需要处理新分类的 <code>case</code> 语句</li>
+<li>创建派生自 <code>rs_base</code> 的新规则集</li>
+<li>更新 <code>SelectRuleSet</code>，为新分类使用新规则集</li>
+</ul>
+<p><strong>为公园 WFC 模型添加新网格体</strong></p>
+<ul>
+<li>为每个新网格体创建建筑道具（Building Prop）（如上文<a href="#sec-2">生成道具</a>所述）。</li>
+<li>在 <code>wfc_model_factory</code> 的 <code>GetParkModel</code> 中添加新的 <code>wfc_edge_label</code>（如有需要）。</li>
+<li>为每个新网格体 / 道具添加新的 <code>wfc_mesh</code> 实例，定义每条边的标签。</li>
+<li>为每个新网格体调用 <code>Model.AddMesh</code>。</li>
+</ul>
+<p><strong>添加新 WFC 模型</strong></p>
+<ul>
+<li>为新模型添加新体素分类。</li>
+<li>在 <code>wfc_model_factory</code> 中添加新函数创建新模型。</li>
+<li>在 <code>build_system</code> 中添加新的 <code>wfc_model</code> 成员（如 <code>Park_WFCModel</code>）。</li>
+<li>添加类似 <code>AddParkWFCTile</code> 的新函数，用新模型添加贴片。</li>
+<li>修改 <code>SelectModeTick_Trace</code>，为新分类调用新函数。</li>
+</ul>
+<figure class="doc-figure"><img src="https://dev.epicgames.com/community/api/documentation/image/07b8d900-357d-438c-a6aa-6b218127dd04?resizing_type=fit" alt="原文示意图9" loading="lazy" onerror="this.closest('figure').classList.add('is-offline')"><figcaption>原文示意图9</figcaption><div class="offline-note">原文图片，需联网加载：<a href="https://dev.epicgames.com/community/api/documentation/image/07b8d900-357d-438c-a6aa-6b218127dd04?resizing_type=fit" target="_blank" rel="noopener">查看原图</a></div></figure>
+<p>你还可以程序化地生成体素。示例项目中有按钮，可在建造区添加随机建筑或公园区域。它使用 <code>build_system</code> 的 <code>ClearRegion</code> 与 <code>AddRegion</code> 函数，可作为随机生成关卡系统的起点。</p>
+<h2 id="sec-6">Verse 性能</h2>
+<p>该示例项目的 Verse 代码确保代码足够快，能实时处理更新。由于处理大数组可能导致性能问题，请牢记以下信息：</p>
+<ul>
+<li>用 <code>for</code> 循环返回数组比逐个元素构建更快，因为每次追加都会复制数组，复杂度可能达到 O(N2)。例如：
+<pre><code>* set OptionalArray := for(I := 0 .. ArraySize-1): false</code></pre></li>
+<li>不要按值传递大数组，而是把它们放进对象，调用方法或传递对象。</li>
+<li>多维数组很慢，因为第一个 <code>[]</code> 操作符会把拷贝传给下一个 <code>[]</code> 操作符。</li>
+<li>对数组调用 <code>.Length</code> 实际会在那一刻复制数组，所以自行跟踪大数组的大小可能更快。</li>
+</ul>
+<p>使用 <code>profile</code> 宏也很有帮助，可以准确了解代码的哪些部分最耗时。</p>
+<div class="pager"><a href="28-unreal-editor-for-fortnite-starter-templates.html"><small>← 返回父教程</small>UEFN 新手模板</a><a href="sub-index.html"><small>子教程索引 →</small>全部子教程</a></div>
+</article><nav class="doc-toc" aria-label="本页内容"><b>本页内容</b><a href="#sec-1">使用模板</a>
+<a href="#sec-2">使用体素构建</a>
+<a href="#sec-3">Verse 中的程序化生成</a>
+<a href="#sec-4">波函数坍缩</a>
+<a href="#sec-5">潜在扩展</a>
+<a href="#sec-6">Verse 性能</a></nav></div>
+</div></div>
+</div>
+<footer class="edc-footer"><div class="inner"><img src="../assets/logo-epic.svg" alt="Epic Games"><span>Fortnite 文档中文镜像 · UE教程/ · 本地打开 index.html 阅读 · 翻译整理自 Epic 官方文档，仅供学习交流</span></div></footer>
+</body>
+</html>
